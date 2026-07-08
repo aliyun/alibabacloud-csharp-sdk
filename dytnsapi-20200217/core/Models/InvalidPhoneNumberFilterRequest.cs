@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>Log on to the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>. On the <b>My Applications</b> page, obtain the authorization ID, which serves as the authorization code.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The encryption method of the phone number.</para>
         /// <remarks>
-        /// <para> Only the NORMAL encryption method is supported.</para>
+        /// <para>Notice: Only the NORMAL encryption method is supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

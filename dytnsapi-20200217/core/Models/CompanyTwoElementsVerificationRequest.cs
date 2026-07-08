@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class CompanyTwoElementsVerificationRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization code.</para>
+        /// <para>Authorization code.</para>
         /// <remarks>
-        /// <para> On the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page in the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>Log on to the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, and obtain the authorization ID (i.e., authorization code) on the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,18 +24,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The enterprise name.</para>
+        /// <para>Enterprise name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>某企业</para>
         /// </summary>
         [NameInMap("EpCertName")]
         [Validation(Required=false)]
         public string EpCertName { get; set; }
 
         /// <summary>
-        /// <para>The business license number.</para>
+        /// <para>Enterprise certificate number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class UAIDVerificationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -20,6 +22,11 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OK</b>: The request is successful.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -27,11 +34,16 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UAIDVerificationResponseBodyData Data { get; set; }
         public class UAIDVerificationResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The obtained UAID value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>B1E0C1********9F757AF52A035</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
+        /// <para>The description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>68A40250-50CD-034C-B728-0BD******177</para>
         /// </summary>

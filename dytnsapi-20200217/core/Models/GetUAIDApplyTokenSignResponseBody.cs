@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class GetUAIDApplyTokenSignResponseBody : TeaModel {
         /// <summary>
+        /// <para>Details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -20,6 +22,11 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The response status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OK</b>: The request was successful.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -27,11 +34,24 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetUAIDApplyTokenSignResponseBodyData Data { get; set; }
         public class GetUAIDApplyTokenSignResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The mobile carrier. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>CM</b>: China Mobile</para>
+            /// </description></item>
+            /// <item><description><para><b>CU</b>: China Unicom</para>
+            /// </description></item>
+            /// <item><description><para><b>CT</b>: China Telecom</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CM</para>
             /// </summary>
@@ -40,6 +60,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string Carrier { get; set; }
 
             /// <summary>
+            /// <para>The external ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>b8b5b3a*******0b9893484fdf412c99</para>
             /// </summary>
@@ -48,6 +70,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string OutId { get; set; }
 
             /// <summary>
+            /// <para>The signature value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>D2E204D74EEB373E468632********23F592C4C9</para>
             /// </summary>
@@ -58,6 +82,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -66,6 +92,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>68A40250-50CD-034C-B728-0BD******177</para>
         /// </summary>

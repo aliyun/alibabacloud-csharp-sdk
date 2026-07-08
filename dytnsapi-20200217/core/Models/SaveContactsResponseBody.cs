@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class SaveContactsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of <c>OK</c> indicates that the request was successful. For more information about other error codes, see the <a href="https://help.aliyun.com/document_detail/109196.html">error code list</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The data returned by the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>29E058D7-4B28-55EE-BE3B-61D5AE488A9E</para>
         /// </summary>

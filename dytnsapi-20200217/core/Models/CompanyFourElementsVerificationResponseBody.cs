@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -32,24 +32,28 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The structure.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CompanyFourElementsVerificationResponseBodyData Data { get; set; }
         public class CompanyFourElementsVerificationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the enterprise.</para>
+            /// <para>The enterprise details.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{ &quot;enterpriseStatus&quot;: &quot;在营（开业）&quot;, 
+            /// &quot;openTime&quot;: &quot;2023-05-25/2053-05-24&quot; }</para>
             /// </summary>
             [NameInMap("DetailInfo")]
             [Validation(Required=false)]
             public CompanyFourElementsVerificationResponseBodyDataDetailInfo DetailInfo { get; set; }
             public class CompanyFourElementsVerificationResponseBodyDataDetailInfo : TeaModel {
                 /// <summary>
-                /// <para>The business status of the enterprise.</para>
+                /// <para>The operating status of the enterprise.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Active</para>
+                /// <para>在营（开业）</para>
                 /// </summary>
                 [NameInMap("EnterpriseStatus")]
                 [Validation(Required=false)]
@@ -68,21 +72,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             }
 
             /// <summary>
-            /// <para>The fields to be verified.</para>
+            /// <para>The fields that failed verification.</para>
             /// </summary>
             [NameInMap("InconsistentData")]
             [Validation(Required=false)]
             public List<string> InconsistentData { get; set; }
 
             /// <summary>
-            /// <para>The code of the verification result. Valid values:</para>
+            /// <para>The verification result code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The four elements belong to the same enterprise.</description></item>
-            /// <item><description>1: The four elements belong to the same enterprise, but the business status of the enterprise is abnormal.</description></item>
-            /// <item><description>2: The legal representative information cannot match the enterprise information.</description></item>
-            /// <item><description>3: The four elements do not belong to the same enterprise.</description></item>
-            /// <item><description>4: No information about the enterprise is found.</description></item>
-            /// <item><description>5: No information about the legal representative is found.</description></item>
+            /// <item><description>0: Verification passed.</description></item>
+            /// <item><description>1: Verification passed, but the enterprise is not operating normally.</description></item>
+            /// <item><description>2: The legal person and enterprise information are inconsistent.</description></item>
+            /// <item><description>3: The enterprise four-element verification failed.</description></item>
+            /// <item><description>4: The enterprise was not found.</description></item>
+            /// <item><description>5: The legal person was not found in the database.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,8 +99,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             /// <summary>
             /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The four elements belong to the same enterprise and the business status of the enterprise is Active.</description></item>
-            /// <item><description>false: The four elements do not belong to the same enterprise.</description></item>
+            /// <item><description>true: The information is consistent and the enterprise is operating normally.</description></item>
+            /// <item><description>false: Verification failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</para>
+        /// <para>The common parameter. The ID returned for each request is unique and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</para>

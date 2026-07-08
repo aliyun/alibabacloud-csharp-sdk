@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the ****<a href="https://dytns.console.aliyun.com/analysis/square"><b>Labels</b></a> page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can obtain an authorization code.</para>
+        /// <para>In <b>Cell Phone Number Service</b> -&gt; <a href="https://dytns.console.aliyun.com/analysis/square"><b>Tag Square</b></a>, select a tag and submit a usage application. After the application is approved, you will receive the authorization code.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The phone number to be queried.</para>
+        /// <para>The phone number to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// <para>The model parameter configuration. This field is required by some labels.</para>
+        /// <para>The model parameter configuration (required by some tag capabilities).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;trainingJobId&quot;: &quot;17**********48&quot;}</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The score threshold for the phone number. Valid values: <b>0 to 100</b>.</para>
+        /// <para>The phone number score threshold. Valid values: <b>0 to 100</b>.</para>
         /// <remarks>
-        /// <para> The system provided by Alibaba Cloud determines whether to accept the specified score threshold. When the system does not accept the specified score threshold, the value of this field is invalid.</para>
+        /// <para>Whether to accept the specified score threshold is determined by the server. When the specified score threshold is not accepted, the data entered in this field is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

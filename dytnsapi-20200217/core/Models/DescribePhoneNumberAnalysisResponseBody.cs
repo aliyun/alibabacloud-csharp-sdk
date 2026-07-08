@@ -9,11 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberAnalysisResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial. This parameter is returned only if RAM verification fails.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request status code. Valid values:</para>
+        /// <para> <b>OK</b>: The request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -21,15 +32,28 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The information about the phone number analysis result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribePhoneNumberAnalysisResponseBodyData Data { get; set; }
         public class DescribePhoneNumberAnalysisResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The data list.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<DescribePhoneNumberAnalysisResponseBodyDataList> List { get; set; }
             public class DescribePhoneNumberAnalysisResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>The result code returned.</para>
+                /// <list type="bullet">
+                /// <item><description>YES: valid</description></item>
+                /// <item><description>NO: invalid</description></item>
+                /// <item><description>UNKNOWN: unknown</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NO</para>
                 /// </summary>
@@ -38,8 +62,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
                 public string Code { get; set; }
 
                 /// <summary>
+                /// <para>The mobile phone number that is passed in.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>18752785620</para>
+                /// <para>187****5620</para>
                 /// </summary>
                 [NameInMap("Number")]
                 [Validation(Required=false)]
@@ -50,6 +76,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
+        /// <para>The description of the phone number status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -58,6 +86,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</para>
         /// </summary>

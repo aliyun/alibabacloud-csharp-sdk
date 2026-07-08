@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class PhoneNumberEncryptResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</description></item>
+        /// <item><description><para>The value OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Details about the returned entries.</para>
+        /// <para>The array.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string EncryptedNumber { get; set; }
 
             /// <summary>
-            /// <para>The time when the phone number expires.</para>
+            /// <para>The expiration time of the phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-27 16:05:23</para>
@@ -60,6 +62,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [Validation(Required=false)]
             public string OriginalNumber { get; set; }
 
+            /// <summary>
+            /// <para>The custom ID reserved for the caller when the request was initiated. This ID is eventually returned to the caller.</para>
+            /// <para>The value is of the string type. The maximum length is 64 characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>215044c917374256269257695e9d22</para>
+            /// </summary>
             [NameInMap("OutId")]
             [Validation(Required=false)]
             public string OutId { get; set; }
@@ -67,7 +76,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

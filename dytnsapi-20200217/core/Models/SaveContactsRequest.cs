@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class SaveContactsRequest : TeaModel {
         /// <summary>
+        /// <para>The business type. Set the value to <b>contact</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dytns</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>The contact email.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:1234@alibaba-inc.com">1234@alibaba-inc.com</a></para>
         /// </summary>
@@ -26,13 +30,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string ContactEmail { get; set; }
 
         /// <summary>
+        /// <para>The contact name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>张光宇</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
         public string ContactName { get; set; }
 
         /// <summary>
+        /// <para>The contact phone number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>122354532434</para>
         /// </summary>
@@ -41,6 +51,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string ContactPhone { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable email alerts. Valid values:</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -49,6 +61,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public int? MailStatus { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable status warnings. Valid values:</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -57,6 +71,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public bool? OpenStatusWarning { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable attribution warnings. Valid values:</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -69,6 +85,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable phone alerts. Valid values:</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

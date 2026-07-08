@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>Log on to the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, go to the <b>My Applications</b> page, and obtain the authorization ID, which is the authorization code.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The carrier. Valid values:</para>
+        /// <para>The external carrier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MOBILE</b>: China Mobile</description></item>
-        /// <item><description><b>UNICOM</b>: China Unicom</description></item>
-        /// <item><description><b>TELECOM</b>: China Telecom</description></item>
+        /// <item><description><b>MOBILE</b>: China Mobile.</description></item>
+        /// <item><description><b>UNICOM</b>: China Unicom.</description></item>
+        /// <item><description><b>TELECOM</b>: China Telecom.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Alibaba Cloud automatically determines the carrier based on the carrier who assigns the phone number. Therefore, the value of this field does not affect the query result.</para>
+        /// <para>Notice: This parameter is optional. Alibaba Cloud automatically determines the carrier type based on the phone number. The value of this field has no impact on the query result.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The phone number to be queried.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</description></item>
-        /// <item><description>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</description></item>
-        /// <item><description>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</description></item>
+        /// <item><description>If Mask is set to NORMAL, this field is an 11-digit phone number.</description></item>
+        /// <item><description>If Mask is set to MD5, this field is a 32-character encrypted string.</description></item>
+        /// <item><description>If Mask is set to SHA256, this field is a 64-character encrypted string.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// <para>Notice: Letters in the encrypted string are case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The encryption method of the phone number. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: The phone number is not encrypted.</description></item>
+        /// <item><description><b>NORMAL</b>: no encryption</description></item>
         /// <item><description><b>MD5</b></description></item>
         /// <item><description><b>SHA256</b></description></item>
         /// </list>

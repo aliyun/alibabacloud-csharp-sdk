@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class ListContactsRequest : TeaModel {
         /// <summary>
+        /// <para>The business type. Set the value to <c>dytns</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dytns</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>The contact ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1298647</para>
         /// </summary>

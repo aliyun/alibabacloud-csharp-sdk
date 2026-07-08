@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryTaskListRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page size. Maximum value: 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -37,11 +41,16 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The task statuses.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<long?> Result { get; set; }
 
         /// <summary>
+        /// <para>The tag ID. You can call the <a href="~~QueryTagListPage~~">QueryTagListPage</a> operation to query tag IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? TagId { get; set; }
 
         /// <summary>
+        /// <para>The task ID. You can call the DescribeTasks operation to query the list of task IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>91</para>
         /// </summary>
@@ -58,13 +69,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? TaskId { get; set; }
 
         /// <summary>
+        /// <para>The task name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
+        /// <summary>
+        /// <para>An array of task types.</para>
+        /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public List<long?> TaskType { get; set; }

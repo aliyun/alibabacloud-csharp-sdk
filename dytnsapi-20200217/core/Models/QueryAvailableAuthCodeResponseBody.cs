@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryAvailableAuthCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. <b>OK</b> indicates that the request is successful.</para>
+        /// <para>The status code returned. <b>OK</b> indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<string> Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -47,14 +47,16 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

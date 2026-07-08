@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class GetUAIDApplyTokenSignRequest : TeaModel {
         /// <summary>
+        /// <para>The authorization code.</para>
+        /// <remarks>
+        /// <para>To obtain this authorization code, navigate to <b>Tag Plaza</b> in the <a href="https://dytns.console.aliyun.com/analysis/square"><b>Phone Number Verification Service</b></a> console, select a tag, and submit an application. You receive the code after your application is approved.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AuthCode { get; set; }
 
         /// <summary>
+        /// <para>The mobile carrier. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>CM</b>: China Mobile</para>
+        /// </description></item>
+        /// <item><description><para><b>CU</b>: China Unicom</para>
+        /// </description></item>
+        /// <item><description><para><b>CT</b>: China Telecom</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +43,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Carrier { get; set; }
 
         /// <summary>
+        /// <para>The client type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>30100</c>: Android</para>
+        /// </description></item>
+        /// <item><description><para><c>30300</c>: iOS</para>
+        /// </description></item>
+        /// <item><description><para><c>20200</c>: H5</para>
+        /// </description></item>
+        /// <item><description><para><c>10010</c>: Web</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +72,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Format { get; set; }
 
         /// <summary>
+        /// <para>The external ID.</para>
+        /// <remarks>
+        /// <para>For China Mobile (CM), this parameter corresponds to <c>traceId</c> and <c>msgId</c>. The values of <c>OutId</c>, <c>traceId</c>, and <c>msgId</c> must be the same.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +90,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required if the carrier is China Telecom (CT). For details, see the China Telecom documentation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>955EC1A869852EA8BC66F********D7C6E92017BBD5B001C736EFEAFB775C232</para>
         /// </summary>
@@ -70,6 +100,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string ParamKey { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required if the carrier is China Telecom (CT). For details, see the China Telecom documentation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B2F0D4CD7A216D16CE2AF4BBC********29A454FDDD991F919106C12CB89ABA8</para>
         /// </summary>
@@ -86,6 +118,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The event timestamp, accurate to the millisecond.<br>
+        /// Format: <c>yyyyMMddHHmmssSSS</c>.<br></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

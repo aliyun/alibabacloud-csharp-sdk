@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class ListContactsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. <c>OK</c> indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>An array of contact information objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListContactsResponseBodyData> Data { get; set; }
         public class ListContactsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The contact email.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx @alibaba-inc.com</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string ContactEmail { get; set; }
 
             /// <summary>
+            /// <para>The contact ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -37,11 +46,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             [Validation(Required=false)]
             public long? ContactId { get; set; }
 
+            /// <summary>
+            /// <para>The contact name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>黄勇</para>
+            /// </summary>
             [NameInMap("ContactName")]
             [Validation(Required=false)]
             public string ContactName { get; set; }
 
             /// <summary>
+            /// <para>The contact mobile number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>19211111111</para>
             /// </summary>
@@ -50,6 +67,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string ContactPhone { get; set; }
 
             /// <summary>
+            /// <para>The email status.</para>
+            /// <list type="bullet">
+            /// <item><description><para>1: Normal</para>
+            /// </description></item>
+            /// <item><description><para>0: Abnormal</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -58,6 +83,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public int? MailStatus { get; set; }
 
             /// <summary>
+            /// <para>The calling number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -66,6 +93,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public int? Main { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the number status warning is enabled.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -74,6 +109,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public bool? OpenStatusWarning { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether the number attribution query warning is enabled.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -82,6 +125,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public bool? OpentAttributionWarning { get; set; }
 
             /// <summary>
+            /// <para>The number status.</para>
+            /// <list type="bullet">
+            /// <item><description><para>1: Normal</para>
+            /// </description></item>
+            /// <item><description><para>0: Abnormal</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -92,6 +143,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -100,6 +153,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</para>
         /// </summary>

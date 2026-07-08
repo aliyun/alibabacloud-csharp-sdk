@@ -10,15 +10,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneTwiceTelVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OK</b>: The request is successful.</description></item>
-        /// <item><description><b>PortabilityNumberNotSupported</b>: The phone number that is involved in mobile number portability is not supported.</description></item>
-        /// <item><description><b>RequestNumberNotSupported</b>: You are not allowed to query phone numbers assigned by China Broadnet (that is, phone numbers start with 192) and phone numbers assigned by virtual network operators (VNOs).</description></item>
-        /// <item><description><b>RequestFrequencyLimit</b>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</description></item>
+        /// <item><description><para><b>OK</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>PortabilityNumberNotSupported</b>: Queries for this ported number are not supported.</para>
+        /// </description></item>
+        /// <item><description><para><b>RequestNumberNotSupported</b>: Queries are not supported for numbers from China Broadnet (starting with 192), mobile virtual network operators, and other unsupported carriers.</para>
+        /// </description></item>
+        /// <item><description><para><b>RequestFrequencyLimit</b>: Carriers limit frequent queries for the same number. If you receive this error code, try again later.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You are charged for phone number verifications if the value of Code is OK and the value of VerifyResult is not 0. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Pricing</a>.</para>
+        /// <para>A charge applies when the value of <c>Code</c> is <c>OK</c> and the value of <c>VerifyResult</c> is not <c>0</c>. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Phone Number Service pricing</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,21 +33,24 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>A data structure that contains the verification results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribePhoneTwiceTelVerifyResponseBodyData Data { get; set; }
         public class DescribePhoneTwiceTelVerifyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The carrier. Valid values:</para>
+            /// <para>The carrier that provides service for the number. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CMCC</b>: China Mobile</description></item>
-            /// <item><description><b>CUCC</b>: China Unicom</description></item>
-            /// <item><description><b>CTCC</b>: China Telecom</description></item>
+            /// <item><description><para><b>CMCC</b>: China Mobile.</para>
+            /// </description></item>
+            /// <item><description><para><b>CUCC</b>: China Unicom.</para>
+            /// </description></item>
+            /// <item><description><para><b>CTCC</b>: China Telecom.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The returned result indicates the carrier who assigns the phone number. If the phone number involves mobile number portability, the carrier after mobile number portability is returned.</para>
+            /// <para>The carrier that currently provides service for the number. For a ported number, this is the destination carrier.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,12 +61,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string Carrier { get; set; }
 
             /// <summary>
-            /// <para>The result of the request. Valid values:</para>
+            /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: It is unable to judge whether the phone number is a reassigned number.</description></item>
-            /// <item><description><b>1</b>: The phone number is a reassigned number.</description></item>
-            /// <item><description><b>2</b>: The phone number is not a reassigned number.</description></item>
-            /// <item><description><b>3</b>: The phone number has been canceled.</description></item>
+            /// <item><description><para><b>0</b>: Cannot be determined.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: The number is a recycled number.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: The number is not a recycled number.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: The number has been deactivated.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Unknown: The number was transferred to a new owner.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +85,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>A description of the returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -82,7 +95,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID. It is a common parameter and can be used to troubleshoot and locate issues.</para>
+        /// <para>The unique ID of the request. This common parameter is returned with each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68A40250-50CD-034C-B728-0BD135850177</para>

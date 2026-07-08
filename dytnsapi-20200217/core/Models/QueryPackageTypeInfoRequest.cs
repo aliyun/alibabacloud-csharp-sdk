@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>产品名称，如dysms</para>
+        /// <para>The product name. The value must be dytns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dytns</para>

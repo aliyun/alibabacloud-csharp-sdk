@@ -14,11 +14,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phone number that you want to query.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1390000****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

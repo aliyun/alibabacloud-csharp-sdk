@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>On the <b>My Applications</b> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, obtain the authorization ID, which is the authorization code.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The phone number to be queried.</para>
+        /// <para>The phone number to query.</para>
         /// <remarks>
-        /// <para> You can query only one phone number a time.</para>
+        /// <para>Only single-number queries are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,11 +38,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// <para>The encryption method of the phone number. Valid values:</para>
+        /// <para>The encryption method for the phone number. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: The phone number is not encrypted.</description></item>
-        /// <item><description><b>MD5</b></description></item>
-        /// <item><description><b>SHA256</b></description></item>
+        /// <item><description><para><b>NORMAL</b>: no encryption.</para>
+        /// </description></item>
+        /// <item><description><para><b>MD5</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SHA256</b>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

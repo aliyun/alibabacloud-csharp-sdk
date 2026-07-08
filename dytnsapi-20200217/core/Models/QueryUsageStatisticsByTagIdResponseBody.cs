@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryUsageStatisticsByTagIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. <b>OK</b> indicates that the request is successful.</para>
+        /// <para>请求状态码。 <b>OK</b>为成功。</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>返回的数据内容。</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<QueryUsageStatisticsByTagIdResponseBodyData> Data { get; set; }
         public class QueryUsageStatisticsByTagIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The authorization code.</para>
+            /// <para>授权码。</para>
             /// 
             /// <b>Example:</b>
             /// <para>g61I8UV5zd</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string AuthorizationCode { get; set; }
 
             /// <summary>
-            /// <para>The numbers for which the query failed.</para>
+            /// <para>查询失败号码数。</para>
             /// 
             /// <b>Example:</b>
             /// <para>71</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public long? FailTotal { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>创建时间。</para>
             /// 
             /// <b>Example:</b>
             /// <para>20230312</para>
@@ -57,47 +57,47 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string GmtDateStr { get; set; }
 
             /// <summary>
-            /// <para>The ID of the authorization code usage record.</para>
+            /// <para>授权码使用记录ID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>17</para>
+            /// <para>4d32c9ef-c8b0-4d69-a437-cca5****185d</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The industry name.</para>
+            /// <para>行业名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Home security</para>
+            /// <para>家政安保</para>
             /// </summary>
             [NameInMap("IndustryName")]
             [Validation(Required=false)]
             public string IndustryName { get; set; }
 
             /// <summary>
-            /// <para>The customer product ID (PID).</para>
+            /// <para>客户pid。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>89</para>
+            /// <para>10000013****071</para>
             /// </summary>
             [NameInMap("PartnerId")]
             [Validation(Required=false)]
             public long? PartnerId { get; set; }
 
             /// <summary>
-            /// <para>The scene name.</para>
+            /// <para>场景名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Return visit</para>
+            /// <para>电话回访1</para>
             /// </summary>
             [NameInMap("SceneName")]
             [Validation(Required=false)]
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>The numbers for which the query succeeded.</para>
+            /// <para>查询成功号码数。</para>
             /// 
             /// <b>Example:</b>
             /// <para>93</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public long? SuccessTotal { get; set; }
 
             /// <summary>
-            /// <para>The tag name.</para>
+            /// <para>标签名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>69</para>
@@ -117,17 +117,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public long? TagId { get; set; }
 
             /// <summary>
-            /// <para>The tag name.</para>
+            /// <para>标签名称。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud Query</para>
+            /// <para>阿里云查询</para>
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
             public string TagName { get; set; }
 
             /// <summary>
-            /// <para>The total quantity of numbers that are involved in the query.</para>
+            /// <para>查询总号码数。</para>
             /// 
             /// <b>Example:</b>
             /// <para>41</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>返回状态码描述。</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>D45CC751-34DF-5797-81FB-9A2ED6DC024B</para>
@@ -159,10 +159,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>表示是否调用成功。</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true：调用成功。             </description></item>
+        /// <item><description>false：调用失败。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

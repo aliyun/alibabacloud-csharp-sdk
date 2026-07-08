@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class UpdateContactsRequest : TeaModel {
         /// <summary>
+        /// <para>The email address of the contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:XXXX@alibaba-inc.com">XXXX@alibaba-inc.com</a></para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string ContactEmail { get; set; }
 
         /// <summary>
+        /// <para>The ID of the contact to update. You can retrieve the ID by calling the ListContacts operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ContactId { get; set; }
 
         /// <summary>
+        /// <para>The name of the contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string ContactName { get; set; }
 
         /// <summary>
+        /// <para>The mobile phone number of the contact.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192XXXXXXXX</para>
         /// </summary>
@@ -44,6 +51,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string ContactPhone { get; set; }
 
         /// <summary>
+        /// <para>Enables or disables email alerts. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: disabled.</para>
+        /// </description></item>
+        /// <item><description><para>1: enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +67,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public int? MailStatus { get; set; }
 
         /// <summary>
+        /// <para>Enables or disables alerts for number status.
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -60,6 +84,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public bool? OpenStatusWarning { get; set; }
 
         /// <summary>
+        /// <para>Enables or disables alerts for number attribution queries. Valid values: -<b>true</b>: enabled. -<b>false</b>: disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -72,6 +98,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Enables or disables phone call alerts. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: disabled.</para>
+        /// </description></item>
+        /// <item><description><para>1: enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

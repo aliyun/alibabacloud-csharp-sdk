@@ -18,7 +18,33 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "central";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "dytnsapi.aliyuncs.com"},
+                {"us-east-1", "dytnsapi.aliyuncs.com"},
+                {"me-east-1", "dytnsapi.aliyuncs.com"},
+                {"eu-west-1", "dytnsapi.aliyuncs.com"},
+                {"eu-central-1", "dytnsapi.aliyuncs.com"},
+                {"cn-zhangjiakou", "dytnsapi.aliyuncs.com"},
+                {"cn-wulanchabu", "dytnsapi.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "dytnsapi.aliyuncs.com"},
+                {"cn-shenzhen", "dytnsapi.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "dytnsapi.aliyuncs.com"},
+                {"cn-shanghai", "dytnsapi.aliyuncs.com"},
+                {"cn-qingdao", "dytnsapi.aliyuncs.com"},
+                {"cn-huhehaote", "dytnsapi.aliyuncs.com"},
+                {"cn-hongkong", "dytnsapi.aliyuncs.com"},
+                {"cn-hangzhou-finance", "dytnsapi.aliyuncs.com"},
+                {"cn-hangzhou", "dytnsapi.aliyuncs.com"},
+                {"cn-chengdu", "dytnsapi.aliyuncs.com"},
+                {"cn-beijing-finance-1", "dytnsapi.aliyuncs.com"},
+                {"cn-beijing", "dytnsapi.aliyuncs.com"},
+                {"ap-southeast-5", "dytnsapi.aliyuncs.com"},
+                {"ap-southeast-3", "dytnsapi.aliyuncs.com"},
+                {"ap-southeast-1", "dytnsapi.aliyuncs.com"},
+                {"ap-northeast-1", "dytnsapi.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dytnsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +65,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证三要素</para>
+        /// <para>Three-element (name, ID card number, and ID card photo) verification. Used to compare whether the three pieces of information (the name and ID card number filled in by the user and the uploaded portrait photo) belong to the same user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to Activate, fill in the application materials, and use the tag after the application is approved.</description></item>
+        /// <item><description>Before using this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">Cell Phone Number Service pricing</a>.</description></item>
+        /// <item><description>Billing applies only when the API return value is Code=&quot;OK&quot;. Other return results are not billed.</description></item>
+        /// <item><description>For the verifiable scope, see <a href="https://help.aliyun.com/document_detail/2844379.html">ID Card Three Elements Verification</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>The per-user QPS limit for this API is 200 calls per second. If you exceed the limit, API calls are throttled, which may affect your business. Call the API reasonably.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoThreeElementVerificationRequest
@@ -109,8 +149,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证三要素</para>
+        /// <para>Three-element (name, ID card number, and ID card photo) verification. Used to compare whether the three pieces of information (the name and ID card number filled in by the user and the uploaded portrait photo) belong to the same user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to Activate, fill in the application materials, and use the tag after the application is approved.</description></item>
+        /// <item><description>Before using this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">Cell Phone Number Service pricing</a>.</description></item>
+        /// <item><description>Billing applies only when the API return value is Code=&quot;OK&quot;. Other return results are not billed.</description></item>
+        /// <item><description>For the verifiable scope, see <a href="https://help.aliyun.com/document_detail/2844379.html">ID Card Three Elements Verification</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>The per-user QPS limit for this API is 200 calls per second. If you exceed the limit, API calls are throttled, which may affect your business. Call the API reasonably.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoThreeElementVerificationRequest
@@ -179,8 +233,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证三要素</para>
+        /// <para>Three-element (name, ID card number, and ID card photo) verification. Used to compare whether the three pieces of information (the name and ID card number filled in by the user and the uploaded portrait photo) belong to the same user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to Activate, fill in the application materials, and use the tag after the application is approved.</description></item>
+        /// <item><description>Before using this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">Cell Phone Number Service pricing</a>.</description></item>
+        /// <item><description>Billing applies only when the API return value is Code=&quot;OK&quot;. Other return results are not billed.</description></item>
+        /// <item><description>For the verifiable scope, see <a href="https://help.aliyun.com/document_detail/2844379.html">ID Card Three Elements Verification</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>The per-user QPS limit for this API is 200 calls per second. If you exceed the limit, API calls are throttled, which may affect your business. Call the API reasonably.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoThreeElementVerificationRequest
@@ -197,8 +265,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证三要素</para>
+        /// <para>Three-element (name, ID card number, and ID card photo) verification. Used to compare whether the three pieces of information (the name and ID card number filled in by the user and the uploaded portrait photo) belong to the same user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to Activate, fill in the application materials, and use the tag after the application is approved.</description></item>
+        /// <item><description>Before using this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">Cell Phone Number Service pricing</a>.</description></item>
+        /// <item><description>Billing applies only when the API return value is Code=&quot;OK&quot;. Other return results are not billed.</description></item>
+        /// <item><description>For the verifiable scope, see <a href="https://help.aliyun.com/document_detail/2844379.html">ID Card Three Elements Verification</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>The per-user QPS limit for this API is 200 calls per second. If you exceed the limit, API calls are throttled, which may affect your business. Call the API reasonably.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoThreeElementVerificationRequest
@@ -215,8 +297,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证二要素认证</para>
+        /// <para>Two-element (name and ID card number) verification. Used to verify whether the name and ID card number entered by a user belong to the same person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this operation, make sure that you have fully understood the pricing of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this operation, log on to the Cell Phone Number Service console. On the Tag Marketplace page, find the desired tag, click Apply to Activate, and fill in the application information. You can use the operation only after your application is approved.</description></item>
+        /// <item><description>The operation is charged when the response contains Code=&quot;OK&quot; and IsConsistent != 2. Other response results are not charged.</description></item>
+        /// </list>
+        /// <h2>QPS Limit</h2>
+        /// <para>The per-user QPS limit of this operation is 200 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call the operation properly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoTwoElementVerificationRequest
@@ -277,8 +370,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证二要素认证</para>
+        /// <para>Two-element (name and ID card number) verification. Used to verify whether the name and ID card number entered by a user belong to the same person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this operation, make sure that you have fully understood the pricing of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this operation, log on to the Cell Phone Number Service console. On the Tag Marketplace page, find the desired tag, click Apply to Activate, and fill in the application information. You can use the operation only after your application is approved.</description></item>
+        /// <item><description>The operation is charged when the response contains Code=&quot;OK&quot; and IsConsistent != 2. Other response results are not charged.</description></item>
+        /// </list>
+        /// <h2>QPS Limit</h2>
+        /// <para>The per-user QPS limit of this operation is 200 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call the operation properly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoTwoElementVerificationRequest
@@ -339,8 +443,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证二要素认证</para>
+        /// <para>Two-element (name and ID card number) verification. Used to verify whether the name and ID card number entered by a user belong to the same person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this operation, make sure that you have fully understood the pricing of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this operation, log on to the Cell Phone Number Service console. On the Tag Marketplace page, find the desired tag, click Apply to Activate, and fill in the application information. You can use the operation only after your application is approved.</description></item>
+        /// <item><description>The operation is charged when the response contains Code=&quot;OK&quot; and IsConsistent != 2. Other response results are not charged.</description></item>
+        /// </list>
+        /// <h2>QPS Limit</h2>
+        /// <para>The per-user QPS limit of this operation is 200 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call the operation properly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoTwoElementVerificationRequest
@@ -357,8 +472,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份证二要素认证</para>
+        /// <para>Two-element (name and ID card number) verification. Used to verify whether the name and ID card number entered by a user belong to the same person.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this operation, make sure that you have fully understood the pricing of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this operation, log on to the Cell Phone Number Service console. On the Tag Marketplace page, find the desired tag, click Apply to Activate, and fill in the application information. You can use the operation only after your application is approved.</description></item>
+        /// <item><description>The operation is charged when the response contains Code=&quot;OK&quot; and IsConsistent != 2. Other response results are not charged.</description></item>
+        /// </list>
+        /// <h2>QPS Limit</h2>
+        /// <para>The per-user QPS limit of this operation is 200 calls per second. If the limit is exceeded, the API calls are throttled, which may affect your business. Call the operation properly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CertNoTwoElementVerificationRequest
@@ -375,16 +501,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name and ID card of the legal representative belong to the same enterprise. The verification is successful only when the preceding four elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Verifies the enterprise name, enterprise certificate number, enterprise legal person name, and enterprise legal person ID card number. All four items must be consistent and the enterprise\&quot;s operating status must be active for verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to four-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing method and prices of the Enterprise Four-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product Billing</a>.</description></item>
+        /// <item><description>Billing applies when VerifyResult returns true/false and ReasonCode is 0, 1, or 2 in the response. Billing does not apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Activate</b>, and submit your application. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -454,16 +582,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name and ID card of the legal representative belong to the same enterprise. The verification is successful only when the preceding four elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Verifies the enterprise name, enterprise certificate number, enterprise legal person name, and enterprise legal person ID card number. All four items must be consistent and the enterprise\&quot;s operating status must be active for verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to four-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing method and prices of the Enterprise Four-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product Billing</a>.</description></item>
+        /// <item><description>Billing applies when VerifyResult returns true/false and ReasonCode is 0, 1, or 2 in the response. Billing does not apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Activate</b>, and submit your application. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -533,16 +663,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name and ID card of the legal representative belong to the same enterprise. The verification is successful only when the preceding four elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Verifies the enterprise name, enterprise certificate number, enterprise legal person name, and enterprise legal person ID card number. All four items must be consistent and the enterprise\&quot;s operating status must be active for verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to four-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing method and prices of the Enterprise Four-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product Billing</a>.</description></item>
+        /// <item><description>Billing applies when VerifyResult returns true/false and ReasonCode is 0, 1, or 2 in the response. Billing does not apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Activate</b>, and submit your application. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -560,16 +692,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name and ID card of the legal representative belong to the same enterprise. The verification is successful only when the preceding four elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Verifies the enterprise name, enterprise certificate number, enterprise legal person name, and enterprise legal person ID card number. All four items must be consistent and the enterprise\&quot;s operating status must be active for verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to four-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing method and prices of the Enterprise Four-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product Billing</a>.</description></item>
+        /// <item><description>Billing applies when VerifyResult returns true/false and ReasonCode is 0, 1, or 2 in the response. Billing does not apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Activate</b>, and submit your application. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -587,16 +721,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name of the legal representative belong to the same enterprise. The verification is successful only when the three elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify a company name, company certificate number, and the name of the company\&quot;s legal representative. Verification passes only when all three are consistent and the company\&quot;s operating status is in business.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to three-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you have fully understood the billing method and pricing of the Three-Element Company Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</description></item>
+        /// <item><description>In the returned result, charges apply when VerifyResult is true/false and ReasonCode is 0/1/2. No charges apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. Requests that exceed this limit are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -662,16 +798,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name of the legal representative belong to the same enterprise. The verification is successful only when the three elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify a company name, company certificate number, and the name of the company\&quot;s legal representative. Verification passes only when all three are consistent and the company\&quot;s operating status is in business.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to three-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you have fully understood the billing method and pricing of the Three-Element Company Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</description></item>
+        /// <item><description>In the returned result, charges apply when VerifyResult is true/false and ReasonCode is 0/1/2. No charges apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. Requests that exceed this limit are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -737,16 +875,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name of the legal representative belong to the same enterprise. The verification is successful only when the three elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify a company name, company certificate number, and the name of the company\&quot;s legal representative. Verification passes only when all three are consistent and the company\&quot;s operating status is in business.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to three-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you have fully understood the billing method and pricing of the Three-Element Company Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</description></item>
+        /// <item><description>In the returned result, charges apply when VerifyResult is true/false and ReasonCode is 0/1/2. No charges apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. Requests that exceed this limit are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -764,16 +904,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name, the business license number, and the name of the legal representative belong to the same enterprise. The verification is successful only when the three elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify a company name, company certificate number, and the name of the company\&quot;s legal representative. Verification passes only when all three are consistent and the company\&quot;s operating status is in business.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to three-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0, 1, or 2.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you have fully understood the billing method and pricing of the Three-Element Company Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</description></item>
+        /// <item><description>In the returned result, charges apply when VerifyResult is true/false and ReasonCode is 0/1/2. No charges apply in other cases.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after the application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. Requests that exceed this limit are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -791,16 +933,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name and the business license number belong to the same enterprise. The verification is successful only when the two elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify the enterprise name and enterprise certificate number. The name and certificate must be fully consistent, and the enterprise must be in operating status for the verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to two-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0 or 1.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing methods and pricing of the Enterprise Two-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product billing</a>.</description></item>
+        /// <item><description>Billing applies when Code=OK and ReasonCode=0/1/3 in the returned result. Other cases are not billed.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, find the corresponding tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, click <b>Apply to Activate</b>, and fill in the application materials. After the application is approved, you can use the API.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -862,16 +1006,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name and the business license number belong to the same enterprise. The verification is successful only when the two elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify the enterprise name and enterprise certificate number. The name and certificate must be fully consistent, and the enterprise must be in operating status for the verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to two-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0 or 1.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing methods and pricing of the Enterprise Two-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product billing</a>.</description></item>
+        /// <item><description>Billing applies when Code=OK and ReasonCode=0/1/3 in the returned result. Other cases are not billed.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, find the corresponding tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, click <b>Apply to Activate</b>, and fill in the application materials. After the application is approved, you can use the API.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -933,16 +1079,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name and the business license number belong to the same enterprise. The verification is successful only when the two elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify the enterprise name and enterprise certificate number. The name and certificate must be fully consistent, and the enterprise must be in operating status for the verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to two-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0 or 1.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing methods and pricing of the Enterprise Two-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product billing</a>.</description></item>
+        /// <item><description>Billing applies when Code=OK and ReasonCode=0/1/3 in the returned result. Other cases are not billed.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, find the corresponding tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, click <b>Apply to Activate</b>, and fill in the application materials. After the application is approved, you can use the API.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -960,16 +1108,18 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the enterprise name and the business license number belong to the same enterprise. The verification is successful only when the two elements belong to the same enterprise and the business status of the enterprise is Active.</para>
+        /// <para>Used to verify the enterprise name and enterprise certificate number. The name and certificate must be fully consistent, and the enterprise must be in operating status for the verification to pass.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the billing of services related to two-element verification for enterprises. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Billing</a>.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of VerifyResult is true or false and the value of ReasonCode is 0 or 1.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC%5C&lang=zh">Cell Phone Number Service console</a>. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the billing methods and pricing of the Enterprise Two-Element Verification product. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html?spm=a2c4g.154007.0.0.3edd7eb6E90YT4">Product billing</a>.</description></item>
+        /// <item><description>Billing applies when Code=OK and ReasonCode=0/1/3 in the returned result. Other cases are not billed.</description></item>
+        /// <item><description>Before you use this API, log on to the <a href="https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fdytns.console.aliyun.com%2Foverview%3Fspm%3Da2c4g.608385.0.0.79847f8b3awqUC&lang=zh">Cell Phone Number Service console</a>, find the corresponding tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, click <b>Apply to Activate</b>, and fill in the application materials. After the application is approved, you can use the API.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The single-user QPS limit for this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -987,8 +1137,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人删除</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Make sure you have activated Phone Number Identity Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteContactsRequest
@@ -1041,8 +1198,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人删除</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Make sure you have activated Phone Number Identity Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteContactsRequest
@@ -1095,8 +1259,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人删除</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Make sure you have activated Phone Number Identity Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteContactsRequest
@@ -1113,8 +1284,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人删除</para>
+        /// <para>Deletes a contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Make sure you have activated Phone Number Identity Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteContactsRequest
@@ -1131,21 +1309,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Predicts whether a phone number is a nonexistent number by using AI algorithms.</para>
+        /// <para>Predicts whether a phone number is invalid by using AI algorithms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to verify whether a phone number is a nonexistent number. When you call this operation to verify a number, the system charges you CNY 0.01 per verification based on the number of verifications. <b>Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</b></para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of Status is not UNKNOWN.</description></item>
-        /// <item><description>The prediction is not strictly accurate because Cell Phone Number Service predicts the nonexistent number probability by using AI algorithms. The accuracy rate of the prediction and the recall rate of empty numbers are about 95%. <b>Pay attention to this point when you call this operation</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>本接口用于验证号码是否为空号。发起调用该接口验证号码请求时，系统会根据验证次数计费，标准价为0.01元/次。<b>请确保在使用该接口前，已充分了解本产品的收费方式和价格。</b></description></item>
+        /// <item><description>当返回结果中：Code=&quot;OK&quot; 且 Status != UNKNOWN 时计费，其他情况不计费。 </description></item>
+        /// <item><description>由于本产品通过AI算法预测手机号的空号概率，所以无法做到100%准确。当前评估的准确率和召回率约为95%左右。<b>调用时请注意差别</b>。</description></item>
+        /// <item><description>使用本接口前，请登录号码百科控制台，在<a href="https://dytns.console.aliyun.com/analysis/square">标签广场</a>页面，找到对应的标签，单击<b>申请开通</b>，填写申请资料，审批通过后即可使用。</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Authorization information</h3>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h3>QPS限制</h3>
+        /// <para>本接口的单用户QPS限制为100次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h3>授权信息</h3>
+        /// <para>默认仅限阿里云账号使用本接口，RAM用户只有在被授予了相关API操作权限后方可使用。具体请参见<a href="https://help.aliyun.com/document_detail/154006.html">为RAM用户授权</a>。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1207,21 +1385,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Predicts whether a phone number is a nonexistent number by using AI algorithms.</para>
+        /// <para>Predicts whether a phone number is invalid by using AI algorithms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to verify whether a phone number is a nonexistent number. When you call this operation to verify a number, the system charges you CNY 0.01 per verification based on the number of verifications. <b>Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</b></para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of Status is not UNKNOWN.</description></item>
-        /// <item><description>The prediction is not strictly accurate because Cell Phone Number Service predicts the nonexistent number probability by using AI algorithms. The accuracy rate of the prediction and the recall rate of empty numbers are about 95%. <b>Pay attention to this point when you call this operation</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>本接口用于验证号码是否为空号。发起调用该接口验证号码请求时，系统会根据验证次数计费，标准价为0.01元/次。<b>请确保在使用该接口前，已充分了解本产品的收费方式和价格。</b></description></item>
+        /// <item><description>当返回结果中：Code=&quot;OK&quot; 且 Status != UNKNOWN 时计费，其他情况不计费。 </description></item>
+        /// <item><description>由于本产品通过AI算法预测手机号的空号概率，所以无法做到100%准确。当前评估的准确率和召回率约为95%左右。<b>调用时请注意差别</b>。</description></item>
+        /// <item><description>使用本接口前，请登录号码百科控制台，在<a href="https://dytns.console.aliyun.com/analysis/square">标签广场</a>页面，找到对应的标签，单击<b>申请开通</b>，填写申请资料，审批通过后即可使用。</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Authorization information</h3>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h3>QPS限制</h3>
+        /// <para>本接口的单用户QPS限制为100次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h3>授权信息</h3>
+        /// <para>默认仅限阿里云账号使用本接口，RAM用户只有在被授予了相关API操作权限后方可使用。具体请参见<a href="https://help.aliyun.com/document_detail/154006.html">为RAM用户授权</a>。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1283,21 +1461,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Predicts whether a phone number is a nonexistent number by using AI algorithms.</para>
+        /// <para>Predicts whether a phone number is invalid by using AI algorithms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to verify whether a phone number is a nonexistent number. When you call this operation to verify a number, the system charges you CNY 0.01 per verification based on the number of verifications. <b>Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</b></para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of Status is not UNKNOWN.</description></item>
-        /// <item><description>The prediction is not strictly accurate because Cell Phone Number Service predicts the nonexistent number probability by using AI algorithms. The accuracy rate of the prediction and the recall rate of empty numbers are about 95%. <b>Pay attention to this point when you call this operation</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>本接口用于验证号码是否为空号。发起调用该接口验证号码请求时，系统会根据验证次数计费，标准价为0.01元/次。<b>请确保在使用该接口前，已充分了解本产品的收费方式和价格。</b></description></item>
+        /// <item><description>当返回结果中：Code=&quot;OK&quot; 且 Status != UNKNOWN 时计费，其他情况不计费。 </description></item>
+        /// <item><description>由于本产品通过AI算法预测手机号的空号概率，所以无法做到100%准确。当前评估的准确率和召回率约为95%左右。<b>调用时请注意差别</b>。</description></item>
+        /// <item><description>使用本接口前，请登录号码百科控制台，在<a href="https://dytns.console.aliyun.com/analysis/square">标签广场</a>页面，找到对应的标签，单击<b>申请开通</b>，填写申请资料，审批通过后即可使用。</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Authorization information</h3>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h3>QPS限制</h3>
+        /// <para>本接口的单用户QPS限制为100次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h3>授权信息</h3>
+        /// <para>默认仅限阿里云账号使用本接口，RAM用户只有在被授予了相关API操作权限后方可使用。具体请参见<a href="https://help.aliyun.com/document_detail/154006.html">为RAM用户授权</a>。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1315,21 +1493,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Predicts whether a phone number is a nonexistent number by using AI algorithms.</para>
+        /// <para>Predicts whether a phone number is invalid by using AI algorithms.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to verify whether a phone number is a nonexistent number. When you call this operation to verify a number, the system charges you CNY 0.01 per verification based on the number of verifications. <b>Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</b></para>
         /// <list type="bullet">
-        /// <item><description>You are charged only if the value of Code is OK and the value of Status is not UNKNOWN.</description></item>
-        /// <item><description>The prediction is not strictly accurate because Cell Phone Number Service predicts the nonexistent number probability by using AI algorithms. The accuracy rate of the prediction and the recall rate of empty numbers are about 95%. <b>Pay attention to this point when you call this operation</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>本接口用于验证号码是否为空号。发起调用该接口验证号码请求时，系统会根据验证次数计费，标准价为0.01元/次。<b>请确保在使用该接口前，已充分了解本产品的收费方式和价格。</b></description></item>
+        /// <item><description>当返回结果中：Code=&quot;OK&quot; 且 Status != UNKNOWN 时计费，其他情况不计费。 </description></item>
+        /// <item><description>由于本产品通过AI算法预测手机号的空号概率，所以无法做到100%准确。当前评估的准确率和召回率约为95%左右。<b>调用时请注意差别</b>。</description></item>
+        /// <item><description>使用本接口前，请登录号码百科控制台，在<a href="https://dytns.console.aliyun.com/analysis/square">标签广场</a>页面，找到对应的标签，单击<b>申请开通</b>，填写申请资料，审批通过后即可使用。</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Authorization information</h3>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h3>QPS限制</h3>
+        /// <para>本接口的单用户QPS限制为100次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// <h3>授权信息</h3>
+        /// <para>默认仅限阿里云账号使用本接口，RAM用户只有在被授予了相关API操作权限后方可使用。具体请参见<a href="https://help.aliyun.com/document_detail/154006.html">为RAM用户授权</a>。</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1507,8 +1685,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a number.</para>
+        /// <para>Obtains the result returned by phone number analysis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, log on to the Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply to Activate</b>, fill in the application materials, and then use the API after the application is approved.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Phone Number Service.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit of this API is 1,000 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls properly.</para>
+        /// <h3>Authorization information</h3>
+        /// <para>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the related API operation permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Authorize a RAM user</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePhoneNumberAnalysisRequest
@@ -1577,8 +1767,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a number.</para>
+        /// <para>Obtains the result returned by phone number analysis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, log on to the Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply to Activate</b>, fill in the application materials, and then use the API after the application is approved.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Phone Number Service.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit of this API is 1,000 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls properly.</para>
+        /// <h3>Authorization information</h3>
+        /// <para>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the related API operation permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Authorize a RAM user</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePhoneNumberAnalysisRequest
@@ -1647,8 +1849,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a number.</para>
+        /// <para>Obtains the result returned by phone number analysis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, log on to the Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply to Activate</b>, fill in the application materials, and then use the API after the application is approved.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Phone Number Service.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit of this API is 1,000 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls properly.</para>
+        /// <h3>Authorization information</h3>
+        /// <para>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the related API operation permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Authorize a RAM user</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePhoneNumberAnalysisRequest
@@ -1665,8 +1879,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a number.</para>
+        /// <para>Obtains the result returned by phone number analysis.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, log on to the Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply to Activate</b>, fill in the application materials, and then use the API after the application is approved.</description></item>
+        /// <item><description>Before you use this API, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Phone Number Service.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit of this API is 1,000 calls per second per user. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls properly.</para>
+        /// <h3>Authorization information</h3>
+        /// <para>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the related API operation permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Authorize a RAM user</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePhoneNumberAnalysisRequest
@@ -1683,12 +1909,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a phone number.</para>
+        /// <para>Get the phone number analysis result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the Labels page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can use the label. Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</para>
+        /// <para>Before using this operation, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to activate, and fill in the application materials. You can use the operation after the application is approved.
+        /// Make sure that you fully understand the billing of the Cell Phone Number Service before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1754,12 +1981,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a phone number.</para>
+        /// <para>Get the phone number analysis result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the Labels page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can use the label. Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</para>
+        /// <para>Before using this operation, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to activate, and fill in the application materials. You can use the operation after the application is approved.
+        /// Make sure that you fully understand the billing of the Cell Phone Number Service before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1825,12 +2053,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a phone number.</para>
+        /// <para>Get the phone number analysis result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the Labels page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can use the label. Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</para>
+        /// <para>Before using this operation, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to activate, and fill in the application materials. You can use the operation after the application is approved.
+        /// Make sure that you fully understand the billing of the Cell Phone Number Service before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1848,12 +2077,13 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the analysis results of a phone number.</para>
+        /// <para>Get the phone number analysis result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the Labels page, find the label that you want to use, click Activate Now, enter the required information, and then submit your application. After your application is approved, you can use the label. Before you call this operation, make sure that you are familiar with the billing of Cell Phone Number Service.</para>
+        /// <para>Before using this operation, log on to the Cell Phone Number Service console, go to the Tag Square page, find the corresponding tag, click Apply to activate, and fill in the application materials. You can use the operation after the application is approved.
+        /// Make sure that you fully understand the billing of the Cell Phone Number Service before you use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2209,21 +2439,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// 
         /// OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.
         /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the carrier, registration location, and mobile number portability information of a phone number.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 2,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DescribePhoneNumberAttributeRequest
         /// </param>
@@ -2278,21 +2493,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.
-        /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the carrier, registration location, and mobile number portability information of a phone number.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 2,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribePhoneNumberAttributeRequest
@@ -2349,21 +2549,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// 
         /// OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.
         /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the carrier, registration location, and mobile number portability information of a phone number.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 2,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DescribePhoneNumberAttributeRequest
         /// </param>
@@ -2383,21 +2568,6 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         /// 
         /// OpenAPI DescribePhoneNumberAttribute is deprecated, please use Dytnsapi::2020-02-17::DescribePhoneNumberOperatorAttribute instead.
         /// 
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries the carrier, registration location, and mobile number portability information of a phone number.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
-        /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 2,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DescribePhoneNumberAttributeRequest
         /// </param>
@@ -2415,17 +2585,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage period of a phone number of a user.</para>
+        /// <para>Queries the duration for which a mobile user has been registered on the carrier\&quot;s network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and use the API after the application is approved.</description></item>
+        /// <item><description>Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service before using this API.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2491,17 +2661,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage period of a phone number of a user.</para>
+        /// <para>Queries the duration for which a mobile user has been registered on the carrier\&quot;s network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and use the API after the application is approved.</description></item>
+        /// <item><description>Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service before using this API.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2567,17 +2737,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage period of a phone number of a user.</para>
+        /// <para>Queries the duration for which a mobile user has been registered on the carrier\&quot;s network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and use the API after the application is approved.</description></item>
+        /// <item><description>Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service before using this API.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2595,17 +2765,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage period of a phone number of a user.</para>
+        /// <para>Queries the duration for which a mobile user has been registered on the carrier\&quot;s network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and use the API after the application is approved.</description></item>
+        /// <item><description>Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service before using this API.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2623,17 +2793,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about a phone number, including the registration province, registration city, basic carrier (such as China Mobile, China Unicom, China Telecom, or China Broadnet), reseller of mobile communications services (such as Alibaba Communications), mobile number portability, and the number segment to which the phone number belongs.</para>
+        /// <para>Queries the carrier information of a phone number, including the province, city, basic carrier (China Mobile, China Unicom, China Telecom, or China Broadnet), mobile virtual network operator (such as Alibaba Cloud Communication), whether the number has been ported, and the number segment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>You can call this operation to obtain the carrier, registration location, and mobile number portability information about a phone number. You can query phone numbers in <b>plaintext</b> and phone numbers that are encrypted by using <b>MD5</b> and <b>SHA256</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>This API is used to obtain the current carrier, location, and number portability information of a phone number. The API supports queries for <b>plaintext</b>, <b>MD5</b>, and <b>SHA256</b> encrypted phone numbers.</description></item>
+        /// <item><description>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after your application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 2,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2703,17 +2875,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about a phone number, including the registration province, registration city, basic carrier (such as China Mobile, China Unicom, China Telecom, or China Broadnet), reseller of mobile communications services (such as Alibaba Communications), mobile number portability, and the number segment to which the phone number belongs.</para>
+        /// <para>Queries the carrier information of a phone number, including the province, city, basic carrier (China Mobile, China Unicom, China Telecom, or China Broadnet), mobile virtual network operator (such as Alibaba Cloud Communication), whether the number has been ported, and the number segment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>You can call this operation to obtain the carrier, registration location, and mobile number portability information about a phone number. You can query phone numbers in <b>plaintext</b> and phone numbers that are encrypted by using <b>MD5</b> and <b>SHA256</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>This API is used to obtain the current carrier, location, and number portability information of a phone number. The API supports queries for <b>plaintext</b>, <b>MD5</b>, and <b>SHA256</b> encrypted phone numbers.</description></item>
+        /// <item><description>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after your application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 2,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2783,17 +2957,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about a phone number, including the registration province, registration city, basic carrier (such as China Mobile, China Unicom, China Telecom, or China Broadnet), reseller of mobile communications services (such as Alibaba Communications), mobile number portability, and the number segment to which the phone number belongs.</para>
+        /// <para>Queries the carrier information of a phone number, including the province, city, basic carrier (China Mobile, China Unicom, China Telecom, or China Broadnet), mobile virtual network operator (such as Alibaba Cloud Communication), whether the number has been ported, and the number segment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>You can call this operation to obtain the carrier, registration location, and mobile number portability information about a phone number. You can query phone numbers in <b>plaintext</b> and phone numbers that are encrypted by using <b>MD5</b> and <b>SHA256</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>This API is used to obtain the current carrier, location, and number portability information of a phone number. The API supports queries for <b>plaintext</b>, <b>MD5</b>, and <b>SHA256</b> encrypted phone numbers.</description></item>
+        /// <item><description>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after your application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 2,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2811,17 +2987,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about a phone number, including the registration province, registration city, basic carrier (such as China Mobile, China Unicom, China Telecom, or China Broadnet), reseller of mobile communications services (such as Alibaba Communications), mobile number portability, and the number segment to which the phone number belongs.</para>
+        /// <para>Queries the carrier information of a phone number, including the province, city, basic carrier (China Mobile, China Unicom, China Telecom, or China Broadnet), mobile virtual network operator (such as Alibaba Cloud Communication), whether the number has been ported, and the number segment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>You can call this operation to obtain the carrier, registration location, and mobile number portability information about a phone number. You can query phone numbers in <b>plaintext</b> and phone numbers that are encrypted by using <b>MD5</b> and <b>SHA256</b>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154008.html">billing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can use this API. RAM users can use this API only after they are granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>This API is used to obtain the current carrier, location, and number portability information of a phone number. The API supports queries for <b>plaintext</b>, <b>MD5</b>, and <b>SHA256</b> encrypted phone numbers.</description></item>
+        /// <item><description>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use the API after your application is approved.</description></item>
         /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 2,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Make calls reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3271,20 +3449,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a phone number is a reassigned phone number by calling this operation.</para>
+        /// <para>Quickly verify in a single request if a mobile phone number is a carrier\&quot;s secondary number assignment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged for phone number verifications only if the value of Code is OK and the value of VerifyResult is not 0.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> for Phone Number Verification Service.</description></item>
+        /// <item><description>You are charged only when the API response returns <c>Code=&quot;OK&quot;</c> and <c>VerifyResult</c> is not <c>0</c>. No charge is incurred in any other case.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Verification Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the tag you need, click <b>Request Activation</b>, and complete the application form. You can use the API once your application is approved.</description></item>
         /// </list>
-        /// <h2><a href="#qps"></a>QPS limits</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h2><a href="#"></a>Authorization information</h2>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit is 100 per user. If you exceed this limit, the system throttles your API calls, which may affect your business. Plan your API calls accordingly.</para>
+        /// <h2>Authorization</h2>
+        /// <para>By default, only an Alibaba Cloud account can call this API. A RAM user must be granted the required permissions to call the API. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3350,20 +3528,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a phone number is a reassigned phone number by calling this operation.</para>
+        /// <para>Quickly verify in a single request if a mobile phone number is a carrier\&quot;s secondary number assignment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged for phone number verifications only if the value of Code is OK and the value of VerifyResult is not 0.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> for Phone Number Verification Service.</description></item>
+        /// <item><description>You are charged only when the API response returns <c>Code=&quot;OK&quot;</c> and <c>VerifyResult</c> is not <c>0</c>. No charge is incurred in any other case.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Verification Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the tag you need, click <b>Request Activation</b>, and complete the application form. You can use the API once your application is approved.</description></item>
         /// </list>
-        /// <h2><a href="#qps"></a>QPS limits</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h2><a href="#"></a>Authorization information</h2>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit is 100 per user. If you exceed this limit, the system throttles your API calls, which may affect your business. Plan your API calls accordingly.</para>
+        /// <h2>Authorization</h2>
+        /// <para>By default, only an Alibaba Cloud account can call this API. A RAM user must be granted the required permissions to call the API. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3429,20 +3607,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a phone number is a reassigned phone number by calling this operation.</para>
+        /// <para>Quickly verify in a single request if a mobile phone number is a carrier\&quot;s secondary number assignment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged for phone number verifications only if the value of Code is OK and the value of VerifyResult is not 0.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> for Phone Number Verification Service.</description></item>
+        /// <item><description>You are charged only when the API response returns <c>Code=&quot;OK&quot;</c> and <c>VerifyResult</c> is not <c>0</c>. No charge is incurred in any other case.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Verification Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the tag you need, click <b>Request Activation</b>, and complete the application form. You can use the API once your application is approved.</description></item>
         /// </list>
-        /// <h2><a href="#qps"></a>QPS limits</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h2><a href="#"></a>Authorization information</h2>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit is 100 per user. If you exceed this limit, the system throttles your API calls, which may affect your business. Plan your API calls accordingly.</para>
+        /// <h2>Authorization</h2>
+        /// <para>By default, only an Alibaba Cloud account can call this API. A RAM user must be granted the required permissions to call the API. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3460,20 +3638,20 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether a phone number is a reassigned phone number by calling this operation.</para>
+        /// <para>Quickly verify in a single request if a mobile phone number is a carrier\&quot;s secondary number assignment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>You are charged for phone number verifications only if the value of Code is OK and the value of VerifyResult is not 0.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> for Phone Number Verification Service.</description></item>
+        /// <item><description>You are charged only when the API response returns <c>Code=&quot;OK&quot;</c> and <c>VerifyResult</c> is not <c>0</c>. No charge is incurred in any other case.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Verification Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the tag you need, click <b>Request Activation</b>, and complete the application form. You can use the API once your application is approved.</description></item>
         /// </list>
-        /// <h2><a href="#qps"></a>QPS limits</h2>
-        /// <para>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h2><a href="#"></a>Authorization information</h2>
-        /// <para>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The QPS limit is 100 per user. If you exceed this limit, the system throttles your API calls, which may affect your business. Plan your API calls accordingly.</para>
+        /// <h2>Authorization</h2>
+        /// <para>By default, only an Alibaba Cloud account can call this API. A RAM user must be granted the required permissions to call the API. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3491,8 +3669,112 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
+        /// <para>This API only provides the signing functionality for acquiring an authorization token during UAID retrieval from the three-network operators.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API provides only the <b>signing function for obtaining an authorization token</b> as part of the UAID retrieval process for China\&quot;s three major operators.</para>
+        /// <list type="bullet">
+        /// <item><description>To generate the other parameters required to obtain the authorization token, refer to the respective operator\&quot;s documentation.</description></item>
+        /// <item><description>To request the authorization token, refer to the respective operator\&quot;s documentation. Note that the request must be sent from the user\&quot;s mobile device over a cellular network.</description></item>
+        /// <item><description>After obtaining the authorization token, call the <a href="~~UAIDVerification~~">UAIDVerification</a> API to complete the UAID retrieval.</description></item>
+        /// </list>
+        /// <h3>How to request an authorization token</h3>
+        /// <remarks>
+        /// <para>Notice: 
+        /// When you request an authorization token, the client or H5 page must be connected to a cellular network.</para>
+        /// </remarks>
+        /// <h4>China Mobile (CM)</h4>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: POST
+        /// URL: https\://msg.cmpassport.com/h5/getMobile</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>{ &quot;traceId&quot;: &quot;mfawsxtcmyplwzpayzzvdvbsowxmkynr&quot;, &quot;appId&quot;: &quot;300011580392&quot;, &quot;sign&quot;: &quot;2c61b3c58ffbeed97461e31be4fd931a&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;businessType&quot;: &quot;3&quot;, &quot;version&quot;: &quot;1.0&quot;, &quot;timestamp&quot;: &quot;20201125101540980&quot; }</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>version</c>: Use <c>1.0</c>.</description></item>
+        /// <item><description><c>timestamp</c>: The request timestamp, with millisecond precision. This value and its format must match the <c>Time</c> input parameter for this API.</description></item>
+        /// <item><description><c>appId</c>: Use <c>300011580392</c>.</description></item>
+        /// <item><description><c>businessType</c>: Use <c>3</c>.</description></item>
+        /// <item><description><c>traceId</c>: The trace ID. This value must match this API\&quot;s <c>OutId</c> input parameter.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>msgId</c>: A unique message identifier.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>{ &quot;header&quot;: { &quot;appId&quot;: &quot;300011580392&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;timestamp&quot;: &quot;20201125101607932&quot; }, &quot;body&quot;: { &quot;resultCode&quot;: &quot;103000&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;resultDesc&quot;: &quot;成功&quot;, &quot;token&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot; } }</c>
+        /// Retrieve the <c>token</c> from the response <c>body</c>.</para>
+        /// <h4>China Unicom (CU)</h4>
+        /// <para>Obtain the token in two steps.</para>
+        /// <h5>Step 1: Obtain the authurl</h5>
+        /// <para>Send a request to the portal server to get the authentication server address (<c>authurl</c>).
+        /// Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: https\://nisportal.10010.com:9001/api</para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{&quot;authurl&quot;: &quot;https://enrichgw.10010.com/d93222629f52ec79&quot;}</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;authurl&quot;:&quot;https://enrichgw.10010.com/d93222629f52ec79&quot;})</c>
+        /// Retrieve the <c>authurl</c> from the response.</para>
+        /// <h5>Step 2: Obtain the token</h5>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: The authurl from Step 1, with /api appended.
+        /// Request URL example: <c>https://enrichgw.10010.com/d93222629f52ec79/api</c></para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{ &quot;province&quot;: &quot;1&quot;, &quot;code&quot;: &quot;7nHS1nggx2WP613750206700RN6oiRN1&quot; }</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;province&quot;:&quot;1&quot;,&quot;code&quot;:&quot;7nHS3Dnkd1BS701851092400RN6oiRN1&quot;})</c>
+        /// Retrieve the <c>code</c> from the response.</para>
+        /// <h4>China Telecom (CT)</h4>
+        /// <para>Protocol: HTTPS + application/x-www-form-urlencoded;charset=UTF-8
+        /// Method: GET
+        /// URL: https\://id6.me/gw/preuniq.do</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>?clientType=30100&amp;appId=9390188202&amp;format=json&amp;sign=D63C166FA19E1996EF********09C6A5397C10B4&amp;paramKey=1D7C25EB8B0B8B4CB3CF8DC60628F6549********786B0AF1FEF93FA1335057A35BF5F0B39A3867EAA9BE14B3898********8B01DE34965060445B6E1F66401D714650E4AB161CD6DCF4A72********3B856F22A192B8B0C39D7A55B961062E68C89C928894F119B25********7C548355FE9DB82852EB93C939F2200B48CD17&amp;paramStr=140********95AF8E138B94754CB4CF83BA6FB********52B258BFDFD38BF233&amp;version=1.1</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appId</c>: Use <c>9390188202</c>.</description></item>
+        /// <item><description><c>clientType</c>: The client type. This value must match the <c>ClientType</c> input parameter for this API.</description></item>
+        /// <item><description><c>format</c>: Use <c>json</c> or <c>jsonp</c>.</description></item>
+        /// <item><description><c>version</c>: Use <c>1.1</c>.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>paramKey</c>: The ciphertext of key A. Key A is a 16-character random string generated by the client. To generate paramKey, encrypt key A using the RSA algorithm and the China Telecom public key. The padding mode is <c>RSA/ECB/PKCS1Padding</c>. Download the <a href="https://id.189.cn/source/files/API.pem">China Telecom RSA public key</a>.</description></item>
+        /// <item><description><c>paramStr</c>: The ciphertext of a parameter string. This string contains <c>timeStamp</c> (a Unix timestamp with millisecond precision, for example <c>1697791988302</c>, that corresponds to the value of the <c>Time</c> parameter of this API) and <c>callback</c> (the name of the JSONP callback function, required only when <c>format</c> is set to <c>jsonp</c>). To generate <c>paramStr</c>, encrypt the string using AES with key A. The padding mode is <c>AES/CBC/PKCS5Padding</c>, and the initialization vector is <c>0000000000000000</c>.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>callback?result=10000&amp;msg=success&amp;data=a35336711c70456cb883f4f224e9a259</c>
+        /// The <c>data</c> parameter contains the ciphertext of the business result. To get the result, decrypt the data value using key A, the <c>AES/CBC/PKCS5Padding</c> mode, and an initialization vector of <c>0000000000000000</c>.
+        /// Decrypted business result example:
+        /// <c>{&quot;accessCode&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot;}</c>
+        /// Retrieve the <c>accessCode</c> from the decrypted result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUAIDApplyTokenSignRequest
@@ -3573,8 +3855,112 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
+        /// <para>This API only provides the signing functionality for acquiring an authorization token during UAID retrieval from the three-network operators.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API provides only the <b>signing function for obtaining an authorization token</b> as part of the UAID retrieval process for China\&quot;s three major operators.</para>
+        /// <list type="bullet">
+        /// <item><description>To generate the other parameters required to obtain the authorization token, refer to the respective operator\&quot;s documentation.</description></item>
+        /// <item><description>To request the authorization token, refer to the respective operator\&quot;s documentation. Note that the request must be sent from the user\&quot;s mobile device over a cellular network.</description></item>
+        /// <item><description>After obtaining the authorization token, call the <a href="~~UAIDVerification~~">UAIDVerification</a> API to complete the UAID retrieval.</description></item>
+        /// </list>
+        /// <h3>How to request an authorization token</h3>
+        /// <remarks>
+        /// <para>Notice: 
+        /// When you request an authorization token, the client or H5 page must be connected to a cellular network.</para>
+        /// </remarks>
+        /// <h4>China Mobile (CM)</h4>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: POST
+        /// URL: https\://msg.cmpassport.com/h5/getMobile</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>{ &quot;traceId&quot;: &quot;mfawsxtcmyplwzpayzzvdvbsowxmkynr&quot;, &quot;appId&quot;: &quot;300011580392&quot;, &quot;sign&quot;: &quot;2c61b3c58ffbeed97461e31be4fd931a&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;businessType&quot;: &quot;3&quot;, &quot;version&quot;: &quot;1.0&quot;, &quot;timestamp&quot;: &quot;20201125101540980&quot; }</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>version</c>: Use <c>1.0</c>.</description></item>
+        /// <item><description><c>timestamp</c>: The request timestamp, with millisecond precision. This value and its format must match the <c>Time</c> input parameter for this API.</description></item>
+        /// <item><description><c>appId</c>: Use <c>300011580392</c>.</description></item>
+        /// <item><description><c>businessType</c>: Use <c>3</c>.</description></item>
+        /// <item><description><c>traceId</c>: The trace ID. This value must match this API\&quot;s <c>OutId</c> input parameter.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>msgId</c>: A unique message identifier.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>{ &quot;header&quot;: { &quot;appId&quot;: &quot;300011580392&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;timestamp&quot;: &quot;20201125101607932&quot; }, &quot;body&quot;: { &quot;resultCode&quot;: &quot;103000&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;resultDesc&quot;: &quot;成功&quot;, &quot;token&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot; } }</c>
+        /// Retrieve the <c>token</c> from the response <c>body</c>.</para>
+        /// <h4>China Unicom (CU)</h4>
+        /// <para>Obtain the token in two steps.</para>
+        /// <h5>Step 1: Obtain the authurl</h5>
+        /// <para>Send a request to the portal server to get the authentication server address (<c>authurl</c>).
+        /// Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: https\://nisportal.10010.com:9001/api</para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{&quot;authurl&quot;: &quot;https://enrichgw.10010.com/d93222629f52ec79&quot;}</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;authurl&quot;:&quot;https://enrichgw.10010.com/d93222629f52ec79&quot;})</c>
+        /// Retrieve the <c>authurl</c> from the response.</para>
+        /// <h5>Step 2: Obtain the token</h5>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: The authurl from Step 1, with /api appended.
+        /// Request URL example: <c>https://enrichgw.10010.com/d93222629f52ec79/api</c></para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{ &quot;province&quot;: &quot;1&quot;, &quot;code&quot;: &quot;7nHS1nggx2WP613750206700RN6oiRN1&quot; }</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;province&quot;:&quot;1&quot;,&quot;code&quot;:&quot;7nHS3Dnkd1BS701851092400RN6oiRN1&quot;})</c>
+        /// Retrieve the <c>code</c> from the response.</para>
+        /// <h4>China Telecom (CT)</h4>
+        /// <para>Protocol: HTTPS + application/x-www-form-urlencoded;charset=UTF-8
+        /// Method: GET
+        /// URL: https\://id6.me/gw/preuniq.do</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>?clientType=30100&amp;appId=9390188202&amp;format=json&amp;sign=D63C166FA19E1996EF********09C6A5397C10B4&amp;paramKey=1D7C25EB8B0B8B4CB3CF8DC60628F6549********786B0AF1FEF93FA1335057A35BF5F0B39A3867EAA9BE14B3898********8B01DE34965060445B6E1F66401D714650E4AB161CD6DCF4A72********3B856F22A192B8B0C39D7A55B961062E68C89C928894F119B25********7C548355FE9DB82852EB93C939F2200B48CD17&amp;paramStr=140********95AF8E138B94754CB4CF83BA6FB********52B258BFDFD38BF233&amp;version=1.1</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appId</c>: Use <c>9390188202</c>.</description></item>
+        /// <item><description><c>clientType</c>: The client type. This value must match the <c>ClientType</c> input parameter for this API.</description></item>
+        /// <item><description><c>format</c>: Use <c>json</c> or <c>jsonp</c>.</description></item>
+        /// <item><description><c>version</c>: Use <c>1.1</c>.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>paramKey</c>: The ciphertext of key A. Key A is a 16-character random string generated by the client. To generate paramKey, encrypt key A using the RSA algorithm and the China Telecom public key. The padding mode is <c>RSA/ECB/PKCS1Padding</c>. Download the <a href="https://id.189.cn/source/files/API.pem">China Telecom RSA public key</a>.</description></item>
+        /// <item><description><c>paramStr</c>: The ciphertext of a parameter string. This string contains <c>timeStamp</c> (a Unix timestamp with millisecond precision, for example <c>1697791988302</c>, that corresponds to the value of the <c>Time</c> parameter of this API) and <c>callback</c> (the name of the JSONP callback function, required only when <c>format</c> is set to <c>jsonp</c>). To generate <c>paramStr</c>, encrypt the string using AES with key A. The padding mode is <c>AES/CBC/PKCS5Padding</c>, and the initialization vector is <c>0000000000000000</c>.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>callback?result=10000&amp;msg=success&amp;data=a35336711c70456cb883f4f224e9a259</c>
+        /// The <c>data</c> parameter contains the ciphertext of the business result. To get the result, decrypt the data value using key A, the <c>AES/CBC/PKCS5Padding</c> mode, and an initialization vector of <c>0000000000000000</c>.
+        /// Decrypted business result example:
+        /// <c>{&quot;accessCode&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot;}</c>
+        /// Retrieve the <c>accessCode</c> from the decrypted result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUAIDApplyTokenSignRequest
@@ -3655,8 +4041,112 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
+        /// <para>This API only provides the signing functionality for acquiring an authorization token during UAID retrieval from the three-network operators.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API provides only the <b>signing function for obtaining an authorization token</b> as part of the UAID retrieval process for China\&quot;s three major operators.</para>
+        /// <list type="bullet">
+        /// <item><description>To generate the other parameters required to obtain the authorization token, refer to the respective operator\&quot;s documentation.</description></item>
+        /// <item><description>To request the authorization token, refer to the respective operator\&quot;s documentation. Note that the request must be sent from the user\&quot;s mobile device over a cellular network.</description></item>
+        /// <item><description>After obtaining the authorization token, call the <a href="~~UAIDVerification~~">UAIDVerification</a> API to complete the UAID retrieval.</description></item>
+        /// </list>
+        /// <h3>How to request an authorization token</h3>
+        /// <remarks>
+        /// <para>Notice: 
+        /// When you request an authorization token, the client or H5 page must be connected to a cellular network.</para>
+        /// </remarks>
+        /// <h4>China Mobile (CM)</h4>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: POST
+        /// URL: https\://msg.cmpassport.com/h5/getMobile</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>{ &quot;traceId&quot;: &quot;mfawsxtcmyplwzpayzzvdvbsowxmkynr&quot;, &quot;appId&quot;: &quot;300011580392&quot;, &quot;sign&quot;: &quot;2c61b3c58ffbeed97461e31be4fd931a&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;businessType&quot;: &quot;3&quot;, &quot;version&quot;: &quot;1.0&quot;, &quot;timestamp&quot;: &quot;20201125101540980&quot; }</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>version</c>: Use <c>1.0</c>.</description></item>
+        /// <item><description><c>timestamp</c>: The request timestamp, with millisecond precision. This value and its format must match the <c>Time</c> input parameter for this API.</description></item>
+        /// <item><description><c>appId</c>: Use <c>300011580392</c>.</description></item>
+        /// <item><description><c>businessType</c>: Use <c>3</c>.</description></item>
+        /// <item><description><c>traceId</c>: The trace ID. This value must match this API\&quot;s <c>OutId</c> input parameter.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>msgId</c>: A unique message identifier.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>{ &quot;header&quot;: { &quot;appId&quot;: &quot;300011580392&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;timestamp&quot;: &quot;20201125101607932&quot; }, &quot;body&quot;: { &quot;resultCode&quot;: &quot;103000&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;resultDesc&quot;: &quot;成功&quot;, &quot;token&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot; } }</c>
+        /// Retrieve the <c>token</c> from the response <c>body</c>.</para>
+        /// <h4>China Unicom (CU)</h4>
+        /// <para>Obtain the token in two steps.</para>
+        /// <h5>Step 1: Obtain the authurl</h5>
+        /// <para>Send a request to the portal server to get the authentication server address (<c>authurl</c>).
+        /// Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: https\://nisportal.10010.com:9001/api</para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{&quot;authurl&quot;: &quot;https://enrichgw.10010.com/d93222629f52ec79&quot;}</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;authurl&quot;:&quot;https://enrichgw.10010.com/d93222629f52ec79&quot;})</c>
+        /// Retrieve the <c>authurl</c> from the response.</para>
+        /// <h5>Step 2: Obtain the token</h5>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: The authurl from Step 1, with /api appended.
+        /// Request URL example: <c>https://enrichgw.10010.com/d93222629f52ec79/api</c></para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{ &quot;province&quot;: &quot;1&quot;, &quot;code&quot;: &quot;7nHS1nggx2WP613750206700RN6oiRN1&quot; }</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;province&quot;:&quot;1&quot;,&quot;code&quot;:&quot;7nHS3Dnkd1BS701851092400RN6oiRN1&quot;})</c>
+        /// Retrieve the <c>code</c> from the response.</para>
+        /// <h4>China Telecom (CT)</h4>
+        /// <para>Protocol: HTTPS + application/x-www-form-urlencoded;charset=UTF-8
+        /// Method: GET
+        /// URL: https\://id6.me/gw/preuniq.do</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>?clientType=30100&amp;appId=9390188202&amp;format=json&amp;sign=D63C166FA19E1996EF********09C6A5397C10B4&amp;paramKey=1D7C25EB8B0B8B4CB3CF8DC60628F6549********786B0AF1FEF93FA1335057A35BF5F0B39A3867EAA9BE14B3898********8B01DE34965060445B6E1F66401D714650E4AB161CD6DCF4A72********3B856F22A192B8B0C39D7A55B961062E68C89C928894F119B25********7C548355FE9DB82852EB93C939F2200B48CD17&amp;paramStr=140********95AF8E138B94754CB4CF83BA6FB********52B258BFDFD38BF233&amp;version=1.1</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appId</c>: Use <c>9390188202</c>.</description></item>
+        /// <item><description><c>clientType</c>: The client type. This value must match the <c>ClientType</c> input parameter for this API.</description></item>
+        /// <item><description><c>format</c>: Use <c>json</c> or <c>jsonp</c>.</description></item>
+        /// <item><description><c>version</c>: Use <c>1.1</c>.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>paramKey</c>: The ciphertext of key A. Key A is a 16-character random string generated by the client. To generate paramKey, encrypt key A using the RSA algorithm and the China Telecom public key. The padding mode is <c>RSA/ECB/PKCS1Padding</c>. Download the <a href="https://id.189.cn/source/files/API.pem">China Telecom RSA public key</a>.</description></item>
+        /// <item><description><c>paramStr</c>: The ciphertext of a parameter string. This string contains <c>timeStamp</c> (a Unix timestamp with millisecond precision, for example <c>1697791988302</c>, that corresponds to the value of the <c>Time</c> parameter of this API) and <c>callback</c> (the name of the JSONP callback function, required only when <c>format</c> is set to <c>jsonp</c>). To generate <c>paramStr</c>, encrypt the string using AES with key A. The padding mode is <c>AES/CBC/PKCS5Padding</c>, and the initialization vector is <c>0000000000000000</c>.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>callback?result=10000&amp;msg=success&amp;data=a35336711c70456cb883f4f224e9a259</c>
+        /// The <c>data</c> parameter contains the ciphertext of the business result. To get the result, decrypt the data value using key A, the <c>AES/CBC/PKCS5Padding</c> mode, and an initialization vector of <c>0000000000000000</c>.
+        /// Decrypted business result example:
+        /// <c>{&quot;accessCode&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot;}</c>
+        /// Retrieve the <c>accessCode</c> from the decrypted result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUAIDApplyTokenSignRequest
@@ -3673,8 +4163,112 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
+        /// <para>This API only provides the signing functionality for acquiring an authorization token during UAID retrieval from the three-network operators.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API provides only the <b>signing function for obtaining an authorization token</b> as part of the UAID retrieval process for China\&quot;s three major operators.</para>
+        /// <list type="bullet">
+        /// <item><description>To generate the other parameters required to obtain the authorization token, refer to the respective operator\&quot;s documentation.</description></item>
+        /// <item><description>To request the authorization token, refer to the respective operator\&quot;s documentation. Note that the request must be sent from the user\&quot;s mobile device over a cellular network.</description></item>
+        /// <item><description>After obtaining the authorization token, call the <a href="~~UAIDVerification~~">UAIDVerification</a> API to complete the UAID retrieval.</description></item>
+        /// </list>
+        /// <h3>How to request an authorization token</h3>
+        /// <remarks>
+        /// <para>Notice: 
+        /// When you request an authorization token, the client or H5 page must be connected to a cellular network.</para>
+        /// </remarks>
+        /// <h4>China Mobile (CM)</h4>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: POST
+        /// URL: https\://msg.cmpassport.com/h5/getMobile</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>{ &quot;traceId&quot;: &quot;mfawsxtcmyplwzpayzzvdvbsowxmkynr&quot;, &quot;appId&quot;: &quot;300011580392&quot;, &quot;sign&quot;: &quot;2c61b3c58ffbeed97461e31be4fd931a&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;businessType&quot;: &quot;3&quot;, &quot;version&quot;: &quot;1.0&quot;, &quot;timestamp&quot;: &quot;20201125101540980&quot; }</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>version</c>: Use <c>1.0</c>.</description></item>
+        /// <item><description><c>timestamp</c>: The request timestamp, with millisecond precision. This value and its format must match the <c>Time</c> input parameter for this API.</description></item>
+        /// <item><description><c>appId</c>: Use <c>300011580392</c>.</description></item>
+        /// <item><description><c>businessType</c>: Use <c>3</c>.</description></item>
+        /// <item><description><c>traceId</c>: The trace ID. This value must match this API\&quot;s <c>OutId</c> input parameter.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>msgId</c>: A unique message identifier.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>{ &quot;header&quot;: { &quot;appId&quot;: &quot;300011580392&quot;, &quot;msgId&quot;: &quot;redbyxsdetddwaaffajcwwapspykftzx&quot;, &quot;timestamp&quot;: &quot;20201125101607932&quot; }, &quot;body&quot;: { &quot;resultCode&quot;: &quot;103000&quot;, &quot;expandParams&quot;: &quot;&quot;, &quot;resultDesc&quot;: &quot;成功&quot;, &quot;token&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot; } }</c>
+        /// Retrieve the <c>token</c> from the response <c>body</c>.</para>
+        /// <h4>China Unicom (CU)</h4>
+        /// <para>Obtain the token in two steps.</para>
+        /// <h5>Step 1: Obtain the authurl</h5>
+        /// <para>Send a request to the portal server to get the authentication server address (<c>authurl</c>).
+        /// Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: https\://nisportal.10010.com:9001/api</para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{&quot;authurl&quot;: &quot;https://enrichgw.10010.com/d93222629f52ec79&quot;}</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;authurl&quot;:&quot;https://enrichgw.10010.com/d93222629f52ec79&quot;})</c>
+        /// Retrieve the <c>authurl</c> from the response.</para>
+        /// <h5>Step 2: Obtain the token</h5>
+        /// <para>Protocol: HTTPS + application/json
+        /// Method: GET
+        /// URL: The authurl from Step 1, with /api appended.
+        /// Request URL example: <c>https://enrichgw.10010.com/d93222629f52ec79/api</c></para>
+        /// <h6>Request parameters</h6>
+        /// <para>Request examples:
+        /// JSON request: <c>?appid=1554778161153</c>
+        /// JSONP request: <c>?appid=1554778161153&amp;callback=callbackFunction</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appid</c>: Use 1554778161153.</description></item>
+        /// <item><description><c>callback</c>: The name of the JSONP callback function. This parameter is required only for JSONP requests.</description></item>
+        /// </list>
+        /// <h6>Response parameters</h6>
+        /// <para>Response examples:
+        /// JSON response:
+        /// <c>{ &quot;province&quot;: &quot;1&quot;, &quot;code&quot;: &quot;7nHS1nggx2WP613750206700RN6oiRN1&quot; }</c>
+        /// JSONP response:
+        /// <c>callbackFunction({&quot;province&quot;:&quot;1&quot;,&quot;code&quot;:&quot;7nHS3Dnkd1BS701851092400RN6oiRN1&quot;})</c>
+        /// Retrieve the <c>code</c> from the response.</para>
+        /// <h4>China Telecom (CT)</h4>
+        /// <para>Protocol: HTTPS + application/x-www-form-urlencoded;charset=UTF-8
+        /// Method: GET
+        /// URL: https\://id6.me/gw/preuniq.do</para>
+        /// <h5>Request parameters</h5>
+        /// <para>Request example:
+        /// <c>?clientType=30100&amp;appId=9390188202&amp;format=json&amp;sign=D63C166FA19E1996EF********09C6A5397C10B4&amp;paramKey=1D7C25EB8B0B8B4CB3CF8DC60628F6549********786B0AF1FEF93FA1335057A35BF5F0B39A3867EAA9BE14B3898********8B01DE34965060445B6E1F66401D714650E4AB161CD6DCF4A72********3B856F22A192B8B0C39D7A55B961062E68C89C928894F119B25********7C548355FE9DB82852EB93C939F2200B48CD17&amp;paramStr=140********95AF8E138B94754CB4CF83BA6FB********52B258BFDFD38BF233&amp;version=1.1</c>
+        /// Parameter description:</para>
+        /// <list type="bullet">
+        /// <item><description><c>appId</c>: Use <c>9390188202</c>.</description></item>
+        /// <item><description><c>clientType</c>: The client type. This value must match the <c>ClientType</c> input parameter for this API.</description></item>
+        /// <item><description><c>format</c>: Use <c>json</c> or <c>jsonp</c>.</description></item>
+        /// <item><description><c>version</c>: Use <c>1.1</c>.</description></item>
+        /// <item><description><c>sign</c>: Obtained by calling this API.</description></item>
+        /// <item><description><c>paramKey</c>: The ciphertext of key A. Key A is a 16-character random string generated by the client. To generate paramKey, encrypt key A using the RSA algorithm and the China Telecom public key. The padding mode is <c>RSA/ECB/PKCS1Padding</c>. Download the <a href="https://id.189.cn/source/files/API.pem">China Telecom RSA public key</a>.</description></item>
+        /// <item><description><c>paramStr</c>: The ciphertext of a parameter string. This string contains <c>timeStamp</c> (a Unix timestamp with millisecond precision, for example <c>1697791988302</c>, that corresponds to the value of the <c>Time</c> parameter of this API) and <c>callback</c> (the name of the JSONP callback function, required only when <c>format</c> is set to <c>jsonp</c>). To generate <c>paramStr</c>, encrypt the string using AES with key A. The padding mode is <c>AES/CBC/PKCS5Padding</c>, and the initialization vector is <c>0000000000000000</c>.</description></item>
+        /// </list>
+        /// <h5>Response parameters</h5>
+        /// <para>Response example:
+        /// <c>callback?result=10000&amp;msg=success&amp;data=a35336711c70456cb883f4f224e9a259</c>
+        /// The <c>data</c> parameter contains the ciphertext of the business result. To get the result, decrypt the data value using key A, the <c>AES/CBC/PKCS5Padding</c> mode, and an initialization vector of <c>0000000000000000</c>.
+        /// Decrypted business result example:
+        /// <c>{&quot;accessCode&quot;: &quot;H5HTTPS4187AE9743AFCB14F8D99B9D65ED9E01&quot;}</c>
+        /// Retrieve the <c>accessCode</c> from the decrypted result.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUAIDApplyTokenSignRequest
@@ -3891,8 +4485,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史三要素</para>
+        /// <para>Verifies whether a name, phone number, and ID number belonged to the same user at a specific point in time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, ensure you understand its <a href="https://help.aliyun.com/zh/cpns/product-overview/pricing-of-cpns">pricing</a>.</description></item>
+        /// <item><description>Before you use this API, log on to the Phone Number Intelligence console and apply for the required tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page.</description></item>
+        /// <item><description>You are charged for a call only when the response returns <c>Code=\\&quot;OK\\&quot;</c> and <c>IsConsistent != 0</c>. No charges are incurred for any other results.</description></item>
+        /// <item><description>Verification of China Broadcasting Network numbers (numbers with the 192 prefix) is not supported. If you provide a number with the 192 prefix, an HTTP 400 error is returned.</description></item>
+        /// <item><description>Due to number portability, the actual carrier may differ from the current carrier of record. You can use the <c>Carrier</c> parameter to route the query to a specific carrier.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user is 200. Requests that exceed this limit are throttled.</description></item>
+        /// <item><description>In the authorization information, the action is <c>dytns:HistoryThreeElementsVerification</c>, the access level is Read, and the resource type is All Resources.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HistoryThreeElementsVerificationRequest
@@ -3957,8 +4565,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史三要素</para>
+        /// <para>Verifies whether a name, phone number, and ID number belonged to the same user at a specific point in time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, ensure you understand its <a href="https://help.aliyun.com/zh/cpns/product-overview/pricing-of-cpns">pricing</a>.</description></item>
+        /// <item><description>Before you use this API, log on to the Phone Number Intelligence console and apply for the required tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page.</description></item>
+        /// <item><description>You are charged for a call only when the response returns <c>Code=\\&quot;OK\\&quot;</c> and <c>IsConsistent != 0</c>. No charges are incurred for any other results.</description></item>
+        /// <item><description>Verification of China Broadcasting Network numbers (numbers with the 192 prefix) is not supported. If you provide a number with the 192 prefix, an HTTP 400 error is returned.</description></item>
+        /// <item><description>Due to number portability, the actual carrier may differ from the current carrier of record. You can use the <c>Carrier</c> parameter to route the query to a specific carrier.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user is 200. Requests that exceed this limit are throttled.</description></item>
+        /// <item><description>In the authorization information, the action is <c>dytns:HistoryThreeElementsVerification</c>, the access level is Read, and the resource type is All Resources.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HistoryThreeElementsVerificationRequest
@@ -4023,8 +4645,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史三要素</para>
+        /// <para>Verifies whether a name, phone number, and ID number belonged to the same user at a specific point in time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, ensure you understand its <a href="https://help.aliyun.com/zh/cpns/product-overview/pricing-of-cpns">pricing</a>.</description></item>
+        /// <item><description>Before you use this API, log on to the Phone Number Intelligence console and apply for the required tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page.</description></item>
+        /// <item><description>You are charged for a call only when the response returns <c>Code=\\&quot;OK\\&quot;</c> and <c>IsConsistent != 0</c>. No charges are incurred for any other results.</description></item>
+        /// <item><description>Verification of China Broadcasting Network numbers (numbers with the 192 prefix) is not supported. If you provide a number with the 192 prefix, an HTTP 400 error is returned.</description></item>
+        /// <item><description>Due to number portability, the actual carrier may differ from the current carrier of record. You can use the <c>Carrier</c> parameter to route the query to a specific carrier.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user is 200. Requests that exceed this limit are throttled.</description></item>
+        /// <item><description>In the authorization information, the action is <c>dytns:HistoryThreeElementsVerification</c>, the access level is Read, and the resource type is All Resources.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HistoryThreeElementsVerificationRequest
@@ -4041,8 +4677,22 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史三要素</para>
+        /// <para>Verifies whether a name, phone number, and ID number belonged to the same user at a specific point in time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>Before you use this API, ensure you understand its <a href="https://help.aliyun.com/zh/cpns/product-overview/pricing-of-cpns">pricing</a>.</description></item>
+        /// <item><description>Before you use this API, log on to the Phone Number Intelligence console and apply for the required tag on the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page.</description></item>
+        /// <item><description>You are charged for a call only when the response returns <c>Code=\\&quot;OK\\&quot;</c> and <c>IsConsistent != 0</c>. No charges are incurred for any other results.</description></item>
+        /// <item><description>Verification of China Broadcasting Network numbers (numbers with the 192 prefix) is not supported. If you provide a number with the 192 prefix, an HTTP 400 error is returned.</description></item>
+        /// <item><description>Due to number portability, the actual carrier may differ from the current carrier of record. You can use the <c>Carrier</c> parameter to route the query to a specific carrier.</description></item>
+        /// <item><description>The queries per second (QPS) limit per user is 200. Requests that exceed this limit are throttled.</description></item>
+        /// <item><description>In the authorization information, the action is <c>dytns:HistoryThreeElementsVerification</c>, the access level is Read, and the resource type is All Resources.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HistoryThreeElementsVerificationRequest
@@ -4059,14 +4709,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters invalid phone numbers.</para>
+        /// <para>Performs invalid phone number filtering operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you call this operation, log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use this operation after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4128,14 +4778,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters invalid phone numbers.</para>
+        /// <para>Performs invalid phone number filtering operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you call this operation, log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use this operation after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4197,14 +4847,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters invalid phone numbers.</para>
+        /// <para>Performs invalid phone number filtering operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you call this operation, log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use this operation after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4222,14 +4872,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Filters invalid phone numbers.</para>
+        /// <para>Performs invalid phone number filtering operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you call this operation, log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and submit the application materials. You can use this operation after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this operation is 1,000 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4247,8 +4897,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人查询</para>
+        /// <para>Lists the alert contacts for Number Encyclopedia.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, ensure that you have activated Number Encyclopedia.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListContactsRequest
@@ -4305,8 +4962,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人查询</para>
+        /// <para>Lists the alert contacts for Number Encyclopedia.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, ensure that you have activated Number Encyclopedia.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListContactsRequest
@@ -4363,8 +5027,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人查询</para>
+        /// <para>Lists the alert contacts for Number Encyclopedia.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, ensure that you have activated Number Encyclopedia.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListContactsRequest
@@ -4381,8 +5052,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人查询</para>
+        /// <para>Lists the alert contacts for Number Encyclopedia.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before using this API, ensure that you have activated Number Encyclopedia.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListContactsRequest
@@ -4539,14 +5217,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts the original phone number into a virtual number that starts with 140. Cell Phone Number Service integrates the communications services provided by Alibaba Cloud. This allows you to initiate a call by using a virtual number that starts with 140.</para>
+        /// <para>Encrypts an original phone number into a virtual phone number that starts with 140. By integrating with Alibaba Cloud communication services, you can use the encrypted 140 phone number to initiate voice calls, achieving the effect of a virtual phone number call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and fill in the application materials. You can use this API after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 1,000 calls per second. If the number of API calls exceeds the limit, the calls will be throttled, which may affect your business. Call the API properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4612,14 +5290,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts the original phone number into a virtual number that starts with 140. Cell Phone Number Service integrates the communications services provided by Alibaba Cloud. This allows you to initiate a call by using a virtual number that starts with 140.</para>
+        /// <para>Encrypts an original phone number into a virtual phone number that starts with 140. By integrating with Alibaba Cloud communication services, you can use the encrypted 140 phone number to initiate voice calls, achieving the effect of a virtual phone number call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and fill in the application materials. You can use this API after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 1,000 calls per second. If the number of API calls exceeds the limit, the calls will be throttled, which may affect your business. Call the API properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4685,14 +5363,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts the original phone number into a virtual number that starts with 140. Cell Phone Number Service integrates the communications services provided by Alibaba Cloud. This allows you to initiate a call by using a virtual number that starts with 140.</para>
+        /// <para>Encrypts an original phone number into a virtual phone number that starts with 140. By integrating with Alibaba Cloud communication services, you can use the encrypted 140 phone number to initiate voice calls, achieving the effect of a virtual phone number call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and fill in the application materials. You can use this API after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 1,000 calls per second. If the number of API calls exceeds the limit, the calls will be throttled, which may affect your business. Call the API properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4710,14 +5388,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Encrypts the original phone number into a virtual number that starts with 140. Cell Phone Number Service integrates the communications services provided by Alibaba Cloud. This allows you to initiate a call by using a virtual number that starts with 140.</para>
+        /// <para>Encrypts an original phone number into a virtual phone number that starts with 140. By integrating with Alibaba Cloud communication services, you can use the encrypted 140 phone number to initiate voice calls, achieving the effect of a virtual phone number call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</para>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you use this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the corresponding tag, click <b>Apply for Activation</b>, and fill in the application materials. You can use this API after the application is approved.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 1,000 calls per second. If the number of API calls exceeds the limit, the calls will be throttled, which may affect your business. Call the API properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4735,18 +5413,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a mobile phone number, such as active, shutdown, or non-existent. You can query numbers that are in plaintext or hashed using MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after receiving the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the required tag, click <b>Apply</b>, and then submit the required information. You can use this operation once your application is approved.</description></item>
+        /// <item><description>The phone number status query feature supports numbers from China Telecom, China Unicom, and China Mobile. This feature does not support numbers from China Broadnet. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c>, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation has a queries per second (QPS) limit of 300 per user. If you exceed this limit, your API calls are throttled, which may affect your services. We recommend that you call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4808,18 +5487,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a mobile phone number, such as active, shutdown, or non-existent. You can query numbers that are in plaintext or hashed using MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after receiving the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the required tag, click <b>Apply</b>, and then submit the required information. You can use this operation once your application is approved.</description></item>
+        /// <item><description>The phone number status query feature supports numbers from China Telecom, China Unicom, and China Mobile. This feature does not support numbers from China Broadnet. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c>, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation has a queries per second (QPS) limit of 300 per user. If you exceed this limit, your API calls are throttled, which may affect your services. We recommend that you call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4881,18 +5561,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a mobile phone number, such as active, shutdown, or non-existent. You can query numbers that are in plaintext or hashed using MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after receiving the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the required tag, click <b>Apply</b>, and then submit the required information. You can use this operation once your application is approved.</description></item>
+        /// <item><description>The phone number status query feature supports numbers from China Telecom, China Unicom, and China Mobile. This feature does not support numbers from China Broadnet. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c>, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation has a queries per second (QPS) limit of 300 per user. If you exceed this limit, your API calls are throttled, which may affect your services. We recommend that you call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4910,18 +5591,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a mobile phone number, such as active, shutdown, or non-existent. You can query numbers that are in plaintext or hashed using MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after receiving the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Plaza</a> page, find the required tag, click <b>Apply</b>, and then submit the required information. You can use this operation once your application is approved.</description></item>
+        /// <item><description>The phone number status query feature supports numbers from China Telecom, China Unicom, and China Mobile. This feature does not support numbers from China Broadnet. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c>, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation has a queries per second (QPS) limit of 300 per user. If you exceed this limit, your API calls are throttled, which may affect your services. We recommend that you call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4939,18 +5621,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number to determine whether it is in service, suspended, or non-existent. This operation supports queries for plaintext numbers or numbers encrypted with MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user must be granted the required permissions before calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply</b>, and submit your application. You can use the operation after your application is approved.</description></item>
+        /// <item><description>The number status query feature supports numbers from China Telecom, China Unicom, and China Mobile, but does not support numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code is returned, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for each user is 300. API calls that exceed this limit are throttled. To avoid business disruptions, plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5012,18 +5695,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number to determine whether it is in service, suspended, or non-existent. This operation supports queries for plaintext numbers or numbers encrypted with MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user must be granted the required permissions before calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply</b>, and submit your application. You can use the operation after your application is approved.</description></item>
+        /// <item><description>The number status query feature supports numbers from China Telecom, China Unicom, and China Mobile, but does not support numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code is returned, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for each user is 300. API calls that exceed this limit are throttled. To avoid business disruptions, plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5085,18 +5769,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number to determine whether it is in service, suspended, or non-existent. This operation supports queries for plaintext numbers or numbers encrypted with MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user must be granted the required permissions before calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply</b>, and submit your application. You can use the operation after your application is approved.</description></item>
+        /// <item><description>The number status query feature supports numbers from China Telecom, China Unicom, and China Mobile, but does not support numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code is returned, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for each user is 300. API calls that exceed this limit are throttled. To avoid business disruptions, plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5114,18 +5799,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number to determine whether it is in service, suspended, or non-existent. This operation supports queries for plaintext numbers or numbers encrypted with MD5 or SHA256.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user must be granted the required permissions before calling this operation. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply</b>, and submit your application. You can use the operation after your application is approved.</description></item>
+        /// <item><description>The number status query feature supports numbers from China Telecom, China Unicom, and China Mobile, but does not support numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code is returned, which indicates that the query is prohibited by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for each user is 300. API calls that exceed this limit are throttled. To avoid business disruptions, plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5143,18 +5829,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number, such as normal, suspended, or not in service. This operation supports queries for phone numbers that are in plaintext or encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before calling this operation, ensure you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. To allow a RAM user to call this operation, you must first grant the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you call this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then submit your application. You can call this operation only after your application is approved.</description></item>
+        /// <item><description>This operation supports phone numbers from China Telecom, China Unicom, and China Mobile. Numbers from China Broadnet are not supported. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c> and an error message indicating that the query is restricted by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 300 queries per second (QPS) per user. The system throttles calls that exceed this limit, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5216,18 +5903,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number, such as normal, suspended, or not in service. This operation supports queries for phone numbers that are in plaintext or encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before calling this operation, ensure you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. To allow a RAM user to call this operation, you must first grant the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you call this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then submit your application. You can call this operation only after your application is approved.</description></item>
+        /// <item><description>This operation supports phone numbers from China Telecom, China Unicom, and China Mobile. Numbers from China Broadnet are not supported. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c> and an error message indicating that the query is restricted by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 300 queries per second (QPS) per user. The system throttles calls that exceed this limit, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5289,18 +5977,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number, such as normal, suspended, or not in service. This operation supports queries for phone numbers that are in plaintext or encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before calling this operation, ensure you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. To allow a RAM user to call this operation, you must first grant the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you call this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then submit your application. You can call this operation only after your application is approved.</description></item>
+        /// <item><description>This operation supports phone numbers from China Telecom, China Unicom, and China Mobile. Numbers from China Broadnet are not supported. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c> and an error message indicating that the query is restricted by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 300 queries per second (QPS) per user. The system throttles calls that exceed this limit, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5318,18 +6007,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time status of a mobile phone number, such as normal, suspended, or not in service. This operation supports queries for phone numbers that are in plaintext or encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before calling this operation, ensure you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Intelligence.</b></description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. To allow a RAM user to call this operation, you must first grant the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you call this operation, log on to the Phone Number Intelligence console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then submit your application. You can call this operation only after your application is approved.</description></item>
+        /// <item><description>This operation supports phone numbers from China Telecom, China Unicom, and China Mobile. Numbers from China Broadnet are not supported. If you call this operation to query a China Broadnet number, the API returns the error code <c>OperatorLimit</c> and an error message indicating that the query is restricted by the carrier.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 300 queries per second (QPS) per user. The system throttles calls that exceed this limit, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5347,18 +6037,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a phone number, such as active, shutdown, or non-existent. This operation supports queries for numbers in plaintext or numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">Product Pricing</a> of Phone Number Pedia</b>.</description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after being granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Pedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then complete the application form. You can use this operation only after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but does not support phone numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code and the &quot;The number is limited by the operator.&quot; message are returned.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation is limited to 300 queries per second (QPS) for each user. Calls that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5420,18 +6111,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a phone number, such as active, shutdown, or non-existent. This operation supports queries for numbers in plaintext or numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">Product Pricing</a> of Phone Number Pedia</b>.</description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after being granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Pedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then complete the application form. You can use this operation only after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but does not support phone numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code and the &quot;The number is limited by the operator.&quot; message are returned.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation is limited to 300 queries per second (QPS) for each user. Calls that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5493,18 +6185,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a phone number, such as active, shutdown, or non-existent. This operation supports queries for numbers in plaintext or numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">Product Pricing</a> of Phone Number Pedia</b>.</description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after being granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Pedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then complete the application form. You can use this operation only after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but does not support phone numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code and the &quot;The number is limited by the operator.&quot; message are returned.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation is limited to 300 queries per second (QPS) for each user. Calls that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5522,18 +6215,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Retrieves the real-time network status of a phone number, such as active, shutdown, or non-existent. This operation supports queries for numbers in plaintext or numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you call this operation, make sure you understand the <a href="https://help.aliyun.com/document_detail/154751.html">Product Pricing</a> of Phone Number Pedia</b>.</description></item>
+        /// <item><description>By default, only an Alibaba Cloud account can call this operation. A RAM user can call this operation only after being granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to a RAM user</a>.</description></item>
+        /// <item><description>Before calling this operation, log on to the Phone Number Pedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Request Activation</b>, and then complete the application form. You can use this operation only after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but does not support phone numbers from China Broadnet. If you call this operation to query the status of a China Broadnet number, the <c>OperatorLimit</c> error code and the &quot;The number is limited by the operator.&quot; message are returned.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation is limited to 300 queries per second (QPS) for each user. Calls that exceed this limit are throttled, which may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5551,18 +6245,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time network status of a mobile phone number, such as normal, shutdown, or non-existent. This operation supports queries for numbers in plaintext and numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Encyclopedia</b>.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can call this API. To allow a RAM user to do so, you must grant them the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Encyclopedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply for Access</b>, and then complete the application form. You can call this API after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but not from China Broadnet. If you query a China Broadnet number, the <c>OperatorLimit</c> error code and an error message are returned: The number is limited by the operator.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 300 queries per second. If you exceed this limit, the system throttles your API calls, which may impact your business. To avoid interruptions, call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5624,18 +6319,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time network status of a mobile phone number, such as normal, shutdown, or non-existent. This operation supports queries for numbers in plaintext and numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Encyclopedia</b>.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can call this API. To allow a RAM user to do so, you must grant them the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Encyclopedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply for Access</b>, and then complete the application form. You can call this API after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but not from China Broadnet. If you query a China Broadnet number, the <c>OperatorLimit</c> error code and an error message are returned: The number is limited by the operator.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 300 queries per second. If you exceed this limit, the system throttles your API calls, which may impact your business. To avoid interruptions, call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5697,18 +6393,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time network status of a mobile phone number, such as normal, shutdown, or non-existent. This operation supports queries for numbers in plaintext and numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Encyclopedia</b>.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can call this API. To allow a RAM user to do so, you must grant them the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Encyclopedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply for Access</b>, and then complete the application form. You can call this API after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but not from China Broadnet. If you query a China Broadnet number, the <c>OperatorLimit</c> error code and an error message are returned: The number is limited by the operator.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 300 queries per second. If you exceed this limit, the system throttles your API calls, which may impact your business. To avoid interruptions, call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5726,18 +6423,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the real-time service state of a phone number. The state includes NORMAL, SHUTDOWN, and NOT_EXIST. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</para>
+        /// <para>Queries the real-time network status of a mobile phone number, such as normal, shutdown, or non-existent. This operation supports queries for numbers in plaintext and numbers encrypted by using MD5, SHA256, or SM3.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
+        /// <item><description><b>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Phone Number Encyclopedia</b>.</description></item>
+        /// <item><description>By default, only Alibaba Cloud accounts can call this API. To allow a RAM user to do so, you must grant them the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</description></item>
+        /// <item><description>Before you use this API, log in to the Phone Number Encyclopedia console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the required tag, click <b>Apply for Access</b>, and then complete the application form. You can call this API after your application is approved.</description></item>
+        /// <item><description>This feature supports phone numbers from China Telecom, China Unicom, and China Mobile, but not from China Broadnet. If you query a China Broadnet number, the <c>OperatorLimit</c> error code and an error message are returned: The number is limited by the operator.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for a single user is 300 queries per second. If you exceed this limit, the system throttles your API calls, which may impact your business. To avoid interruptions, call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5899,7 +6597,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>套餐包类型信息查询</para>
+        /// <para>Queries package type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5953,7 +6651,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>套餐包类型信息查询</para>
+        /// <para>Queries package type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6007,7 +6705,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>套餐包类型信息查询</para>
+        /// <para>Queries package type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6025,7 +6723,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>套餐包类型信息查询</para>
+        /// <para>Queries package type information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6515,7 +7213,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about tags.</para>
+        /// <para>Queries tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6577,7 +7275,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about tags.</para>
+        /// <para>Queries tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6639,7 +7337,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about tags.</para>
+        /// <para>Queries tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6657,7 +7355,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about tags.</para>
+        /// <para>Queries tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6675,7 +7373,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags by page.</para>
+        /// <para>Queries the tag list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6733,7 +7431,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags by page.</para>
+        /// <para>Queries the tag list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6791,7 +7489,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags by page.</para>
+        /// <para>Queries the tag list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6809,7 +7507,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags by page.</para>
+        /// <para>Queries the tag list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6827,7 +7525,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线任务列表</para>
+        /// <para>Queries a list of offline tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6915,7 +7613,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线任务列表</para>
+        /// <para>Queries a list of offline tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7003,7 +7701,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线任务列表</para>
+        /// <para>Queries a list of offline tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7021,7 +7719,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询离线任务列表</para>
+        /// <para>Queries a list of offline tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7039,7 +7737,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage statistics based on tag IDs.</para>
+        /// <para>Queries usage statistics by tag ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7109,7 +7807,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage statistics based on tag IDs.</para>
+        /// <para>Queries usage statistics by tag ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7179,7 +7877,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage statistics based on tag IDs.</para>
+        /// <para>Queries usage statistics by tag ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7197,7 +7895,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage statistics based on tag IDs.</para>
+        /// <para>Queries usage statistics by tag ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7215,8 +7913,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人保存</para>
+        /// <para>Saves an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure you have activated Phone Number Intelligence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveContactsRequest
@@ -7297,8 +8002,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人保存</para>
+        /// <para>Saves an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure you have activated Phone Number Intelligence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveContactsRequest
@@ -7379,8 +8091,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人保存</para>
+        /// <para>Saves an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure you have activated Phone Number Intelligence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveContactsRequest
@@ -7397,8 +8116,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人保存</para>
+        /// <para>Saves an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure you have activated Phone Number Intelligence.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveContactsRequest
@@ -7415,18 +8141,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name, phone number, and ID card number entered by a user belong to the same user.</para>
+        /// <para>Verification of three elements (name, mobile phone number, and ID card number). Used to verify whether the name, mobile phone number, and ID card number entered by a user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before you call this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before you call this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and call the API after the application is approved.</description></item>
+        /// <item><description>Billing applies when the API returns Code=\&quot;OK\&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>The verification of virtual carrier numbers is not supported. Virtual carrier numbers refer to numbers that start with 170, 171, 162, or 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API in a reasonable manner.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7496,18 +8223,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name, phone number, and ID card number entered by a user belong to the same user.</para>
+        /// <para>Verification of three elements (name, mobile phone number, and ID card number). Used to verify whether the name, mobile phone number, and ID card number entered by a user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before you call this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before you call this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and call the API after the application is approved.</description></item>
+        /// <item><description>Billing applies when the API returns Code=\&quot;OK\&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>The verification of virtual carrier numbers is not supported. Virtual carrier numbers refer to numbers that start with 170, 171, 162, or 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API in a reasonable manner.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7577,18 +8305,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name, phone number, and ID card number entered by a user belong to the same user.</para>
+        /// <para>Verification of three elements (name, mobile phone number, and ID card number). Used to verify whether the name, mobile phone number, and ID card number entered by a user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before you call this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before you call this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and call the API after the application is approved.</description></item>
+        /// <item><description>Billing applies when the API returns Code=\&quot;OK\&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>The verification of virtual carrier numbers is not supported. Virtual carrier numbers refer to numbers that start with 170, 171, 162, or 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API in a reasonable manner.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7606,18 +8335,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name, phone number, and ID card number entered by a user belong to the same user.</para>
+        /// <para>Verification of three elements (name, mobile phone number, and ID card number). Used to verify whether the name, mobile phone number, and ID card number entered by a user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before you call this API, make sure that you have fully understood the <a href="https://help.aliyun.com/document_detail/154751.html">pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before you call this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply for Activation</b>, fill in the application materials, and call the API after the application is approved.</description></item>
+        /// <item><description>Billing applies when the API returns Code=\&quot;OK\&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>The verification of virtual carrier numbers is not supported. Virtual carrier numbers refer to numbers that start with 170, 171, 162, or 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit per user for this API is 200 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call the API in a reasonable manner.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7635,18 +8365,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name and phone number entered by a user belong to the same user.</para>
+        /// <para>Two-element (name and phone number) verification. Used to compare whether the name and phone number entered by the user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Enable</b>, fill in the application materials, and use it after the approval.</description></item>
+        /// <item><description>Billing is applied when the API returns Code=&quot;OK&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>MVNO number verification is not supported. MVNO numbers refer to numbers starting with 170, 171, 162, and 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7712,18 +8443,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name and phone number entered by a user belong to the same user.</para>
+        /// <para>Two-element (name and phone number) verification. Used to compare whether the name and phone number entered by the user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Enable</b>, fill in the application materials, and use it after the approval.</description></item>
+        /// <item><description>Billing is applied when the API returns Code=&quot;OK&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>MVNO number verification is not supported. MVNO numbers refer to numbers starting with 170, 171, 162, and 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7789,18 +8521,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name and phone number entered by a user belong to the same user.</para>
+        /// <para>Two-element (name and phone number) verification. Used to compare whether the name and phone number entered by the user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Enable</b>, fill in the application materials, and use it after the approval.</description></item>
+        /// <item><description>Billing is applied when the API returns Code=&quot;OK&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>MVNO number verification is not supported. MVNO numbers refer to numbers starting with 170, 171, 162, and 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7818,18 +8551,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies whether the name and phone number entered by a user belong to the same user.</para>
+        /// <para>Two-element (name and phone number) verification. Used to compare whether the name and phone number entered by the user belong to the same user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</para>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <b>Activate Now</b>, enter the required information, and then submit your application. After your application is approved, you can use the label.</description></item>
-        /// <item><description>You are charged only if the value of Code is OK and the value of IsConsistent is not 2.</description></item>
+        /// <item><description>Before using this API, ensure that you fully understand the <a href="https://help.aliyun.com/document_detail/154751.html">product pricing</a> of Cell Phone Number Service.</description></item>
+        /// <item><description>Before using this API, log on to the Cell Phone Number Service console, go to the <a href="https://dytns.console.aliyun.com/analysis/square">Tag Square</a> page, find the corresponding tag, click <b>Apply to Enable</b>, fill in the application materials, and use it after the approval.</description></item>
+        /// <item><description>Billing is applied when the API returns Code=&quot;OK&quot; and IsConsistent != 2. Other return results are not billed.</description></item>
+        /// <item><description>MVNO number verification is not supported. MVNO numbers refer to numbers starting with 170, 171, 162, and 165.</description></item>
         /// </list>
-        /// <h3><a href="#qps"></a>QPS limits</h3>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The per-user QPS limit of this API is 200 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8207,8 +8941,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
+        /// <para>Obtains a UAID based on the carrier authorization token.
+        /// For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.
+        /// A UAID is 64 characters in length. The first 32 characters describe the device information, and the last 32 characters describe the phone number information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you have fully understood the billing method and <a href="https://www.aliyun.com/price/product#/dytns/detail/dytns_penqbag_public_cn">pricing</a> of Cell Phone Number Service.<br>Obtains a UAID based on the carrier authorization token.<br>For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UAIDVerificationRequest
@@ -8285,8 +9026,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
+        /// <para>Obtains a UAID based on the carrier authorization token.
+        /// For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.
+        /// A UAID is 64 characters in length. The first 32 characters describe the device information, and the last 32 characters describe the phone number information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you have fully understood the billing method and <a href="https://www.aliyun.com/price/product#/dytns/detail/dytns_penqbag_public_cn">pricing</a> of Cell Phone Number Service.<br>Obtains a UAID based on the carrier authorization token.<br>For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UAIDVerificationRequest
@@ -8363,8 +9111,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
+        /// <para>Obtains a UAID based on the carrier authorization token.
+        /// For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.
+        /// A UAID is 64 characters in length. The first 32 characters describe the device information, and the last 32 characters describe the phone number information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you have fully understood the billing method and <a href="https://www.aliyun.com/price/product#/dytns/detail/dytns_penqbag_public_cn">pricing</a> of Cell Phone Number Service.<br>Obtains a UAID based on the carrier authorization token.<br>For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UAIDVerificationRequest
@@ -8381,8 +9136,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
+        /// <para>Obtains a UAID based on the carrier authorization token.
+        /// For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.
+        /// A UAID is 64 characters in length. The first 32 characters describe the device information, and the last 32 characters describe the phone number information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you have fully understood the billing method and <a href="https://www.aliyun.com/price/product#/dytns/detail/dytns_penqbag_public_cn">pricing</a> of Cell Phone Number Service.<br>Obtains a UAID based on the carrier authorization token.<br>For information about how to obtain the authorization token and its signature, see the GetUAIDApplyTokenSign API documentation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UAIDVerificationRequest
@@ -8399,8 +9161,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人更新</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Ensure that you have activated the Phone Number Information Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContactsRequest
@@ -8481,8 +9250,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人更新</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Ensure that you have activated the Phone Number Information Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContactsRequest
@@ -8563,8 +9339,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人更新</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Ensure that you have activated the Phone Number Information Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContactsRequest
@@ -8581,8 +9364,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预警联系人更新</para>
+        /// <para>Updates an alert contact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Ensure that you have activated the Phone Number Information Service before calling this operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContactsRequest
@@ -8595,6 +9385,158 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateContactsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>虚商三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VirtualThreeElementsVerificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VirtualThreeElementsVerificationResponse
+        /// </returns>
+        public VirtualThreeElementsVerificationResponse VirtualThreeElementsVerificationWithOptions(VirtualThreeElementsVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertCode))
+            {
+                query["CertCode"] = request.CertCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VirtualThreeElementsVerification",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VirtualThreeElementsVerificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>虚商三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VirtualThreeElementsVerificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VirtualThreeElementsVerificationResponse
+        /// </returns>
+        public async Task<VirtualThreeElementsVerificationResponse> VirtualThreeElementsVerificationWithOptionsAsync(VirtualThreeElementsVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertCode))
+            {
+                query["CertCode"] = request.CertCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertName))
+            {
+                query["CertName"] = request.CertName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VirtualThreeElementsVerification",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VirtualThreeElementsVerificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>虚商三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VirtualThreeElementsVerificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VirtualThreeElementsVerificationResponse
+        /// </returns>
+        public VirtualThreeElementsVerificationResponse VirtualThreeElementsVerification(VirtualThreeElementsVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VirtualThreeElementsVerificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>虚商三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VirtualThreeElementsVerificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VirtualThreeElementsVerificationResponse
+        /// </returns>
+        public async Task<VirtualThreeElementsVerificationResponse> VirtualThreeElementsVerificationAsync(VirtualThreeElementsVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VirtualThreeElementsVerificationWithOptionsAsync(request, runtime);
         }
 
     }

@@ -9,18 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberOperatorAttributeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial. This parameter is returned only if the request is denied because the RAM user or RAM role does not have the required permissions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The status code of the request. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>OK</b>: The request is successful.</description></item>
-        /// <item><description><b>InvalidParameter</b>: The specified phone number is invalid or the parameter format is invalid.</description></item>
-        /// <item><description><b>PhoneNumberNotfound</b>: No attribute information can be found for the specified phone number.</description></item>
-        /// <item><description><b>isp.UNKNOWN</b>: An unknown exception occurred.</description></item>
-        /// <item><description><b>RequestFrequencyLimit</b>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</description></item>
+        /// <item><description><b>InvalidParameter</b>: The phone number is invalid or the format of the parameter is invalid.</description></item>
+        /// <item><description><b>PhoneNumberNotfound</b>: The carrier information of the phone number is not found.</description></item>
+        /// <item><description><b>isp.UNKNOWN</b>: An unknown error occurred.</description></item>
+        /// <item><description><b>RequestFrequencyLimit</b>: Due to carrier restrictions, you cannot frequently query the same number in a short period of time. If this error code is returned, try again later.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,7 +39,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -40,44 +48,46 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             /// <summary>
             /// <para>The basic carrier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>China Mobile</b></description></item>
-            /// <item><description><b>China Unicom</b></description></item>
-            /// <item><description><b>China Telecom</b></description></item>
-            /// <item><description><b>China Broadnet</b></description></item>
+            /// <item><description><b>China Mobile</b>.</description></item>
+            /// <item><description><b>China Unicom</b>.</description></item>
+            /// <item><description><b>China Telecom</b>.</description></item>
+            /// <item><description><b>China Broadnet</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>China Mobile</para>
+            /// <para>中国移动</para>
             /// </summary>
             [NameInMap("BasicCarrier")]
             [Validation(Required=false)]
             public string BasicCarrier { get; set; }
 
             /// <summary>
-            /// <para>The actual carrier, including the virtual network operator (VNO). If the phone number involves mobile number portability, the value of this parameter is the carrier after mobile number portability.</para>
+            /// <para>The actual carrier (including the mobile virtual network operator). If number portability is enabled, the value indicates the carrier after number portability.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China Mobile</para>
+            /// <para>中国移动</para>
             /// </summary>
             [NameInMap("Carrier")]
             [Validation(Required=false)]
             public string Carrier { get; set; }
 
             /// <summary>
-            /// <para>The city where the phone number is registered.</para>
+            /// <para>The city to which the phone number belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hangzhou</para>
+            /// <para>杭州</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the phone number involves mobile number portability. Valid values:</para>
+            /// <para>Indicates whether the number has been ported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,10 +108,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public long? NumberSegment { get; set; }
 
             /// <summary>
-            /// <para>The province where the phone number is registered.</para>
+            /// <para>The province to which the phone number belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>zhejiang</para>
+            /// <para>浙江</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

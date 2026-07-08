@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DescribePhoneNumberOnlineTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OK</b>: The request is successful.</description></item>
-        /// <item><description><b>PortabilityNumberNotSupported</b>: The phone number that is involved in mobile number portability is not supported.</description></item>
-        /// <item><description><b>RequestFrequencyLimit</b>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</description></item>
+        /// <item><description><b>OK</b>: The request was successful.</description></item>
+        /// <item><description><b>PortabilityNumberNotSupported</b>: The mobile number portability number is not supported.</description></item>
+        /// <item><description><b>RequestFrequencyLimit</b>: Due to carrier restrictions, frequent repeated queries on the same number within a short period are prohibited. If this error code is returned, try again later.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Pricing</a>.</para>
+        /// <para>Charges are incurred when Code is OK and VerifyResult is not -1. For billing details, see <a href="https://help.aliyun.com/document_detail/154751.html">Cell Phone Number Service Pricing</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribePhoneNumberOnlineTimeResponseBodyData Data { get; set; }
         public class DescribePhoneNumberOnlineTimeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The carrier code. Valid values:</para>
+            /// <para>The carrier SMS status code. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>CMCC</b>: China Mobile</description></item>
             /// <item><description><b>CUCC</b>: China Unicom</description></item>
@@ -51,15 +51,15 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string CarrierCode { get; set; }
 
             /// <summary>
-            /// <para>The enumerated value of the usage period of a phone number. Valid values:</para>
+            /// <para>The enumeration value of the network registration duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>-1</b>: No usage period information is available for the phone number.</description></item>
-            /// <item><description><b>0</b>: The phone number status is abnormal. For example, the phone number is a nonexistent number.</description></item>
-            /// <item><description><b>1</b> :[0-3) months.</description></item>
-            /// <item><description><b>2</b> :[3-6] months.</description></item>
-            /// <item><description><b>3</b> :(6-12] months.</description></item>
-            /// <item><description><b>4</b> :(12-24] months.</description></item>
-            /// <item><description><b>5</b> :(24,+) months.</description></item>
+            /// <item><description><b>-1</b>: No duration was found.</description></item>
+            /// <item><description><b>0</b>: Abnormal phone status, for example, a non-existent number.</description></item>
+            /// <item><description><b>1</b>: [0-3) months.</description></item>
+            /// <item><description><b>2</b>: [3-6) months.</description></item>
+            /// <item><description><b>3</b>: [6-12) months.</description></item>
+            /// <item><description><b>4</b>: [12-24) months.</description></item>
+            /// <item><description><b>5</b>: [24,+∞) months.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the number status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

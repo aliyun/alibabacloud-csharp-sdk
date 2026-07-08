@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>The authorization code is the authorization ID that you can find on the <b>My Applications</b> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Phone Number Encyclopedia console</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,15 +24,21 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The phone number to be queried.</para>
+        /// <para>The phone number to query.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</description></item>
-        /// <item><description>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</description></item>
-        /// <item><description>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</description></item>
+        /// <item><description><para>If you set <c>Mask</c> to <c>NORMAL</c>, specify an 11-digit mobile number.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>Mask</c> to <c>MD5</c>, specify a 32-bit encrypted string.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>Mask</c> to <c>SHA256</c>, specify a 64-bit encrypted string.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>Mask</c> to <c>SM3</c>, specify a 64-bit encrypted string.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>The letters in the encrypted string are not case-sensitive.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,9 +51,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The encryption method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: plaintext</description></item>
-        /// <item><description><b>MD5</b></description></item>
-        /// <item><description><b>SHA256</b></description></item>
+        /// <item><description><para><b>NORMAL</b>: The number is in plaintext.</para>
+        /// </description></item>
+        /// <item><description><para><b>MD5</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SHA256</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SM3</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>On the <b>My Applications</b> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, obtain the authorization ID, which is the authorization code.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The phone number to be queried.</para>
         /// <remarks>
-        /// <para> You can query only one phone number at a time.</para>
+        /// <para>Currently, only single phone number queries are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string InputNumber { get; set; }
 
         /// <summary>
-        /// <para>The encryption method of the phone number. Set the value to <b>NORMAL</b>.</para>
+        /// <para>The encryption method of the phone number. Valid value: <b>NORMAL</b>.</para>
         /// <remarks>
-        /// <para> Only the NORMAL encryption method is supported.</para>
+        /// <para>Notice: Currently, only the NORMAL encryption method is supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,6 +51,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Mask { get; set; }
 
+        /// <summary>
+        /// <para>The user-defined outId. This parameter is optional. The format is not limited, and the length must be less than or equal to 64 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>213e367117422635749191493eea68</para>
+        /// </summary>
         [NameInMap("OutId")]
         [Validation(Required=false)]
         public string OutId { get; set; }

@@ -10,19 +10,30 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class InvalidPhoneNumberFilterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The status code of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OK</b>: The request is successful.</description></item>
-        /// <item><description><b>MobileNumberIllegal</b>: The phone number is invalid.</description></item>
-        /// <item><description><b>EncyrptTypeIllegal</b>: The encryption type is invalid.</description></item>
-        /// <item><description><b>MobileNumberTypeNotMatch</b>: The phone number does not match the encryption type.</description></item>
-        /// <item><description><b>CarrierIllegal</b>: The carrier type is invalid.</description></item>
-        /// <item><description><b>AuthCodeNotExist</b>: The authorization code does not exist.</description></item>
-        /// <item><description><b>PortabilityNumberNotSupported</b>: Mobile number portability is not supported.</description></item>
-        /// <item><description><b>Unknown</b>: An unknown exception occurred.</description></item>
-        /// <item><description><b>AuthCodeAndApiNotMatch</b>: A system exception occurred.</description></item>
-        /// <item><description><b>AuthCodeAndApiNotMatch</b>: The authorization code does not match the API operation.</description></item>
-        /// <item><description><b>RequestFrequencyLimit</b>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</description></item>
+        /// <item><description><para><b>OK</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>MobileNumberIllegal</b>: The mobile number is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>EncyrptTypeIllegal</b>: The encryption type is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>MobileNumberTypeNotMatch</b>: The mobile number does not match the encryption type.</para>
+        /// </description></item>
+        /// <item><description><para><b>CarrierIllegal</b>: The carrier type is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>AuthCodeNotExist</b>: The authorization code does not exist.</para>
+        /// </description></item>
+        /// <item><description><para><b>PortabilityNumberNotSupported</b>: Mobile number portability is not supported.</para>
+        /// </description></item>
+        /// <item><description><para><b>Unknown</b>: An unknown exception occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>AuthCodeAndApiNotMatch</b>: A system exception occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>AuthCodeAndApiNotMatch</b>: The AuthCode does not match the API operation.</para>
+        /// </description></item>
+        /// <item><description><para><b>RequestFrequencyLimit</b>: Due to carrier restrictions, repeated high-frequency queries against the same phone number within a short period of time are prohibited. If this error code is returned, try again later.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,17 +44,19 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Details about the returned entries.</para>
+        /// <para>The array of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<InvalidPhoneNumberFilterResponseBodyData> Data { get; set; }
         public class InvalidPhoneNumberFilterResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned filter results.</para>
+            /// <para>The filtering result.</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b>: the valid phone number. The mappings are returned.</description></item>
-            /// <item><description><b>NO</b>: the invalid phone number. No mappings are returned.</description></item>
+            /// <item><description><para><b>YES</b>: A valid phone number. The mapping relationship is returned.</para>
+            /// </description></item>
+            /// <item><description><para><b>NO</b>: An invalid phone number. The mapping relationship is not returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +77,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string EncryptedNumber { get; set; }
 
             /// <summary>
-            /// <para>The time when the phone number expires.</para>
+            /// <para>The expiration time of the phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-27 16:05:23</para>
@@ -86,7 +99,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

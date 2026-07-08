@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The authorization code.</para>
         /// <remarks>
-        /// <para> On the <b>My Applications</b> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</para>
+        /// <para>On the <b>My Applications</b> page of the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, the authorization ID is the authorization code.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,12 +26,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The ID card number to be verified.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of Mask is NORMAL, specify a value in plaintext for this field.</description></item>
-        /// <item><description>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</description></item>
-        /// <item><description>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</description></item>
+        /// <item><description>If Mask is set to NORMAL, this field is in plaintext.</description></item>
+        /// <item><description>If Mask is set to MD5, encrypt this field by using MD5.</description></item>
+        /// <item><description>If Mask is set to SHA256, encrypt this field by using SHA256.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// <para>Notice: Letters in the encrypted string are case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,12 +45,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The phone number to be verified.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of Mask is NORMAL, specify a value in plaintext for this field.</description></item>
-        /// <item><description>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</description></item>
-        /// <item><description>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</description></item>
+        /// <item><description>If Mask is set to NORMAL, this field is in plaintext.</description></item>
+        /// <item><description>If Mask is set to MD5, encrypt this field by using MD5.</description></item>
+        /// <item><description>If Mask is set to SHA256, encrypt this field by using SHA256.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// <para>Notice: Letters in the encrypted string are case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,9 +64,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The encryption method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL</b>: The phone number is not encrypted.</description></item>
-        /// <item><description><b>MD5</b></description></item>
-        /// <item><description><b>SHA256</b></description></item>
+        /// <item><description><para><b>NORMAL</b>: No encryption.</para>
+        /// </description></item>
+        /// <item><description><para><b>MD5</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SHA256</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,17 +83,17 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>The name to be verified.</para>
         /// <list type="bullet">
-        /// <item><description>If the value of Mask is NORMAL, specify a value in plaintext for this field.</description></item>
-        /// <item><description>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</description></item>
-        /// <item><description>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</description></item>
+        /// <item><description>If Mask is set to NORMAL, this field is in plaintext.</description></item>
+        /// <item><description>If Mask is set to MD5, encrypt this field by using MD5.</description></item>
+        /// <item><description>If Mask is set to SHA256, encrypt this field by using SHA256.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Letters in the encrypted strings are not case-sensitive.</para>
+        /// <para>Notice: Letters in the encrypted string are case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Aliyun</para>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class CertNoTwoElementVerificationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -27,11 +31,24 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CertNoTwoElementVerificationResponseBodyData Data { get; set; }
         public class CertNoTwoElementVerificationResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the verification result is consistent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: Consistent</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: Inconsistent</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Not found</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -42,6 +59,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
+        /// <para>The description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -50,6 +69,8 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</para>
         /// </summary>

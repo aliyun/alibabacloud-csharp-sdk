@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag ID.</para>
+        /// <para>The tag ID. You can call the <a href="~~QueryTagListPage~~">QueryTagListPage</a> operation to query tag IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>

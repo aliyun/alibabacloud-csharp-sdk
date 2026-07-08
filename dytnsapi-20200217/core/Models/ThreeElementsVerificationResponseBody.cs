@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class ThreeElementsVerificationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>OK</b>: The request is successful.</description></item>
-        /// <item><description>For more information, see Error codes in this documentation.</description></item>
-        /// <item><description><b>RequestFrequencyLimit</b>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</description></item>
+        /// <item><description><b>OK</b>: The request was successful.</description></item>
+        /// <item><description>For other error codes, see the error code table in this chapter.</description></item>
+        /// <item><description><b>RequestFrequencyLimit</b>: Due to carrier restrictions, repeated high-frequency queries on the same number within a short period are prohibited. If this error code is returned, try again later.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,52 +34,58 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             /// <summary>
             /// <para>The basic carrier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>China Mobile</b></description></item>
-            /// <item><description><b>China Unicom</b></description></item>
-            /// <item><description><b>China Telecom</b></description></item>
+            /// <item><description><para><b>China Mobile</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>China Unicom</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>China Telecom</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>China Mobile</para>
+            /// <para>中国移动</para>
             /// </summary>
             [NameInMap("BasicCarrier")]
             [Validation(Required=false)]
             public string BasicCarrier { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the specified name, phone number, and ID card number belong to the same user. Valid values:</para>
+            /// <para>Indicates whether the verification results are consistent. Returned values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The specified name, phone number, and ID card number belong to the same user.</description></item>
-            /// <item><description><b>0</b>: The specified name, phone number, and ID card number do not belong to the same user.</description></item>
-            /// <item><description><b>2</b>: The specified name, phone number, and ID card number cannot be found.</description></item>
+            /// <item><description><b>1</b>: Consistent</description></item>
+            /// <item><description><b>0</b>: Inconsistent</description></item>
+            /// <item><description><b>2</b>: Not found<remarks>
+            /// <para>The data update timeliness varies by carrier and city, and is typically between T+1 and T+3.
+            /// The verification results for mobile phone numbers of different carriers in different states are as follows:</para>
+            /// </remarks>
+            /// </description></item>
             /// </list>
-            /// <para><b>Note</b> The phone number registration data of a user is usually updated one or three days after registration. The registration data can be queried only after the update. The following table shows the verification results under different phone number states.</para>
             /// <table>
             /// <thead>
             /// <tr>
-            /// <th>Carrier/Phone number state</th>
-            /// <th>Out-of-service</th>
-            /// <th>Nonexistent</th>
-            /// <th>Canceled</th>
+            /// <th>Carrier/Mobile Phone Number Status</th>
+            /// <th>Suspended</th>
+            /// <th>Empty Number</th>
+            /// <th>Deregistered</th>
             /// </tr>
             /// </thead>
             /// <tbody><tr>
             /// <td>China Mobile</td>
-            /// <td>Verifications can be carried out normally.</td>
-            /// <td>The specified name, phone number, and ID card number cannot be found.</td>
-            /// <td>The specified name, phone number, and ID card number cannot be found.</td>
+            /// <td>Normal verification</td>
+            /// <td>Not found</td>
+            /// <td>Not found</td>
             /// </tr>
             /// <tr>
             /// <td>China Unicom</td>
-            /// <td>Verifications can be carried out normally.</td>
-            /// <td>The specified name, phone number, and ID card number do not belong to the same user.</td>
-            /// <td>The specified name, phone number, and ID card number do not belong to the same user.</td>
+            /// <td>Normal verification</td>
+            /// <td>Inconsistent</td>
+            /// <td>Inconsistent</td>
             /// </tr>
             /// <tr>
             /// <td>China Telecom</td>
-            /// <td>Verifications can be carried out normally.</td>
-            /// <td>The specified name, phone number, and ID card number cannot be found.</td>
-            /// <td>The specified name, phone number, and ID card number cannot be found.</td>
+            /// <td>Normal verification</td>
+            /// <td>Not found</td>
+            /// <td>Not found</td>
             /// </tr>
             /// </tbody></table>
             /// 
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class DeleteContactsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the contact.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

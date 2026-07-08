@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class PhoneNumberStatusForRealResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OK</b>: The request is successful.</description></item>
-        /// <item><description><b>OperatorLimit</b>: The carrier prohibits the query of the phone number.</description></item>
-        /// <item><description><b>RequestFrequencyLimit</b>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</description></item>
+        /// <item><description><para><b>OK</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>OperatorLimit</b>: The query for the phone number is restricted by the carrier.</para>
+        /// </description></item>
+        /// <item><description><para><b>RequestFrequencyLimit</b>: Carriers prohibit high-frequency queries for the same number within a short period. If this error code is returned, try again later.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,21 +28,24 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The data returned for the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PhoneNumberStatusForRealResponseBodyData Data { get; set; }
         public class PhoneNumberStatusForRealResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The basic carrier who assigns the phone number. If the queried phone number involves mobile number portability, the carrier after mobile number portability is returned. Valid values:</para>
+            /// <para>The carrier that provides service for the phone number. If the number has been ported through mobile number portability (MNP), this field returns the new carrier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CMCC</b>: China Mobile</description></item>
-            /// <item><description><b>CUCC</b>: China Unicom</description></item>
-            /// <item><description><b>CTCC</b>: China Telecom</description></item>
+            /// <item><description><para><b>CMCC</b>: China Mobile.</para>
+            /// </description></item>
+            /// <item><description><para><b>CUCC</b>: China Unicom.</para>
+            /// </description></item>
+            /// <item><description><para><b>CTCC</b>: China Telecom.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You are not allowed to query the phone numbers assigned by China Broadnet.</para>
+            /// <para>Queries for China Broadnet numbers are not supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,19 +56,27 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string Carrier { get; set; }
 
             /// <summary>
-            /// <para>The returned status for the queried phone number. Valid values:</para>
+            /// <para>The status of the phone number. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NORMAL</b>: The queried phone number can be reached.</description></item>
-            /// <item><description><b>SHUTDOWN</b>: The queried phone number is suspended.</description></item>
-            /// <item><description><b>POWER_OFF</b>: The phone is powered off.</description></item>
-            /// <item><description><b>NOT_EXIST</b>: The queried phone number is a nonexistent number.</description></item>
-            /// <item><description><b>BUSY</b>: The queried phone number is busy.</description></item>
-            /// <item><description><b>SUSPECTED_POWER_OFF</b>: The phone is suspected to be powered off.</description></item>
-            /// <item><description><b>DEFECT</b>: The queried phone number is invalid.</description></item>
-            /// <item><description><b>UNKNOWN</b>: The queried phone number is unknown.</description></item>
+            /// <item><description><para><b>NORMAL</b>: The number is in service.</para>
+            /// </description></item>
+            /// <item><description><para><b>SHUTDOWN</b>: The service for the number is suspended.</para>
+            /// </description></item>
+            /// <item><description><para><b>POWER_OFF</b>: The phone is powered off.</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_EXIST</b>: The number is not in service.</para>
+            /// </description></item>
+            /// <item><description><para><b>BUSY</b>: The line is busy.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUSPECTED_POWER_OFF</b>: The phone is suspected to be powered off.</para>
+            /// </description></item>
+            /// <item><description><para><b>DEFECT</b>: The number is invalid.</para>
+            /// </description></item>
+            /// <item><description><para><b>UNKNOWN</b>: The status is unknown.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> Due to system adjustment of the carrier, the BUSY and POWER_OFF states cannot be returned for the numbers assigned by China Telecom. <a href="https://help.aliyun.com/document_detail/2489709.html">For more information, see the official announcements</a>.</para>
+            /// <para>Due to carrier system adjustments, China Telecom numbers no longer return the <c>BUSY</c>, <c>SUSPECTED_POWER_OFF</c>, and <c>POWER_OFF</c> statuses. For more information, see the <a href="https://help.aliyun.com/document_detail/2489709.html">official announcement</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -75,7 +89,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -85,7 +99,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</para>
+        /// <para>A unique identifier for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</para>

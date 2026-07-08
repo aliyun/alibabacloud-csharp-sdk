@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryTagListPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. <b>OK</b> indicates that the request is successful.</para>
+        /// <para>The response code. <b>OK</b> indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public QueryTagListPageResponseBodyData Data { get; set; }
         public class QueryTagListPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The retruned data.</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<QueryTagListPageResponseBodyDataRecords> Records { get; set; }
             public class QueryTagListPageResponseBodyDataRecords : TeaModel {
                 /// <summary>
-                /// <para>The API operation that is called by the frontend.</para>
+                /// <para>The name of the API called by the frontend.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TwoElementsVerification</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
                 public string ApiName { get; set; }
 
                 /// <summary>
-                /// <para>Code</para>
+                /// <para>The response code. OK indicates success.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OK</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The URL for the API documentation.</para>
+                /// <para>The API document link.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP</a></para>
@@ -107,27 +107,27 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
                 /// <para>The industry name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test</para>
+                /// <para>测试</para>
                 /// </summary>
                 [NameInMap("IndustryName")]
                 [Validation(Required=false)]
                 public string IndustryName { get; set; }
 
                 /// <summary>
-                /// <para>The tag description.</para>
+                /// <para>The tag introduction.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>for autotest new</para>
+                /// <para>这个标签是查询号码状态的。</para>
                 /// </summary>
                 [NameInMap("Introduction")]
                 [Validation(Required=false)]
                 public string Introduction { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the number is activated.</para>
+                /// <para>Indicates whether the activation has been applied for.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>45</para>
+                /// <para>是</para>
                 /// </summary>
                 [NameInMap("IsOpen")]
                 [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
                 /// <para>The tag name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Aliyun</para>
+                /// <para>阿里云</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -145,8 +145,10 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>0: The number is hidden.</description></item>
-                /// <item><description>1: The number is public.</description></item>
+                /// <item><description><para>0: hidden.</para>
+                /// </description></item>
+                /// <item><description><para>1: public.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -170,7 +172,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
                 /// <para>The scene name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>check</para>
+                /// <para>查询</para>
                 /// </summary>
                 [NameInMap("SceneName")]
                 [Validation(Required=false)]
@@ -179,7 +181,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -189,7 +191,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public long? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>91</para>
@@ -201,7 +203,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -221,10 +223,12 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

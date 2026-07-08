@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
 {
     public class QueryTagApplyRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. <b>OK</b> indicates that the request is successful.</para>
+        /// <para>The request status code. <b>OK</b> indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,27 +27,33 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         public QueryTagApplyRuleResponseBodyData Data { get; set; }
         public class QueryTagApplyRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The requirements for application materials.</para>
+            /// <para>The application material requirements. This parameter is returned when NeedApplyMaterial=1.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Requirements for application materials</para>
+            /// <para>申请材料的要求是XXX</para>
             /// </summary>
             [NameInMap("ApplyMaterialDesc")]
             [Validation(Required=false)]
             public string ApplyMaterialDesc { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application is automatically approved.</para>
+            /// <para>Indicates whether to automatically approve. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: do not automatically approve.</para>
+            /// </description></item>
+            /// <item><description><para>1: automatically approve.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>16</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AutoAudit")]
             [Validation(Required=false)]
             public long? AutoAudit { get; set; }
 
             /// <summary>
-            /// <para>The URL for the billing documentation.</para>
+            /// <para>The billing standard description link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyundoc.com</para>
@@ -57,27 +63,39 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
             public string ChargingStandardLink { get; set; }
 
             /// <summary>
-            /// <para>indicates whether encrypted queries are supported.</para>
+            /// <para>Indicates whether encrypted query is supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: not supported.</para>
+            /// </description></item>
+            /// <item><description><para>1: supported.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>99</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("EncryptedQuery")]
             [Validation(Required=false)]
             public long? EncryptedQuery { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether application materials are required.</para>
+            /// <para>Indicates whether application materials need to be provided. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: not required.</para>
+            /// </description></item>
+            /// <item><description><para>1: required.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>46</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("NeedApplyMaterial")]
             [Validation(Required=false)]
             public long? NeedApplyMaterial { get; set; }
 
             /// <summary>
-            /// <para>The URL for the service agreement.</para>
+            /// <para>The service agreement link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.aliyundoc.com</para>
@@ -89,7 +107,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The description of the returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -111,12 +129,14 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
