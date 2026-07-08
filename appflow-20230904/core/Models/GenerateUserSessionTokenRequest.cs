@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class GenerateUserSessionTokenRequest : TeaModel {
         /// <summary>
-        /// <para>AI Assistant ID</para>
+        /// <para>RDS Copilot ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>cb-069d508f9ab341b1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string ChatbotId { get; set; }
 
         /// <summary>
-        /// <para>Expiration Time, in seconds, default 24 hours</para>
+        /// <para>Time-to-live (TTL) in seconds. Default is 24 hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string IntegrateId { get; set; }
 
         /// <summary>
-        /// <para>User Avatar (URL)</para>
+        /// <para>Profile picture (URL)</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxx.com/xxx">https://xxxx.com/xxx</a></para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>User Nickname</para>
+        /// <para>Nickname</para>
         /// 
         /// <b>Example:</b>
         /// <para>testxxx</para>

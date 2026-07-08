@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class WithdrawFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The connection flow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string FlowId { get; set; }
 
         /// <summary>
+        /// <para>The connection flow version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

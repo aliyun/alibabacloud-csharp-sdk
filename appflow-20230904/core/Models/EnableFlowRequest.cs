@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class EnableFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string FlowId { get; set; }
 
         /// <summary>
+        /// <para>The version of the flow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

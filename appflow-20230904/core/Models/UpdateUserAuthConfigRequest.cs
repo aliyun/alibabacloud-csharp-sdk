@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class UpdateUserAuthConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The user authentication credential, provided as a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;apiKey\&quot;: \&quot;************\&quot;}</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string AuthConfig { get; set; }
 
         /// <summary>
+        /// <para>The ID of the credential.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string AuthConfigId { get; set; }
 
         /// <summary>
+        /// <para>The name of the credential.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string AuthConfigName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the connector.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
+        /// <para>The connector version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

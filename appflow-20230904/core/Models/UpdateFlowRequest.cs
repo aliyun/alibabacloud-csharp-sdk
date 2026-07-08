@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class UpdateFlowRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the connection flow is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -17,11 +19,18 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        /// <summary>
+        /// <para>The description of the connection flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>新建流程</para>
+        /// </summary>
         [NameInMap("FlowDesc")]
         [Validation(Required=false)]
         public string FlowDesc { get; set; }
 
         /// <summary>
+        /// <para>The ID of the connection flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +40,19 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the connection flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>新建流程</para>
+        /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
+        /// <para>The template of the connection flow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;FormatVersion&quot;: &quot;appflow-2025-07-01&quot;,
@@ -49,6 +66,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string FlowTemplate { get; set; }
 
         /// <summary>
+        /// <para>The version of the connection flow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9</para>
         /// </summary>

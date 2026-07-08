@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class GetUserAuthConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>458CB9FE-8C71-58A8-AD49-97EF28D58FAB</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Contains the credential details.</para>
+        /// </summary>
         [NameInMap("UserAuthConfig")]
         [Validation(Required=false)]
         public GetUserAuthConfigResponseBodyUserAuthConfig UserAuthConfig { get; set; }
         public class GetUserAuthConfigResponseBodyUserAuthConfig : TeaModel {
             /// <summary>
+            /// <para>The auth config, specified as a JSON string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;apiKey&quot;:\&quot;xxxxxxxxxx\&quot;}</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthConfig { get; set; }
 
             /// <summary>
+            /// <para>The credential ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>uac-111111111</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthConfigId { get; set; }
 
             /// <summary>
+            /// <para>The credential name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dingtlak_name</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthConfigName { get; set; }
 
             /// <summary>
+            /// <para>The authentication type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ApiKey</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthType { get; set; }
 
             /// <summary>
+            /// <para>The connector ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>connector-172176821387</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string ConnectorId { get; set; }
 
             /// <summary>
+            /// <para>The connector version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

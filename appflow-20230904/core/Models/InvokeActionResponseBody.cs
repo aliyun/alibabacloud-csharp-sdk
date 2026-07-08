@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class InvokeActionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>346E5EE9-D5FE-56A0-B3E2-A43E0F67302A</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The execution result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public InvokeActionResponseBodyResult Result { get; set; }
         public class InvokeActionResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>The provided parameter xxx is invalid.</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
+            /// <para>The output of the action.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;output&quot;: {
@@ -51,6 +58,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public object Output { get; set; }
 
             /// <summary>
+            /// <para>The execution status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING、COMPLETED</para>
             /// </summary>

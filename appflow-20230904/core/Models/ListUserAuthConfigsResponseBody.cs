@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class ListUserAuthConfigsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAVY3rYiv9VoUJQSiCitgjgRBp055u+7M/ZFoi7I0NZHJj8bgHiGAwZWnCMJPepC+WQbLSjoLewJIqkMQqvaJO7M=</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -43,11 +49,16 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>The user authentication credentials.</para>
+        /// </summary>
         [NameInMap("UserAuthConfigs")]
         [Validation(Required=false)]
         public List<ListUserAuthConfigsResponseBodyUserAuthConfigs> UserAuthConfigs { get; set; }
         public class ListUserAuthConfigsResponseBodyUserAuthConfigs : TeaModel {
             /// <summary>
+            /// <para>The credential ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>uac-xxxxxxxx</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthConfigId { get; set; }
 
             /// <summary>
+            /// <para>The credential name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthConfigName { get; set; }
 
             /// <summary>
+            /// <para>The authentication type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ApiKey</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string AuthType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the connector.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>connector-xxxxxxxxx</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string ConnectorId { get; set; }
 
             /// <summary>
+            /// <para>The version of the connector.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string ConnectorVersion { get; set; }
 
             /// <summary>
+            /// <para>The number of connection flows that use this credential.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public int? FlowCount { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-04-01 14:22:33</para>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The last modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-04-01 14:22:33</para>
             /// </summary>

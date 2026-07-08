@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class DisableFlowResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned by the operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C0CEBCD9-CE5D-5BDE-B8E5-F3ADD1BB943F</para>

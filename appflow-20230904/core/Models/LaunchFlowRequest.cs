@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class LaunchFlowRequest : TeaModel {
+        /// <summary>
+        /// <para>The description of the flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>公司管理群内定期消息提醒</para>
+        /// </summary>
         [NameInMap("FlowDesc")]
         [Validation(Required=false)]
         public string FlowDesc { get; set; }
 
         /// <summary>
+        /// <para>The ID of the flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,11 +30,19 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the flow.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>通过飞书使用OpenClaw——多模态</para>
+        /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]
         public string FlowName { get; set; }
 
         /// <summary>
+        /// <para>The template of the flow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;FormatVersion&quot;: &quot;appflow-2025-07-01&quot;,
@@ -41,6 +56,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string FlowTemplate { get; set; }
 
         /// <summary>
+        /// <para>The version of the flow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

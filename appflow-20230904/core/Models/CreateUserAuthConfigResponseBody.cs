@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class CreateUserAuthConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the user credential.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>uac-a2253c40486c40c1b910</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>249048A1-7FF7-5D2E-A322-695420112094</para>

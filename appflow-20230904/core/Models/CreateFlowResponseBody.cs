@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class CreateFlowResponseBody : TeaModel {
         /// <summary>
+        /// <para>The information of the newly created product returned when the call succeeds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>flow-9691a04fc7f94525aac1</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32F02021-11D2-5196-BC85-72890E9AA090</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class DeleteUserAuthConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The credential ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string AuthConfigId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the connector.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
+        /// <para>The connector name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

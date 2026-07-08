@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Token.</para>
+        /// <para>Token</para>
         /// 
         /// <b>Example:</b>
         /// <para>960f499au184m7****</para>

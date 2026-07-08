@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-hangzhou", "appflow.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("appflow", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +43,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接流</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a flow or a flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFlowRequest
@@ -109,8 +118,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接流</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a flow or a flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFlowRequest
@@ -179,8 +193,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接流</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a flow or a flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFlowRequest
@@ -197,8 +216,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接流</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a flow or a flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFlowRequest
@@ -215,8 +239,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户鉴权凭证</para>
+        /// <para>Creates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserAuthConfigRequest
@@ -273,8 +302,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户鉴权凭证</para>
+        /// <para>Creates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserAuthConfigRequest
@@ -331,8 +365,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户鉴权凭证</para>
+        /// <para>Creates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserAuthConfigRequest
@@ -349,8 +388,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户鉴权凭证</para>
+        /// <para>Creates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserAuthConfigRequest
@@ -367,7 +411,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接流</para>
+        /// <para>Deletes a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -413,7 +457,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接流</para>
+        /// <para>Deletes a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -459,7 +503,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接流</para>
+        /// <para>Deletes a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -477,7 +521,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除连接流</para>
+        /// <para>Deletes a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -495,8 +539,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户鉴权凭证</para>
+        /// <para>Deletes a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserAuthConfigRequest
@@ -545,8 +594,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户鉴权凭证</para>
+        /// <para>Deletes a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserAuthConfigRequest
@@ -595,8 +649,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户鉴权凭证</para>
+        /// <para>Deletes a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserAuthConfigRequest
@@ -613,8 +672,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户鉴权凭证</para>
+        /// <para>Deletes a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connection flow or a connection flow version.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserAuthConfigRequest
@@ -631,7 +695,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用连接流</para>
+        /// <para>Disables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -677,7 +741,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用连接流</para>
+        /// <para>Disables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -723,7 +787,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用连接流</para>
+        /// <para>Disables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -741,7 +805,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用连接流</para>
+        /// <para>Disables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -759,7 +823,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用连接流</para>
+        /// <para>Enables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -805,7 +869,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用连接流</para>
+        /// <para>Enables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -851,7 +915,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用连接流</para>
+        /// <para>Enables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -869,7 +933,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用连接流</para>
+        /// <para>Enables a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -887,7 +951,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate Login Session Token</para>
+        /// <para>Generates a logon session token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -953,7 +1017,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate Login Session Token</para>
+        /// <para>Generates a logon session token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1019,7 +1083,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate Login Session Token</para>
+        /// <para>Generates a logon session token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1037,7 +1101,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate Login Session Token</para>
+        /// <para>Generates a logon session token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1055,7 +1119,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接流详情</para>
+        /// <para>Queries the details of a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1101,7 +1165,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接流详情</para>
+        /// <para>Queries the details of a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1147,7 +1211,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接流详情</para>
+        /// <para>Queries the details of a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1165,7 +1229,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接流详情</para>
+        /// <para>Queries the details of a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1183,8 +1247,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证详情</para>
+        /// <para>Gets the details of a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation gets the details of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserAuthConfigRequest
@@ -1233,8 +1302,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证详情</para>
+        /// <para>Gets the details of a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation gets the details of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserAuthConfigRequest
@@ -1283,8 +1357,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证详情</para>
+        /// <para>Gets the details of a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation gets the details of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserAuthConfigRequest
@@ -1301,8 +1380,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证详情</para>
+        /// <para>Gets the details of a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation gets the details of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserAuthConfigRequest
@@ -1319,7 +1403,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行连接器的执行动作</para>
+        /// <para>Invokes a connector action.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1419,7 +1503,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行连接器的执行动作</para>
+        /// <para>Invokes a connector action.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1519,7 +1603,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行连接器的执行动作</para>
+        /// <para>Invokes a connector action.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1537,7 +1621,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行连接器的执行动作</para>
+        /// <para>Invokes a connector action.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1555,7 +1639,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布连接流</para>
+        /// <para>Launches a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1613,7 +1697,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布连接流</para>
+        /// <para>Launches a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1671,7 +1755,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布连接流</para>
+        /// <para>Launches a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1689,7 +1773,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布连接流</para>
+        /// <para>Launches a flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1707,8 +1791,177 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证列表</para>
+        /// <para>Retrieves a list of connector flows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connector flow or a connector flow version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public ListFlowsResponse ListFlowsWithOptions(ListFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlows",
+                Version = "2023-09-04",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of connector flows.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connector flow or a connector flow version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public async Task<ListFlowsResponse> ListFlowsWithOptionsAsync(ListFlowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlows",
+                Version = "2023-09-04",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of connector flows.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connector flow or a connector flow version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public ListFlowsResponse ListFlows(ListFlowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListFlowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of connector flows.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a connector flow or a connector flow version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public async Task<ListFlowsResponse> ListFlowsAsync(ListFlowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListFlowsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists user authentication credentials.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves user auth configs that match specified filters.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserAuthConfigsRequest
@@ -1769,8 +2022,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证列表</para>
+        /// <para>Lists user authentication credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves user auth configs that match specified filters.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserAuthConfigsRequest
@@ -1831,8 +2089,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证列表</para>
+        /// <para>Lists user authentication credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves user auth configs that match specified filters.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserAuthConfigsRequest
@@ -1849,8 +2112,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户鉴权凭证列表</para>
+        /// <para>Lists user authentication credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves user auth configs that match specified filters.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUserAuthConfigsRequest
@@ -1867,7 +2135,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新连接流</para>
+        /// <para>Updates a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1929,7 +2197,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新连接流</para>
+        /// <para>Updates a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1991,7 +2259,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新连接流</para>
+        /// <para>Updates a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2009,7 +2277,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新连接流</para>
+        /// <para>Updates a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2027,8 +2295,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户鉴权凭证</para>
+        /// <para>Updates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specific user authentication credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserAuthConfigRequest
@@ -2085,8 +2358,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户鉴权凭证</para>
+        /// <para>Updates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specific user authentication credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserAuthConfigRequest
@@ -2143,8 +2421,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户鉴权凭证</para>
+        /// <para>Updates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specific user authentication credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserAuthConfigRequest
@@ -2161,8 +2444,13 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑用户鉴权凭证</para>
+        /// <para>Updates a user authentication credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specific user authentication credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserAuthConfigRequest
@@ -2179,7 +2467,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线连接流</para>
+        /// <para>Withdraws a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2225,7 +2513,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线连接流</para>
+        /// <para>Withdraws a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2271,7 +2559,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线连接流</para>
+        /// <para>Withdraws a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2289,7 +2577,7 @@ namespace AlibabaCloud.SDK.Appflow20230904
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下线连接流</para>
+        /// <para>Withdraws a connection flow.</para>
         /// </summary>
         /// 
         /// <param name="request">

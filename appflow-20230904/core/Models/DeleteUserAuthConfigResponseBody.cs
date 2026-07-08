@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class DeleteUserAuthConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C38D3F9-B340-5230-B108-77E675452733</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appflow20230904.Models
 {
     public class UpdateUserAuthConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>83C6468F-3D68-5791-860E-29AB8FCACC73</para>
