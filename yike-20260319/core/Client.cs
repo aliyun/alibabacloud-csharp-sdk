@@ -1203,13 +1203,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1251,13 +1251,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1299,13 +1299,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1323,13 +1323,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询图片生成任务</para>
+        /// <para>Queries an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API generates a video narrated by a virtual human based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. Additionally, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1347,7 +1347,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries an AI video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1393,7 +1393,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries an AI video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1439,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries an AI video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1457,7 +1457,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询视频生成任务</para>
+        /// <para>Queries an AI video generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3747,13 +3747,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3831,13 +3831,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3915,13 +3915,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3939,13 +3939,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交图像生成接口</para>
+        /// <para>Submits an image generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation generates a video in which a virtual human delivers a spoken narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the UserData field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3963,13 +3963,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4051,13 +4051,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4139,13 +4139,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4163,13 +4163,13 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交视频生成接口</para>
+        /// <para>Submits a video generation task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于根据提供的文本内容及其它参数（如数字人信息、应用场景类型等）生成一段由虚拟人物口播的视频。用户需指定文本类型（原始稿或口播稿）、成片尺寸与清晰度等关键配置项，并可选择是否添加字幕或指定输出语言种类。此外，支持通过<c>UserData</c>字段传递自定义参数，在回调时原样返回。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API operation generates a video featuring a virtual human narration based on the provided text content and other parameters such as digital human information and common scenarios type. You must specify key configuration items including the text type (original script or narration script), output dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4331,13 +4331,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <c>UserData</c> field to pass custom parameters, which are returned as-is in the callback.
+        /// Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4383,13 +4384,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <c>UserData</c> field to pass custom parameters, which are returned as-is in the callback.
+        /// Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4435,13 +4437,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <c>UserData</c> field to pass custom parameters, which are returned as-is in the callback.
+        /// Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4459,13 +4462,14 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This task is applicable to video scenarios such as influencer product promotion and knowledge sharing.</para>
+        /// <para>Creates an intelligent video production task for a digital human oral broadcasting scenario. This operation is applicable to video scenarios such as influencer product promotion and knowledge explanation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Operation description</h2>
-        /// <para>This API operation generates a video featuring a virtual human delivering an oral broadcast based on the provided text content and other parameters such as digital human information and common scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can pass custom parameters through the <c>UserData</c> field, which are returned as-is in the callback.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation generates a video in which a virtual human delivers an oral broadcast based on the provided text content and other parameters such as digital human information and application scenario type. You must specify key configuration items including the text type (raw script or oral broadcast script), video dimensions, and resolution. You can also choose whether to add subtitles or specify the output language. In addition, you can use the <c>UserData</c> field to pass custom parameters, which are returned as-is in the callback.
+        /// Common scenarios: influencer product promotion, knowledge explanation, and similar video scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4789,9 +4793,17 @@ namespace AlibabaCloud.SDK.Yike20260319
             {
                 query["NarrationVoiceId"] = request.NarrationVoiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedCaption))
+            {
+                query["NeedCaption"] = request.NeedCaption;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
             {
                 query["Resolution"] = request.Resolution;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotPromptLang))
+            {
+                query["ShotPromptLang"] = request.ShotPromptLang;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotPromptMode))
             {
@@ -4894,9 +4906,17 @@ namespace AlibabaCloud.SDK.Yike20260319
             {
                 query["NarrationVoiceId"] = request.NarrationVoiceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedCaption))
+            {
+                query["NeedCaption"] = request.NeedCaption;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resolution))
             {
                 query["Resolution"] = request.Resolution;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotPromptLang))
+            {
+                query["ShotPromptLang"] = request.ShotPromptLang;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShotPromptMode))
             {
@@ -5131,7 +5151,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
+        /// <para>Creates an intelligent video generation task for a voice-over-only scenario (without a digital human). This task is applicable to video scenarios such as product showcasing and news broadcasting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5177,7 +5197,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
+        /// <para>Creates an intelligent video generation task for a voice-over-only scenario (without a digital human). This task is applicable to video scenarios such as product showcasing and news broadcasting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5223,7 +5243,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
+        /// <para>Creates an intelligent video generation task for a voice-over-only scenario (without a digital human). This task is applicable to video scenarios such as product showcasing and news broadcasting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5241,7 +5261,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent video generation task for a voiceover-only scenario (without a digital human). This task is applicable to video scenarios such as product showcases and news broadcasts.</para>
+        /// <para>Creates an intelligent video generation task for a voice-over-only scenario (without a digital human). This task is applicable to video scenarios such as product showcasing and news broadcasting.</para>
         /// </summary>
         /// 
         /// <param name="request">

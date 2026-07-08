@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class SubmitYikeStoryboardJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</para>

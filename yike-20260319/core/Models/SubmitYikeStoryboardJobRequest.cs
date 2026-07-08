@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <item><description>16:9</description></item>
         /// <item><description>9:16</description></item>
         /// <item><description>4:3</description></item>
-        /// <item><description>3:4.</description></item>
+        /// <item><description>3:4</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <summary>
         /// <para>The execution mode for storyboard generation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FullPipeline: Full pipeline generation, which includes both storyboard generation and shot video generation.</description></item>
-        /// <item><description>StoryboardOnly: Generates only the storyboard.</description></item>
+        /// <item><description>FullPipeline: full pipeline generation, which includes storyboard generation and shot video generation.</description></item>
+        /// <item><description>StoryboardOnly: generates only the storyboard.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string ExecMode { get; set; }
 
         /// <summary>
-        /// <para>The OSS URL of the file. Only URLs with the .txt or .doc file name extension are supported.</para>
+        /// <para>The OSS URL of the file. The URL must point to a file with a .txt or .doc extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://test.oss-cn-shanghai.aliyuncs.com/test.txt">http://test.oss-cn-shanghai.aliyuncs.com/test.txt</a></para>
@@ -75,24 +75,24 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <summary>
         /// <para>The narration voice ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>sys_GracefulPoisedWoman: Graceful Poised Woman</description></item>
-        /// <item><description>sys_ElderlyWistfulWoman: Elderly Wistful Woman</description></item>
-        /// <item><description>sys_SweetBrightGirl: Sweet Bright Girl</description></item>
-        /// <item><description>sys_YoungGracefulWoman: Young Graceful Woman</description></item>
-        /// <item><description>sys_MaturePoisedWoman: Mature Poised Woman</description></item>
-        /// <item><description>sys_MatureWiseWoman: Mature Wise Woman</description></item>
-        /// <item><description>sys_CalmDeepMale: Calm Deep Male</description></item>
-        /// <item><description>sys_SereneIntellect: Serene Intellect</description></item>
-        /// <item><description>sys_MajesticBaritone: Majestic Baritone</description></item>
-        /// <item><description>sys_GravellySoulful: Gravelly Soulful</description></item>
-        /// <item><description>sys_ClassicYoungMan: Classic Young Man Narrator</description></item>
-        /// <item><description>sys_WiseYoungMan: Wise Young Man Narrator</description></item>
-        /// <item><description>sys_ClassicYoungWoman: Classic Young Woman Narrator</description></item>
-        /// <item><description>sys_IntellectualYoungWoman: Intellectual Young Woman Narrator</description></item>
-        /// <item><description>sys_GentleYoungMan: Gentle Young Man Narrator</description></item>
-        /// <item><description>sys_thoughtfulBoy: Thoughtful Boy</description></item>
-        /// <item><description>sys_RichBassMale: Rich Bass Male</description></item>
-        /// <item><description>sys_ClassicMiddleAgedWoman: Classic Middle-Aged Woman Narrator.</description></item>
+        /// <item><description>sys_GracefulPoisedWoman: mature graceful female</description></item>
+        /// <item><description>sys_ElderlyWistfulWoman: wistful elderly female</description></item>
+        /// <item><description>sys_SweetBrightGirl: sweet bright girl</description></item>
+        /// <item><description>sys_YoungGracefulWoman: gentle graceful female</description></item>
+        /// <item><description>sys_MaturePoisedWoman: poised mature female</description></item>
+        /// <item><description>sys_MatureWiseWoman: elegant wise female</description></item>
+        /// <item><description>sys_CalmDeepMale: calm deep male</description></item>
+        /// <item><description>sys_SereneIntellect: serene intellectual male</description></item>
+        /// <item><description>sys_MajesticBaritone: majestic baritone male</description></item>
+        /// <item><description>sys_GravellySoulful: gravelly soulful male</description></item>
+        /// <item><description>sys_ClassicYoungMan: classic narrator male</description></item>
+        /// <item><description>sys_WiseYoungMan: wise narrator male</description></item>
+        /// <item><description>sys_ClassicYoungWoman: classic narrator female</description></item>
+        /// <item><description>sys_IntellectualYoungWoman: intellectual narrator female</description></item>
+        /// <item><description>sys_GentleYoungMan: gentle narrator male</description></item>
+        /// <item><description>sys_thoughtfulBoy: thoughtful boy</description></item>
+        /// <item><description>sys_RichBassMale: rich bass male</description></item>
+        /// <item><description>sys_ClassicMiddleAgedWoman: classic middle-aged narrator female</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,13 +102,17 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string NarrationVoiceId { get; set; }
 
+        [NameInMap("NeedCaption")]
+        [Validation(Required=false)]
+        public bool? NeedCaption { get; set; }
+
         /// <summary>
         /// <para>The resolution of the output video. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>720P</description></item>
         /// <item><description>1080P</description></item>
         /// <item><description>2K</description></item>
-        /// <item><description>4K.</description></item>
+        /// <item><description>4K</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,11 +122,15 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string Resolution { get; set; }
 
+        [NameInMap("ShotPromptLang")]
+        [Validation(Required=false)]
+        public string ShotPromptLang { get; set; }
+
         /// <summary>
         /// <para>The storyboard shot generation mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>multi: multi-reference video generation</description></item>
-        /// <item><description>default: image-to-video generation.</description></item>
+        /// <item><description>default: image-to-video generation</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +143,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <summary>
         /// <para>The shot split mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>firstPersonNarration: narration mode.</description></item>
+        /// <item><description>firstPersonNarration: narration commentary mode</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,7 +166,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <summary>
         /// <para>The type of the material source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Novel: novel.</description></item>
+        /// <item><description>Novel: novel</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -171,33 +179,33 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <summary>
         /// <para>The storyboard style ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RealisticPhotographyPro: Realistic Photography Pro</description></item>
-        /// <item><description>RealisticGuzhuangPro: Realistic Ancient Costume Pro</description></item>
-        /// <item><description>RealisticXianxiaPro: Realistic Xianxia Pro</description></item>
-        /// <item><description>RealisticWesternPro: Western Realism Pro</description></item>
-        /// <item><description>RealisticPhotography: Realistic Photography</description></item>
-        /// <item><description>RealisticGuzhuang: Realistic Ancient Costume</description></item>
-        /// <item><description>RealisticXianxia: Realistic Xianxia</description></item>
-        /// <item><description>RealisticWasteland: Realistic Wasteland</description></item>
-        /// <item><description>RealisticEra: Realistic Vintage</description></item>
-        /// <item><description>GuofengAnime: 2D Chinese-style Anime</description></item>
-        /// <item><description>GuofengAnime3D: 3D Chinese-style Anime</description></item>
-        /// <item><description>AncientRomanceAnime: Anime Ancient Romance</description></item>
-        /// <item><description>PostApocalypticAnime: Anime Post-Apocalyptic</description></item>
-        /// <item><description>Cartoon3D: 3D Cartoon</description></item>
-        /// <item><description>Photorealistic3D: Photorealistic 3D Rendering</description></item>
-        /// <item><description>SciFiRealism: Sci-Fi Realism</description></item>
-        /// <item><description>Chibi3D: 3D Chibi</description></item>
-        /// <item><description>ShojoManga: Japanese Manga</description></item>
-        /// <item><description>NewPeriodAnime: New Era Japanese Anime</description></item>
-        /// <item><description>FairyTale2D: 2D Fairy Tale</description></item>
-        /// <item><description>Wasteland2D: 2D Wasteland</description></item>
-        /// <item><description>InkWuxia: Ink Wash Wuxia</description></item>
-        /// <item><description>ShadiaoMeme: Panda Head Meme</description></item>
-        /// <item><description>Chibi2D: 2D Chibi</description></item>
+        /// <item><description>RealisticPhotographyPro: realistic photography Pro</description></item>
+        /// <item><description>RealisticGuzhuangPro: realistic ancient costume Pro</description></item>
+        /// <item><description>RealisticXianxiaPro: realistic Xianxia Pro</description></item>
+        /// <item><description>RealisticWesternPro: Western realistic Pro</description></item>
+        /// <item><description>RealisticPhotography: realistic photography</description></item>
+        /// <item><description>RealisticGuzhuang: realistic ancient costume</description></item>
+        /// <item><description>RealisticXianxia: realistic Xianxia</description></item>
+        /// <item><description>RealisticWasteland: realistic wasteland</description></item>
+        /// <item><description>RealisticEra: realistic vintage</description></item>
+        /// <item><description>GuofengAnime: 2D Chinese-style anime</description></item>
+        /// <item><description>GuofengAnime3D: 3D Chinese-style anime</description></item>
+        /// <item><description>AncientRomanceAnime: anime ancient romance</description></item>
+        /// <item><description>PostApocalypticAnime: anime post-apocalyptic</description></item>
+        /// <item><description>Cartoon3D: 3D cartoon</description></item>
+        /// <item><description>Photorealistic3D: photorealistic 3D rendering</description></item>
+        /// <item><description>SciFiRealism: sci-fi realism</description></item>
+        /// <item><description>Chibi3D: 3D chibi</description></item>
+        /// <item><description>ShojoManga: Japanese manga</description></item>
+        /// <item><description>NewPeriodAnime: new era Japanese anime</description></item>
+        /// <item><description>FairyTale2D: 2D fairy tale</description></item>
+        /// <item><description>Wasteland2D: 2D wasteland</description></item>
+        /// <item><description>InkWuxia: ink wash Wuxia</description></item>
+        /// <item><description>ShadiaoMeme: panda head meme style</description></item>
+        /// <item><description>Chibi2D: 2D chibi</description></item>
         /// <item><description>Ghibli: Ghibli</description></item>
-        /// <item><description>SciFiComic: Cyberpunk</description></item>
-        /// <item><description>AmericanSuperhero: American Superhero.</description></item>
+        /// <item><description>SciFiComic: cyberpunk</description></item>
+        /// <item><description>AmericanSuperhero: American superhero</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -218,9 +226,9 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>The custom settings in JSON format.</para>
+        /// <para>The custom settings in JSON format. Fields include:</para>
         /// <list type="bullet">
-        /// <item><description>NotifyAddress specifies the callback for task completion. Both MNS callbacks and HTTP callbacks are supported.</description></item>
+        /// <item><description>NotifyAddress: the callback URL for task completion. MNS callbacks and HTTP callbacks are supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -235,7 +243,7 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         /// <summary>
         /// <para>The video model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>wan2.6-r2v-flash.</description></item>
+        /// <item><description>wan2.6-r2v-flash</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
