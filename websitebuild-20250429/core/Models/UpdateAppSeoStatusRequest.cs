@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateAppSeoStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250801154628000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Domain Name</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yjdw.bpu.edu.cn-waf</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SeAuthInfo { get; set; }
 
         /// <summary>
-        /// <para>Search Engine Type</para>
+        /// <para>The search engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>type</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetMiniAppBindingResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request result.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMiniAppBindingResponseBodyData Data { get; set; }
         public class GetMiniAppBindingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Authorization status</para>
+            /// <para>The authorization status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AuthStatus { get; set; }
 
             /// <summary>
-            /// <para>Business ID</para>
+            /// <para>The business ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WS20260206134402000001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>ICP filing status</para>
+            /// <para>The ICP filing status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? IcpFiled { get; set; }
 
             /// <summary>
-            /// <para>Miniapp ID</para>
+            /// <para>The mini program ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wx7f122a7d23fdxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PlatformAppid { get; set; }
 
             /// <summary>
-            /// <para>Preview QR code</para>
+            /// <para>The preview QR code URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxx">http://xxxx</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PreviewQrCodeUrl { get; set; }
 
             /// <summary>
-            /// <para>Production QR code</para>
+            /// <para>The production QR code URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxx">http://xxxx</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ProductionQrCodeUrl { get; set; }
 
             /// <summary>
-            /// <para>Extension information</para>
+            /// <para>The extension information.</para>
             /// </summary>
             [NameInMap("SettingValues")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class OperateAppTemplateLikeRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the item is collected</para>
+        /// <para>Specifies whether the template is favorited.</para>
         /// </summary>
         [NameInMap("Liked")]
         [Validation(Required=false)]
         public bool? Liked { get; set; }
 
         /// <summary>
-        /// <para>Template ID</para>
+        /// <para>The template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K191WHV12URYQN06</para>

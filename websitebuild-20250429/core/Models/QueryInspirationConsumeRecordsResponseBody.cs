@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string RecordKey { get; set; }
 
                 /// <summary>
-                /// <para>The name of the consumption scenario, such as AI Application Development, AI Creative Illustration, AI Video Creation, or AI Content Creation.</para>
+                /// <para>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>家装</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string MetaData { get; set; }
 
                 /// <summary>
-                /// <para>The name of the consumption scenario, such as AI Application Development, AI Creative Illustration, AI Video Creation, or AI Content Creation.</para>
+                /// <para>The consumption scenario name, such as AI application development, AI creative illustration, AI video creation, or AI content creation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>家装</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Apart from pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to pagination limits, the server processes up to 1,000 recent records for the current query. If the results exceed 1,000 records, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]

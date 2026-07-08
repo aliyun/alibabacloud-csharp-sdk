@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateAppInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Application type</para>
+        /// <para>The application type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Application</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. Generate a unique value from your client for this parameter to guarantee uniqueness across different requests. ClientToken supports only ASCII characters and must not exceed 64 characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Deployment area</para>
+        /// <para>The deployment region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ChineseMainland</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeployArea { get; set; }
 
         /// <summary>
-        /// <para>Application description</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>description</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Extension information</para>
+        /// <para>The extended information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>Application icon</para>
+        /// <para>The application icon URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1864953777494693/1753841032702_WX20250729-171155%402x.png</a></para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string IconUrl { get; set; }
 
         /// <summary>
-        /// <para>Application name</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>大角鹿</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Payment type</para>
+        /// <para>The payment type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO_PAY</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Website version</para>
+        /// <para>The website version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Basic_Edition</para>
@@ -120,15 +120,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>Tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<UpdateAppInstanceRequestTags> Tags { get; set; }
         public class UpdateAppInstanceRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the instance. Valid values for N: <b>1</b> to <b>20</b>. If you specify this parameter, it cannot be an empty string.</para>
-            /// <para>It can contain up to 64 characters, must not start with <c>aliyun</c> or <c>acs:</c>, and must not contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the instance. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Group</para>
@@ -138,8 +138,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the instance. Valid values for N: <b>1</b> to <b>20</b>. If you specify this parameter, it can be an empty string.</para>
-            /// <para>It can contain up to 128 characters, must not start with <c>aliyun</c> or <c>acs:</c>, and must not contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the instance. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Application thumbnail</para>
+        /// <para>The application thumbnail URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>

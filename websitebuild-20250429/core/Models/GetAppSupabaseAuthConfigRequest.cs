@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSupabaseAuthConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Authentication type</para>
+        /// <para>The authentication type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL_AUTH_FLAG</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AuthType { get; set; }
 
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250801152639000005</para>

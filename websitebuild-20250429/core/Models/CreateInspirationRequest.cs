@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateInspirationRequest : TeaModel {
         /// <summary>
-        /// <para>The resource plan specification.</para>
+        /// <para>The specification of the resource plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -60,12 +60,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
+        /// <para>The unit of the subscription cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Year: year.</description></item>
-        /// <item><description>Month: month.</description></item>
-        /// <item><description>Day: day.</description></item>
-        /// <item><description>Hour: hour.</description></item>
+        /// <item><description>Year: year</description></item>
+        /// <item><description>Month: month</description></item>
+        /// <item><description>Day: day</description></item>
+        /// <item><description>Hour: hour</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>The number of instances to purchase.</para>
+        /// <para>The number of instances to subscribe to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

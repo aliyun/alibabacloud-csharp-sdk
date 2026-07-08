@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed. Valid values:</para>
+        /// <para>Indicates whether retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: A retry is not allowed.</description></item>
-        /// <item><description>true: A retry is allowed.</description></item>
+        /// <item><description>false: Retry is not allowed.</description></item>
+        /// <item><description>true: Retry is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetOssUploadPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The scenario, such as knowledge.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>

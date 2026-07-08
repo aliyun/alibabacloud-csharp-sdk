@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public GetLlmProxyConfigForAdminResponseBodyModule Module { get; set; }
         public class GetLlmProxyConfigForAdminResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The list of allowed models.</para>
+            /// <para>The list of supported models.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen3.5-plus</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BlockedModels { get; set; }
 
             /// <summary>
-            /// <para>The specific permissions granted to processes in the container. Only NET_ADMIN and NET_RAW are supported.</para>
+            /// <para>Grants specific permissions to processes in the container. Only NET_ADMIN and NET_RAW are supported.</para>
             /// <remarks>
             /// <para>NET_RAW is not supported by default. Submit a ticket to apply for this permission.</para>
             /// </remarks>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? DailyTokenLimit { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether scheduled delivery of resource snapshots is enabled.</para>
+            /// <para>Indicates whether scheduled delivery of resource snapshots is enabled.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The exception message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>

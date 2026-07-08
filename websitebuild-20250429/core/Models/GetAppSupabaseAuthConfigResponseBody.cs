@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSupabaseAuthConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the ErrMessage parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If ErrMessage returns <b>The Value of Input Parameter %s is not valid</b> and DynamicMessage returns <b>DtsJobId</b>, the DtsJobId request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,29 +63,36 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Error arguments returned.</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Task object</para>
+        /// <para>The task object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetAppSupabaseAuthConfigResponseBodyModule Module { get; set; }
         public class GetAppSupabaseAuthConfigResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Configuration value. Valid values:  </para>
+            /// <para>The configuration value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cc_rule: CC rule.  </description></item>
-            /// <item><description>ddos_dispatch: DDoS filter interaction scheduling.  </description></item>
-            /// <item><description>edge_safe: Edge application security.  </description></item>
-            /// <item><description>blocked_regions: Geo-blocking.  </description></item>
-            /// <item><description>http_acl_policy: Precise ACL rule.  </description></item>
-            /// <item><description>bot_manager: Bot traffic management.  </description></item>
-            /// <item><description>ip_reputation: IP reputation investigation.</description></item>
+            /// <item><description><para>cc_rule: HTTP flood protection rule.</para>
+            /// </description></item>
+            /// <item><description><para>ddos_dispatch: DDoS mitigation interaction scheduling.</para>
+            /// </description></item>
+            /// <item><description><para>edge_safe: edge application security.</para>
+            /// </description></item>
+            /// <item><description><para>blocked_regions: location blacklist.</para>
+            /// </description></item>
+            /// <item><description><para>http_acl_policy: accurate access control.</para>
+            /// </description></item>
+            /// <item><description><para>bot_manager: bot traffic management.</para>
+            /// </description></item>
+            /// <item><description><para>ip_reputation: IP reputation library.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Configs")]
@@ -105,7 +112,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.EROR</para>
@@ -115,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -125,7 +132,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

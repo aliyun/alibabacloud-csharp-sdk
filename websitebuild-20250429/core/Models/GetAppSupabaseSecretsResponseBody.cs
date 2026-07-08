@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSupabaseSecretsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:  </para>
+        /// <para>Indicates whether retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.  </description></item>
+        /// <item><description>false: Retry is not allowed.</description></item>
         /// <item><description>true: Retry is allowed.</description></item>
         /// </list>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message, used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> variable in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>For example, if <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the <b>DtsJobId</b> request parameter is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,28 +67,28 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetAppSupabaseSecretsResponseBodyModule Module { get; set; }
         public class GetAppSupabaseSecretsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// </summary>
             [NameInMap("Secrets")]
             [Validation(Required=false)]
             public List<GetAppSupabaseSecretsResponseBodyModuleSecrets> Secrets { get; set; }
             public class GetAppSupabaseSecretsResponseBodyModuleSecrets : TeaModel {
                 /// <summary>
-                /// <para>Tag key</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>curl GCEA6fET.popscan.xaliyun.com</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Application name</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LOGO3.png</para>
@@ -108,13 +108,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The credential type. Valid values:  </para>
+                /// <para>The credential type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Generic: generic secret.  </description></item>
-                /// <item><description>Rds: RDS credential.  </description></item>
-                /// <item><description>Redis: Redis/Tair credential.  </description></item>
+                /// <item><description>Generic: generic credential.  </description></item>
+                /// <item><description>Rds: ApsaraDB RDS credential.  </description></item>
+                /// <item><description>Redis: Redis/Tair credential.</description></item>
                 /// <item><description>RAMCredentials: RAM credential.  </description></item>
-                /// <item><description>ECS: ECS credential.  </description></item>
+                /// <item><description>ECS: ECS credential.</description></item>
                 /// <item><description>PolarDB: PolarDB credential.</description></item>
                 /// </list>
                 /// 
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SecretType { get; set; }
 
                 /// <summary>
-                /// <para>Record value</para>
+                /// <para>The record value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>58.16.60.28</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.EROR</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is processed synchronously.</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

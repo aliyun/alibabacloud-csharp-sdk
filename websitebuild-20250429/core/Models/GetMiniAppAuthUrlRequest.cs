@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetMiniAppAuthUrlRequest : TeaModel {
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250731233102000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Channel information</para>
+        /// <para>The channel information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WECHAT</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Hyperlink URL</para>
+        /// <para>The redirect URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

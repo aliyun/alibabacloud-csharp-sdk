@@ -35,7 +35,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values: ASC and DESC.</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: ascending order</description></item>
+        /// <item><description>DESC: descending order</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SubmitAppSeoIndexRequest : TeaModel {
         /// <summary>
+        /// <para>The business ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>The domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yjdw.bpu.edu.cn-waf</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The search engine type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>type</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string SeType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to delay the submission.</para>
+        /// </summary>
         [NameInMap("SubmitLater")]
         [Validation(Required=false)]
         public bool? SubmitLater { get; set; }

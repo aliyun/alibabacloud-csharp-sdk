@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name that was queried.</para>
+        /// <para>The application name to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>

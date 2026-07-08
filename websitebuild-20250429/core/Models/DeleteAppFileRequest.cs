@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppFileRequest : TeaModel {
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The file path. The path is restricted to the ./public/ directory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pt3/01/31/pengpeixin.png</para>
         /// </summary>

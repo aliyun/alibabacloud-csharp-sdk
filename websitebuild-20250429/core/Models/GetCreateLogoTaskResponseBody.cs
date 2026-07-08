@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetCreateLogoTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error code list in this topic.</para>
+        /// <para>The error code. Valid values: If the request is successful, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -69,11 +69,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <summary>
             /// <para>The current status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pending: pending execution</description></item>
-            /// <item><description>configuring: being configured</description></item>
-            /// <item><description>success: succeeded</description></item>
-            /// <item><description>failed: failed</description></item>
-            /// <item><description>partialFailed: partially failed.</description></item>
+            /// <item><description>pending: Pending execution.</description></item>
+            /// <item><description>configuring: Being configured.</description></item>
+            /// <item><description>success: Succeeded.</description></item>
+            /// <item><description>failed: Failed.</description></item>
+            /// <item><description>partialFailed: Partially failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

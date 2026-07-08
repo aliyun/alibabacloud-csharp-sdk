@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CopyAppPluginConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The source business ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31104757</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceBizId { get; set; }
 
         /// <summary>
+        /// <para>The target business ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31104758</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetCreateLogoTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID returned when the call is successful. Note: Keep this ID safe. This ID is required when you query the status of device creation.</para>
+        /// <para>The task ID returned when the call is successful. Keep this ID safe. This ID is required when you query the status of device creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20051349</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppConversationsRequest : TeaModel {
         /// <summary>
-        /// <para>Bot ID</para>
+        /// <para>The bot ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zero2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BotId { get; set; }
 
         /// <summary>
-        /// <para>End modification time (ISO 8601 format)</para>
+        /// <para>The end modification time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20201212</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return in each query result.  </para>
+        /// <para>The maximum number of entries to return per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token indicating the start of the next query. It is empty when there is no next query.</para>
+        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1168642640022064</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteId { get; set; }
 
         /// <summary>
-        /// <para>Start modification time (ISO 8601 format)</para>
+        /// <para>The start modification time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20200101</para>

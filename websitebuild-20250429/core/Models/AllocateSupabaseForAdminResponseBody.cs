@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateFinishedTime { get; set; }
 
             /// <summary>
-            /// <para>The instance creation status.</para>
+            /// <para>The creation status of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? IsDeleted { get; set; }
 
             /// <summary>
-            /// <para>The password for accessing the ApsaraDB RDS database.</para>
+            /// <para>The password used to access the ApsaraDB RDS database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: paused</description></item>
-            /// <item><description>1: running.</description></item>
+            /// <item><description>1: running</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is synchronously processed.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>trial,draft,live,refunded,expired,released</para>
+        /// <para>Valid values: trial, draft, live, refunded, expired, released.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -189,6 +189,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TagValue { get; set; }
 
         }
+
+        [NameInMap("TemplateRecord")]
+        [Validation(Required=false)]
+        public TemplateRecord TemplateRecord { get; set; }
 
         [NameInMap("ThumbnailUrl")]
         [Validation(Required=false)]

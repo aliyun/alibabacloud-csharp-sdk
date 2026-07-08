@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceEntitlementResponseBody : TeaModel {
         /// <summary>
-        /// <para>Permission denied information</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message, used to replace <c>%s</c> in the <b>ErrMessage</b> error message.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response parameter.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error arguments.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetAppInstanceEntitlementResponseBodyModule Module { get; set; }
         public class GetAppInstanceEntitlementResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>BizId of the associated application instance</para>
+            /// <para>The business ID of the application instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD20250703155602000001</para>
@@ -87,21 +87,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>All entitlements</para>
+            /// <para>The list of all entitlement items.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<GetAppInstanceEntitlementResponseBodyModuleItems> Items { get; set; }
             public class GetAppInstanceEntitlementResponseBodyModuleItems : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether an instance has been assigned</para>
+                /// <para>Indicates whether an instance is allocated.</para>
                 /// </summary>
                 [NameInMap("Allocated")]
                 [Validation(Required=false)]
                 public bool? Allocated { get; set; }
 
                 /// <summary>
-                /// <para>Is this item currently active?</para>
+                /// <para>Indicates whether this entitlement item is currently available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? Available { get; set; }
 
                 /// <summary>
-                /// <para>Authorization item identity</para>
+                /// <para>The code of the entitlement item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether configuration has been completed</para>
+                /// <para>Indicates whether the configuration is complete.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? Configured { get; set; }
 
                 /// <summary>
-                /// <para>Is this item entitled in the version?</para>
+                /// <para>Indicates whether the edition grants this entitlement item.</para>
                 /// </summary>
                 [NameInMap("Entitled")]
                 [Validation(Required=false)]
                 public bool? Entitled { get; set; }
 
                 /// <summary>
-                /// <para>Feature source type (PLUGIN/SKILL/CHANNEL/SYSTEM)</para>
+                /// <para>The feature source type. Valid values: PLUGIN, SKILL, CHANNEL, and SYSTEM.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string FeatureType { get; set; }
 
                 /// <summary>
-                /// <para>Runtime instance ID</para>
+                /// <para>The runtime instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>waf_v2intl_public_intl-sg-i5c43rcpw04</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Authorization item Name</para>
+                /// <para>The name of the entitlement item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4e46d24b56bfa944b5e6f2305715bc4e.jpg</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Plugin ID</para>
+                /// <para>The plug-in ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alipay-isv</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PluginId { get; set; }
 
                 /// <summary>
-                /// <para>Total quota</para>
+                /// <para>The total quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? Quota { get; set; }
 
                 /// <summary>
-                /// <para>Remaining quantity</para>
+                /// <para>The remaining amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? Remaining { get; set; }
 
                 /// <summary>
-                /// <para>Resource domain association identity</para>
+                /// <para>The association code of the resource domain.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SmsCount</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ResourceCode { get; set; }
 
                 /// <summary>
-                /// <para>Resource type (QUOTA/LIMIT)</para>
+                /// <para>The resource type. Valid values: QUOTA and LIMIT.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>filesystem</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>Is it running?</para>
+                /// <para>Indicates whether the instance is running.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? Running { get; set; }
 
                 /// <summary>
-                /// <para>Authorization Type (FEATURE / RESOURCE / RUNTIME)</para>
+                /// <para>The entitlement type. Valid values: FEATURE, RESOURCE, and RUNTIME.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>question</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Usage percentage</para>
+                /// <para>The usage percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? UsagePercent { get; set; }
 
                 /// <summary>
-                /// <para>Usage</para>
+                /// <para>The used amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3295422523872</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The root error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

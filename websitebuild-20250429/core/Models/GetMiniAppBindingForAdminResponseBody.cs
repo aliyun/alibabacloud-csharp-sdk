@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetMiniAppBindingForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request result.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetMiniAppBindingForAdminResponseBodyData Data { get; set; }
         public class GetMiniAppBindingForAdminResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Authorization status</para>
+            /// <para>The authorization status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AUTHORIZED</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AuthStatus { get; set; }
 
             /// <summary>
-            /// <para>Business ID</para>
+            /// <para>The business ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WS20250801004817000002</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>Miniapp ID</para>
+            /// <para>The mini program ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>

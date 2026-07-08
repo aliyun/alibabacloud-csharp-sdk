@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetMiniAppBindingRequest : TeaModel {
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250814102215000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Channel</para>
+        /// <para>The channel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WECHAT</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>List of extension information keys</para>
+        /// <para>The list of extension information keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SERVER_DOMAIN</para>

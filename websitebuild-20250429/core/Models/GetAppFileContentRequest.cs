@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppFileContentRequest : TeaModel {
         /// <summary>
+        /// <para>The conversation ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The file path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>index.html</para>
         /// </summary>

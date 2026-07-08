@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateAppSupabaseSecretRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250731233102000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Key value</para>
+        /// <para>The secret key.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SecretKey { get; set; }
 
         /// <summary>
-        /// <para>Key name</para>
+        /// <para>The secret name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>277356_pre_auth</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SecretName { get; set; }
 
         /// <summary>
-        /// <para>Key Type</para>
+        /// <para>The secret type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Opaque</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SecretType { get; set; }
 
         /// <summary>
-        /// <para>Key Value</para>
+        /// <para>The secret value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1231</para>

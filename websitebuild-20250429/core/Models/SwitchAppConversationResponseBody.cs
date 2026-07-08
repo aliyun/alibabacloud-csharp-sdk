@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SwitchAppConversationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The access denied details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether retry is allowed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>watermark</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
         /// </summary>
@@ -49,15 +59,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>The error parameters.</para>
+        /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public SwitchAppConversationResponseBodyModule Module { get; set; }
         public class SwitchAppConversationResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12343131221311</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AliyunPk { get; set; }
 
             /// <summary>
+            /// <para>The bot ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Zero2</para>
             /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BotId { get; set; }
 
             /// <summary>
+            /// <para>The chat records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? ChatNum { get; set; }
 
             /// <summary>
+            /// <para>The conversation ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8642d886-0322-43a9-b12f-6629b067978c</para>
             /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ConversationId { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1740479834</para>
             /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-08-28T02:25:41Z</para>
             /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The extended information in JSON string format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;appId\&quot;:\&quot;WS20260504134737000001\&quot;,\&quot;inputTokens\&quot;:1395,\&quot;outputTokens\&quot;:38}</para>
             /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string MetaData { get; set; }
 
             /// <summary>
+            /// <para>The section ID of the check item.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
+            /// <para>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
             /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
+            /// <para>The current viewpoint, equivalent to the news title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Feel Like Makin\&quot; Love</para>
             /// </summary>
@@ -138,6 +174,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>
@@ -148,6 +186,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
         /// </summary>
@@ -156,6 +196,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
         /// </summary>
@@ -164,6 +206,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The root error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
         /// </summary>
@@ -172,6 +216,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The reserved parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

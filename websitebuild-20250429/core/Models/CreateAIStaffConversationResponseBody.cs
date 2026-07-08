@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
-            /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
+            /// <para>The site ID. You can obtain this value by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>

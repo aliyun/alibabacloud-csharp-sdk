@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class OnlineAppInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authentication failure details.</para>
+        /// <para>The details of the authentication failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is processed synchronously.</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
