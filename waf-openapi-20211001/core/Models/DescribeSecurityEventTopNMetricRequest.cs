@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventTopNMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</para>
+        /// <para>The query filter conditions. Multiple filter conditions are evaluated using a logical AND.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeSecurityEventTopNMetricRequestFilter Filter { get; set; }
         public class DescribeSecurityEventTopNMetricRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter conditions. Each object describes a filter condition.</para>
+            /// <para>The list of filter conditions. Each node describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventTopNMetricRequestFilterConditions> Conditions { get; set; }
             public class DescribeSecurityEventTopNMetricRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The field name. This operation supports all fields. For more information, see the <b>Supported field names</b> section below.</para>
+                /// <para>The field name on which the filter operation is performed. This operation supports all fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>matched_host</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The operator. For more information, see the <b>Supported operators</b> section below.</para>
+                /// <para>The operator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eq</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string OpValue { get; set; }
 
                 /// <summary>
-                /// <para>The field content.</para>
+                /// <para>The filter values.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.waf-top</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The time range for the query.</para>
+            /// <para>The query time range.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DateRange")]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeSecurityEventTopNMetricRequestFilterDateRange DateRange { get; set; }
             public class DescribeSecurityEventTopNMetricRequestFilterDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range to query. The value is a Unix timestamp. Unit: seconds.</para>
+                /// <para>The end time used for querying data, expressed as a UNIX timestamp. Unit: seconds.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -76,7 +76,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds.</para>
+                /// <para>The query data range cannot exceed the past 30 days. The start time used for querying data, expressed as a UNIX timestamp. Unit: seconds.</para>
+                /// <remarks>
+                /// <h2>The start time must be later than the current time minus 30 days.</h2>
+                /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -91,9 +94,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of data entries that can be returned. Data entries are sorted in descending order before they are returned. Maximum value: 10.</para>
+        /// <para>The number of data entries to return after the statistics are sorted in descending order. Maximum value: 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,26 +119,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? Limit { get; set; }
 
         /// <summary>
-        /// <para>The metric whose top N data entries you want to return. The following metrics are supported:</para>
+        /// <para>Specifies the type of data to return. Different Metric values correspond to different data content. The following Metric values are supported by this API operation:</para>
         /// <remarks>
-        /// <para> For more information about attack requests, see the &quot;Operation description&quot; section of this topic.</para>
+        /// <para>The definition of &quot;attack request&quot; is described in the API operation description. The following descriptions reference this concept.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>real_client_ip: The system aggregates the source IP addresses of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</description></item>
-        /// <item><description>http_user_agent: The system aggregates the User-Agent header field of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</description></item>
-        /// <item><description>matched_host: The system aggregates the protected objects that are matched by attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</description></item>
-        /// <item><description>remote_region_id: The system aggregates the countries to which the source IP addresses of attack requests belong to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</description></item>
-        /// <item><description>request_path: The system aggregates the URLs of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries. The URLs exclude query strings.</description></item>
-        /// <item><description>block_defense_scene: The system aggregates the protection modules that block attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries. The requests match protection rules whose actions are not set to Monitor.</description></item>
-        /// <item><description>defense_scene: The system aggregates the protection modules that are matched by attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</description></item>
-        /// <item><description>defense_scene_rule_id: The system returns the IDs of top N protection rules that are matched by attack requests and also the related protection modules. Only protection rules whose actions are not set to Monitor are counted. The system returns the value in the following format:\
-        /// <c>{ &quot;Attribute&quot;: &quot;waf_base&quot;, &quot;Value&quot;: 140, &quot;Name&quot;: &quot;111034&quot; }</c></description></item>
-        /// <item><description>defense_scene_with_rule_id: The system returns the IDs of top N protection rules that are matched by attack requests and also the related protection modules. The IDs and protection modules are connected by using hyphens (-). Protection rules whose actions are set to Monitor and Block are counted. The system returns the value in the following format:\
-        /// <c>{ &quot;Attribute&quot;: &quot;&quot;, &quot;Value&quot;: 1, &quot;Name&quot;: &quot;120075-waf_base&quot; }</c></description></item>
-        /// <item><description>defense_scene_top_rule_id: The system returns top N matched protection rules of a specific protection module. You can specify Conditions in Filter to configure filter conditions. For example, you can use the following condition to query top N matched protection rules of the custom rule module:\
-        /// <c>{ &quot;Key&quot;: &quot;defense_scene_map&quot;, &quot;OpValue&quot;: &quot;contain&quot;, &quot;Values&quot;: &quot;custom_acl&quot; }</c></description></item>
-        /// <item><description>defense_scene_rule_type: The system returns top N matched protection rules of the core web protection module. This metric is supported only by the core web protection module because only this module supports subtypes of protection rules. You must specify Conditions in Filter to configure filter conditions. Example:\
-        /// <c>{ &quot;Key&quot;: &quot;defense_scene&quot;, &quot;OpValue&quot;: &quot;eq&quot;, &quot;Values&quot;: &quot;waf_base&quot; }</c></description></item>
+        /// <item><description>real_client_ip: performs aggregation and sorting of the source IP addresses of attack requests in descending order, and returns the top N entries.</description></item>
+        /// <item><description>http_user_agent: performs aggregation and sorting of the User-Agent values of attack requests in descending order, and returns the top N entries.</description></item>
+        /// <item><description>matched_host: performs aggregation and sorting of the protected objects hit by attack requests in descending order, and returns the top N entries.</description></item>
+        /// <item><description>remote_region_id: performs aggregation and sorting of the countries to which the source IP addresses of attack requests belong in descending order, and returns the top N entries.</description></item>
+        /// <item><description>request_path: performs aggregation and sorting of the URLs (excluding query strings) of attack requests in descending order, and returns the top N entries.</description></item>
+        /// <item><description>block_defense_scene: performs aggregation and sorting of the final action modules of blocked requests (whose action is not &quot;monitor&quot;) in descending order, and returns the top N entries.</description></item>
+        /// <item><description>defense_scene: performs aggregation and sorting of all protection modules hit by attack requests in descending order, and returns the top N entries.</description></item>
+        /// <item><description>defense_scene_rule_id: queries the top rule IDs of hit non-monitor rules and the protection modules to which the rules belong. This query returns statistics only for non-monitor mode rules. The returned data format is as follows:<br>
+        ///  <c>{ &quot;Attribute&quot;: &quot;waf_base&quot;, &quot;Value&quot;: 140, &quot;Name&quot;: &quot;111034&quot; }</c></description></item>
+        /// <item><description>defense_scene_with_rule_id: returns the top N rule IDs ranked by the number of hit requests and the protection modules to which the rules belong, connected by &quot;-&quot;. This query does not distinguish between rule actions and includes both monitor rules and block rules. The returned format is as follows:<br>
+        ///  <c>{ &quot;Attribute&quot;: &quot;&quot;,  &quot;Value&quot;: 1,  &quot;Name&quot;: &quot;120075-waf_base&quot; }</c></description></item>
+        /// <item><description>defense_scene_top_rule_id: queries the top rule hits of a specific protection module. Specify filter conditions in the Conditions field of Filter. For example, to query the top rule hits of the &quot;custom ACL&quot; module, set the Conditions field as follows:<br>
+        ///  <c>{ &quot;Key&quot;: &quot;defense_scene_map&quot;, &quot;OpValue&quot;: &quot;contain&quot;, &quot;Values&quot;: &quot;custom_acl&quot; }</c></description></item>
+        /// <item><description>defense_scene_rule_type: queries the top hit rule types of the web core protection module. Only the web core protection module supports this query because only web core protection has rule child classes. Specify filter conditions in the Conditions field of Filter. The format is as follows:<br>
+        /// <c>    { &quot;Key&quot;: &quot;defense_scene&quot;, &quot;OpValue&quot;: &quot;eq&quot;, &quot;Values&quot;: &quot;waf_base&quot; }</c></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -147,21 +150,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ap-southeast-1</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

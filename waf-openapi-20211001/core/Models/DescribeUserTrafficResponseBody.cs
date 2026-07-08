@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserTrafficResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EC10C9EA-A367-52D5-<em><b>-</b></em></para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of user traffic data.</para>
+        /// </summary>
         [NameInMap("UserTraffic")]
         [Validation(Required=false)]
         public List<DescribeUserTrafficResponseBodyUserTraffic> UserTraffic { get; set; }
         public class DescribeUserTrafficResponseBodyUserTraffic : TeaModel {
             /// <summary>
+            /// <para>The sequence number sorted in chronological order.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Index { get; set; }
 
             /// <summary>
+            /// <para>The usage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1024</para>
             /// </summary>

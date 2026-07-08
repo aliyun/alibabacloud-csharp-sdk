@@ -10,17 +10,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeLogDeliveryConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the log delivery configuration.</para>
+        /// <para>The log delivery configuration.</para>
         /// </summary>
         [NameInMap("DeliveryConfig")]
         [Validation(Required=false)]
         public DescribeLogDeliveryConfigResponseBodyDeliveryConfig DeliveryConfig { get; set; }
         public class DescribeLogDeliveryConfigResponseBodyDeliveryConfig : TeaModel {
             /// <summary>
-            /// <para>The content of the log delivery configuration. The value is a JSON string that contains multiple parameters.</para>
+            /// <para>The details of the log delivery configuration, in JSON format.</para>
             /// <remarks>
-            /// <para> This parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see <b>Parameter description for log delivery configuration</b> of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</para>
+            /// <para>This parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a>.</para>
             /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
+            ///   &quot;protocol&quot;: &quot;tcp&quot;,
+            ///   &quot;servers&quot;: [
+            ///     {
+            ///       &quot;address&quot;: &quot;1.1.1.1&quot;,
+            ///       &quot;port&quot;: 20
+            ///     }
+            ///   ]
+            /// }</para>
             /// </summary>
             [NameInMap("DeliveryDetail")]
             [Validation(Required=false)]
@@ -39,8 +51,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the log delivery configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>syslog</b>: Logs are delivered to a syslog service.</description></item>
-            /// <item><description><b>kafka</b>: Logs are delivered to a Kafka service.</description></item>
+            /// <item><description><para><b>syslog</b>: The logs are delivered to a syslog service.</para>
+            /// </description></item>
+            /// <item><description><para><b>kafka</b>: The logs are delivered to a Kafka service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-******</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResponseCodeTrendGraphRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</para>
+        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the end time is the current query time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1665386280</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time interval. Unit: seconds. The value must be an integral multiple of 60.</para>
+        /// <para>The time interval. Unit: seconds. The value must be an integer multiple of 60.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,10 +45,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The protected object.</para>
+        /// <para>The protected object to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -90,10 +92,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string StartTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The type of the error codes. Valid values:</para>
+        /// <para>The type of response codes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>waf:</b> error codes that are returned to clients from WAF.</description></item>
-        /// <item><description><b>upstream:</b> error codes that are returned to WAF from the origin server.</description></item>
+        /// <item><description><b>waf</b>: response codes returned by WAF to clients.</description></item>
+        /// <item><description><b>upstream</b>: response codes returned by origin servers to WAF.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

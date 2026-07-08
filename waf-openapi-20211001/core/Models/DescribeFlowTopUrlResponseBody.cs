@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of the top 10 URLs that are used to initiate requests.</para>
+        /// <para>The top 10 URLs that are most frequently accessed.</para>
         /// </summary>
         [NameInMap("RuleHitsTopUrl")]
         [Validation(Required=false)]
         public List<DescribeFlowTopUrlResponseBodyRuleHitsTopUrl> RuleHitsTopUrl { get; set; }
         public class DescribeFlowTopUrlResponseBodyRuleHitsTopUrl : TeaModel {
             /// <summary>
-            /// <para>The total number of requests that are initiated by using the URL.</para>
+            /// <para>The total number of requests for the URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>181174784</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to initiate requests.</para>
+            /// <para>The requested URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com/path1">www.aliyundoc.com/path1</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecAbnormalsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the risk.</para>
+        /// <para>The risk ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29c6401****99a2bad3943e26d8</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AbnormalId { get; set; }
 
         /// <summary>
-        /// <para>The level of the risk. Valid values:</para>
+        /// <para>The risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><b>high</b>: high risk.</description></item>
+        /// <item><description><b>medium</b>: medium risk.</description></item>
+        /// <item><description><b>low</b>: low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AbnormalLevel { get; set; }
 
         /// <summary>
-        /// <para>The type of the risk.</para>
+        /// <para>The risk type.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of risks.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported risk types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AbnormalTag { get; set; }
 
         /// <summary>
-        /// <para>The risk-related API.</para>
+        /// <para>The API operation associated with the risk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/api/users/login</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ApiFormat { get; set; }
 
         /// <summary>
-        /// <para>The ID of the risk-related API.</para>
+        /// <para>The ID of the API associated with the risk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bd9efb8ad******d9ca6</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The business purpose of the API.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1684382100</para>
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The domain name or IP address of the API.</para>
+        /// <para>The domain name or IP address to which the API operation belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a.aliyun.com</para>
@@ -128,25 +128,25 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string MatchedHost { get; set; }
 
         /// <summary>
-        /// <para>The name of the sorting field. Valid values:</para>
+        /// <para>The name of the field used for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>discoverTime</b> (default): indicates the time when a risk was first detected.</description></item>
-        /// <item><description><b>abnormalLevel</b>: indicates the level of a risk.</description></item>
-        /// <item><description><b>latestDiscoverTime</b>: indicates the time when a risk was last detected.</description></item>
+        /// <item><description><b>discoverTime</b>: the time when the risk was first detected. This is the default value.</description></item>
+        /// <item><description><b>abnormalLevel</b>: the risk level.</description></item>
+        /// <item><description><b>latestDiscoverTime</b>: the time when the risk was most recently detected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>allCnt</para>
+        /// <para>firstTime</para>
         /// </summary>
         [NameInMap("OrderKey")]
         [Validation(Required=false)]
         public string OrderKey { get; set; }
 
         /// <summary>
-        /// <para>The sorting method. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc (default)</b>: in descending order</description></item>
-        /// <item><description><b>asc</b>: in ascending order</description></item>
+        /// <item><description><b>desc</b>: descending order. This is the default value.</description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,8 +159,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The source of the risk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>custom</b></description></item>
-        /// <item><description><b>default</b></description></item>
+        /// <item><description><b>custom</b>: custom.</description></item>
+        /// <item><description><b>default</b>: built-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number to return in a paging query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Default value: <b>10</b>, which indicates 10 entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -191,21 +191,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-qingdao</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -215,7 +217,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1684252800</para>
@@ -225,13 +227,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the risk. Valid values:</para>
+        /// <para>The risk status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>toBeConfirmed</b></description></item>
-        /// <item><description><b>confirmed</b></description></item>
-        /// <item><description><b>toBeFixed</b></description></item>
-        /// <item><description><b>fixed</b></description></item>
-        /// <item><description><b>ignored</b></description></item>
+        /// <item><description><b>toBeConfirmed</b>: to be confirmed.</description></item>
+        /// <item><description><b>confirmed</b>: confirmed.</description></item>
+        /// <item><description><b>toBeFixed</b>: to be fixed.</description></item>
+        /// <item><description><b>fixed</b>: fixed (manually verified).</description></item>
+        /// <item><description><b>ignored</b>: ignored.</description></item>
+        /// <item><description><b>toBeVerified</b>: to be verified by the system.</description></item>
+        /// <item><description><b>notFixed</b>: not fixed after verification.</description></item>
+        /// <item><description><b>systemFixed</b>: fixed (verified by the system).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

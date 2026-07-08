@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The log status information of protected objects.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeResourceLogStatusResponseBodyResult> Result { get; set; }
         public class DescribeResourceLogStatusResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The protected object.</para>
+            /// <para>The name of the protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alb-wewbb23dfsetetcic****</para>
@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log collection feature is enabled for the protected object. Valid values:</para>
+            /// <para>Indicates whether log collection is enabled for the protected object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true:</b> The log collection feature is enabled.</description></item>
-            /// <item><description><b>false:</b> The log collection feature is disabled.</description></item>
+            /// <item><description><para><b>true</b>: Log collection is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Log collection is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

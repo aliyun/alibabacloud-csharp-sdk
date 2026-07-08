@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateHybridCloudGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The region in which the node resides. Specify the parameter in the Carrier code-Continent code-City code format.</para>
+        /// <para>The back-to-origin mark of the node group. The value is in the format of Carrier-Continent-City, which is used to identify the origin of back-to-origin requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-asiapacific-beijing</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string BackSourceMark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The ID of the Hybrid Cloud WAF cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>demoGroupName</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -44,10 +44,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The type of the node group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>protect</b></description></item>
-        /// <item><description><b>control</b></description></item>
-        /// <item><description><b>storage</b></description></item>
-        /// <item><description><b>controlStorage</b></description></item>
+        /// <item><description><para><b>protect</b>: a protection node group that processes traffic filtering.</para>
+        /// </description></item>
+        /// <item><description><para><b>control</b>: a control node group that manages cluster configurations.</para>
+        /// </description></item>
+        /// <item><description><para><b>storage</b>: a storage node group that stores logs and data.</para>
+        /// </description></item>
+        /// <item><description><para><b>controlStorage</b>: a node group that serves as both control and storage.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the server used for load balancing.</para>
+        /// <para>The IP address of the load balancer that is associated with the node group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LoadBalanceIp { get; set; }
 
         /// <summary>
-        /// <para>The region in which the node resides. Specify the parameter in the Carrier code-Continent code-City code format.</para>
+        /// <para>The location code of the region where the node group resides. The value is in the format of Carrier-Continent-City.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0-410-0</para>
@@ -94,10 +98,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LocationCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,17 +114,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The remarks on the node group. You can use this parameter to add a brief description for the node group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>demoRamark</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteLogDeliveryConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-*****</para>
         /// </summary>

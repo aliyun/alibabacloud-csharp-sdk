@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeCertsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificates.</para>
+        /// <para>The list of certificates.</para>
         /// </summary>
         [NameInMap("Certs")]
         [Validation(Required=false)]
         public List<DescribeCertsResponseBodyCerts> Certs { get; set; }
         public class DescribeCertsResponseBodyCerts : TeaModel {
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The time when the certificate expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1976256736582</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// <para>The effective time.</para>
+            /// <para>The time when the certificate takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1976256836582</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// <para>The globally unique ID of the certificate. The value follows a &quot;\<Certificate ID>-ap-southeast-1&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-ap-southeast-1.</para>
+            /// <para>The globally unique ID of the certificate. The value follows a &quot;\<Certificate ID>-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>123-ap-southeast-1</para>
+            /// <para>12345-cn-hangzhou</para>
             /// </summary>
             [NameInMap("CertIdentifier")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The domain that is supported by the certificate.</para>
+            /// <para>The domain name for which the certificate is issued.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -79,8 +79,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>Indicates whether the certificate chain is complete. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The certificate chain is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The certificate chain is incomplete.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19511B0D-5AE0-5600-BB8A-DC2C8345****</para>

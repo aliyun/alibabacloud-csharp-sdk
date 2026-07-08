@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDomainShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which you want to add the domain name to WAF. Valid values:</para>
+        /// <para>The access type of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>share:</b> adds the domain name to WAF in CNAME record mode. This is the default value.</description></item>
-        /// <item><description><b>hybrid_cloud_cname:</b> adds the domain name to WAF in hybrid cloud reverse proxy mode.</description></item>
+        /// <item><description><para><b>share</b> (default): CNAME access.</para>
+        /// </description></item>
+        /// <item><description><para><b>hybrid_cloud_cname</b>: hybrid cloud CNAME access.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The domain name that you want to add to WAF.</para>
+        /// <para>The domain name to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,9 +37,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listener configurations.</para>
+        /// <para>The listening configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ListenShrink { get; set; }
 
         /// <summary>
-        /// <para>The forwarding configurations.</para>
+        /// <para>The forwarding configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Redirect")]
@@ -65,10 +67,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RedirectShrink { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -90,14 +94,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags. You can specify up to 20 tags.</para>
+        /// <para>The tag list, which contains a maximum of 20 items.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDomainShrinkRequestTag> Tag { get; set; }
         public class CreateDomainShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tagkey1</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>

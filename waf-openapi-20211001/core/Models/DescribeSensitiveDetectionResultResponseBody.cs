@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveDetectionResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compliance check results.</para>
+        /// <para>The compliance detection results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSensitiveDetectionResultResponseBodyData Data { get; set; }
         public class DescribeSensitiveDetectionResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The compliance checks.</para>
+            /// <para>The compliance detection list.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<DescribeSensitiveDetectionResultResponseBodyDataResult> Result { get; set; }
             public class DescribeSensitiveDetectionResultResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The compliance check results. Valid values:</para>
+                /// <para>The compliance detection result. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><b>report</b>: Risks exist in cross-border data transfer.</description></item>
-                /// <item><description><b>none</b>: No risks exist in cross-border data transfer.</description></item>
+                /// <item><description><b>report</b>: A data cross-border transfer risk exists.</description></item>
+                /// <item><description><b>none</b>: No data cross-border transfer risk exists.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string DetectionResult { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive information check results by sensitive data type.</para>
+                /// <para>The detection list of sensitive data types.</para>
                 /// </summary>
                 [NameInMap("List")]
                 [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? InfoCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of sensitive personal information records that are involved in cross-border data transfer.</para>
+                    /// <para>The number of cross-border personal information records.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>6</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 }
 
                 /// <summary>
-                /// <para>The maximum values in the statistics of sensitive data types.</para>
+                /// <para>The maximum values of sensitive data type statistics.</para>
                 /// </summary>
                 [NameInMap("Max")]
                 [Validation(Required=false)]
                 public DescribeSensitiveDetectionResultResponseBodyDataResultMax Max { get; set; }
                 public class DescribeSensitiveDetectionResultResponseBodyDataResultMax : TeaModel {
                     /// <summary>
-                    /// <para>The number of sensitive personal information records that are of the most frequent sensitive data type.</para>
+                    /// <para>The number of personal information records corresponding to the sensitive data type with the highest count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>187</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? InfoCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of sensitive personal information records that are of the most frequent sensitive data type and are involved in cross-border data transfer.</para>
+                    /// <para>The number of cross-border personal information records corresponding to the sensitive data type with the highest count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>54</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                     public long? OutboundCount { get; set; }
 
                     /// <summary>
-                    /// <para>The most frequent sensitive data type.</para>
+                    /// <para>The sensitive data type with the highest count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1003</para>

@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDefenseResourceShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The custom header fields used to obtain the actual client IP address when XFF proxy is enabled.</para>
+        /// <remarks>
+        /// <para>If XffStatus is set to 1, WAF uses the first IP address from the specified header field as the client IP address to prevent XFF forgery. If you specify multiple header fields, WAF reads them in order. If no valid client IP address is found in the specified header fields, WAF falls back to the first IP address in the X-Forwarded-For header field.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("CustomHeaders")]
         [Validation(Required=false)]
         public string CustomHeadersShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the protected object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -22,6 +30,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The configuration details of the protected object, in JSON format.</para>
+        /// <remarks>
+        /// <para>The required parameters vary based on the values of <b>Product</b> and <b>Pattern</b>. For more information, see the <b>Description of the Detail parameter</b> section.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +44,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Detail { get; set; }
 
         /// <summary>
+        /// <para>The ID of the WAF instance.</para>
+        /// <remarks>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the protected object belongs. This parameter is required only in multi-account scenarios. By default, the protected object belongs to the WAF administrator account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123221XXX</para>
         /// </summary>
@@ -50,6 +68,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OwnerUserId { get; set; }
 
         /// <summary>
+        /// <para>The type of the protected object. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>domain</b>: domain name.</para>
+        /// </description></item>
+        /// <item><description><para><b>multi_service</b>: hybrid cloud deployment.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +85,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Pattern { get; set; }
 
         /// <summary>
+        /// <para>The name of the Alibaba Cloud service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>alb</b>: Application Load Balancer (ALB).</para>
+        /// </description></item>
+        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS).</para>
+        /// </description></item>
+        /// <item><description><para><b>clb4</b>: Layer 4 Classic Load Balancer (CLB).</para>
+        /// </description></item>
+        /// <item><description><para><b>clb7</b>: Layer 7 CLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: Web Application Firewall (WAF).</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +110,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Product { get; set; }
 
         /// <summary>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -78,6 +126,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the protected object.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Only protected objects of hybrid cloud deployments support custom names.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>abctest.com</para>
         /// </summary>
@@ -85,11 +140,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string Resource { get; set; }
 
+        /// <summary>
+        /// <para>The name of the protection group to which the protected object is added.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testGroup</para>
+        /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public string ResourceGroup { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
         /// </summary>
@@ -98,6 +161,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The origin type of the protected object. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>custom</b>: a user-defined protected object.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,11 +174,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string ResourceOrigin { get; set; }
 
+        /// <summary>
+        /// <para>A list of tags. You can add up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDefenseResourceShrinkRequestTag> Tag { get; set; }
         public class CreateDefenseResourceShrinkRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>demoTagKey</para>
             /// </summary>
@@ -120,6 +192,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>
             /// </summary>
@@ -130,6 +204,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the X-Forwarded-For (XFF) proxy feature is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b> (default): disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

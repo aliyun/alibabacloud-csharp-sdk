@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,16 +23,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the statistics. Valid values:</para>
+        /// <para>The type of statistics. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asset_num</b>: total number of APIs</description></item>
-        /// <item><description><b>asset_active</b>: number of active APIs</description></item>
-        /// <item><description><b>asset_newborn</b>: number of new APIs</description></item>
-        /// <item><description><b>asset_offline</b>: number of deactivated APIs</description></item>
-        /// <item><description><b>asset_bot</b>: number of APIs that are called by bots</description></item>
-        /// <item><description><b>asset_cross_border</b>: number of APIs that are called for cross-border data transfer</description></item>
-        /// <item><description><b>sensitive_api</b>: number of response-sensitive APIs</description></item>
-        /// <item><description><b>sensitive_domain</b>: number of response-sensitive domain names</description></item>
+        /// <item><description><b>asset_num</b>: total number of API assets.</description></item>
+        /// <item><description><b>asset_active</b>: number of active APIs.</description></item>
+        /// <item><description><b>asset_newborn</b>: number of APIs added today.</description></item>
+        /// <item><description><b>asset_offline</b>: number of inactive APIs.</description></item>
+        /// <item><description><b>asset_bot</b>: number of APIs with bot requests.</description></item>
+        /// <item><description><b>asset_cross_border</b>: number of APIs with cross-border data transfer.</description></item>
+        /// <item><description><b>sensitive_api</b>: number of APIs with sensitive data in responses.</description></item>
+        /// <item><description><b>sensitive_domain</b>: number of sites with sensitive data in responses.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <para>The query time in UNIX timestamp format (UTC). Unit: seconds.</para>
         /// <remarks>
-        /// <para>Notice: The parameter has been deprecated.</para>
+        /// <para>Notice: This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Days { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,10 +74,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

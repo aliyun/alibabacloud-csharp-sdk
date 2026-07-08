@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAddressesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of addresses.</para>
+        /// </summary>
         [NameInMap("AddressList")]
         [Validation(Required=false)]
         public List<DescribeAddressesResponseBodyAddressList> AddressList { get; set; }
         public class DescribeAddressesResponseBodyAddressList : TeaModel {
             /// <summary>
+            /// <para>The address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Address { get; set; }
 
             /// <summary>
+            /// <para>The most recent modification time of the address. The value is a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1760408233000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The address book ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345678</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -48,6 +59,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page. If a next page exists, this field contains a value.</para>
+        /// <remarks>
+        /// <para>If this parameter has a return value, a next page exists. You can pass the returned <b>NextToken</b> as a request parameter to retrieve the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</para>
         /// </summary>
@@ -56,6 +72,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8D8EBFB7-E1EB-5236-952A-092EDC72***</para>
         /// </summary>
@@ -64,6 +82,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

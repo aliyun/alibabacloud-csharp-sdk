@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the template.</para>
+        /// <para>The details of the protection template.</para>
         /// </summary>
         [NameInMap("Template")]
         [Validation(Required=false)]
         public DescribeDefenseTemplateResponseBodyTemplate Template { get; set; }
         public class DescribeDefenseTemplateResponseBodyTemplate : TeaModel {
             /// <summary>
-            /// <para>The scenario in which the template is used. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</para>
+            /// <para>The scenario in which the protection template is used. For more information, see the description of the <b>DefenseScene</b> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf_group</para>
@@ -37,11 +37,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseScene { get; set; }
 
             /// <summary>
-            /// <para>The sub-scenario in which the template is used. Valid values:</para>
+            /// <para>The sub-scenario of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>web</b>: The template is a bot management template that is used for website protection.</description></item>
-            /// <item><description><b>app</b>: The template is a bot management template that is used for app protection.</description></item>
-            /// <item><description><b>basic</b>: The template is a bot management template that is used for basic protection.</description></item>
+            /// <item><description><para><b>web</b>: the bot management template for website protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>app</b>: the bot management template for app protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>basic</b>: the basic bot management template.</para>
+            /// </description></item>
+            /// <item><description><para><b>bot_custom_acl</b>: the bot management template for custom protection rules.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DefenseSubScene { get; set; }
 
             /// <summary>
-            /// <para>The description of the protection rule template.</para>
+            /// <para>The description of the protection template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -62,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The most recent time when the protection rule template was modified.</para>
+            /// <para>The most recent time the protection template was modified. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665283642000</para>
@@ -72,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protection rule template.</para>
+            /// <para>The ID of the protection template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10097</para>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the protection rule template.</para>
+            /// <para>The name of the protection template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test0621</para>
@@ -92,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The origin of the protection rule template. If the value of this parameter is custom, the protection rule template is created by the user.</para>
+            /// <para>The origin of the protection template. A value of <b>custom</b> indicates that the template is user-defined.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -102,10 +107,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string TemplateOrigin { get; set; }
 
             /// <summary>
-            /// <para>The status of the protection rule template. Valid values:</para>
+            /// <para>The status of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0:</b> disabled.</description></item>
-            /// <item><description><b>1:</b> enabled.</description></item>
+            /// <item><description><para><b>0</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,10 +123,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? TemplateStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the protection rule template. Valid values:</para>
+            /// <para>The type of the protection template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>user_default:</b> default template.</description></item>
-            /// <item><description><b>user_custom:</b> custom template.</description></item>
+            /// <item><description><para><b>user_default</b>: the default template.</para>
+            /// </description></item>
+            /// <item><description><para><b>user_custom</b>: a custom template.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

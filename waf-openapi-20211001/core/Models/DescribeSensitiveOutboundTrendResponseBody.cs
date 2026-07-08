@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveOutboundTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information records involved in cross-border data transfer.</para>
+        /// <para>The list of cross-border data transfer information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of personal information records involved in cross-border data transfer.</para>
+            /// <para>The total number of personal information records transferred cross-border.</para>
             /// 
             /// <b>Example:</b>
             /// <para>541</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoOutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of sensitive information records involved in cross-border data transfer.</para>
+            /// <para>The total number of sensitive information records transferred cross-border.</para>
             /// 
             /// <b>Example:</b>
             /// <para>378</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? SensitiveOutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The time of cross-border data transfer. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time of the cross-border data transfer. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672502400</para>

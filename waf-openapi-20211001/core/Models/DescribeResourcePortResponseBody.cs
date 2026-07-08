@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeResourcePortResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-3014697B11AE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of HTTP and HTTPS listener ports that are added to the WAF instance.</para>
+        /// <para>All HTTP and HTTPS listener ports that are added to WAF.</para>
         /// </summary>
         [NameInMap("ResourcePorts")]
         [Validation(Required=false)]

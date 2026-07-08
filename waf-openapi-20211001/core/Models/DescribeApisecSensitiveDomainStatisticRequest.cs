@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeApisecSensitiveDomainStatisticRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <remarks>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>428</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</para>
+        /// <para>The end time. This value is a UNIX timestamp (UTC) in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1686895256</para>
@@ -30,9 +33,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +47,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order of the list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: ascending order.</description></item>
-        /// <item><description><b>desc</b>: descending order.</description></item>
+        /// <item><description><para>asc: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OrderWay { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates the first page. For more information about paging, see the paging parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,20 +73,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>5</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>5</b>, which indicates 5 entries per page. For more information about paging, see the paging parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +109,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</para>
+        /// <para>The start time. This value is a UNIX timestamp (UTC) in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1668496310</para>
@@ -112,10 +119,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The sensitive data type. Valid values:</para>
+        /// <para>The type of sensitive data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>request</b>: sensitive data in requests.</description></item>
-        /// <item><description><b>response</b>: sensitive data in responses.</description></item>
+        /// <item><description><para>request: request sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para>response: response sensitive data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

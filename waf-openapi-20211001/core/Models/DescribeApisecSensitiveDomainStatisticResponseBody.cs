@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecSensitiveDomainStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecSensitiveDomainStatisticResponseBodyData> Data { get; set; }
         public class DescribeApisecSensitiveDomainStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of APIs that are involved.</para>
+            /// <para>The number of involved APIs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ApiCount { get; set; }
 
             /// <summary>
-            /// <para>The number of sites that are involved.</para>
+            /// <para>The number of involved domain names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? DomainCount { get; set; }
 
             /// <summary>
-            /// <para>The code of the sensitive data.</para>
+            /// <para>The code of the sensitive data type.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</para>
+            /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,25 +50,25 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SensitiveCode { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the sensitive data.Valid values:</para>
+            /// <para>The sensitivity level of the API. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>S1</b>: low sensitivity.</description></item>
-            /// <item><description><b>S2</b>: moderate sensitivity.</description></item>
+            /// <item><description><b>S2</b>: medium sensitivity.</description></item>
             /// <item><description><b>S3</b>: high sensitivity.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>L3</para>
+            /// <para>S3</para>
             /// </summary>
             [NameInMap("SensitiveLevel")]
             [Validation(Required=false)]
             public string SensitiveLevel { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitive data.</para>
+            /// <para>The name of the sensitive data type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1002</para>
+            /// <para>自定义敏感类型。</para>
             /// </summary>
             [NameInMap("SensitiveName")]
             [Validation(Required=false)]

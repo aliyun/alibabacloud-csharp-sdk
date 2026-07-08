@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The trends of attacks.</para>
+        /// <para>The attack trend list.</para>
         /// </summary>
         [NameInMap("Trend")]
         [Validation(Required=false)]
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The statistics time, in UNIX timestamp format (UTC). Unit: seconds.</para>
             /// <remarks>
-            /// <para>Notice: The parameter has been deprecated, it is recommended to use the Timestamp parameter.</para>
+            /// <para>Notice: This parameter is deprecated. Use the Timestamp parameter instead.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The statistics time, in UNIX timestamp format (UTC). Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723435200</para>

@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the log subscription. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>risk</b>: risk information.</description></item>
-            /// <item><description><b>event</b>: attack event information.</description></item>
-            /// <item><description><b>asset</b>: asset information.</description></item>
+            /// <item><description><para><b>risk</b>: risk information.</para>
+            /// </description></item>
+            /// <item><description><para><b>event</b>: attack event information.</para>
+            /// </description></item>
+            /// <item><description><para><b>asset</b>: asset information.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,8 +67,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The status of API security log subscription. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enabled.</description></item>
-            /// <item><description><b>false</b>: disabled.</description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2EFCFE18-78F8-5079-B312-07***48B</para>

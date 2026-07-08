@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeNetworkFlowTimeSeriesMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The array of time-series data. Supports returning data with multiple values.</para>
+        /// <para>The time series data. Multiple data series can be returned.</para>
         /// </summary>
         [NameInMap("NetworkFlowTimeSeries")]
         [Validation(Required=false)]
         public List<DescribeNetworkFlowTimeSeriesMetricResponseBodyNetworkFlowTimeSeries> NetworkFlowTimeSeries { get; set; }
         public class DescribeNetworkFlowTimeSeriesMetricResponseBodyNetworkFlowTimeSeries : TeaModel {
             /// <summary>
-            /// <para>The metric name, consistent with the Metric request parameter.</para>
+            /// <para>The metric name. This value is the same as the Metric request parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>total_requests</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Metric { get; set; }
 
             /// <summary>
-            /// <para>The array of timestamps (seconds) marking the start of each time interval.</para>
+            /// <para>The timestamps. Each value represents the start of a time interval.</para>
             /// </summary>
             [NameInMap("Timestamps")]
             [Validation(Required=false)]
             public List<string> Timestamps { get; set; }
 
             /// <summary>
-            /// <para>The array of counts, each representing the count for the corresponding time interval.</para>
+            /// <para>The metric values. Each value represents the count within the corresponding time interval.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D827FCFE-90A7-4330-9326-D33C8B4C7726</para>
+        /// <para>D827FCFE-90A7-4330-9326-D33C8B4*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaData TimeSeriesMetaData { get; set; }
         public class DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaData : TeaModel {
             /// <summary>
-            /// <para>The time granularity. For example, 15m indicates that each data point is counted every 15 minutes. For details, see the <b>Time granularity of time series data points</b> section below.</para>
+            /// <para>The time granularity of each data point in the returned time series. For example, &quot;15m&quot; indicates that each data point represents statistics for a 15-minute interval. For more information about the time granularity, see the <b>Time granularity of data points</b> section.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1m</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AggregateInterval { get; set; }
 
             /// <summary>
-            /// <para>The query time range.</para>
+            /// <para>The time range that was queried.</para>
             /// </summary>
             [NameInMap("DateRange")]
             [Validation(Required=false)]
             public DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricResponseBodyTimeSeriesMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end time of the query range (Unix timestamp, seconds). Same as the EndDate request parameter.</para>
+                /// <para>The end of the time range that was queried. This value is a UNIX timestamp. Unit: seconds. This value is the same as the EndDate request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the query range (Unix timestamp, seconds). Same as the StartDate request parameter.</para>
+                /// <para>The start of the time range that was queried. This value is a UNIX timestamp. Unit: seconds. This value is the same as the StartDate request parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The unit of the returned data. It is fixed as requests.</para>
+            /// <para>The unit of the returned data. Default value: requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>requests</para>

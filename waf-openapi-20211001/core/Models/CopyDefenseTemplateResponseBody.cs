@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new protection template.</para>
+        /// <para>The ID of the newly created protection template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12346</para>

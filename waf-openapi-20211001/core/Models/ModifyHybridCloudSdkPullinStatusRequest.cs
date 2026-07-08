@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to view the current WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,10 +35,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Mid { get; set; }
 
         /// <summary>
-        /// <para>The status of traffic redirection. Valid values:</para>
+        /// <para>The status of traffic redirection. Valid values of the parameter:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b></description></item>
-        /// <item><description><b>off</b></description></item>
+        /// <item><description><para><b>on</b>: Enable</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disable</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

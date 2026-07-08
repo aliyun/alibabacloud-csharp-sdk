@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecAbnormalDomainStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The number of high-level risks.</para>
+            /// <para>The number of high-risk vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? High { get; set; }
 
             /// <summary>
-            /// <para>The number of low-level risks.</para>
+            /// <para>The number of low-risk vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Low { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-level risks.</para>
+            /// <para>The number of medium-risk vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>Id of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-3014***B11AE</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBaseRuleChangeLogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6FBF08CB-8691-5B65-BBF8-***</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of rule change records.</para>
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<DescribeBaseRuleChangeLogResponseBodyRules> Rules { get; set; }
         public class DescribeBaseRuleChangeLogResponseBodyRules : TeaModel {
             /// <summary>
+            /// <para>The CVE ID of the vulnerability associated with the system rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CVE-2021-34538</para>
             /// </summary>
@@ -30,6 +37,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CveId { get; set; }
 
             /// <summary>
+            /// <para>The type of change. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>add</b>: The rule was added.</para>
+            /// </description></item>
+            /// <item><description><para><b>modify</b>: The rule was modified.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>add</para>
             /// </summary>
@@ -38,6 +53,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Operation { get; set; }
 
             /// <summary>
+            /// <para>The rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>42755</para>
             /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RuleId { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Header XSS Scanner Behavior</para>
             /// </summary>
@@ -54,6 +73,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The time when the rule was updated, in UNIX timestamp format. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1665460629000</para>
             /// </summary>
@@ -64,6 +85,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
+        /// <para>The total number of rule change records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>63</para>
         /// </summary>

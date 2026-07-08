@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDomainDNSRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the DNS settings. Valid values:</para>
+        /// <para>The DNS status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cnameMatched</b>: The DNS settings are properly configured.</description></item>
-        /// <item><description><b>vipMatched</b>: An A record maps the domain name to the WAF virtual IP address (VIP).</description></item>
-        /// <item><description><b>wafVip</b>: An A record maps the domain name to another WAF VIP.</description></item>
-        /// <item><description><b>unRecord</b>: The domain name does not have a DNS record.</description></item>
-        /// <item><description><b>unUsed</b>: The domain name is not pointed to WAF.</description></item>
-        /// <item><description><b>checkTimeout</b>: The check times out.</description></item>
+        /// <item><description><para><b>cnameMatched</b>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><b>vipMatched</b>: A record.</para>
+        /// </description></item>
+        /// <item><description><para><b>wafVip</b>: The VIP of another WAF is used.</para>
+        /// </description></item>
+        /// <item><description><para><b>unRecord</b>: No DNS resolution is configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>unUsed</b>: Traffic does not pass through WAF.</para>
+        /// </description></item>
+        /// <item><description><para><b>checkTimeout</b>: The detection timed out.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

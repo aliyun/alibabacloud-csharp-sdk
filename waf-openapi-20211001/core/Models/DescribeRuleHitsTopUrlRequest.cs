@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopUrlRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</para>
+        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the end time is the current query time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1665386280</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -69,13 +71,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</para>
+        /// <para>The type of protection rule hit by the protected object. By default, this parameter is not specified, which indicates that all rules are displayed.</para>
         /// <list type="bullet">
-        /// <item><description><b>blacklist:</b> IP address blacklist rules.</description></item>
-        /// <item><description><b>custom:</b> custom rules.</description></item>
-        /// <item><description><b>antiscan:</b> scan protection rules.</description></item>
-        /// <item><description><b>cc_system:</b> HTTP flood protection rules.</description></item>
-        /// <item><description><b>region_block:</b> region blacklist rules.</description></item>
+        /// <item><description><para><b>blacklist</b>: IP blacklist.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom</b>: Custom rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>antiscan</b>: Scan protection rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>cc_system</b>: HTTP flood mitigation rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>region_block</b>: Location blacklist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

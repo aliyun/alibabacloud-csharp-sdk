@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePeakTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of the QPS statistics of the WAF instance.</para>
+        /// <para>The QPS statistics of WAF.</para>
         /// </summary>
         [NameInMap("FlowChart")]
         [Validation(Required=false)]
         public List<DescribePeakTrendResponseBodyFlowChart> FlowChart { get; set; }
         public class DescribePeakTrendResponseBodyFlowChart : TeaModel {
             /// <summary>
-            /// <para>The number of requests that are monitored or blocked by the custom rule (access control) module.</para>
+            /// <para>The number of requests protected by the ACL module. This includes requests that are monitored and blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AclSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored or blocked by the scan protection module.</para>
+            /// <para>The number of requests protected by the scan protection module. This includes requests that are monitored and blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AntiScanSum { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored or blocked by the HTTP flood protection module.</para>
+            /// <para>The number of requests protected by the CC protection module. This includes requests that are monitored and blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the time interval. The serial numbers are arranged in chronological order.</para>
+            /// <para>The ordinal number for the time point, sorted in chronological order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Index { get; set; }
 
             /// <summary>
-            /// <para>The number of requests that are monitored or blocked by the regular expression protection engine.</para>
+            /// <para>The number of requests protected by the web attack protection module. This includes requests that are monitored and blocked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</para>

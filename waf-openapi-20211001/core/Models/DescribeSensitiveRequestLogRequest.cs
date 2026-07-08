@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveRequestLogRequest : TeaModel {
         /// <summary>
+        /// <para>The account information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>The API.</para>
+        /// <para>The API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/api/users/login</para>
@@ -38,9 +40,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClientIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <para>The hybrid cloud cluster ID.</para>
         /// <remarks>
-        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
+        /// <para>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <para>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1726057800</para>
@@ -61,9 +63,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the API.</para>
+        /// <para>The domain name to which the API operation belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a.***.com</para>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string MatchedHost { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates the first page. Paging starts from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page in a paged query. Default value: <b>10</b>, which indicates 10 entries per page. Paging starts from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -105,10 +107,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -129,9 +133,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the sensitive data.</para>
+        /// <para>The sensitive data type.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -152,7 +156,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SensitiveData { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+        /// <para>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1723392000</para>

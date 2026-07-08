@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecProtectionResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The protected objects.</para>
+        /// <para>The list of protected objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecProtectionResourcesResponseBodyData> Data { get; set; }
         public class DescribeApisecProtectionResourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The switch of the API security module.</para>
+            /// <para>The global switch for API security.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ApisecStatus { get; set; }
 
             /// <summary>
-            /// <para>The switch of the compliance check feature.</para>
+            /// <para>The status of the compliance review switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The switch of the tracing and auditing feature.</para>
+            /// <para>The status of the tracing audit switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

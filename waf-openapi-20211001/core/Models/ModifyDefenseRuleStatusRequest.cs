@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefenseRuleStatusRequest : TeaModel {
+        /// <summary>
+        /// <para>The type of the protection rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>template</b> (default): a template protection rule.</para>
+        /// </description></item>
+        /// <item><description><para><b>resource</b>: a rule that is configured for a protected object.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>template</para>
+        /// </summary>
         [NameInMap("DefenseType")]
         [Validation(Required=false)]
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,10 +40,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +66,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule whose status you want to change.</para>
+        /// <para>The ID of the protection rule to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,8 +79,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The new status of the protection rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0:</b> disabled.</description></item>
-        /// <item><description><b>1:</b> enabled.</description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +94,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule template to which the protection rule whose status you want to change belongs.</para>
+        /// <para>The ID of the protection template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7239</para>

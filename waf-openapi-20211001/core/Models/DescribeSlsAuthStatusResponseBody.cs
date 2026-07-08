@@ -13,17 +13,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3589D3A3-4A04-51CB-AA89-353ED20A****</para>
+        /// <para>3589D3A3-4A04-51CB-AA89-353ED20ACB10</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether WAF is authorized to access Logstores. Valid values:</para>
+        /// <para>The authorization status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: indicates that authorization is granted.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: indicates that authorization is not granted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

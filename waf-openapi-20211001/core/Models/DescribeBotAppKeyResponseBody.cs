@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBotAppKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>AppKey。</para>
+        /// <para>The AppKey for bot management.</para>
         /// 
         /// <b>Example:</b>
         /// <para>N1Kiv3AGZm******</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AppKey { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0C4ADFD4-5B7D-591D-A607-A45C*****</para>
         /// </summary>

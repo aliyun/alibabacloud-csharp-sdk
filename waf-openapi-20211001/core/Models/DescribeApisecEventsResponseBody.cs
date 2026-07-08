@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The security events.</para>
+        /// <para>The list of security events.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecEventsResponseBodyData> Data { get; set; }
         public class DescribeApisecEventsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of attacks.</para>
-            /// <remarks>
-            /// <para>Notice: The parameter has been deprecated, please use the Attackips parameter.</para>
-            /// </remarks>
+            /// <para>The total number of attacks in the security event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -30,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AllCnt { get; set; }
 
             /// <summary>
-            /// <para>The API.</para>
+            /// <para>The path of the API that is associated with the security event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/apisec/v1/register.php</para>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The business purpose of the API.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</para>
+            /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported business purposes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -63,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiTag { get; set; }
 
             /// <summary>
-            /// <para>The client that is attacked.</para>
+            /// <para>The type of client that initiated the attack, such as a browser or automation tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Chrome</para>
@@ -75,10 +72,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The information about the number of attacks. The value of this parameter is a JSON string that contains multiple parameters. Key indicates the timestamp in seconds, and Value indicates the number of attacks.</para>
+            /// <para>The attack count over time. The value is a JSON string in which each key is a UNIX timestamp in seconds and each value is the number of attacks at that time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;1717498320\&quot;:500,\&quot;1717498380\&quot;:529,\&quot;1717498440\&quot;:20,\&quot;1717498260\&quot;:518,\&quot;1717498200\&quot;:481,\&quot;1717498140\&quot;:52}</para>
+            /// <para>{
+            ///     &quot;1717498320&quot;: 500,
+            ///     &quot;1717498380&quot;: 529,
+            ///     &quot;1717498440&quot;: 20
+            /// }</para>
             /// </summary>
             [NameInMap("AttackCntInfo")]
             [Validation(Required=false)]
@@ -88,10 +89,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The source IP address of the attack.</para>
+            /// <para>The IP address of the attacker. &gt;Notice: This parameter is deprecated. Use the AttackIps parameter instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>104.234.140.33</para>
+            /// <para>104.234.140.**</para>
             /// </summary>
             [NameInMap("AttackIp")]
             [Validation(Required=false)]
@@ -101,16 +102,27 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The information about the attack source IP address. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</para>
+            /// <para>The information about the attacker IP address. The value is a JSON string that contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>ip</b>: the IP address</description></item>
-            /// <item><description><b>country_id</b>: the country ID</description></item>
-            /// <item><description><b>region_id</b>: the region ID</description></item>
-            /// <item><description><b>cnt</b>: the number of attacks</description></item>
+            /// <item><description><para><b>ip</b>: the IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>country_id</b>: the country.</para>
+            /// </description></item>
+            /// <item><description><para><b>region_id</b>: the region.</para>
+            /// </description></item>
+            /// <item><description><para><b>cnt</b>: the number of attacks.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;ip\&quot;:\&quot;72.<em>.</em>.119\&quot;,\&quot;country_id\&quot;:\&quot;US\&quot;,\&quot;region_id\&quot;:\&quot;\&quot;,\&quot;cnt\&quot;:\&quot;2100\&quot;}]</para>
+            /// <para>[
+            ///     {
+            ///         &quot;ip&quot;: &quot;72.<em>.</em>.119&quot;,
+            ///         &quot;country_id&quot;: &quot;US&quot;,
+            ///         &quot;region_id&quot;: &quot;&quot;,
+            ///         &quot;cnt&quot;: &quot;2100&quot;
+            ///     }
+            /// ]</para>
             /// </summary>
             [NameInMap("AttackIpInfo")]
             [Validation(Required=false)]
@@ -120,19 +132,22 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The source IP addresses of the attacks.</para>
+            /// <para>The list of attacker IP addresses.</para>
             /// </summary>
             [NameInMap("AttackIps")]
             [Validation(Required=false)]
             [Obsolete]
             public List<string> AttackIps { get; set; }
 
+            /// <summary>
+            /// <para>The list of attackers that are associated with the security event.</para>
+            /// </summary>
             [NameInMap("AttackerList")]
             [Validation(Required=false)]
             public List<string> AttackerList { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The end time of the event. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683703260</para>
@@ -142,7 +157,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EndTs { get; set; }
 
             /// <summary>
-            /// <para>The ID of the event.</para>
+            /// <para>The ID of the security event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c82cb276847e9c96f9597d9f4b0cdcff</para>
@@ -154,15 +169,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The details of the event. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</para>
+            /// <para>The details of the security event. The value is a JSON string that contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>ip_info</b>: the information about the attack source IP address. This parameter corresponds to the <b>AttackIpInfo</b> response parameter.</description></item>
-            /// <item><description><b>rule_id</b>: the ID of the rule corresponding to the event.</description></item>
-            /// <item><description><b>rule_tag</b>: the information about the rule corresponding to the event.</description></item>
+            /// <item><description><para><b>ip_info</b>: the information about the attacker IP address. For more information, see the <b>AttackIpInfo</b> response parameter.</para>
+            /// </description></item>
+            /// <item><description><para><b>rule_id</b>: the ID of the rule that corresponds to the event.</para>
+            /// </description></item>
+            /// <item><description><para><b>rule_tag</b>: the information about the rule that corresponds to the event.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{}</para>
+            /// <para>{
+            ///     &quot;ip_info&quot;: [
+            ///         {
+            ///             &quot;ip&quot;: &quot;112.224.143.<b>&quot;,
+            ///             &quot;country_id&quot;: &quot;CN&quot;,
+            ///             &quot;region_id&quot;: &quot;-&quot;,
+            ///             &quot;cnt&quot;: &quot;4&quot;
+            ///         }
+            ///     ],
+            ///     &quot;rule_id&quot;: &quot;837</b>&quot;,
+            ///     &quot;rule_tag&quot;: &quot;interface returns a large amount of sensitive information&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("EventInfo")]
             [Validation(Required=false)]
@@ -172,9 +201,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The severity level of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><para><b>high</b>: high severity.</para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b>: medium severity.</para>
+            /// </description></item>
+            /// <item><description><para><b>low</b>: low severity.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,9 +217,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of the event.</para>
+            /// <para>The event type.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</para>
+            /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -198,10 +230,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventTag { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the API is followed. Valid values:</para>
+            /// <para>Indicates whether the event is followed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The API is followed.</description></item>
-            /// <item><description><b>0</b>: The API is not followed.</description></item>
+            /// <item><description><para><b>1</b>: The event is followed.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The event is not followed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -212,20 +246,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Follow { get; set; }
 
             /// <summary>
-            /// <para>The domain name or IP address of the API.</para>
+            /// <para>The domain name or IP address that is protected by WAF.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>a.aliyun.com</para>
+            /// <para>a.***.com</para>
             /// </summary>
             [NameInMap("MatchedHost")]
             [Validation(Required=false)]
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The remarks that are added to the security event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Notified</para>
+            /// <para>Notify</para>
             /// </summary>
             [NameInMap("Note")]
             [Validation(Required=false)]
@@ -234,8 +268,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The source of the event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>custom</b></description></item>
-            /// <item><description><b>default</b></description></item>
+            /// <item><description><para><b>custom</b>: a user-defined event type.</para>
+            /// </description></item>
+            /// <item><description><para><b>default</b>: a built-in event type.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -246,7 +282,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// <para>The country to which the attack source IP address belongs.</para>
+            /// <para>The country where the attacker IP address is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>US</para>
@@ -256,7 +292,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RemoteCountry { get; set; }
 
             /// <summary>
-            /// <para>The region to which the attack source IP address belongs.</para>
+            /// <para>The region where the attacker IP address is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>110000</para>
@@ -268,7 +304,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The sample API request. The value of this parameter is a JSON string that contains multiple parameters.</para>
+            /// <para>A sample of the API request data. The value is a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -281,7 +317,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The sample API response. The value of this parameter is a JSON string that contains multiple parameters.</para>
+            /// <para>A sample of the API response data. The value is a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -292,7 +328,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResponseData { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The start time of the event. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683648000</para>
@@ -302,15 +338,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? StartTs { get; set; }
 
             /// <summary>
-            /// <para>The event status. Valid values:</para>
+            /// <para>The handling status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>toBeConfirmed</b></description></item>
-            /// <item><description><b>confirmed</b></description></item>
-            /// <item><description><b>ignored</b></description></item>
+            /// <item><description><para><b>toBeConfirmed</b>: pending confirmation.</para>
+            /// </description></item>
+            /// <item><description><para><b>confirmed</b>: confirmed but not yet handled.</para>
+            /// </description></item>
+            /// <item><description><para><b>actioned</b>: handled.</para>
+            /// </description></item>
+            /// <item><description><para><b>ignored</b>: ignored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Ignore</para>
+            /// <para>toBeConfirmed</para>
             /// </summary>
             [NameInMap("UserStatus")]
             [Validation(Required=false)]

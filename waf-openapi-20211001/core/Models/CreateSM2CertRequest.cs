@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateSM2CertRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the SM certificate.</para>
+        /// <para>The certificate name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-sm2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>The content of the SM certificate.</para>
+        /// <para>The content of the SM encryption certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EncryptCertificate { get; set; }
 
         /// <summary>
-        /// <para>The private key of the SM certificate.</para>
+        /// <para>The private key content of the SM encryption certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string EncryptPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,10 +58,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The content of the signing certificate for the SM certificate.</para>
+        /// <para>The signing certificate content of the SM certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SignCertificate { get; set; }
 
         /// <summary>
-        /// <para>The private key of the signing certificate for the SM certificate.</para>
+        /// <para>The private key content of the SM signing certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>

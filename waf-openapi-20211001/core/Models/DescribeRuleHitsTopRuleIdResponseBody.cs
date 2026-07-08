@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopRuleIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F6334274-8870-5D2F-A1AD-D6EF885AC1ED</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The array of the IDs of the top 10 rules that are matched by requests.</para>
+        /// <para>The top 10 rule IDs by rule hits.</para>
         /// </summary>
         [NameInMap("RuleHitsTopRuleId")]
         [Validation(Required=false)]
         public List<DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId> RuleHitsTopRuleId { get; set; }
         public class DescribeRuleHitsTopRuleIdResponseBodyRuleHitsTopRuleId : TeaModel {
             /// <summary>
-            /// <para>The number of requests that match the rule.</para>
+            /// <para>The number of requests that hit the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>181174784</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The protected object.</para>
+            /// <para>The protected object. This parameter is returned when the IsGroupResource request parameter is set to false.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5465465</para>

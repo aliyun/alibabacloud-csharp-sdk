@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudClusterServersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The servers in the hybrid cloud cluster.</para>
+        /// </summary>
         [NameInMap("ClusterServers")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudClusterServersResponseBodyClusterServers> ClusterServers { get; set; }
         public class DescribeHybridCloudClusterServersResponseBodyClusterServers : TeaModel {
             /// <summary>
+            /// <para>The continent identifier of the server, such as <c>asiapacific</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>asiapacific</para>
             /// </summary>
@@ -22,6 +27,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Continents { get; set; }
 
             /// <summary>
+            /// <para>The continent code of the protection cluster.</para>
+            /// <remarks>
+            /// <para>For a list of valid codes, see the supplementary description of response parameters.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>410</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ContinentsValue { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Cpu { get; set; }
 
             /// <summary>
+            /// <para>The time when the server was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1665987186000</para>
             /// </summary>
@@ -45,11 +59,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? CreateTimestamp { get; set; }
 
+            /// <summary>
+            /// <para>The custom name of the server.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试组</para>
+            /// </summary>
             [NameInMap("CustomName")]
             [Validation(Required=false)]
             public string CustomName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the node group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -57,11 +79,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the node group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试组。</para>
+            /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
             /// <summary>
+            /// <para>The type of the hybrid cloud node group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>protect</b>: protection.</para>
+            /// </description></item>
+            /// <item><description><para><b>control</b>: control.</para>
+            /// </description></item>
+            /// <item><description><para><b>storage</b>: storage.</para>
+            /// </description></item>
+            /// <item><description><para><b>controlStorage</b>: control and storage.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>protect</para>
             /// </summary>
@@ -70,6 +110,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string GroupType { get; set; }
 
             /// <summary>
+            /// <para>The hostname of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qsh5-sec-waf-*****-6</para>
             /// </summary>
@@ -78,6 +120,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string HostName { get; set; }
 
             /// <summary>
+            /// <para>The IP address of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.*.*1。</para>
             /// </summary>
@@ -86,6 +130,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Ip { get; set; }
 
             /// <summary>
+            /// <para>The running status of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>running</para>
             /// </summary>
@@ -94,6 +140,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string JobStatus { get; set; }
 
             /// <summary>
+            /// <para>The MAC address of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><b>:</b>:00:02:eb:c7</para>
             /// </summary>
@@ -102,6 +150,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Mac { get; set; }
 
             /// <summary>
+            /// <para>The memory size of the server. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>33547386880</para>
             /// </summary>
@@ -110,6 +160,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Memory { get; set; }
 
             /// <summary>
+            /// <para>The machine ID (MID) of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>28ab688cd403563e8e173*****79600</para>
             /// </summary>
@@ -118,6 +170,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Mid { get; set; }
 
             /// <summary>
+            /// <para>The cloud service provider where the server resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aliyun。</para>
             /// </summary>
@@ -126,6 +180,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Operator { get; set; }
 
             /// <summary>
+            /// <para>The carrier code of the server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -134,6 +190,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? OperatorValue { get; set; }
 
             /// <summary>
+            /// <para>The region identifier of the server, such as <c>beijing</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>beijing</para>
             /// </summary>
@@ -142,6 +200,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RegionCode { get; set; }
 
             /// <summary>
+            /// <para>The numeric code of the region where the server resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -150,6 +210,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? RegionCodeValue { get; set; }
 
             /// <summary>
+            /// <para>The health status of the server in the hybrid cloud cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ok</para>
             /// </summary>
@@ -158,6 +220,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The time when the server was last updated. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1711953897000</para>
             /// </summary>
@@ -168,6 +232,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C3B0FDD2-11CE-59A5-BEB5-*****1A969</para>
         /// </summary>
@@ -176,6 +242,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

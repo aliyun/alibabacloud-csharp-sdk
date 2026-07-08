@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class VerifyDomainOwnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F35F45B0-5D6B-4238-BE02-A62D****E840</para>
@@ -27,13 +27,18 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public VerifyDomainOwnerResponseBodyVerifyResult VerifyResult { get; set; }
         public class VerifyDomainOwnerResponseBodyVerifyResult : TeaModel {
             /// <summary>
-            /// <para>The reasons why the verification fails. Valid values:</para>
+            /// <para>The reason why the verification failed.</para>
             /// <list type="bullet">
-            /// <item><description>DnsTxtVerifyFailed: The DNS TXT record and the domain name do not match.</description></item>
-            /// <item><description>DnsServerError: The DNS server is abnormal.</description></item>
-            /// <item><description>VerifyFileNotExist: The verification file does not exist.</description></item>
-            /// <item><description>VerifyDomainNotAccess: The access to the domain name failed.</description></item>
-            /// <item><description>FileContentVerifyFailed: The content of the verification file and the domain name do not match.</description></item>
+            /// <item><description><para>DnsTxtVerifyFailed: The DNS TXT record does not match.</para>
+            /// </description></item>
+            /// <item><description><para>DnsServerError: The DNS server is abnormal.</para>
+            /// </description></item>
+            /// <item><description><para>VerifyFileNotExist: The verification file does not exist.</para>
+            /// </description></item>
+            /// <item><description><para>VerifyDomainNotAccess: Failed to access the domain name.</para>
+            /// </description></item>
+            /// <item><description><para>FileContentVerifyFailed: The file content does not match.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,8 +51,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The verification succeeds.</description></item>
-            /// <item><description><b>false</b>: The verification fails.</description></item>
+            /// <item><description><para><b>true</b>: The verification is successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The verification failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

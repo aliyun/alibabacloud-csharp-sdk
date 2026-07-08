@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeAccountDelegatedStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10***********34</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.</para>
+        /// <para>The Alibaba Cloud account name. This parameter is returned only when the account is a delegated administrator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>account_test</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.</para>
+        /// <para>Indicates whether the user is a delegated administrator of WAF. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The user is a delegated administrator of WAF.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The user is not a delegated administrator of WAF.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8161375D-5958-5627-BFDE-DF14****3E87</para>
+        /// <para>8161375D-5958-5627-BFDE-DF1458A73E87</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

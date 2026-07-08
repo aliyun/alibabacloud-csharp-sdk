@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02E9A4B8-90FB-5F41-A049-C82277EB82FB</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of regular expression rule groups.</para>
+        /// <para>The list of regular expression rule groups.</para>
         /// </summary>
         [NameInMap("RuleGroups")]
         [Validation(Required=false)]
         public List<DescribeRuleGroupsResponseBodyRuleGroups> RuleGroups { get; set; }
         public class DescribeRuleGroupsResponseBodyRuleGroups : TeaModel {
             /// <summary>
-            /// <para>The most recent time when the rule group was modified.</para>
+            /// <para>The time when the rule group was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1664336364000</para>
@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the automatic update feature is enabled for the rule group.</para>
+            /// <para>The automatic update status of the rule group.</para>
             /// <list type="bullet">
-            /// <item><description>1: The automatic update feature is enabled for the rule group.</description></item>
-            /// <item><description>2: The automatic update feature is disabled for the rule group.</description></item>
+            /// <item><description><para>1: Automatic updates are enabled.</para>
+            /// </description></item>
+            /// <item><description><para>2: Automatic updates are disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,12 +53,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? IsSubscribe { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule group.</para>
+            /// <para>The ID of the rule group that the current rule group inherits.</para>
             /// <list type="bullet">
-            /// <item><description>0: The rule group is created from scratch.</description></item>
-            /// <item><description>1011: The rule group is a strict rule group.</description></item>
-            /// <item><description>1012: The rule group is a medium rule group.</description></item>
-            /// <item><description>1013: The rue group is a loose rule group.</description></item>
+            /// <item><description><para>0: The rule group is created from scratch and does not inherit from another rule group.</para>
+            /// </description></item>
+            /// <item><description><para>1011: The Strict rule group.</para>
+            /// </description></item>
+            /// <item><description><para>1012: The Medium rule group.</para>
+            /// </description></item>
+            /// <item><description><para>1013: The Loose rule group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ParentRuleGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the regular expression rule group.</para>
+            /// <para>The ID of the rule group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>115361</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string RuleGroupName { get; set; }
 
             /// <summary>
-            /// <para>The number of built-in rules in the rule group.</para>
+            /// <para>The number of built-in rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4444</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries that are returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

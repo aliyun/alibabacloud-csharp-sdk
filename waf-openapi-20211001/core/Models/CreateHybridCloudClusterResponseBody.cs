@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateHybridCloudClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The ID of the hybrid cloud cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

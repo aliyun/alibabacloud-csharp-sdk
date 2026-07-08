@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The mode in which the domain name is added to WAF. Valid values:</para>
+        /// <para>The access type of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>share:</b> CNAME record mode. This is the default value.</description></item>
-        /// <item><description><b>hybrid_cloud_cname:</b> hybrid cloud reverse proxy mode.</description></item>
+        /// <item><description><b>share</b> (default): CNAME access.</description></item>
+        /// <item><description><b>hybrid_cloud_cname</b>: hybrid cloud reverse proxy access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The domain name that you want to delete.</para>
+        /// <para>The domain name that has been connected to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the domain name.</para>
+        /// <para>The domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,10 +58,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

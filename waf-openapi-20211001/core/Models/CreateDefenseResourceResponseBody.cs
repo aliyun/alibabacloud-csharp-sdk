@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDefenseResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1738C613-D054-5191-888B-DC0CF4C3A4A0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The name of the protected object that is created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cdX.XXX-call.cn-alb</para>
         /// </summary>

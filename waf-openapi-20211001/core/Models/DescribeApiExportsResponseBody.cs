@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApiExportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data export tasks.</para>
+        /// <para>The list of export tasks.</para>
         /// </summary>
         [NameInMap("ApiExports")]
         [Validation(Required=false)]
         public List<DescribeApiExportsResponseBodyApiExports> ApiExports { get; set; }
         public class DescribeApiExportsResponseBodyApiExports : TeaModel {
             /// <summary>
-            /// <para>The time when the data export task was created. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The time when the export task was created. The value is a UNIX timestamp (UTC). Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1725604852</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the file.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file_16109541456445334c0f01d9a7444e0e908***.csv</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the exported file.</para>
+            /// <para>The download URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://waf-api-sec-cn.***.aliyuncs.com/file_1610954145***.csv">https://waf-api-sec-cn.***.aliyuncs.com/file_1610954145***.csv</a></para>
@@ -57,13 +57,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The status of the data export task. Valid values:</para>
+            /// <para>The status of the export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>expired</b>: The file is expired.</para>
+            /// <item><description><para><b>expired</b>: The file has expired.</para>
             /// </description></item>
-            /// <item><description><para><b>exporting</b>: Data is being exported.</para>
+            /// <item><description><para><b>exporting</b>: The export is in progress.</para>
             /// </description></item>
-            /// <item><description><para><b>completed</b>: Data is exported.</para>
+            /// <item><description><para><b>completed</b>: The export is complete.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -75,13 +75,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the data export task. Valid values:</para>
+            /// <para>The type of the export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>apisec_api</b>: API tasks</para>
+            /// <item><description><para><b>apisec_api</b>: API asset task.</para>
             /// </description></item>
-            /// <item><description><para><b>apisec_abnormal</b>: API risk tasks</para>
+            /// <item><description><para><b>apisec_abnormal</b>: API risk task.</para>
             /// </description></item>
-            /// <item><description><para><b>apisec_event</b>: API security event tasks</para>
+            /// <item><description><para><b>apisec_event</b>: API security event task.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -105,12 +105,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the data export task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>expired</b>: The file is expired.</description></item>
-        /// <item><description><b>exporting</b>: Data is being exported.</description></item>
-        /// <item><description><b>completed</b>: Data is exported.</description></item>
-        /// </list>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

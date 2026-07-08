@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDDoSStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether DDoS attacks occur on specific domain names.</para>
+        /// <para>The current DDoS status.</para>
         /// </summary>
         [NameInMap("DDoSStatus")]
         [Validation(Required=false)]
         public List<DescribeDDoSStatusResponseBodyDDoSStatus> DDoSStatus { get; set; }
         public class DescribeDDoSStatusResponseBodyDDoSStatus : TeaModel {
             /// <summary>
-            /// <para>The type of events that are triggered by DDoS attacks. Valid values:</para>
+            /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>defense: traffic scrubbing events.</description></item>
-            /// <item><description>blackhole: blackhole filtering events.</description></item>
+            /// <item><description>defense: DDoS scrubbing events.</description></item>
+            /// <item><description>blackhole: DDoS blackhole filtering events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether DDoS attacks occur on specific domain names. Valid value:</para>
+            /// <para>The DDoS status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>doing</b>: DDoS attacks occur on specific domain names.</description></item>
+            /// <item><description><b>doing</b>: under DDoS attack.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-***</para>

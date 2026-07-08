@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecApiResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API assets.</para>
+        /// <para>The list of API assets.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecApiResourcesResponseBodyData> Data { get; set; }
         public class DescribeApisecApiResourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of API-related risks.</para>
+            /// <para>The number of risks associated with the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AbnormalNum { get; set; }
 
             /// <summary>
+            /// <para>The number of account security events associated with the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -35,17 +37,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AccountEventNum { get; set; }
 
             /// <summary>
-            /// <para>The total number of calls to this API in the previous 30 days.</para>
+            /// <para>The total access volume in the last 30 days.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>1683388800</para>
             /// </summary>
             [NameInMap("AllCnt")]
             [Validation(Required=false)]
             public long? AllCnt { get; set; }
 
             /// <summary>
-            /// <para>The API.</para>
+            /// <para>The API operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/v1/etl/finddatabyvid</para>
@@ -58,23 +60,26 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The ID of the API.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>867ade***24ee6e205b8da82b8f84</para>
+            /// <para>197b52abcd81d6a8bd4***e477</para>
             /// </summary>
             [NameInMap("ApiId")]
             [Validation(Required=false)]
             public string ApiId { get; set; }
 
             /// <summary>
-            /// <para>The API-related information. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</para>
+            /// <para>The API information, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</para>
             /// <list type="bullet">
-            /// <item><description><b>param_num</b>: the number of API parameters</description></item>
-            /// <item><description><b>request_method</b>: the request method</description></item>
-            /// <item><description><b>protocol</b>: the request protocol</description></item>
-            /// <item><description><b>api_url</b>: the request URL</description></item>
-            /// <item><description><b>poc_payload</b>: the request</description></item>
-            /// <item><description><b>request</b>: the sample request</description></item>
-            /// <item><description><b>response</b>: the sample response</description></item>
-            /// <item><description><b>param</b>: the request parameters</description></item>
+            /// <item><description><b>param_num</b>: the number of API parameters.</description></item>
+            /// <item><description><b>request_method</b>: the request method.</description></item>
+            /// <item><description><b>protocol</b>: the request protocol.</description></item>
+            /// <item><description><b>api_url</b>: the request URL.</description></item>
+            /// <item><description><b>poc_payload</b>: the request.</description></item>
+            /// <item><description><b>request</b>: the request sample.</description></item>
+            /// <item><description><b>response</b>: the response sample.</description></item>
+            /// <item><description><b>param</b>: the request parameters.<remarks>
+            /// <para>This field is returned only when the <b>ApiId</b> parameter is specified.</para>
+            /// </remarks>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("ApiInfo")]
@@ -84,14 +89,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The request method of the API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>GET</b></description></item>
-            /// <item><description><b>POST</b></description></item>
-            /// <item><description><b>HEAD</b></description></item>
-            /// <item><description><b>PUT</b></description></item>
-            /// <item><description><b>DELETE</b></description></item>
-            /// <item><description><b>CONNECT</b></description></item>
-            /// <item><description><b>PATCH</b></description></item>
-            /// <item><description><b>OPTIONS</b></description></item>
+            /// <item><description><b>GET</b>: GET request.</description></item>
+            /// <item><description><b>POST</b>: POST request.</description></item>
+            /// <item><description><b>HEAD</b>: HEAD request.</description></item>
+            /// <item><description><b>PUT</b>: PUT request.</description></item>
+            /// <item><description><b>DELETE</b>: DELETE request.</description></item>
+            /// <item><description><b>CONNECT</b>: CONNECT request.</description></item>
+            /// <item><description><b>PATCH</b>: PATCH request.</description></item>
+            /// <item><description><b>OPTIONS</b>: OPTIONS request.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,12 +107,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiMethod { get; set; }
 
             /// <summary>
-            /// <para>The API-related sensitive information. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</para>
+            /// <para>The sensitive information involved in the API, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</para>
             /// <list type="bullet">
-            /// <item><description><b>request_sensitive_list</b>: the sensitive data type in the request</description></item>
-            /// <item><description><b>response_sensitive_list</b>: the sensitive data type in the response</description></item>
-            /// <item><description><b>sensitive_list</b>: sensitive data types</description></item>
-            /// <item><description><b>sensitive_level</b>: sensitivity level</description></item>
+            /// <item><description><b>request_sensitive_list</b>: the list of sensitive data types in the request.</description></item>
+            /// <item><description><b>response_sensitive_list</b>: the list of sensitive data types in the response.</description></item>
+            /// <item><description><b>sensitive_list</b>: the list of sensitive data types.</description></item>
+            /// <item><description><b>sensitive_level</b>: the sensitivity level.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +128,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiSensitive { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data type in the request.</para>
+            /// <para>The sensitive data in the API request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;1002&quot;,&quot;1005&quot;]</para>
@@ -133,7 +138,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiSensitiveRequest { get; set; }
 
             /// <summary>
-            /// <para>The sensitive data type in the response.</para>
+            /// <para>The sensitive data in the API response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;1002&quot;,&quot;1005&quot;]</para>
@@ -143,11 +148,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiSensitiveResponse { get; set; }
 
             /// <summary>
-            /// <para>The API status. Valid values:</para>
+            /// <para>The status of the API. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NewbornInterface</b>: The API is newly added.</description></item>
-            /// <item><description><b>OfflineInterface</b>: The API is inactive.</description></item>
-            /// <item><description><b>normal</b>: The API is normal.</description></item>
+            /// <item><description><b>NewbornInterface</b>: newly added.</description></item>
+            /// <item><description><b>OfflineInterface</b>: inactive.</description></item>
+            /// <item><description><b>normal</b>: normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,7 +165,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The business purpose of the API.</para>
             /// <remarks>
-            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</para>
+            /// <para>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -173,9 +178,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The service object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PublicAPI</b>: public services</description></item>
-            /// <item><description><b>ThirdpartAPI</b>: cooperation with third-party partners</description></item>
-            /// <item><description><b>InternalAPI</b>: internal office</description></item>
+            /// <item><description><b>PublicAPI</b>: public service.</description></item>
+            /// <item><description><b>ThirdpartAPI</b>: third-party collaboration.</description></item>
+            /// <item><description><b>InternalAPI</b>: internal office.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,10 +191,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether authentication is required. Valid values:</para>
+            /// <para>Specifies whether the API has an authentication field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Authentication is required.</description></item>
-            /// <item><description><b>1</b>: Authentication is not required.</description></item>
+            /// <item><description><b>0</b>: has authentication.</description></item>
+            /// <item><description><b>1</b>: does not have authentication.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,7 +205,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AuthFlag { get; set; }
 
             /// <summary>
-            /// <para>The number of bot-initiated requests in the previous 30 days.</para>
+            /// <para>The bot access volume in the last 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -210,7 +215,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BotCnt { get; set; }
 
             /// <summary>
-            /// <para>The number of the cross-border requests in the previous 30 days.</para>
+            /// <para>The cross-border access volume in the last 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -220,7 +225,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CrossBorderCnt { get; set; }
 
             /// <summary>
-            /// <para>The number of API-related security events.</para>
+            /// <para>The number of security events associated with the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -232,7 +237,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The sample APIs.</para>
+            /// <para>The list of API samples.</para>
             /// </summary>
             [NameInMap("Examples")]
             [Validation(Required=false)]
@@ -240,7 +245,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<string> Examples { get; set; }
 
             /// <summary>
-            /// <para>The time when the API asset was first detected. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The time when the API asset was first discovered, in UNIX timestamp (UTC) format. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683388800</para>
@@ -250,10 +255,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? FarthestTs { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to follow the API. Valid values:</para>
+            /// <para>Specifies whether the API is followed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: follows the API.</description></item>
-            /// <item><description><b>0</b>: does not follow the API.</description></item>
+            /// <item><description><b>1</b>: followed.</description></item>
+            /// <item><description><b>0</b>: not followed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -264,7 +269,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? Follow { get; set; }
 
             /// <summary>
-            /// <para>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <para>The most recent access time of the API asset, in UNIX timestamp (UTC) format. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683388800</para>
@@ -274,7 +279,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LastestTs { get; set; }
 
             /// <summary>
-            /// <para>The domain name or IP address of the API.</para>
+            /// <para>The domain name or IP address to which the API operation belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.aliyun.com</para>
@@ -287,14 +292,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Password changed</para>
+            /// <para>loginApi</para>
             /// </summary>
             [NameInMap("Note")]
             [Validation(Required=false)]
             public string Note { get; set; }
 
             /// <summary>
-            /// <para>The list of protection objects corresponding to this asset.</para>
+            /// <para>The list of protected objects corresponding to the asset.</para>
             /// </summary>
             [NameInMap("Resources")]
             [Validation(Required=false)]
