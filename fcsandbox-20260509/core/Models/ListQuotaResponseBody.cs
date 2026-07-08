@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("maxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }

@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string BuildStatus { get; set; }
 
-        [NameInMap("builds")]
-        [Validation(Required=false)]
-        public E2BTemplateBuild Builds { get; set; }
-
         [NameInMap("cpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
@@ -49,9 +45,13 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public bool? Public { get; set; }
 
+        [NameInMap("resourceGroupID")]
+        [Validation(Required=false)]
+        public string ResourceGroupID { get; set; }
+
         [NameInMap("spawnCount")]
         [Validation(Required=false)]
-        public string SpawnCount { get; set; }
+        public int? SpawnCount { get; set; }
 
         [NameInMap("statusReason")]
         [Validation(Required=false)]
@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<E2BTemplateTag> Tags { get; set; }
+
+        [NameInMap("teamID")]
+        [Validation(Required=false)]
+        public string TeamID { get; set; }
+
+        [NameInMap("teamName")]
+        [Validation(Required=false)]
+        public string TeamName { get; set; }
 
         [NameInMap("templateID")]
         [Validation(Required=false)]

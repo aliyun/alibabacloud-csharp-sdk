@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public LogConfiguration LogConfiguration { get; set; }
 
+        [NameInMap("networkConfiguration")]
+        [Validation(Required=false)]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+
     }
 
 }

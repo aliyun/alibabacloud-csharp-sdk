@@ -8,34 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
-    public class ApiKey : TeaModel {
-        [NameInMap("apiKeyID")]
+    public class E2BTeam : TeaModel {
+        [NameInMap("allowUpdateTeamName")]
         [Validation(Required=false)]
-        public string ApiKeyID { get; set; }
-
-        [NameInMap("apiKeyMask")]
-        [Validation(Required=false)]
-        public string ApiKeyMask { get; set; }
-
-        [NameInMap("apiKeyName")]
-        [Validation(Required=false)]
-        public string ApiKeyName { get; set; }
-
-        [NameInMap("apiKeyValue")]
-        [Validation(Required=false)]
-        public string ApiKeyValue { get; set; }
+        public bool? AllowUpdateTeamName { get; set; }
 
         [NameInMap("createdTime")]
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
-        [NameInMap("expireTime")]
+        [NameInMap("description")]
         [Validation(Required=false)]
-        public string ExpireTime { get; set; }
-
-        [NameInMap("lastUsedTime")]
-        [Validation(Required=false)]
-        public string LastUsedTime { get; set; }
+        public string Description { get; set; }
 
         [NameInMap("resourceGroupID")]
         [Validation(Required=false)]
@@ -56,10 +40,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("userID")]
         [Validation(Required=false)]
         public string UserID { get; set; }
-
-        [NameInMap("username")]
-        [Validation(Required=false)]
-        public string Username { get; set; }
 
     }
 

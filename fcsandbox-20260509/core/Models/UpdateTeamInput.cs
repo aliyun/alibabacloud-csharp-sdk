@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
-    public class CreateApiKeyInput : TeaModel {
-        [NameInMap("apiKeyName")]
+    public class UpdateTeamInput : TeaModel {
+        [NameInMap("description")]
         [Validation(Required=false)]
-        public string ApiKeyName { get; set; }
+        public string Description { get; set; }
 
-        [NameInMap("expireTime")]
+        [NameInMap("resourceGroupID")]
         [Validation(Required=false)]
-        public string ExpireTime { get; set; }
+        public string ResourceGroupID { get; set; }
 
-        [NameInMap("teamID")]
+        [NameInMap("teamName")]
         [Validation(Required=false)]
-        public string TeamID { get; set; }
+        public string TeamName { get; set; }
 
     }
 

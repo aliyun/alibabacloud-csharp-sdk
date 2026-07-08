@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string BuildStatus { get; set; }
 
+        [NameInMap("category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
         [NameInMap("cpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
+
+        [NameInMap("functionName")]
+        [Validation(Required=false)]
+        public string FunctionName { get; set; }
 
         [NameInMap("lastSpawnedAt")]
         [Validation(Required=false)]
@@ -45,9 +53,13 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public bool? Public { get; set; }
 
+        [NameInMap("resourceGroupID")]
+        [Validation(Required=false)]
+        public string ResourceGroupID { get; set; }
+
         [NameInMap("spawnCount")]
         [Validation(Required=false)]
-        public string SpawnCount { get; set; }
+        public int? SpawnCount { get; set; }
 
         [NameInMap("statusReason")]
         [Validation(Required=false)]
@@ -57,6 +69,14 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public List<E2BTemplateTag> Tags { get; set; }
 
+        [NameInMap("teamID")]
+        [Validation(Required=false)]
+        public string TeamID { get; set; }
+
+        [NameInMap("teamName")]
+        [Validation(Required=false)]
+        public string TeamName { get; set; }
+
         [NameInMap("templateID")]
         [Validation(Required=false)]
         public string TemplateID { get; set; }
@@ -64,6 +84,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("updatedAt")]
         [Validation(Required=false)]
         public string UpdatedAt { get; set; }
+
+        [NameInMap("userID")]
+        [Validation(Required=false)]
+        public string UserID { get; set; }
 
     }
 

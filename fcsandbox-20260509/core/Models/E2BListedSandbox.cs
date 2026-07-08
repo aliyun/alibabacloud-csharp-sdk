@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Metadata { get; set; }
 
+        [NameInMap("resourceGroupID")]
+        [Validation(Required=false)]
+        public string ResourceGroupID { get; set; }
+
         [NameInMap("sandboxID")]
         [Validation(Required=false)]
         public string SandboxID { get; set; }
@@ -53,6 +57,14 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string State { get; set; }
 
+        [NameInMap("teamID")]
+        [Validation(Required=false)]
+        public string TeamID { get; set; }
+
+        [NameInMap("teamName")]
+        [Validation(Required=false)]
+        public string TeamName { get; set; }
+
         [NameInMap("templateID")]
         [Validation(Required=false)]
         public string TemplateID { get; set; }
@@ -60,6 +72,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("templateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
+
+        [NameInMap("userID")]
+        [Validation(Required=false)]
+        public string UserID { get; set; }
 
         [NameInMap("volumeMounts")]
         [Validation(Required=false)]
