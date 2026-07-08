@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateParentPlatformRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically enable the parent platform. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default)</description></item>
+        /// <item><description>true.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +24,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? AutoStart { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable local authentication. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default)</description></item>
+        /// <item><description>false.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +38,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? ClientAuth { get; set; }
 
         /// <summary>
+        /// <para>The local password.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin123</para>
         /// </summary>
@@ -34,6 +48,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ClientPassword { get; set; }
 
         /// <summary>
+        /// <para>The local username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user01</para>
         /// </summary>
@@ -41,11 +57,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string ClientUsername { get; set; }
 
+        /// <summary>
+        /// <para>The description of the parent platform.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>级联平台测试</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The national standard ID of the parent platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +79,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GbId { get; set; }
 
         /// <summary>
+        /// <para>The SIP service IP address of the parent platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +90,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Ip { get; set; }
 
         /// <summary>
+        /// <para>The name of the parent platform.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>级联平台测试</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -77,6 +105,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The SIP service port of the parent platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,6 +116,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Port { get; set; }
 
         /// <summary>
+        /// <para>The protocol of the parent platform. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>gb28181: Chinese National Standard (GB28181).</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>gb28181</para>
         /// </summary>

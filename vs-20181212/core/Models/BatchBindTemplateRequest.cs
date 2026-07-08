@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>Apply to all streams within the scope. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? ApplyAll { get; set; }
 
         /// <summary>
+        /// <para>Instance ID. Separate multiple values with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>group (space)</para>
+        /// </description></item>
+        /// <item><description><para>stream (stream)</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +52,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Replace existing bindings. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -50,6 +62,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Replace { get; set; }
 
         /// <summary>
+        /// <para>Template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

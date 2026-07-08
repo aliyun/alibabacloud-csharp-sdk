@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteRenderingInstanceSettingsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>List of attribute names.</para>
+        /// </summary>
         [NameInMap("AttributeNames")]
         [Validation(Required=false)]
         public string AttributeNamesShrink { get; set; }
 
         /// <summary>
+        /// <para>ID of the cloud application service instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>

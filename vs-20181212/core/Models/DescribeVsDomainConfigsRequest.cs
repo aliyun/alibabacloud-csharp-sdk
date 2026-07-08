@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainConfigsRequest : TeaModel {
         /// <summary>
+        /// <para>Your accelerated domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>List of feature names.</para>
+        /// <remarks>
+        /// <para>Supports multiple values separated by commas (,).</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

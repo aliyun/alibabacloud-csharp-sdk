@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeAccountStatResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of device spaces.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? GroupLimit { get; set; }
 
         /// <summary>
+        /// <para>Number of device groups in the current region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -26,16 +30,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? GroupNum { get; set; }
 
         /// <summary>
-        /// <para>ID</para>
+        /// <para>Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3238848****092996</para>
+        /// <para>1165*****601</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of templates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? TemplateLimit { get; set; }
 
         /// <summary>
+        /// <para>Current number of templates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

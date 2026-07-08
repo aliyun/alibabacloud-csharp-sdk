@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainReqTrafficDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>Time granularity of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataInterval { get; set; }
 
         /// <summary>
+        /// <para>Domain name of the Visual Edge Computing Service</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>End time of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-09-22T03:40:41Z</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Start time of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-09-21T16:00:00Z</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindParentPlatformDevicesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<BatchBindParentPlatformDevicesResponseBodyResults> Results { get; set; }
         public class BatchBindParentPlatformDevicesResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The device ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>348*****380-cn-qingdao</para>
             /// </summary>
@@ -30,6 +37,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only when an error occurs.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>some error</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Error { get; set; }
 
             /// <summary>
+            /// <para>The ID of the parent platform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>361*****212-cn-qingdao</para>
             /// </summary>

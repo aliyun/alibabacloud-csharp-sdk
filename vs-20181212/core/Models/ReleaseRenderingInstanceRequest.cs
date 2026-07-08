@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ReleaseRenderingInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>Graphic Computing Service application instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

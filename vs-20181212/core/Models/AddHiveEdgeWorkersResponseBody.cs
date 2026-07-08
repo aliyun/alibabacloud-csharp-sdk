@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class AddHiveEdgeWorkersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of instances that failed to be added.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? FailedInstanceCount { get; set; }
 
+        /// <summary>
+        /// <para>A list of instances that failed to be added.</para>
+        /// </summary>
         [NameInMap("FailedInstances")]
         [Validation(Required=false)]
         public List<AddHiveEdgeWorkersResponseBodyFailedInstances> FailedInstances { get; set; }
         public class AddHiveEdgeWorkersResponseBodyFailedInstances : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ew-1226d588c69449209ee963161c067b04</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Error 1062 (23000): Duplicate entry \&quot;hive-4fbf3928d40e43948b98acdb4fb5aaed-ew-1226d588c69449209ee9631\&quot; for key \&quot;PRIMARY\&quot;</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxx</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of instances that were successfully added.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -55,11 +68,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? SuccessInstanceCount { get; set; }
 
+        /// <summary>
+        /// <para>A list of successfully added instances.</para>
+        /// </summary>
         [NameInMap("SuccessInstances")]
         [Validation(Required=false)]
         public List<AddHiveEdgeWorkersResponseBodySuccessInstances> SuccessInstances { get; set; }
         public class AddHiveEdgeWorkersResponseBodySuccessInstances : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ew-1226d588c69449209ee963161c067b04</para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>A message indicating the result of the operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>

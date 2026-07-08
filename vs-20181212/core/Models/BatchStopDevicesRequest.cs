@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchStopDevicesRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID. Separate multiple values with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Stream restart trigger time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-14T23:00:00Z</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyProductionDownloadUrlResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
+        /// <para>The download link for the production. Use an Alibaba Cloud Object Storage Service (OSS) SDK to download the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxx.xxx.xxx">https://xxx.xxx.xxx</a></para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
+        /// <para>The download link\&quot;s expiration time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2029-03-28T16:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceChannelsRequest : TeaModel {
         /// <summary>
+        /// <para>Query by device ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The default value is 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

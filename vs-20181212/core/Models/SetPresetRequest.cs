@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class SetPresetRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Preset ID.<br>
+        /// Valid values: 1 to 7.<br></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

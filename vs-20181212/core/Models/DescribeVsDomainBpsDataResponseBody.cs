@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>The time interval for each record. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2100</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataInterval { get; set; }
 
         /// <summary>
+        /// <para>Domain name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
         /// </summary>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>End time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-01T07:10:48Z</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Request ID for this operation</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Start time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-09-18T16:00:00Z</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeParentPlatformDevicesRequest : TeaModel {
         /// <summary>
+        /// <para>Query by parent platform ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The page size. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Sort by the specified field. Sorted by id by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>id</para>
         /// </summary>
@@ -48,6 +55,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>Sort order. Ascending by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>asc (ascending)</description></item>
+        /// <item><description>desc (descending)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>

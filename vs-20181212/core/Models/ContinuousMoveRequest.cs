@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ContinuousMoveRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Pan speed. A positive value moves the camera left.<br>
+        /// Valid values: -1.0 to 1.0<br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
         /// </summary>
@@ -32,6 +36,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Pan { get; set; }
 
         /// <summary>
+        /// <para>Tilt speed. A positive value moves the camera up.<br>
+        /// Valid values: -1.0 to 1.0<br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
         /// </summary>
@@ -40,6 +47,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Tilt { get; set; }
 
         /// <summary>
+        /// <para>Zoom speed. A positive value zooms in.<br>
+        /// Valid values: -1.0 to 1.0<br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
         /// </summary>

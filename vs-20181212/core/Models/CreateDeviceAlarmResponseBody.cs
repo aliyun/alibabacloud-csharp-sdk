@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateDeviceAlarmResponseBody : TeaModel {
         /// <summary>
+        /// <para>下次相同告警的最小间隔。（单位：秒）</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? AlarmDelay { get; set; }
 
         /// <summary>
+        /// <para>告警ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0hyNgTdgv2D000195842</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AlarmId { get; set; }
 
         /// <summary>
+        /// <para>URL的过期时长。（单位：秒）</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>请求ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>76E11E6A-4441-51C9-AF60-D354362257A7</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>媒体上传的URL，可使用PUT上传。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rtmp://demo.aliyundoc.com/live/310101<em><b><b>7542007?auth_key=1639130258-0-0-b2b04fe85ece6</b></b></em>a6b1a42bc7e</para>
         /// </summary>

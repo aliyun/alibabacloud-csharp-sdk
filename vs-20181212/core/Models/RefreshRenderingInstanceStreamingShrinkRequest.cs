@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RefreshRenderingInstanceStreamingShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Client information.</para>
+        /// </summary>
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public string ClientInfoShrink { get; set; }
 
         /// <summary>
+        /// <para>Cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

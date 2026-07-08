@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListCloudAppPatchesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The list of cloud application patches.</para>
+        /// </summary>
         [NameInMap("Patches")]
         [Validation(Required=false)]
         public List<ListCloudAppPatchesResponseBodyPatches> Patches { get; set; }
         public class ListCloudAppPatchesResponseBodyPatches : TeaModel {
             /// <summary>
+            /// <para>The ID of the patch package.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>patch-03fa76e8e13a49b6a966b063d9d309b4</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PatchId { get; set; }
 
             /// <summary>
+            /// <para>The name of the patch package.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>patch-1</para>
             /// </summary>
@@ -46,6 +57,22 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PatchName { get; set; }
 
             /// <summary>
+            /// <para>The upload status of the application. Valid values:</para>
+            /// <ol>
+            /// <item><description><para>Created</para>
+            /// </description></item>
+            /// <item><description><para>Doing</para>
+            /// </description></item>
+            /// <item><description><para>Success: A final state.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: A final state.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting</para>
+            /// </description></item>
+            /// <item><description><para>DeleteFailed: A final state.</para>
+            /// </description></item>
+            /// </ol>
+            /// 
             /// <b>Example:</b>
             /// <para>Doing</para>
             /// </summary>
@@ -54,6 +81,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The description of the status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Uploading</para>
             /// </summary>
@@ -62,6 +91,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string StatusDescription { get; set; }
 
             /// <summary>
+            /// <para>The time when the status was last updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-09-23T02:12:28</para>
             /// </summary>
@@ -70,6 +101,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the patch was uploaded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-07-24T14:45:36+08:00</para>
             /// </summary>
@@ -90,6 +123,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

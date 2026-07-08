@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateStreamSnapshotRequest : TeaModel {
         /// <summary>
+        /// <para>Stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Screenshot method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>center (cloud screenshot) (default)</para>
+        /// </description></item>
+        /// <item><description><para>device (device screenshot)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>device</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainPvDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>This static field defines the time interval for each record, with a value of either 1 hour or 1 day.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataInterval { get; set; }
 
         /// <summary>
+        /// <para>The domain name for Visual Edge Computing Service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-11-12T15:59:59Z</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-11-22T00:00:00Z</para>
         /// </summary>

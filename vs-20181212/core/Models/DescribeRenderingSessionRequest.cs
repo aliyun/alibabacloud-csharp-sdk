@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingSessionRequest : TeaModel {
         /// <summary>
+        /// <para>Unique ID of the end client. Specify either SessionId or ClientId.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d27c89d6-4fe3-4855-a89c-ea721c708b0b</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>Project ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>Session ID. Specify either SessionId or ClientId.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>session-i205217481741918129226</para>
         /// </summary>

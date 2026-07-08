@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsStreamsNotifyUrlConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Your accelerated domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

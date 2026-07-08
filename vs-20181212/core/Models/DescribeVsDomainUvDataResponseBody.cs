@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainUvDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time interval between data records. Unit: seconds. This is a static field with a value of 3600, which indicates 1 hour.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataInterval { get; set; }
 
         /// <summary>
+        /// <para>The domain name of Visual Edge Computing Service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2015-11-30T00:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2015-11-29T00:00:00Z</para>
         /// </summary>

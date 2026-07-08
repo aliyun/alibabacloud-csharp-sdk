@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceGatewayRequest : TeaModel {
         /// <summary>
+        /// <para>Client IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ClientIp { get; set; }
 
         /// <summary>
+        /// <para>Time-to-live (TTL).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

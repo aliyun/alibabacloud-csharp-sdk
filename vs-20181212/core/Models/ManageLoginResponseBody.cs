@@ -9,15 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ManageLoginResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Connection information.</para>
+        /// </summary>
         [NameInMap("LoginInfo")]
         [Validation(Required=false)]
         public ManageLoginResponseBodyLoginInfo LoginInfo { get; set; }
         public class ManageLoginResponseBodyLoginInfo : TeaModel {
+            /// <summary>
+            /// <para>Port for ADB connections.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10005</para>
+            /// </summary>
             [NameInMap("AdbLoginPort")]
             [Validation(Required=false)]
             public int? AdbLoginPort { get; set; }
 
             /// <summary>
+            /// <para>Host for SSH connections.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12.10.4.10</para>
             /// </summary>
@@ -26,6 +37,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string LoginHostname { get; set; }
 
             /// <summary>
+            /// <para>Port for SSH connections.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10004</para>
             /// </summary>
@@ -36,6 +49,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>

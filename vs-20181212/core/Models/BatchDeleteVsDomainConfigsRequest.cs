@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchDeleteVsDomainConfigsRequest : TeaModel {
         /// <summary>
+        /// <para>The accelerated domain names. Separate multiple domain names with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainNames { get; set; }
 
         /// <summary>
+        /// <para>The feature names. Separate multiple features with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

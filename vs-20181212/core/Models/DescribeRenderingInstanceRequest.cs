@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the rendering instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

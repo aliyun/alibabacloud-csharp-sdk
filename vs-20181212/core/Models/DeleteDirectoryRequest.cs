@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteDirectoryRequest : TeaModel {
         /// <summary>
+        /// <para>The folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsUpPeakPublishStreamDataRequest : TeaModel {
         /// <summary>
+        /// <para>Domain name to query. Returns data at the domain granularity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>Enables or disables domain-level statistics. Valid values: on or off. When set to on, the response shows domain-level data. When set to off or omitted, the response shows user-level data. Default is user-level data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainSwitch { get; set; }
 
         /// <summary>
+        /// <para>End time of stream ingest, in UTC format. The time range between StartTime and EndTime must be within 30 days. EndTime must be later than the current time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +45,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Start time of stream ingest, in UTC format. The time range between StartTime and EndTime must be within 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

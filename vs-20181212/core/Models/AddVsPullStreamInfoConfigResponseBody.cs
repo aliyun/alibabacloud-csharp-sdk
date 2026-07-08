@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class AddVsPullStreamInfoConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3CB843A9-DD34-4881-B8D6-B0D539D111E4</para>
         /// </summary>

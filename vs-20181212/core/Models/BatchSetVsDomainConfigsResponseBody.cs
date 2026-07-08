@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchSetVsDomainConfigsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</para>
         /// </summary>

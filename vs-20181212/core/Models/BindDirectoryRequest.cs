@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BindDirectoryRequest : TeaModel {
         /// <summary>
+        /// <para>The device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>The folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

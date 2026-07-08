@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDirectoryRequest : TeaModel {
         /// <summary>
+        /// <para>The directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

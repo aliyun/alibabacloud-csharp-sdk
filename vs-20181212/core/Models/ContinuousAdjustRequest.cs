@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ContinuousAdjustRequest : TeaModel {
         /// <summary>
+        /// <para>Zoom speed parameter. A positive value increases the focal length.<br>Value range: -1.0 to 1.0<br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Focus { get; set; }
 
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Aperture speed parameter. A positive value increases the aperture.<br>Value range: -1.0 to 1.0<br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.5</para>
         /// </summary>

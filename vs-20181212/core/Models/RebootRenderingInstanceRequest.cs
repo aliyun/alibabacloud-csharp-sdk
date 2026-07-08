@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RebootRenderingInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the cloud application service instance</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateStreamSnapshotResponseBody : TeaModel {
         /// <summary>
+        /// <para>Image format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>jpg</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Format { get; set; }
 
         /// <summary>
+        /// <para>Image height.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>720</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Height { get; set; }
 
         /// <summary>
+        /// <para>Stream ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>323*****997-cn-qingdao</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The OSS bucket of the snapshot file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>examplebucket</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string OssBucket { get; set; }
 
         /// <summary>
+        /// <para>The OSS endpoint of the snapshot file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss-cn-qingdao.aliyuncs.com</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string OssEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The OSS object of the snapshot file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>photos/live/340200*****100049/ondemand-1639126601767.jpg</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string OssObject { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The snapshot timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1639126601767</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Timestamp { get; set; }
 
         /// <summary>
+        /// <para>The URL of the snapshot file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg">http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg</a></para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Url { get; set; }
 
         /// <summary>
+        /// <para>Image width.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1280</para>
         /// </summary>

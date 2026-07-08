@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopMoveRequest : TeaModel {
         /// <summary>
+        /// <para>The device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to stop panning. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Pan { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to stop tilting. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Tilt { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to stop zooming. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

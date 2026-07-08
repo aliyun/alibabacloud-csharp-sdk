@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeletePresetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The device ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>348*****380-cn-qingdao</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F18FD685-B194-4489-9609-F80A9490A258</para>
         /// </summary>

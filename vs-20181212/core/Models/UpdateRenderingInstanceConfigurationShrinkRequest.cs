@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateRenderingInstanceConfigurationShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration content.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Configuration")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ConfigurationShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cloud application service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,15 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteRenderingInstanceConfigurationRequest : TeaModel {
+        /// <summary>
+        /// <para>Configuration content. Purge all configured modules by default.</para>
+        /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public List<DeleteRenderingInstanceConfigurationRequestConfiguration> Configuration { get; set; }
         public class DeleteRenderingInstanceConfigurationRequestConfiguration : TeaModel {
+            /// <summary>
+            /// <para>List attribute names to purge. Purge all configured attributes for this module by default.</para>
+            /// </summary>
             [NameInMap("AttributeNames")]
             [Validation(Required=false)]
             public List<string> AttributeNames { get; set; }
 
             /// <summary>
+            /// <para>Module name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

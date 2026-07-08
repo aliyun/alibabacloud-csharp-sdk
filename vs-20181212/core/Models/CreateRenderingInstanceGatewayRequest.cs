@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingInstanceGatewayRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GatewayInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cloud application service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

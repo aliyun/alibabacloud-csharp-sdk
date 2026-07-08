@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteRenderingInstanceConfigurationShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Configuration content. Purge all configured modules by default.</para>
+        /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public string ConfigurationShrink { get; set; }
 
         /// <summary>
+        /// <para>Cloud application service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

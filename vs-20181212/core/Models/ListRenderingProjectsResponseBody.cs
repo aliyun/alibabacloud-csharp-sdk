@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ListRenderingProjectsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Project list</para>
+        /// </summary>
         [NameInMap("Projects")]
         [Validation(Required=false)]
         public List<ListRenderingProjectsResponseBodyProjects> Projects { get; set; }
         public class ListRenderingProjectsResponseBodyProjects : TeaModel {
             /// <summary>
+            /// <para>Project creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-09-09T18:44:49+08:00</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
+            /// <para>Project description</para>
+            /// 
             /// <b>Example:</b>
             /// <para>description</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Project ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>project-422bc38dfgh5eb44149f135ef76304f63b</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ProjectId { get; set; }
 
             /// <summary>
+            /// <para>Project name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>prod-project</para>
             /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
+            /// <summary>
+            /// <para>Project session attributes</para>
+            /// </summary>
             [NameInMap("SessionAttribs")]
             [Validation(Required=false)]
             public ListRenderingProjectsResponseBodyProjectsSessionAttribs SessionAttribs { get; set; }
             public class ListRenderingProjectsResponseBodyProjectsSessionAttribs : TeaModel {
                 /// <summary>
+                /// <para>Startup mode</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Sync</para>
                 /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
+            /// <para>Last update time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-09T18:44:49+08:00</para>
             /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of matching projects</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

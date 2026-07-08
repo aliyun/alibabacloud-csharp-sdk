@@ -17,11 +17,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string ActionName { get; set; }
 
+        /// <summary>
+        /// <para>Data baseline ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dp-449ea3d16c0841b8bf33ec5bbc86a152</para>
+        /// </summary>
         [NameInMap("DataPackageId")]
         [Validation(Required=false)]
         public string DataPackageId { get; set; }
 
         /// <summary>
+        /// <para>Service instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

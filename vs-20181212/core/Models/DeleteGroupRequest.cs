@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Space ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

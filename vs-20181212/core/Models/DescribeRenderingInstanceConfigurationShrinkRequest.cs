@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceConfigurationShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The configuration to query. By default, the configurations of all modules are returned.</para>
+        /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public string ConfigurationShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cloud application service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>National standard ID associated with the workspace. (Applies only to workspaces using national standard ingest.)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31000000****00000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GbId { get; set; }
 
         /// <summary>
+        /// <para>IP address of the national standard signaling gateway server associated with the workspace. (Applies only to workspaces using national standard ingest.)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.10.10.10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GbIp { get; set; }
 
         /// <summary>
+        /// <para>National standard signaling server port provided by the workspace. (Applies only to workspaces using national standard ingest.)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5060</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? GbPort { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>33763****77224964-cn-qingdao</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>

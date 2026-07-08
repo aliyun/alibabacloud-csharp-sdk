@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class GetRenderingInstanceStreamingInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Cloud application service instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

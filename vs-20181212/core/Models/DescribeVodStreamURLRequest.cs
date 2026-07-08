@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The file URL of the VOD video.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

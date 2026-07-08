@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsTopDomainsByFlowResponseBody : TeaModel {
         /// <summary>
+        /// <para>The total number of domain names under your account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? DomainCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of <b>running</b> domain names under your account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? DomainOnlineCount { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-12-10T18:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T10:00:00Z</para>
         /// </summary>

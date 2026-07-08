@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class RebootRenderingServerShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>List of cloud application service instance IDs</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RenderingInstanceIds")]

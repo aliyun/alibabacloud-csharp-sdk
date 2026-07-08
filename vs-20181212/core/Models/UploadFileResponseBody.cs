@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UploadFileResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the file. This ID is unique for each file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f-1671330gr7934d4771813f7141d28db2f7</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>

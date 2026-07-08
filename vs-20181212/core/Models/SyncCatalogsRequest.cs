@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class SyncCatalogsRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3238****739092996</para>
+        /// <para>3238****739092996-cn-shenzhen</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

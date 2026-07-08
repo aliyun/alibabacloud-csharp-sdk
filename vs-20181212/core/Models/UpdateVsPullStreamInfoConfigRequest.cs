@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Always { get; set; }
 
         /// <summary>
+        /// <para>The name of the application to which the live stream belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Your stream pulling domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The end time of stream pulling.</para>
+        /// <remarks>
+        /// <para>UTC time format. The interval between StartTime and EndTime must be within 7 days, and EndTime must be later than the current time.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-12-10T18:00:00Z</para>
         /// </summary>
@@ -46,6 +53,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The origin server of your live stream.</para>
+        /// <remarks>
+        /// <para>Supports multiple values, separated by English semicolons (;).</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +67,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SourceUrl { get; set; }
 
         /// <summary>
+        /// <para>The start time of stream pulling.</para>
+        /// <remarks>
+        /// <para>UTC time format. The interval between StartTime and EndTime must be within 7 days.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T10:00:00Z</para>
         /// </summary>
@@ -64,6 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

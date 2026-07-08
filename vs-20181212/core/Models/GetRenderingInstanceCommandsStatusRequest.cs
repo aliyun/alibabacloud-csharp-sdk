@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class GetRenderingInstanceCommandsStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Unique ID of the command delivery request</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string CmdId { get; set; }
 
         /// <summary>
+        /// <para>Cloud application service instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

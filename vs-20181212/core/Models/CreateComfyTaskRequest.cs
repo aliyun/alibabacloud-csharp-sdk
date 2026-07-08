@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateComfyTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the resource pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string HiveId { get; set; }
 
         /// <summary>
+        /// <para>The parameters to replace in the workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string UserParameters { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Comfy workflow to start.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

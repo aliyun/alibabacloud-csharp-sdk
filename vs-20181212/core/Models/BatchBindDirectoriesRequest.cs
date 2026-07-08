@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindDirectoriesRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID. Separate multiple values with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

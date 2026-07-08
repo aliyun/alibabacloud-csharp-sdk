@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartTransferStreamRequest : TeaModel {
         /// <summary>
+        /// <para>Stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the transcoding rule (a transcoding template must be bound first).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sd</para>
         /// </summary>
@@ -32,6 +35,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Transcode { get; set; }
 
         /// <summary>
+        /// <para>The destination address for stream forwarding.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsCertificateListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Certificate ID.</para>
+        /// </summary>
         [NameInMap("CertificateListModel")]
         [Validation(Required=false)]
         public DescribeVsCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeVsCertificateListResponseBodyCertificateListModel : TeaModel {
+            /// <summary>
+            /// <para>List of certificates.</para>
+            /// </summary>
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public List<DescribeVsCertificateListResponseBodyCertificateListModelCertList> CertList { get; set; }
             public class DescribeVsCertificateListResponseBodyCertificateListModelCertList : TeaModel {
                 /// <summary>
+                /// <para>ID of the certificate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>6338888</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public long? CertId { get; set; }
 
                 /// <summary>
+                /// <para>Name of the certificate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cert-5391062</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string CertName { get; set; }
 
                 /// <summary>
+                /// <para>Common Name (CN) field in the certificate. Usually a domain name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>example.aliyundoc.com</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Common { get; set; }
 
                 /// <summary>
+                /// <para>Fingerprint of the certificate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3EB2585309AE5C8F369****7CDA6A8F5CEC8B2D4</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Fingerprint { get; set; }
 
                 /// <summary>
+                /// <para>Issuer of the certificate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxxxCert Inc</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
+                /// <para>Timestamp.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1632462708</para>
                 /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
+            /// <para>Number of certificates.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6E310519-E035-51AB-80D4-C1CBECD39EB5</para>
         /// </summary>

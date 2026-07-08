@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateDeviceAlarmRequest : TeaModel {
         /// <summary>
+        /// <para>The Alarm Metric. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: other</description></item>
+        /// <item><description>1: motion detection alerting</description></item>
+        /// <item><description>2: intelligent alerting</description></item>
+        /// <item><description>3: switch alerting</description></item>
+        /// <item><description>4: video loss alerting.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +28,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? Alarm { get; set; }
 
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +39,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The end time. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the media upload URL. Unit: seconds. Default value: 60.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -48,6 +60,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>The device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +71,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The media object type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: none</description></item>
+        /// <item><description>1: JPEG image</description></item>
+        /// <item><description>2: video</description></item>
+        /// <item><description>3: GIF image.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +92,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The start time. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +103,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The alert subtype.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SubAlarm")]

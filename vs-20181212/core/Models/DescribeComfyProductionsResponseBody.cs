@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyProductionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>A list of productions.</para>
+        /// </summary>
         [NameInMap("Productions")]
         [Validation(Required=false)]
         public List<DescribeComfyProductionsResponseBodyProductions> Productions { get; set; }
         public class DescribeComfyProductionsResponseBodyProductions : TeaModel {
             /// <summary>
+            /// <para>The ID of the Comfy task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6c8234f4-d1e1-4cea-b08b-7926fbdea144</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ComfyTaskId { get; set; }
 
             /// <summary>
+            /// <para>The creation time of the production, in ISO 8601 format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-02-06T20:20:26+08:00</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreationTime { get; set; }
 
             /// <summary>
+            /// <para>The file name of the production.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1755051607877.mp4</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the production.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3e5bda20-5cd4-4d55-8d23-88d624a18caa</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string ProductionId { get; set; }
 
             /// <summary>
+            /// <para>The state of the production.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string State { get; set; }
 
             /// <summary>
+            /// <para>The last modification time of the production, as a Unix timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1773707865</para>
             /// </summary>
@@ -96,7 +119,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
@@ -106,6 +129,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count of productions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyRenderingInstanceAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>Password for the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>ID of the cloud application service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

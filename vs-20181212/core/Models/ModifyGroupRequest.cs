@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Callback URL for device or stream status updates in the group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.com/callback">http://example.com/callback</a></para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Callback { get; set; }
 
+        /// <summary>
+        /// <para>Description of the space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>用于测试使用</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the space is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -30,6 +40,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The ID of the space.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +51,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Ingest protocol used by the group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>gb28181</para>
+        /// </description></item>
+        /// <item><description><para>rtmp</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>gb28181</para>
         /// </summary>
@@ -48,6 +67,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InProtocol { get; set; }
 
         /// <summary>
+        /// <para>Whether on-demand stream pulling is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -56,6 +83,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? LazyPull { get; set; }
 
         /// <summary>
+        /// <para>Space name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myGroup</para>
         /// </summary>
@@ -64,6 +93,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Playback protocols used by the group. Separate multiple values with commas. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>flv</para>
+        /// </description></item>
+        /// <item><description><para>hls</para>
+        /// </description></item>
+        /// <item><description><para>rtmp</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>flv,rtmp,hls</para>
         /// </summary>
@@ -76,6 +115,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Streaming domain used by the group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myplay.com</para>
         /// </summary>
@@ -84,6 +125,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PlayDomain { get; set; }
 
         /// <summary>
+        /// <para>Ingest domain used by the group. Applies only to groups that use the RTMP ingest protocol.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mypush.com</para>
         /// </summary>
@@ -92,6 +135,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PushDomain { get; set; }
 
         /// <summary>
+        /// <para>The region where the space is located. This region serves as the service center.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>
         /// </summary>

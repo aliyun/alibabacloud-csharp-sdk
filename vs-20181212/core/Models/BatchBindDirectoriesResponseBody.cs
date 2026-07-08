@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindDirectoriesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Results list.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<BatchBindDirectoriesResponseBodyResults> Results { get; set; }
         public class BatchBindDirectoriesResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>Device ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>348*****380-cn-qingdao</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>Directory ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>399*****488-cn-qingdao</para>
             /// </summary>
@@ -38,6 +47,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
+            /// <para>Error message for the binding.</para>
+            /// <remarks>
+            /// <para>Appears only if an error occurs.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>An error occurred while processing your request.</para>
             /// </summary>

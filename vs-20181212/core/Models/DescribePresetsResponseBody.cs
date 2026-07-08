@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribePresetsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Device ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>348*****380-cn-qingdao</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// <para>List of presets.</para>
+        /// </summary>
         [NameInMap("Presets")]
         [Validation(Required=false)]
         public List<DescribePresetsResponseBodyPresets> Presets { get; set; }
         public class DescribePresetsResponseBodyPresets : TeaModel {
             /// <summary>
+            /// <para>Preset ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -29,6 +36,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>Preset name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>预置位2</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -36,6 +49,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9FE0CA83-BFD3-4EBD-A429-FABB9B9AE772</para>
         /// </summary>

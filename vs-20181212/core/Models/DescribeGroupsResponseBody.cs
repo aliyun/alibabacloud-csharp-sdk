@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of groups.</para>
+        /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<DescribeGroupsResponseBodyGroups> Groups { get; set; }
         public class DescribeGroupsResponseBodyGroups : TeaModel {
             /// <summary>
+            /// <para>Alias for the group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>337639*****24964-cn-qingdao</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string AliasId { get; set; }
 
             /// <summary>
+            /// <para>Application name used by the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>live</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string App { get; set; }
 
             /// <summary>
+            /// <para>Callback URL for device status updates in the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://example.com/callback">http://example.com/callback</a></para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Callback { get; set; }
 
             /// <summary>
+            /// <para>Time when the group was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2019-02-28T17:00:17Z</para>
             /// </summary>
@@ -45,11 +56,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
+            /// <summary>
+            /// <para>Group description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试视图计算</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Whether the group is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -58,6 +77,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
+            /// <para>GB ID provided by the group.</para>
+            /// <remarks>
+            /// <para>This applies only to groups that use the GB protocol.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>31000000000000000001</para>
             /// </summary>
@@ -66,6 +90,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GbId { get; set; }
 
             /// <summary>
+            /// <para>GB signaling server IP address provided by the group.</para>
+            /// <remarks>
+            /// <para>This applies only to groups that use the GB protocol.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>10.10.10.10</para>
             /// </summary>
@@ -74,6 +103,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GbIp { get; set; }
 
             /// <summary>
+            /// <para>GB signaling server port associated with the group.</para>
+            /// <remarks>
+            /// <para>This applies only to groups that use the GB protocol.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>5060</para>
             /// </summary>
@@ -90,6 +124,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public List<string> GbUdpPorts { get; set; }
 
             /// <summary>
+            /// <para>Group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>33763950877224964-cn-qingdao</para>
             /// </summary>
@@ -98,6 +134,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Ingest protocol used by the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gb28181</para>
             /// </summary>
@@ -106,6 +144,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InProtocol { get; set; }
 
             /// <summary>
+            /// <para>Whether on-demand stream pulling is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -113,11 +153,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public bool? LazyPull { get; set; }
 
+            /// <summary>
+            /// <para>Group name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>我的空间</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Playback protocol used by the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rtmp,flv,hls</para>
             /// </summary>
@@ -126,6 +174,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string OutProtocol { get; set; }
 
             /// <summary>
+            /// <para>Streaming domain used by the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>demo.aliyundoc.com</para>
             /// </summary>
@@ -134,6 +184,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PlayDomain { get; set; }
 
             /// <summary>
+            /// <para>Ingest domain used by the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.aliyundoc.com</para>
             /// </summary>
@@ -142,6 +194,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PushDomain { get; set; }
 
             /// <summary>
+            /// <para>The region where the space is located. This region serves as the service center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao</para>
             /// </summary>
@@ -149,11 +203,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            /// <summary>
+            /// <para>Device statistics for the group.</para>
+            /// </summary>
             [NameInMap("Stats")]
             [Validation(Required=false)]
             public DescribeGroupsResponseBodyGroupsStats Stats { get; set; }
             public class DescribeGroupsResponseBodyGroupsStats : TeaModel {
                 /// <summary>
+                /// <para>Total number of devices in the group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -162,6 +221,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public long? DeviceNum { get; set; }
 
                 /// <summary>
+                /// <para>Number of intelligent devices in the group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -170,6 +231,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public long? IedNum { get; set; }
 
                 /// <summary>
+                /// <para>Number of cameras in the group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -178,6 +241,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public long? IpcNum { get; set; }
 
                 /// <summary>
+                /// <para>Number of platforms in the group.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -188,6 +253,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             }
 
             /// <summary>
+            /// <para>Group status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>on (enabled)</para>
+            /// </description></item>
+            /// <item><description><para>off (disabled)</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -198,6 +271,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -206,6 +281,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageCount { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -214,6 +291,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -222,6 +301,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -230,6 +311,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>

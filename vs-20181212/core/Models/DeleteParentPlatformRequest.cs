@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteParentPlatformRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the parent platform.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

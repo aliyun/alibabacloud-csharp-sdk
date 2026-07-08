@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class PushFileRequest : TeaModel {
         /// <summary>
+        /// <para>File ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>Cloud application service instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchStopStreamsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<BatchStopStreamsResponseBodyResults> Results { get; set; }
         public class BatchStopStreamsResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The error message for the stream.</para>
+            /// <remarks>
+            /// <para>This parameter is returned only if an error occurs on the stream.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>stream not found</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Error { get; set; }
 
             /// <summary>
+            /// <para>The stream ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>323*****997-cn-qingdao</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The stream name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3100000*****00000002</para>
             /// </summary>

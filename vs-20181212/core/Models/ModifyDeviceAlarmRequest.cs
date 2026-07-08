@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDeviceAlarmRequest : TeaModel {
         /// <summary>
+        /// <para>The alarm ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AlarmId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +47,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The alarm status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1 (upload completed)</description></item>
+        /// <item><description>2 (upload failed)</description></item>
+        /// <item><description>3 (general error)</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

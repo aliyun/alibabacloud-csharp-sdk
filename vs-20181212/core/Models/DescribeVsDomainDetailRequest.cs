@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainDetailRequest : TeaModel {
         /// <summary>
+        /// <para>Domain name for the Visual Edge Computing Service</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

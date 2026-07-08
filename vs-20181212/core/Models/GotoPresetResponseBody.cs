@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class GotoPresetResponseBody : TeaModel {
         /// <summary>
+        /// <para>Device ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>348*****380-cn-qingdao</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30295DF1-1DC7-48BA-BE5A-D58E61EB2375</para>
         /// </summary>

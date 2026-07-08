@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of tasks per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The task state. If specified, the operation returns only tasks in that state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>QUEUED</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string TaskState { get; set; }
 
         /// <summary>
+        /// <para>If you specify this parameter, the operation returns only tasks for the specified workflow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</para>
         /// </summary>

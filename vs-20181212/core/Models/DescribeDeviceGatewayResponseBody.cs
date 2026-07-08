@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDeviceGatewayResponseBody : TeaModel {
         /// <summary>
+        /// <para>Alibaba Cloud service endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Host { get; set; }
 
         /// <summary>
+        /// <para>Port number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8080</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Port { get; set; }
 
         /// <summary>
+        /// <para>Device registration protocol.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gb28181</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Protocol { get; set; }
 
         /// <summary>
+        /// <para>Request ID for this task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Token code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f5578fbc-694c-461d-a2a2-eb090775cef0</para>
         /// </summary>

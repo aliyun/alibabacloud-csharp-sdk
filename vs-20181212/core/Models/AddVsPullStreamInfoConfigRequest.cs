@@ -14,6 +14,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Always { get; set; }
 
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The accelerated domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The end time for stream pulling.</para>
+        /// <remarks>
+        /// <para>The time must be in UTC format. The interval between StartTime and EndTime cannot exceed 7 days. EndTime must be later than the current time.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2017-08-28T09:30:30Z</para>
         /// </summary>
@@ -46,6 +53,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The source URL of the live stream.</para>
+        /// <remarks>
+        /// <para>Multiple source URLs are supported. Separate them with semicolons (;).</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +67,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SourceUrl { get; set; }
 
         /// <summary>
+        /// <para>The start time for stream pulling.</para>
+        /// <remarks>
+        /// <para>The time must be in UTC format. The interval between StartTime and EndTime cannot exceed 7 days.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2017-08-28T07:30:30Z</para>
         /// </summary>
@@ -64,6 +80,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The stream name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

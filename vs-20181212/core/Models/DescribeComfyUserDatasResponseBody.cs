@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeComfyUserDatasResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Code { get; set; }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number of the returned list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The default value is 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +74,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public List<DescribeComfyUserDatasResponseBodyUserDatas> UserDatas { get; set; }
         public class DescribeComfyUserDatasResponseBodyUserDatas : TeaModel {
             /// <summary>
+            /// <para>The name of the file or folder.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>myfile</para>
             /// </summary>
@@ -72,6 +84,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>The file size in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1024</para>
             /// </summary>
@@ -80,6 +94,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public long? FileSize { get; set; }
 
             /// <summary>
+            /// <para>The entry type. Valid values are \<c>file\\</c> and \<c>dir\\</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>file</para>
             /// </summary>
@@ -88,6 +104,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The time the file was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1776646928000</para>
             /// </summary>

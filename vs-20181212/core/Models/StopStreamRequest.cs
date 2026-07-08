@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopStreamRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The name of the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31000000*****0000002</para>
         /// </summary>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The time to restart the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-12T10:00:00Z</para>
         /// </summary>

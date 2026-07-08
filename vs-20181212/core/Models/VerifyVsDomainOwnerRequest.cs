@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class VerifyVsDomainOwnerRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name of Visual Edge Computing Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The verification method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>dnsCheck</b>: DNS verification.</description></item>
+        /// <item><description><b>fileCheck</b>: File verification.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

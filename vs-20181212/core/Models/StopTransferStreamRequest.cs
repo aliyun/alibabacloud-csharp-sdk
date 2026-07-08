@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopTransferStreamRequest : TeaModel {
         /// <summary>
+        /// <para>The stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the transcoding rule. You must bind a transcoding template first.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sd</para>
         /// </summary>

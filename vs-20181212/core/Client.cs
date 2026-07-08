@@ -19,6 +19,13 @@ namespace AlibabaCloud.SDK.Vs20181212
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shenzhen", "vs.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "vs.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "vs.cn-qingdao.aliyuncs.com"},
+                {"cn-beijing", "vs.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,14 +46,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加负载到集群</para>
+        /// <para>Adds one or more instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
+        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
+        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -99,14 +109,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加负载到集群</para>
+        /// <para>Adds one or more instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
+        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
+        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -159,14 +172,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加负载到集群</para>
+        /// <para>Adds one or more instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
+        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
+        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -185,14 +201,17 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加负载到集群</para>
+        /// <para>Adds one or more instances to a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> is a required parameter that specifies the ID of the target cluster.</description></item>
+        /// <item><description><b>InstanceIds</b> is a required parameter that specifies a list of instance IDs to add.</description></item>
+        /// <item><description>Adding an instance that already exists in the target cluster returns an error message.</description></item>
+        /// <item><description>The response includes lists of successful and failed instances. This allows you to verify which instances were added and review the reasons for any failures.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -209,6 +228,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await AddHiveEdgeWorkersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a stream pulling configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddVsPullStreamInfoConfigRequest
         /// </param>
@@ -274,6 +298,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<AddVsPullStreamInfoConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a stream pulling configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddVsPullStreamInfoConfigRequest
         /// </param>
@@ -339,6 +368,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<AddVsPullStreamInfoConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a stream pulling configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddVsPullStreamInfoConfigRequest
         /// </param>
@@ -352,6 +386,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return AddVsPullStreamInfoConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a stream pulling configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddVsPullStreamInfoConfigRequest
         /// </param>
@@ -367,14 +406,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目进行关联。</para>
+        /// <para>Associates cloud application service instances with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation associates instances that meet specific conditions with a specified project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -427,14 +466,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目进行关联。</para>
+        /// <para>Associates cloud application service instances with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation associates instances that meet specific conditions with a specified project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -487,14 +526,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目进行关联。</para>
+        /// <para>Associates cloud application service instances with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation associates instances that meet specific conditions with a specified project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -513,14 +552,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目进行关联。</para>
+        /// <para>Associates cloud application service instances with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation associates instances that meet specific conditions with a specified project.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -537,6 +576,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await AssociateRenderingProjectInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to directories in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindDirectoriesRequest
         /// </param>
@@ -582,6 +626,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindDirectoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to directories in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindDirectoriesRequest
         /// </param>
@@ -627,6 +676,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to directories in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindDirectoriesRequest
         /// </param>
@@ -640,6 +694,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchBindDirectoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to directories in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindDirectoriesRequest
         /// </param>
@@ -653,6 +712,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchBindDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to a parent platform for push in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindParentPlatformDevicesRequest
         /// </param>
@@ -698,6 +762,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindParentPlatformDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to a parent platform for push in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindParentPlatformDevicesRequest
         /// </param>
@@ -743,6 +812,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindParentPlatformDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to a parent platform for push in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindParentPlatformDevicesRequest
         /// </param>
@@ -756,6 +830,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchBindParentPlatformDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple devices to a parent platform for push in batches.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindParentPlatformDevicesRequest
         /// </param>
@@ -769,6 +848,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchBindParentPlatformDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindPurchasedDevicesRequest
         /// </param>
@@ -818,6 +902,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindPurchasedDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindPurchasedDevicesRequest
         /// </param>
@@ -867,6 +956,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindPurchasedDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindPurchasedDevicesRequest
         /// </param>
@@ -880,6 +974,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchBindPurchasedDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindPurchasedDevicesRequest
         /// </param>
@@ -893,6 +992,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchBindPurchasedDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind templates to multiple specified instances, such as instances bound to spaces and streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplateRequest
         /// </param>
@@ -950,6 +1054,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind templates to multiple specified instances, such as instances bound to spaces and streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplateRequest
         /// </param>
@@ -1007,6 +1116,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind templates to multiple specified instances, such as instances bound to spaces and streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplateRequest
         /// </param>
@@ -1020,6 +1134,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchBindTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Bind templates to multiple specified instances, such as instances bound to spaces and streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplateRequest
         /// </param>
@@ -1033,6 +1152,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchBindTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple templates in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplatesRequest
         /// </param>
@@ -1094,6 +1218,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple templates in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplatesRequest
         /// </param>
@@ -1155,6 +1284,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchBindTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple templates in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplatesRequest
         /// </param>
@@ -1168,6 +1302,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchBindTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds multiple templates in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchBindTemplatesRequest
         /// </param>
@@ -1181,6 +1320,195 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchBindTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves screenshots of cloud application service instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Authentication</b>: Requests must include the <c>AliUid</c> parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: Use <c>RenderingInstanceIds</c> to specify the instances to capture screenshots from.</description></item>
+        /// <item><description><b>Screenshot quality</b>: Use the <c>Quality</c> parameter to set the image quality of screenshots. The default value is 75 (if not configured). Valid values: 1 to 100.</description></item>
+        /// <item><description><b>Response handling</b>: The response contains lists of successful and failed instances with related information, including download URLs and screenshot completion times.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCaptureRenderingInstanceScreenshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCaptureRenderingInstanceScreenshotResponse
+        /// </returns>
+        public BatchCaptureRenderingInstanceScreenshotResponse BatchCaptureRenderingInstanceScreenshotWithOptions(BatchCaptureRenderingInstanceScreenshotRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCaptureRenderingInstanceScreenshotShrinkRequest request = new BatchCaptureRenderingInstanceScreenshotShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quality))
+            {
+                query["Quality"] = request.Quality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCaptureRenderingInstanceScreenshot",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCaptureRenderingInstanceScreenshotResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves screenshots of cloud application service instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Authentication</b>: Requests must include the <c>AliUid</c> parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: Use <c>RenderingInstanceIds</c> to specify the instances to capture screenshots from.</description></item>
+        /// <item><description><b>Screenshot quality</b>: Use the <c>Quality</c> parameter to set the image quality of screenshots. The default value is 75 (if not configured). Valid values: 1 to 100.</description></item>
+        /// <item><description><b>Response handling</b>: The response contains lists of successful and failed instances with related information, including download URLs and screenshot completion times.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCaptureRenderingInstanceScreenshotRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCaptureRenderingInstanceScreenshotResponse
+        /// </returns>
+        public async Task<BatchCaptureRenderingInstanceScreenshotResponse> BatchCaptureRenderingInstanceScreenshotWithOptionsAsync(BatchCaptureRenderingInstanceScreenshotRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCaptureRenderingInstanceScreenshotShrinkRequest request = new BatchCaptureRenderingInstanceScreenshotShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RenderingInstanceIds))
+            {
+                request.RenderingInstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RenderingInstanceIds, "RenderingInstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quality))
+            {
+                query["Quality"] = request.Quality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RenderingInstanceIdsShrink))
+            {
+                query["RenderingInstanceIds"] = request.RenderingInstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCaptureRenderingInstanceScreenshot",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCaptureRenderingInstanceScreenshotResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves screenshots of cloud application service instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Authentication</b>: Requests must include the <c>AliUid</c> parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: Use <c>RenderingInstanceIds</c> to specify the instances to capture screenshots from.</description></item>
+        /// <item><description><b>Screenshot quality</b>: Use the <c>Quality</c> parameter to set the image quality of screenshots. The default value is 75 (if not configured). Valid values: 1 to 100.</description></item>
+        /// <item><description><b>Response handling</b>: The response contains lists of successful and failed instances with related information, including download URLs and screenshot completion times.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCaptureRenderingInstanceScreenshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCaptureRenderingInstanceScreenshotResponse
+        /// </returns>
+        public BatchCaptureRenderingInstanceScreenshotResponse BatchCaptureRenderingInstanceScreenshot(BatchCaptureRenderingInstanceScreenshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BatchCaptureRenderingInstanceScreenshotWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves screenshots of cloud application service instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Authentication</b>: Requests must include the <c>AliUid</c> parameter for identity verification.</description></item>
+        /// <item><description><b>Instance specification</b>: Use <c>RenderingInstanceIds</c> to specify the instances to capture screenshots from.</description></item>
+        /// <item><description><b>Screenshot quality</b>: Use the <c>Quality</c> parameter to set the image quality of screenshots. The default value is 75 (if not configured). Valid values: 1 to 100.</description></item>
+        /// <item><description><b>Response handling</b>: The response contains lists of successful and failed instances with related information, including download URLs and screenshot completion times.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchCaptureRenderingInstanceScreenshotRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCaptureRenderingInstanceScreenshotResponse
+        /// </returns>
+        public async Task<BatchCaptureRenderingInstanceScreenshotResponse> BatchCaptureRenderingInstanceScreenshotAsync(BatchCaptureRenderingInstanceScreenshotRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BatchCaptureRenderingInstanceScreenshotWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple devices in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteDevicesRequest
         /// </param>
@@ -1222,6 +1550,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchDeleteDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple devices in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteDevicesRequest
         /// </param>
@@ -1263,6 +1596,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchDeleteDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple devices in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteDevicesRequest
         /// </param>
@@ -1276,6 +1614,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchDeleteDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple devices in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteDevicesRequest
         /// </param>
@@ -1289,6 +1632,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchDeleteDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes domain name configurations in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteVsDomainConfigsRequest
         /// </param>
@@ -1334,6 +1682,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchDeleteVsDomainConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes domain name configurations in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteVsDomainConfigsRequest
         /// </param>
@@ -1379,6 +1732,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchDeleteVsDomainConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes domain name configurations in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteVsDomainConfigsRequest
         /// </param>
@@ -1392,6 +1750,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchDeleteVsDomainConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes domain name configurations in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchDeleteVsDomainConfigsRequest
         /// </param>
@@ -1405,6 +1768,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchDeleteVsDomainConfigsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stop stream ingest for one or more streams. You can schedule when to resume ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchForbidVsStreamRequest
         /// </param>
@@ -1466,6 +1834,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchForbidVsStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stop stream ingest for one or more streams. You can schedule when to resume ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchForbidVsStreamRequest
         /// </param>
@@ -1527,6 +1900,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchForbidVsStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stop stream ingest for one or more streams. You can schedule when to resume ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchForbidVsStreamRequest
         /// </param>
@@ -1540,6 +1918,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchForbidVsStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stop stream ingest for one or more streams. You can schedule when to resume ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchForbidVsStreamRequest
         /// </param>
@@ -1553,6 +1936,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchForbidVsStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes stream ingest for one or more streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchResumeVsStreamRequest
         /// </param>
@@ -1606,6 +1994,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchResumeVsStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes stream ingest for one or more streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchResumeVsStreamRequest
         /// </param>
@@ -1659,6 +2052,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchResumeVsStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes stream ingest for one or more streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchResumeVsStreamRequest
         /// </param>
@@ -1672,6 +2070,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchResumeVsStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes stream ingest for one or more streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchResumeVsStreamRequest
         /// </param>
@@ -1685,6 +2088,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchResumeVsStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure multiple domain names in batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchSetVsDomainConfigsRequest
         /// </param>
@@ -1730,6 +2138,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchSetVsDomainConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure multiple domain names in batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchSetVsDomainConfigsRequest
         /// </param>
@@ -1775,6 +2188,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchSetVsDomainConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure multiple domain names in batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchSetVsDomainConfigsRequest
         /// </param>
@@ -1788,6 +2206,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchSetVsDomainConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure multiple domain names in batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchSetVsDomainConfigsRequest
         /// </param>
@@ -1801,6 +2224,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchSetVsDomainConfigsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling for multiple devices at once.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartDevicesRequest
         /// </param>
@@ -1842,6 +2270,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStartDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling for multiple devices at once.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartDevicesRequest
         /// </param>
@@ -1883,6 +2316,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStartDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling for multiple devices at once.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartDevicesRequest
         /// </param>
@@ -1896,6 +2334,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchStartDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling for multiple devices at once.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartDevicesRequest
         /// </param>
@@ -1909,6 +2352,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchStartDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartStreamsRequest
         /// </param>
@@ -1950,6 +2398,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStartStreamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartStreamsRequest
         /// </param>
@@ -1991,6 +2444,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStartStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartStreamsRequest
         /// </param>
@@ -2004,6 +2462,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchStartStreamsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts multiple streams.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStartStreamsRequest
         /// </param>
@@ -2017,6 +2480,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchStartStreamsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for multiple devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopDevicesRequest
         /// </param>
@@ -2062,6 +2530,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStopDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for multiple devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopDevicesRequest
         /// </param>
@@ -2107,6 +2580,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStopDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for multiple devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopDevicesRequest
         /// </param>
@@ -2120,6 +2598,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchStopDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for multiple devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopDevicesRequest
         /// </param>
@@ -2133,6 +2616,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchStopDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple streams in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopStreamsRequest
         /// </param>
@@ -2178,6 +2666,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStopStreamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple streams in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopStreamsRequest
         /// </param>
@@ -2223,6 +2716,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchStopStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple streams in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopStreamsRequest
         /// </param>
@@ -2236,6 +2734,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchStopStreamsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops multiple streams in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchStopStreamsRequest
         /// </param>
@@ -2249,6 +2752,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchStopStreamsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches multiple devices from a folder in bulk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindDirectoriesRequest
         /// </param>
@@ -2294,6 +2802,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindDirectoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches multiple devices from a folder in bulk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindDirectoriesRequest
         /// </param>
@@ -2339,6 +2852,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches multiple devices from a folder in bulk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindDirectoriesRequest
         /// </param>
@@ -2352,6 +2870,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchUnbindDirectoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detaches multiple devices from a folder in bulk.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindDirectoriesRequest
         /// </param>
@@ -2365,6 +2888,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchUnbindDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch unbind multiple devices from parent platform push.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindParentPlatformDevicesRequest
         /// </param>
@@ -2410,6 +2938,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindParentPlatformDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch unbind multiple devices from parent platform push.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindParentPlatformDevicesRequest
         /// </param>
@@ -2455,6 +2988,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindParentPlatformDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch unbind multiple devices from parent platform push.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindParentPlatformDevicesRequest
         /// </param>
@@ -2468,6 +3006,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchUnbindParentPlatformDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch unbind multiple devices from parent platform push.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindParentPlatformDevicesRequest
         /// </param>
@@ -2481,6 +3024,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchUnbindParentPlatformDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach multiple purchased devices from a space in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindPurchasedDevicesRequest
         /// </param>
@@ -2522,6 +3070,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindPurchasedDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach multiple purchased devices from a space in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindPurchasedDevicesRequest
         /// </param>
@@ -2563,6 +3116,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindPurchasedDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach multiple purchased devices from a space in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindPurchasedDevicesRequest
         /// </param>
@@ -2576,6 +3134,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchUnbindPurchasedDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach multiple purchased devices from a space in a single operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindPurchasedDevicesRequest
         /// </param>
@@ -2589,6 +3152,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchUnbindPurchasedDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a template from multiple specified instances, such as space instances or stream instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplateRequest
         /// </param>
@@ -2642,6 +3217,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a template from multiple specified instances, such as space instances or stream instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplateRequest
         /// </param>
@@ -2695,6 +3282,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a template from multiple specified instances, such as space instances or stream instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplateRequest
         /// </param>
@@ -2708,6 +3307,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchUnbindTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a template from multiple specified instances, such as space instances or stream instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplateRequest
         /// </param>
@@ -2721,6 +3332,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchUnbindTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind multiple templates simultaneously.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplatesRequest
         /// </param>
@@ -2774,6 +3390,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind multiple templates simultaneously.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplatesRequest
         /// </param>
@@ -2827,6 +3448,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BatchUnbindTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind multiple templates simultaneously.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplatesRequest
         /// </param>
@@ -2840,6 +3466,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BatchUnbindTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind multiple templates simultaneously.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BatchUnbindTemplatesRequest
         /// </param>
@@ -2853,6 +3484,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BatchUnbindTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach a device to a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindDirectoryRequest
         /// </param>
@@ -2898,6 +3534,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach a device to a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindDirectoryRequest
         /// </param>
@@ -2943,6 +3584,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach a device to a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindDirectoryRequest
         /// </param>
@@ -2956,6 +3602,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BindDirectoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach a device to a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindDirectoryRequest
         /// </param>
@@ -2969,6 +3620,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BindDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a device to push streams to a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindParentPlatformDeviceRequest
         /// </param>
@@ -3014,6 +3670,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindParentPlatformDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a device to push streams to a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindParentPlatformDeviceRequest
         /// </param>
@@ -3059,6 +3720,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindParentPlatformDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a device to push streams to a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindParentPlatformDeviceRequest
         /// </param>
@@ -3072,6 +3738,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BindParentPlatformDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a device to push streams to a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindParentPlatformDeviceRequest
         /// </param>
@@ -3085,6 +3756,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BindParentPlatformDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach purchased devices to a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindPurchasedDeviceRequest
         /// </param>
@@ -3134,6 +3810,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindPurchasedDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach purchased devices to a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindPurchasedDeviceRequest
         /// </param>
@@ -3183,6 +3864,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindPurchasedDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach purchased devices to a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindPurchasedDeviceRequest
         /// </param>
@@ -3196,6 +3882,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BindPurchasedDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Attach purchased devices to a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindPurchasedDeviceRequest
         /// </param>
@@ -3209,6 +3900,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BindPurchasedDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a template to a specified instance, such as a group or stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindTemplateRequest
         /// </param>
@@ -3270,6 +3966,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a template to a specified instance, such as a group or stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindTemplateRequest
         /// </param>
@@ -3331,6 +4032,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<BindTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a template to a specified instance, such as a group or stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindTemplateRequest
         /// </param>
@@ -3344,6 +4050,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return BindTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a template to a specified instance, such as a group or stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BindTemplateRequest
         /// </param>
@@ -3359,8 +4070,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Cancels a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before canceling the task.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelComfyTaskRequest
@@ -3401,8 +4119,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Cancels a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before canceling the task.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelComfyTaskRequest
@@ -3443,8 +4168,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Cancels a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before canceling the task.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelComfyTaskRequest
@@ -3461,8 +4193,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Cancels a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before canceling the task.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelComfyTaskRequest
@@ -3477,6 +4216,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CancelComfyTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Continuously adjust lens parameters such as aperture and zoom.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousAdjustRequest
         /// </param>
@@ -3526,6 +4270,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ContinuousAdjustResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Continuously adjust lens parameters such as aperture and zoom.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousAdjustRequest
         /// </param>
@@ -3575,6 +4324,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ContinuousAdjustResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Continuously adjust lens parameters such as aperture and zoom.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousAdjustRequest
         /// </param>
@@ -3588,6 +4342,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ContinuousAdjustWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Continuously adjust lens parameters such as aperture and zoom.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousAdjustRequest
         /// </param>
@@ -3601,6 +4360,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ContinuousAdjustWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rotate the camera continuously by panning, tilting, or zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousMoveRequest
         /// </param>
@@ -3654,6 +4418,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ContinuousMoveResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rotate the camera continuously by panning, tilting, or zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousMoveRequest
         /// </param>
@@ -3707,6 +4476,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ContinuousMoveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rotate the camera continuously by panning, tilting, or zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousMoveRequest
         /// </param>
@@ -3720,6 +4494,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ContinuousMoveWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rotate the camera continuously by panning, tilting, or zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ContinuousMoveRequest
         /// </param>
@@ -3735,8 +4514,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Starts a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyTaskRequest
@@ -3785,8 +4571,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Starts a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyTaskRequest
@@ -3835,8 +4628,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Starts a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyTaskRequest
@@ -3853,8 +4653,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Starts a Comfy task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand screenshot feature in the associated screenshot template.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyTaskRequest
@@ -3871,8 +4678,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个用户数据的目录</para>
+        /// <para>Creates a directory for user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must specify either a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyUserDataDirRequest
@@ -3913,8 +4727,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个用户数据的目录</para>
+        /// <para>Creates a directory for user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must specify either a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyUserDataDirRequest
@@ -3955,8 +4776,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个用户数据的目录</para>
+        /// <para>Creates a directory for user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must specify either a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyUserDataDirRequest
@@ -3973,8 +4801,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个用户数据的目录</para>
+        /// <para>Creates a directory for user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must specify either a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyUserDataDirRequest
@@ -3991,8 +4826,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Comfy工作流</para>
+        /// <para>Creates a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template before calling this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyWorkflowRequest
@@ -4041,8 +4883,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Comfy工作流</para>
+        /// <para>Creates a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template before calling this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyWorkflowRequest
@@ -4091,8 +4940,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Comfy工作流</para>
+        /// <para>Creates a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template before calling this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyWorkflowRequest
@@ -4109,8 +4965,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Comfy工作流</para>
+        /// <para>Creates a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must enable the on-demand screenshot feature in the associated screenshot template before calling this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateComfyWorkflowRequest
@@ -4125,6 +4988,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateComfyWorkflowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a new device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceRequest
         /// </param>
@@ -4250,6 +5118,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a new device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceRequest
         /// </param>
@@ -4375,6 +5248,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a new device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceRequest
         /// </param>
@@ -4388,6 +5266,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a new device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceRequest
         /// </param>
@@ -4401,6 +5284,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a device alert.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceAlarmRequest
         /// </param>
@@ -4470,6 +5358,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateDeviceAlarmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a device alert.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceAlarmRequest
         /// </param>
@@ -4539,6 +5432,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateDeviceAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a device alert.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceAlarmRequest
         /// </param>
@@ -4552,6 +5450,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateDeviceAlarmWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Reports a device alert.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDeviceAlarmRequest
         /// </param>
@@ -4565,6 +5468,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateDeviceAlarmWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDirectoryRequest
         /// </param>
@@ -4618,6 +5526,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDirectoryRequest
         /// </param>
@@ -4671,6 +5584,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDirectoryRequest
         /// </param>
@@ -4684,6 +5602,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateDirectoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDirectoryRequest
         /// </param>
@@ -4697,6 +5620,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGroupRequest
         /// </param>
@@ -4774,6 +5702,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGroupRequest
         /// </param>
@@ -4851,6 +5784,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGroupRequest
         /// </param>
@@ -4864,6 +5802,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGroupRequest
         /// </param>
@@ -4879,14 +5822,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4933,14 +5876,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4987,14 +5930,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5013,14 +5956,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This operation creates an empty cluster to manage workloads.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5037,6 +5980,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateHiveWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a new parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateParentPlatformRequest
         /// </param>
@@ -5114,6 +6062,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateParentPlatformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a new parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateParentPlatformRequest
         /// </param>
@@ -5191,6 +6144,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateParentPlatformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a new parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateParentPlatformRequest
         /// </param>
@@ -5204,6 +6162,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateParentPlatformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a new parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateParentPlatformRequest
         /// </param>
@@ -5219,7 +6182,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云渲染数据包</para>
+        /// <para>Creates a data pack for a cloud application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5273,7 +6236,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云渲染数据包</para>
+        /// <para>Creates a data pack for a cloud application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5327,7 +6290,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云渲染数据包</para>
+        /// <para>Creates a data pack for a cloud application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5345,7 +6308,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云渲染数据包</para>
+        /// <para>Creates a data pack for a cloud application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5363,7 +6326,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请云渲染资源实例</para>
+        /// <para>Call CreateRenderingInstance to create a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5451,7 +6414,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请云渲染资源实例</para>
+        /// <para>Call CreateRenderingInstance to create a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5539,7 +6502,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请云渲染资源实例</para>
+        /// <para>Call CreateRenderingInstance to create a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5557,7 +6520,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请云渲染资源实例</para>
+        /// <para>Call CreateRenderingInstance to create a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5575,8 +6538,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义网关</para>
+        /// <para>Creates a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRenderingInstanceGatewayRequest
@@ -5621,8 +6591,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义网关</para>
+        /// <para>Creates a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRenderingInstanceGatewayRequest
@@ -5667,8 +6644,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义网关</para>
+        /// <para>Creates a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRenderingInstanceGatewayRequest
@@ -5685,8 +6669,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义网关</para>
+        /// <para>Creates a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a template ID or a template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRenderingInstanceGatewayRequest
@@ -5703,7 +6694,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的云应用服务项目，并设置相关属性。</para>
+        /// <para>Creates a cloud application service project and configures its properties, such as session attributes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5759,7 +6750,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的云应用服务项目，并设置相关属性。</para>
+        /// <para>Creates a cloud application service project and configures its properties, such as session attributes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5815,7 +6806,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的云应用服务项目，并设置相关属性。</para>
+        /// <para>Creates a cloud application service project and configures its properties, such as session attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5833,7 +6824,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一个新的云应用服务项目，并设置相关属性。</para>
+        /// <para>Creates a cloud application service project and configures its properties, such as session attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5849,6 +6840,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateRenderingProjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an on-demand snapshot for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand snapshot feature in the attached snapshot template.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateStreamSnapshotRequest
         /// </param>
@@ -5894,6 +6897,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateStreamSnapshotResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an on-demand snapshot for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand snapshot feature in the attached snapshot template.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateStreamSnapshotRequest
         /// </param>
@@ -5939,6 +6954,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateStreamSnapshotResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an on-demand snapshot for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand snapshot feature in the attached snapshot template.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateStreamSnapshotRequest
         /// </param>
@@ -5952,6 +6979,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateStreamSnapshotWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an on-demand snapshot for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must first enable the on-demand snapshot feature in the attached snapshot template.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateStreamSnapshotRequest
         /// </param>
@@ -5965,6 +7004,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await CreateStreamSnapshotWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -6082,6 +7126,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -6199,6 +7248,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<CreateTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -6212,6 +7266,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return CreateTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTemplateRequest
         /// </param>
@@ -6234,7 +7293,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> 是必填参数，表示要操作的集群ID。</description></item>
+        /// <item><description><b>InstanceIds</b> 是必填参数，需要提供一个负载ID列表，用于指定要从集群中解绑的负载实例。</description></item>
+        /// <item><description>解绑操作成功后，会返回成功和失败的负载实例列表及其相关信息。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6294,7 +7355,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> 是必填参数，表示要操作的集群ID。</description></item>
+        /// <item><description><b>InstanceIds</b> 是必填参数，需要提供一个负载ID列表，用于指定要从集群中解绑的负载实例。</description></item>
+        /// <item><description>解绑操作成功后，会返回成功和失败的负载实例列表及其相关信息。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6354,7 +7417,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> 是必填参数，表示要操作的集群ID。</description></item>
+        /// <item><description><b>InstanceIds</b> 是必填参数，需要提供一个负载ID列表，用于指定要从集群中解绑的负载实例。</description></item>
+        /// <item><description>解绑操作成功后，会返回成功和失败的负载实例列表及其相关信息。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6380,7 +7445,9 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description><b>HiveId</b> 是必填参数，表示要操作的集群ID。</description></item>
+        /// <item><description><b>InstanceIds</b> 是必填参数，需要提供一个负载ID列表，用于指定要从集群中解绑的负载实例。</description></item>
+        /// <item><description>解绑操作成功后，会返回成功和失败的负载实例列表及其相关信息。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6399,7 +7466,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云应用</para>
+        /// <para>Deletes a cloud application. You cannot delete a cloud application that is in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6441,7 +7508,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云应用</para>
+        /// <para>Deletes a cloud application. You cannot delete a cloud application that is in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6483,7 +7550,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云应用</para>
+        /// <para>Deletes a cloud application. You cannot delete a cloud application that is in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6501,7 +7568,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云应用</para>
+        /// <para>Deletes a cloud application. You cannot delete a cloud application that is in use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6519,8 +7586,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的生成结果</para>
+        /// <para>Deleting artifacts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete a production.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyProductionRequest
@@ -6561,8 +7635,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的生成结果</para>
+        /// <para>Deleting artifacts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete a production.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyProductionRequest
@@ -6603,8 +7684,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的生成结果</para>
+        /// <para>Deleting artifacts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete a production.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyProductionRequest
@@ -6621,8 +7709,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户的生成结果</para>
+        /// <para>Deleting artifacts</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete a production.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyProductionRequest
@@ -6639,8 +7734,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户数据的中的文件或目录</para>
+        /// <para>Deletes a file or directory from user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the upper-level platform before performing this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyUserDataRequest
@@ -6681,8 +7783,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户数据的中的文件或目录</para>
+        /// <para>Deletes a file or directory from user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the upper-level platform before performing this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyUserDataRequest
@@ -6723,8 +7832,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户数据的中的文件或目录</para>
+        /// <para>Deletes a file or directory from user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the upper-level platform before performing this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyUserDataRequest
@@ -6741,8 +7857,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户数据的中的文件或目录</para>
+        /// <para>Deletes a file or directory from user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the upper-level platform before performing this operation.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyUserDataRequest
@@ -6759,8 +7882,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Comfy工作流</para>
+        /// <para>Deletes a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you can delete the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyWorkflowRequest
@@ -6801,8 +7931,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Comfy工作流</para>
+        /// <para>Deletes a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you can delete the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyWorkflowRequest
@@ -6843,8 +7980,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Comfy工作流</para>
+        /// <para>Deletes a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you can delete the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyWorkflowRequest
@@ -6861,8 +8005,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Comfy工作流</para>
+        /// <para>Deletes a Comfy workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you can delete the workflow.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteComfyWorkflowRequest
@@ -6877,6 +8028,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteComfyWorkflowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDeviceRequest
         /// </param>
@@ -6918,6 +8074,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDeviceRequest
         /// </param>
@@ -6959,6 +8120,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDeviceRequest
         /// </param>
@@ -6972,6 +8138,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDeviceRequest
         /// </param>
@@ -6985,6 +8156,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDirectoryRequest
         /// </param>
@@ -7026,6 +8202,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDirectoryRequest
         /// </param>
@@ -7067,6 +8248,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDirectoryRequest
         /// </param>
@@ -7080,6 +8266,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteDirectoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDirectoryRequest
         /// </param>
@@ -7095,7 +8286,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文件对象。</para>
+        /// <para>You cannot delete a file while it is uploading or pre-pushing. After deletion, all related push records become invalid. You can push a file with the same name again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7137,7 +8328,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文件对象。</para>
+        /// <para>You cannot delete a file while it is uploading or pre-pushing. After deletion, all related push records become invalid. You can push a file with the same name again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7179,7 +8370,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文件对象。</para>
+        /// <para>You cannot delete a file while it is uploading or pre-pushing. After deletion, all related push records become invalid. You can push a file with the same name again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7197,7 +8388,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文件对象。</para>
+        /// <para>You cannot delete a file while it is uploading or pre-pushing. After deletion, all related push records become invalid. You can push a file with the same name again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7213,6 +8404,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGroupRequest
         /// </param>
@@ -7254,6 +8450,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGroupRequest
         /// </param>
@@ -7295,6 +8496,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGroupRequest
         /// </param>
@@ -7308,6 +8514,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a workspace.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGroupRequest
         /// </param>
@@ -7330,7 +8541,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>需要确保该集群内所有应用服务已清空，否则无法执行删除操作。</description></item>
+        /// <item><description><c>HiveId</c> 是必填参数，用于标识待删除的集群。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7380,7 +8592,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>需要确保该集群内所有应用服务已清空，否则无法执行删除操作。</description></item>
+        /// <item><description><c>HiveId</c> 是必填参数，用于标识待删除的集群。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7430,7 +8643,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>需要确保该集群内所有应用服务已清空，否则无法执行删除操作。</description></item>
+        /// <item><description><c>HiveId</c> 是必填参数，用于标识待删除的集群。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7456,7 +8670,8 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <description>
         /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>需要确保该集群内所有应用服务已清空，否则无法执行删除操作。</description></item>
+        /// <item><description><c>HiveId</c> 是必填参数，用于标识待删除的集群。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7473,6 +8688,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteHiveWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a parent platform.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you delete it.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteParentPlatformRequest
         /// </param>
@@ -7514,6 +8741,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteParentPlatformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a parent platform.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you delete it.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteParentPlatformRequest
         /// </param>
@@ -7555,6 +8794,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteParentPlatformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a parent platform.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you delete it.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteParentPlatformRequest
         /// </param>
@@ -7568,6 +8819,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteParentPlatformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a parent platform.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You must stop the parent platform before you delete it.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteParentPlatformRequest
         /// </param>
@@ -7581,6 +8844,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteParentPlatformWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePresetRequest
         /// </param>
@@ -7626,6 +8894,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeletePresetResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePresetRequest
         /// </param>
@@ -7671,6 +8944,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeletePresetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePresetRequest
         /// </param>
@@ -7684,6 +8962,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeletePresetWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeletePresetRequest
         /// </param>
@@ -7699,7 +8982,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公钥信息</para>
+        /// <para>Deletes a specified public key. This action automatically revokes logon authorization for all associated cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7741,7 +9024,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公钥信息</para>
+        /// <para>Deletes a specified public key. This action automatically revokes logon authorization for all associated cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7783,7 +9066,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公钥信息</para>
+        /// <para>Deletes a specified public key. This action automatically revokes logon authorization for all associated cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7801,7 +9084,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除公钥信息</para>
+        /// <para>Deletes a specified public key. This action automatically revokes logon authorization for all associated cloud application service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7819,7 +9102,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云渲染实例配置参数</para>
+        /// <para>Deletes the configuration of a cloud application service instance. This operation deletes only module properties that are configured using the UpdateRenderingInstanceConfiguration operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7873,7 +9156,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云渲染实例配置参数</para>
+        /// <para>Deletes the configuration of a cloud application service instance. This operation deletes only module properties that are configured using the UpdateRenderingInstanceConfiguration operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7927,7 +9210,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云渲染实例配置参数</para>
+        /// <para>Deletes the configuration of a cloud application service instance. This operation deletes only module properties that are configured using the UpdateRenderingInstanceConfiguration operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7945,7 +9228,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云渲染实例配置参数</para>
+        /// <para>Deletes the configuration of a cloud application service instance. This operation deletes only module properties that are configured using the UpdateRenderingInstanceConfiguration operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7963,8 +9246,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义网关</para>
+        /// <para>Deletes a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete the gateway.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRenderingInstanceGatewayRequest
@@ -8005,8 +9295,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义网关</para>
+        /// <para>Deletes a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete the gateway.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRenderingInstanceGatewayRequest
@@ -8047,8 +9344,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义网关</para>
+        /// <para>Deletes a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete the gateway.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRenderingInstanceGatewayRequest
@@ -8065,8 +9369,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义网关</para>
+        /// <para>Deletes a custom gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Stop the parent platform before you delete the gateway.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRenderingInstanceGatewayRequest
@@ -8083,7 +9394,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除实例设置</para>
+        /// <para>You can call DeleteRenderingInstanceSettings to delete the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8135,7 +9446,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除实例设置</para>
+        /// <para>You can call DeleteRenderingInstanceSettings to delete the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8187,7 +9498,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除实例设置</para>
+        /// <para>You can call DeleteRenderingInstanceSettings to delete the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8205,7 +9516,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清除实例设置</para>
+        /// <para>You can call DeleteRenderingInstanceSettings to delete the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8223,7 +9534,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个云应用服务项目，有在线会话等业务调度数据的项目不允许删除。</para>
+        /// <para>Delete a Data Service Project. Projects that have business scheduling data, such as active sessions, cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8265,7 +9576,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个云应用服务项目，有在线会话等业务调度数据的项目不允许删除。</para>
+        /// <para>Delete a Data Service Project. Projects that have business scheduling data, such as active sessions, cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8307,7 +9618,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个云应用服务项目，有在线会话等业务调度数据的项目不允许删除。</para>
+        /// <para>Delete a Data Service Project. Projects that have business scheduling data, such as active sessions, cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8325,7 +9636,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个云应用服务项目，有在线会话等业务调度数据的项目不允许删除。</para>
+        /// <para>Delete a Data Service Project. Projects that have business scheduling data, such as active sessions, cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8341,6 +9652,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteRenderingProjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTemplateRequest
         /// </param>
@@ -8382,6 +9698,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTemplateRequest
         /// </param>
@@ -8423,6 +9744,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTemplateRequest
         /// </param>
@@ -8436,6 +9762,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTemplateRequest
         /// </param>
@@ -8449,6 +9780,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete stream pulling information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsPullStreamInfoConfigRequest
         /// </param>
@@ -8498,6 +9834,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteVsPullStreamInfoConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete stream pulling information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsPullStreamInfoConfigRequest
         /// </param>
@@ -8547,6 +9888,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteVsPullStreamInfoConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete stream pulling information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsPullStreamInfoConfigRequest
         /// </param>
@@ -8560,6 +9906,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteVsPullStreamInfoConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete stream pulling information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsPullStreamInfoConfigRequest
         /// </param>
@@ -8573,6 +9924,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteVsPullStreamInfoConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the callback configuration for stream ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -8614,6 +9970,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteVsStreamsNotifyUrlConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the callback configuration for stream ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -8655,6 +10016,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DeleteVsStreamsNotifyUrlConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the callback configuration for stream ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -8668,6 +10034,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DeleteVsStreamsNotifyUrlConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the callback configuration for stream ingest.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -8681,6 +10052,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DeleteVsStreamsNotifyUrlConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query all resource information for an account in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountStatRequest
         /// </param>
@@ -8722,6 +10098,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeAccountStatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query all resource information for an account in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountStatRequest
         /// </param>
@@ -8763,6 +10144,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeAccountStatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query all resource information for an account in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountStatRequest
         /// </param>
@@ -8776,6 +10162,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeAccountStatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query all resource information for an account in a specified region.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountStatRequest
         /// </param>
@@ -8791,8 +10182,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户生成结果的下载链接</para>
+        /// <para>Retrieves a download link for a production.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Screenshot queries do not support pagination and must be performed iteratively. To fetch the next page, use the extStartTime value from the response as the StartTime for your subsequent request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionDownloadUrlRequest
@@ -8833,8 +10231,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户生成结果的下载链接</para>
+        /// <para>Retrieves a download link for a production.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Screenshot queries do not support pagination and must be performed iteratively. To fetch the next page, use the extStartTime value from the response as the StartTime for your subsequent request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionDownloadUrlRequest
@@ -8875,8 +10280,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户生成结果的下载链接</para>
+        /// <para>Retrieves a download link for a production.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Screenshot queries do not support pagination and must be performed iteratively. To fetch the next page, use the extStartTime value from the response as the StartTime for your subsequent request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionDownloadUrlRequest
@@ -8893,8 +10305,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户生成结果的下载链接</para>
+        /// <para>Retrieves a download link for a production.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Screenshot queries do not support pagination and must be performed iteratively. To fetch the next page, use the extStartTime value from the response as the StartTime for your subsequent request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionDownloadUrlRequest
@@ -8911,8 +10330,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// <para>Lists a user\&quot;s productions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API uses pagination. Use the PageNumber and PageSize parameters to navigate through the results.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionsRequest
@@ -8961,8 +10387,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// <para>Lists a user\&quot;s productions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API uses pagination. Use the PageNumber and PageSize parameters to navigate through the results.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionsRequest
@@ -9011,8 +10444,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// <para>Lists a user\&quot;s productions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API uses pagination. Use the PageNumber and PageSize parameters to navigate through the results.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionsRequest
@@ -9029,8 +10469,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// <para>Lists a user\&quot;s productions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This API uses pagination. Use the PageNumber and PageSize parameters to navigate through the results.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyProductionsRequest
@@ -9047,8 +10494,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Queries a list of Comfy tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Querying by screenshot does not support pagination and only supports iteration. To request the next page, use the extStartTime parameter value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyTasksRequest
@@ -9101,8 +10555,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Queries a list of Comfy tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Querying by screenshot does not support pagination and only supports iteration. To request the next page, use the extStartTime parameter value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyTasksRequest
@@ -9155,8 +10616,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Queries a list of Comfy tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Querying by screenshot does not support pagination and only supports iteration. To request the next page, use the extStartTime parameter value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyTasksRequest
@@ -9173,8 +10641,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Queries a list of Comfy tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Querying by screenshot does not support pagination and only supports iteration. To request the next page, use the extStartTime parameter value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyTasksRequest
@@ -9191,7 +10666,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Gets a download URL for user data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9233,7 +10708,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Gets a download URL for user data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9275,7 +10750,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Gets a download URL for user data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9293,7 +10768,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传用户数据文件</para>
+        /// <para>Gets a download URL for user data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9311,8 +10786,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// <para>Retrieves a URL to upload a user file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can upload files using the retrieved URL and the Alibaba Cloud OSS software development kit (SDK).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDataUploadUrlRequest
@@ -9365,8 +10845,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// <para>Retrieves a URL to upload a user file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can upload files using the retrieved URL and the Alibaba Cloud OSS software development kit (SDK).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDataUploadUrlRequest
@@ -9419,8 +10904,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// <para>Retrieves a URL to upload a user file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can upload files using the retrieved URL and the Alibaba Cloud OSS software development kit (SDK).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDataUploadUrlRequest
@@ -9437,8 +10927,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// <para>Retrieves a URL to upload a user file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can upload files using the retrieved URL and the Alibaba Cloud OSS software development kit (SDK).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDataUploadUrlRequest
@@ -9455,8 +10950,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Lists all files and folders in the user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If StartTime and EndTime are not specified, data from the last 24 hours is read by default. To query a specific time range, you must specify both StartTime and EndTime. The maximum time range for a query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names in a batch. Separate the domain names with a comma (,).</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDatasRequest
@@ -9505,8 +11010,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Lists all files and folders in the user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If StartTime and EndTime are not specified, data from the last 24 hours is read by default. To query a specific time range, you must specify both StartTime and EndTime. The maximum time range for a query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names in a batch. Separate the domain names with a comma (,).</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDatasRequest
@@ -9555,8 +11070,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Lists all files and folders in the user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If StartTime and EndTime are not specified, data from the last 24 hours is read by default. To query a specific time range, you must specify both StartTime and EndTime. The maximum time range for a query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names in a batch. Separate the domain names with a comma (,).</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDatasRequest
@@ -9573,8 +11098,18 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// <para>Lists all files and folders in the user data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If StartTime and EndTime are not specified, data from the last 24 hours is read by default. To query a specific time range, you must specify both StartTime and EndTime. The maximum time range for a query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names in a batch. Separate the domain names with a comma (,).</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyUserDatasRequest
@@ -9591,8 +11126,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Comfy工作流列表</para>
+        /// <para>This operation retrieves a paginated list of your Comfy workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyWorkflowsRequest
@@ -9641,8 +11181,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Comfy工作流列表</para>
+        /// <para>This operation retrieves a paginated list of your Comfy workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyWorkflowsRequest
@@ -9691,8 +11236,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Comfy工作流列表</para>
+        /// <para>This operation retrieves a paginated list of your Comfy workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyWorkflowsRequest
@@ -9709,8 +11259,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Comfy工作流列表</para>
+        /// <para>This operation retrieves a paginated list of your Comfy workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeComfyWorkflowsRequest
@@ -9725,6 +11280,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeComfyWorkflowsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceRequest
         /// </param>
@@ -9774,6 +11334,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceRequest
         /// </param>
@@ -9823,6 +11388,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceRequest
         /// </param>
@@ -9836,6 +11406,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceRequest
         /// </param>
@@ -9849,6 +11424,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of device channels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceChannelsRequest
         /// </param>
@@ -9898,6 +11478,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceChannelsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of device channels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceChannelsRequest
         /// </param>
@@ -9947,6 +11532,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceChannelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of device channels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceChannelsRequest
         /// </param>
@@ -9960,6 +11550,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDeviceChannelsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of device channels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceChannelsRequest
         /// </param>
@@ -9973,6 +11568,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDeviceChannelsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a device gateway.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceGatewayRequest
         /// </param>
@@ -10022,6 +11622,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceGatewayResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a device gateway.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceGatewayRequest
         /// </param>
@@ -10071,6 +11676,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceGatewayResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a device gateway.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceGatewayRequest
         /// </param>
@@ -10084,6 +11694,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDeviceGatewayWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a device gateway.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceGatewayRequest
         /// </param>
@@ -10097,6 +11712,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDeviceGatewayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the URL information for a device stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceURLRequest
         /// </param>
@@ -10162,6 +11782,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceURLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the URL information for a device stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceURLRequest
         /// </param>
@@ -10227,6 +11852,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDeviceURLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the URL information for a device stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceURLRequest
         /// </param>
@@ -10240,6 +11870,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDeviceURLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the URL information for a device stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDeviceURLRequest
         /// </param>
@@ -10253,6 +11888,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDeviceURLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDevicesRequest
         /// </param>
@@ -10354,6 +11994,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDevicesRequest
         /// </param>
@@ -10455,6 +12100,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDevicesRequest
         /// </param>
@@ -10468,6 +12118,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDevicesRequest
         /// </param>
@@ -10481,6 +12136,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of directories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoriesRequest
         /// </param>
@@ -10546,6 +12206,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDirectoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of directories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoriesRequest
         /// </param>
@@ -10611,6 +12276,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of directories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoriesRequest
         /// </param>
@@ -10624,6 +12294,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDirectoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of directories.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoriesRequest
         /// </param>
@@ -10637,6 +12312,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDirectoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoryRequest
         /// </param>
@@ -10678,6 +12358,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoryRequest
         /// </param>
@@ -10719,6 +12404,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoryRequest
         /// </param>
@@ -10732,6 +12422,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeDirectoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDirectoryRequest
         /// </param>
@@ -10745,6 +12440,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupRequest
         /// </param>
@@ -10790,6 +12490,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupRequest
         /// </param>
@@ -10835,6 +12540,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupRequest
         /// </param>
@@ -10848,6 +12558,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupRequest
         /// </param>
@@ -10861,6 +12576,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can query the list of spaces.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupsRequest
         /// </param>
@@ -10938,6 +12658,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can query the list of spaces.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupsRequest
         /// </param>
@@ -11015,6 +12740,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can query the list of spaces.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupsRequest
         /// </param>
@@ -11028,6 +12758,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can query the list of spaces.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeGroupsRequest
         /// </param>
@@ -11041,6 +12776,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformRequest
         /// </param>
@@ -11082,6 +12822,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeParentPlatformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformRequest
         /// </param>
@@ -11123,6 +12868,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeParentPlatformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformRequest
         /// </param>
@@ -11136,6 +12886,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeParentPlatformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformRequest
         /// </param>
@@ -11149,6 +12904,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeParentPlatformWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of devices under a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformDevicesRequest
         /// </param>
@@ -11206,6 +12966,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeParentPlatformDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of devices under a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformDevicesRequest
         /// </param>
@@ -11263,6 +13028,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeParentPlatformDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of devices under a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformDevicesRequest
         /// </param>
@@ -11276,6 +13046,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeParentPlatformDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of devices under a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformDevicesRequest
         /// </param>
@@ -11289,6 +13064,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeParentPlatformDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of parent platforms.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformsRequest
         /// </param>
@@ -11350,6 +13130,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeParentPlatformsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of parent platforms.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformsRequest
         /// </param>
@@ -11411,6 +13196,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeParentPlatformsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of parent platforms.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformsRequest
         /// </param>
@@ -11424,6 +13214,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeParentPlatformsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of parent platforms.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParentPlatformsRequest
         /// </param>
@@ -11437,6 +13232,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeParentPlatformsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of presets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePresetsRequest
         /// </param>
@@ -11478,6 +13278,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribePresetsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of presets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePresetsRequest
         /// </param>
@@ -11519,6 +13324,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribePresetsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of presets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePresetsRequest
         /// </param>
@@ -11532,6 +13342,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribePresetsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of presets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePresetsRequest
         /// </param>
@@ -11653,6 +13468,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribePublishStreamStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDeviceRequest
         /// </param>
@@ -11694,6 +13514,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribePurchasedDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDeviceRequest
         /// </param>
@@ -11735,6 +13560,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribePurchasedDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDeviceRequest
         /// </param>
@@ -11748,6 +13578,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribePurchasedDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDeviceRequest
         /// </param>
@@ -11761,6 +13596,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribePurchasedDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDevicesRequest
         /// </param>
@@ -11838,6 +13678,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribePurchasedDevicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDevicesRequest
         /// </param>
@@ -11915,6 +13760,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribePurchasedDevicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDevicesRequest
         /// </param>
@@ -11928,6 +13778,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribePurchasedDevicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of purchased devices.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePurchasedDevicesRequest
         /// </param>
@@ -11941,6 +13796,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribePurchasedDevicesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recordings.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Paging is not supported for snapshot queries. Only iteration is supported. To request the next page, use the NextStartTime value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordsRequest
         /// </param>
@@ -12014,6 +13881,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recordings.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Paging is not supported for snapshot queries. Only iteration is supported. To request the next page, use the NextStartTime value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordsRequest
         /// </param>
@@ -12087,6 +13966,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recordings.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Paging is not supported for snapshot queries. Only iteration is supported. To request the next page, use the NextStartTime value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordsRequest
         /// </param>
@@ -12100,6 +13991,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeRecordsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of recordings.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Paging is not supported for snapshot queries. Only iteration is supported. To request the next page, use the NextStartTime value from the response as the StartTime for the new request.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRecordsRequest
         /// </param>
@@ -12115,7 +14018,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例详细信息。</para>
+        /// <para>Queries the details of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12157,7 +14060,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例详细信息。</para>
+        /// <para>Queries the details of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12199,7 +14102,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例详细信息。</para>
+        /// <para>Queries the details of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12217,7 +14120,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例详细信息。</para>
+        /// <para>Queries the details of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12235,7 +14138,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例模块配置参数</para>
+        /// <para>Queries the real-time configuration of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12279,7 +14182,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例模块配置参数</para>
+        /// <para>Queries the real-time configuration of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12323,7 +14226,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例模块配置参数</para>
+        /// <para>Queries the real-time configuration of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12341,7 +14244,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云渲染实例模块配置参数</para>
+        /// <para>Queries the real-time configuration of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12359,7 +14262,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置</para>
+        /// <para>DescribeRenderingInstanceSettings queries the configuration of a Cloud Application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12411,7 +14314,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置</para>
+        /// <para>DescribeRenderingInstanceSettings queries the configuration of a Cloud Application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12463,7 +14366,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置</para>
+        /// <para>DescribeRenderingInstanceSettings queries the configuration of a Cloud Application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12481,7 +14384,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置</para>
+        /// <para>DescribeRenderingInstanceSettings queries the configuration of a Cloud Application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12499,7 +14402,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出会话的详情信息，包含关联的实例、网络出口等信息。</para>
+        /// <para>Retrieve details about a rendering session, including the current session state, network access IP address and port, and the location of the cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12549,7 +14452,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出会话的详情信息，包含关联的实例、网络出口等信息。</para>
+        /// <para>Retrieve details about a rendering session, including the current session state, network access IP address and port, and the location of the cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12599,7 +14502,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出会话的详情信息，包含关联的实例、网络出口等信息。</para>
+        /// <para>Retrieve details about a rendering session, including the current session state, network access IP address and port, and the location of the cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12617,7 +14520,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出会话的详情信息，包含关联的实例、网络出口等信息。</para>
+        /// <para>Retrieve details about a rendering session, including the current session state, network access IP address and port, and the location of the cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12633,6 +14536,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeRenderingSessionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamRequest
         /// </param>
@@ -12674,6 +14582,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamRequest
         /// </param>
@@ -12715,6 +14628,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamRequest
         /// </param>
@@ -12728,6 +14646,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries information about a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamRequest
         /// </param>
@@ -12741,6 +14664,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL of a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamURLRequest
         /// </param>
@@ -12814,6 +14742,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamURLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL of a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamURLRequest
         /// </param>
@@ -12887,6 +14820,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamURLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL of a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamURLRequest
         /// </param>
@@ -12900,6 +14838,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeStreamURLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL of a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamURLRequest
         /// </param>
@@ -12913,6 +14856,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeStreamURLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the stream VOD record list, such as historical stream list from NVR.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamVodListRequest
         /// </param>
@@ -12962,6 +14910,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamVodListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the stream VOD record list, such as historical stream list from NVR.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamVodListRequest
         /// </param>
@@ -13011,6 +14964,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamVodListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the stream VOD record list, such as historical stream list from NVR.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamVodListRequest
         /// </param>
@@ -13024,6 +14982,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeStreamVodListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Get the stream VOD record list, such as historical stream list from NVR.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamVodListRequest
         /// </param>
@@ -13037,6 +15000,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeStreamVodListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists video streams. You can filter the results by stream ID, name, group ID, device ID, or other criteria.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamsRequest
         /// </param>
@@ -13118,6 +15086,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists video streams. You can filter the results by stream ID, name, group ID, device ID, or other criteria.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamsRequest
         /// </param>
@@ -13199,6 +15172,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeStreamsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists video streams. You can filter the results by stream ID, name, group ID, device ID, or other criteria.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamsRequest
         /// </param>
@@ -13212,6 +15190,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeStreamsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists video streams. You can filter the results by stream ID, name, group ID, device ID, or other criteria.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeStreamsRequest
         /// </param>
@@ -13225,6 +15208,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeStreamsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplateRequest
         /// </param>
@@ -13266,6 +15254,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplateRequest
         /// </param>
@@ -13307,6 +15300,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplateRequest
         /// </param>
@@ -13320,6 +15318,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query information about a template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplateRequest
         /// </param>
@@ -13333,6 +15336,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplatesRequest
         /// </param>
@@ -13398,6 +15406,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplatesRequest
         /// </param>
@@ -13463,6 +15476,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplatesRequest
         /// </param>
@@ -13476,6 +15494,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTemplatesRequest
         /// </param>
@@ -13489,6 +15512,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL information of a video-on-demand (VOD) stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVodStreamURLRequest
         /// </param>
@@ -13530,6 +15558,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVodStreamURLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL information of a video-on-demand (VOD) stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVodStreamURLRequest
         /// </param>
@@ -13571,6 +15604,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVodStreamURLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL information of a video-on-demand (VOD) stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVodStreamURLRequest
         /// </param>
@@ -13584,6 +15622,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVodStreamURLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the URL information of a video-on-demand (VOD) stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVodStreamURLRequest
         /// </param>
@@ -13597,6 +15640,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVodStreamURLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve certificate details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateDetailRequest
         /// </param>
@@ -13638,6 +15686,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsCertificateDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve certificate details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateDetailRequest
         /// </param>
@@ -13679,6 +15732,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsCertificateDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve certificate details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateDetailRequest
         /// </param>
@@ -13692,6 +15750,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsCertificateDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve certificate details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateDetailRequest
         /// </param>
@@ -13705,6 +15768,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsCertificateDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of domain name certificates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateListRequest
         /// </param>
@@ -13746,6 +15814,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsCertificateListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of domain name certificates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateListRequest
         /// </param>
@@ -13787,6 +15860,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsCertificateListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of domain name certificates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateListRequest
         /// </param>
@@ -13800,6 +15878,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsCertificateListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of domain name certificates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsCertificateListRequest
         /// </param>
@@ -13813,6 +15896,21 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsCertificateListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves usage data for connected devices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify \<c>StartTime\\</c> and \<c>EndTime\\</c>, the API retrieves data from the last 24 hours by default. To query data for a specific time range, you must specify both \<c>StartTime\\</c> and \<c>EndTime\\</c>. The maximum time range for a single query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names at once. Separate the domain names with commas.</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVsDevicesDataRequest
         /// </param>
@@ -13862,6 +15960,21 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDevicesDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves usage data for connected devices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify \<c>StartTime\\</c> and \<c>EndTime\\</c>, the API retrieves data from the last 24 hours by default. To query data for a specific time range, you must specify both \<c>StartTime\\</c> and \<c>EndTime\\</c>. The maximum time range for a single query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names at once. Separate the domain names with commas.</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVsDevicesDataRequest
         /// </param>
@@ -13911,6 +16024,21 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDevicesDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves usage data for connected devices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify \<c>StartTime\\</c> and \<c>EndTime\\</c>, the API retrieves data from the last 24 hours by default. To query data for a specific time range, you must specify both \<c>StartTime\\</c> and \<c>EndTime\\</c>. The maximum time range for a single query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names at once. Separate the domain names with commas.</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVsDevicesDataRequest
         /// </param>
@@ -13924,6 +16052,21 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDevicesDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves usage data for connected devices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not specify \<c>StartTime\\</c> and \<c>EndTime\\</c>, the API retrieves data from the last 24 hours by default. To query data for a specific time range, you must specify both \<c>StartTime\\</c> and \<c>EndTime\\</c>. The maximum time range for a single query is 31 days.</para>
+        /// <list type="bullet">
+        /// <item><description>You can query multiple domain names at once. Separate the domain names with commas.</description></item>
+        /// <item><description>You can retrieve data from the last 90 days.</description></item>
+        /// <item><description>The time granularity is one hour.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVsDevicesDataRequest
         /// </param>
@@ -13937,6 +16080,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDevicesDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network bandwidth monitoring data for Domain Names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainBpsDataRequest
         /// </param>
@@ -13998,6 +16146,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainBpsDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network bandwidth monitoring data for Domain Names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainBpsDataRequest
         /// </param>
@@ -14059,6 +16212,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainBpsDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network bandwidth monitoring data for Domain Names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainBpsDataRequest
         /// </param>
@@ -14072,6 +16230,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainBpsDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries network bandwidth monitoring data for Domain Names.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainBpsDataRequest
         /// </param>
@@ -14085,6 +16248,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainBpsDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the certificate information for a specified accelerated domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainCertificateInfoRequest
         /// </param>
@@ -14126,6 +16294,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainCertificateInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the certificate information for a specified accelerated domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainCertificateInfoRequest
         /// </param>
@@ -14167,6 +16340,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainCertificateInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the certificate information for a specified accelerated domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainCertificateInfoRequest
         /// </param>
@@ -14180,6 +16358,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainCertificateInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the certificate information for a specified accelerated domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainCertificateInfoRequest
         /// </param>
@@ -14193,6 +16376,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainCertificateInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain name configurations. You can query the configurations of multiple features in a single request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainConfigsRequest
         /// </param>
@@ -14238,6 +16426,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain name configurations. You can query the configurations of multiple features in a single request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainConfigsRequest
         /// </param>
@@ -14283,6 +16476,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain name configurations. You can query the configurations of multiple features in a single request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainConfigsRequest
         /// </param>
@@ -14296,6 +16494,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries domain name configurations. You can query the configurations of multiple features in a single request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainConfigsRequest
         /// </param>
@@ -14309,6 +16512,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainConfigsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the basic configuration information for a specified Visual Edge Computing Service domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainDetailRequest
         /// </param>
@@ -14350,6 +16558,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the basic configuration information for a specified Visual Edge Computing Service domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainDetailRequest
         /// </param>
@@ -14391,6 +16604,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the basic configuration information for a specified Visual Edge Computing Service domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainDetailRequest
         /// </param>
@@ -14404,6 +16622,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtains the basic configuration information for a specified Visual Edge Computing Service domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainDetailRequest
         /// </param>
@@ -14417,6 +16640,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the page view (PV) data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvDataRequest
         /// </param>
@@ -14466,6 +16694,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainPvDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the page view (PV) data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvDataRequest
         /// </param>
@@ -14515,6 +16748,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainPvDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the page view (PV) data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvDataRequest
         /// </param>
@@ -14528,6 +16766,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainPvDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the page view (PV) data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvDataRequest
         /// </param>
@@ -14541,6 +16784,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainPvDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve page view (PV) and unique visitor (UV) data for a Visual Edge Computing Service domain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvUvDataRequest
         /// </param>
@@ -14590,6 +16838,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainPvUvDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve page view (PV) and unique visitor (UV) data for a Visual Edge Computing Service domain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvUvDataRequest
         /// </param>
@@ -14639,6 +16892,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainPvUvDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve page view (PV) and unique visitor (UV) data for a Visual Edge Computing Service domain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvUvDataRequest
         /// </param>
@@ -14652,6 +16910,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainPvUvDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve page view (PV) and unique visitor (UV) data for a Visual Edge Computing Service domain.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainPvUvDataRequest
         /// </param>
@@ -14665,6 +16928,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainPvUvDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve domain name record data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRecordDataRequest
         /// </param>
@@ -14718,6 +16986,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainRecordDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve domain name record data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRecordDataRequest
         /// </param>
@@ -14771,6 +17044,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainRecordDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve domain name record data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRecordDataRequest
         /// </param>
@@ -14784,6 +17062,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainRecordDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve domain name record data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRecordDataRequest
         /// </param>
@@ -14797,6 +17080,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainRecordDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves domain region data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRegionDataRequest
         /// </param>
@@ -14846,6 +17134,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainRegionDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves domain region data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRegionDataRequest
         /// </param>
@@ -14895,6 +17188,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainRegionDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves domain region data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRegionDataRequest
         /// </param>
@@ -14908,6 +17206,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainRegionDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves domain region data.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainRegionDataRequest
         /// </param>
@@ -14921,6 +17224,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainRegionDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query network request monitoring data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqBpsDataRequest
         /// </param>
@@ -14982,6 +17290,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainReqBpsDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query network request monitoring data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqBpsDataRequest
         /// </param>
@@ -15043,6 +17356,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainReqBpsDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query network request monitoring data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqBpsDataRequest
         /// </param>
@@ -15056,6 +17374,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainReqBpsDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query network request monitoring data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqBpsDataRequest
         /// </param>
@@ -15069,6 +17392,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainReqBpsDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain traffic data for domain name requests.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqTrafficDataRequest
         /// </param>
@@ -15130,6 +17458,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainReqTrafficDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain traffic data for domain name requests.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqTrafficDataRequest
         /// </param>
@@ -15191,6 +17524,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainReqTrafficDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain traffic data for domain name requests.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqTrafficDataRequest
         /// </param>
@@ -15204,6 +17542,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainReqTrafficDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain traffic data for domain name requests.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainReqTrafficDataRequest
         /// </param>
@@ -15217,6 +17560,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainReqTrafficDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainSnapshotDataRequest
         /// </param>
@@ -15266,6 +17614,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainSnapshotDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainSnapshotDataRequest
         /// </param>
@@ -15315,6 +17668,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainSnapshotDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainSnapshotDataRequest
         /// </param>
@@ -15328,6 +17686,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainSnapshotDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves snapshot data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainSnapshotDataRequest
         /// </param>
@@ -15341,6 +17704,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainSnapshotDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve traffic data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainTrafficDataRequest
         /// </param>
@@ -15402,6 +17770,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainTrafficDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve traffic data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainTrafficDataRequest
         /// </param>
@@ -15463,6 +17836,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainTrafficDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve traffic data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainTrafficDataRequest
         /// </param>
@@ -15476,6 +17854,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainTrafficDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve traffic data for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainTrafficDataRequest
         /// </param>
@@ -15489,6 +17872,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainTrafficDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve UV data by domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainUvDataRequest
         /// </param>
@@ -15538,6 +17926,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainUvDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve UV data by domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainUvDataRequest
         /// </param>
@@ -15587,6 +17980,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsDomainUvDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve UV data by domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainUvDataRequest
         /// </param>
@@ -15600,6 +17998,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsDomainUvDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve UV data by domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsDomainUvDataRequest
         /// </param>
@@ -15613,6 +18016,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsDomainUvDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pull stream configurations for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsPullStreamInfoConfigRequest
         /// </param>
@@ -15654,6 +18062,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsPullStreamInfoConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pull stream configurations for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsPullStreamInfoConfigRequest
         /// </param>
@@ -15695,6 +18108,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsPullStreamInfoConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pull stream configurations for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsPullStreamInfoConfigRequest
         /// </param>
@@ -15708,6 +18126,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsPullStreamInfoConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the pull stream configurations for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsPullStreamInfoConfigRequest
         /// </param>
@@ -15721,6 +18144,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsPullStreamInfoConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the stream ingest callback configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -15762,6 +18190,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsStreamsNotifyUrlConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the stream ingest callback configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -15803,6 +18236,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsStreamsNotifyUrlConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the stream ingest callback configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -15816,6 +18254,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsStreamsNotifyUrlConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the stream ingest callback configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -15829,6 +18272,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsStreamsNotifyUrlConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all active streams for a specified domain name or application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsOnlineListRequest
         /// </param>
@@ -15906,6 +18354,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsStreamsOnlineListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all active streams for a specified domain name or application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsOnlineListRequest
         /// </param>
@@ -15983,6 +18436,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsStreamsOnlineListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all active streams for a specified domain name or application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsOnlineListRequest
         /// </param>
@@ -15996,6 +18454,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsStreamsOnlineListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information about all active streams for a specified domain name or application.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsOnlineListRequest
         /// </param>
@@ -16009,6 +18472,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsStreamsOnlineListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve stream ingest records for a domain, an application under that domain, or a specific stream within a specified time range.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsPublishListRequest
         /// </param>
@@ -16086,6 +18554,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsStreamsPublishListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve stream ingest records for a domain, an application under that domain, or a specific stream within a specified time range.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsPublishListRequest
         /// </param>
@@ -16163,6 +18636,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsStreamsPublishListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve stream ingest records for a domain, an application under that domain, or a specific stream within a specified time range.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsPublishListRequest
         /// </param>
@@ -16176,6 +18654,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsStreamsPublishListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve stream ingest records for a domain, an application under that domain, or a specific stream within a specified time range.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsStreamsPublishListRequest
         /// </param>
@@ -16189,6 +18672,13 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsStreamsPublishListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a user\&quot;s domain names ranked by traffic.
+        /// If you do not specify StartTime and EndTime, data for the current month is retrieved by default. To query data over a specific time range, you must specify both StartTime and EndTime.
+        /// \* You can retrieve data for a maximum of 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsTopDomainsByFlowRequest
         /// </param>
@@ -16238,6 +18728,13 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsTopDomainsByFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a user\&quot;s domain names ranked by traffic.
+        /// If you do not specify StartTime and EndTime, data for the current month is retrieved by default. To query data over a specific time range, you must specify both StartTime and EndTime.
+        /// \* You can retrieve data for a maximum of 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsTopDomainsByFlowRequest
         /// </param>
@@ -16287,6 +18784,13 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsTopDomainsByFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a user\&quot;s domain names ranked by traffic.
+        /// If you do not specify StartTime and EndTime, data for the current month is retrieved by default. To query data over a specific time range, you must specify both StartTime and EndTime.
+        /// \* You can retrieve data for a maximum of 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsTopDomainsByFlowRequest
         /// </param>
@@ -16300,6 +18804,13 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsTopDomainsByFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a user\&quot;s domain names ranked by traffic.
+        /// If you do not specify StartTime and EndTime, data for the current month is retrieved by default. To query data over a specific time range, you must specify both StartTime and EndTime.
+        /// \* You can retrieve data for a maximum of 90 days.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsTopDomainsByFlowRequest
         /// </param>
@@ -16313,6 +18824,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsTopDomainsByFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily peak number of concurrent stream ingest operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsUpPeakPublishStreamDataRequest
         /// </param>
@@ -16366,6 +18882,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsUpPeakPublishStreamDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily peak number of concurrent stream ingest operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsUpPeakPublishStreamDataRequest
         /// </param>
@@ -16419,6 +18940,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsUpPeakPublishStreamDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily peak number of concurrent stream ingest operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsUpPeakPublishStreamDataRequest
         /// </param>
@@ -16432,6 +18958,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsUpPeakPublishStreamDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the daily peak number of concurrent stream ingest operations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsUpPeakPublishStreamDataRequest
         /// </param>
@@ -16553,6 +19084,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DescribeVsUserResourcePackageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeVsVerifyContent</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsVerifyContentRequest
         /// </param>
@@ -16594,6 +19130,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsVerifyContentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeVsVerifyContent</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsVerifyContentRequest
         /// </param>
@@ -16635,6 +19176,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<DescribeVsVerifyContentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeVsVerifyContent</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsVerifyContentRequest
         /// </param>
@@ -16648,6 +19194,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return DescribeVsVerifyContentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeVsVerifyContent</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeVsVerifyContentRequest
         /// </param>
@@ -16663,7 +19214,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目解除关联</para>
+        /// <para>Disassociate cloud application service instances from a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16715,7 +19266,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目解除关联</para>
+        /// <para>Disassociate cloud application service instances from a project.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16767,7 +19318,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目解除关联</para>
+        /// <para>Disassociate cloud application service instances from a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16785,7 +19336,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例与项目解除关联</para>
+        /// <para>Disassociate cloud application service instances from a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16801,6 +19352,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await DisassociateRenderingProjectInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ForbidVsStreamRequest
         /// </param>
@@ -16866,6 +19422,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ForbidVsStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ForbidVsStreamRequest
         /// </param>
@@ -16931,6 +19492,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ForbidVsStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ForbidVsStreamRequest
         /// </param>
@@ -16944,6 +19510,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ForbidVsStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Forbids pushing a specific stream. You can schedule a time to resume the stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ForbidVsStreamRequest
         /// </param>
@@ -16959,7 +19530,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令的执行状态与结果。</para>
+        /// <para>Queries the execution status of a control command to determine whether the command was successful and to retrieve the result string.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17005,7 +19576,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令的执行状态与结果。</para>
+        /// <para>Queries the execution status of a control command to determine whether the command was successful and to retrieve the result string.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17051,7 +19622,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令的执行状态与结果。</para>
+        /// <para>Queries the execution status of a control command to determine whether the command was successful and to retrieve the result string.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17069,7 +19640,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询命令的执行状态与结果。</para>
+        /// <para>Queries the execution status of a control command to determine whether the command was successful and to retrieve the result string.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17087,7 +19658,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云渲染实例流连接信息，每次流化建联前都需要调用此接口获取最新连接信息</para>
+        /// <para>Retrieves the streaming connection information for a cloud application service instance. Call this operation before establishing each streaming connection to obtain the latest connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17129,7 +19700,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云渲染实例流连接信息，每次流化建联前都需要调用此接口获取最新连接信息</para>
+        /// <para>Retrieves the streaming connection information for a cloud application service instance. Call this operation before establishing each streaming connection to obtain the latest connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17171,7 +19742,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云渲染实例流连接信息，每次流化建联前都需要调用此接口获取最新连接信息</para>
+        /// <para>Retrieves the streaming connection information for a cloud application service instance. Call this operation before establishing each streaming connection to obtain the latest connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17189,7 +19760,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云渲染实例流连接信息，每次流化建联前都需要调用此接口获取最新连接信息</para>
+        /// <para>Retrieves the streaming connection information for a cloud application service instance. Call this operation before establishing each streaming connection to obtain the latest connection details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17207,7 +19778,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出满足特定条件的资源各状态数据量统计值。</para>
+        /// <para>Queries the data volume statistics for the states of project instances that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17249,7 +19820,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出满足特定条件的资源各状态数据量统计值。</para>
+        /// <para>Queries the data volume statistics for the states of project instances that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17291,7 +19862,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出满足特定条件的资源各状态数据量统计值。</para>
+        /// <para>Queries the data volume statistics for the states of project instances that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17309,7 +19880,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>输出满足特定条件的资源各状态数据量统计值。</para>
+        /// <para>Queries the data volume statistics for the states of project instances that meet specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17325,6 +19896,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await GetRenderingProjectInstanceStateMetricsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves to a specified preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GotoPresetRequest
         /// </param>
@@ -17370,6 +19946,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<GotoPresetResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves to a specified preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GotoPresetRequest
         /// </param>
@@ -17415,6 +19996,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<GotoPresetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves to a specified preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GotoPresetRequest
         /// </param>
@@ -17428,6 +20014,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return GotoPresetWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Moves to a specified preset.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GotoPresetRequest
         /// </param>
@@ -17443,7 +20034,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装云应用</para>
+        /// <para>Installs a cloud application to a specified cloud application instance. This is an asynchronous interface. To monitor the installation progress, use the ListCloudAppInstallations interface.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17515,7 +20106,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装云应用</para>
+        /// <para>Installs a cloud application to a specified cloud application instance. This is an asynchronous interface. To monitor the installation progress, use the ListCloudAppInstallations interface.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17587,7 +20178,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装云应用</para>
+        /// <para>Installs a cloud application to a specified cloud application instance. This is an asynchronous interface. To monitor the installation progress, use the ListCloudAppInstallations interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17605,7 +20196,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安装云应用</para>
+        /// <para>Installs a cloud application to a specified cloud application instance. This is an asynchronous interface. To monitor the installation progress, use the ListCloudAppInstallations interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17623,7 +20214,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用安装信息列表</para>
+        /// <para>Lists cloud application installations. The response includes the installation status of cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17661,7 +20252,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用安装信息列表</para>
+        /// <para>Lists cloud application installations. The response includes the installation status of cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17699,7 +20290,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用安装信息列表</para>
+        /// <para>Lists cloud application installations. The response includes the installation status of cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17717,7 +20308,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用安装信息列表</para>
+        /// <para>Lists cloud application installations. The response includes the installation status of cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17735,8 +20326,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个云应用的Patch列表。</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCloudAppPatchesRequest
@@ -17801,8 +20399,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个云应用的Patch列表。</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCloudAppPatchesRequest
@@ -17867,8 +20472,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个云应用的Patch列表。</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCloudAppPatchesRequest
@@ -17885,8 +20497,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一个云应用的Patch列表。</para>
+        /// <para>Queries the list of patches for a cloud application.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCloudAppPatchesRequest
@@ -17903,7 +20522,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用列表</para>
+        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17941,7 +20560,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用列表</para>
+        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17979,7 +20598,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用列表</para>
+        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17997,7 +20616,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云应用列表</para>
+        /// <para>Queries a list of cloud applications. This operation supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18015,8 +20634,19 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// <para>Queries payload information for cloud application services. This operation supports paged queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API queries payload information for cloud application services and supports filtering and paged queries using various parameters.</description></item>
+        /// <item><description>Optional parameters include <c>Spec</c>, <c>Statuses</c>, <c>InstanceIds</c>, <c>PlanIds</c>, and <c>HiveIds</c>.</description></item>
+        /// <item><description>For paged queries, you can use the <c>PageNumber</c> and <c>PageSize</c> parameters to control the amount of data returned. The default page size is 10 records, and the maximum is 100 records.</description></item>
+        /// <item><description>You can specify a time range for the query using the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListEdgeWorkersRequest
@@ -18107,8 +20737,19 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// <para>Queries payload information for cloud application services. This operation supports paged queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API queries payload information for cloud application services and supports filtering and paged queries using various parameters.</description></item>
+        /// <item><description>Optional parameters include <c>Spec</c>, <c>Statuses</c>, <c>InstanceIds</c>, <c>PlanIds</c>, and <c>HiveIds</c>.</description></item>
+        /// <item><description>For paged queries, you can use the <c>PageNumber</c> and <c>PageSize</c> parameters to control the amount of data returned. The default page size is 10 records, and the maximum is 100 records.</description></item>
+        /// <item><description>You can specify a time range for the query using the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListEdgeWorkersRequest
@@ -18199,8 +20840,19 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// <para>Queries payload information for cloud application services. This operation supports paged queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API queries payload information for cloud application services and supports filtering and paged queries using various parameters.</description></item>
+        /// <item><description>Optional parameters include <c>Spec</c>, <c>Statuses</c>, <c>InstanceIds</c>, <c>PlanIds</c>, and <c>HiveIds</c>.</description></item>
+        /// <item><description>For paged queries, you can use the <c>PageNumber</c> and <c>PageSize</c> parameters to control the amount of data returned. The default page size is 10 records, and the maximum is 100 records.</description></item>
+        /// <item><description>You can specify a time range for the query using the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEdgeWorkersRequest
@@ -18217,8 +20869,19 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// <para>Queries payload information for cloud application services. This operation supports paged queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API queries payload information for cloud application services and supports filtering and paged queries using various parameters.</description></item>
+        /// <item><description>Optional parameters include <c>Spec</c>, <c>Statuses</c>, <c>InstanceIds</c>, <c>PlanIds</c>, and <c>HiveIds</c>.</description></item>
+        /// <item><description>For paged queries, you can use the <c>PageNumber</c> and <c>PageSize</c> parameters to control the amount of data returned. The default page size is 10 records, and the maximum is 100 records.</description></item>
+        /// <item><description>You can specify a time range for the query using the <c>StartTime</c> and <c>EndTime</c> parameters.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListEdgeWorkersRequest
@@ -18235,7 +20898,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件的实例推送状态信息列表。</para>
+        /// <para>Lists the push status records for a file pushed to cloud application service instances. It supports paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18273,7 +20936,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件的实例推送状态信息列表。</para>
+        /// <para>Lists the push status records for a file pushed to cloud application service instances. It supports paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18311,7 +20974,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件的实例推送状态信息列表。</para>
+        /// <para>Lists the push status records for a file pushed to cloud application service instances. It supports paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18329,7 +20992,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件的实例推送状态信息列表。</para>
+        /// <para>Lists the push status records for a file pushed to cloud application service instances. It supports paged query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18347,7 +21010,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用文件列表。</para>
+        /// <para>Lists uploaded files. The response includes the upload status for each file and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18385,7 +21048,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用文件列表。</para>
+        /// <para>Lists uploaded files. The response includes the upload status for each file and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18423,7 +21086,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用文件列表。</para>
+        /// <para>Lists uploaded files. The response includes the upload status for each file and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18441,7 +21104,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可用文件列表。</para>
+        /// <para>Lists uploaded files. The response includes the upload status for each file and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18461,6 +21124,17 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <summary>
         /// <para>查询所有集群信息，支持分页查询。</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询用户创建的所有集群信息。</description></item>
+        /// <item><description>支持通过 <c>HiveId</c> 和 <c>Name</c> 参数进行过滤查询。</description></item>
+        /// <item><description>分页参数 <c>PageNumber</c> 和 <c>PageSize</c> 可以控制返回结果的数量和页码，默认每页显示10条记录，最大支持100条。</description></item>
+        /// <item><description><c>StartTime</c> 和 <c>EndTime</c> 参数可用于指定时间范围内的集群信息查询，但非必填项。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHivesRequest
@@ -18524,6 +21198,17 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>查询所有集群信息，支持分页查询。</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询用户创建的所有集群信息。</description></item>
+        /// <item><description>支持通过 <c>HiveId</c> 和 <c>Name</c> 参数进行过滤查询。</description></item>
+        /// <item><description>分页参数 <c>PageNumber</c> 和 <c>PageSize</c> 可以控制返回结果的数量和页码，默认每页显示10条记录，最大支持100条。</description></item>
+        /// <item><description><c>StartTime</c> 和 <c>EndTime</c> 参数可用于指定时间范围内的集群信息查询，但非必填项。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListHivesRequest
         /// </param>
@@ -18586,6 +21271,17 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>查询所有集群信息，支持分页查询。</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询用户创建的所有集群信息。</description></item>
+        /// <item><description>支持通过 <c>HiveId</c> 和 <c>Name</c> 参数进行过滤查询。</description></item>
+        /// <item><description>分页参数 <c>PageNumber</c> 和 <c>PageSize</c> 可以控制返回结果的数量和页码，默认每页显示10条记录，最大支持100条。</description></item>
+        /// <item><description><c>StartTime</c> 和 <c>EndTime</c> 参数可用于指定时间范围内的集群信息查询，但非必填项。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListHivesRequest
         /// </param>
@@ -18604,6 +21300,17 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>查询所有集群信息，支持分页查询。</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询用户创建的所有集群信息。</description></item>
+        /// <item><description>支持通过 <c>HiveId</c> 和 <c>Name</c> 参数进行过滤查询。</description></item>
+        /// <item><description>分页参数 <c>PageNumber</c> 和 <c>PageSize</c> 可以控制返回结果的数量和页码，默认每页显示10条记录，最大支持100条。</description></item>
+        /// <item><description><c>StartTime</c> 和 <c>EndTime</c> 参数可用于指定时间范围内的集群信息查询，但非必填项。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListHivesRequest
         /// </param>
@@ -18619,7 +21326,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥信息</para>
+        /// <para>Retrieves a list of public keys that match the specified criteria. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18657,7 +21364,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥信息</para>
+        /// <para>Retrieves a list of public keys that match the specified criteria. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18695,7 +21402,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥信息</para>
+        /// <para>Retrieves a list of public keys that match the specified criteria. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18713,7 +21420,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询公钥信息</para>
+        /// <para>Retrieves a list of public keys that match the specified criteria. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18731,7 +21438,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云应用数据包信息，支持分页查询。</para>
+        /// <para>Queries information about the data packets of cloud applications. Paged queries are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18801,7 +21508,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云应用数据包信息，支持分页查询。</para>
+        /// <para>Queries information about the data packets of cloud applications. Paged queries are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18871,7 +21578,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云应用数据包信息，支持分页查询。</para>
+        /// <para>Queries information about the data packets of cloud applications. Paged queries are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18889,7 +21596,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云应用数据包信息，支持分页查询。</para>
+        /// <para>Queries information about the data packets of cloud applications. Paged queries are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18907,8 +21614,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义网关</para>
+        /// <para>Queries custom gateways.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRenderingInstanceGatewayRequest
@@ -18969,8 +21683,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义网关</para>
+        /// <para>Queries custom gateways.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRenderingInstanceGatewayRequest
@@ -19031,8 +21752,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义网关</para>
+        /// <para>Queries custom gateways.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRenderingInstanceGatewayRequest
@@ -19049,8 +21777,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义网关</para>
+        /// <para>Queries custom gateways.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least the template ID or the template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRenderingInstanceGatewayRequest
@@ -19067,7 +21802,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云渲染实例信息，支持分页查询。</para>
+        /// <para>Lists basic information about cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19105,7 +21840,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云渲染实例信息，支持分页查询。</para>
+        /// <para>Lists basic information about cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19143,7 +21878,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云渲染实例信息，支持分页查询。</para>
+        /// <para>Lists basic information about cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19161,7 +21896,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有云渲染实例信息，支持分页查询。</para>
+        /// <para>Lists basic information about cloud application service instances and supports paged queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19179,14 +21914,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询项目关联的云应用服务实例列表。</para>
+        /// <para>Retrieve a paginated list of cloud application service instances associated with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种筛选条件（如状态、实例ID等）来查询指定项目下的云应用服务实例。</description></item>
+        /// <item><description>This operation enables you to query cloud application service instances in a project using multiple filter conditions, such as status and instance ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19253,14 +21988,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询项目关联的云应用服务实例列表。</para>
+        /// <para>Retrieve a paginated list of cloud application service instances associated with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种筛选条件（如状态、实例ID等）来查询指定项目下的云应用服务实例。</description></item>
+        /// <item><description>This operation enables you to query cloud application service instances in a project using multiple filter conditions, such as status and instance ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19327,14 +22062,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询项目关联的云应用服务实例列表。</para>
+        /// <para>Retrieve a paginated list of cloud application service instances associated with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种筛选条件（如状态、实例ID等）来查询指定项目下的云应用服务实例。</description></item>
+        /// <item><description>This operation enables you to query cloud application service instances in a project using multiple filter conditions, such as status and instance ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19353,14 +22088,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询项目关联的云应用服务实例列表。</para>
+        /// <para>Retrieve a paginated list of cloud application service instances associated with a project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种筛选条件（如状态、实例ID等）来查询指定项目下的云应用服务实例。</description></item>
+        /// <item><description>This operation enables you to query cloud application service instances in a project using multiple filter conditions, such as status and instance ID.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19379,15 +22114,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询用户下的云应用服务项目基本信息列表。</para>
+        /// <para>Obtain a paged list of basic information about cloud application projects for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request details</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询指定用户下的渲染项目基本信息列表。</description></item>
-        /// <item><description>可通过 <c>ProjectId</c> 和 <c>ProjectName</c> 进行过滤查询。</description></item>
+        /// <item><description>This operation returns a paged list of basic information about rendering projects for a specified user.</description></item>
+        /// <item><description>Filter results by <c>ProjectId</c> or <c>ProjectName</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19450,15 +22185,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询用户下的云应用服务项目基本信息列表。</para>
+        /// <para>Obtain a paged list of basic information about cloud application projects for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request details</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询指定用户下的渲染项目基本信息列表。</description></item>
-        /// <item><description>可通过 <c>ProjectId</c> 和 <c>ProjectName</c> 进行过滤查询。</description></item>
+        /// <item><description>This operation returns a paged list of basic information about rendering projects for a specified user.</description></item>
+        /// <item><description>Filter results by <c>ProjectId</c> or <c>ProjectName</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19521,15 +22256,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询用户下的云应用服务项目基本信息列表。</para>
+        /// <para>Obtain a paged list of basic information about cloud application projects for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request details</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询指定用户下的渲染项目基本信息列表。</description></item>
-        /// <item><description>可通过 <c>ProjectId</c> 和 <c>ProjectName</c> 进行过滤查询。</description></item>
+        /// <item><description>This operation returns a paged list of basic information about rendering projects for a specified user.</description></item>
+        /// <item><description>Filter results by <c>ProjectId</c> or <c>ProjectName</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19548,15 +22283,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询用户下的云应用服务项目基本信息列表。</para>
+        /// <para>Obtain a paged list of basic information about cloud application projects for the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request details</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于分页查询指定用户下的渲染项目基本信息列表。</description></item>
-        /// <item><description>可通过 <c>ProjectId</c> 和 <c>ProjectName</c> 进行过滤查询。</description></item>
+        /// <item><description>This operation returns a paged list of basic information about rendering projects for a specified user.</description></item>
+        /// <item><description>Filter results by <c>ProjectId</c> or <c>ProjectName</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19575,15 +22310,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定条件下的渲染会话列表。</para>
+        /// <para>Performs a paged query for the list of cloud application service sessions based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种参数组合来过滤和分页查询用户的渲染会话列表。</description></item>
-        /// <item><description><c>SessionId</c> 和 <c>ClientId</c> 参数至少需要提供一个，但两者都不是必选的。如果同时提供了两个参数，则将根据这两个参数进行更精确的匹配。</description></item>
+        /// <item><description>This API supports filtering and paged query of user rendering session lists with various parameter combinations.</description></item>
+        /// <item><description>You must provide at least one of the <c>SessionId</c> or <c>ClientId</c> parameters. Neither parameter is mandatory independently. If both parameters are provided, a more precise match is performed based on these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19666,15 +22401,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定条件下的渲染会话列表。</para>
+        /// <para>Performs a paged query for the list of cloud application service sessions based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种参数组合来过滤和分页查询用户的渲染会话列表。</description></item>
-        /// <item><description><c>SessionId</c> 和 <c>ClientId</c> 参数至少需要提供一个，但两者都不是必选的。如果同时提供了两个参数，则将根据这两个参数进行更精确的匹配。</description></item>
+        /// <item><description>This API supports filtering and paged query of user rendering session lists with various parameter combinations.</description></item>
+        /// <item><description>You must provide at least one of the <c>SessionId</c> or <c>ClientId</c> parameters. Neither parameter is mandatory independently. If both parameters are provided, a more precise match is performed based on these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19757,15 +22492,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定条件下的渲染会话列表。</para>
+        /// <para>Performs a paged query for the list of cloud application service sessions based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种参数组合来过滤和分页查询用户的渲染会话列表。</description></item>
-        /// <item><description><c>SessionId</c> 和 <c>ClientId</c> 参数至少需要提供一个，但两者都不是必选的。如果同时提供了两个参数，则将根据这两个参数进行更精确的匹配。</description></item>
+        /// <item><description>This API supports filtering and paged query of user rendering session lists with various parameter combinations.</description></item>
+        /// <item><description>You must provide at least one of the <c>SessionId</c> or <c>ClientId</c> parameters. Neither parameter is mandatory independently. If both parameters are provided, a more precise match is performed based on these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19784,15 +22519,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询指定条件下的渲染会话列表。</para>
+        /// <para>Performs a paged query for the list of cloud application service sessions based on specified conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过多种参数组合来过滤和分页查询用户的渲染会话列表。</description></item>
-        /// <item><description><c>SessionId</c> 和 <c>ClientId</c> 参数至少需要提供一个，但两者都不是必选的。如果同时提供了两个参数，则将根据这两个参数进行更精确的匹配。</description></item>
+        /// <item><description>This API supports filtering and paged query of user rendering session lists with various parameter combinations.</description></item>
+        /// <item><description>You must provide at least one of the <c>SessionId</c> or <c>ClientId</c> parameters. Neither parameter is mandatory independently. If both parameters are provided, a more precise match is performed based on these two parameters.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19813,6 +22548,16 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <summary>
         /// <para>查询规格信息，支持分页查询。</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询所有可用的云应用服务规格信息。</description></item>
+        /// <item><description>支持通过 <c>Specification</c> 参数过滤特定规格。</description></item>
+        /// <item><description>分页查询时，可以通过 <c>PageNumber</c> 和 <c>PageSize</c> 参数控制返回的数据量。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSpecificationsRequest
@@ -19864,6 +22609,16 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>查询规格信息，支持分页查询。</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询所有可用的云应用服务规格信息。</description></item>
+        /// <item><description>支持通过 <c>Specification</c> 参数过滤特定规格。</description></item>
+        /// <item><description>分页查询时，可以通过 <c>PageNumber</c> 和 <c>PageSize</c> 参数控制返回的数据量。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSpecificationsRequest
         /// </param>
@@ -19914,6 +22669,16 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>查询规格信息，支持分页查询。</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询所有可用的云应用服务规格信息。</description></item>
+        /// <item><description>支持通过 <c>Specification</c> 参数过滤特定规格。</description></item>
+        /// <item><description>分页查询时，可以通过 <c>PageNumber</c> 和 <c>PageSize</c> 参数控制返回的数据量。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSpecificationsRequest
         /// </param>
@@ -19932,6 +22697,16 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <para>查询规格信息，支持分页查询。</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该 API 用于查询所有可用的云应用服务规格信息。</description></item>
+        /// <item><description>支持通过 <c>Specification</c> 参数过滤特定规格。</description></item>
+        /// <item><description>分页查询时，可以通过 <c>PageNumber</c> 和 <c>PageSize</c> 参数控制返回的数据量。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSpecificationsRequest
         /// </param>
@@ -19947,7 +22722,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安全登陆管理</para>
+        /// <para>Manages secure logons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20001,7 +22776,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安全登陆管理</para>
+        /// <para>Manages secure logons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20055,7 +22830,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安全登陆管理</para>
+        /// <para>Manages secure logons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20073,7 +22848,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>安全登陆管理</para>
+        /// <para>Manages secure logons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20091,8 +22866,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Comfy的工作流详细信息</para>
+        /// <para>Modifies the metadata of a specified workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyComfyWorkflowRequest
@@ -20141,8 +22921,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Comfy的工作流详细信息</para>
+        /// <para>Modifies the metadata of a specified workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyComfyWorkflowRequest
@@ -20191,8 +22976,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Comfy的工作流详细信息</para>
+        /// <para>Modifies the metadata of a specified workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyComfyWorkflowRequest
@@ -20209,8 +22999,13 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Comfy的工作流详细信息</para>
+        /// <para>Modifies the metadata of a specified workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>\&gt; 截图查询目前不支持分页，仅支持按迭代方式。使用返回结果里的extStartTime参数值，作为新请求的StartTime可请求下一页。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyComfyWorkflowRequest
@@ -20225,6 +23020,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyComfyWorkflowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update device information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceRequest
         /// </param>
@@ -20350,6 +23150,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update device information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceRequest
         /// </param>
@@ -20475,6 +23280,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update device information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceRequest
         /// </param>
@@ -20488,6 +23298,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update device information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceRequest
         /// </param>
@@ -20501,6 +23316,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the alarm status of a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceAlarmRequest
         /// </param>
@@ -20554,6 +23374,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceAlarmResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the alarm status of a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceAlarmRequest
         /// </param>
@@ -20607,6 +23432,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceAlarmResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the alarm status of a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceAlarmRequest
         /// </param>
@@ -20620,6 +23450,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyDeviceAlarmWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the alarm status of a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceAlarmRequest
         /// </param>
@@ -20633,6 +23468,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyDeviceAlarmWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the device image capture configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceCaptureRequest
         /// </param>
@@ -20682,6 +23522,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceCaptureResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the device image capture configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceCaptureRequest
         /// </param>
@@ -20731,6 +23576,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceCaptureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the device image capture configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceCaptureRequest
         /// </param>
@@ -20744,6 +23594,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyDeviceCaptureWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the device image capture configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceCaptureRequest
         /// </param>
@@ -20757,6 +23612,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyDeviceCaptureWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the list of channels for a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceChannelsRequest
         /// </param>
@@ -20810,6 +23670,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceChannelsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the list of channels for a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceChannelsRequest
         /// </param>
@@ -20863,6 +23728,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDeviceChannelsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the list of channels for a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceChannelsRequest
         /// </param>
@@ -20876,6 +23746,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyDeviceChannelsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the list of channels for a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDeviceChannelsRequest
         /// </param>
@@ -20889,6 +23764,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyDeviceChannelsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDirectoryRequest
         /// </param>
@@ -20938,6 +23818,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDirectoryRequest
         /// </param>
@@ -20987,6 +23872,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDirectoryRequest
         /// </param>
@@ -21000,6 +23890,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyDirectoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a directory.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDirectoryRequest
         /// </param>
@@ -21013,6 +23908,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can modify the details of a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupRequest
         /// </param>
@@ -21094,6 +23994,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can modify the details of a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupRequest
         /// </param>
@@ -21175,6 +24080,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can modify the details of a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupRequest
         /// </param>
@@ -21188,6 +24098,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can modify the details of a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGroupRequest
         /// </param>
@@ -21203,14 +24118,16 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates the name or description of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
+        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21261,14 +24178,16 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates the name or description of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
+        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21319,14 +24238,16 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates the name or description of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
+        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21345,14 +24266,16 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates the name or description of a specified cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>This API modifies the name and/or description of an existing cluster.</description></item>
+        /// <item><description><c>HiveId</c> is a required parameter that identifies the cluster to modify.</description></item>
+        /// <item><description>The <c>Name</c> and <c>Description</c> parameters are optional. You can specify either or both to update the corresponding attributes of the cluster.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21369,6 +24292,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyHiveAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParentPlatformRequest
         /// </param>
@@ -21446,6 +24374,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyParentPlatformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParentPlatformRequest
         /// </param>
@@ -21523,6 +24456,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyParentPlatformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParentPlatformRequest
         /// </param>
@@ -21536,6 +24474,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyParentPlatformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the information of a parent platform.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParentPlatformRequest
         /// </param>
@@ -21551,7 +24494,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例付费类型</para>
+        /// <para>Change the billing method for a Graphic Computing Service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21609,7 +24552,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例付费类型</para>
+        /// <para>Change the billing method for a Graphic Computing Service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21667,7 +24610,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例付费类型</para>
+        /// <para>Change the billing method for a Graphic Computing Service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21685,7 +24628,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例付费类型</para>
+        /// <para>Change the billing method for a Graphic Computing Service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21703,7 +24646,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例</para>
+        /// <para>Upgrades or downgrades a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21753,7 +24696,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例</para>
+        /// <para>Upgrades or downgrades a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21803,7 +24746,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例</para>
+        /// <para>Upgrades or downgrades a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21821,7 +24764,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>变配云渲染资源实例</para>
+        /// <para>Upgrades or downgrades a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21839,7 +24782,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云应用服务实例密码</para>
+        /// <para>Modifies the attributes of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21885,7 +24828,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云应用服务实例密码</para>
+        /// <para>Modifies the attributes of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21931,7 +24874,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云应用服务实例密码</para>
+        /// <para>Modifies the attributes of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21949,7 +24892,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云应用服务实例密码</para>
+        /// <para>Modifies the attributes of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21967,7 +24910,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云渲染实例限速带宽</para>
+        /// <para>Updates the rate limiting bandwidth for a cloud application service instance. You can call the DescribeRenderingInstance operation to retrieve the current rate limiting value and check the status of the rate limiting update.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22017,7 +24960,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云渲染实例限速带宽</para>
+        /// <para>Updates the rate limiting bandwidth for a cloud application service instance. You can call the DescribeRenderingInstance operation to retrieve the current rate limiting value and check the status of the rate limiting update.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22067,7 +25010,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云渲染实例限速带宽</para>
+        /// <para>Updates the rate limiting bandwidth for a cloud application service instance. You can call the DescribeRenderingInstance operation to retrieve the current rate limiting value and check the status of the rate limiting update.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22085,7 +25028,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云渲染实例限速带宽</para>
+        /// <para>Updates the rate limiting bandwidth for a cloud application service instance. You can call the DescribeRenderingInstance operation to retrieve the current rate limiting value and check the status of the rate limiting update.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22101,6 +25044,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyRenderingInstanceBandwidthWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies template information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTemplateRequest
         /// </param>
@@ -22218,6 +25166,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies template information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTemplateRequest
         /// </param>
@@ -22335,6 +25288,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ModifyTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies template information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTemplateRequest
         /// </param>
@@ -22348,6 +25306,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ModifyTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies template information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTemplateRequest
         /// </param>
@@ -22363,14 +25326,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动负载到集群</para>
+        /// <para>Moves the specified cloud application service instances from their current cluster to the target Hive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>Ensure the target Hive has sufficient resources to accommodate the instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22423,14 +25386,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动负载到集群</para>
+        /// <para>Moves the specified cloud application service instances from their current cluster to the target Hive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>Ensure the target Hive has sufficient resources to accommodate the instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22483,14 +25446,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动负载到集群</para>
+        /// <para>Moves the specified cloud application service instances from their current cluster to the target Hive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>Ensure the target Hive has sufficient resources to accommodate the instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22509,14 +25472,14 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动负载到集群</para>
+        /// <para>Moves the specified cloud application service instances from their current cluster to the target Hive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// <item><description>Ensure the target Hive has sufficient resources to accommodate the instances.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22533,6 +25496,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await MoveHiveEdgeWorkersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the service.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -22558,6 +25526,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<OpenVsServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the service.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -22583,6 +25556,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<OpenVsServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the service.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// OpenVsServiceResponse
         /// </returns>
@@ -22592,6 +25570,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return OpenVsServiceWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the service.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// OpenVsServiceResponse
         /// </returns>
@@ -22603,7 +25586,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预推文件到云渲染实例。</para>
+        /// <para>Push a file to a specified cloud application service instance. This is an asynchronous operation. You can query the push progress using the ListFilePushStatuses operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22649,7 +25632,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预推文件到云渲染实例。</para>
+        /// <para>Push a file to a specified cloud application service instance. This is an asynchronous operation. You can query the push progress using the ListFilePushStatuses operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22695,7 +25678,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预推文件到云渲染实例。</para>
+        /// <para>Push a file to a specified cloud application service instance. This is an asynchronous operation. You can query the push progress using the ListFilePushStatuses operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22713,7 +25696,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预推文件到云渲染实例。</para>
+        /// <para>Push a file to a specified cloud application service instance. This is an asynchronous operation. You can query the push progress using the ListFilePushStatuses operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22731,7 +25714,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启云渲染实例</para>
+        /// <para>Restarts a cloud application service instance. You can call the DescribeRenderingInstance API to monitor the restart progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22773,7 +25756,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启云渲染实例</para>
+        /// <para>Restarts a cloud application service instance. You can call the DescribeRenderingInstance API to monitor the restart progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22815,7 +25798,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启云渲染实例</para>
+        /// <para>Restarts a cloud application service instance. You can call the DescribeRenderingInstance API to monitor the restart progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22833,7 +25816,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启云渲染实例</para>
+        /// <para>Restarts a cloud application service instance. You can call the DescribeRenderingInstance API to monitor the restart progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22851,7 +25834,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例主机重启</para>
+        /// <para>Restarts the host of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22899,7 +25882,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例主机重启</para>
+        /// <para>Restarts the host of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22947,7 +25930,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例主机重启</para>
+        /// <para>Restarts the host of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22965,7 +25948,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云应用服务实例主机重启</para>
+        /// <para>Restarts the host of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22983,7 +25966,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据到云渲染实例</para>
+        /// <para>Recover data to a Graphic Computing Service instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23033,7 +26016,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据到云渲染实例</para>
+        /// <para>Recover data to a Graphic Computing Service instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23083,7 +26066,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据到云渲染实例</para>
+        /// <para>Recover data to a Graphic Computing Service instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23101,7 +26084,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复数据到云渲染实例</para>
+        /// <para>Recover data to a Graphic Computing Service instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23119,8 +26102,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例流连接信息</para>
+        /// <para>Call RefreshRenderingInstanceStreaming to refresh the stream connection for a cloud application service instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RefreshRenderingInstanceStreamingRequest
@@ -23171,8 +26161,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例流连接信息</para>
+        /// <para>Call RefreshRenderingInstanceStreaming to refresh the stream connection for a cloud application service instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RefreshRenderingInstanceStreamingRequest
@@ -23223,8 +26220,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例流连接信息</para>
+        /// <para>Call RefreshRenderingInstanceStreaming to refresh the stream connection for a cloud application service instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RefreshRenderingInstanceStreamingRequest
@@ -23241,8 +26245,15 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例流连接信息</para>
+        /// <para>Call RefreshRenderingInstanceStreaming to refresh the stream connection for a cloud application service instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of the template ID or template type.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// RefreshRenderingInstanceStreamingRequest
@@ -23259,7 +26270,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染数据包</para>
+        /// <para>Release a cloud application service data pack</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23301,7 +26312,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染数据包</para>
+        /// <para>Release a cloud application service data pack</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23343,7 +26354,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染数据包</para>
+        /// <para>Release a cloud application service data pack</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23361,7 +26372,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染数据包</para>
+        /// <para>Release a cloud application service data pack</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23379,7 +26390,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染实例</para>
+        /// <para>Invoke ReleaseRenderingInstance to release a Graphic Computing Service application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23421,7 +26432,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染实例</para>
+        /// <para>Invoke ReleaseRenderingInstance to release a Graphic Computing Service application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23463,7 +26474,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染实例</para>
+        /// <para>Invoke ReleaseRenderingInstance to release a Graphic Computing Service application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23481,7 +26492,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放云渲染实例</para>
+        /// <para>Invoke ReleaseRenderingInstance to release a Graphic Computing Service application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23499,7 +26510,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费云渲染资源实例</para>
+        /// <para>Invoke RenewRenderingInstance to renew a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23549,7 +26560,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费云渲染资源实例</para>
+        /// <para>Invoke RenewRenderingInstance to renew a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23599,7 +26610,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费云渲染资源实例</para>
+        /// <para>Invoke RenewRenderingInstance to renew a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23617,7 +26628,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>续费云渲染资源实例</para>
+        /// <para>Invoke RenewRenderingInstance to renew a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23635,7 +26646,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置云渲染实例</para>
+        /// <para>Resets a cloud application service instance. You can query the DescribeRenderingInstance interface to obtain the reset progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23685,7 +26696,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置云渲染实例</para>
+        /// <para>Resets a cloud application service instance. You can query the DescribeRenderingInstance interface to obtain the reset progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23735,7 +26746,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置云渲染实例</para>
+        /// <para>Resets a cloud application service instance. You can query the DescribeRenderingInstance interface to obtain the reset progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23753,7 +26764,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置云渲染实例</para>
+        /// <para>Resets a cloud application service instance. You can query the DescribeRenderingInstance interface to obtain the reset progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23769,6 +26780,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ResetRenderingInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes pushing for a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeVsStreamRequest
         /// </param>
@@ -23826,6 +26842,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ResumeVsStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes pushing for a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeVsStreamRequest
         /// </param>
@@ -23883,6 +26904,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<ResumeVsStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes pushing for a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeVsStreamRequest
         /// </param>
@@ -23896,6 +26922,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return ResumeVsStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes pushing for a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeVsStreamRequest
         /// </param>
@@ -23911,7 +26942,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，支持同步/异步响应命令。</para>
+        /// <para>Sends shell control instructions to a cloud application service instance. This operation supports both sync and asynchronous command responses. The sync scenario is not suitable for time-consuming commands. The maximum execution time cannot exceed 30 s. In an asynchronous scenario, you can call the GetRenderingInstanceCommandsStatus operation to query the execution status and result of a command.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23967,7 +26998,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，支持同步/异步响应命令。</para>
+        /// <para>Sends shell control instructions to a cloud application service instance. This operation supports both sync and asynchronous command responses. The sync scenario is not suitable for time-consuming commands. The maximum execution time cannot exceed 30 s. In an asynchronous scenario, you can call the GetRenderingInstanceCommandsStatus operation to query the execution status and result of a command.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24023,7 +27054,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，支持同步/异步响应命令。</para>
+        /// <para>Sends shell control instructions to a cloud application service instance. This operation supports both sync and asynchronous command responses. The sync scenario is not suitable for time-consuming commands. The maximum execution time cannot exceed 30 s. In an asynchronous scenario, you can call the GetRenderingInstanceCommandsStatus operation to query the execution status and result of a command.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24041,7 +27072,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下发shell命令，支持同步/异步响应命令。</para>
+        /// <para>Sends shell control instructions to a cloud application service instance. This operation supports both sync and asynchronous command responses. The sync scenario is not suitable for time-consuming commands. The maximum execution time cannot exceed 30 s. In an asynchronous scenario, you can call the GetRenderingInstanceCommandsStatus operation to query the execution status and result of a command.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24057,6 +27088,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await SendRenderingInstanceCommandsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Set a preset position.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPresetRequest
         /// </param>
@@ -24102,6 +27138,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SetPresetResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Set a preset position.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPresetRequest
         /// </param>
@@ -24147,6 +27188,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SetPresetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Set a preset position.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPresetRequest
         /// </param>
@@ -24160,6 +27206,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return SetPresetWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Set a preset position.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetPresetRequest
         /// </param>
@@ -24173,6 +27224,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await SetPresetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable or disable the certificate feature for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsDomainCertificateRequest
         /// </param>
@@ -24242,6 +27298,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SetVsDomainCertificateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable or disable the certificate feature for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsDomainCertificateRequest
         /// </param>
@@ -24311,6 +27372,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SetVsDomainCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable or disable the certificate feature for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsDomainCertificateRequest
         /// </param>
@@ -24324,6 +27390,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return SetVsDomainCertificateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enable or disable the certificate feature for a domain name.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsDomainCertificateRequest
         /// </param>
@@ -24337,6 +27408,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await SetVsDomainCertificateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure stream ingest callbacks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -24390,6 +27466,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SetVsStreamsNotifyUrlConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure stream ingest callbacks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -24443,6 +27524,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SetVsStreamsNotifyUrlConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure stream ingest callbacks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -24456,6 +27542,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return SetVsStreamsNotifyUrlConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configure stream ingest callbacks.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SetVsStreamsNotifyUrlConfigRequest
         /// </param>
@@ -24469,6 +27560,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await SetVsStreamsNotifyUrlConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling from a device. This action starts all streams on the device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each device currently supports only one ingest endpoint. The effect is the same as StartStream.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartDeviceRequest
         /// </param>
@@ -24510,6 +27611,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling from a device. This action starts all streams on the device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each device currently supports only one ingest endpoint. The effect is the same as StartStream.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartDeviceRequest
         /// </param>
@@ -24551,6 +27662,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling from a device. This action starts all streams on the device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each device currently supports only one ingest endpoint. The effect is the same as StartStream.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartDeviceRequest
         /// </param>
@@ -24564,6 +27685,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StartDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start stream pulling from a device. This action starts all streams on the device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each device currently supports only one ingest endpoint. The effect is the same as StartStream.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartDeviceRequest
         /// </param>
@@ -24577,6 +27708,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StartDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts interactions with the parent platform, such as registration and keep-alive.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartParentPlatformRequest
         /// </param>
@@ -24618,6 +27754,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartParentPlatformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts interactions with the parent platform, such as registration and keep-alive.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartParentPlatformRequest
         /// </param>
@@ -24659,6 +27800,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartParentPlatformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts interactions with the parent platform, such as registration and keep-alive.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartParentPlatformRequest
         /// </param>
@@ -24672,6 +27818,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StartParentPlatformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts interactions with the parent platform, such as registration and keep-alive.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartParentPlatformRequest
         /// </param>
@@ -24801,6 +27952,23 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StartPublishStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts on-demand recording for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>An on-demand record template is required. You must first attach one to the space or stream.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify a stream in two ways: using its ID or its PlayDomain/App/Name.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordStreamRequest
         /// </param>
@@ -24854,6 +28022,23 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartRecordStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts on-demand recording for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>An on-demand record template is required. You must first attach one to the space or stream.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify a stream in two ways: using its ID or its PlayDomain/App/Name.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordStreamRequest
         /// </param>
@@ -24907,6 +28092,23 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartRecordStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts on-demand recording for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>An on-demand record template is required. You must first attach one to the space or stream.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify a stream in two ways: using its ID or its PlayDomain/App/Name.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordStreamRequest
         /// </param>
@@ -24920,6 +28122,23 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StartRecordStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts on-demand recording for the specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>An on-demand record template is required. You must first attach one to the space or stream.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify a stream in two ways: using its ID or its PlayDomain/App/Name.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartRecordStreamRequest
         /// </param>
@@ -24935,7 +28154,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度一个空闲云应用服务实例，并完成服务启动。</para>
+        /// <para>Schedules an idle cloud application service instance for the requesting client (ClientId) and starts the service. If the requesting client (ClientId) sends another start request after a successful start and the associated session is in the SessionStartSuspended state, the session is restarted. If the session is in any other state, the session information is returned directly.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24999,7 +28218,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度一个空闲云应用服务实例，并完成服务启动。</para>
+        /// <para>Schedules an idle cloud application service instance for the requesting client (ClientId) and starts the service. If the requesting client (ClientId) sends another start request after a successful start and the associated session is in the SessionStartSuspended state, the session is restarted. If the session is in any other state, the session information is returned directly.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25063,7 +28282,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度一个空闲云应用服务实例，并完成服务启动。</para>
+        /// <para>Schedules an idle cloud application service instance for the requesting client (ClientId) and starts the service. If the requesting client (ClientId) sends another start request after a successful start and the associated session is in the SessionStartSuspended state, the session is restarted. If the session is in any other state, the session information is returned directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25081,7 +28300,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度一个空闲云应用服务实例，并完成服务启动。</para>
+        /// <para>Schedules an idle cloud application service instance for the requesting client (ClientId) and starts the service. If the requesting client (ClientId) sends another start request after a successful start and the associated session is in the SessionStartSuspended state, the session is restarted. If the session is in any other state, the session information is returned directly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25097,6 +28316,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StartRenderingSessionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartStreamRequest
         /// </param>
@@ -25146,6 +28370,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartStreamRequest
         /// </param>
@@ -25195,6 +28424,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartStreamRequest
         /// </param>
@@ -25208,6 +28442,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StartStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Start a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartStreamRequest
         /// </param>
@@ -25221,6 +28460,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StartStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts forwarding a stream to an external address.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTransferStreamRequest
         /// </param>
@@ -25270,6 +28514,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartTransferStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts forwarding a stream to an external address.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTransferStreamRequest
         /// </param>
@@ -25319,6 +28568,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StartTransferStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts forwarding a stream to an external address.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTransferStreamRequest
         /// </param>
@@ -25332,6 +28586,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StartTransferStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Starts forwarding a stream to an external address.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartTransferStreamRequest
         /// </param>
@@ -25345,6 +28604,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StartTransferStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops lens adjustments, such as aperture or zoom changes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopAdjustRequest
         /// </param>
@@ -25394,6 +28658,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopAdjustResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops lens adjustments, such as aperture or zoom changes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopAdjustRequest
         /// </param>
@@ -25443,6 +28712,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopAdjustResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops lens adjustments, such as aperture or zoom changes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopAdjustRequest
         /// </param>
@@ -25456,6 +28730,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StopAdjustWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops lens adjustments, such as aperture or zoom changes.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopAdjustRequest
         /// </param>
@@ -25469,6 +28748,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StopAdjustWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopDeviceRequest
         /// </param>
@@ -25514,6 +28803,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopDeviceRequest
         /// </param>
@@ -25559,6 +28858,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopDeviceRequest
         /// </param>
@@ -25572,6 +28881,16 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StopDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stops stream pulling for a device. This operation terminates all streams on that device.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopDeviceRequest
         /// </param>
@@ -25585,6 +28904,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StopDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops camera movement, such as panning, tilting, and zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopMoveRequest
         /// </param>
@@ -25638,6 +28962,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopMoveResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops camera movement, such as panning, tilting, and zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopMoveRequest
         /// </param>
@@ -25691,6 +29020,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopMoveResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops camera movement, such as panning, tilting, and zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopMoveRequest
         /// </param>
@@ -25704,6 +29038,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StopMoveWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops camera movement, such as panning, tilting, and zooming.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopMoveRequest
         /// </param>
@@ -25825,6 +29164,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StopPublishStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops on-demand recording for a specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a stream by ID or by PlayDomain/App/Name.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordStreamRequest
         /// </param>
@@ -25878,6 +29229,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopRecordStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops on-demand recording for a specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a stream by ID or by PlayDomain/App/Name.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordStreamRequest
         /// </param>
@@ -25931,6 +29294,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopRecordStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops on-demand recording for a specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a stream by ID or by PlayDomain/App/Name.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordStreamRequest
         /// </param>
@@ -25944,6 +29319,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StopRecordStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops on-demand recording for a specified stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can specify a stream by ID or by PlayDomain/App/Name.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StopRecordStreamRequest
         /// </param>
@@ -25959,12 +29346,12 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭指定的云应用服务会话并回收相关实例资源。</para>
+        /// <para>Shut down the specified cloud application service session and revoke the associated instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request information</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -26014,12 +29401,12 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭指定的云应用服务会话并回收相关实例资源。</para>
+        /// <para>Shut down the specified cloud application service session and revoke the associated instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request information</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -26069,12 +29456,12 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭指定的云应用服务会话并回收相关实例资源。</para>
+        /// <para>Shut down the specified cloud application service session and revoke the associated instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request information</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -26092,12 +29479,12 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭指定的云应用服务会话并回收相关实例资源。</para>
+        /// <para>Shut down the specified cloud application service session and revoke the associated instance resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request information</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -26113,6 +29500,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StopRenderingSessionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopStreamRequest
         /// </param>
@@ -26162,6 +29554,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopStreamRequest
         /// </param>
@@ -26211,6 +29608,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopStreamRequest
         /// </param>
@@ -26224,6 +29626,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StopStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopStreamRequest
         /// </param>
@@ -26237,6 +29644,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StopStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopTransferStreamRequest
         /// </param>
@@ -26282,6 +29694,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopTransferStreamResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopTransferStreamRequest
         /// </param>
@@ -26327,6 +29744,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<StopTransferStreamResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopTransferStreamRequest
         /// </param>
@@ -26340,6 +29762,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return StopTransferStreamWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Stops a stream.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StopTransferStreamRequest
         /// </param>
@@ -26353,6 +29780,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await StopTransferStreamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes platform channel information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncCatalogsRequest
         /// </param>
@@ -26394,6 +29826,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SyncCatalogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes platform channel information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncCatalogsRequest
         /// </param>
@@ -26435,6 +29872,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<SyncCatalogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes platform channel information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncCatalogsRequest
         /// </param>
@@ -26448,6 +29890,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return SyncCatalogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes platform channel information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SyncCatalogsRequest
         /// </param>
@@ -26461,6 +29908,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await SyncCatalogsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a device from a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindDirectoryRequest
         /// </param>
@@ -26506,6 +29958,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindDirectoryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a device from a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindDirectoryRequest
         /// </param>
@@ -26551,6 +30008,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindDirectoryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a device from a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindDirectoryRequest
         /// </param>
@@ -26564,6 +30026,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return UnbindDirectoryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detach a device from a folder.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindDirectoryRequest
         /// </param>
@@ -26577,6 +30044,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await UnbindDirectoryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a device from a parent platform push configuration so that the device is no longer pushed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindParentPlatformDeviceRequest
         /// </param>
@@ -26622,6 +30094,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindParentPlatformDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a device from a parent platform push configuration so that the device is no longer pushed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindParentPlatformDeviceRequest
         /// </param>
@@ -26667,6 +30144,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindParentPlatformDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a device from a parent platform push configuration so that the device is no longer pushed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindParentPlatformDeviceRequest
         /// </param>
@@ -26680,6 +30162,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return UnbindParentPlatformDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Dissociates a device from a parent platform push configuration so that the device is no longer pushed.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindParentPlatformDeviceRequest
         /// </param>
@@ -26693,6 +30180,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await UnbindParentPlatformDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a purchased device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindPurchasedDeviceRequest
         /// </param>
@@ -26734,6 +30226,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindPurchasedDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a purchased device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindPurchasedDeviceRequest
         /// </param>
@@ -26775,6 +30272,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindPurchasedDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a purchased device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindPurchasedDeviceRequest
         /// </param>
@@ -26788,6 +30290,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return UnbindPurchasedDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a purchased device from a space.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnbindPurchasedDeviceRequest
         /// </param>
@@ -26801,6 +30308,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await UnbindPurchasedDeviceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind a template from a specified instance, such as a group instance or a stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UnbindTemplateRequest
         /// </param>
@@ -26854,6 +30373,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind a template from a specified instance, such as a group instance or a stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UnbindTemplateRequest
         /// </param>
@@ -26907,6 +30438,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnbindTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind a template from a specified instance, such as a group instance or a stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UnbindTemplateRequest
         /// </param>
@@ -26920,6 +30463,18 @@ namespace AlibabaCloud.SDK.Vs20181212
             return UnbindTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbind a template from a specified instance, such as a group instance or a stream.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Specify at least one of TemplateId or TemplateType.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UnbindTemplateRequest
         /// </param>
@@ -26935,7 +30490,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载云应用</para>
+        /// <para>You can uninstall a specified cloud application from a specified cloud application instance. This operation is asynchronous. You can use the ListCloudAppInstallations operation to check the uninstallation progress. After successful uninstallation, the query operation no longer returns related information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27007,7 +30562,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载云应用</para>
+        /// <para>You can uninstall a specified cloud application from a specified cloud application instance. This operation is asynchronous. You can use the ListCloudAppInstallations operation to check the uninstallation progress. After successful uninstallation, the query operation no longer returns related information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27079,7 +30634,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载云应用</para>
+        /// <para>You can uninstall a specified cloud application from a specified cloud application instance. This operation is asynchronous. You can use the ListCloudAppInstallations operation to check the uninstallation progress. After successful uninstallation, the query operation no longer returns related information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27097,7 +30652,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>卸载云应用</para>
+        /// <para>You can uninstall a specified cloud application from a specified cloud application instance. This operation is asynchronous. You can use the ListCloudAppInstallations operation to check the uninstallation progress. After successful uninstallation, the query operation no longer returns related information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27113,6 +30668,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await UninstallCloudAppWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlock a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnlockDeviceRequest
         /// </param>
@@ -27154,6 +30714,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnlockDeviceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlock a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnlockDeviceRequest
         /// </param>
@@ -27195,6 +30760,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UnlockDeviceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlock a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnlockDeviceRequest
         /// </param>
@@ -27208,6 +30778,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return UnlockDeviceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unlock a device.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UnlockDeviceRequest
         /// </param>
@@ -27223,7 +30798,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云应用信息</para>
+        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27293,7 +30868,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云应用信息</para>
+        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27363,7 +30938,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云应用信息</para>
+        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27381,7 +30956,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云应用信息</para>
+        /// <para>Updates information for a cloud application, such as its description and tags. You can upload patch or hotfix packages and create hotfix packages for the Android cloud application marketplace. A cloud application supports up to 20 patch packages, but only one package can be in the uploading state at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27399,7 +30974,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文件信息。</para>
+        /// <para>Update basic information for a file, such as its description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27445,7 +31020,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文件信息。</para>
+        /// <para>Update basic information for a file, such as its description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27491,7 +31066,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文件信息。</para>
+        /// <para>Update basic information for a file, such as its description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27509,7 +31084,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文件信息。</para>
+        /// <para>Update basic information for a file, such as its description.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27527,7 +31102,9 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云渲染实例配置参数</para>
+        /// <para>This operation updates the configuration parameters of a cloud application service instance. It lets you modify various configurations of the Cloud Android system, such as prop, location, and network, to create a real device simulation.
+        /// You can retrieve the configured values for the real device simulation by calling the DescribeRenderingInstance API.
+        /// To query the configuration parameters of the real-time environment, see the DescribeRenderingInstanceConfiguration API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27581,7 +31158,9 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云渲染实例配置参数</para>
+        /// <para>This operation updates the configuration parameters of a cloud application service instance. It lets you modify various configurations of the Cloud Android system, such as prop, location, and network, to create a real device simulation.
+        /// You can retrieve the configured values for the real device simulation by calling the DescribeRenderingInstance API.
+        /// To query the configuration parameters of the real-time environment, see the DescribeRenderingInstanceConfiguration API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27635,7 +31214,9 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云渲染实例配置参数</para>
+        /// <para>This operation updates the configuration parameters of a cloud application service instance. It lets you modify various configurations of the Cloud Android system, such as prop, location, and network, to create a real device simulation.
+        /// You can retrieve the configured values for the real device simulation by calling the DescribeRenderingInstance API.
+        /// To query the configuration parameters of the real-time environment, see the DescribeRenderingInstanceConfiguration API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27653,7 +31234,9 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新云渲染实例配置参数</para>
+        /// <para>This operation updates the configuration parameters of a cloud application service instance. It lets you modify various configurations of the Cloud Android system, such as prop, location, and network, to create a real device simulation.
+        /// You can retrieve the configured values for the real device simulation by calling the DescribeRenderingInstance API.
+        /// To query the configuration parameters of the real-time environment, see the DescribeRenderingInstanceConfiguration API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27671,7 +31254,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例设置</para>
+        /// <para>Updates the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27723,7 +31306,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例设置</para>
+        /// <para>Updates the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27775,7 +31358,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例设置</para>
+        /// <para>Updates the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27793,7 +31376,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新实例设置</para>
+        /// <para>Updates the settings of a cloud application service instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27811,7 +31394,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个项目的属性信息</para>
+        /// <para>Updates a project’s properties.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27871,7 +31454,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个项目的属性信息</para>
+        /// <para>Updates a project’s properties.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27931,7 +31514,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个项目的属性信息</para>
+        /// <para>Updates a project’s properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27949,7 +31532,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个项目的属性信息</para>
+        /// <para>Updates a project’s properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27965,6 +31548,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await UpdateRenderingProjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration for stream pulling. You can modify the start and end times of origin server addresses in an existing stream pulling task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateVsPullStreamInfoConfigRequest
         /// </param>
@@ -28030,6 +31618,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UpdateVsPullStreamInfoConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration for stream pulling. You can modify the start and end times of origin server addresses in an existing stream pulling task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateVsPullStreamInfoConfigRequest
         /// </param>
@@ -28095,6 +31688,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<UpdateVsPullStreamInfoConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration for stream pulling. You can modify the start and end times of origin server addresses in an existing stream pulling task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateVsPullStreamInfoConfigRequest
         /// </param>
@@ -28108,6 +31706,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return UpdateVsPullStreamInfoConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration for stream pulling. You can modify the start and end times of origin server addresses in an existing stream pulling task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateVsPullStreamInfoConfigRequest
         /// </param>
@@ -28123,7 +31726,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用上架</para>
+        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28199,7 +31802,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用上架</para>
+        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28275,7 +31878,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用上架</para>
+        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28293,7 +31896,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>应用上架</para>
+        /// <para>Upload or list a cloud application package. This is an asynchronous API. Use the ListCloudApps API to check upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28311,7 +31914,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传</para>
+        /// <para>Uploads a file from a public URL to local or cloud storage. This is an asynchronous operation. You can call the ListFiles operation to monitor the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28369,7 +31972,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传</para>
+        /// <para>Uploads a file from a public URL to local or cloud storage. This is an asynchronous operation. You can call the ListFiles operation to monitor the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28427,7 +32030,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传</para>
+        /// <para>Uploads a file from a public URL to local or cloud storage. This is an asynchronous operation. You can call the ListFiles operation to monitor the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28445,7 +32048,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>文件上传</para>
+        /// <para>Uploads a file from a public URL to local or cloud storage. This is an asynchronous operation. You can call the ListFiles operation to monitor the upload progress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28463,7 +32066,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥，用于安全登陆鉴权。</para>
+        /// <para>Upload a new public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28521,7 +32124,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥，用于安全登陆鉴权。</para>
+        /// <para>Upload a new public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28579,7 +32182,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥，用于安全登陆鉴权。</para>
+        /// <para>Upload a new public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28597,7 +32200,7 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传公钥，用于安全登陆鉴权。</para>
+        /// <para>Upload a new public key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28613,6 +32216,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await UploadPublicKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>VerifyVsDomainOwner</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyVsDomainOwnerRequest
         /// </param>
@@ -28658,6 +32266,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<VerifyVsDomainOwnerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>VerifyVsDomainOwner</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyVsDomainOwnerRequest
         /// </param>
@@ -28703,6 +32316,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<VerifyVsDomainOwnerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>VerifyVsDomainOwner</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyVsDomainOwnerRequest
         /// </param>
@@ -28716,6 +32334,11 @@ namespace AlibabaCloud.SDK.Vs20181212
             return VerifyVsDomainOwnerWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>VerifyVsDomainOwner</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// VerifyVsDomainOwnerRequest
         /// </param>

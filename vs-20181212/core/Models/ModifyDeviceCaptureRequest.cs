@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ModifyDeviceCaptureRequest : TeaModel {
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Image capture control. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0 (shutdown)</para>
+        /// </description></item>
+        /// <item><description><para>1 (enable)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -32,6 +41,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Video recording control. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0 (shutdown)</para>
+        /// </description></item>
+        /// <item><description><para>1 (enable short recording)</para>
+        /// </description></item>
+        /// <item><description><para>2 (enable long recording)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application to which the stream belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>live</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string App { get; set; }
 
         /// <summary>
+        /// <para>The time when the stream was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2019-02-28T17:00:17Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the device to which the stream belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>348*****380-cn-qingdao</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the stream is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The ID of the group to which the stream belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>348*****174-cn-qingdao</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The height of the video stream resolution.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>720</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? Height { get; set; }
 
         /// <summary>
+        /// <para>The stream ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>323*****997-cn-qingdao</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The name of the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31000000*****0000002</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The streaming domain to which the stream belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PlayDomain { get; set; }
 
         /// <summary>
+        /// <para>The protocol of the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gb28181</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Protocol { get; set; }
 
         /// <summary>
+        /// <para>The ingest domain to which the stream belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo.aliyundoc.com</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PushDomain { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -106,6 +130,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the stream. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>on (online)</para>
+        /// </description></item>
+        /// <item><description><para>off (offline)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -114,6 +146,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The width of the video stream resolution.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1280</para>
         /// </summary>

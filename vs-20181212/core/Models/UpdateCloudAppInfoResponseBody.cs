@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateCloudAppInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the patch package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>patch-03fa76e8e13a49b6a966b063d9d309b4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>

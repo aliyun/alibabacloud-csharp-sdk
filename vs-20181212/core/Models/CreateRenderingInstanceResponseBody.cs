@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the cloud application service instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>

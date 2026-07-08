@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>Template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>323434****83423432</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Filter templates by the bound instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>323*****998-cn-qingdao</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Page number. Default: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page. Default: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Sort results by the specified field. Default: sort by ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>id</para>
         /// </summary>
@@ -54,6 +64,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>Sort order. Default: ascending. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>asc (ascending)</para>
+        /// </description></item>
+        /// <item><description><para>desc (descending)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortDirection { get; set; }
 
         /// <summary>
+        /// <para>Filter templates by template type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>record</para>
         /// </summary>

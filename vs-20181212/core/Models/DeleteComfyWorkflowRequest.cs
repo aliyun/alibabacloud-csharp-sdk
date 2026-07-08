@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteComfyWorkflowRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

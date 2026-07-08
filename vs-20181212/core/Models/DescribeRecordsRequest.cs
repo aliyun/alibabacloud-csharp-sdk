@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>Specify the end time for the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to use a private bucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -48,6 +55,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? PrivateBucket { get; set; }
 
         /// <summary>
+        /// <para>The field to sort the records by. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>Id (default)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Id</para>
         /// </summary>
@@ -56,6 +68,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>The sorting method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>asc (ascending, default)</para>
+        /// </description></item>
+        /// <item><description><para>desc (descending)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>asc</para>
         /// </summary>
@@ -64,6 +84,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string SortDirection { get; set; }
 
         /// <summary>
+        /// <para>Query records by start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +95,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>Query by stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +106,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string StreamId { get; set; }
 
         /// <summary>
+        /// <para>The type of the recording record to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>record (Recording)</para>
+        /// </description></item>
+        /// <item><description><para>snapshot</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

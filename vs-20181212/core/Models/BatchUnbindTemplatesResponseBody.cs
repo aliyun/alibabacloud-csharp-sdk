@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchUnbindTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90B377DF-C874-5BBD-B957-42C4C06AFECE</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<BatchUnbindTemplatesResponseBodyResults> Results { get; set; }
         public class BatchUnbindTemplatesResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The error message.</para>
+            /// <remarks>
+            /// <para>Appears only if the operation fails.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>some error</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Error { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>323*****994-cn-qingdao</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>group</para>
             /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>The template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>323*****998-cn-qingdao</para>
             /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string TemplateId { get; set; }
 
             /// <summary>
+            /// <para>The template type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>snapshot</para>
             /// </summary>

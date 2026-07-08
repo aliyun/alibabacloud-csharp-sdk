@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchStartDevicesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID of this task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of results.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<BatchStartDevicesResponseBodyResults> Results { get; set; }
         public class BatchStartDevicesResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>Device ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>32388487****92996-cn-qingdao</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>List of device streams.</para>
+            /// </summary>
             [NameInMap("Streams")]
             [Validation(Required=false)]
             public List<BatchStartDevicesResponseBodyResultsStreams> Streams { get; set; }
             public class BatchStartDevicesResponseBodyResultsStreams : TeaModel {
                 /// <summary>
+                /// <para>Error message for the stream. This field appears only when an error occurs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Stream not found</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Error { get; set; }
 
                 /// <summary>
+                /// <para>Stream ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3238848****092997-cn-qingdao</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>Stream name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>310101*****187542126</para>
                 /// </summary>

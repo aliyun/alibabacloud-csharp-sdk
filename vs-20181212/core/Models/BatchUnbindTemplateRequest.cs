@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchUnbindTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. Separate multiple IDs with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>group</para>
+        /// </description></item>
+        /// <item><description><para>stream</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +42,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The template ID. If omitted, all bindings that match the conditions on the instance are detached.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>323*****998-cn-qingdao</para>
         /// </summary>
@@ -42,6 +52,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>The template type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>record</para>
+        /// </description></item>
+        /// <item><description><para>snapshot</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>record</para>
         /// </summary>

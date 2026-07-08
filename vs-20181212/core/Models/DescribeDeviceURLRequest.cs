@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Auth { get; set; }
 
         /// <summary>
+        /// <para>Authentication validity period, in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -22,6 +24,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +35,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Stream mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>play</para>
+        /// </description></item>
+        /// <item><description><para>push</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>push</para>
         /// </summary>
@@ -40,6 +51,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Mode { get; set; }
 
         /// <summary>
+        /// <para>Stream protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>rtmp</para>
+        /// </description></item>
+        /// <item><description><para>flv</para>
+        /// </description></item>
+        /// <item><description><para>hls</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>When Mode is set to push, only rtmp is supported.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +77,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Stream name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchStopStreamsRequest : TeaModel {
         /// <summary>
+        /// <para>The stream IDs. To specify multiple IDs, separate them with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The time to stop the streams. You can specify a future time to stop the streams.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-10T10:00:00Z</para>
         /// </summary>

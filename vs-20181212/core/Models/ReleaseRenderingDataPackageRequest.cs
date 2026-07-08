@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class ReleaseRenderingDataPackageRequest : TeaModel {
         /// <summary>
+        /// <para>Cloud application service data pack ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

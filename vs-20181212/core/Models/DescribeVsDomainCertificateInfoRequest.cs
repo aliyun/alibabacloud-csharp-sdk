@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainCertificateInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

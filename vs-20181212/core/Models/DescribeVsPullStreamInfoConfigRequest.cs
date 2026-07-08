@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsPullStreamInfoConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The stream pulling domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

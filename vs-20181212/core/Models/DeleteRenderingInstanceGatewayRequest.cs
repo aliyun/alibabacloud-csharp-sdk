@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteRenderingInstanceGatewayRequest : TeaModel {
         /// <summary>
+        /// <para>Cloud application service instance ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>

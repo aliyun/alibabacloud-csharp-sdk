@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Result list.</para>
+        /// </summary>
         [NameInMap("Bindings")]
         [Validation(Required=false)]
         public List<BatchBindTemplateResponseBodyBindings> Bindings { get; set; }
         public class BatchBindTemplateResponseBodyBindings : TeaModel {
             /// <summary>
+            /// <para>Error message.</para>
+            /// <remarks>
+            /// <para>This field exists only when the operation fails.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>some error</para>
             /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Error { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>323*****994-cn-qingdao</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>Instance type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>group</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>Template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>323*****998-cn-qingdao</para>
             /// </summary>
@@ -48,6 +62,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>

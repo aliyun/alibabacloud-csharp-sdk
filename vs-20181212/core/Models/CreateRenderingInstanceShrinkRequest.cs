@@ -9,11 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateRenderingInstanceShrinkRequest : TeaModel {
+        /// <summary>
+        /// <remarks>
+        /// <para>Unless you have specific requirements, keep the default values. For customers with special requirements, fill in the relevant parameters after communication and confirmation.</para>
+        /// </remarks>
+        /// <para>Attribute information.</para>
+        /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public string AttributesShrink { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para>This value is valid only when <c>InstanceChargeType</c> is <c>PrePaid</c> (subscription).</para>
+        /// </remarks>
+        /// <para>Enable or disable auto-renewal. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disable.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -21,15 +38,38 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>Client information.</para>
+        /// </summary>
         [NameInMap("ClientInfo")]
         [Validation(Required=false)]
         public string ClientInfoShrink { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para>This value is valid only when <c>InstanceChargeType</c> is <c>PostPaid</c> (pay-as-you-go).</para>
+        /// </remarks>
+        /// <para>Billing type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Hour: Hourly.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hour</para>
+        /// </summary>
         [NameInMap("InstanceBillingCycle")]
         [Validation(Required=false)]
         public string InstanceBillingCycle { get; set; }
 
         /// <summary>
+        /// <para>The billing method for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>PrePaid (default): Subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: Pay-as-you-go.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
         /// </summary>
@@ -38,6 +78,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para>Only one billing method is allowed. If a billing method already exists, the new value is invalid by default, and the existing one prevails. Note that this field is required when a user makes the first purchase.</para>
+        /// </remarks>
+        /// <para>Network billing type. Value:</para>
+        /// <list type="bullet">
+        /// <item><description>95BandwidthByMonth: Monthly 95th percentile bandwidth.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>95BandwidthByMonth</para>
         /// </summary>
@@ -46,6 +94,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
+        /// <para>Maximum bandwidth, in Mbps. Default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -54,6 +104,33 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? InternetMaxBandwidth { get; set; }
 
         /// <summary>
+        /// <remarks>
+        /// <para>This value is valid only when <c>InstanceChargeType</c> is <c>PrePaid</c> (subscription).</para>
+        /// </remarks>
+        /// <para>The subscription period. Valid values (Note: 12 is converted to one year; other values are in months):</para>
+        /// <list type="bullet">
+        /// <item><description><para>1 (default)</para>
+        /// </description></item>
+        /// <item><description><para>2</para>
+        /// </description></item>
+        /// <item><description><para>3</para>
+        /// </description></item>
+        /// <item><description><para>4</para>
+        /// </description></item>
+        /// <item><description><para>5</para>
+        /// </description></item>
+        /// <item><description><para>6</para>
+        /// </description></item>
+        /// <item><description><para>7</para>
+        /// </description></item>
+        /// <item><description><para>8</para>
+        /// </description></item>
+        /// <item><description><para>9</para>
+        /// </description></item>
+        /// <item><description><para>12</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +139,15 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Period { get; set; }
 
         /// <summary>
+        /// <para>Cloud application service instance specifications.</para>
+        /// <list type="bullet">
+        /// <item><description><para>For crs.cp.\* series specifications, choose between subscription or pay-as-you-go billing.</para>
+        /// </description></item>
+        /// <item><description><para>For crs.vm.\* series specifications, choose between subscription or pay-as-you-go billing.</para>
+        /// </description></item>
+        /// <item><description><para>For other series, only subscription billing is supported.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,6 +157,12 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RenderingSpec { get; set; }
 
+        /// <summary>
+        /// <para>The cloud storage capacity used by the cloud application service instance (Note: not local storage).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public string StorageSize { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchResumeVsStreamRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the stream in the AppName/StreamName format. To specify multiple streams, separate the stream names with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string ControlStreamAction { get; set; }
 
         /// <summary>
+        /// <para>The accelerated domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The type of live stream. Only publisher is supported, which indicates that the stream is ingested by a streamer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

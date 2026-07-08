@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeDirectoriesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of directories.</para>
+        /// </summary>
         [NameInMap("Directories")]
         [Validation(Required=false)]
         public List<DescribeDirectoriesResponseBodyDirectories> Directories { get; set; }
         public class DescribeDirectoriesResponseBodyDirectories : TeaModel {
             /// <summary>
+            /// <para>Directory creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-09-10T10:00:00Z</para>
             /// </summary>
@@ -21,11 +26,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
+            /// <summary>
+            /// <para>Directory description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>目录2</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>ID of the group to which the directory belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>348*****174-cn-qingdao</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GroupId { get; set; }
 
             /// <summary>
+            /// <para>Directory ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>399*****488-cn-qingdao</para>
             /// </summary>
@@ -41,11 +56,19 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>Directory name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>目录2</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Parent directory ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>399*****774-cn-qingdao</para>
             /// </summary>
@@ -56,6 +79,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +89,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageCount { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -72,6 +99,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -80,6 +109,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -88,6 +119,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of directories.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

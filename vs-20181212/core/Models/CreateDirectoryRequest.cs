@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class CreateDirectoryRequest : TeaModel {
+        /// <summary>
+        /// <para>Folder description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>目录1</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Space ID to which the folder belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +31,11 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>Folder name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>目录1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -35,6 +46,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Parent folder ID.</para>
+        /// <remarks>
+        /// <para>When you create a device space, the system automatically creates a root directory for that space. Use the <a href="https://next.api.aliyun.com/document/vs/2018-12-12/DescribeDirectories">DescribeDirectories</a> API to query the corresponding root directory.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

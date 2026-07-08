@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteVsPullStreamInfoConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The application name for the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Your stream pulling domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the live stream.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

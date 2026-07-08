@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteComfyProductionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the production.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3e5bda20-5cd4-4d55-8d23-88d624a18caa</para>
         /// </summary>

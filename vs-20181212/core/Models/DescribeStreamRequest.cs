@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamRequest : TeaModel {
         /// <summary>
+        /// <para>The stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeAccountStatRequest : TeaModel {
+        /// <summary>
+        /// <para>Alibaba Cloud account ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1165*****601</para>
+        /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }

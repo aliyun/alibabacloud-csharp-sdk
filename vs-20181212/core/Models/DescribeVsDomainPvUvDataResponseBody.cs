@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsDomainPvUvDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>Time interval in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DataInterval { get; set; }
 
         /// <summary>
+        /// <para>Visual Edge Computing Service domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.aliyundoc.com</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>End time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-11-24T00:00:00Z</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Request ID for this operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-12T10:00:00Z</para>
         /// </summary>

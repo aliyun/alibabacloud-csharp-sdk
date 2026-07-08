@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageCount { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of streams.</para>
+        /// </summary>
         [NameInMap("Streams")]
         [Validation(Required=false)]
         public List<DescribeStreamsResponseBodyStreams> Streams { get; set; }
         public class DescribeStreamsResponseBodyStreams : TeaModel {
             /// <summary>
+            /// <para>Application that owns this stream.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>live</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string App { get; set; }
 
             /// <summary>
+            /// <para>Time when the stream was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2018-12-10T17:00:00Z</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
+            /// <para>Device ID of this stream.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>348*****380-cn-qingdao</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string DeviceId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the stream is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
+            /// <para>The ID of the group to which the stream belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>348*****174-cn-qingdao</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string GroupId { get; set; }
 
             /// <summary>
+            /// <para>Video stream height in pixels.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>720</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? Height { get; set; }
 
             /// <summary>
+            /// <para>Stream ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>323*****997-cn-qingdao</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Stream name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>31000000*****0000002</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Streaming domain for this stream.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>demo.aliyundoc.com</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PlayDomain { get; set; }
 
             /// <summary>
+            /// <para>Stream protocol.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gb28181</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>Ingest domain for this stream.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.aliyundoc.com</para>
             /// </summary>
@@ -134,6 +167,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string PushDomain { get; set; }
 
             /// <summary>
+            /// <para>Stream status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>on (online)</para>
+            /// </description></item>
+            /// <item><description><para>off (offline)</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -142,6 +183,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Video stream width in pixels.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1280</para>
             /// </summary>
@@ -152,6 +195,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Total number of streams.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

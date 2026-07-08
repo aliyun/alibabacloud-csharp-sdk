@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartStreamRequest : TeaModel {
         /// <summary>
+        /// <para>For an NVR historical stream, the End Time (UNIX timestamp, in seconds).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1599336385</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>Stream ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>For an NVR historical stream, the Start Time (UNIX timestamp, in seconds).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1589336385</para>
         /// </summary>

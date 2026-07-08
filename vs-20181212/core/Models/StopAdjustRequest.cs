@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopAdjustRequest : TeaModel {
         /// <summary>
+        /// <para>Stop adjusting the zoom. Default is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Focus { get; set; }
 
         /// <summary>
+        /// <para>Device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Stop adjusting the aperture. Default is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

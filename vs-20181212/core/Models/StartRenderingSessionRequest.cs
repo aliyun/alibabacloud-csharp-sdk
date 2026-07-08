@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartRenderingSessionRequest : TeaModel {
         /// <summary>
+        /// <para>Cloud application ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cap-b06b26edfhytbn b94a75ae1a79efc90eb</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>Unique ID of the client</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,16 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// <para>Client parameter information</para>
+        /// </summary>
         [NameInMap("ClientParams")]
         [Validation(Required=false)]
         public StartRenderingSessionRequestClientParams ClientParams { get; set; }
         public class StartRenderingSessionRequestClientParams : TeaModel {
             /// <summary>
+            /// <para>Client IP address. This IP address is used by default for scheduling instances based on proximity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>106.11.43.1</para>
             /// </summary>
@@ -42,6 +50,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>Cloud application patch ID.</para>
+        /// <ol>
+        /// <item><description><para>By default, start the stable version of the AppId (if no stable patch version is set, the original version is used).</para>
+        /// </description></item>
+        /// <item><description><para>If you enter &quot;origin&quot;, start the original version.</para>
+        /// </description></item>
+        /// </ol>
+        /// 
         /// <b>Example:</b>
         /// <para>patch-03fa76e8e13a49b63456b063dgh309b4</para>
         /// </summary>
@@ -50,6 +66,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string PatchId { get; set; }
 
         /// <summary>
+        /// <para>Project ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

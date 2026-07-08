@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StopStreamResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32388487****92997-cn-qingdao</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID of this operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>

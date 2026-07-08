@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeStreamURLResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the URL expires.<br>
+        /// A UNIX timestamp. Unit: seconds.<br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>1557977029</para>
         /// </summary>
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BEA5625F-8FCF-48F4-851B-CA63946DA664</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The URL of the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rtmp://demo.aliyundoc.com/live/310101<em><b><b>7542007?auth_key=1639130258-0-0-b2b04fe85ece6</b></b></em>a6b1a42bc7e</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DeleteFileRequest : TeaModel {
         /// <summary>
+        /// <para>File ID. Each file has a unique ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class UpdateRenderingInstanceSettingsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the cloud application service instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>render-9f8c57355d224ad7beaf95e145f22111</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public string RenderingInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>List of instance settings.</para>
+        /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]
         public string SettingsShrink { get; set; }

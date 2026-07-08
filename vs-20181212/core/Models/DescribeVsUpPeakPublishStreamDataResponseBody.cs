@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>27A3C548-A699-48F9-97CD-F35D81075AF3</para>
         /// </summary>

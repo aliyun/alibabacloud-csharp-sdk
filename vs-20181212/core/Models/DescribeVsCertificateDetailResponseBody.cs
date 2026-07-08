@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeVsCertificateDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The certificate content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----xxxxx-----END CERTIFICATE-----</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Cert { get; set; }
 
         /// <summary>
+        /// <para>The certificate ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>63000000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? CertId { get; set; }
 
         /// <summary>
+        /// <para>The certificate name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cert-539xxxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string CertName { get; set; }
 
         /// <summary>
+        /// <para>The key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The request ID for this operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D94D0E1E-E71B-562D-8C18-969BB3653FBD</para>
         /// </summary>

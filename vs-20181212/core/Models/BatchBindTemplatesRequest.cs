@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class BatchBindTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to apply the template to all streams in the scope. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? ApplyAll { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>group</para>
+        /// </description></item>
+        /// <item><description><para>stream</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +52,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to replace existing bindings. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +62,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public bool? Replace { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +73,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>The template type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>record (recording)</para>
+        /// </description></item>
+        /// <item><description><para>snapshot (snapshotting)</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>timeshift</para>
         /// </summary>

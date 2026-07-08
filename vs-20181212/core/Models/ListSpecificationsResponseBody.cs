@@ -46,8 +46,6 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public int? Shard { get; set; }
 
             /// <summary>
-            /// <para><c>RenderingSpec</c></para>
-            /// 
             /// <b>Example:</b>
             /// <para>crs.xic.s1</para>
             /// </summary>

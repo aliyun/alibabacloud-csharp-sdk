@@ -9,15 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class DescribeRenderingInstanceConfigurationRequest : TeaModel {
+        /// <summary>
+        /// <para>The configuration to query. By default, the configurations of all modules are returned.</para>
+        /// </summary>
         [NameInMap("Configuration")]
         [Validation(Required=false)]
         public List<DescribeRenderingInstanceConfigurationRequestConfiguration> Configuration { get; set; }
         public class DescribeRenderingInstanceConfigurationRequestConfiguration : TeaModel {
+            /// <summary>
+            /// <para>The list of attribute names to query. By default, all attributes are returned.</para>
+            /// </summary>
             [NameInMap("AttributeNames")]
             [Validation(Required=false)]
             public List<string> AttributeNames { get; set; }
 
             /// <summary>
+            /// <para>The name of the module.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         }
 
         /// <summary>
+        /// <para>The ID of the cloud application service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

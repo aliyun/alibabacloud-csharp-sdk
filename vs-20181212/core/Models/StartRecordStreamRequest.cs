@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 {
     public class StartRecordStreamRequest : TeaModel {
         /// <summary>
+        /// <para>The stream\&quot;s App name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>live</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string App { get; set; }
 
         /// <summary>
+        /// <para>Stream ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>323*****997-cn-qingdao</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Stream name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>310000*****000002</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The stream\&quot;s playback domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
