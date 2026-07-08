@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "appstream-center.cn-shanghai.aliyuncs.com"},
+                {"ap-southeast-1", "appstream-center.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually invalidates a logon token.</para>
+        /// <para>Manually expires a logon token before its automatic expiration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually invalidates a logon token.</para>
+        /// <para>Manually expires a logon token before its automatic expiration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually invalidates a logon token.</para>
+        /// <para>Manually expires a logon token before its automatic expiration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +170,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually invalidates a logon token.</para>
+        /// <para>Manually expires a logon token before its automatic expiration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +188,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
+        /// <para>Obtains an authorization code that contains user identity and permission information. The authorization code can be used to launch a cloud application in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -205,6 +210,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
                 query["TokenType"] = request.TokenType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                body["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                body["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
             {
                 body["AutoCreateUser"] = request.AutoCreateUser;
@@ -243,7 +256,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
+        /// <para>Obtains an authorization code that contains user identity and permission information. The authorization code can be used to launch a cloud application in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -265,6 +278,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
                 query["TokenType"] = request.TokenType;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
+            {
+                body["AccountType"] = request.AccountType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
+            {
+                body["AdDomain"] = request.AdDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
             {
                 body["AutoCreateUser"] = request.AutoCreateUser;
@@ -303,7 +324,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
+        /// <para>Obtains an authorization code that contains user identity and permission information. The authorization code can be used to launch a cloud application in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -321,7 +342,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
+        /// <para>Obtains an authorization code that contains user identity and permission information. The authorization code can be used to launch a cloud application in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -339,7 +360,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取stsToken</para>
+        /// <para>Gets a Security Token Service (STS) token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -389,7 +410,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取stsToken</para>
+        /// <para>Gets a Security Token Service (STS) token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -439,7 +460,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取stsToken</para>
+        /// <para>Gets a Security Token Service (STS) token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -457,7 +478,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取stsToken</para>
+        /// <para>Gets a Security Token Service (STS) token.</para>
         /// </summary>
         /// 
         /// <param name="request">

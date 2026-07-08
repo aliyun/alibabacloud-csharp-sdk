@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
 {
     public class ExpireLoginTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The logon username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The logon token.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string LoginToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace. This parameter is required if you log on using a workspace ID. You can leave this parameter empty if you log on using an organization ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing+dir-172301****</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the logon session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

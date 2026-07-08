@@ -9,11 +9,27 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210218.Models
 {
     public class GetAuthCodeRequest : TeaModel {
+        [NameInMap("AccountType")]
+        [Validation(Required=false)]
+        public string AccountType { get; set; }
+
+        [NameInMap("AdDomain")]
+        [Validation(Required=false)]
+        public string AdDomain { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to synchronously create an EndUserId based on <c>ExternalUserId</c>. This parameter takes effect only when <c>EndUserId</c> is empty.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoCreateUser")]
         [Validation(Required=false)]
         public bool? AutoCreateUser { get; set; }
 
         /// <summary>
+        /// <para>The username of the China Desktop Service (China Desktop Service) convenience account, which is unique within an Alibaba Cloud account. This parameter and <c>ExternalUserId</c> cannot both be empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alice</para>
         /// </summary>
@@ -22,6 +38,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and <c>EndUserId</c> cannot both be empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alice</para>
         /// </summary>
@@ -30,6 +48,23 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The access policy that restricts the access permissions of the authorization code. An empty value indicates no restrictions.</para>
+        /// <para>Syntax:</para>
+        /// <pre><code class="language-json">{
+        ///       &quot;Version&quot;: &quot;1&quot;,
+        ///       &quot;Resource&quot;: {
+        ///             &quot;Type&quot;: &quot;&lt;Resource type&gt;&quot;,
+        ///             &quot;Id&quot;: &quot;&lt;Resource ID&gt;&quot;
+        ///       }
+        /// }
+        /// </c></pre>
+        /// <para>Valid values of <Resource type>:</para>
+        /// <list type="bullet">
+        /// <item><description>AppInstanceGroup: delivery group. You can call the ListAppInstanceGroup operation to obtain the ID.</description></item>
+        /// <item><description>AppInstance: application instance (dedicated field).</description></item>
+        /// <item><description>App: application. You can call the ListAppInstanceGroup operation to obtain the ID.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///       &quot;Version&quot;: &quot;1&quot;,

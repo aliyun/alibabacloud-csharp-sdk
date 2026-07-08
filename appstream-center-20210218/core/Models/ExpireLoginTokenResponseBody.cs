@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
 {
     public class ExpireLoginTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
 {
     public class GetStsTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The Elastic Desktop Service (EDS) username.</para>
+        /// <remarks>
+        /// <para>Either EndUserId or ExternalId is required.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Alex</para>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The validity period of the token, in seconds. The maximum period is two days.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>600</para>
         /// </summary>
@@ -26,6 +33,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public long? Expiration { get; set; }
 
         /// <summary>
+        /// <para>The ID of the external user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Alex</para>
         /// </summary>

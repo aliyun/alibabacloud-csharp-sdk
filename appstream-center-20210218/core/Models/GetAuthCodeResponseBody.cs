@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210218.Models
 {
     public class GetAuthCodeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The authorization code information.</para>
+        /// </summary>
         [NameInMap("AuthModel")]
         [Validation(Required=false)]
         public GetAuthCodeResponseBodyAuthModel AuthModel { get; set; }
         public class GetAuthCodeResponseBodyAuthModel : TeaModel {
             /// <summary>
+            /// <para>The authorization code. The authorization code is valid for 3 minutes and can be used only once regardless of whether the verification succeeds or fails. When multiple authorization codes are generated for a user, only the last generated code is valid.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acv2ZEq2TNSqOlX+DvyetHGRT08iPhbWg/os1W4HojpBxkMQZkAnbKSfz/wNvS0E149IQZ5TogvBUE8ghCSVV+QBnv48Y+sn4z9fY5ywZA1peI5s4TplQI0TADBhPZXEIzMOdmbNsDGGlGcKOAq8ixd1Epzdu9XfvRzdLOO6o3zQwTZxXsjOgGBW8JTcgCP9W9iYiIjHIdZ2VCAnmMzuyVkyED8gymEevH10QoclyH/O3s8Yq6VF34gMXihDQeiI8PyiAZrW0JWXSWpdy3n4yGtAqMAgv46FzTA+XJ6C********</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
             public string AuthCode { get; set; }
 
             /// <summary>
+            /// <para>The username of the China Desktop Service convenience account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alice</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
             public string EndUserId { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the authorization code in UTC, following the ISO 8601 standard.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
