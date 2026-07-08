@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class RefundInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

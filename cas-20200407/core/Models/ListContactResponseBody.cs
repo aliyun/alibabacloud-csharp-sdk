@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The name of the contact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ty-yaoyue.com</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

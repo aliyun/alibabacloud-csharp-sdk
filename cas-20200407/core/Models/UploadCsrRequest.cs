@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Csr { get; set; }
 
         /// <summary>
-        /// <para>The private key content of the certificate in the PEM format.</para>
+        /// <para>The content of the certificate\&quot;s private key in PEM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name of the CSR.</para>
+        /// <para>The name of the CSR. The name can be up to 50 characters long and can contain uppercase letters (A–Z), lowercase letters (a–z), digits (0–9), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>

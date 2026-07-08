@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListUserCertificateOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificates and orders.</para>
+        /// <para>The list of certificates and orders.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;CertificateOrderList&quot;: [{&quot;Status&quot;: &quot;PAYED&quot;,&quot;ProductName&quot;: &quot;专业版通配符 OV SSL&quot;,&quot;InstanceId&quot;: &quot;cert-instanceId&quot;,&quot;ProductCode&quot;: &quot;globalsign-xxxx&quot;,&quot;SourceType&quot;: &quot;buy&quot;,&quot;WildDomainCount&quot;: 1,&quot;CertType&quot;: &quot;OV&quot;,&quot;PartnerOrderId&quot;: &quot;&quot;,&quot;OrderId&quot;: 3451111,&quot;Algorithm&quot;: &quot;RSA&quot;,&quot;RootBrand&quot;: &quot;GlobalSign&quot;,&quot;AliyunOrderId&quot;: 21xxxxxx40655,&quot;DomainType&quot;: &quot;WILDCARD&quot;,&quot;TrusteeStatus&quot;: &quot;trustee&quot;,&quot;Domain&quot;: &quot;&quot;,&quot;BuyDate&quot;: 1632649385000,&quot;DomainCount&quot;: 1}]}</para>
         /// </summary>
         [NameInMap("CertificateOrderList")]
         [Validation(Required=false)]
         public List<ListUserCertificateOrderResponseBodyCertificateOrderList> CertificateOrderList { get; set; }
         public class ListUserCertificateOrderResponseBodyCertificateOrderList : TeaModel {
             /// <summary>
-            /// <para>The algorithm. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The algorithm. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RSA</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Algorithm { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud order. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The ID of the Alibaba Cloud order. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234567</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? AliyunOrderId { get; set; }
 
             /// <summary>
-            /// <para>The time at which the order was placed. Unit: milliseconds. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The purchase time. The value is a UNIX timestamp. Unit: milliseconds. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1634283958000</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? BuyDate { get; set; }
 
             /// <summary>
-            /// <para>The time at which the certificate expires. Unit: milliseconds. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665819958000</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? CertEndTime { get; set; }
 
             /// <summary>
-            /// <para>The time at which the certificate starts to take effect. Unit: milliseconds. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The start time of the certificate. The value is a UNIX timestamp. Unit: milliseconds. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665819958000</para>
@@ -67,11 +70,16 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? CertStartTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</para>
+            /// <para>The certificate type. This parameter is returned when OrderType is set to CPACK or BUY. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DV</b>: domain validated (DV) certificate</description></item>
-            /// <item><description><b>EV</b>: extended validation (EV) certificate</description></item>
-            /// <item><description><b>OV</b>: organization validated (OV) certificate <b>FREE</b>: free certificate, available only on the China site (aliyun.com)</description></item>
+            /// <item><description><para><b>DV</b>: A DV certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>EV</b>: An EV certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>OV</b>: An OV certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>FREE</b>: A free certificate for personal trial. This value is supported only on the Alibaba Cloud China website (www\.aliyun.com).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +90,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CertType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The certificate ID. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>896521</para>
@@ -92,17 +100,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? CertificateId { get; set; }
 
             /// <summary>
-            /// <para>The city in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The city. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hangzhou</para>
+            /// <para>杭州市</para>
             /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
             /// <summary>
-            /// <para>The parent domain name of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The primary domain name of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun.com</para>
@@ -112,7 +120,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The code of the country in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The country code. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -122,7 +130,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Country { get; set; }
 
             /// <summary>
-            /// <para>The domain name. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The domain name. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyundoc.com</para>
@@ -132,7 +140,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The total number of domain names that can be bound to the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The number of domain names that you purchased. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -142,13 +150,18 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? DomainCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the domain name. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</para>
+            /// <para>The domain name type. This parameter is returned when OrderType is set to CPACK or BUY. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ONE</b>: single domain name</description></item>
-            /// <item><description><b>MULTIPLE</b>: multiple domain names</description></item>
-            /// <item><description><b>WILDCARD</b>: single wildcard domain name</description></item>
-            /// <item><description><b>M_WILDCARD</b>: multiple wildcard domain names</description></item>
-            /// <item><description><b>MIX</b>: hybrid domain name</description></item>
+            /// <item><description><para><b>ONE</b>: A single domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>MULTIPLE</b>: Multiple domain names.</para>
+            /// </description></item>
+            /// <item><description><para><b>WILDCARD</b>: A single wildcard domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>M_WILDCARD</b>: Multiple wildcard domain names.</para>
+            /// </description></item>
+            /// <item><description><para><b>MIX</b>: A hybrid domain name.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +172,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string DomainType { get; set; }
 
             /// <summary>
-            /// <para>The time at which the certificate expires. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The end date of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-17</para>
@@ -169,7 +182,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string EndDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the certificate expires. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>Indicates whether the certificate has expired. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -179,7 +192,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public bool? Expired { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The certificate fingerprint. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CC6B3696E7C7CA715BD26E28E45FF3E3DF435C03</para>
@@ -189,7 +202,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Fingerprint { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cas-instanceId</para>
@@ -199,7 +212,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The issuer of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The issuer of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyIssuer</para>
@@ -209,7 +222,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// <para>The name of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The certificate name. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cert-name</para>
@@ -219,7 +232,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The order ID. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The order ID. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2345687</para>
@@ -229,17 +242,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the organization that is associated with the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The name of the organization that is associated with the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud</para>
+            /// <para>阿里云</para>
             /// </summary>
             [NameInMap("OrgName")]
             [Validation(Required=false)]
             public string OrgName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the third-party certificate authority (CA) order. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The ID of the third-party certificate authority (CA) order. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca-123456</para>
@@ -249,7 +262,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string PartnerOrderId { get; set; }
 
             /// <summary>
-            /// <para>The specification ID of the order. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The code for the product specifications. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bykj123456</para>
@@ -259,7 +272,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The specification name of the order. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The name of the product specifications. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CFCA</para>
@@ -269,17 +282,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>The province or autonomous region in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The province or autonomous region. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Zhejiang</para>
+            /// <para>浙江省</para>
             /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The ID of the resource group. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-ae******4wia</para>
@@ -289,7 +302,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The brand of the certificate. Valid values: WoSign, CFCA, DigiCert, and vTrus. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The brand, such as WoSign, CFCA, DigiCert, and vTrus. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CFCA</para>
@@ -299,7 +312,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string RootBrand { get; set; }
 
             /// <summary>
-            /// <para>All domain names that are bound to the certificate. Multiple domain names are separated by commas (,). This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The domain names that are bound to the certificate. Multiple domain names are separated by commas (,). This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun.com</para>
@@ -309,7 +322,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Sans { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The certificate serial number. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>040a6e493cffdda6d744acf99b6576cf</para>
@@ -319,7 +332,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string SerialNo { get; set; }
 
             /// <summary>
-            /// <para>The SHA-2 value of the certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The SHA-2 value of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>56B4DED2243A81DD909D7C39824FFE4DDBD87F91BFA46CD333FF212FE0E7CB11</para>
@@ -329,10 +342,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Sha2 { get; set; }
 
             /// <summary>
-            /// <para>The type of the order. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</para>
+            /// <para>The order type. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// <list type="bullet">
-            /// <item><description><b>cpack</b>: virtual resource order</description></item>
-            /// <item><description><b>buy</b>: purchase order</description></item>
+            /// <item><description><para><b>cpack</b>: An order for a resource plan.</para>
+            /// </description></item>
+            /// <item><description><para><b>buy</b>: A direct purchase.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -343,7 +358,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The time at which the certificate starts to take effect. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>The start date of the certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-16</para>
@@ -353,16 +368,24 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string StartDate { get; set; }
 
             /// <summary>
-            /// <para>The certificate status of the order. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</para>
+            /// <para>The status of the order or certificate. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// <list type="bullet">
-            /// <item><description><b>PAYED</b>: pending application</description></item>
-            /// <item><description><b>CHECKING</b>: reviewing</description></item>
-            /// <item><description><b>CHECKED_FAIL</b>: review failed</description></item>
-            /// <item><description><b>ISSUED</b>: issued</description></item>
-            /// <item><description><b>WILLEXPIRED</b>: about to expire</description></item>
-            /// <item><description><b>EXPIRED</b>: expired</description></item>
-            /// <item><description><b>NOTACTIVATED</b>: not activated</description></item>
-            /// <item><description><b>REVOKED</b>: revoked</description></item>
+            /// <item><description><para><b>PAYED</b>: The certificate is pending application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CHECKING</b>: The certificate is under review.</para>
+            /// </description></item>
+            /// <item><description><para><b>CHECKED_FAIL</b>: The review failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>ISSUED</b>: The certificate is issued.</para>
+            /// </description></item>
+            /// <item><description><para><b>WILLEXPIRED</b>: The certificate is about to expire.</para>
+            /// </description></item>
+            /// <item><description><para><b>EXPIRED</b>: The certificate has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>NOTACTIVATED</b>: The certificate is not activated.</para>
+            /// </description></item>
+            /// <item><description><para><b>REVOKED</b>: The certificate is revoked.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -373,10 +396,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The hosting status of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:</para>
+            /// <para>The hosting status. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// <list type="bullet">
-            /// <item><description><b>unTrustee</b>: not hosted</description></item>
-            /// <item><description><b>trustee</b>: hosted</description></item>
+            /// <item><description><para><b>unTrustee</b>: Not hosted.</para>
+            /// </description></item>
+            /// <item><description><para><b>trustee</b>: Hosted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -387,7 +412,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string TrusteeStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the certificate is an uploaded certificate. This parameter is returned only if OrderType is set to CERT or UPLOAD.</para>
+            /// <para>Indicates whether the certificate is an uploaded certificate. This parameter is returned when OrderType is set to CERT or UPLOAD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -397,7 +422,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public bool? Upload { get; set; }
 
             /// <summary>
-            /// <para>The number of wildcard domain names that can be bound to the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.</para>
+            /// <para>The number of wildcard domain names that you purchased. This parameter is returned when OrderType is set to CPACK or BUY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -409,7 +434,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -419,7 +444,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. This ID is unique to each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -429,7 +454,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -439,7 +464,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -79,24 +79,42 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The name of the cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SLB</b>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>LIVE</b>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>webHosting</b>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>VOD</b>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>CR</b>: Container Registry. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>DCDN</b>: Dynamic Content Delivery Network (DCDN).</description></item>
-            /// <item><description><b>DDOS</b>: Anti-DDoS.</description></item>
-            /// <item><description><b>CDN</b>: Alibaba Cloud CDN (CDN).</description></item>
-            /// <item><description><b>ALB</b>: Application Load Balancer (ALB).</description></item>
-            /// <item><description><b>APIGateway</b>: API Gateway.</description></item>
-            /// <item><description><b>FC</b>: Function Compute.</description></item>
-            /// <item><description><b>GA</b>: Global Accelerator (GA).</description></item>
-            /// <item><description><b>MSE</b>: Microservices Engine (MSE).</description></item>
-            /// <item><description><b>NLB</b>: Network Load Balancer (NLB).</description></item>
-            /// <item><description><b>OSS</b>: Object Storage Service (OSS).</description></item>
-            /// <item><description><b>SAE</b>: Serverless App Engine (SAE).</description></item>
-            /// <item><description><b>TencentCDN</b>: Tencent Cloud Content Delivery Network (CDN).</description></item>
-            /// <item><description><b>WAF</b>: Web Application Firewall (WAF).</description></item>
+            /// <item><description><para><b>SLB</b>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>LIVE</b>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>webHosting</b>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>VOD</b>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>CR</b>: Container Registry. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>DCDN</b>: Dynamic Content Delivery Network (DCDN).</para>
+            /// </description></item>
+            /// <item><description><para><b>DDOS</b>: Anti-DDoS.</para>
+            /// </description></item>
+            /// <item><description><para><b>CDN</b>: Alibaba Cloud CDN (CDN).</para>
+            /// </description></item>
+            /// <item><description><para><b>ALB</b>: Application Load Balancer (ALB).</para>
+            /// </description></item>
+            /// <item><description><para><b>APIGateway</b>: API Gateway.</para>
+            /// </description></item>
+            /// <item><description><para><b>FC</b>: Function Compute.</para>
+            /// </description></item>
+            /// <item><description><para><b>GA</b>: Global Accelerator (GA).</para>
+            /// </description></item>
+            /// <item><description><para><b>MSE</b>: Microservices Engine (MSE).</para>
+            /// </description></item>
+            /// <item><description><para><b>NLB</b>: Network Load Balancer (NLB).</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>: Object Storage Service (OSS).</para>
+            /// </description></item>
+            /// <item><description><para><b>SAE</b>: Serverless App Engine (SAE).</para>
+            /// </description></item>
+            /// <item><description><para><b>TencentCDN</b>: Tencent Cloud Content Delivery Network (CDN).</para>
+            /// </description></item>
+            /// <item><description><para><b>WAF</b>: Web Application Firewall (WAF).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

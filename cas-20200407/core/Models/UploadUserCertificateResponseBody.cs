@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The ID of the certificate instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cas-upload-j2ofdb</para>
+        /// <para>cas-upload-xki1d0</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

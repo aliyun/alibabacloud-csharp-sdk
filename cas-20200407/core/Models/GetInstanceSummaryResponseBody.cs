@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetInstanceSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The remaining quota for automatic reissue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? AutoReissueCount { get; set; }
 
         /// <summary>
+        /// <para>The remaining certificate quota.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CertificateCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of inactive instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? InactiveCount { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>09470F19-CEE8-5C63-BF2C-02B5E3F07A17</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of instances that are about to expire.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

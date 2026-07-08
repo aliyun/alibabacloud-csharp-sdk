@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The number of entries per page. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]
@@ -54,15 +54,24 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The status of the worker task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>rollback</description></item>
-        /// <item><description>rollback_error</description></item>
-        /// <item><description>success</description></item>
-        /// <item><description>rollback_success</description></item>
-        /// <item><description>pending</description></item>
-        /// <item><description>scheduling</description></item>
-        /// <item><description>processing</description></item>
-        /// <item><description>error</description></item>
-        /// <item><description>editing</description></item>
+        /// <item><description><para>rollback</para>
+        /// </description></item>
+        /// <item><description><para>rollback_error</para>
+        /// </description></item>
+        /// <item><description><para>success</para>
+        /// </description></item>
+        /// <item><description><para>rollback_success</para>
+        /// </description></item>
+        /// <item><description><para>pending</para>
+        /// </description></item>
+        /// <item><description><para>scheduling</para>
+        /// </description></item>
+        /// <item><description><para>processing</para>
+        /// </description></item>
+        /// <item><description><para>error</para>
+        /// </description></item>
+        /// <item><description><para>editing</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

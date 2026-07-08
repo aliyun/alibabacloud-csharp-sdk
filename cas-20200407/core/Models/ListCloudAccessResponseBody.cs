@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The AccessKey ID that is used to access cloud resources.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AAAqdwPBA****</para>
+            /// <para>AAAZCJQ******</para>
             /// </summary>
             [NameInMap("SecretId")]
             [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListAssetCountRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The expiration date of the certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-07-13</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? EndDate { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 50.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
+        /// <para>The date of certificate issuance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-07-13</para>
         /// </summary>

@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The type of the deployment task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud: multi-cloud deployment task.</description></item>
-        /// <item><description>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</description></item>
+        /// <item><description><para>cloud: multi-cloud deployment task.</para>
+        /// </description></item>
+        /// <item><description><para>user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +37,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The number of certificates per page. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]
@@ -48,12 +50,18 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The status of the deployment task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>success</description></item>
-        /// <item><description>pending</description></item>
-        /// <item><description>scheduling</description></item>
-        /// <item><description>processing</description></item>
-        /// <item><description>error</description></item>
-        /// <item><description>editing</description></item>
+        /// <item><description><para>success</para>
+        /// </description></item>
+        /// <item><description><para>pending</para>
+        /// </description></item>
+        /// <item><description><para>scheduling</para>
+        /// </description></item>
+        /// <item><description><para>processing</para>
+        /// </description></item>
+        /// <item><description><para>error</para>
+        /// </description></item>
+        /// <item><description><para>editing</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

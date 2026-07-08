@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DeleteUserCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the certificate.</para>
+        /// <para>The certificate ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</para>
+        /// <para>To obtain the certificate ID, call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

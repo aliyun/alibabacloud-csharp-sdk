@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CancelOrderRequestRequest : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the certificate order to cancel.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</para>
+        /// <para>Obtain this ID by calling <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

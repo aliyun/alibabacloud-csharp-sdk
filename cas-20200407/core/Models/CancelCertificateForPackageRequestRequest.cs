@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CancelCertificateForPackageRequestRequest : TeaModel {
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> to obtain this ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123451222</para>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The cloud service provider to which the cloud resource in the worker task belongs.</para>
             /// <remarks>
-            /// <para> This parameter is not returned if you deploy certificates to Alibaba Cloud services.</para>
+            /// <para>This parameter is not returned if you deploy certificates to Alibaba Cloud services.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,24 +82,42 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The cloud service to which the cloud resource in the worker task belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CDN</b>: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>SLB</b>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>DCDN</b>: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>DDOS</b>: Anti-DDoS. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>LIVE</b>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>webHosting</b>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>VOD</b>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>CR</b>: Container Registry. This value is supported only at the China site (aliyun.com).</description></item>
-            /// <item><description><b>ALB</b>: Application Load Balancer (ALB).</description></item>
-            /// <item><description><b>APIGateway</b>: API Gateway.</description></item>
-            /// <item><description><b>FC</b>: Function Compute.</description></item>
-            /// <item><description><b>GA</b>: Global Accelerator (GA).</description></item>
-            /// <item><description><b>MSE</b>: Microservices Engine (MSE).</description></item>
-            /// <item><description><b>NLB</b>: Network Load Balancer (NLB).</description></item>
-            /// <item><description><b>OSS</b>: Object Storage Service (OSS).</description></item>
-            /// <item><description><b>SAE</b>: Serverless App Engine (SAE).</description></item>
-            /// <item><description><b>TencentCDN</b>: Tencent Cloud Content Delivery Network (CDN).</description></item>
-            /// <item><description><b>WAF</b>: Web Application Firewall (WAF).</description></item>
+            /// <item><description><para><b>CDN</b>: Alibaba Cloud CDN (CDN). This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>SLB</b>: Classic Load Balancer (CLB). This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>DCDN</b>: Dynamic Content Delivery Network (DCDN). This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>DDOS</b>: Anti-DDoS. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>LIVE</b>: ApsaraVideo Live. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>webHosting</b>: Cloud Web Hosting. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>VOD</b>: ApsaraVideo VOD. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>CR</b>: Container Registry. This value is supported only at the China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><b>ALB</b>: Application Load Balancer (ALB).</para>
+            /// </description></item>
+            /// <item><description><para><b>APIGateway</b>: API Gateway.</para>
+            /// </description></item>
+            /// <item><description><para><b>FC</b>: Function Compute.</para>
+            /// </description></item>
+            /// <item><description><para><b>GA</b>: Global Accelerator (GA).</para>
+            /// </description></item>
+            /// <item><description><para><b>MSE</b>: Microservices Engine (MSE).</para>
+            /// </description></item>
+            /// <item><description><para><b>NLB</b>: Network Load Balancer (NLB).</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>: Object Storage Service (OSS).</para>
+            /// </description></item>
+            /// <item><description><para><b>SAE</b>: Serverless App Engine (SAE).</para>
+            /// </description></item>
+            /// <item><description><para><b>TencentCDN</b>: Tencent Cloud Content Delivery Network (CDN).</para>
+            /// </description></item>
+            /// <item><description><para><b>WAF</b>: Web Application Firewall (WAF).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,15 +140,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether the cloud resource in the worker task is the default resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("DefaultResource")]
             [Validation(Required=false)]
@@ -169,7 +189,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The ID of the cloud resource in the worker task.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -192,7 +212,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The listener ID of the cloud resource in the worker task.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -215,7 +235,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The order ID of the worker task, which is the same as the order ID of the certificate.</para>
             /// <remarks>
-            /// <para> If the CertId parameter is returned, this parameter is not returned.</para>
+            /// <para>If the CertId parameter is returned, this parameter is not returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -228,7 +248,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The listening port of the cloud resource in the worker task.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -281,15 +301,24 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The status of the worker task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>editing</b></description></item>
-            /// <item><description><b>pending</b></description></item>
-            /// <item><description><b>scheduling</b></description></item>
-            /// <item><description><b>processing</b></description></item>
-            /// <item><description><b>error</b></description></item>
-            /// <item><description><b>success</b></description></item>
-            /// <item><description><b>rollback</b></description></item>
-            /// <item><description><b>rollback_success</b></description></item>
-            /// <item><description><b>rollback_error</b></description></item>
+            /// <item><description><para><b>editing</b></para>
+            /// </description></item>
+            /// <item><description><para><b>pending</b></para>
+            /// </description></item>
+            /// <item><description><para><b>scheduling</b></para>
+            /// </description></item>
+            /// <item><description><para><b>processing</b></para>
+            /// </description></item>
+            /// <item><description><para><b>error</b></para>
+            /// </description></item>
+            /// <item><description><para><b>success</b></para>
+            /// </description></item>
+            /// <item><description><para><b>rollback</b></para>
+            /// </description></item>
+            /// <item><description><para><b>rollback_success</b></para>
+            /// </description></item>
+            /// <item><description><para><b>rollback_error</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +332,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The ID of the Alibaba Cloud account to which the worker task belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1666884372152785</para>
+            /// <para>166688437******</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
@@ -325,7 +354,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The number of entries per page. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]

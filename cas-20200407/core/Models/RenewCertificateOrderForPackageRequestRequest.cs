@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>If you do not specify this parameter, Certificate Management Service automatically generates a CSR file for the domain name in the certificate application order that you want to renew.</para>
         /// <para>A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.</para>
         /// <remarks>
-        /// <para> The <b>CN</b> field in the CSR file specifies the domain name that is bound to the certificate.</para>
+        /// <para>The <b>CN</b> field in the CSR file specifies the domain name that is bound to the certificate.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The ID of the certificate application order that you want to renew.</para>
         /// <remarks>
-        /// <para> After you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a>, <a href="https://help.aliyun.com/document_detail/455292.html">CreateCertificateRequest</a>, or <a href="https://help.aliyun.com/document_detail/455801.html">CreateCertificateWithCsrRequest</a> operation to submit a certificate application, you can obtain the ID of the certificate application order from the <b>OrderId</b> response parameter. You can also call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the order ID.</para>
+        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a>, <a href="https://help.aliyun.com/document_detail/455292.html">CreateCertificateRequest</a>, or <a href="https://help.aliyun.com/document_detail/455801.html">CreateCertificateWithCsrRequest</a> operation to submit a certificate application, you can obtain the ID of the certificate application order from the <b>OrderId</b> response parameter. You can also call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the order ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public class RenewCertificateOrderForPackageRequestRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>account</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 
             /// <summary>
             /// <para>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</para>
-            /// <para>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</para>
+            /// <para>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http\://\&quot; or \&quot;https\://\&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

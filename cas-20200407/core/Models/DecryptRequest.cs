@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The encryption algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RSAES_OAEP_SHA_1</b></description></item>
-        /// <item><description><b>RSAES_OAEP_SHA_256</b></description></item>
-        /// <item><description><b>SM2PKE</b></description></item>
+        /// <item><description><para><b>RSAES_OAEP_SHA_1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>RSAES_OAEP_SHA_256</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SM2PKE</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,21 +29,23 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to query the identifier.</para>
+        /// <para>The unique identifier of the certificate. Call <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> to obtain this parameter.</para>
         /// <list type="bullet">
-        /// <item><description>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</description></item>
-        /// <item><description>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</description></item>
+        /// <item><description><para>The identifier of an SSL certificate is typically in the format {Certificate ID}-cn-hangzhou.</para>
+        /// </description></item>
+        /// <item><description><para>For a private certificate authority (PCA) certificate, this is the value of the Identifier field of the private certificate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>12345678-1234-1234-1234-12345678****</para>
+        /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The data that you want to decrypt. The value is encoded in Base64.</para>
+        /// <para>The Base64-encoded data to decrypt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,15 +55,23 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string CiphertextBlob { get; set; }
 
+        /// <summary>
+        /// <para>A custom identifier that serves as a unique key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>6bb538d538c70c01f81jh2</b></b></para>
+        /// </summary>
         [NameInMap("CustomIdentifier")]
         [Validation(Required=false)]
         public string CustomIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The value type of the Message parameter. Valid values:</para>
+        /// <para>The message type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RAW: The returned result is raw data encoded in UTF-8.</description></item>
-        /// <item><description>Base64: The returned result is Base64-encoded data. This is the default value.</description></item>
+        /// <item><description><para>RAW: The response returns the plaintext in UTF-8 encoding.</para>
+        /// </description></item>
+        /// <item><description><para>Base64 (default): The response returns the Base64-encoded plaintext.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,6 +81,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string MessageType { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the repository.</para>
+        /// <remarks>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("WarehouseId")]
         [Validation(Required=false)]
         public long? WarehouseId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetUserCertificateDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The algorithm.</para>
+        /// <para>The algorithm of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RSA</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Indicates whether the certificate was purchased from Alibaba Cloud. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: Yes</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public bool? BuyInAliyun { get; set; }
 
         /// <summary>
-        /// <para>The content of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</para>
+        /// <para>The content of the certificate that does not use a Chinese cryptographic algorithm. This parameter is returned only when the certFilter request parameter is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</para>
@@ -44,14 +46,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Cert { get; set; }
 
         /// <summary>
-        /// <para>The certificate chain.</para>
+        /// <para>The information about the certificate chain.</para>
         /// </summary>
         [NameInMap("CertChain")]
         [Validation(Required=false)]
         public List<GetUserCertificateDetailResponseBodyCertChain> CertChain { get; set; }
         public class GetUserCertificateDetailResponseBodyCertChain : TeaModel {
             /// <summary>
-            /// <para>The common name of the certificate.</para>
+            /// <para>The common name of the certificate in the chain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -71,27 +73,27 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string IssuerCommonName { get; set; }
 
             /// <summary>
-            /// <para>The end of the validity period of the certificate.</para>
+            /// <para>The expiration date of the certificate in the chain.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>17322613180000</para>
+            /// <para>17352613180000</para>
             /// </summary>
             [NameInMap("NotAfter")]
             [Validation(Required=false)]
             public long? NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the validity period of the certificate.</para>
+            /// <para>The issuance date of the certificate in the chain.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>17302633180000</para>
+            /// <para>17322633180000</para>
             /// </summary>
             [NameInMap("NotBefore")]
             [Validation(Required=false)]
             public long? NotBefore { get; set; }
 
             /// <summary>
-            /// <para>The remaining days of the certificate validity period.</para>
+            /// <para>The number of days until the certificate in the chain expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -103,17 +105,21 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The certificate identifier. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</para>
+        /// <para>The certificate ID followed by &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the value of CertIdentifier is &quot;123-cn-hangzhou&quot;.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10741304-cn-hangzhou</para>
+        /// <para>13781326-cn-hangzhou</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
+        [NameInMap("CertSha2")]
+        [Validation(Required=false)]
+        public string CertSha2 { get; set; }
+
         /// <summary>
-        /// <para>The city of the company or organization to which the certificate purchaser belongs.</para>
+        /// <para>The city where the company or organization of the certificate purchaser is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hangzhou</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Common { get; set; }
 
         /// <summary>
-        /// <para>The country or region of the company or organization to which the certificate purchaser belongs.</para>
+        /// <para>The country where the company or organization of the certificate purchaser is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// <para>The content of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</para>
+        /// <para>The content of the encryption certificate that uses a Chinese cryptographic algorithm. The certificate is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptCert { get; set; }
 
         /// <summary>
-        /// <para>The private key of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</para>
+        /// <para>The private key of the encryption certificate that uses a Chinese cryptographic algorithm. The private key is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -179,8 +185,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Indicates whether the certificate has expired. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: The certificate has expired.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The certificate has not expired.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,17 +219,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the resource.</para>
+        /// <para>The ID of the resource instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cas-upload-50yf1q</para>
+        /// <para>cas-ivauto-hqito6</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The certificate authority (CA) that issued the certificate.</para>
+        /// <para>The certification authority (CA) that issued the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Digicert</para>
@@ -231,7 +239,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The private key of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</para>
+        /// <para>The private key of the certificate that does not use a Chinese cryptographic algorithm. This parameter is returned only when the certFilter request parameter is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</para>
@@ -251,27 +259,27 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The end of the validity period of the certificate.</para>
+        /// <para>The end time of the validity period of the certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>17322613180000</para>
+        /// <para>17326613180000</para>
         /// </summary>
         [NameInMap("NotAfter")]
         [Validation(Required=false)]
         public long? NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the validity period of the certificate.</para>
+        /// <para>The start time of the validity period of the certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>17312613180000</para>
+        /// <para>17321613180000</para>
         /// </summary>
         [NameInMap("NotBefore")]
         [Validation(Required=false)]
         public long? NotBefore { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the certificate application order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -281,7 +289,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The name of the company or organization to which the certificate purchaser belongs.</para>
+        /// <para>The name of the company or organization of the certificate purchaser.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alibaba</para>
@@ -291,7 +299,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string OrgName { get; set; }
 
         /// <summary>
-        /// <para>The province of the company or organization to which the certificate purchaser belongs.</para>
+        /// <para>The province where the company or organization of the certificate purchaser is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zhejiang</para>
@@ -301,7 +309,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Province { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. This unique ID is generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -334,7 +342,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The serial number of the certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06ea4879591ddf84e6c8b6ba43607ccf</para>
+        /// <para>033cd852608689ef5e368fde89e0961769e8</para>
         /// </summary>
         [NameInMap("SerialNo")]
         [Validation(Required=false)]
@@ -344,14 +352,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The SHA-2 value of the certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>840707695D5EE41323102DDC2CB4924AA561012FBDC4E1A6324147119ED3C339</para>
+        /// <para>573415B23243066AD345AE5A57BD0FAE94F598BDD06D906278B5FF318F090FC8</para>
         /// </summary>
         [NameInMap("Sha2")]
         [Validation(Required=false)]
         public string Sha2 { get; set; }
 
         /// <summary>
-        /// <para>The content of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</para>
+        /// <para>The content of the signing certificate that uses a Chinese cryptographic algorithm. The certificate is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -363,7 +371,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignCert { get; set; }
 
         /// <summary>
-        /// <para>The private key of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.</para>
+        /// <para>The private key of the signing certificate that uses a Chinese cryptographic algorithm. The private key is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -384,14 +392,29 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetUserCertificateDetailResponseBodyTags> Tags { get; set; }
         public class GetUserCertificateDetailResponseBodyTags : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
             public string TagKey { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]
             public string TagValue { get; set; }

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The name of the certificate bound to the cloud resource.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>shop.amsaudio.cn</para>
+            /// <para>example</para>
             /// </summary>
             [NameInMap("CertName")]
             [Validation(Required=false)]
@@ -69,11 +69,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The AccessKey ID that is used to access cloud resources.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when you deploy certificates to cloud services of third-party clouds.</para>
+            /// <para>This parameter is returned only when you deploy certificates to cloud services of third-party clouds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para>AK96*******6M</para>
             /// </summary>
             [NameInMap("CloudAccessId")]
             [Validation(Required=false)]
@@ -83,10 +83,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The cloud service provider.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Tencent</description></item>
-            /// <item><description>Huawei</description></item>
-            /// <item><description>Aws</description></item>
-            /// <item><description>aliyun</description></item>
+            /// <item><description><para>Tencent</para>
+            /// </description></item>
+            /// <item><description><para>Huawei</para>
+            /// </description></item>
+            /// <item><description><para>Aws</para>
+            /// </description></item>
+            /// <item><description><para>aliyun</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,11 +123,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether the cloud resource is the default resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes</description></item>
-            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><para><b>1</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The domain name bound to the cloud resource.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://www.tkgeo.ru">www.tkgeo.ru</a></para>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("Domain")]
             [Validation(Required=false)]
@@ -146,8 +152,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether HTTPS is enabled for the cloud resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes.</description></item>
-            /// <item><description><b>0</b>: no.</description></item>
+            /// <item><description><para><b>1</b>: yes.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: no.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -190,11 +198,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The instance ID of the cloud resource.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>nlb-rv05agjc97ovm14il5</para>
+            /// <para>nlb-rv05a********14il5</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -203,11 +211,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The listener ID of the cloud resource.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>lsn-jiugof6t23et66lsnc@443</para>
+            /// <para>lsn-jiug********66lsnc@443</para>
             /// </summary>
             [NameInMap("ListenerId")]
             [Validation(Required=false)]
@@ -216,11 +224,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The listening port of the cloud resource.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
+            /// <para>This parameter is returned only when the value of CloudProduct is SLB, NLB, ALB, or GA.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>8047</para>
+            /// <para>443</para>
             /// </summary>
             [NameInMap("ListenerPort")]
             [Validation(Required=false)]
@@ -249,11 +257,13 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether an Alibaba Cloud SSL certificate is used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes</description></item>
-            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><para><b>1</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: no</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is required only when you deploy certificates to services of multiple clouds.</para>
+            /// <para>This parameter is required only when you deploy certificates to services of multiple clouds.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -267,7 +277,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1666884372152785</para>
+            /// <para>1666884372******</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]

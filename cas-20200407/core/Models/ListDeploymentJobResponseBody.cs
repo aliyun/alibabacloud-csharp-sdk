@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The type of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>upload</b>: uploaded certificate</description></item>
-            /// <item><description><b>buy</b>: purchased certificate</description></item>
-            /// <item><description><b>free</b>: free certificate, available only on the China site (aliyun.com)</description></item>
+            /// <item><description><para><b>upload</b>: uploaded certificate</para>
+            /// </description></item>
+            /// <item><description><para><b>buy</b>: purchased certificate</para>
+            /// </description></item>
+            /// <item><description><para><b>free</b>: free certificate, available only on the China site (aliyun.com)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,8 +57,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether the deployment task is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not deleted</description></item>
-            /// <item><description><b>1</b>: deleted</description></item>
+            /// <item><description><para><b>0</b>: not deleted</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: deleted</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +114,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The instance ID of the deployment task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cas-job-user-0gvntn</para>
+            /// <para>cas-job-user-***</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -118,8 +123,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The type of the deployment task.</para>
             /// <list type="bullet">
-            /// <item><description><b>cloud</b>: multi-cloud deployment task.</description></item>
-            /// <item><description><b>user</b>: cloud service deployment task. This type of task does not support ECS instances.</description></item>
+            /// <item><description><para><b>cloud</b>: multi-cloud deployment task.</para>
+            /// </description></item>
+            /// <item><description><para><b>user</b>: cloud service deployment task. This type of task does not support ECS instances.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,8 +159,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether the rollback worker is included. For example, if a cloud service involved in a deployment task has been rolled back, <b>1</b> is returned. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The rollback worker is not included.</description></item>
-            /// <item><description><b>1</b>: The rollback worker is included.</description></item>
+            /// <item><description><para><b>0</b>: The rollback worker is not included.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: The rollback worker is included.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,12 +195,18 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The status of the deployment task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b></description></item>
-            /// <item><description><b>editing</b></description></item>
-            /// <item><description><b>scheduling</b></description></item>
-            /// <item><description><b>processing</b></description></item>
-            /// <item><description><b>error</b></description></item>
-            /// <item><description><b>success</b></description></item>
+            /// <item><description><para><b>pending</b></para>
+            /// </description></item>
+            /// <item><description><para><b>editing</b></para>
+            /// </description></item>
+            /// <item><description><para><b>scheduling</b></para>
+            /// </description></item>
+            /// <item><description><para><b>processing</b></para>
+            /// </description></item>
+            /// <item><description><para><b>error</b></para>
+            /// </description></item>
+            /// <item><description><para><b>success</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -205,7 +220,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The ID of the user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1666884372152785</para>
+            /// <para>166688437*****</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
@@ -227,7 +242,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The number of deployment tasks per page. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>50</para>
         /// </summary>
         [NameInMap("ShowSize")]
         [Validation(Required=false)]

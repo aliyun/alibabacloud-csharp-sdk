@@ -9,7 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class RevokeCertificateRequest : TeaModel {
+        [NameInMap("CertificateId")]
+        [Validation(Required=false)]
+        public long? CertificateId { get; set; }
+
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

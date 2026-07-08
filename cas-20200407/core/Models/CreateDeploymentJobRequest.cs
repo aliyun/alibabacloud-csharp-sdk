@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The type of the deployment task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud: multi-cloud deployment task.</description></item>
-        /// <item><description>user: cloud service deployment task. This type of task does not support cloud servers.</description></item>
+        /// <item><description><para>cloud: multi-cloud deployment task.</para>
+        /// </description></item>
+        /// <item><description><para>user: cloud service deployment task. This type of task does not support cloud servers.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

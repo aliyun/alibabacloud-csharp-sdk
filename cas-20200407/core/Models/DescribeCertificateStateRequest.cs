@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DescribeCertificateStateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the certificate application order that you want to query.</para>
+        /// <para>The ID of the certificate request order to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> to obtain this ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The encryption algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RSAES_OAEP_SHA_1</b></description></item>
-        /// <item><description><b>RSAES_OAEP_SHA_256</b></description></item>
-        /// <item><description><b>SM2PKE</b></description></item>
+        /// <item><description><para><b>RSAES_OAEP_SHA_1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>RSAES_OAEP_SHA_256</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SM2PKE</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,28 +29,38 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the certificate. You can call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation to obtain the identifier.</para>
+        /// <para>The unique identifier of the certificate. To obtain this parameter, call the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.</description></item>
-        /// <item><description>If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.</description></item>
+        /// <item><description><para>The identifier of an SSL certificate is usually in the {Certificate ID}-cn-hangzhou format.</para>
+        /// </description></item>
+        /// <item><description><para>For a private certificate authority (PCA) certificate, this is the value of the Identifier field of the private certificate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>12345678-1234-1234-1234-12345678****</para>
+        /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
         /// </summary>
         [NameInMap("CertIdentifier")]
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
+        /// <summary>
+        /// <para>The custom identifier, which serves as a unique key.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><b><b>6bb538d538c70c01f81dg3</b></b></para>
+        /// </summary>
         [NameInMap("CustomIdentifier")]
         [Validation(Required=false)]
         public string CustomIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The value type of the Message parameter. Valid values:</para>
+        /// <para>The message type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RAW: The value of the Plaintext parameter is directly encrypted. This is the default value.</description></item>
-        /// <item><description>Base64: The value of the Plaintext parameter is Base64-encoded data. The data is decoded and then encrypted.</description></item>
+        /// <item><description><para>RAW (default): Directly encrypts the value of Plaintext.</para>
+        /// </description></item>
+        /// <item><description><para>Base64: Decodes the Base64-encoded value of Plaintext and then encrypts the decoded data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,11 +71,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string MessageType { get; set; }
 
         /// <summary>
-        /// <para>The data that you want to encrypt. The value of this parameter can be raw data or Base64-encoded data. For more information, see the description of the MessageType parameter. For example, if the hexadecimal data that you want to encrypt is <c>[0x31, 0x32, 0x33, 0x34]</c>, the Base64-encoded data is MTIzNA==. The size of data that can be encrypted varies based on the encryption algorithm that you use. The following list describes the relationship between the encryption algorithms and data sizes:</para>
+        /// <para>The data to encrypt. The data can be plaintext or Base64-encoded plaintext. For more information, see the MessageType parameter. If you use Base64 encoding, for example, if the hexadecimal content of the data to be encrypted is <c>[0x31, 0x32, 0x33, 0x34]</c>, the corresponding Base64-encoded string is MTIzNA==. The maximum size of Plaintext depends on the Algorithm:</para>
         /// <list type="bullet">
-        /// <item><description><b>RSAES_OAEP_SHA_1</b>: 214 bytes</description></item>
-        /// <item><description><b>RSAES_OAEP_SHA_256</b>: 190 bytes</description></item>
-        /// <item><description><b>SM2PKE</b>: 6,047 bytes</description></item>
+        /// <item><description><para><b>RSAES_OAEP_SHA_1</b>: 214 bytes.</para>
+        /// </description></item>
+        /// <item><description><para><b>RSAES_OAEP_SHA_256</b>: 190 bytes.</para>
+        /// </description></item>
+        /// <item><description><para><b>SM2PKE</b>: 6047 bytes.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,6 +89,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string Plaintext { get; set; }
 
+        /// <summary>
+        /// <para>The repository ID.</para>
+        /// <remarks>
+        /// <para>To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> operation.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12</para>
+        /// </summary>
         [NameInMap("WarehouseId")]
         [Validation(Required=false)]
         public long? WarehouseId { get; set; }

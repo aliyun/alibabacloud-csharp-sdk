@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The AccessKey secret used to access cloud resources.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2712219.html">ListCloudAccess</a> operation to obtain the ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2712219.html">ListCloudAccess</a> operation to obtain the ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>AKID9*******XX</para>
+        /// <para>AKID9AHG6iCZlncN7yPmOsQ1X******</para>
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]

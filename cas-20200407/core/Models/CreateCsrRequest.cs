@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123.com</para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("CommonName")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The name of the company.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aly</para>
+        /// <para>北京CSR科技有效公司</para>
         /// </summary>
         [NameInMap("CorpName")]
         [Validation(Required=false)]
@@ -65,8 +65,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The key length that is used by the algorithm.</para>
         /// <list type="bullet">
-        /// <item><description>The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.</description></item>
-        /// <item><description>The key length for ECC and SM2 algorithms can be 256 bits.</description></item>
+        /// <item><description><para>The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.</para>
+        /// </description></item>
+        /// <item><description><para>The key length for ECC and SM2 algorithms can be 256 bits.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -113,7 +115,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The secondary domain names. Separate multiple domain names with commas (,). You can use the CSR to apply for a certificate for both the primary and secondary domain names.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></para>
+        /// <para><a href="http://www.aliyundoc.com,www.example.com">www.aliyundoc.com,www.example.com</a></para>
         /// </summary>
         [NameInMap("Sans")]
         [Validation(Required=false)]

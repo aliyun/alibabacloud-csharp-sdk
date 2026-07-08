@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class CancelCertificateForPackageRequestResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request. Alibaba Cloud generates this ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>082FAB35-6AB9-4FD5-8750-D36673548E76</para>
+        /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

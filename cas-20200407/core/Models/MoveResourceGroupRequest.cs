@@ -42,12 +42,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.\
+        /// <para>The type of the resource.<br>
         /// Default value: <b>instance</b></para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: certificate order</description></item>
-        /// <item><description>Certificate: certificate</description></item>
+        /// <item><description><para>instance: certificate order</para>
+        /// </description></item>
+        /// <item><description><para>Certificate: certificate</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

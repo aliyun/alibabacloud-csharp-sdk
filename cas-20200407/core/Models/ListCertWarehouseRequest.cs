@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCertWarehouseRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,11 +52,16 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The type of the certificate application repository. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ssl</b>: certificate application repository of SSL certificates</description></item>
-        /// <item><description><b>uploadPCA</b>: certificate application repository of uploaded private certificates</description></item>
-        /// <item><description><b>free</b>: certificate application repository of free certificates, available only on the China site (aliyun.com)</description></item>
-        /// <item><description><b>aliyunPCA</b>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</description></item>
-        /// <item><description><b>disable</b>: disabled certificate application repository</description></item>
+        /// <item><description><para><b>ssl</b>: certificate application repository of SSL certificates</para>
+        /// </description></item>
+        /// <item><description><para><b>uploadPCA</b>: certificate application repository of uploaded private certificates</para>
+        /// </description></item>
+        /// <item><description><para><b>free</b>: certificate application repository of free certificates, available only on the China site (aliyun.com)</para>
+        /// </description></item>
+        /// <item><description><para><b>aliyunPCA</b>: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: disabled certificate application repository</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

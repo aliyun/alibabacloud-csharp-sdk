@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetCertificateDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The certificate ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

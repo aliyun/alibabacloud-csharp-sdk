@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of contacts per page.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

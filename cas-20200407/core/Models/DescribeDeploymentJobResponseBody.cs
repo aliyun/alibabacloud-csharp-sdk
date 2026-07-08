@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The name of the contact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>zhangsan</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -71,9 +71,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The type of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>upload</b>: uploaded certificate</description></item>
-        /// <item><description><b>buy</b>: purchased certificate</description></item>
-        /// <item><description><b>free</b>: free certificate available only on the China site (aliyun.com)</description></item>
+        /// <item><description><para><b>upload</b>: uploaded certificate</para>
+        /// </description></item>
+        /// <item><description><para><b>buy</b>: purchased certificate</para>
+        /// </description></item>
+        /// <item><description><para><b>free</b>: free certificate available only on the China site (aliyun.com)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,8 +99,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Indicates whether the deployment job was deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: not deleted</description></item>
-        /// <item><description><b>1</b>: deleted</description></item>
+        /// <item><description><para><b>0</b>: not deleted</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: deleted</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +146,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The ID of the deployment job.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8888</para>
+        /// <para>43222</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -160,9 +165,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The type of the deployment job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud</b>: multi-cloud deployment job.</description></item>
-        /// <item><description><b>trustee</b>: hosted deployment job available only on the China site (aliyun.com).</description></item>
-        /// <item><description><b>user</b>: cloud service deployment job. The cloud server is not included.</description></item>
+        /// <item><description><para><b>cloud</b>: multi-cloud deployment job.</para>
+        /// </description></item>
+        /// <item><description><para><b>trustee</b>: hosted deployment job available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para><b>user</b>: cloud service deployment job. The cloud server is not included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,8 +213,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Indicates whether the deployment job includes the rollback worker. For example, if a cloud service in a deployment job has been rolled back, <b>1</b> is returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The rollback worker is not included.</description></item>
-        /// <item><description><b>1</b>: The rollback worker is included.</description></item>
+        /// <item><description><para><b>0</b>: The rollback worker is not included.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The rollback worker is included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -239,12 +249,18 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The status of the deployment job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pending</b></description></item>
-        /// <item><description><b>editing</b></description></item>
-        /// <item><description><b>scheduling</b></description></item>
-        /// <item><description><b>processing</b></description></item>
-        /// <item><description><b>error</b></description></item>
-        /// <item><description><b>success</b></description></item>
+        /// <item><description><para><b>pending</b></para>
+        /// </description></item>
+        /// <item><description><para><b>editing</b></para>
+        /// </description></item>
+        /// <item><description><para><b>scheduling</b></para>
+        /// </description></item>
+        /// <item><description><para><b>processing</b></para>
+        /// </description></item>
+        /// <item><description><para><b>error</b></para>
+        /// </description></item>
+        /// <item><description><para><b>success</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -258,7 +274,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The ID of the Alibaba Cloud account in which the deployment job is created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>166688437XXXX785</para>
+        /// <para>166688437******</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

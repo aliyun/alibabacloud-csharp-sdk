@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The name of the company.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>corp_name</para>
+            /// <para>北京CSR科技有限公司</para>
             /// </summary>
             [NameInMap("CorpName")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The name of the CSR.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>name</para>
+            /// <para>test_name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The secondary domain names. Separate multiple domain names with commas (,).</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://www.example.com,www.aliyundoc.com">www.example.com,www.aliyundoc.com</a></para>
+            /// <para><a href="http://www.aliyundoc.com,www.example.com">www.aliyundoc.com,www.example.com</a></para>
             /// </summary>
             [NameInMap("Sans")]
             [Validation(Required=false)]

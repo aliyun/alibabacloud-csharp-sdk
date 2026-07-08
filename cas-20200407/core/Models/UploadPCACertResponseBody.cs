@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cas20200407.Models
+{
+    public class UploadPCACertResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The unique identifier for the certificate.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1ed65580-7e33-6a50-8630-dd13fdc009ee</para>
+        /// </summary>
+        [NameInMap("Identifier")]
+        [Validation(Required=false)]
+        public string Identifier { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}

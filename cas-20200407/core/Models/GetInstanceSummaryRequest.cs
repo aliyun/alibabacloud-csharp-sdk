@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetInstanceSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The instance type. Valid values: BUY: a paid certificate. TEST: a test certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TEST</para>
         /// </summary>

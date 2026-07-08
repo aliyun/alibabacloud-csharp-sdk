@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ApplyCertificateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance. Before you request a certificate, call the UpdateInstance operation to update and complete the application information for the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

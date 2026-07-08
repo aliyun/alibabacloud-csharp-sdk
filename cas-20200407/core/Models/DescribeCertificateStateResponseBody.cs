@@ -9,27 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class DescribeCertificateStateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The certificate ID.</para>
+        /// <remarks>
+        /// <para>This parameter is returned when the certificate is issued.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>111111</para>
+        /// </summary>
         [NameInMap("CertId")]
         [Validation(Required=false)]
         public string CertId { get; set; }
 
         /// <summary>
-        /// <para>The content of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see <a href="https://help.aliyun.com/document_detail/42214.html">What formats are used for mainstream digital certificates?</a></para>
+        /// <para>The certificate content (in PEM format). For more information about the PEM format and how to convert the format of a certificate, see <a href="https://help.aliyun.com/document_detail/42214.html">What are the formats of mainstream digital certificates?</a>.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>certificate</b>. The value certificate indicates that the certificate is issued.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>certificate</b> (indicating that the certificate has been issued).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>——BEGIN CERTIFICATE—— …… ——END CERTIFICATE——</para>
+        /// <para>-----BEGIN CERTIFICATE----- …… -----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The content that you need to write to the newly created file when you use the file verification method.</para>
+        /// <para>The content that you need to write to the newly created file when you use the file validation method for domain validation.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b> and the value of the <b>ValidateType</b> parameter is <b>FILE</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage) and <b>ValidateType</b> is set to <b>FILE</b> (indicating the file validation method).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,9 +49,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The domain name to be verified when you use the file verification method. You must connect to the DNS server of the domain name and create a file on the server. The file is specified by the <b>Uri</b> parameter.</para>
+        /// <para>The domain name to be validated when you use the file validation method for domain validation. You need to connect to the server corresponding to this domain name and create the specified file (i.e., <b>Uri</b>) on the server.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b> and the value of the <b>ValidateType</b> parameter is <b>FILE</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage) and <b>ValidateType</b> is set to <b>FILE</b> (indicating the file validation method).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,22 +62,22 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The private key of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see <a href="https://help.aliyun.com/document_detail/42214.html">What formats are used for mainstream digital certificates?</a></para>
+        /// <para>The content of the certificate private key (in PEM format). For more information about the PEM format and how to convert the format of a certificate, see <a href="https://help.aliyun.com/document_detail/42214.html">What are the formats of mainstream digital certificates?</a>.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>certificate</b>. The value certificate indicates that the certificate is issued.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>certificate</b> (indicating that the certificate has been issued).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>——BEGIN RSA PRIVATE KEY—— …… ——END RSA PRIVATE KEY——</para>
+        /// <para>-----BEGIN RSA PRIVATE KEY-----…… -----END RSA PRIVATE KEY-----</para>
         /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The DNS record that you need to manage when you use the DNS verification method.</para>
+        /// <para>The host record that you need to operate when you use the DNS validation method for domain validation.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b> and the value of the <b>ValidateType</b> parameter is <b>DNS</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value DNS indicates that the DNS verification method is used.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage) and <b>ValidateType</b> is set to <b>DNS</b> (indicating the DNS validation method).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,13 +88,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RecordDomain { get; set; }
 
         /// <summary>
-        /// <para>The type of the DNS record that you need to add when you use the DNS verification method. Valid values:</para>
+        /// <para>The type of DNS record that you need to add when you use the DNS validation method for domain validation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TXT</b></description></item>
-        /// <item><description><b>CNAME</b></description></item>
+        /// <item><description><para><b>TXT</b>: text record.</para>
+        /// </description></item>
+        /// <item><description><para><b>CNAME</b>: alias record.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b> and the value of the <b>ValidateType</b> parameter is <b>DNS</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage) and <b>ValidateType</b> is set to <b>DNS</b> (indicating the DNS validation method).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,9 +107,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RecordType { get; set; }
 
         /// <summary>
-        /// <para>You need to add a TXT record to the DNS records only when you use the DNS verification method.</para>
+        /// <para>The record value that you need to add when you use the DNS validation method for domain validation.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b> and the value of the <b>ValidateType</b> parameter is <b>DNS</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value DNS indicates that the DNS verification method is used.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage) and <b>ValidateType</b> is set to <b>DNS</b> (indicating the DNS validation method).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -119,25 +130,25 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate application order. Valid values:</para>
+        /// <para>The status of the certificate request order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>domain_verify</b>: <b>pending review</b>, which indicates that you have not completed the verification of the domain name ownership after you submit the certificate application.</para>
+        /// <item><description><para><b>domain_verify</b>: <b>Pending validation</b>, which indicates that you have not completed domain validation after submitting the certificate request.</para>
         /// <remarks>
-        /// <para>After you submit a certificate application, you must manually complete the verification of the domain name ownership. The CA reviews the certificate application only after the verification is complete. If you have not completed the verification of the domain name ownership, you can complete the verification based on the data returned by this operation.</para>
+        /// <para>After you submit a certificate request, you must manually complete domain ownership validation before the certificate request can enter the review stage. If you have not completed domain validation, you can refer to the response parameters of this operation to complete domain validation.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para><b>process</b>: <b>being reviewed</b>, which indicates that the certificate application is being reviewed by the CA.</para>
+        /// <item><description><para><b>process</b>: <b>Under review</b>, which indicates that the certificate request is being reviewed by the CA center.</para>
         /// </description></item>
-        /// <item><description><para><b>verify_fail</b>: <b>review failed</b>, which indicates that the certificate application failed to be reviewed.</para>
+        /// <item><description><para><b>verify_fail</b>: <b>Review failed</b>, which indicates that the certificate request failed the review.</para>
         /// <remarks>
-        /// <para> If a certificate application fails to be reviewed, the information that you specified in the certificate application may be incorrect. We recommend that you call the <a href="https://help.aliyun.com/document_detail/164109.html">DeleteCertificateRequest</a> operation to delete the certificate application order and resubmit a certificate application. After the order is deleted, the quota that is consumed for the order is released.</para>
+        /// <para>The review may fail because the certificate request information you submitted is incorrect. We recommend that you call <a href="https://help.aliyun.com/document_detail/455294.html">DeleteCertificateRequest</a> to delete the order that failed the review (deleted orders do not consume certificate resource plan quota) and submit a new certificate request.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description><para><b>certificate</b>: <b>issued</b>, which indicates that the certificate is issued.</para>
+        /// <item><description><para><b>certificate</b>: <b>Issued</b>, which indicates that the certificate has been issued.</para>
         /// </description></item>
-        /// <item><description><para><b>payed</b>: <b>pending application</b>, which indicates that you have not submitted a certificate application.</para>
+        /// <item><description><para><b>payed</b>: <b>Pending request</b>, which indicates that the certificate is pending request.</para>
         /// </description></item>
-        /// <item><description><para><b>unknow</b>: The status is <b>unknown</b>.</para>
+        /// <item><description><para><b>unknow</b>: <b>Unknown status</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -149,9 +160,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The file that you need to create on the DNS server when you use the file verification method. <b>The value of this parameter contains the file path and file name.</b></para>
+        /// <para>The file that you need to create on the domain server when you use the file validation method for domain validation. <b>Uri</b> includes the file path and name.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b> and the value of the <b>ValidateType</b> parameter is <b>FILE</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete, and the value FILE indicates that the file verification method is used.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage) and <b>ValidateType</b> is set to <b>FILE</b> (indicating the file validation method).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -162,13 +173,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>The verification method of the domain name ownership. Valid values:</para>
+        /// <para>The domain validation method selected when submitting the certificate request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DNS</b>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name.</description></item>
-        /// <item><description><b>FILE</b>: file verification. If you use this method, you must create a specified file on the DNS server.</description></item>
+        /// <item><description><para><b>DNS</b>: DNS validation. This method validates domain ownership by adding the specified DNS record to the domain on the DNS management platform.</para>
+        /// </description></item>
+        /// <item><description><para><b>FILE</b>: file validation. This method validates domain ownership by creating the specified file on the domain server.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>Type</b> parameter is <b>domain_verify</b>. The value domain_verify indicates that the verification of the domain name ownership is not complete.</para>
+        /// <para>This parameter is returned only when <b>Type</b> is set to <b>domain_verify</b> (indicating the domain validation stage).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

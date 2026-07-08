@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Algorithm { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The keyword.</para>
+        /// <para>The keyword for fuzzy search. For example, you can specify a domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>

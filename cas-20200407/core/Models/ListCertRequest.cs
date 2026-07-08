@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCertRequest : TeaModel {
         /// <summary>
-        /// <para>证书的类型 。取值：</para>
+        /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CA</b>：表示CA证书。</description></item>
-        /// <item><description><b>CERT</b>：表示签发的证书。</description></item>
+        /// <item><description><para><b>CA</b>: CA certificate</para>
+        /// </description></item>
+        /// <item><description><para><b>CERT</b>: issued certificate</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number to return. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +36,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.</para>
+        /// <para>A comma-separated list of certificate identifiers.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aaa,bbb</para>
+        /// </summary>
+        [NameInMap("Identifiers")]
+        [Validation(Required=false)]
+        public string Identifiers { get; set; }
+
+        /// <summary>
+        /// <para>The keyword for a fuzzy search by name, domain name, or subject alternative name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -44,7 +56,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 50.</para>
+        /// <para>The number of entries per page. The default value is 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -56,8 +68,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The source of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>upload</b>: uploaded certificate</description></item>
-        /// <item><description><b>aliyun</b>: Alibaba Cloud certificate</description></item>
+        /// <item><description><para><b>upload</b>: uploaded certificate</para>
+        /// </description></item>
+        /// <item><description><para><b>aliyun</b>: Alibaba Cloud certificate</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +82,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The status of the certificate. Valid values:</para>
+        /// <para>The certificate status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ISSUE</b>: issued</description></item>
-        /// <item><description><b>REVOKE</b>: revoked</description></item>
+        /// <item><description><para><b>ISSUE</b>: issued</para>
+        /// </description></item>
+        /// <item><description><para><b>REVOKE</b>: revoked</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +98,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate repository. You can call the ListCertWarehouse API operation to query the IDs of certificate repositories.</para>
+        /// <para>The warehouse ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/453246.html">ListCertWarehouse</a> API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

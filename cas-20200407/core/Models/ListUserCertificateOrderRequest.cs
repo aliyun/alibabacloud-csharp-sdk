@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListUserCertificateOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The domain name that is bound or the ID of the resource. Fuzzy match is supported.</para>
+        /// <para>Performs a fuzzy query. The keyword can be a domain name or a resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert-instanceId</para>
@@ -30,12 +30,16 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The type of the order. Default value: <b>CPACK</b>. Valid values:</para>
+        /// <para>The resource type. Default value: <b>CPACK</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CPACK</b>: virtual resource order. If you set OrderType to CPACK, only the information about orders that are generated to consume the certificate quota is returned.</description></item>
-        /// <item><description><b>BUY</b>: purchase order. If you set OrderType to BUY, only the information about purchase orders is returned. In most cases, this type of order can be ignored.</description></item>
-        /// <item><description><b>UPLOAD</b>: uploaded certificate. If you set OrderType to UPLOAD, only uploaded certificates are returned.</description></item>
-        /// <item><description><b>CERT</b>: certificate. If you set OrderType to CERT, both issued certificates and uploaded certificates are returned.</description></item>
+        /// <item><description><para><b>CPACK</b>: An order for a resource plan. Only orders created from a resource plan are returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>BUY</b>: A direct purchase. Only orders created from direct purchases are returned. You can ignore this type in most cases.</para>
+        /// </description></item>
+        /// <item><description><para><b>UPLOAD</b>: An uploaded certificate. Only uploaded certificates are returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>CERT</b>: A certificate. Both issued and uploaded certificates are returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation to obtain the ID.</para>
+        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ae******4wia</para>
@@ -66,18 +70,26 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The certificate status of the order. Valid values:</para>
+        /// <para>The status of the order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PAYED</b>: pending application. You can set Status to PAYED only if you set OrderType to CPACK or BUY.</description></item>
-        /// <item><description><b>CHECKING</b>: validating. You can set Status to CHECKING only if you set OrderType to CPACK or BUY.</description></item>
-        /// <item><description><b>CHECKED_FAIL</b>: validation failed. You can set Status to CHECKED_FAIL only if you set OrderType to CPACK or BUY.</description></item>
-        /// <item><description><b>ISSUED</b>: issued.</description></item>
-        /// <item><description><b>WILLEXPIRED</b>: about to expire.</description></item>
-        /// <item><description><b>EXPIRED</b>: expired.</description></item>
-        /// <item><description><b>NOTACTIVATED</b>: not activated. You can set Status to NOTACTIVATED only if you set OrderType to CPACK or BUY.</description></item>
-        /// <item><description><b>REVOKED</b>: revoked. You can set Status to REVOKED only if you set OrderType to CPACK or BUY.</description></item>
+        /// <item><description><para><b>PAYED</b>: The certificate is pending application. This value is valid only when OrderType is set to CPACK or BUY.</para>
+        /// </description></item>
+        /// <item><description><para><b>CHECKING</b>: The certificate is under review. This value is valid only when OrderType is set to CPACK or BUY.</para>
+        /// </description></item>
+        /// <item><description><para><b>CHECKED_FAIL</b>: The review failed. This value is valid only when OrderType is set to CPACK or BUY.</para>
+        /// </description></item>
+        /// <item><description><para><b>ISSUED</b>: The certificate is issued.</para>
+        /// </description></item>
+        /// <item><description><para><b>WILLEXPIRED</b>: The certificate is about to expire.</para>
+        /// </description></item>
+        /// <item><description><para><b>EXPIRED</b>: The certificate has expired.</para>
+        /// </description></item>
+        /// <item><description><para><b>NOTACTIVATED</b>: The certificate is not activated. This value is valid only when OrderType is set to CPACK or BUY.</para>
+        /// </description></item>
+        /// <item><description><para><b>REVOKED</b>: The certificate is revoked. This value is valid only when OrderType is set to CPACK or BUY.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you set OrderType to CERT or UPLOAD and Status is left empty, valid certificates are returned by default, including issued certificates and certificates that are about to expire. If you set OrderType to CPACK or BUY and Status is left empty, all orders are returned by default.</para>
+        /// <para>If OrderType is CERT or UPLOAD and you leave this parameter empty, active certificates are returned by default. Active certificates are those in the ISSUED or WILLEXPIRED state. If OrderType is CPACK or BUY and you leave this parameter empty, all orders are returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ISSUED</para>

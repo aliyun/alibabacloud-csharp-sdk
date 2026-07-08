@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UploadCsrResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the CSR.</para>
+        /// <para>The unique ID of the CSR. You can use this ID to obtain the content of the CSR. For more information, see <a href="https://help.aliyun.com/document_detail/2709720.html">GetCsrDetail</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2271</para>

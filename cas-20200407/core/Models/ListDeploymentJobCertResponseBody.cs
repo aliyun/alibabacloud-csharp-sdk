@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The name of the certificate.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>edkog.shop</para>
+            /// <para>cert-11488855</para>
             /// </summary>
             [NameInMap("CertName")]
             [Validation(Required=false)]
@@ -59,9 +59,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The type of the certificate order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>upload</b>: uploaded certificate.</description></item>
-            /// <item><description><b>buy</b>: purchased certificate.</description></item>
-            /// <item><description><b>free</b>: free certificate. This value is available only on the China site (aliyun.com).</description></item>
+            /// <item><description><para><b>upload</b>: uploaded certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>buy</b>: purchased certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>free</b>: free certificate. This value is available only on the China site (aliyun.com).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The common name of the certificate.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vaultwebhook.vault-webhook.svc</para>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("CommonName")]
             [Validation(Required=false)]
@@ -94,8 +97,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>Indicates whether the certificate is hosted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,7 +143,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The ID of the certificate order.</para>
             /// <remarks>
-            /// <para> If CertId is returned, this parameter is not returned.</para>
+            /// <para>If CertId is returned, this parameter is not returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -158,19 +163,32 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The status code of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>payed</b>: paid and pending application</description></item>
-            /// <item><description><b>checking</b>: being validated</description></item>
-            /// <item><description><b>checkedFail</b>: validation failed</description></item>
-            /// <item><description><b>revoked</b>: revoked</description></item>
-            /// <item><description><b>revokeChecking</b>: revocation request being validated</description></item>
-            /// <item><description><b>issued</b>: issued (excluding hosted certificates that are issued, certificates that are about to expire, expired certificates, and uploaded certificates)</description></item>
-            /// <item><description><b>trustee</b>: hosted and issued</description></item>
-            /// <item><description><b>upload</b>: uploaded (excluding certificates that are about to expire and expired certificates)</description></item>
-            /// <item><description><b>willExpired</b>: about to expire (including certificates issued by using the Certificate Management Service console and uploaded certificates)</description></item>
-            /// <item><description><b>expired</b>: expired (including certificates issued by using the Certificate Management Service console and uploaded certificates)</description></item>
-            /// <item><description><b>validity</b>: valid (including certificates that are not expired or revoked)</description></item>
-            /// <item><description><b>refund</b>: refunded</description></item>
-            /// <item><description><b>closed</b>: closed</description></item>
+            /// <item><description><para><b>payed</b>: paid and pending application</para>
+            /// </description></item>
+            /// <item><description><para><b>checking</b>: being validated</para>
+            /// </description></item>
+            /// <item><description><para><b>checkedFail</b>: validation failed</para>
+            /// </description></item>
+            /// <item><description><para><b>revoked</b>: revoked</para>
+            /// </description></item>
+            /// <item><description><para><b>revokeChecking</b>: revocation request being validated</para>
+            /// </description></item>
+            /// <item><description><para><b>issued</b>: issued (excluding hosted certificates that are issued, certificates that are about to expire, expired certificates, and uploaded certificates)</para>
+            /// </description></item>
+            /// <item><description><para><b>trustee</b>: hosted and issued</para>
+            /// </description></item>
+            /// <item><description><para><b>upload</b>: uploaded (excluding certificates that are about to expire and expired certificates)</para>
+            /// </description></item>
+            /// <item><description><para><b>willExpired</b>: about to expire (including certificates issued by using the Certificate Management Service (CAS) console and uploaded certificates)</para>
+            /// </description></item>
+            /// <item><description><para><b>expired</b>: expired (including certificates issued by using the CAS console and uploaded certificates)</para>
+            /// </description></item>
+            /// <item><description><para><b>validity</b>: valid (including certificates that are not expired or revoked)</para>
+            /// </description></item>
+            /// <item><description><para><b>refund</b>: refunded</para>
+            /// </description></item>
+            /// <item><description><para><b>closed</b>: closed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

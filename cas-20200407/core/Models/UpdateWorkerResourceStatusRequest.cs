@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The desired status.</para>
+        /// <para>The desired status of the worker resource.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>rollback</description></item>

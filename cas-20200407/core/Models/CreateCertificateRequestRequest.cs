@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The domain name that you want to bind to the certificate. You can specify only one domain name.</para>
         /// <remarks>
-        /// <para> The domain name must match the certificate specifications that you specify for the <b>ProductCode</b> parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as <c>*.aliyundoc.com</c> for this parameter.</para>
+        /// <para>The domain name must match the certificate specifications that you specify for the <b>ProductCode</b> parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as <c>*.aliyundoc.com</c> for this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,24 +48,31 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The specifications of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>digicert-free-1-free</b> (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.</description></item>
-        /// <item><description><b>symantec-free-1-free</b>: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).</description></item>
-        /// <item><description><b>symantec-dv-1-starter</b>: DigiCert wildcard DV certificate.</description></item>
-        /// <item><description><b>geotrust-dv-1-starter</b>: GeoTrust single-domain DV certificate.</description></item>
-        /// <item><description><b>geotrust-dv-w-starter</b>: GeoTrust wildcard DV certificate.</description></item>
-        /// <item><description><b>globalsign-dv-1-personal</b>: GlobalSign single-domain DV certificate.</description></item>
-        /// <item><description><b>globalsign-dv-w-advanced</b>: GlobalSign wildcard DV certificate.</description></item>
+        /// <item><description><para><b>digicert-free-1-free</b> (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.</para>
+        /// </description></item>
+        /// <item><description><para><b>symantec-free-1-free</b>: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para><b>symantec-dv-1-starter</b>: DigiCert wildcard DV certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>geotrust-dv-1-starter</b>: GeoTrust single-domain DV certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>geotrust-dv-w-starter</b>: GeoTrust wildcard DV certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>globalsign-dv-1-personal</b>: GlobalSign single-domain DV certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>globalsign-dv-w-advanced</b>: GlobalSign wildcard DV certificate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>symantec-free-1-free</para>
+        /// <para>symantec-dv-1-starter</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -75,7 +82,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.</para>
             /// <para>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <c>aliyun</c> or <c>acs:</c>. The key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <remarks>
-            /// <para> You must specify at least one of <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>).</para>
+            /// <para>You must specify at least one of <b>Tag.N</b> (<b>Tag.N.Key</b> and <b>Tag.N.Value</b>).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -112,8 +119,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The method to verify the ownership of a domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DNS</b>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</description></item>
-        /// <item><description><b>FILE</b>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</description></item>
+        /// <item><description><para><b>DNS</b>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</para>
+        /// </description></item>
+        /// <item><description><para><b>FILE</b>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</para>
+        /// </description></item>
         /// </list>
         /// <para>For more information about the verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">Verify the ownership of a domain name</a>.</para>
         /// <para>This parameter is required.</para>

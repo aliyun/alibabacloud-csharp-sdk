@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListCloudResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate IDs.</para>
+        /// <para>The certificate IDs. Separate multiple IDs with commas (,).</para>
         /// </summary>
         [NameInMap("CertIds")]
         [Validation(Required=false)]
@@ -20,46 +20,70 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The cloud service provider.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Tencent</description></item>
-        /// <item><description>Huawei</description></item>
-        /// <item><description>Aws</description></item>
-        /// <item><description>aliyun</description></item>
+        /// <item><description><para>Tencent</para>
+        /// </description></item>
+        /// <item><description><para>Huawei</para>
+        /// </description></item>
+        /// <item><description><para>Aws</para>
+        /// </description></item>
+        /// <item><description><para>aliyun</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Tencent</para>
+        /// <para>aliyun</para>
         /// </summary>
         [NameInMap("CloudName")]
         [Validation(Required=false)]
         public string CloudName { get; set; }
 
         /// <summary>
-        /// <para>The cloud service.</para>
+        /// <para>The cloud service name. Used to filter resources by cloud service.</para>
         /// <para>Valid values when CloudName is set to aliyun:</para>
         /// <list type="bullet">
-        /// <item><description>SLB: Classic Load Balancer (CLB). This value is available only on the China site (aliyun.com).</description></item>
-        /// <item><description>LIVE: ApsaraVideo Live. This value is available only on the China site (aliyun.com).</description></item>
-        /// <item><description>webHosting: Cloud Web Hosting. This value is available only on the China site (aliyun.com).</description></item>
-        /// <item><description>VOD: ApsaraVideo VOD. This value is available only on the China site (aliyun.com).</description></item>
-        /// <item><description>CR: Container Registry. This value is available only on the China site (aliyun.com).</description></item>
-        /// <item><description>DCDN: Dynamic Content Delivery Network (DCDN).</description></item>
-        /// <item><description>DDOS: Anti-DDoS.</description></item>
-        /// <item><description>CDN: Alibaba Cloud CDN (CDN).</description></item>
-        /// <item><description>ALB: Application Load Balancer (ALB).</description></item>
-        /// <item><description>APIGateway: API Gateway.</description></item>
-        /// <item><description>FC: Function Compute.</description></item>
-        /// <item><description>GA: Global Accelerator (GA).</description></item>
-        /// <item><description>MSE: Microservices Engine (MSE).</description></item>
-        /// <item><description>NLB: Network Load Balancer (NLB).</description></item>
-        /// <item><description>OSS: Object Storage Service (OSS).</description></item>
-        /// <item><description>SAE: Serverless App Engine (SAE).</description></item>
-        /// <item><description>WAF: Web Application Firewall (WAF).</description></item>
+        /// <item><description><para>SLB: Classic Load Balancer (CLB). This value is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>LIVE: ApsaraVideo Live. This value is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>webHosting: Cloud Web Hosting. This value is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>VOD: ApsaraVideo VOD. This value is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>CR: Container Registry. This value is available only on the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>DCDN: Dynamic Content Delivery Network (DCDN).</para>
+        /// </description></item>
+        /// <item><description><para>DDOS: Anti-DDoS.</para>
+        /// </description></item>
+        /// <item><description><para>CDN: Alibaba Cloud CDN (CDN).</para>
+        /// </description></item>
+        /// <item><description><para>ALB: Application Load Balancer (ALB).</para>
+        /// </description></item>
+        /// <item><description><para>APIGateway: API Gateway.</para>
+        /// </description></item>
+        /// <item><description><para>FC: Function Compute.</para>
+        /// </description></item>
+        /// <item><description><para>GA: Global Accelerator (GA).</para>
+        /// </description></item>
+        /// <item><description><para>MSE: Microservices Engine (MSE).</para>
+        /// </description></item>
+        /// <item><description><para>NLB: Network Load Balancer (NLB).</para>
+        /// </description></item>
+        /// <item><description><para>OSS: Object Storage Service (OSS).</para>
+        /// </description></item>
+        /// <item><description><para>SAE: Serverless App Engine (SAE).</para>
+        /// </description></item>
+        /// <item><description><para>WAF: Web Application Firewall (WAF).</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values when CloudName is set to Tencent:</para>
         /// <list type="bullet">
-        /// <item><description>TencentCDN: Content Delivery Network (CDN).</description></item>
-        /// <item><description>TencentCLB: CLB.</description></item>
-        /// <item><description>TencentWAF: WAF.</description></item>
+        /// <item><description><para>TencentCDN: Content Delivery Network (CDN).</para>
+        /// </description></item>
+        /// <item><description><para>TencentCLB: CLB.</para>
+        /// </description></item>
+        /// <item><description><para>TencentWAF: WAF.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid value when CloudName is set to Huawei:</para>
         /// <list type="bullet">
@@ -67,10 +91,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// </list>
         /// <para>Valid values when CloudName is set to Aws:</para>
         /// <list type="bullet">
-        /// <item><description>AwsCloudFront: Amazon CloudFront.</description></item>
-        /// <item><description>AwsCLB: CLB.</description></item>
-        /// <item><description>AwsALB: ALB.</description></item>
-        /// <item><description>AwsNLB: NLB.</description></item>
+        /// <item><description><para>AwsCloudFront: Amazon CloudFront.</para>
+        /// </description></item>
+        /// <item><description><para>AwsCLB: CLB.</para>
+        /// </description></item>
+        /// <item><description><para>AwsALB: ALB.</para>
+        /// </description></item>
+        /// <item><description><para>AwsNLB: NLB.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +132,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <para>The AccessKey ID that is used to access cloud resources.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>21</para>
+        /// <para>AK96*******6M</para>
         /// </summary>
         [NameInMap("SecretId")]
         [Validation(Required=false)]

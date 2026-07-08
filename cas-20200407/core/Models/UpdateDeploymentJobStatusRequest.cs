@@ -21,12 +21,15 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The desired status.</para>
+        /// <para>The desired status of the deployment task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>pending</description></item>
-        /// <item><description>scheduling</description></item>
-        /// <item><description>editing</description></item>
+        /// <item><description><para>pending</para>
+        /// </description></item>
+        /// <item><description><para>scheduling</para>
+        /// </description></item>
+        /// <item><description><para>editing</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
