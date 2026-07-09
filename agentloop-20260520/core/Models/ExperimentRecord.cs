@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ExperimentRecord : TeaModel {
-        [NameInMap("batchId")]
-        [Validation(Required=false)]
-        public string BatchId { get; set; }
-
         [NameInMap("completedAt")]
         [Validation(Required=false)]
         public long? CompletedAt { get; set; }
@@ -37,6 +33,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        [NameInMap("evaluationTaskId")]
+        [Validation(Required=false)]
+        public string EvaluationTaskId { get; set; }
+
         [NameInMap("evaluators")]
         [Validation(Required=false)]
         public List<Evaluator> Evaluators { get; set; }
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         [NameInMap("experimentConfig")]
         [Validation(Required=false)]
-        public ExperimentConfig ExperimentConfig { get; set; }
+        public List<ExperimentConfig> ExperimentConfig { get; set; }
 
-        [NameInMap("experimentName")]
+        [NameInMap("experimentPlanId")]
         [Validation(Required=false)]
-        public string ExperimentName { get; set; }
+        public string ExperimentPlanId { get; set; }
 
         [NameInMap("failedTasks")]
         [Validation(Required=false)]
@@ -61,13 +61,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
-        [NameInMap("modelName")]
+        [NameInMap("modelNames")]
         [Validation(Required=false)]
-        public string ModelName { get; set; }
-
-        [NameInMap("planId")]
-        [Validation(Required=false)]
-        public string PlanId { get; set; }
+        public List<string> ModelNames { get; set; }
 
         [NameInMap("planName")]
         [Validation(Required=false)]
@@ -77,9 +73,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public float? Progress { get; set; }
 
+        [NameInMap("querySql")]
+        [Validation(Required=false)]
+        public string QuerySql { get; set; }
+
         [NameInMap("recordId")]
         [Validation(Required=false)]
         public string RecordId { get; set; }
+
+        [NameInMap("recordName")]
+        [Validation(Required=false)]
+        public string RecordName { get; set; }
 
         [NameInMap("selectedItemIds")]
         [Validation(Required=false)]

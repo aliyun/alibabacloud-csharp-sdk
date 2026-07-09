@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListContextStoresResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of entries per page that was specified in the request. This value is echoed back.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page. An empty string indicates that the current page is the last page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg5MA==</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID. You can use this ID to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of context stores.</para>
+        /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<ListContextStoresResponseBodyResults> Results { get; set; }
         public class ListContextStoresResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The name of the AgentSpace to which the context store belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-agent-space</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpace { get; set; }
 
             /// <summary>
+            /// <para>The name of the context store.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-context-store</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ContextStoreName { get; set; }
 
             /// <summary>
+            /// <para>The type of the context store, such as experience or memory.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>experience</para>
             /// </summary>
@@ -62,6 +77,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ContextType { get; set; }
 
             /// <summary>
+            /// <para>The time when the context store was created, in ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -72,6 +88,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the context store.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>我的上下文库</para>
             /// </summary>
@@ -80,6 +98,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the context store.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -88,6 +108,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The list of service names. This parameter has a value only for context stores of the experience type. The service names are used together with the data source AgentSpace to locate trace data sources.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[&quot;order-service&quot;,&quot;payment-service&quot;]</para>
             /// </summary>
@@ -96,6 +118,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> ServiceNames { get; set; }
 
             /// <summary>
+            /// <para>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ACTIVE</para>
             /// </summary>
@@ -104,6 +128,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The time when the context store was last updated, in ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -116,6 +141,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
+        /// <para>The total number of context stores that match the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

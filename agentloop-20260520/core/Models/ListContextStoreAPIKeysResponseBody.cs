@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListContextStoreAPIKeysResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of entries per page that was specified in the request. This value is echoed back.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page. An empty string indicates that the current page is the last page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg5MA==</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of API keys.</para>
+        /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<ListContextStoreAPIKeysResponseBodyResults> Results { get; set; }
         public class ListContextStoreAPIKeysResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The name of the AgentSpace to which the API key belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-agent-space</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpace { get; set; }
 
             /// <summary>
+            /// <para>The full value of the API key. The plaintext value is returned only when the API key is created. In list scenarios, the value is masked based on business rules.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ApiKey { get; set; }
 
             /// <summary>
+            /// <para>The name of the context store to which the API key belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-context-store</para>
             /// </summary>
@@ -62,6 +77,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string ContextStoreName { get; set; }
 
             /// <summary>
+            /// <para>The time when the API key was created, in ISO 8601 UTC format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -72,6 +88,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The display name of the API key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-api-key</para>
             /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
+        /// <para>The total number of API keys that match the query conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

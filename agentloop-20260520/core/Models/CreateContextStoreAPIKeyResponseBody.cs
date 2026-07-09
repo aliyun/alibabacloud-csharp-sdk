@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateContextStoreAPIKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The complete API key value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-api-key</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>

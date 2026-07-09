@@ -47,6 +47,64 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("executePolicy")]
+            [Validation(Required=false)]
+            public ListPipelinesResponseBodyPipelinesExecutePolicy ExecutePolicy { get; set; }
+            public class ListPipelinesResponseBodyPipelinesExecutePolicy : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>RunOnce</para>
+                /// </summary>
+                [NameInMap("mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
+                [NameInMap("runOnce")]
+                [Validation(Required=false)]
+                public ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce RunOnce { get; set; }
+                public class ListPipelinesResponseBodyPipelinesExecutePolicyRunOnce : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1735660800000</para>
+                    /// </summary>
+                    [NameInMap("fromTime")]
+                    [Validation(Required=false)]
+                    public long? FromTime { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1735747200000</para>
+                    /// </summary>
+                    [NameInMap("toTime")]
+                    [Validation(Required=false)]
+                    public long? ToTime { get; set; }
+
+                }
+
+                [NameInMap("scheduled")]
+                [Validation(Required=false)]
+                public ListPipelinesResponseBodyPipelinesExecutePolicyScheduled Scheduled { get; set; }
+                public class ListPipelinesResponseBodyPipelinesExecutePolicyScheduled : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1735660800000</para>
+                    /// </summary>
+                    [NameInMap("fromTime")]
+                    [Validation(Required=false)]
+                    public long? FromTime { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1h</para>
+                    /// </summary>
+                    [NameInMap("interval")]
+                    [Validation(Required=false)]
+                    public string Interval { get; set; }
+
+                }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>my-pipeline</para>
@@ -62,6 +120,22 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>None</para>
+            /// </summary>
+            [NameInMap("scheduleStatus")]
+            [Validation(Required=false)]
+            public string ScheduleStatus { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>RunOnce</para>
+            /// </summary>
+            [NameInMap("scheduleType")]
+            [Validation(Required=false)]
+            public string ScheduleType { get; set; }
 
             /// <summary>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
@@ -90,6 +164,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 

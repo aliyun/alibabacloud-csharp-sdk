@@ -33,6 +33,22 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string PipelineName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Active</para>
+        /// </summary>
+        [NameInMap("scheduleStatus")]
+        [Validation(Required=false)]
+        public string ScheduleStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RunOnce</para>
+        /// </summary>
+        [NameInMap("scheduleType")]
+        [Validation(Required=false)]
+        public string ScheduleType { get; set; }
+
     }
 
 }

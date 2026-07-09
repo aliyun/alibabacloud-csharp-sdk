@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetPipelineResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1735660800</para>
+        /// </summary>
+        [NameInMap("committedWatermark")]
+        [Validation(Required=false)]
+        public long? CommittedWatermark { get; set; }
+
+        /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -85,6 +93,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1735661100</para>
+        /// </summary>
+        [NameInMap("nextTriggerTime")]
+        [Validation(Required=false)]
+        public long? NextTriggerTime { get; set; }
+
         [NameInMap("pipeline")]
         [Validation(Required=false)]
         public GetPipelineResponseBodyPipeline Pipeline { get; set; }
@@ -140,6 +156,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Active</para>
+        /// </summary>
+        [NameInMap("scheduleStatus")]
+        [Validation(Required=false)]
+        public string ScheduleStatus { get; set; }
 
         [NameInMap("sink")]
         [Validation(Required=false)]

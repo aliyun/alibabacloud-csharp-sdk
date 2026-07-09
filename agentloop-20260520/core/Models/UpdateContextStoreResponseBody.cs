@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class UpdateContextStoreResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID, which is used to locate the request during troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>

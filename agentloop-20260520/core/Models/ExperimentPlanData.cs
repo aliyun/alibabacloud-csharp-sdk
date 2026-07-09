@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public int? ExperimentCount { get; set; }
 
+        [NameInMap("experimentType")]
+        [Validation(Required=false)]
+        public string ExperimentType { get; set; }
+
         [NameInMap("planId")]
         [Validation(Required=false)]
         public string PlanId { get; set; }
@@ -32,6 +36,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [NameInMap("planName")]
         [Validation(Required=false)]
         public string PlanName { get; set; }
+
+        [NameInMap("querySql")]
+        [Validation(Required=false)]
+        public string QuerySql { get; set; }
 
         [NameInMap("status")]
         [Validation(Required=false)]

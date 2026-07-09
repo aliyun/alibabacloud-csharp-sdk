@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class AddDatasetDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of log rows scanned or processed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? AffectedRows { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D0173835-9E0F-508F-8BFA-9F556E59C302</para>
         /// </summary>

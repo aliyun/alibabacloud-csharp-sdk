@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetContextStoreAPIKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the AgentSpace to which the API key belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-agent-space</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string AgentSpace { get; set; }
 
         /// <summary>
+        /// <para>The masked prefix of the API key (for example, sk-abcd****). For security purposes, the full plaintext is not returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-abcd****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the context store to which the API key belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-context-store</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ContextStoreName { get; set; }
 
         /// <summary>
+        /// <para>The creation time of the API key, in ISO 8601 UTC format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The display name of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-api-key</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</para>
         /// </summary>
