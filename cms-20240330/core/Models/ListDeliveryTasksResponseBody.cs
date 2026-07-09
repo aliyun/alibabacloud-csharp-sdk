@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListDeliveryTasksResponseBodyDeliveryTasks> DeliveryTasks { get; set; }
         public class ListDeliveryTasksResponseBodyDeliveryTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<ListDeliveryTasksResponseBodyDeliveryTasksSinkList> SinkList { get; set; }
             public class ListDeliveryTasksResponseBodyDeliveryTasksSinkList : TeaModel {
                 /// <summary>
-                /// <para>The detailed configuration of the delivery target. The meanings of the key/value pairs vary depending on the sinkType.</para>
+                /// <para>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</para>
                 /// </summary>
                 [NameInMap("sinkConfigs")]
                 [Validation(Required=false)]
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last updated.</para>
+            /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

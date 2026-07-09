@@ -90,11 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The metadata source. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CMS: CloudMonitor Basic monitoring metrics.</description></item>
-            /// <item><description>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</description></item>
-            /// </list>
+            /// <para>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor basic monitoring metrics.</para>
             /// <para>Sample value:
             /// CMS
             /// Valid values:

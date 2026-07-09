@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>Filters resources by label. The following labels are supported:</para>
+        /// <para>Filters resources by label. The following labels are available:</para>
         /// <list type="bullet">
         /// <item><description>metricCategory: the metric category description.</description></item>
         /// <item><description>alertEnable: specifies whether alerting is required.</description></item>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The metadata source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CMS: CloudMonitor Basic monitoring metrics.</description></item>
-        /// <item><description>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</description></item>
+        /// <item><description>PROM_BASIC: Prometheus CloudMonitor basic monitoring metrics.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

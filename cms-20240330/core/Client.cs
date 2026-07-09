@@ -3739,6 +3739,144 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRecordResponse
+        /// </returns>
+        public CreateServiceRecordResponse CreateServiceRecordWithOptions(string workspace, string serviceId, CreateServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordContent))
+            {
+                body["recordContent"] = request.RecordContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                body["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRecordResponse
+        /// </returns>
+        public async Task<CreateServiceRecordResponse> CreateServiceRecordWithOptionsAsync(string workspace, string serviceId, CreateServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordContent))
+            {
+                body["recordContent"] = request.RecordContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                body["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRecordResponse
+        /// </returns>
+        public CreateServiceRecordResponse CreateServiceRecord(string workspace, string serviceId, CreateServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRecordResponse
+        /// </returns>
+        public async Task<CreateServiceRecordResponse> CreateServiceRecordAsync(string workspace, string serviceId, CreateServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateServiceRecordWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
         /// </summary>
         /// 
@@ -6645,6 +6783,156 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteServiceWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service association entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created service association entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRecordResponse
+        /// </returns>
+        public DeleteServiceRecordResponse DeleteServiceRecordWithOptions(string workspace, string serviceId, DeleteServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                query["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service association entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created service association entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRecordResponse
+        /// </returns>
+        public async Task<DeleteServiceRecordResponse> DeleteServiceRecordWithOptionsAsync(string workspace, string serviceId, DeleteServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                query["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service association entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created service association entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRecordResponse
+        /// </returns>
+        public DeleteServiceRecordResponse DeleteServiceRecord(string workspace, string serviceId, DeleteServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service association entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created service association entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRecordResponse
+        /// </returns>
+        public async Task<DeleteServiceRecordResponse> DeleteServiceRecordAsync(string workspace, string serviceId, DeleteServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteServiceRecordWithOptionsAsync(workspace, serviceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11399,6 +11687,156 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceRecordResponse
+        /// </returns>
+        public GetServiceRecordResponse GetServiceRecordWithOptions(string workspace, string serviceId, GetServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                query["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceRecordResponse
+        /// </returns>
+        public async Task<GetServiceRecordResponse> GetServiceRecordWithOptionsAsync(string workspace, string serviceId, GetServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                query["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceRecordResponse
+        /// </returns>
+        public GetServiceRecordResponse GetServiceRecord(string workspace, string serviceId, GetServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceRecordResponse
+        /// </returns>
+        public async Task<GetServiceRecordResponse> GetServiceRecordAsync(string workspace, string serviceId, GetServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetServiceRecordWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the configuration of a Umodel.</para>
         /// </summary>
         /// 
@@ -13983,8 +14421,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDeliveryTasksRequest
@@ -14051,8 +14494,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListDeliveryTasksRequest
@@ -14119,8 +14567,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDeliveryTasksRequest
@@ -14138,8 +14591,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of data delivery tasks.</para>
+        /// <para>Retrieves the list of data delivery tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDeliveryTasksRequest
@@ -16569,6 +17027,180 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListPrometheusVirtualInstancesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists service-linked entries.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a paginated list of service-linked entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceRecordsResponse
+        /// </returns>
+        public ListServiceRecordsResponse ListServiceRecordsWithOptions(string workspace, ListServiceRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                query["recordType"] = request.RecordType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceRecords",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service-records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists service-linked entries.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a paginated list of service-linked entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceRecordsResponse
+        /// </returns>
+        public async Task<ListServiceRecordsResponse> ListServiceRecordsWithOptionsAsync(string workspace, ListServiceRecordsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                query["recordType"] = request.RecordType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceRecords",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service-records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists service-linked entries.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a paginated list of service-linked entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceRecordsResponse
+        /// </returns>
+        public ListServiceRecordsResponse ListServiceRecords(string workspace, ListServiceRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListServiceRecordsWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists service-linked entries.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a paginated list of service-linked entries.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceRecordsResponse
+        /// </returns>
+        public async Task<ListServiceRecordsResponse> ListServiceRecordsAsync(string workspace, ListServiceRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListServiceRecordsWithOptionsAsync(workspace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21429,6 +22061,164 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateServiceWithOptionsAsync(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an existing service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRecordResponse
+        /// </returns>
+        public UpdateServiceRecordResponse UpdateServiceRecordWithOptions(string workspace, string serviceId, UpdateServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordContent))
+            {
+                body["recordContent"] = request.RecordContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                body["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an existing service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRecordRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRecordResponse
+        /// </returns>
+        public async Task<UpdateServiceRecordResponse> UpdateServiceRecordWithOptionsAsync(string workspace, string serviceId, UpdateServiceRecordRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordContent))
+            {
+                body["recordContent"] = request.RecordContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordType))
+            {
+                body["recordType"] = request.RecordType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceRecord",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/service/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceId) + "/record",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an existing service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRecordResponse
+        /// </returns>
+        public UpdateServiceRecordResponse UpdateServiceRecord(string workspace, string serviceId, UpdateServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateServiceRecordWithOptions(workspace, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a service-linked entry.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates an existing service-linked entry.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRecordResponse
+        /// </returns>
+        public async Task<UpdateServiceRecordResponse> UpdateServiceRecordAsync(string workspace, string serviceId, UpdateServiceRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateServiceRecordWithOptionsAsync(workspace, serviceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDeliveryTasksShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword used to perform a fuzzy match by task name or task ID.</para>
+        /// <para>Fuzzy search by task name or task ID (LIKE semantics).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-task</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

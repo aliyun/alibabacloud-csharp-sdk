@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetDeliveryTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the delivery task.</para>
+        /// <para>The delivery task details.</para>
         /// </summary>
         [NameInMap("deliveryTask")]
         [Validation(Required=false)]
         public GetDeliveryTaskResponseBodyDeliveryTask DeliveryTask { get; set; }
         public class GetDeliveryTaskResponseBodyDeliveryTask : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public GetDeliveryTaskResponseBodyDeliveryTaskExtraInfo ExtraInfo { get; set; }
             public class GetDeliveryTaskResponseBodyDeliveryTaskExtraInfo : TeaModel {
                 /// <summary>
-                /// <para>The list of EventBridge tasks.</para>
+                /// <para>The EventBridge task list.</para>
                 /// </summary>
                 [NameInMap("taskNameList")]
                 [Validation(Required=false)]
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public List<GetDeliveryTaskResponseBodyDeliveryTaskSinkList> SinkList { get; set; }
             public class GetDeliveryTaskResponseBodyDeliveryTaskSinkList : TeaModel {
                 /// <summary>
-                /// <para>The detailed configuration of the delivery target. The meaning of key/value pairs varies depending on the sinkType. For more information, see <a href="~~CreateDeliveryTask~~">CreateDeliveryTask</a>.</para>
+                /// <para>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType. For more information, see CreateDeliveryTask.</para>
                 /// </summary>
                 [NameInMap("sinkConfigs")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> SinkConfigs { get; set; }
 
                 /// <summary>
-                /// <para>The type of the delivery target.</para>
+                /// <para>The delivery target type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prometheus</para>
@@ -117,21 +117,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The current status of the task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Pending2Running</para>
+            /// <para>Enable</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The resource tags.</para>
+            /// <para>The resource group tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetDeliveryTaskResponseBodyDeliveryTaskTags> Tags { get; set; }
             public class GetDeliveryTaskResponseBodyDeliveryTaskTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The tag key of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sourcetype</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The tag value of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>production</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was last updated.</para>
+            /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
