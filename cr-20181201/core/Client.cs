@@ -2049,6 +2049,158 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a custom domain name for an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceCustomizedDomainResponse
+        /// </returns>
+        public CreateInstanceCustomizedDomainResponse CreateInstanceCustomizedDomainWithOptions(CreateInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegionId))
+            {
+                query["CertRegionId"] = request.CertRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceCustomizedDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom domain name for an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<CreateInstanceCustomizedDomainResponse> CreateInstanceCustomizedDomainWithOptionsAsync(CreateInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegionId))
+            {
+                query["CertRegionId"] = request.CertRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInstanceCustomizedDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom domain name for an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceCustomizedDomainResponse
+        /// </returns>
+        public CreateInstanceCustomizedDomainResponse CreateInstanceCustomizedDomain(CreateInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInstanceCustomizedDomainWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom domain name for an instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<CreateInstanceCustomizedDomainResponse> CreateInstanceCustomizedDomainAsync(CreateInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInstanceCustomizedDomainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a whitelist policy for an instance access endpoint (public network only).</para>
         /// </summary>
         /// 
@@ -5449,6 +5601,142 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceCustomizedDomainResponse
+        /// </returns>
+        public DeleteInstanceCustomizedDomainResponse DeleteInstanceCustomizedDomainWithOptions(DeleteInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceCustomizedDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<DeleteInstanceCustomizedDomainResponse> DeleteInstanceCustomizedDomainWithOptionsAsync(DeleteInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteInstanceCustomizedDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceCustomizedDomainResponse
+        /// </returns>
+        public DeleteInstanceCustomizedDomainResponse DeleteInstanceCustomizedDomain(DeleteInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteInstanceCustomizedDomainWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<DeleteInstanceCustomizedDomainResponse> DeleteInstanceCustomizedDomainAsync(DeleteInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteInstanceCustomizedDomainWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a whitelist policy from the public access endpoint of an instance.</para>
         /// </summary>
         /// 
@@ -8337,6 +8625,122 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetInstanceCountWithOptionsAsync(runtime);
+        }
+
+        /// <param name="request">
+        /// GetInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceCustomizedDomainResponse
+        /// </returns>
+        public GetInstanceCustomizedDomainResponse GetInstanceCustomizedDomainWithOptions(GetInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceCustomizedDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<GetInstanceCustomizedDomainResponse> GetInstanceCustomizedDomainWithOptionsAsync(GetInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetInstanceCustomizedDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <param name="request">
+        /// GetInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceCustomizedDomainResponse
+        /// </returns>
+        public GetInstanceCustomizedDomainResponse GetInstanceCustomizedDomain(GetInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetInstanceCustomizedDomainWithOptions(request, runtime);
+        }
+
+        /// <param name="request">
+        /// GetInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<GetInstanceCustomizedDomainResponse> GetInstanceCustomizedDomainAsync(GetInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetInstanceCustomizedDomainWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15765,6 +16169,158 @@ namespace AlibabaCloud.SDK.Cr20181201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEventCenterRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceCustomizedDomainResponse
+        /// </returns>
+        public UpdateInstanceCustomizedDomainResponse UpdateInstanceCustomizedDomainWithOptions(UpdateInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegionId))
+            {
+                query["CertRegionId"] = request.CertRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceCustomizedDomainResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceCustomizedDomainRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<UpdateInstanceCustomizedDomainResponse> UpdateInstanceCustomizedDomainWithOptionsAsync(UpdateInstanceCustomizedDomainRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertId))
+            {
+                query["CertId"] = request.CertId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertRegionId))
+            {
+                query["CertRegionId"] = request.CertRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Domain))
+            {
+                query["Domain"] = request.Domain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleName))
+            {
+                query["ModuleName"] = request.ModuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceCustomizedDomain",
+                Version = "2018-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceCustomizedDomainResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceCustomizedDomainResponse
+        /// </returns>
+        public UpdateInstanceCustomizedDomainResponse UpdateInstanceCustomizedDomain(UpdateInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateInstanceCustomizedDomainWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新实例自定义域名</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceCustomizedDomainRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceCustomizedDomainResponse
+        /// </returns>
+        public async Task<UpdateInstanceCustomizedDomainResponse> UpdateInstanceCustomizedDomainAsync(UpdateInstanceCustomizedDomainRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateInstanceCustomizedDomainWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
