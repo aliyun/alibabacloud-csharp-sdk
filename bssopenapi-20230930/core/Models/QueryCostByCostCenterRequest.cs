@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class QueryCostByCostCenterRequest : TeaModel {
         /// <summary>
+        /// <para>Billing month (format: YYYYMM)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? BillingMonth { get; set; }
 
         /// <summary>
+        /// <para>Whether to display data rows with zero payable amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? DisplayZeroAmountBills { get; set; }
 
         /// <summary>
+        /// <para>Whether to aggregate and display by cost center level</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? GroupByCostCenterLevel { get; set; }
 
         /// <summary>
+        /// <para>Cost type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Metrics { get; set; }
 
         /// <summary>
+        /// <para>Account ID that owns the resource</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1374729705039203</para>
         /// </summary>

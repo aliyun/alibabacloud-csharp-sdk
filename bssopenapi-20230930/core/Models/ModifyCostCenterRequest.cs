@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ModifyCostCenterRequest : TeaModel {
         /// <summary>
+        /// <para>The list of cost center entities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CostCenterEntityList")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<ModifyCostCenterRequestCostCenterEntityList> CostCenterEntityList { get; set; }
         public class ModifyCostCenterRequestCostCenterEntityList : TeaModel {
             /// <summary>
+            /// <para>The ID of the cost center.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,13 +29,18 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
+            /// <para>The new name of the cost center. The name must be unique within the same account.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>资源组</para>
             /// </summary>
             [NameInMap("CostCenterName")]
             [Validation(Required=false)]
             public string CostCenterName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the owner to which the cost center belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,6 +53,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
+        /// <para>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateFundAccountTransferRequest : TeaModel {
         /// <summary>
+        /// <para>The transfer amount.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Amount { get; set; }
 
         /// <summary>
+        /// <para>The currency.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Currency { get; set; }
 
         /// <summary>
+        /// <para>The asset type. Currently, only cash is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cash: cash.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string FinanceType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the source account (payer account ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +57,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? FromFundAccountId { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +68,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The ID of the destination account (payee account ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +79,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? ToFundAccountId { get; set; }
 
         /// <summary>
+        /// <para>The transfer type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>grant: transfer.</description></item>
+        /// <item><description>recycle: revocation.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

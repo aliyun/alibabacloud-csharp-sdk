@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ListFundAccountResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Data list</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFundAccountResponseBodyData> Data { get; set; }
         public class ListFundAccountResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Account creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-12-30 12:00:00</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CreateDate { get; set; }
 
             /// <summary>
+            /// <para>Account ID of the MA user associated with the account</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1232121</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountAdminAccountId { get; set; }
 
             /// <summary>
+            /// <para>Name of the MA user associated with the account</para>
+            /// 
             /// <b>Example:</b>
             /// <para>云某的账户</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountAdminAccountName { get; set; }
 
             /// <summary>
+            /// <para>Account ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1022231</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountId { get; set; }
 
             /// <summary>
+            /// <para>Account name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>云某的账户</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountName { get; set; }
 
             /// <summary>
+            /// <para>Account ID of the fund account owner</para>
+            /// 
             /// <b>Example:</b>
             /// <para>132123211</para>
             /// </summary>
@@ -62,6 +77,11 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountOwnerAccountId { get; set; }
 
             /// <summary>
+            /// <para>Account status.
+            /// VALID: valid.
+            /// FROZEN: frozen.
+            /// CLOSED: closed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>VALID</para>
             /// </summary>
@@ -70,6 +90,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountStatus { get; set; }
 
             /// <summary>
+            /// <para>Account type.
+            /// DIRECT_USER: Alibaba Cloud direct customer account.
+            /// RESELLER_QUOTA: ecosystem account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DIRECT_USER</para>
             /// </summary>
@@ -78,6 +102,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountType { get; set; }
 
             /// <summary>
+            /// <para>Level-1 marketplace</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2684210001</para>
             /// </summary>
@@ -85,11 +111,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string Nbid { get; set; }
 
+            /// <summary>
+            /// <para>Set of account permissions that the user has.
+            /// using: use.
+            /// manage: manage.
+            /// owner: own.</para>
+            /// </summary>
             [NameInMap("Permissions")]
             [Validation(Required=false)]
             public List<string> Permissions { get; set; }
 
             /// <summary>
+            /// <para>Site</para>
+            /// 
             /// <b>Example:</b>
             /// <para>26842</para>
             /// </summary>
@@ -100,6 +134,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
+        /// <para>Response metadata</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -108,6 +144,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>
         /// </summary>

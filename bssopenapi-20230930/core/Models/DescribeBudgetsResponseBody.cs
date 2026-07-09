@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DescribeBudgetsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The data list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeBudgetsResponseBodyData> Data { get; set; }
         public class DescribeBudgetsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The budget name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>department1-test</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string BudgetName { get; set; }
 
             /// <summary>
+            /// <para>The budget type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CONSUME</para>
             /// </summary>
@@ -37,11 +46,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string BudgetType { get; set; }
 
+            /// <summary>
+            /// <para>The remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>budget-1</para>
+            /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The end period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-12</para>
             /// </summary>
@@ -49,14 +66,29 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string CycleEndPeriod { get; set; }
 
+            /// <summary>
+            /// <para>The specified quota per cycle.</para>
+            /// </summary>
             [NameInMap("CycleQuota")]
             [Validation(Required=false)]
             public List<DescribeBudgetsResponseBodyDataCycleQuota> CycleQuota { get; set; }
             public class DescribeBudgetsResponseBodyDataCycleQuota : TeaModel {
+                /// <summary>
+                /// <para>The cycle period.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>202601</para>
+                /// </summary>
                 [NameInMap("CyclePeriod")]
                 [Validation(Required=false)]
                 public string CyclePeriod { get; set; }
 
+                /// <summary>
+                /// <para>The quota.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("Quota")]
                 [Validation(Required=false)]
                 public string Quota { get; set; }
@@ -64,6 +96,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
+            /// <para>The start period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-10</para>
             /// </summary>
@@ -72,6 +106,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string CycleStartPeriod { get; set; }
 
             /// <summary>
+            /// <para>The cycle type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MONTHLY</para>
             /// </summary>
@@ -79,14 +115,26 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string CycleType { get; set; }
 
+            /// <summary>
+            /// <para>The enterprise multi-account filter conditions.</para>
+            /// </summary>
             [NameInMap("EcIdAccountIdsFilter")]
             [Validation(Required=false)]
             public DescribeBudgetsResponseBodyDataEcIdAccountIdsFilter EcIdAccountIdsFilter { get; set; }
             public class DescribeBudgetsResponseBodyDataEcIdAccountIdsFilter : TeaModel {
+                /// <summary>
+                /// <para>The member account IDs.</para>
+                /// </summary>
                 [NameInMap("AccountIds")]
                 [Validation(Required=false)]
                 public List<long?> AccountIds { get; set; }
 
+                /// <summary>
+                /// <para>The enterprise entity ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>E2024112210463400001</para>
+                /// </summary>
                 [NameInMap("EcId")]
                 [Validation(Required=false)]
                 public string EcId { get; set; }
@@ -94,6 +142,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
+            /// <para>The expiration status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NOT_EXPIRED</para>
             /// </summary>
@@ -102,6 +152,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ExpireStatus { get; set; }
 
             /// <summary>
+            /// <para>The budget metric.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>REQUIRE_AMOUNT</para>
             /// </summary>
@@ -109,18 +161,36 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string Metric { get; set; }
 
+            /// <summary>
+            /// <para>The filter conditions.</para>
+            /// </summary>
             [NameInMap("QueryFilter")]
             [Validation(Required=false)]
             public List<DescribeBudgetsResponseBodyDataQueryFilter> QueryFilter { get; set; }
             public class DescribeBudgetsResponseBodyDataQueryFilter : TeaModel {
+                /// <summary>
+                /// <para>The parameter code.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>RESOURCE_OWNER_ACCOUNT</para>
+                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// <para>The selection mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>IN</para>
+                /// </summary>
                 [NameInMap("SelectType")]
                 [Validation(Required=false)]
                 public string SelectType { get; set; }
 
+                /// <summary>
+                /// <para>The filter value list.</para>
+                /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<string> Values { get; set; }
@@ -128,6 +198,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             }
 
             /// <summary>
+            /// <para>The fixed quota value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000</para>
             /// </summary>
@@ -136,6 +208,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string Quota { get; set; }
 
             /// <summary>
+            /// <para>The quota type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FIXED</para>
             /// </summary>
@@ -143,42 +217,90 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string QuotaType { get; set; }
 
+            /// <summary>
+            /// <para>The alert configurations.</para>
+            /// </summary>
             [NameInMap("WarnConfs")]
             [Validation(Required=false)]
             public List<DescribeBudgetsResponseBodyDataWarnConfs> WarnConfs { get; set; }
             public class DescribeBudgetsResponseBodyDataWarnConfs : TeaModel {
+                /// <summary>
+                /// <para>The remarks.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>comment1</para>
+                /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether EventBridge is enabled.</para>
+                /// </summary>
                 [NameInMap("EventBridge")]
                 [Validation(Required=false)]
                 public bool? EventBridge { get; set; }
 
+                /// <summary>
+                /// <para>The list of message center notification channels.</para>
+                /// </summary>
                 [NameInMap("MscChannels")]
                 [Validation(Required=false)]
                 public List<string> MscChannels { get; set; }
 
+                /// <summary>
+                /// <para>The list of message center contacts.</para>
+                /// </summary>
                 [NameInMap("MscContacts")]
                 [Validation(Required=false)]
                 public List<string> MscContacts { get; set; }
 
+                /// <summary>
+                /// <para>The alert name. This parameter is user-defined and optional. If not specified, the backend automatically generates a name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Alert-1</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The sort sequence number. This parameter is present only in responses. Alerts are numbered in ascending order by alert ID, starting from 1.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("Sequence")]
                 [Validation(Required=false)]
                 public int? Sequence { get; set; }
 
+                /// <summary>
+                /// <para>The threshold type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>FIXED</para>
+                /// </summary>
                 [NameInMap("ThresholdType")]
                 [Validation(Required=false)]
                 public string ThresholdType { get; set; }
 
+                /// <summary>
+                /// <para>The threshold value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("ThresholdValue")]
                 [Validation(Required=false)]
                 public string ThresholdValue { get; set; }
 
+                /// <summary>
+                /// <para>The alert target.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ACTUAL</para>
+                /// </summary>
                 [NameInMap("WarnTarget")]
                 [Validation(Required=false)]
                 public string WarnTarget { get; set; }
@@ -188,6 +310,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -196,6 +320,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DB2A9097-289C-11CE-AA74-235FCFD39204</para>
         /// </summary>
@@ -204,6 +330,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

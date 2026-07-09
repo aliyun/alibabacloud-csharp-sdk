@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class SetFundAccountLowAvailableAmountAlarmRequest : TeaModel {
         /// <summary>
+        /// <para>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12321213</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? FundAccountId { get; set; }
 
         /// <summary>
+        /// <para>Low balance alert threshold.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DescribeBudgetsRequest : TeaModel {
         /// <summary>
+        /// <para>The budget name. Fuzzy search is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>department1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BudgetName { get; set; }
 
         /// <summary>
+        /// <para>The budget type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CONSUME</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BudgetType { get; set; }
 
         /// <summary>
+        /// <para>The expiration status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NOT_EXPIRED</para>
         /// </summary>
@@ -33,11 +39,19 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string ExpireStatus { get; set; }
 
+        /// <summary>
+        /// <para>The primary marketplace ID. If this parameter is left empty, the ID of the marketplace to which the current user belongs is used by default.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2688801000001</para>
+        /// </summary>
         [NameInMap("Nbid")]
         [Validation(Required=false)]
         public string Nbid { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

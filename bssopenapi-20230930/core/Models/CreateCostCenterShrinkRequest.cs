@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateCostCenterShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Cost center entity list</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CostCenterEntityList")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CostCenterEntityListShrink { get; set; }
 
         /// <summary>
+        /// <para>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2084210001</para>
         /// </summary>

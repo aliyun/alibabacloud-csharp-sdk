@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DeleteCostCenterResponseBody : TeaModel {
         /// <summary>
+        /// <para>Cost center ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>485938</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CostCenterId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? IsSuccess { get; set; }
 
         /// <summary>
+        /// <para>Response metadata.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
+        /// <para>User ID of the cost center owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1314839403940987</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? OwnerAccountId { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C1BD134E-D914-6AE0-1901-AEB2A99FA205</para>
         /// </summary>

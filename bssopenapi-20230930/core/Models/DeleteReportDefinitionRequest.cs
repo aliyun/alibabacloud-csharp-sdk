@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DeleteReportDefinitionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the primary sales channel. If this parameter is left empty, the ID of the sales channel to which the current user belongs is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the bill subscription task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

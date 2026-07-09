@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ModifyCostCenterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of data entries.</para>
+        /// </summary>
         [NameInMap("CostCenterOperateDto")]
         [Validation(Required=false)]
         public List<ModifyCostCenterResponseBodyCostCenterOperateDto> CostCenterOperateDto { get; set; }
         public class ModifyCostCenterResponseBodyCostCenterOperateDto : TeaModel {
             /// <summary>
+            /// <para>The ID of the cost center.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>485938</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public long? CostCenterId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the operation is successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public bool? IsSuccess { get; set; }
 
             /// <summary>
+            /// <para>The ID of the owner to which the cost center belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1314839403940987</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
+        /// <para>The metadata of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999520A4</para>
         /// </summary>

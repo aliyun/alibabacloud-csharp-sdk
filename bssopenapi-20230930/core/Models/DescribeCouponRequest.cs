@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class DescribeCouponRequest : TeaModel {
         /// <summary>
+        /// <para>The coupon ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>351430260343</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? CouponId { get; set; }
 
         /// <summary>
+        /// <para>The coupon code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>554863270150</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public List<long?> CouponTemplateIdList { get; set; }
 
         /// <summary>
+        /// <para>The coupon type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CERTAIN</para>
         /// </summary>
@@ -38,6 +44,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CouponType { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,16 +54,22 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The enterprise and account list. If this parameter is left empty, the current account is queried.</para>
+        /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public List<DescribeCouponRequestEcIdAccountIds> EcIdAccountIds { get; set; }
         public class DescribeCouponRequestEcIdAccountIds : TeaModel {
+            /// <summary>
+            /// <para>The list of accessed accounts. If this parameter is left empty, all accounts under the current entity ID are selected.</para>
+            /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<long?> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required.</para>
+            /// <para>The enterprise entity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1501603440974415</para>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
+        /// <para>The effective end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1708423156000</para>
         /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EffectiveEndTime { get; set; }
 
         /// <summary>
+        /// <para>The effective start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1684750028000</para>
         /// </summary>
@@ -84,6 +101,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? EffectiveStartTime { get; set; }
 
         /// <summary>
+        /// <para>The expiration end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1708423156000</para>
         /// </summary>
@@ -92,6 +111,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public long? ExpireEndDate { get; set; }
 
         /// <summary>
+        /// <para>The expiration start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1684750028000</para>
         /// </summary>
@@ -108,6 +129,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The primary campaign information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
         /// </summary>
@@ -120,6 +143,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -134,6 +158,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string ProductCode { get; set; }
 
         /// <summary>
+        /// <para>The status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>
         /// </summary>

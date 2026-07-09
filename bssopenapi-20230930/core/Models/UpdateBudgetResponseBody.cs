@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BudgetName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>03A59CD4-6C6B-1A62-B64C-F1F2AF7830F3</para>
         /// </summary>

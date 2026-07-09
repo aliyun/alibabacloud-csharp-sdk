@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetFundAccountCanWithdrawAmountResponseBody : TeaModel {
         /// <summary>
+        /// <para>Amount withdrawable via original payment method</para>
+        /// 
         /// <b>Example:</b>
         /// <para>400</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CanOriginalWithdrawAmount { get; set; }
 
         /// <summary>
+        /// <para>Withdrawable amount = Cash balance - Transfer ledger amount - (Outstanding invoice amount + Historical months unsettled amount + Current month unsettled amount - Transfer ledger amount) - Pay-as-you-go reserved amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CanWithdrawAmount { get; set; }
 
         /// <summary>
+        /// <para>Amount not withdrawable via original payment method</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CannotOriginalWithdrawAmount { get; set; }
 
         /// <summary>
+        /// <para>Cash balance</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CashAmount { get; set; }
 
         /// <summary>
+        /// <para>Outstanding invoice amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CreditMemoAmount { get; set; }
 
         /// <summary>
+        /// <para>Current month unsettled amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string CurrentMonthUnclearedAmount { get; set; }
 
         /// <summary>
+        /// <para>Historical months unsettled amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string HistoryMonthUnclearedAmount { get; set; }
 
         /// <summary>
+        /// <para>Response structure metadata</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
+        /// <para>Pay-as-you-go reserved amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string PayAsYouGoReversedAmount { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DF58589C-A06C-4224-8615-7797E6474FA3</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Transfer amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

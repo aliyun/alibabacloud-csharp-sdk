@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateFundAccountPayRelationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Data list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<CreateFundAccountPayRelationResponseBodyData> Data { get; set; }
         public class CreateFundAccountPayRelationResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>AccountId of the user who pays with the account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1501603440974415</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string AccountId { get; set; }
 
             /// <summary>
+            /// <para>Name of the user who pays with the account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string AccountName { get; set; }
 
             /// <summary>
+            /// <para>Account ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12332112</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string FundAccountId { get; set; }
 
             /// <summary>
+            /// <para>Result code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             public string ResultCode { get; set; }
 
             /// <summary>
+            /// <para>Result message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Successful</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         }
 
         /// <summary>
+        /// <para>Response metadata.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public object Metadata { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000EE23-274B-4E07-A697-FF2E999</para>
         /// </summary>

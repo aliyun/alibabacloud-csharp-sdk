@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetFundAccountCanTransferAmountRequest : TeaModel {
         /// <summary>
+        /// <para>Currency</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Currency { get; set; }
 
         /// <summary>
+        /// <para>Transfer source account ID. If not specified, the account ID owned by the current account is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123212</para>
         /// </summary>

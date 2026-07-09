@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CreateBudgetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The budget name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Department_dev_budget</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BudgetName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39EDD65E-68C5-1B17-8440-C729C7591D74</para>
         /// </summary>

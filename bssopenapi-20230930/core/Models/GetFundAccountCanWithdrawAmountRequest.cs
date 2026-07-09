@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class GetFundAccountCanWithdrawAmountRequest : TeaModel {
         /// <summary>
+        /// <para>Fund account ID. If not specified, the account ID owned by the current account (owner) is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123212232</para>
         /// </summary>

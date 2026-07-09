@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class ListInvoiceCandidateShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>List of billing cycles.</para>
+        /// </summary>
         [NameInMap("BillingCycles")]
         [Validation(Required=false)]
         public string BillingCyclesShrink { get; set; }
 
+        /// <summary>
+        /// <para>List of business document numbers.</para>
+        /// </summary>
         [NameInMap("BusinessIds")]
         [Validation(Required=false)]
         public string BusinessIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +33,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>List of enterprises and accounts. If empty, the current account itself is queried.</para>
+        /// </summary>
         [NameInMap("EcIdAccountIds")]
         [Validation(Required=false)]
         public string EcIdAccountIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The end time. Format: yyyy-mm-dd hh:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-07-01 00:00:00</para>
         /// </summary>
@@ -37,11 +50,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>List of invoice issuers.</para>
+        /// </summary>
         [NameInMap("InvoiceIssuers")]
         [Validation(Required=false)]
         public string InvoiceIssuersShrink { get; set; }
 
         /// <summary>
+        /// <para>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2684201000001</para>
         /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string Nbid { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -58,6 +78,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: yyyy-mm-dd hh:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-06-01 00:00:00</para>
         /// </summary>
@@ -65,10 +87,16 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public string StartTime { get; set; }
 
+        /// <summary>
+        /// <para>List of invoice candidate statuses.</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string StatusShrink { get; set; }
 
+        /// <summary>
+        /// <para>List of invoice candidate types.</para>
+        /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public string TypesShrink { get; set; }

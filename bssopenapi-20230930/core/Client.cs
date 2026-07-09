@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>财务单元实例重分配</para>
+        /// <para>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>财务单元实例重分配</para>
+        /// <para>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>财务单元实例重分配</para>
+        /// <para>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -414,7 +414,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>财务单元实例重分配</para>
+        /// <para>Allocates resource instances (instance-based and attached-resource-based) from a source cost center to a destination cost center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -432,8 +432,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消资金账户低额预警</para>
+        /// <para>Cancels the low balance alert for a fund account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels the low balance alert for a fund account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelFundAccountLowAvailableAmountAlarmRequest
@@ -474,8 +479,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消资金账户低额预警</para>
+        /// <para>Cancels the low balance alert for a fund account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels the low balance alert for a fund account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelFundAccountLowAvailableAmountAlarmRequest
@@ -516,8 +526,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消资金账户低额预警</para>
+        /// <para>Cancels the low balance alert for a fund account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels the low balance alert for a fund account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelFundAccountLowAvailableAmountAlarmRequest
@@ -534,8 +549,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消资金账户低额预警</para>
+        /// <para>Cancels the low balance alert for a fund account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Cancels the low balance alert for a fund account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelFundAccountLowAvailableAmountAlarmRequest
@@ -700,7 +720,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether budgetName exists</para>
+        /// <para>Checks whether a specified budgetName exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -748,7 +768,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether budgetName exists</para>
+        /// <para>Checks whether a specified budgetName exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -796,7 +816,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether budgetName exists</para>
+        /// <para>Checks whether a specified budgetName exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -814,7 +834,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check whether budgetName exists</para>
+        /// <para>Checks whether a specified budgetName exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -832,7 +852,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Budget</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -946,7 +966,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Budget</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1060,7 +1080,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Budget</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1078,7 +1098,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Budget</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1096,8 +1116,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建财务单元</para>
+        /// <para>Create Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateCostCenterRequest
@@ -1148,8 +1173,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建财务单元</para>
+        /// <para>Create Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateCostCenterRequest
@@ -1200,8 +1230,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建财务单元</para>
+        /// <para>Create Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCostCenterRequest
@@ -1218,8 +1253,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建财务单元</para>
+        /// <para>Create Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCostCenterRequest
@@ -1236,7 +1276,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建财务单元规则</para>
+        /// <para>Create a financial unit auto-allocation rule</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1294,7 +1334,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建财务单元规则</para>
+        /// <para>Create a financial unit auto-allocation rule</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1352,7 +1392,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建财务单元规则</para>
+        /// <para>Create a financial unit auto-allocation rule</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1370,7 +1410,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建财务单元规则</para>
+        /// <para>Create a financial unit auto-allocation rule</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1388,7 +1428,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户付款关系</para>
+        /// <para>Create payment relationships for a fund account</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1446,7 +1486,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户付款关系</para>
+        /// <para>Create payment relationships for a fund account</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1504,7 +1544,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户付款关系</para>
+        /// <para>Create payment relationships for a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1522,7 +1562,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户付款关系</para>
+        /// <para>Create payment relationships for a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1540,7 +1580,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户划拨/回收</para>
+        /// <para>Creates an account transfer or revocation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1606,7 +1646,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户划拨/回收</para>
+        /// <para>Creates an account transfer or revocation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1672,7 +1712,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户划拨/回收</para>
+        /// <para>Creates an account transfer or revocation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1690,7 +1730,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建资金账户划拨/回收</para>
+        /// <para>Creates an account transfer or revocation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1708,7 +1748,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请发票</para>
+        /// <para>Apply for Invoice</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1796,7 +1836,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请发票</para>
+        /// <para>Apply for Invoice</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1884,7 +1924,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请发票</para>
+        /// <para>Apply for Invoice</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1902,7 +1942,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>申请发票</para>
+        /// <para>Apply for Invoice</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1922,6 +1962,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// <summary>
         /// <para>Creates a billing report subscription.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this API operation, note the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>You can subscribe to one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</description></item>
+        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</description></item>
+        /// <item><description>When subscribing to a directory under a bucket, follow the directory naming conventions:<list type="bullet">
+        /// <item><description>Emojis are not allowed. Use compliant UTF-8 characters.</description></item>
+        /// <item><description>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</description></item>
+        /// <item><description>Subdirectories named .. are not allowed.</description></item>
+        /// <item><description>The total length must be 1 to 254 characters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>File names:<list type="bullet">
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
+        /// <list type="bullet">
+        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateReportDefinitionRequest
@@ -2015,6 +2089,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this API operation, note the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>You can subscribe to one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</description></item>
+        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</description></item>
+        /// <item><description>When subscribing to a directory under a bucket, follow the directory naming conventions:<list type="bullet">
+        /// <item><description>Emojis are not allowed. Use compliant UTF-8 characters.</description></item>
+        /// <item><description>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</description></item>
+        /// <item><description>Subdirectories named .. are not allowed.</description></item>
+        /// <item><description>The total length must be 1 to 254 characters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>File names:<list type="bullet">
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
+        /// <list type="bullet">
+        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateReportDefinitionRequest
         /// </param>
@@ -2107,6 +2215,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this API operation, note the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>You can subscribe to one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</description></item>
+        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</description></item>
+        /// <item><description>When subscribing to a directory under a bucket, follow the directory naming conventions:<list type="bullet">
+        /// <item><description>Emojis are not allowed. Use compliant UTF-8 characters.</description></item>
+        /// <item><description>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</description></item>
+        /// <item><description>Subdirectories named .. are not allowed.</description></item>
+        /// <item><description>The total length must be 1 to 254 characters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>File names:<list type="bullet">
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
+        /// <list type="bullet">
+        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateReportDefinitionRequest
         /// </param>
@@ -2125,6 +2267,40 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you call this API operation, note the following information:</para>
+        /// <list type="bullet">
+        /// <item><description>You can subscribe to one type of billing file at a time.</description></item>
+        /// <item><description>Except for monthly bill PDFs, starting from the day after the subscription, the system pushes daily billing files that contain full detailed data from the beginning of the current month to the present. Before the 4th of each month, the system pushes full billing files for the complete billing cycle of the previous month.</description></item>
+        /// <item><description>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</description></item>
+        /// <item><description>Billing files generated on a daily basis may have delays. Delayed billing files are pushed on the day after they are generated and may also contain bills that were delayed from before the previous day and generated on the previous day. We recommend that you pull the full files for the previous month at the beginning of each month.<remarks>
+        /// <para>Apply for the required permissions by following the procedure described in the documentation: <a href="https://help.aliyun.com/zh/user-center/user-guide/billing-subscription?spm=5176.21213303.J_v8LsmxMG6alneH-O7TCPa.1.3ef82f3d5ZIf08&scm=20140722.S_help@@%E6%96%87%E6%A1%A3@@2861820._.ID_help@@%E6%96%87%E6%A1%A3@@2861820-RL_%E8%B4%A6%E5%8D%95%E8%AE%A2%E9%98%85-LOC_2024SPHelpResult-OR_ser-PAR1_2150419517478292121114501eaee8-V_4-RE_new5-P0_0-P1_0">Billing Subscription</a></para>
+        /// </remarks>
+        /// </description></item>
+        /// <item><description>This subscription and the Expenses and Costs - Billing Subscription are the same feature, and subscriptions are interchangeable.</description></item>
+        /// <item><description>When subscribing to a directory under a bucket, follow the directory naming conventions:<list type="bullet">
+        /// <item><description>Emojis are not allowed. Use compliant UTF-8 characters.</description></item>
+        /// <item><description>Forward slashes (/) are used to separate paths and can quickly create subdirectories. However, do not start with / or \, and do not use consecutive forward slashes (/).</description></item>
+        /// <item><description>Subdirectories named .. are not allowed.</description></item>
+        /// <item><description>The total length must be 1 to 254 characters.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>File names:<list type="bullet">
+        /// <item><description><para>Example: <b>consumeDetailBillV2</b> (billing item details)</para>
+        /// <list type="bullet">
+        /// <item><description><para>Daily push file name format: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMMDD}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_20190312</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Full file name format at the beginning of the next month: <c>{Account UID}_{Site ID}_{Bill type}_{YYYYMM|YYYYMM}</c>, for example: <c>169**_2688801000001_consumeDetailBillV2_201903</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Monthly bill PDF files are in .pdf format, and other file types are in .csv format. When the data volume is large, the system automatically splits the exported bills into multiple files and compresses them into one or more .zip files. The .zip file name format is the same.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateReportDefinitionRequest
         /// </param>
@@ -2140,7 +2316,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2188,7 +2364,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2236,7 +2412,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2254,7 +2430,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2272,8 +2448,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元</para>
+        /// <para>Delete Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCostCenterRequest
@@ -2322,8 +2503,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元</para>
+        /// <para>Delete Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCostCenterRequest
@@ -2372,8 +2558,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元</para>
+        /// <para>Delete Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCostCenterRequest
@@ -2390,8 +2581,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元</para>
+        /// <para>Delete Cost Center</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCostCenterRequest
@@ -2408,8 +2604,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元规则</para>
+        /// <para>Delete financial unit automatic allocation rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteCostCenterRuleRequest
@@ -2466,8 +2667,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元规则</para>
+        /// <para>Delete financial unit automatic allocation rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteCostCenterRuleRequest
@@ -2524,8 +2730,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元规则</para>
+        /// <para>Delete financial unit automatic allocation rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCostCenterRuleRequest
@@ -2542,8 +2753,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除财务单元规则</para>
+        /// <para>Delete financial unit automatic allocation rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCostCenterRuleRequest
@@ -2724,7 +2940,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消账单订阅</para>
+        /// <para>Deletes a bill report export subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2770,7 +2986,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消账单订阅</para>
+        /// <para>Deletes a bill report export subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2816,7 +3032,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消账单订阅</para>
+        /// <para>Deletes a bill report export subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2834,7 +3050,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消账单订阅</para>
+        /// <para>Deletes a bill report export subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3148,7 +3364,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of coupons.</para>
+        /// <para>Queries a list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3264,7 +3480,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of coupons.</para>
+        /// <para>Queries a list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3380,7 +3596,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of coupons.</para>
+        /// <para>Queries a list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3398,7 +3614,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of coupons.</para>
+        /// <para>Queries a list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3416,7 +3632,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of products for which a coupon is applicable.</para>
+        /// <para>Queries the list of products available for a coupon.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3484,7 +3700,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of products for which a coupon is applicable.</para>
+        /// <para>Queries the list of products available for a coupon.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3552,7 +3768,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of products for which a coupon is applicable.</para>
+        /// <para>Queries the list of products available for a coupon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3570,7 +3786,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of products for which a coupon is applicable.</para>
+        /// <para>Queries the list of products available for a coupon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3584,6 +3800,510 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeCouponItemListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan deduction records.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeDeductLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductLogsResponse
+        /// </returns>
+        public DescribeDeductLogsResponse DescribeDeductLogsWithOptions(DescribeDeductLogsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeDeductLogsShrinkRequest request = new DescribeDeductLogsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelationAccountIds))
+            {
+                request.RelationAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationAccountIds, "RelationAccountIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillInstanceId))
+            {
+                query["BillInstanceId"] = request.BillInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCommodityCode))
+            {
+                body["BillingCommodityCode"] = request.BillingCommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingEndTime))
+            {
+                body["BillingEndTime"] = request.BillingEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingStartTime))
+            {
+                body["BillingStartTime"] = request.BillingStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                body["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                body["Group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationAccountIdsShrink))
+            {
+                body["RelationAccountIds"] = request.RelationAccountIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeductLogs",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeductLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan deduction records.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeDeductLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductLogsResponse
+        /// </returns>
+        public async Task<DescribeDeductLogsResponse> DescribeDeductLogsWithOptionsAsync(DescribeDeductLogsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeDeductLogsShrinkRequest request = new DescribeDeductLogsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RelationAccountIds))
+            {
+                request.RelationAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RelationAccountIds, "RelationAccountIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillInstanceId))
+            {
+                query["BillInstanceId"] = request.BillInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingCommodityCode))
+            {
+                body["BillingCommodityCode"] = request.BillingCommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingEndTime))
+            {
+                body["BillingEndTime"] = request.BillingEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingStartTime))
+            {
+                body["BillingStartTime"] = request.BillingStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                body["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                body["Group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelationAccountIdsShrink))
+            {
+                body["RelationAccountIds"] = request.RelationAccountIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeductLogs",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeductLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan deduction records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeductLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductLogsResponse
+        /// </returns>
+        public DescribeDeductLogsResponse DescribeDeductLogs(DescribeDeductLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDeductLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan deduction records.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeductLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductLogsResponse
+        /// </returns>
+        public async Task<DescribeDeductLogsResponse> DescribeDeductLogsAsync(DescribeDeductLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDeductLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeFrInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFrInstancesResponse
+        /// </returns>
+        public DescribeFrInstancesResponse DescribeFrInstancesWithOptions(DescribeFrInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeFrInstancesShrinkRequest request = new DescribeFrInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTag))
+            {
+                query["InstanceTag"] = request.InstanceTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapacityType))
+            {
+                body["CapacityType"] = request.CapacityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                body["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
+            {
+                body["CycleType"] = request.CycleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                body["Group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                body["SortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortRule))
+            {
+                body["SortRule"] = request.SortRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFrInstances",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFrInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeFrInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFrInstancesResponse
+        /// </returns>
+        public async Task<DescribeFrInstancesResponse> DescribeFrInstancesWithOptionsAsync(DescribeFrInstancesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeFrInstancesShrinkRequest request = new DescribeFrInstancesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTag))
+            {
+                query["InstanceTag"] = request.InstanceTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapacityType))
+            {
+                body["CapacityType"] = request.CapacityType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommodityCode))
+            {
+                body["CommodityCode"] = request.CommodityCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
+            {
+                body["CycleType"] = request.CycleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Group))
+            {
+                body["Group"] = request.Group;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                body["SortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortRule))
+            {
+                body["SortRule"] = request.SortRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                body["Spec"] = request.Spec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateCode))
+            {
+                body["TemplateCode"] = request.TemplateCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFrInstances",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFrInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFrInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFrInstancesResponse
+        /// </returns>
+        public DescribeFrInstancesResponse DescribeFrInstances(DescribeFrInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFrInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries resource plan instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFrInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFrInstancesResponse
+        /// </returns>
+        public async Task<DescribeFrInstancesResponse> DescribeFrInstancesAsync(DescribeFrInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFrInstancesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3728,7 +4448,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可用金</para>
+        /// <para>Query available balance of fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3770,7 +4490,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可用金</para>
+        /// <para>Query available balance of fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3812,7 +4532,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可用金</para>
+        /// <para>Query available balance of fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3830,7 +4550,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可用金</para>
+        /// <para>Query available balance of fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3848,7 +4568,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可分配信控额度</para>
+        /// <para>Query allocatable credit limit of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3890,7 +4610,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可分配信控额度</para>
+        /// <para>Query allocatable credit limit of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3932,7 +4652,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可分配信控额度</para>
+        /// <para>Query allocatable credit limit of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3950,7 +4670,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可分配信控额度</para>
+        /// <para>Query allocatable credit limit of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3968,7 +4688,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可回收金额</para>
+        /// <para>Queries the reclaimable amount of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4014,7 +4734,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可回收金额</para>
+        /// <para>Queries the reclaimable amount of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4060,7 +4780,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可回收金额</para>
+        /// <para>Queries the reclaimable amount of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4078,7 +4798,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可回收金额</para>
+        /// <para>Queries the reclaimable amount of a fund account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4096,7 +4816,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的可转出金额</para>
+        /// <para>Query the transferable amount of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4142,7 +4862,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的可转出金额</para>
+        /// <para>Query the transferable amount of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4188,7 +4908,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的可转出金额</para>
+        /// <para>Query the transferable amount of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4206,7 +4926,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的可转出金额</para>
+        /// <para>Query the transferable amount of a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4224,7 +4944,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可提现金额</para>
+        /// <para>Query Withdrawable Amount of Fund Account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4266,7 +4986,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可提现金额</para>
+        /// <para>Query Withdrawable Amount of Fund Account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4308,7 +5028,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可提现金额</para>
+        /// <para>Query Withdrawable Amount of Fund Account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4326,7 +5046,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户可提现金额</para>
+        /// <para>Query Withdrawable Amount of Fund Account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4344,7 +5064,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户低额预警</para>
+        /// <para>Query Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4386,7 +5106,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户低额预警</para>
+        /// <para>Query Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4428,7 +5148,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户低额预警</para>
+        /// <para>Query Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4446,7 +5166,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户低额预警</para>
+        /// <para>Query Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4464,7 +5184,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户收支明细</para>
+        /// <para>Query fund account transaction details</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4562,7 +5282,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户收支明细</para>
+        /// <para>Query fund account transaction details</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4660,7 +5380,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户收支明细</para>
+        /// <para>Query fund account transaction details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4678,7 +5398,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户收支明细</para>
+        /// <para>Query fund account transaction details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4696,7 +5416,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单详情查询</para>
+        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4746,7 +5466,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单详情查询</para>
+        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4796,7 +5516,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单详情查询</para>
+        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4814,7 +5534,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单详情查询</para>
+        /// <para>Queries the details of a specific order for a user or a reseller\&quot;s customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4832,7 +5552,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单列表查询</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4914,7 +5634,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单列表查询</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4996,7 +5716,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单列表查询</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5014,7 +5734,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订单列表查询</para>
+        /// <para>Queries the order list of a user or a reseller customer. By default, this operation queries orders created within the most recent hour. To query orders over a longer time range, set the CreateTimeStart and CreateTimeEnd parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5648,7 +6368,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户列表</para>
+        /// <para>Query fund account list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5700,7 +6420,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户列表</para>
+        /// <para>Query fund account list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5752,7 +6472,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户列表</para>
+        /// <para>Query fund account list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5770,7 +6490,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户列表</para>
+        /// <para>Query fund account list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5788,7 +6508,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的付款关系</para>
+        /// <para>Query payment relationships of an account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5848,7 +6568,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的付款关系</para>
+        /// <para>Query payment relationships of an account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5908,7 +6628,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的付款关系</para>
+        /// <para>Query payment relationships of an account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5926,7 +6646,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询资金账户的付款关系</para>
+        /// <para>Query payment relationships of an account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5944,7 +6664,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对客OpenAPI开票对象查询</para>
+        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6052,7 +6772,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对客OpenAPI开票对象查询</para>
+        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6160,7 +6880,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对客OpenAPI开票对象查询</para>
+        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6178,7 +6898,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对客OpenAPI开票对象查询</para>
+        /// <para>Query invoice candidate data, which can be used for invoicing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6196,7 +6916,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票抬头查询服务</para>
+        /// <para>Query the list of available invoice titles</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6226,7 +6946,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票抬头查询服务</para>
+        /// <para>Query the list of available invoice titles</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -6256,7 +6976,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票抬头查询服务</para>
+        /// <para>Query the list of available invoice titles</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6270,7 +6990,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票抬头查询服务</para>
+        /// <para>Query the list of available invoice titles</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6284,7 +7004,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看已订阅的报告列表</para>
+        /// <para>Queries the list of subscribed reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6326,7 +7046,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看已订阅的报告列表</para>
+        /// <para>Queries the list of subscribed reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6368,7 +7088,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看已订阅的报告列表</para>
+        /// <para>Queries the list of subscribed reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6386,7 +7106,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看已订阅的报告列表</para>
+        /// <para>Queries the list of subscribed reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6404,8 +7124,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元</para>
+        /// <para>Modify cost centers</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyCostCenterRequest
@@ -6456,8 +7181,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元</para>
+        /// <para>Modify cost centers</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyCostCenterRequest
@@ -6508,8 +7238,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元</para>
+        /// <para>Modify cost centers</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCostCenterRequest
@@ -6526,8 +7261,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元</para>
+        /// <para>Modify cost centers</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modifies one or more cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCostCenterRequest
@@ -6544,8 +7284,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元规则</para>
+        /// <para>Modify financial unit rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modify one or more financial units</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyCostCenterRuleRequest
@@ -6606,8 +7351,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元规则</para>
+        /// <para>Modify financial unit rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modify one or more financial units</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyCostCenterRuleRequest
@@ -6668,8 +7418,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元规则</para>
+        /// <para>Modify financial unit rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modify one or more financial units</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCostCenterRuleRequest
@@ -6686,8 +7441,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元规则</para>
+        /// <para>Modify financial unit rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Modify one or more financial units</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCostCenterRuleRequest
@@ -6872,8 +7632,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Cost Overview of a Cost Center</para>
+        /// <para>Query cost center expense overview</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostByCostCenterRequest
@@ -6930,8 +7695,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Cost Overview of a Cost Center</para>
+        /// <para>Query cost center expense overview</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostByCostCenterRequest
@@ -6988,8 +7758,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Cost Overview of a Cost Center</para>
+        /// <para>Query cost center expense overview</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostByCostCenterRequest
@@ -7006,8 +7781,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Cost Overview of a Cost Center</para>
+        /// <para>Query cost center expense overview</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query cost center expense overview results for a specified billing period</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostByCostCenterRequest
@@ -7024,8 +7804,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元</para>
+        /// <para>Queries financial units.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryCostCenterRequest
@@ -7092,8 +7877,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元</para>
+        /// <para>Queries financial units.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryCostCenterRequest
@@ -7160,8 +7950,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元</para>
+        /// <para>Queries financial units.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterRequest
@@ -7178,8 +7973,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元</para>
+        /// <para>Queries financial units.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a parent financial unit and its child financial units.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterRequest
@@ -7196,7 +7996,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元下资源信息</para>
+        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7260,7 +8060,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元下资源信息</para>
+        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7324,7 +8124,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元下资源信息</para>
+        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7342,7 +8142,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元下资源信息</para>
+        /// <para>Queries the list of resource instances that belong to a cost center of the user. When CostCenterId is 0, it queries unallocated primary and sub-resource instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7360,8 +8160,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元规则</para>
+        /// <para>Query cost center rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query parent cost center and its child cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterRuleRequest
@@ -7412,8 +8217,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元规则</para>
+        /// <para>Query cost center rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query parent cost center and its child cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterRuleRequest
@@ -7464,8 +8274,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元规则</para>
+        /// <para>Query cost center rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query parent cost center and its child cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterRuleRequest
@@ -7482,8 +8297,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元规则</para>
+        /// <para>Query cost center rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Query parent cost center and its child cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterRuleRequest
@@ -7500,8 +8320,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元分摊规则</para>
+        /// <para>Query cost center sharing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterShareRuleRequest
@@ -7558,8 +8383,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元分摊规则</para>
+        /// <para>Query cost center sharing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterShareRuleRequest
@@ -7616,8 +8446,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元分摊规则</para>
+        /// <para>Query cost center sharing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterShareRuleRequest
@@ -7634,8 +8469,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询财务单元分摊规则</para>
+        /// <para>Query cost center sharing rules</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the sharing rules of user cost centers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCostCenterShareRuleRequest
@@ -7652,8 +8492,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SLA优惠券</para>
+        /// <para>Queries the SLA compensation list of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryMonthlySlaListRequest
@@ -7724,8 +8569,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SLA优惠券</para>
+        /// <para>Queries the SLA compensation list of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryMonthlySlaListRequest
@@ -7796,8 +8646,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SLA优惠券</para>
+        /// <para>Queries the SLA compensation list of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryMonthlySlaListRequest
@@ -7814,8 +8669,13 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询SLA优惠券</para>
+        /// <para>Queries the SLA compensation list of a user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the SLA compensation details list of a user. Only data from the last two months is available.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryMonthlySlaListRequest
@@ -7832,7 +8692,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
+        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7904,7 +8764,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
+        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7976,7 +8836,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
+        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7994,7 +8854,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
+        /// <para>Modifies cost center sharing rules, including creating, modifying, and deleting sharing rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8012,7 +8872,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户的信控限额</para>
+        /// <para>Set the credit control limit for a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8062,7 +8922,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户的信控限额</para>
+        /// <para>Set the credit control limit for a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8112,7 +8972,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户的信控限额</para>
+        /// <para>Set the credit control limit for a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8130,7 +8990,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户的信控限额</para>
+        /// <para>Set the credit control limit for a fund account</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8148,7 +9008,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户低额预警</para>
+        /// <para>Set Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8194,7 +9054,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户低额预警</para>
+        /// <para>Set Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8240,7 +9100,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户低额预警</para>
+        /// <para>Set Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8258,7 +9118,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置资金账户低额预警</para>
+        /// <para>Set Fund Account Low Balance Alert</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8444,8 +9304,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SLA优惠券申领</para>
+        /// <para>User claims coupons for the last two months.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Claim by month or by record.
+        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitSlaCouponApplyRequest
@@ -8500,8 +9369,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SLA优惠券申领</para>
+        /// <para>User claims coupons for the last two months.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Claim by month or by record.
+        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitSlaCouponApplyRequest
@@ -8556,8 +9434,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SLA优惠券申领</para>
+        /// <para>User claims coupons for the last two months.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Claim by month or by record.
+        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitSlaCouponApplyRequest
@@ -8574,8 +9461,17 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SLA优惠券申领</para>
+        /// <para>User claims coupons for the last two months.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>Call QueryMonthlySlaList to obtain the claimable months and records.</description></item>
+        /// <item><description>Claim by month or by record.
+        /// Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitSlaCouponApplyRequest
@@ -8592,7 +9488,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预算</para>
+        /// <para>Updates a budget.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8710,7 +9606,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预算</para>
+        /// <para>Updates a budget.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8828,7 +9724,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预算</para>
+        /// <para>Updates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8846,7 +9742,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新预算</para>
+        /// <para>Updates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">

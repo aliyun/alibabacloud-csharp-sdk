@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
     public class CheckBudgetNameExistsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The budget name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>department1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public string BudgetName { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the budget name already exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         public bool? Exists { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F1E2D3C4-B5A6-7890-1234-567890ABCDEF</para>
         /// </summary>
