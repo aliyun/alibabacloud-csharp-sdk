@@ -17,8 +17,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         [Validation(Required=false)]
         public string AdDomain { get; set; }
 
+        [NameInMap("AdPassword")]
+        [Validation(Required=false)]
+        public string AdPassword { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to synchronously create an EndUserId based on <c>ExternalUserId</c>. This parameter takes effect only when <c>EndUserId</c> is empty.</para>
+        /// <para>Specifies whether to synchronously create an EndUserId based on ExternalUserId. This parameter takes effect only when EndUserId is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -28,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public bool? AutoCreateUser { get; set; }
 
         /// <summary>
-        /// <para>The username of the China Desktop Service (China Desktop Service) convenience account, which is unique within an Alibaba Cloud account. This parameter and <c>ExternalUserId</c> cannot both be empty.</para>
+        /// <para>The username of the China Desktop Service (China Desktop Service) convenience account. The username must be unique within an Alibaba Cloud account. This parameter and ExternalUserId cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and <c>EndUserId</c> cannot both be empty.</para>
+        /// <para>The external user ID. This ID is defined by the caller and must be unique within an Alibaba Cloud account. This parameter and EndUserId cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
-        /// <para>The access policy that restricts the access permissions of the authorization code. An empty value indicates no restrictions.</para>
+        /// <para>The access policy that restricts the access permissions of the authorization code. If this parameter is left empty, no restrictions are applied.</para>
         /// <para>Syntax:</para>
         /// <pre><code class="language-json">{
         ///       &quot;Version&quot;: &quot;1&quot;,

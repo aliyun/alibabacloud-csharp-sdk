@@ -218,6 +218,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             {
                 body["AdDomain"] = request.AdDomain;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdPassword))
+            {
+                body["AdPassword"] = request.AdPassword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
             {
                 body["AutoCreateUser"] = request.AutoCreateUser;
@@ -285,6 +289,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdDomain))
             {
                 body["AdDomain"] = request.AdDomain;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdPassword))
+            {
+                body["AdPassword"] = request.AdPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
             {
