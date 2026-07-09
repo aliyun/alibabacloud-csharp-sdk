@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleCondition : TeaModel {
         /// <summary>
-        /// <para>Applicable to the SLS_CONDITION type.</para>
-        /// <para>The number of times the condition must be met to trigger an alert. The default value is 1.</para>
+        /// <para>Applicable condition type: SLS_CONDITION.</para>
+        /// <para>The number of times the condition must be met before an alert is triggered. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? AlertCount { get; set; }
 
         /// <summary>
-        /// <para>Applicable to the SLS_CONDITION type.</para>
-        /// <para>A list of SLS alert conditions.</para>
+        /// <para>Applicable condition type: SLS_CONDITION.</para>
+        /// <para>The list of Simple Log Service alert conditions.</para>
         /// </summary>
         [NameInMap("caseList")]
         [Validation(Required=false)]
         public List<AlertRuleConditionCaseList> CaseList { get; set; }
         public class AlertRuleConditionCaseList : TeaModel {
             /// <summary>
-            /// <para>The matching expression. Example: logLevel: error</para>
+            /// <para>The match expression. Example: logLevel: error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logLevel: error</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Condition { get; set; }
 
             /// <summary>
-            /// <para>The expression for matching a quantity. Examples:
-            /// Combined range: <b>count</b> &gt;= 3 &amp;&amp; <b>count</b> &lt;= 10
-            /// Single range: **count** &gt;= 3</para>
+            /// <para>The count match expression. Examples:
+            /// Range combination: <b>count</b> &gt;= 3 &amp;&amp; <b>count</b> &lt;= 10
+            /// Single range: __count__ &gt;= 3</para>
             /// 
             /// <b>Example:</b>
             /// <para>count &gt;= 3</para>
@@ -61,17 +61,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The match type. It can be data availability, a specific number of data entries, a data match, or a specific number of data entry matches.</para>
+            /// <para>The match type: has data, has a specific number of data entries, has data match, or has a specific number of data matches.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>HasData: Data is available.</para>
-            /// </description></item>
-            /// <item><description><para>HasDataCount: A specific number of data entries are available.</para>
-            /// </description></item>
-            /// <item><description><para>HasDataMatch: Data matches the condition.</para>
-            /// </description></item>
-            /// <item><description><para>HasDataMatchCount: A specific number of data entries match the condition.</para>
-            /// </description></item>
+            /// <item><description>HasData: has data</description></item>
+            /// <item><description>HasDataCount: has a specific number of data entries</description></item>
+            /// <item><description>HasDataMatch: has data match</description></item>
+            /// <item><description>HasDataMatchCount: has a specific number of data matches</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,32 +80,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable to the APM_CONDITION type.</para>
-        /// <para>A list of Application Performance Management (APM) alert comparison conditions.</para>
+        /// <para>Applicable condition type: APM_CONDITION.</para>
+        /// <para>The list of Application Performance Monitoring (APM) alert comparison conditions.</para>
         /// </summary>
         [NameInMap("compareList")]
         [Validation(Required=false)]
         public List<AlertRuleConditionCompareList> CompareList { get; set; }
         public class AlertRuleConditionCompareList : TeaModel {
             /// <summary>
-            /// <para>The aggregate function for the time series.</para>
+            /// <para>The aggregate functions applied after time series aggregation.</para>
             /// <list type="bullet">
-            /// <item><description><para>count</para>
-            /// </description></item>
-            /// <item><description><para>sum</para>
-            /// </description></item>
-            /// <item><description><para>avg</para>
-            /// </description></item>
-            /// <item><description><para>min</para>
-            /// </description></item>
-            /// <item><description><para>max</para>
-            /// </description></item>
-            /// <item><description><para>p90</para>
-            /// </description></item>
-            /// <item><description><para>p95</para>
-            /// </description></item>
-            /// <item><description><para>p99</para>
-            /// </description></item>
+            /// <item><description>count</description></item>
+            /// <item><description>sum</description></item>
+            /// <item><description>avg</description></item>
+            /// <item><description>min</description></item>
+            /// <item><description>max</description></item>
+            /// <item><description>p90</description></item>
+            /// <item><description>p95</description></item>
+            /// <item><description>p99</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +108,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Aggregate { get; set; }
 
             /// <summary>
-            /// <para>The unit of the data.</para>
+            /// <para>The data unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -130,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string BaseUnit { get; set; }
 
             /// <summary>
-            /// <para>The unit for display.</para>
+            /// <para>The display unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -140,24 +128,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DisplayUnit { get; set; }
 
             /// <summary>
-            /// <para>The comparison operation. It determines whether to perform a year-over-year or period-over-period comparison.</para>
+            /// <para>The comparison operator. Determines whether year-over-year or period-over-period comparison is used.</para>
             /// <list type="bullet">
-            /// <item><description><para>GT: Greater than.</para>
-            /// </description></item>
-            /// <item><description><para>GTE: Greater than or equal to.</para>
-            /// </description></item>
-            /// <item><description><para>LT: Less than.</para>
-            /// </description></item>
-            /// <item><description><para>LTE: Less than or equal to.</para>
-            /// </description></item>
-            /// <item><description><para>EQ: Equal to.</para>
-            /// </description></item>
-            /// <item><description><para>NE: Not equal to.</para>
-            /// </description></item>
-            /// <item><description><para>YOY_UP: Year-over-year increase.</para>
-            /// </description></item>
-            /// <item><description><para>YOY_DOWN: Year-over-year decrease.</para>
-            /// </description></item>
+            /// <item><description>Greater than: GT</description></item>
+            /// <item><description>Greater than or equal to: GTE</description></item>
+            /// <item><description>Less than: LT</description></item>
+            /// <item><description>Less than or equal to: LTE</description></item>
+            /// <item><description>Equal to: EQ</description></item>
+            /// <item><description>Not equal to: NE</description></item>
+            /// <item><description>Year-over-year increase: YOY_UP</description></item>
+            /// <item><description>Year-over-year decrease: YOY_DOWN</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Oper { get; set; }
 
             /// <summary>
-            /// <para>The threshold for comparison.</para>
+            /// <para>The comparison threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -178,7 +158,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public double? Value { get; set; }
 
             /// <summary>
-            /// <para>A list of alert levels for different values.</para>
+            /// <para>The list of alert levels for different values.</para>
             /// </summary>
             [NameInMap("valueLevelList")]
             [Validation(Required=false)]
@@ -195,7 +175,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for comparison.</para>
+                /// <para>The comparison threshold.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120</para>
@@ -207,7 +187,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The time unit for year-over-year comparison. This parameter is valid only when oper is set to YOY_UP or YOY_DOWN. Valid values: minute, hour, day, week, and month.</para>
+            /// <para>The time unit for year-over-year comparison. Valid only when oper is set to YOY_UP or YOY_DOWN.
+            /// Valid values: minute, hour, day, week, month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>month</para>
@@ -217,7 +198,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string YoyTimeUnit { get; set; }
 
             /// <summary>
-            /// <para>The time value for year-over-year comparison. Used with yoyTimeUnit.</para>
+            /// <para>The value of the year-over-year time period. Used together with yoyTimeUnit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -229,47 +210,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable to the CMS_BASIC_CONDITION type.</para>
-        /// <para>This parameter is valid only when escalationType is set to composite. It specifies the alert condition for composite metrics.</para>
+        /// <para>Applicable condition type: CMS_BASIC_CONDITION.</para>
+        /// <para>This parameter takes effect only when escalationType is set to composite. The composite metric alert condition.</para>
         /// </summary>
         [NameInMap("compositeEscalation")]
         [Validation(Required=false)]
         public AlertRuleConditionCompositeEscalation CompositeEscalation { get; set; }
         public class AlertRuleConditionCompositeEscalation : TeaModel {
             /// <summary>
-            /// <para>A list of composite conditions for multiple metrics.</para>
+            /// <para>The list of composite conditions for multiple metrics.</para>
             /// </summary>
             [NameInMap("escalations")]
             [Validation(Required=false)]
             public List<AlertRuleConditionCompositeEscalationEscalations> Escalations { get; set; }
             public class AlertRuleConditionCompositeEscalationEscalations : TeaModel {
                 /// <summary>
-                /// <para>The comparison operator for the threshold. Valid values:</para>
+                /// <para>The threshold comparison operator. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>GreaterThanOrEqualToThreshold: Greater than or equal to.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanThreshold: Greater than.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanOrEqualToThreshold: Less than or equal to.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanThreshold: Less than.</para>
-                /// </description></item>
-                /// <item><description><para>NotEqualToThreshold: Not equal to.</para>
-                /// </description></item>
-                /// <item><description><para>EqualToThreshold: Equal to.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanYesterday: Higher than the value at the same time yesterday.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanYesterday: Lower than the value at the same time yesterday.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanLastWeek: Higher than the value at the same time last week.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanLastWeek: Lower than the value at the same time last week.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanLastPeriod: Higher than the value in the previous period.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanLastPeriod: Lower than the value in the previous period.</para>
-                /// </description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold: Greater than or equal to.</description></item>
+                /// <item><description>GreaterThanThreshold: Greater than.</description></item>
+                /// <item><description>LessThanOrEqualToThreshold: Less than or equal to.</description></item>
+                /// <item><description>LessThanThreshold: Less than.</description></item>
+                /// <item><description>NotEqualToThreshold: Not equal to.</description></item>
+                /// <item><description>EqualToThreshold: Equal to.</description></item>
+                /// <item><description>GreaterThanYesterday: Year-over-year increase compared with the same time yesterday.</description></item>
+                /// <item><description>LessThanYesterday: Year-over-year decrease compared with the same time yesterday.</description></item>
+                /// <item><description>GreaterThanLastWeek: Year-over-year increase compared with the same time last week.</description></item>
+                /// <item><description>LessThanLastWeek: Year-over-year decrease compared with the same time last week.</description></item>
+                /// <item><description>GreaterThanLastPeriod: Period-over-period increase compared with the previous period.</description></item>
+                /// <item><description>LessThanLastPeriod: Period-over-period decrease compared with the previous period.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -280,7 +249,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>The name of the metric.</para>
+                /// <para>The metric name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cpu_total</para>
@@ -290,7 +259,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string MetricName { get; set; }
 
                 /// <summary>
-                /// <para>The time window for the metric.</para>
+                /// <para>The time window of the metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -300,18 +269,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? Period { get; set; }
 
                 /// <summary>
-                /// <para>The statistical method. The valid values for this parameter are determined by the Statistics column that corresponds to the MetricName of the specified cloud product. Examples of statistical methods for metrics:</para>
+                /// <para>The statistical method. The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified cloud service. Example values for the statistical method of a metric:</para>
                 /// <list type="bullet">
-                /// <item><description><para>$Maximum: The maximum value.</para>
-                /// </description></item>
-                /// <item><description><para>$Minimum: The minimum value.</para>
-                /// </description></item>
-                /// <item><description><para>$Average: The average value.</para>
-                /// </description></item>
-                /// <item><description><para>$Availability: The availability rate. This is typically used for site monitoring.</para>
-                /// </description></item>
+                /// <item><description>$Maximum: Maximum value.</description></item>
+                /// <item><description>$Minimum: Minimum value.</description></item>
+                /// <item><description>$Average: Average value.</description></item>
+                /// <item><description>$Availability: Availability rate (typically used for site monitoring).</description></item>
                 /// </list>
-                /// <para>Note: The dollar sign ($) is a standard prefix for metrics.</para>
+                /// <para>Note: $ is the unified prefix symbol for metrics.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>$Maximum</para>
@@ -333,7 +298,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The alert level that is triggered when the condition is met. Composite metric alerts support only one level.</para>
+            /// <para>The alert level triggered when the condition is met. Composite metric alerts support only one level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INFO</para>
@@ -343,7 +308,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The relationship between multiple metric conditions. Valid values: and or or.</para>
+            /// <para>The relationship between multiple metric conditions. Valid values: and, or.</para>
             /// 
             /// <b>Example:</b>
             /// <para>and</para>
@@ -364,20 +329,25 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        [NameInMap("countOperator")]
+        [Validation(Required=false)]
+        public string CountOperator { get; set; }
+
+        [NameInMap("countThreshold")]
+        [Validation(Required=false)]
+        public long? CountThreshold { get; set; }
+
         [NameInMap("enableSeveritySuppression")]
         [Validation(Required=false)]
         public bool? EnableSeveritySuppression { get; set; }
 
         /// <summary>
-        /// <para>Applicable to the CMS_BASIC_CONDITION type.</para>
+        /// <para>Applicable condition type: CMS_BASIC_CONDITION.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>simple: A simple metric condition.</para>
-        /// </description></item>
-        /// <item><description><para>composite: A composite metric condition.</para>
-        /// </description></item>
-        /// <item><description><para>express: An expression-based condition.</para>
-        /// </description></item>
+        /// <item><description>simple: simple metric condition.</description></item>
+        /// <item><description>composite: composite metric condition.</description></item>
+        /// <item><description>express: expression condition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -388,22 +358,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EscalationType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is applicable only to the CMS_BASIC_CONDITION condition type.</para>
-        /// <para>This parameter takes effect when escalationType is set to composite. It defines the conditions for a composite alert based on multiple metrics.</para>
+        /// <para>Applicable condition type: CMS_BASIC_CONDITION.</para>
+        /// <para>This parameter takes effect only when escalationType is set to composite. The multi-metric composite alert condition.</para>
         /// </summary>
         [NameInMap("expressEscalation")]
         [Validation(Required=false)]
         public AlertRuleConditionExpressEscalation ExpressEscalation { get; set; }
         public class AlertRuleConditionExpressEscalation : TeaModel {
             /// <summary>
-            /// <para>The alert level that is triggered when the condition is met. Expression-based alerts support only one level.</para>
+            /// <para>The alert level triggered when the condition is met. Expression-based alerts support only one level.</para>
             /// <list type="bullet">
-            /// <item><description><para>CRITICAL</para>
-            /// </description></item>
-            /// <item><description><para>WARNING</para>
-            /// </description></item>
-            /// <item><description><para>INFO</para>
-            /// </description></item>
+            /// <item><description>CRITICAL</description></item>
+            /// <item><description>WARNING</description></item>
+            /// <item><description>INFO</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -435,9 +402,29 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        [NameInMap("matchField")]
+        [Validation(Required=false)]
+        public string MatchField { get; set; }
+
+        [NameInMap("matchOperator")]
+        [Validation(Required=false)]
+        public string MatchOperator { get; set; }
+
+        [NameInMap("matchValue")]
+        [Validation(Required=false)]
+        public string MatchValue { get; set; }
+
+        [NameInMap("max")]
+        [Validation(Required=false)]
+        public double? Max { get; set; }
+
+        [NameInMap("min")]
+        [Validation(Required=false)]
+        public double? Min { get; set; }
+
         /// <summary>
-        /// <para>Applicable to the APM_CONDITION type.</para>
-        /// <para>The alert level for when no data is available. If you do not specify this parameter, no alert is triggered when no data is available.</para>
+        /// <para>Applicable condition type: APM_CONDITION.</para>
+        /// <para>The alert level when no data is available. If this parameter is not specified, no alert is triggered when no data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INFO</para>
@@ -447,8 +434,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataAlertLevel { get; set; }
 
         /// <summary>
-        /// <para>Applicable to the APM_CONDITION type.</para>
-        /// <para>The value to use when no data is available.</para>
+        /// <para>Applicable condition type: APM_CONDITION.</para>
+        /// <para>The compensation value when no data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -458,15 +445,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataAppendValue { get; set; }
 
         /// <summary>
-        /// <para>Applicable to the CMS_BASIC_CONDITION type.</para>
-        /// <para>The method for handling alerts when no monitoring data is available. Valid values:</para>
+        /// <para>Applicable condition type: CMS_BASIC_CONDITION.</para>
+        /// <para>The method used to handle alerts when no monitoring data is available. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>KEEP_LAST_STATE (default): No action is taken.</para>
-        /// </description></item>
-        /// <item><description><para>INSUFFICIENT_DATA: The alert content indicates that no data is available.</para>
-        /// </description></item>
-        /// <item><description><para>OK: The status is normal.</para>
-        /// </description></item>
+        /// <item><description>KEEP_LAST_STATE (default): No action is taken.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: The alert content indicates that no data is available.</description></item>
+        /// <item><description>OK: Normal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -477,24 +461,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NoDataPolicy { get; set; }
 
         /// <summary>
-        /// <para>The comparison operation. It determines whether to perform a year-over-year or period-over-period comparison.</para>
+        /// <para>The comparison operator. Specifies whether to use year-over-year or period-over-period comparison. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GT: Greater than.</para>
-        /// </description></item>
-        /// <item><description><para>GTE: Greater than or equal to.</para>
-        /// </description></item>
-        /// <item><description><para>LT: Less than.</para>
-        /// </description></item>
-        /// <item><description><para>LTE: Less than or equal to.</para>
-        /// </description></item>
-        /// <item><description><para>EQ: Equal to.</para>
-        /// </description></item>
-        /// <item><description><para>NE: Not equal to.</para>
-        /// </description></item>
-        /// <item><description><para>YOY_UP: Year-over-year increase.</para>
-        /// </description></item>
-        /// <item><description><para>YOY_DOWN: Year-over-year decrease.</para>
-        /// </description></item>
+        /// <item><description>GT: greater than.</description></item>
+        /// <item><description>GTE: greater than or equal to.</description></item>
+        /// <item><description>LT: less than.</description></item>
+        /// <item><description>LTE: less than or equal to.</description></item>
+        /// <item><description>EQ: equal to.</description></item>
+        /// <item><description>NE: not equal to.</description></item>
+        /// <item><description>YOY_UP: year-over-year increase.</description></item>
+        /// <item><description>YOY_DOWN: year-over-year decrease.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -505,13 +481,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Oper { get; set; }
 
         /// <summary>
-        /// <para>Applicable to the APM_CONDITION type.</para>
+        /// <para>Applicable condition type: APM_CONDITION.</para>
         /// <para>The logical relationship between multiple conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>and</para>
-        /// </description></item>
-        /// <item><description><para>or</para>
-        /// </description></item>
+        /// <item><description>and</description></item>
+        /// <item><description>or</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -522,47 +496,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Relation { get; set; }
 
         /// <summary>
-        /// <para>Applicable to the CMS_BASIC_CONDITION type.</para>
-        /// <para>This parameter is valid only when escalationType is set to simple. It specifies the alert condition for a single metric.</para>
+        /// <para>Applicable condition type: CMS_BASIC_CONDITION.</para>
+        /// <para>This parameter takes effect only when escalationType is set to simple. The alert condition configured for a single metric.</para>
         /// </summary>
         [NameInMap("simpleEscalation")]
         [Validation(Required=false)]
         public AlertRuleConditionSimpleEscalation SimpleEscalation { get; set; }
         public class AlertRuleConditionSimpleEscalation : TeaModel {
             /// <summary>
-            /// <para>A list of conditions. If an alert rule has multiple levels, each level has a corresponding condition object.</para>
+            /// <para>The list of conditions. When an alert rule corresponds to multiple levels, each level has a condition object.</para>
             /// </summary>
             [NameInMap("escalations")]
             [Validation(Required=false)]
             public List<AlertRuleConditionSimpleEscalationEscalations> Escalations { get; set; }
             public class AlertRuleConditionSimpleEscalationEscalations : TeaModel {
                 /// <summary>
-                /// <para>The comparison operator for the threshold. Valid values:</para>
+                /// <para>The threshold comparison operator. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>GreaterThanOrEqualToThreshold: Greater than or equal to.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanThreshold: Greater than.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanOrEqualToThreshold: Less than or equal to.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanThreshold: Less than.</para>
-                /// </description></item>
-                /// <item><description><para>NotEqualToThreshold: Not equal to.</para>
-                /// </description></item>
-                /// <item><description><para>EqualToThreshold: Equal to.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanYesterday: Higher than the value at the same time yesterday.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanYesterday: Lower than the value at the same time yesterday.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanLastWeek: Higher than the value at the same time last week.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanLastWeek: Lower than the value at the same time last week.</para>
-                /// </description></item>
-                /// <item><description><para>GreaterThanLastPeriod: Higher than the value in the previous period.</para>
-                /// </description></item>
-                /// <item><description><para>LessThanLastPeriod: Lower than the value in the previous period.</para>
-                /// </description></item>
+                /// <item><description>GreaterThanOrEqualToThreshold: Greater than or equal to.</description></item>
+                /// <item><description>GreaterThanThreshold: Greater than.</description></item>
+                /// <item><description>LessThanOrEqualToThreshold: Less than or equal to.</description></item>
+                /// <item><description>LessThanThreshold: Less than.</description></item>
+                /// <item><description>NotEqualToThreshold: Not equal to.</description></item>
+                /// <item><description>EqualToThreshold: Equal to.</description></item>
+                /// <item><description>GreaterThanYesterday: Year-over-year increase compared with the same time yesterday.</description></item>
+                /// <item><description>LessThanYesterday: Year-over-year decrease compared with the same time yesterday.</description></item>
+                /// <item><description>GreaterThanLastWeek: Year-over-year increase compared with the same time last week.</description></item>
+                /// <item><description>LessThanLastWeek: Year-over-year decrease compared with the same time last week.</description></item>
+                /// <item><description>GreaterThanLastPeriod: Period-over-period increase compared with the previous period.</description></item>
+                /// <item><description>LessThanLastPeriod: Period-over-period decrease compared with the previous period.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -573,14 +535,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ComparisonOperator { get; set; }
 
                 /// <summary>
-                /// <para>The alert level that is triggered when the condition is met. Expression-based alerts support only one level.</para>
+                /// <para>The alert level triggered when the condition is met. Expression-based alerts support only one level.</para>
                 /// <list type="bullet">
-                /// <item><description><para>CRITICAL</para>
-                /// </description></item>
-                /// <item><description><para>WARNING</para>
-                /// </description></item>
-                /// <item><description><para>INFO</para>
-                /// </description></item>
+                /// <item><description>CRITICAL</description></item>
+                /// <item><description>WARNING</description></item>
+                /// <item><description>INFO</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -591,7 +550,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The statistical method. The valid values for this parameter are determined by the Statistics column that corresponds to the MetricName of the specified cloud product. Examples: Maximum, Minimum, and Average.</para>
+                /// <para>The statistical method. The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified cloud service. Examples: Maximum, Minimum, and Average.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Average</para>
@@ -623,7 +582,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Applicable to the CMS_BASIC_CONDITION type.</para>
+            /// <para>Applicable condition type: CMS_BASIC_CONDITION.</para>
             /// <para>The metric associated with the alert condition.</para>
             /// 
             /// <b>Example:</b>
@@ -634,7 +593,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The time window for the metric, in seconds.</para>
+            /// <para>The time window of the metric. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -642,6 +601,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("period")]
             [Validation(Required=false)]
             public long? Period { get; set; }
+
+        }
+
+        [NameInMap("thresholdList")]
+        [Validation(Required=false)]
+        public List<AlertRuleConditionThresholdList> ThresholdList { get; set; }
+        public class AlertRuleConditionThresholdList : TeaModel {
+            [NameInMap("max")]
+            [Validation(Required=false)]
+            public double? Max { get; set; }
+
+            [NameInMap("min")]
+            [Validation(Required=false)]
+            public double? Min { get; set; }
+
+            [NameInMap("severity")]
+            [Validation(Required=false)]
+            public string Severity { get; set; }
+
+            [NameInMap("threshold")]
+            [Validation(Required=false)]
+            public double? Threshold { get; set; }
 
         }
 
@@ -696,14 +677,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The type of the rule condition. Valid values:</para>
+        /// <para>The rule condition type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SLS_CONDITION: An SLS alert condition.</para>
-        /// </description></item>
-        /// <item><description><para>APM_CONDITION: An APM alert condition.</para>
-        /// </description></item>
-        /// <item><description><para>CMS_BASIC_CONDITION: A basic Cloud Monitor alert condition.</para>
-        /// </description></item>
+        /// <item><description>SLS_CONDITION: Simple Log Service alert condition.</description></item>
+        /// <item><description>APM_CONDITION: APM alert condition.</description></item>
+        /// <item><description>CMS_BASIC_CONDITION: CloudMonitor Basic monitoring alert condition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -715,7 +693,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The threshold that triggers an alert.</para>
+        /// <para>The threshold that triggers the alert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

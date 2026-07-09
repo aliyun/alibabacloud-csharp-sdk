@@ -44,10 +44,6 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string ContentTemplate { get; set; }
 
-        [NameInMap("coveredSeverityLevels")]
-        [Validation(Required=false)]
-        public string CoveredSeverityLevels { get; set; }
-
         /// <summary>
         /// <para>The time the alert rule was created.</para>
         /// </summary>
@@ -98,6 +94,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public NotifyConfigUnified NotifyConfig { get; set; }
 
         /// <summary>
+        /// <para>The ID of the notification strategy to use for this alert rule.</para>
+        /// </summary>
+        [NameInMap("notifyStrategyId")]
+        [Validation(Required=false)]
+        public string NotifyStrategyId { get; set; }
+
+        /// <summary>
         /// <para>Indicates whether the alert rule monitors all resources of the specified type. If <c>true</c>, the rule applies globally within the workspace.</para>
         /// </summary>
         [NameInMap("observeResourceGlobalScope")]
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("observeResourceList")]
         [Validation(Required=false)]
-        public string ObserveResourceList { get; set; }
+        public List<string> ObserveResourceList { get; set; }
 
         /// <summary>
         /// <para>The type of resource that the alert rule monitors.</para>
@@ -117,6 +120,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("observeResourceType")]
         [Validation(Required=false)]
         public string ObserveResourceType { get; set; }
+
+        /// <summary>
+        /// <para>The partition key used to group alerts. Alerts with the same partition key are treated as a single incident.</para>
+        /// </summary>
+        [NameInMap("partitionKey")]
+        [Validation(Required=false)]
+        public string PartitionKey { get; set; }
 
         /// <summary>
         /// <para>The configuration for querying and processing data from the data source.</para>
@@ -131,6 +141,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("scheduleConfig")]
         [Validation(Required=false)]
         public ScheduleConfigUnified ScheduleConfig { get; set; }
+
+        /// <summary>
+        /// <para>The severity level of the alert. Examples: <c>critical</c>, <c>warning</c>.</para>
+        /// </summary>
+        [NameInMap("severityLevels")]
+        [Validation(Required=false)]
+        public string SeverityLevels { get; set; }
 
         /// <summary>
         /// <para>The current status of the alert rule. Examples: <c>RUNNING</c>, <c>STOPPED</c>.</para>

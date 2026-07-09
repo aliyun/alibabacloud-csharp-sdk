@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Filter settings.</para>
+        /// <para>The filter settings.</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>Notification policy UUID.</para>
+        /// <para>The UUID of the notification policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123</para>
@@ -51,21 +51,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyId { get; set; }
 
         /// <summary>
-        /// <para>Push settings.</para>
+        /// <para>The push settings.</para>
         /// </summary>
         [NameInMap("pushingSetting")]
         [Validation(Required=false)]
         public SubscriptionForModifyPushingSetting PushingSetting { get; set; }
         public class SubscriptionForModifyPushingSetting : TeaModel {
             /// <summary>
-            /// <para>A list of alert push action plan IDs.</para>
+            /// <para>The list of action plan IDs for alert pushing.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
             public List<string> AlertActionIds { get; set; }
 
             /// <summary>
-            /// <para>Action plan ID.</para>
+            /// <para>The action plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResponsePlanId { get; set; }
 
             /// <summary>
-            /// <para>A list of action integration plan IDs.</para>
+            /// <para>The list of action integration plan IDs for recovery pushing.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
             public List<string> RestoreActionIds { get; set; }
 
             /// <summary>
-            /// <para>Template UUID.</para>
+            /// <para>The UUID of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123</para>
@@ -94,7 +94,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Subscribe.</description></item>
+        /// <item><description>false or null: Do not subscribe.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("subscribeLegacyEvent")]
+        [Validation(Required=false)]
+        public bool? SubscribeLegacyEvent { get; set; }
+
+        /// <summary>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

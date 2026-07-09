@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetDeliveryTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The delivery task details.</para>
+        /// <para>The details of the delivery task.</para>
         /// </summary>
         [NameInMap("deliveryTask")]
         [Validation(Required=false)]
         public GetDeliveryTaskResponseBodyDeliveryTask DeliveryTask { get; set; }
         public class GetDeliveryTaskResponseBodyDeliveryTask : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the task was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The data source ID (the Prometheus instance ID).</para>
+            /// <para>The data source ID (Managed Service for Prometheus instance ID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxxxxx</para>
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>A map of key-value pairs to add as external labels to all delivered metrics.</para>
+            /// <para>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</para>
             /// </summary>
             [NameInMap("externalLabels")]
             [Validation(Required=false)]
             public Dictionary<string, string> ExternalLabels { get; set; }
 
             /// <summary>
-            /// <para>The extra information.</para>
+            /// <para>The extended information.</para>
             /// </summary>
             [NameInMap("extraInfo")]
             [Validation(Required=false)]
             public GetDeliveryTaskResponseBodyDeliveryTaskExtraInfo ExtraInfo { get; set; }
             public class GetDeliveryTaskResponseBodyDeliveryTaskExtraInfo : TeaModel {
                 /// <summary>
-                /// <para>The names of the associated EventBridge tasks.</para>
+                /// <para>The list of EventBridge tasks.</para>
                 /// </summary>
                 [NameInMap("taskNameList")]
                 [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The label filters, used with <c>labelFiltersType</c>. In each filter, the key is the metric label and the value is the value to match.</para>
+            /// <para>The metric filter conditions. Used together with labelFiltersType. The key is the metric label name, and the value is the match value.</para>
             /// </summary>
             [NameInMap("labelFilters")]
             [Validation(Required=false)]
             public Dictionary<string, string> LabelFilters { get; set; }
 
             /// <summary>
-            /// <para>The label filter type.</para>
+            /// <para>The metric filtering mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Allow</para>
@@ -88,21 +88,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>An array of sink configurations.</para>
+            /// <para>The list of delivery targets.</para>
             /// </summary>
             [NameInMap("sinkList")]
             [Validation(Required=false)]
             public List<GetDeliveryTaskResponseBodyDeliveryTaskSinkList> SinkList { get; set; }
             public class GetDeliveryTaskResponseBodyDeliveryTaskSinkList : TeaModel {
                 /// <summary>
-                /// <para>The sink configuration. The structure of this object depends on the value of <c>sinkType</c>. For details, see CreateDeliveryTask.</para>
+                /// <para>The detailed configuration of the delivery target. The meaning of key/value pairs varies depending on the sinkType. For more information, see <a href="~~CreateDeliveryTask~~">CreateDeliveryTask</a>.</para>
                 /// </summary>
                 [NameInMap("sinkConfigs")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> SinkConfigs { get; set; }
 
                 /// <summary>
-                /// <para>The sink type.</para>
+                /// <para>The type of the delivery target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prometheus</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The current status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending2Running</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the task.</para>
+            /// <para>The resource tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskDescription { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The delivery task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8b07eeac8249866d</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the task was last updated.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>

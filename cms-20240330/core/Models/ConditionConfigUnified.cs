@@ -9,69 +9,120 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ConditionConfigUnified : TeaModel {
-        /// <summary>
-        /// <para>The aggregation method for metric data points over the evaluation period. Valid values include <c>AVG</c>, <c>SUM</c>, and <c>MAX</c>.</para>
-        /// </summary>
         [NameInMap("aggregate")]
         [Validation(Required=false)]
         public string Aggregate { get; set; }
 
-        /// <summary>
-        /// <para>A list of composite comparison configurations for APM alerts. Each item is an <c>ApmCompositeCompareConfig</c> object.</para>
-        /// </summary>
         [NameInMap("compareList")]
         [Validation(Required=false)]
         public List<ApmCompositeCompareConfig> CompareList { get; set; }
 
-        /// <summary>
-        /// <para>The number of seconds a condition must be true before triggering an alert.</para>
-        /// </summary>
+        [NameInMap("compositeEscalation")]
+        [Validation(Required=false)]
+        public CloudMonitoringCompositeEscalation CompositeEscalation { get; set; }
+
+        [NameInMap("countOperator")]
+        [Validation(Required=false)]
+        public string CountOperator { get; set; }
+
+        [NameInMap("countThreshold")]
+        [Validation(Required=false)]
+        public long? CountThreshold { get; set; }
+
         [NameInMap("durationSecs")]
         [Validation(Required=false)]
         public int? DurationSecs { get; set; }
 
-        /// <summary>
-        /// <para>The comparison operator used to evaluate the metric against the threshold.</para>
-        /// </summary>
+        [NameInMap("enableSeveritySuppression")]
+        [Validation(Required=false)]
+        public bool? EnableSeveritySuppression { get; set; }
+
+        [NameInMap("escalationType")]
+        [Validation(Required=false)]
+        public string EscalationType { get; set; }
+
+        [NameInMap("expressEscalation")]
+        [Validation(Required=false)]
+        public CloudMonitoringExpressEscalation ExpressEscalation { get; set; }
+
+        [NameInMap("legacyRaw")]
+        [Validation(Required=false)]
+        public string LegacyRaw { get; set; }
+
+        [NameInMap("legacyType")]
+        [Validation(Required=false)]
+        public string LegacyType { get; set; }
+
+        [NameInMap("matchField")]
+        [Validation(Required=false)]
+        public string MatchField { get; set; }
+
+        [NameInMap("matchOperator")]
+        [Validation(Required=false)]
+        public string MatchOperator { get; set; }
+
+        [NameInMap("matchValue")]
+        [Validation(Required=false)]
+        public string MatchValue { get; set; }
+
+        [NameInMap("max")]
+        [Validation(Required=false)]
+        public double? Max { get; set; }
+
+        [NameInMap("min")]
+        [Validation(Required=false)]
+        public double? Min { get; set; }
+
+        [NameInMap("noDataPolicy")]
+        [Validation(Required=false)]
+        public string NoDataPolicy { get; set; }
+
         [NameInMap("operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
-        /// <summary>
-        /// <para>The logical relationship between multiple conditions. Valid values are <c>AND</c> and <c>OR</c>.</para>
-        /// </summary>
+        [NameInMap("prometheus")]
+        [Validation(Required=false)]
+        public CloudMonitoringPrometheusEscalation Prometheus { get; set; }
+
         [NameInMap("relation")]
         [Validation(Required=false)]
         public string Relation { get; set; }
 
-        /// <summary>
-        /// <para>The alert severity. Valid values are <c>CRITICAL</c>, <c>WARNING</c>, and <c>INFO</c>.</para>
-        /// </summary>
         [NameInMap("severity")]
         [Validation(Required=false)]
         public string Severity { get; set; }
 
-        /// <summary>
-        /// <para>The value against which the metric is evaluated to trigger an alert.</para>
-        /// </summary>
+        [NameInMap("simpleEscalation")]
+        [Validation(Required=false)]
+        public CloudMonitoringSimpleEscalation SimpleEscalation { get; set; }
+
         [NameInMap("threshold")]
         [Validation(Required=false)]
         public double? Threshold { get; set; }
 
-        /// <summary>
-        /// <para>A list of threshold configurations for Application Performance Monitoring (APM) alerts. Each item is an <c>ApmThresholdConfig</c> object.</para>
-        /// </summary>
         [NameInMap("thresholdList")]
         [Validation(Required=false)]
         public List<ApmThresholdConfig> ThresholdList { get; set; }
 
+        [NameInMap("triggers")]
+        [Validation(Required=false)]
+        public List<MetricSetMultiTrigger> Triggers { get; set; }
+
         /// <summary>
-        /// <para>The type of the alert condition.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("yoyTimeUnit")]
+        [Validation(Required=false)]
+        public string YoyTimeUnit { get; set; }
+
+        [NameInMap("yoyTimeValue")]
+        [Validation(Required=false)]
+        public int? YoyTimeValue { get; set; }
 
     }
 

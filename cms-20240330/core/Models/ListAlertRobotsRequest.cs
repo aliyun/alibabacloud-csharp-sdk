@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertRobotsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the robot. Fuzzy search by prefix is supported.</para>
+        /// <para>The chatbot name. Prefix fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 100.</para>
+        /// <para>The number of entries per page. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The robot IDs.</para>
+        /// <para>The chatbot ID.</para>
         /// </summary>
         [NameInMap("robotIds")]
         [Validation(Required=false)]
         public List<string> RobotIds { get; set; }
 
         /// <summary>
-        /// <para>The robot types.</para>
+        /// <para>The chatbot type.</para>
         /// </summary>
         [NameInMap("types")]
         [Validation(Required=false)]

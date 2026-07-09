@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days that data is automatically archived after the storage duration expires. A value of 0 indicates that data is not archived. Valid values:</para>
+        /// <para>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</para>
         /// <list type="bullet">
-        /// <item><description><para>V1 instances: 60 to 365.</para>
-        /// </description></item>
-        /// <item><description><para>V2 instances: 60 to 3650. A value of 3650 indicates that the data is permanently stored.</para>
-        /// </description></item>
+        /// <item><description>V1: 60 to 365 days.</description></item>
+        /// <item><description>V2: 60 to 3650 days (3650 indicates permanent retention).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? ArchiveDuration { get; set; }
 
         /// <summary>
-        /// <para>The policy for password-free read access. IP address ranges and VPC IDs are supported.</para>
+        /// <para>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
-        /// <para>The policy for password-free write access.</para>
+        /// <para>The authentication-free write policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeWritePolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free read access. This feature is supported only for V2 instances.</para>
+        /// <para>Specifies whether to enable authentication-free read. This parameter is supported only for V2 instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free write access. This feature is supported only for V2 instances.</para>
+        /// <para>Specifies whether to enable authentication-free write. This parameter is supported only for V2 instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeWrite { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable an authorization token. This feature is supported only for V1 instances.</para>
+        /// <para>Specifies whether to enable the authorization token. This parameter is supported only for V1 instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -97,12 +95,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billable methods. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>POSTPAY: pay-as-you-go based on the volume of reported metrics.</para>
-        /// </description></item>
-        /// <item><description><para>Note: If you leave this parameter empty, the default billing method is used. If a default billing method is not configured, POSTPAY is used.</para>
-        /// </description></item>
+        /// <item><description>POSTPAY: pay-as-you-go by metric reporting volume.</description></item>
+        /// <item><description>POSTPAY_GB: pay-as-you-go by metric write volume.
+        /// If this parameter is left empty, the default billing method configured by the user is used. If the user has not configured a default billing method, the system uses pay-as-you-go by metric reporting volume.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -122,6 +119,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("prometheusInstanceName")]
         [Validation(Required=false)]
         public string PrometheusInstanceName { get; set; }
+
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekz5qqvjyatgoy</para>
+        /// </summary>
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
 
         /// <summary>
         /// <para>The instance status.</para>
@@ -134,12 +141,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage duration of the instance in days. The valid values depend on the billing method:</para>
+        /// <para>The storage duration (in days):</para>
         /// <list type="bullet">
-        /// <item><description><para>For instances billed based on data written: 90 and 180.</para>
-        /// </description></item>
-        /// <item><description><para>For instances billed based on reported metrics: 15, 30, 60, 90, and 180.</para>
-        /// </description></item>
+        /// <item><description>By write volume: 90 or 180.</description></item>
+        /// <item><description>By metric reporting volume: 15, 30, 60, 90, or 180.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The workspace to which the instance belongs. The default value is default-cms-{userId}-{regionId}.</para>
+        /// <para>The workspace to which the instance belongs. Default value: default-cms-{userId}-{regionId}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wokspace1</para>

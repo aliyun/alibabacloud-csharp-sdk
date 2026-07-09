@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of region IDs to filter by, separated by commas.</para>
+        /// <para>The region IDs for filtering, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of instance IDs, separated by commas.</para>
+        /// <para>The instance IDs, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-00001,rw-00002,rw-00003</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance name. Partial match is supported.</para>
+        /// <para>The instance name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -98,14 +98,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance version. Valid values: V1 and V2.</para>
+        /// <para>The instance version. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>V1: V1 version.</description></item>
+        /// <item><description>V2: V2 version.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>
@@ -118,6 +122,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
+        /// <para>The workspace to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>workspace-test</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

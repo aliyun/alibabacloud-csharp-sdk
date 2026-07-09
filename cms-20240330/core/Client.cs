@@ -18,7 +18,53 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "metrics.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "metrics.us-southeast-1.aliyuncs.com"},
+                {"us-east-1", "metrics.us-east-1.aliyuncs.com"},
+                {"na-south-1", "metrics.na-south-1.aliyuncs.com"},
+                {"me-east-1", "metrics.me-east-1.aliyuncs.com"},
+                {"me-central-1", "metrics.me-central-1.aliyuncs.com"},
+                {"eu-west-2", "metrics.eu-west-2.aliyuncs.com"},
+                {"eu-west-1", "metrics.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "metrics.eu-central-1.aliyuncs.com"},
+                {"cn-zhongwei", "metrics.cn-zhongwei.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "metrics.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "metrics.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu-gic-1", "metrics.cn-wulanchabu-gic-1.aliyuncs.com"},
+                {"cn-wulanchabu", "metrics.cn-wulanchabu.aliyuncs.com"},
+                {"cn-wuhan-lr", "metrics.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "metrics.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "metrics.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "metrics.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "metrics.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "metrics.cn-qingdao.aliyuncs.com"},
+                {"cn-north-2-gov-1", "metrics.cn-north-2-gov-1.aliyuncs.com"},
+                {"cn-nanjing", "metrics.cn-nanjing.aliyuncs.com"},
+                {"cn-huhehaote", "metrics.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "metrics.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "metrics.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-heyuan", "metrics.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou-finance", "metrics.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "metrics.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "metrics.cn-guangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "metrics.cn-fuzhou.aliyuncs.com"},
+                {"cn-chengdu", "metrics.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "metrics.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "metrics.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-8", "metrics.ap-southeast-8.aliyuncs.com"},
+                {"ap-southeast-7", "metrics.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "metrics.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "metrics.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "metrics.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "metrics.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "metrics.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "metrics.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "metrics.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "metrics.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -755,7 +801,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an aggregation task group.</para>
+        /// <para>Create an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -867,7 +913,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an aggregation task group.</para>
+        /// <para>Create an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -979,7 +1025,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an aggregation task group.</para>
+        /// <para>Create an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -998,7 +1044,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an aggregation task group.</para>
+        /// <para>Create an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2775,7 +2821,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance for monitoring.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2827,6 +2873,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["prometheusInstanceName"] = request.PrometheusInstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
@@ -2865,7 +2915,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance for monitoring.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2917,6 +2967,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["prometheusInstanceName"] = request.PrometheusInstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 body["status"] = request.Status;
@@ -2955,7 +3009,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance for monitoring.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2974,7 +3028,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Prometheus instance for monitoring.</para>
+        /// <para>Creates a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2998,7 +3052,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>用于创建一个站点监控任务</para>
+        /// <para>Creates a site monitoring task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3085,7 +3139,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>用于创建一个站点监控任务</para>
+        /// <para>Creates a site monitoring task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3172,7 +3226,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>用于创建一个站点监控任务</para>
+        /// <para>Creates a site monitoring task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3196,7 +3250,7 @@ namespace AlibabaCloud.SDK.Cms20240330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>用于创建一个站点监控任务</para>
+        /// <para>Creates a site monitoring task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7147,12 +7201,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metadata</para>
+        /// <para>Queries metric metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7228,12 +7282,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metadata</para>
+        /// <para>Queries metric metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7309,12 +7363,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metadata</para>
+        /// <para>Queries metric metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7333,12 +7387,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query metadata</para>
+        /// <para>Queries metric metadata.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// <para>Queries the details of CloudMonitor monitoring metrics metadata.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8571,8 +8625,20 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data from the Cloud Resource Center.</para>
+        /// <para>Queries all entity information of a specific cloud service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries all entities of a specific cloud service within a specified time range.</description></item>
+        /// <item><description>The <c>from</c> and <c>to</c> parameters specify the time range of the query in seconds-level timestamps.</description></item>
+        /// <item><description>The <c>spl</c> parameter supports entityStore query statements to filter or select the required entities and their properties.</description></item>
+        /// <item><description>If you need only specific fields, use the <c>project</c> clause in <c>spl</c> to filter them.</description></item>
+        /// <item><description>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCloudResourceDataRequest
@@ -8625,8 +8691,20 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data from the Cloud Resource Center.</para>
+        /// <para>Queries all entity information of a specific cloud service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries all entities of a specific cloud service within a specified time range.</description></item>
+        /// <item><description>The <c>from</c> and <c>to</c> parameters specify the time range of the query in seconds-level timestamps.</description></item>
+        /// <item><description>The <c>spl</c> parameter supports entityStore query statements to filter or select the required entities and their properties.</description></item>
+        /// <item><description>If you need only specific fields, use the <c>project</c> clause in <c>spl</c> to filter them.</description></item>
+        /// <item><description>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCloudResourceDataRequest
@@ -8679,8 +8757,20 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data from the Cloud Resource Center.</para>
+        /// <para>Queries all entity information of a specific cloud service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries all entities of a specific cloud service within a specified time range.</description></item>
+        /// <item><description>The <c>from</c> and <c>to</c> parameters specify the time range of the query in seconds-level timestamps.</description></item>
+        /// <item><description>The <c>spl</c> parameter supports entityStore query statements to filter or select the required entities and their properties.</description></item>
+        /// <item><description>If you need only specific fields, use the <c>project</c> clause in <c>spl</c> to filter them.</description></item>
+        /// <item><description>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCloudResourceDataRequest
@@ -8698,8 +8788,20 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data from the Cloud Resource Center.</para>
+        /// <para>Queries all entity information of a specific cloud service within a specified time range.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation queries all entities of a specific cloud service within a specified time range.</description></item>
+        /// <item><description>The <c>from</c> and <c>to</c> parameters specify the time range of the query in seconds-level timestamps.</description></item>
+        /// <item><description>The <c>spl</c> parameter supports entityStore query statements to filter or select the required entities and their properties.</description></item>
+        /// <item><description>If you need only specific fields, use the <c>project</c> clause in <c>spl</c> to filter them.</description></item>
+        /// <item><description>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCloudResourceDataRequest
@@ -9241,8 +9343,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data delivery task details</para>
+        /// <para>Retrieves the details of a data delivery task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeliveryTaskRequest
@@ -9281,8 +9388,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data delivery task details</para>
+        /// <para>Retrieves the details of a data delivery task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeliveryTaskRequest
@@ -9321,8 +9433,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data delivery task details</para>
+        /// <para>Retrieves the details of a data delivery task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeliveryTaskRequest
@@ -9340,8 +9457,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data delivery task details</para>
+        /// <para>Retrieves the details of a data delivery task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDeliveryTaskRequest
@@ -9641,7 +9763,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Integration Center policy.</para>
+        /// <para>Query integration center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9681,7 +9803,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Integration Center policy.</para>
+        /// <para>Query integration center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9721,7 +9843,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Integration Center policy.</para>
+        /// <para>Query integration center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9740,7 +9862,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an Integration Center policy.</para>
+        /// <para>Query integration center policy information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10331,8 +10453,15 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a memory store.</para>
+        /// <para>Queries a memory store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</para>
+        /// <h2>Request type</h2>
+        /// <para>POST|GET.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMemoryStoreRequest
@@ -10371,8 +10500,15 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a memory store.</para>
+        /// <para>Queries a memory store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</para>
+        /// <h2>Request type</h2>
+        /// <para>POST|GET.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMemoryStoreRequest
@@ -10411,8 +10547,15 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a memory store.</para>
+        /// <para>Queries a memory store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</para>
+        /// <h2>Request type</h2>
+        /// <para>POST|GET.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMemoryStoreRequest
@@ -10430,8 +10573,15 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a memory store.</para>
+        /// <para>Queries a memory store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</para>
+        /// <h2>Request type</h2>
+        /// <para>POST|GET.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMemoryStoreRequest
@@ -10567,12 +10717,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific Prometheus instance.</para>
+        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Gets the details of a Prometheus instance.</para>
+        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10622,12 +10772,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific Prometheus instance.</para>
+        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Gets the details of a Prometheus instance.</para>
+        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10677,12 +10827,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific Prometheus instance.</para>
+        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Gets the details of a Prometheus instance.</para>
+        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10701,12 +10851,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific Prometheus instance.</para>
+        /// <para>Queries the details of a specified Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Gets the details of a Prometheus instance.</para>
+        /// <para>Retrieves the details of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10855,12 +11005,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10910,12 +11060,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10965,12 +11115,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10989,12 +11139,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
+        /// <para>Queries a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12133,7 +12283,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of aggregation task groups.</para>
+        /// <para>Queries the list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12213,7 +12363,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of aggregation task groups.</para>
+        /// <para>Queries the list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12293,7 +12443,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of aggregation task groups.</para>
+        /// <para>Queries the list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12312,7 +12462,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of aggregation task groups.</para>
+        /// <para>Queries the list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12505,7 +12655,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert webhooks.</para>
+        /// <para>Queries alert chatbots.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12581,7 +12731,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert webhooks.</para>
+        /// <para>Queries alert chatbots.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12657,7 +12807,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert webhooks.</para>
+        /// <para>Queries alert chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12676,7 +12826,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert webhooks.</para>
+        /// <para>Queries alert chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14007,12 +14157,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of policies in the Integration Center.</para>
+        /// <para>Queries the list of access center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of integrations.</para>
+        /// <para>Queries the integration list.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14116,12 +14266,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of policies in the Integration Center.</para>
+        /// <para>Queries the list of access center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of integrations.</para>
+        /// <para>Queries the integration list.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14225,12 +14375,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of policies in the Integration Center.</para>
+        /// <para>Queries the list of access center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of integrations.</para>
+        /// <para>Queries the integration list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14249,12 +14399,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of policies in the Integration Center.</para>
+        /// <para>Queries the list of access center policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries a list of integrations.</para>
+        /// <para>Queries the integration list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15497,7 +15647,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines in a workspace.</para>
+        /// <para>Lists pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15551,7 +15701,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines in a workspace.</para>
+        /// <para>Lists pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15605,7 +15755,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines in a workspace.</para>
+        /// <para>Lists pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15624,7 +15774,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of pipelines in a workspace.</para>
+        /// <para>Lists pipelines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15801,12 +15951,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15894,12 +16044,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15987,12 +16137,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16011,12 +16161,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists Prometheus instances.</para>
+        /// <para>Retrieves a list of Managed Service for Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16035,12 +16185,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16128,12 +16278,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16221,12 +16371,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16245,12 +16395,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Lists the Prometheus view instances.</para>
+        /// <para>Queries the list of Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17103,7 +17253,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// <para>Activates CloudMonitor services, including Hybrid Cloud Monitoring, Managed Service for Prometheus, and Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17143,7 +17293,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// <para>Activates CloudMonitor services, including Hybrid Cloud Monitoring, Managed Service for Prometheus, and Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17183,7 +17333,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// <para>Activates CloudMonitor services, including Hybrid Cloud Monitoring, Managed Service for Prometheus, and Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17202,7 +17352,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// <para>Activates CloudMonitor services, including Hybrid Cloud Monitoring, Managed Service for Prometheus, and Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17367,12 +17517,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules.</para>
+        /// <para>Queries alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17438,12 +17588,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules.</para>
+        /// <para>Queries alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17509,12 +17659,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules.</para>
+        /// <para>Queries alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17533,12 +17683,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of alert rules.</para>
+        /// <para>Queries alert rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17727,8 +17877,16 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search memories using query conditions and filters.</para>
+        /// <para>Searches for memories based on query conditions and filters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -17813,8 +17971,16 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search memories using query conditions and filters.</para>
+        /// <para>Searches for memories based on query conditions and filters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -17899,8 +18065,16 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search memories using query conditions and filters.</para>
+        /// <para>Searches for memories based on query conditions and filters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -17918,8 +18092,16 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search memories using query conditions and filters.</para>
+        /// <para>Searches for memories based on query conditions and filters.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <c>acs_ecs_dashboard</c> instance <c>i-uf6j91r34rnwawoo****</c>. The alert contact group of the alert rule is <c>ECS_Group</c>, the alert rule name is <c>test123</c>, the alert rule ID is <c>a151cd6023eacee2f0978e03863cc1697c89508****</c>, the statistical method for the Critical level is <c>Average</c>, the comparison operator for the Critical level is <c>GreaterThanOrEqualToThreshold</c>, the threshold for the Critical level is <c>90</c>, and the retry count for the Critical level is <c>3</c>.</para>
+        /// <remarks>
+        /// <para>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchMemoriesRequest
@@ -19277,8 +19459,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a context store.</para>
+        /// <para>Modifies the configuration of a context store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+        /// This topic provides an example of how to create a one-time detection task. The detection task is named <c>task1</c>, the detection address is <c>http://www.aliyun.com</c>, the detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContextStoreRequest
@@ -19335,8 +19523,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a context store.</para>
+        /// <para>Modifies the configuration of a context store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+        /// This topic provides an example of how to create a one-time detection task. The detection task is named <c>task1</c>, the detection address is <c>http://www.aliyun.com</c>, the detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContextStoreRequest
@@ -19393,8 +19587,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a context store.</para>
+        /// <para>Modifies the configuration of a context store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+        /// This topic provides an example of how to create a one-time detection task. The detection task is named <c>task1</c>, the detection address is <c>http://www.aliyun.com</c>, the detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContextStoreRequest
@@ -19412,8 +19612,14 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a context store.</para>
+        /// <para>Modifies the configuration of a context store.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+        /// This topic provides an example of how to create a one-time detection task. The detection task is named <c>task1</c>, the detection address is <c>http://www.aliyun.com</c>, the detection type is <c>HTTP</c>, and the number of detection points is <c>1</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateContextStoreRequest
@@ -19561,8 +19767,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
+        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -19639,8 +19850,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
+        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -19717,8 +19933,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
+        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -19736,8 +19957,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
+        /// <para>Updates a data delivery task. The update uses patch semantics: fields that are not specified remain unchanged.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified site monitoring task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDeliveryTaskRequest
@@ -20495,12 +20721,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to update a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20586,12 +20812,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to update a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20677,12 +20903,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to update a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20701,12 +20927,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to update a Prometheus instance.</para>
+        /// <para>Updates the information of a Managed Service for Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">

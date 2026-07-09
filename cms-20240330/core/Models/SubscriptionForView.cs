@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public SubscriptionForViewPushingSetting PushingSetting { get; set; }
         public class SubscriptionForViewPushingSetting : TeaModel {
             /// <summary>
-            /// <para>A list of action integration IDs for alert pushes.</para>
+            /// <para>The list of action integration IDs for alert pushing.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResponsePlanId { get; set; }
 
             /// <summary>
-            /// <para>A list of action integration IDs for recovery pushes.</para>
+            /// <para>The list of action integration IDs for recovery pushing.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
             public List<string> RestoreActionIds { get; set; }
 
             /// <summary>
-            /// <para>The template UUID.</para>
+            /// <para>The UUID of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123</para>
@@ -114,7 +114,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The UUID.</para>
+        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Subscribe.</description></item>
+        /// <item><description>false or null: Do not subscribe.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("subscribeLegacyEvent")]
+        [Validation(Required=false)]
+        public bool? SubscribeLegacyEvent { get; set; }
+
+        /// <summary>
+        /// <para>UUID</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123123</para>
@@ -173,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the workspace.</para>
+        /// <para>workspace</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

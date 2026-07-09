@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDeliveryTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The keywords for a fuzzy search by task name or task ID. The search uses <c>LIKE</c> semantics.</para>
+        /// <para>The keyword used to perform a fuzzy match by task name or task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-task</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string KeyWords { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. For subsequent requests, set this parameter to the <c>nextToken</c> value that is returned in the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>A list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

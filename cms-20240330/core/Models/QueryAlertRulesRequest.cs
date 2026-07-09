@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class QueryAlertRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The request parameters for querying alert rules.</para>
+        /// <para>The request body for querying alert rules.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public QueryAlertRulesInput Body { get; set; }
 
         /// <summary>
-        /// <para>The client token used to ensure the idempotency of the request.</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxx-xxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return per page.</para>
+        /// <para>The maximum number of data records to read in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If you do not specify this parameter, the query starts from the beginning.</para>
+        /// <para>The token that marks the position from which you want to start reading data. If you leave this parameter empty, data is read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetPrometheusViewRequest : TeaModel {
         /// <summary>
-        /// <para>The language. Valid values: zh (Chinese) and en (English). Default: zh.</para>
+        /// <para>The language. Default value: zh. Valid values: zh and en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2bhocin5e2na</para>

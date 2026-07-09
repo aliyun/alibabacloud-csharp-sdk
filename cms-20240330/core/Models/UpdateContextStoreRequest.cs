@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateContextStoreRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration.</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> MetadataField { get; set; }
 
             /// <summary>
-            /// <para>The data source.</para>
+            /// <para>The reference path.</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
             public UpdateContextStoreRequestConfigSource Source { get; set; }
             public class UpdateContextStoreRequestConfigSource : TeaModel {
                 /// <summary>
-                /// <para>The Log Service Logstore name.</para>
+                /// <para>The name of the Simple Log Service Logstore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-logstore</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Logstore { get; set; }
 
                 /// <summary>
-                /// <para>The Log Service Project name.</para>
+                /// <para>The name of the Simple Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls-test-project</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextType { get; set; }
 
         /// <summary>
-        /// <para>The dataset.</para>
+        /// <para>The dataset information.</para>
         /// </summary>
         [NameInMap("dataset")]
         [Validation(Required=false)]
         public UpdateContextStoreRequestDataset Dataset { get; set; }
         public class UpdateContextStoreRequestDataset : TeaModel {
             /// <summary>
-            /// <para>The dataset name.</para>
+            /// <para>The name of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_dataset</para>

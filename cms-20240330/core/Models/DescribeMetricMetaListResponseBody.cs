@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DescribeMetricMetaListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. The default value is <c>1</c>.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the metrics in the resource.</para>
+        /// <para>The metric configuration information of the resources.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The descriptions of the dimensions.</para>
+            /// <para>The dimension description.</para>
             /// </summary>
             [NameInMap("dimensionDescription")]
             [Validation(Required=false)]
             public List<DescribeMetricMetaListResponseBodyResourcesDimensionDescription> DimensionDescription { get; set; }
             public class DescribeMetricMetaListResponseBodyResourcesDimensionDescription : TeaModel {
                 /// <summary>
-                /// <para>The name of the dimension.</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user_id</para>
@@ -76,21 +76,33 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The dimensions for filtering resources in CloudMonitor.</para>
+            /// <para>The resource filtering dimensions of CloudMonitor Basic.</para>
             /// </summary>
             [NameInMap("dimensions")]
             [Validation(Required=false)]
             public List<string> Dimensions { get; set; }
 
             /// <summary>
-            /// <para>The CloudMonitor labels. This parameter is returned only when <c>metaFormat</c> is set to <c>CMS</c>.</para>
+            /// <para>The CloudMonitor labels. This parameter is returned only when metaFormat is set to CMS.</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The metadata format.</para>
+            /// <para>The metadata source. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CMS: CloudMonitor Basic monitoring metrics.</description></item>
+            /// <item><description>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</description></item>
+            /// </list>
+            /// <para>Sample value:
+            /// CMS
+            /// Valid values:
+            /// CMS
+            /// PROM_BASIC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PROM_BASIC</para>
             /// </summary>
             [NameInMap("metaFormat")]
             [Validation(Required=false)]
@@ -117,7 +129,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The aggregation period.</para>
+            /// <para>The period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -127,14 +139,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Periods { get; set; }
 
             /// <summary>
-            /// <para>The statistic of the metric. Examples:</para>
+            /// <para>The statistical method of the metric. Example values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Maximum</c>: the maximum value.</para>
-            /// </description></item>
-            /// <item><description><para><c>Minimum</c>: the minimum value.</para>
-            /// </description></item>
-            /// <item><description><para><c>Average</c>: the average value.</para>
-            /// </description></item>
+            /// <item><description>Maximum: the maximum value.</description></item>
+            /// <item><description>Minimum: the minimum value.</description></item>
+            /// <item><description>Average: the average value.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateSubscriptionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-******</para>

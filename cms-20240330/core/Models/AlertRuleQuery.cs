@@ -9,9 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleQuery : TeaModel {
+        [NameInMap("aggregate")]
+        [Validation(Required=false)]
+        public string Aggregate { get; set; }
+
         /// <summary>
         /// <para>Applicable query type: PROMQL_QUERY.</para>
-        /// <para>Specifies whether to run the alert check only after the data is complete.</para>
+        /// <para>Specifies whether to perform alert detection only after data is complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -21,15 +25,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? CheckAfterDataComplete { get; set; }
 
         /// <summary>
-        /// <para>Applicable query type: CMS_BASIC_QUERY.</para>
-        /// <para>A list of filter dimensions for the resource.</para>
+        /// <para>Applicable query type: CMS_BASIC_QUERY.  </para>
+        /// <para>The list of filter dimensions for the resource.</para>
         /// </summary>
         [NameInMap("dimensions")]
         [Validation(Required=false)]
         public List<Dictionary<string, string>> Dimensions { get; set; }
 
         /// <summary>
-        /// <para>The realm to which the resource belongs.</para>
+        /// <para>The domain to which the resource belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rum</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: PROMQL_QUERY.</para>
-        /// <para>The duration for which the alert data persists, in seconds.</para>
+        /// <para>The duration for which alert data persists. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -50,14 +54,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// <para>An array of entity field filters.</para>
+        /// <para>The array of entity field filters.</para>
         /// </summary>
         [NameInMap("entityFields")]
         [Validation(Required=false)]
         public List<AlertRuleQueryEntityFields> EntityFields { get; set; }
         public class AlertRuleQueryEntityFields : TeaModel {
             /// <summary>
-            /// <para>The name of the entity field.</para>
+            /// <para>The entity field name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instanceId</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Field { get; set; }
 
             /// <summary>
-            /// <para>The value of the field.</para>
+            /// <para>The field value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-abc123</para>
@@ -79,14 +83,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>A resource filter used to screen target resources.</para>
+        /// <para>The resource filter used to filter target resources.</para>
         /// </summary>
         [NameInMap("entityFilter")]
         [Validation(Required=false)]
         public AlertRuleQueryEntityFilter EntityFilter { get; set; }
         public class AlertRuleQueryEntityFilter : TeaModel {
             /// <summary>
-            /// <para>The domain of the resource type.</para>
+            /// <para>The resource type domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rum</para>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>A list of filter conditions to further screen resources.</para>
+            /// <para>The list of filter conditions used to further filter resources.</para>
             /// </summary>
             [NameInMap("filters")]
             [Validation(Required=false)]
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The value to match.</para>
+                /// <para>The matched value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wait_throw</para>
@@ -159,7 +163,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-        /// <para>The configuration for the join operation on the result sets of subquery 1 (queries[0]) and subquery 2 (queries[1]).</para>
+        /// <para>The set join operation configuration for the results of subquery 1 (queries[0]) and subquery 2 (queries[1]).</para>
         /// </summary>
         [NameInMap("firstJoin")]
         [Validation(Required=false)]
@@ -167,7 +171,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-        /// <para>A list of grouping field names.</para>
+        /// <para>The list of group field names.</para>
         /// </summary>
         [NameInMap("groupFieldList")]
         [Validation(Required=false)]
@@ -175,7 +179,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: CMS_BASIC_QUERY.</para>
-        /// <para>The ID of the associated application group. This parameter is valid only when relationType is set to GROUP.</para>
+        /// <para>The ID of the associated application group. This parameter takes effect only when relationType is set to GROUP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23423</para>
@@ -186,14 +190,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-        /// <para>The grouping type. Valid values:</para>
+        /// <para>The group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>none: No grouping.</para>
-        /// </description></item>
-        /// <item><description><para>label: Automatic grouping by tag.</para>
-        /// </description></item>
-        /// <item><description><para>custom: Custom grouping by tag.</para>
-        /// </description></item>
+        /// <item><description>none: no grouping.</description></item>
+        /// <item><description>label: automatic label-based grouping.</description></item>
+        /// <item><description>custom: custom label-based grouping.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,14 +205,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>An array of label filters.</para>
+        /// <para>The array of label filters.</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
         public List<AlertRuleQueryLabelFilters> LabelFilters { get; set; }
         public class AlertRuleQueryLabelFilters : TeaModel {
             /// <summary>
-            /// <para>The name of the label.</para>
+            /// <para>The label name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app</para>
@@ -231,7 +232,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The value of the label.</para>
+            /// <para>The label value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>web</para>
@@ -241,6 +242,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Value { get; set; }
 
         }
+
+        [NameInMap("logSet")]
+        [Validation(Required=false)]
+        public string LogSet { get; set; }
 
         [NameInMap("markTags")]
         [Validation(Required=false)]
@@ -257,7 +262,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The name of the metric.</para>
+        /// <para>The metric name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memory</para>
@@ -267,7 +272,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The collection of metrics.</para>
+        /// <para>The collection of monitoring metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpu_usage</para>
@@ -287,10 +292,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("offsetSecs")]
+        [Validation(Required=false)]
+        public long? OffsetSecs { get; set; }
+
         /// <summary>
         /// <para>Applicable query types: SLS_MULTI_QUERY and APM_MULTI_QUERY.</para>
-        /// <para>A list of subqueries.</para>
-        /// <para>For the SLS_MULTI_QUERY type, you can include up to three subqueries. The number and order of subqueries must match the sub-datasource configurations in datasource.dsList.</para>
+        /// <para>The list of subqueries.</para>
+        /// <para>For the SLS_MULTI_QUERY query type, a maximum of three subqueries are supported. The number and order of subqueries must match the sub-datasource config in datasource.dsList.</para>
         /// </summary>
         [NameInMap("queries")]
         [Validation(Required=false)]
@@ -298,7 +307,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public class AlertRuleQueryQueries : TeaModel {
             /// <summary>
             /// <para>Applicable query type: APM_MULTI_QUERY.</para>
-            /// <para>The ID of the predefined Application Performance Management (APM) metric.</para>
+            /// <para>The ID of the APM predefined metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstat.jvm.ThreadNewCount</para>
@@ -309,7 +318,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: ARMS_MULTI_QUERY.</para>
-            /// <para>The dimension filter configuration for the APM metric. This parameter must be used with apmAlertMetricId.</para>
+            /// <para>The dimension filter configuration for the APM metric. Must be used together with apmAlertMetricId.</para>
             /// </summary>
             [NameInMap("apmFilters")]
             [Validation(Required=false)]
@@ -326,16 +335,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Dim { get; set; }
 
                 /// <summary>
-                /// <para>The filter operation type:</para>
+                /// <para>The filter operation type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>eq: Equal to</para>
-                /// </description></item>
-                /// <item><description><para>neq: Not equal to</para>
-                /// </description></item>
-                /// <item><description><para>match: Regular expression match</para>
-                /// </description></item>
-                /// <item><description><para>nmatch: Regular expression non-match</para>
-                /// </description></item>
+                /// <item><description>eq: equal to</description></item>
+                /// <item><description>neq: not equal to</description></item>
+                /// <item><description>match: regex match</description></item>
+                /// <item><description>nmatch: regex not match</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -346,7 +351,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The value that corresponds to the filter operation.</para>
+                /// <para>The value corresponding to the filter operation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>h3ji7a0y9i@2ac80e27fdfd0a2</para>
@@ -359,7 +364,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: ARMS_MULTI_QUERY.</para>
-            /// <para>A list of aggregation dimensions for the query. This specifies the metric dimensions to use for aggregation.</para>
+            /// <para>The list of aggregation dimensions for the query, specifying which metric dimensions to aggregate by.</para>
             /// </summary>
             [NameInMap("apmGroupBy")]
             [Validation(Required=false)]
@@ -367,7 +372,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: ARMS_MULTI_QUERY.</para>
-            /// <para>The duration of the alert data.</para>
+            /// <para>The alert data duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -378,8 +383,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-            /// <para>The relative end time of the time offset.</para>
-            /// <para>If you specify start and end, do not specify window.</para>
+            /// <para>The relative time offset end time.</para>
+            /// <para>If start and end are specified, do not specify window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -389,13 +394,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? End { get; set; }
 
             /// <summary>
-            /// <para>Applicable query types: APM_MULTI_QUERY and SLS_MULTI_QUERY.</para>
+            /// <para>Applicable query types: APM_MULTI_QUERY, SLS_MULTI_QUERY.</para>
             /// <para>The query expression.</para>
             /// <list type="bullet">
-            /// <item><description><para>For APM_MULTI_QUERY, this parameter is optional. It is the PromQL expression generated for a predefined metric, used for data preview.</para>
-            /// </description></item>
-            /// <item><description><para>For SLS_MULTI_QUERY, this parameter is the SQL search statement.</para>
-            /// </description></item>
+            /// <item><description>For APM_MULTI_QUERY, this field is optional and contains the PromQL generated for predefined metrics (used for data preview).</description></item>
+            /// <item><description>For SLS_MULTI_QUERY, this field contains the SQL query statement.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -404,6 +407,32 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("expr")]
             [Validation(Required=false)]
             public string Expr { get; set; }
+
+            [NameInMap("labelFilters")]
+            [Validation(Required=false)]
+            public List<AlertRuleQueryQueriesLabelFilters> LabelFilters { get; set; }
+            public class AlertRuleQueryQueriesLabelFilters : TeaModel {
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("operator")]
+                [Validation(Required=false)]
+                public string Operator { get; set; }
+
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            [NameInMap("metric")]
+            [Validation(Required=false)]
+            public string Metric { get; set; }
+
+            [NameInMap("metricSet")]
+            [Validation(Required=false)]
+            public string MetricSet { get; set; }
 
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -415,8 +444,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-            /// <para>The relative start time of the time offset for an SLS query.</para>
-            /// <para>If you specify start and end, do not specify window. For example, if start is 15 and timeUnit is minute, the time offset starts 15 minutes ago.</para>
+            /// <para>The relative time offset start time for the SLS query.</para>
+            /// <para>If start and end are specified, do not specify window. Example: start=15, timeUnit=minute indicates 15 minutes ago.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -427,7 +456,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-            /// <para>The time unit for the start, end, and window parameters. Valid values: day, hour, minute, and second.</para>
+            /// <para>The time unit for the start, end, and window parameters: day/hour/minute/second.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -438,7 +467,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
             /// <summary>
             /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-            /// <para>The query interval for a time frame. If you specify window, do not specify start and end.</para>
+            /// <para>The time frame query interval. If window is specified, do not specify start or end.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -451,14 +480,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: CMS_BASIC_QUERY.</para>
-        /// <para>The resource scope for the rule query. Valid values:</para>
+        /// <para>The resource scope of the rule query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>USER: All resources under the user ID.</para>
-        /// </description></item>
-        /// <item><description><para>GROUP: An application group.</para>
-        /// </description></item>
-        /// <item><description><para>INSTANCE: A list of specified instances.</para>
-        /// </description></item>
+        /// <item><description>USER: all resources under the user UID.</description></item>
+        /// <item><description>GROUP: application group.</description></item>
+        /// <item><description>INSTANCE: specified instance list.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -470,43 +496,35 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>Applicable query type: SLS_MULTI_QUERY.</para>
-        /// <para>The configuration for the join operation on the result sets of subquery 2 (queries[2]) and subquery 3 (queries[3]).</para>
+        /// <para>The set join operation configuration for the results of subquery 2 (queries[2]) and subquery 3 (queries[3]).</para>
         /// </summary>
         [NameInMap("secondJoin")]
         [Validation(Required=false)]
         public AlertRuleSlsQueryJoin SecondJoin { get; set; }
 
         /// <summary>
-        /// <para>A list of service IDs.</para>
+        /// <para>The list of service IDs.</para>
         /// </summary>
         [NameInMap("serviceIds")]
         [Validation(Required=false)]
         public List<string> ServiceIds { get; set; }
 
         /// <summary>
-        /// <para>The query type.</para>
+        /// <para>The query type. </para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PROMQL_QUERY: A PromQL query.</para>
-        /// </description></item>
-        /// <item><description><para>SLS_MULTI_QUERY: A Simple Log Service (SLS) query.</para>
-        /// </description></item>
-        /// <item><description><para>APM_MULTI_QUERY: An APM query.</para>
-        /// </description></item>
-        /// <item><description><para>CMS_BASIC_QUERY: A basic CloudMonitor query.</para>
-        /// </description></item>
+        /// <item><description>PROMQL_QUERY: PromQL query.</description></item>
+        /// <item><description>SLS_MULTI_QUERY: SLS query.</description></item>
+        /// <item><description>APM_MULTI_QUERY: APM query.</description></item>
+        /// <item><description>CMS_BASIC_QUERY: basic cloud service monitoring query.</description></item>
         /// </list>
-        /// <para>Different query types have different valid parameters in the query object. For more information, see the &quot;Applicable query type&quot; description for each parameter.</para>
+        /// <para>Different query types use different valid fields in the query object. For more information, see the &quot;Applicable query type&quot; description of each field.</para>
         /// <para>The query type must match the data source type. The mappings are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prometheus data source (PROMETHEUS_DS): PROMQL_QUERY</para>
-        /// </description></item>
-        /// <item><description><para>APM data source (APM_DS): APM_MULTI_QUERY</para>
-        /// </description></item>
-        /// <item><description><para>SLS data source (SLS_MULTI_DS): SLS_MULTI_QUERY</para>
-        /// </description></item>
-        /// <item><description><para>Basic CloudMonitor data source (CMS_BASIC_DS): CMS_BASIC_QUERY</para>
-        /// </description></item>
+        /// <item><description>Prometheus data source (PROMETHEUS_DS): PROMQL_QUERY</description></item>
+        /// <item><description>APM data source (APM_DS): APM_MULTI_QUERY</description></item>
+        /// <item><description>SLS data source (SLS_MULTI_DS): SLS_MULTI_QUERY</description></item>
+        /// <item><description>Basic cloud service monitoring data source (CMS_BASIC_DS): CMS_BASIC_QUERY</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -516,6 +534,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("windowSecs")]
+        [Validation(Required=false)]
+        public long? WindowSecs { get; set; }
 
     }
 

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the robot.</para>
+        /// <para>The chatbot ID.</para>
         /// </summary>
         [NameInMap("robots")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The name of the robot.</para>
+            /// <para>The chatbot name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The unique robot ID.</para>
+            /// <para>The unique ID of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -80,8 +80,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string RobotId { get; set; }
 
+            [NameInMap("robotSignKey")]
+            [Validation(Required=false)]
+            public string RobotSignKey { get; set; }
+
             /// <summary>
-            /// <para>The robot type.</para>
+            /// <para>The chatbot type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DING</para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL.</para>
+            /// <para>The webhook URL of the chatbot.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

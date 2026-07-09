@@ -9,25 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DescribeMetricMetaListShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The keyword.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>实例理论</para>
+        /// </summary>
         [NameInMap("keywords")]
         [Validation(Required=false)]
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>The labels used to filter resources. The following labels are supported:</para>
+        /// <para>Filters resources by label. The following labels are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>metricCategory</c>: The metric category.</para>
-        /// </description></item>
-        /// <item><description><para><c>alertEnable</c>: Indicates whether to enable alerts.</para>
-        /// </description></item>
-        /// <item><description><para><c>alertUnit</c>: The recommended unit for alerts.</para>
-        /// </description></item>
-        /// <item><description><para><c>unitFactor</c>: The unit conversion factor.</para>
-        /// </description></item>
-        /// <item><description><para><c>minAlertPeriod</c>: The minimum alert period.</para>
-        /// </description></item>
-        /// <item><description><para><c>productCategory</c>: The product category.</para>
-        /// </description></item>
+        /// <item><description>metricCategory: the metric category description.</description></item>
+        /// <item><description>alertEnable: specifies whether alerting is required.</description></item>
+        /// <item><description>alertUnit: the recommended alert unit.</description></item>
+        /// <item><description>unitFactor: the unit conversion factor.</description></item>
+        /// <item><description>minAlertPeriod: the minimum alert period.</description></item>
+        /// <item><description>productCategory: the service type category.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("labels")]
@@ -35,7 +35,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string LabelsShrink { get; set; }
 
         /// <summary>
-        /// <para>The source of the metadata. Valid values: <c>CMS</c> for CloudMonitor metrics and <c>PROM_BASIC</c> for basic Prometheus metrics.</para>
+        /// <para>The metadata source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>CMS: CloudMonitor Basic monitoring metrics.</description></item>
+        /// <item><description>PROM_BASIC: Managed Service for Prometheus monitoring metrics.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CMS</para>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetaFormat { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric.</para>
+        /// <para>The metric name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CPUUtilization</para>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the product.</para>
+        /// <para>The namespace, which is used to distinguish between services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <c>1</c>.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <c>2000</c>.</para>
+        /// <para>The number of entries per page. Default value: 2000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The data source ID (Prometheus instance ID).</para>
+        /// <para>The data source ID, which is the Managed Service for Prometheus instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-5f2b4sc7es4d66</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>Additional labels to attach to all delivered metrics, specified as key-value pairs.</para>
+        /// <para>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</para>
         /// </summary>
         [NameInMap("externalLabels")]
         [Validation(Required=false)]
         public Dictionary<string, string> ExternalLabels { get; set; }
 
         /// <summary>
-        /// <para>The labels for filtering metrics. This operation replaces the entire existing filter; incremental updates are not supported.</para>
+        /// <para>The metric filter conditions. The entire value is replaced rather than incrementally merged.</para>
         /// </summary>
         [NameInMap("labelFilters")]
         [Validation(Required=false)]
@@ -54,21 +54,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of sinks.</para>
+        /// <para>The list of delivery targets.</para>
         /// </summary>
         [NameInMap("sinkList")]
         [Validation(Required=false)]
         public List<UpdateDeliveryTaskRequestSinkList> SinkList { get; set; }
         public class UpdateDeliveryTaskRequestSinkList : TeaModel {
             /// <summary>
-            /// <para>The detailed configuration of the sink. The meaning of the key-value pairs depends on the specified sinkType.</para>
+            /// <para>The detailed configuration of the delivery target. The meanings of keys and values vary depending on the sinkType.</para>
             /// </summary>
             [NameInMap("sinkConfigs")]
             [Validation(Required=false)]
             public Dictionary<string, string> SinkConfigs { get; set; }
 
             /// <summary>
-            /// <para>The sink type.</para>
+            /// <para>The delivery target type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The status of the delivery task.</para>
+        /// <para>The task status. This parameter is used to enable or disable the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TaskDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task. The name can include Chinese characters, English letters, underscores (_), and hyphens (-).</para>
+        /// <para>The task name. The name can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>new-task-name</para>

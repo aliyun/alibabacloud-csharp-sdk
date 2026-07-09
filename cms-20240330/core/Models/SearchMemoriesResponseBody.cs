@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchMemoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of relationships.</para>
+        /// <para>The relations.</para>
         /// </summary>
         [NameInMap("relations")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Destination { get; set; }
 
             /// <summary>
-            /// <para>The relationship.</para>
+            /// <para>The relations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of search results.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The sender\&quot;s role.</para>
+            /// <para>The role that initiated the message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>

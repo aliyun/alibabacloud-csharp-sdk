@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDeliveryTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of delivery tasks.</para>
+        /// <para>The list of delivery tasks.</para>
         /// </summary>
         [NameInMap("deliveryTasks")]
         [Validation(Required=false)]
         public List<ListDeliveryTasksResponseBodyDeliveryTasks> DeliveryTasks { get; set; }
         public class ListDeliveryTasksResponseBodyDeliveryTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the delivery task was created.</para>
+            /// <para>The time when the task was created.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Prometheus instance that serves as the data source.</para>
+            /// <para>The data source ID (Prometheus instance ID).</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-5f2b4c7e66342s</para>
@@ -38,21 +38,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>A key-value map of additional labels to attach to all delivered metrics.</para>
+            /// <para>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</para>
             /// </summary>
             [NameInMap("externalLabels")]
             [Validation(Required=false)]
             public Dictionary<string, string> ExternalLabels { get; set; }
 
             /// <summary>
-            /// <para>Additional information.</para>
+            /// <para>The extended information.</para>
             /// </summary>
             [NameInMap("extraInfo")]
             [Validation(Required=false)]
             public ListDeliveryTasksResponseBodyDeliveryTasksExtraInfo ExtraInfo { get; set; }
             public class ListDeliveryTasksResponseBodyDeliveryTasksExtraInfo : TeaModel {
                 /// <summary>
-                /// <para>A list of EventBridge tasks.</para>
+                /// <para>The list of EventBridge tasks.</para>
                 /// </summary>
                 [NameInMap("taskNameList")]
                 [Validation(Required=false)]
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>A key-value map of metric label filters. These filters are used with <c>labelFiltersType</c> to determine which metrics to deliver.</para>
+            /// <para>The metric filter conditions. Used together with labelFiltersType. The key is the metric label name and the value is the match value.</para>
             /// </summary>
             [NameInMap("labelFilters")]
             [Validation(Required=false)]
             public Dictionary<string, string> LabelFilters { get; set; }
 
             /// <summary>
-            /// <para>The filtering mode for metric labels.</para>
+            /// <para>The metric filtering mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Allow</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string LabelFiltersType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the task belongs.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm3gn5i6bigbi</para>
@@ -88,21 +88,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>A list of sinks.</para>
+            /// <para>The list of delivery targets. Multiple sinks can be configured.</para>
             /// </summary>
             [NameInMap("sinkList")]
             [Validation(Required=false)]
             public List<ListDeliveryTasksResponseBodyDeliveryTasksSinkList> SinkList { get; set; }
             public class ListDeliveryTasksResponseBodyDeliveryTasksSinkList : TeaModel {
                 /// <summary>
-                /// <para>Detailed configuration for the sink. The available key-value pairs depend on the specified <c>sinkType</c>.</para>
+                /// <para>The detailed configuration of the delivery target. The meanings of the key/value pairs vary depending on the sinkType.</para>
                 /// </summary>
                 [NameInMap("sinkConfigs")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> SinkConfigs { get; set; }
 
                 /// <summary>
-                /// <para>The type of the sink.</para>
+                /// <para>The type of the delivery target.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prometheus</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The current status of the delivery task.</para>
+            /// <para>The current status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Enable</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The resource tags attached to the task.</para>
+            /// <para>The tags.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListDeliveryTasksResponseBodyDeliveryTasksTags> Tags { get; set; }
             public class ListDeliveryTasksResponseBodyDeliveryTasksTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the resource tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the resource tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The description of the delivery task.</para>
+            /// <para>The task description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my delivery task</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the delivery task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>db21f8a126d96953</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the delivery task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-task</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of results to return. The maximum value is 100.</para>
+        /// <para>The maximum number of entries returned. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results. If this parameter is not returned, no more results are available.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2-ba4d-4b9f-aa24-dcb067a30f1c</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The unique ID for the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D7DF334-B2F2-5453-AD51-A27B337E3191</para>

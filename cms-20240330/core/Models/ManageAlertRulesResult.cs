@@ -30,6 +30,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<string> DeletedUuidList { get; set; }
 
+        /// <summary>
+        /// <para>The number of updated alert rules.</para>
+        /// </summary>
+        [NameInMap("updatedCount")]
+        [Validation(Required=false)]
+        public int? UpdatedCount { get; set; }
+
+        /// <summary>
+        /// <para>A list of UUIDs of updated alert rules.</para>
+        /// </summary>
+        [NameInMap("updatedUuidList")]
+        [Validation(Required=false)]
+        public List<string> UpdatedUuidList { get; set; }
+
     }
 
 }

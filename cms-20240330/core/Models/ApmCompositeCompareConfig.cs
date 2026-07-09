@@ -33,6 +33,20 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public float? Threshold { get; set; }
 
+        /// <summary>
+        /// <para>The time unit for the year-over-year (YoY) comparison. Use this parameter with <c>yoyTimeValue</c> to define the comparison period. Valid values are <c>day</c> and <c>week</c>.</para>
+        /// </summary>
+        [NameInMap("yoyTimeUnit")]
+        [Validation(Required=false)]
+        public string YoyTimeUnit { get; set; }
+
+        /// <summary>
+        /// <para>The time value for the YoY comparison. For example, if <c>yoyTimeUnit</c> is <c>day</c> and <c>yoyTimeValue</c> is <c>7</c>, the system compares current data with data from 7 days ago.</para>
+        /// </summary>
+        [NameInMap("yoyTimeValue")]
+        [Validation(Required=false)]
+        public int? YoyTimeValue { get; set; }
+
     }
 
 }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ManageAlertRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A unified request body for managing alert rules with the CREATE, UPDATE, PATCH, and BATCH_DELETE actions. The required fields depend on the specified action.</para>
+        /// <para>The request body for managing alert rules. This body is shared by CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify fields based on the action.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

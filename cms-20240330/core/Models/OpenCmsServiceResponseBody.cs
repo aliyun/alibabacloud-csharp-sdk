@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class OpenCmsServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Whether the specified monitoring services are enabled.</para>
+        /// <para>Indicates whether the service or commodity is activated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>

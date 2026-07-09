@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusViewRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is not in use.</para>
+        /// <para>Not in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AuthFreeReadPolicy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password-free read access.</para>
+        /// <para>Specifies whether anonymous read is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthFreeRead { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable an authentication token.</para>
+        /// <para>Specifies whether authToken is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The name of the Prometheus view.</para>
+        /// <para>The Prometheus view name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not in use.</para>
+        /// <para>Not in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Specifies the operation to execute.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<CreatePrometheusViewRequestTags> Tags { get; set; }
         public class CreatePrometheusViewRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>
@@ -149,11 +149,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>V1: The old version.</para>
-        /// </description></item>
-        /// <item><description><para>V2: The new version.</para>
-        /// </description></item>
+        /// <item><description>V1: legacy version</description></item>
+        /// <item><description>V2: new version.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -165,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The default value is default-cms-{userId}-{regionId}.</para>
+        /// <para>Default value: default-cms-{userId}-{regionId}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cms-monitor-test-aysls-pub-cn-zhangjiakou-spe-monitor</para>

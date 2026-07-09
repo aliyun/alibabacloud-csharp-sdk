@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The app ID assigned by the merchant.</para>
+        /// <para>The app key of the project assigned by the merchant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mm_480d961a1b5e4efe84603f4cbc0f</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Filters { get; set; }
 
         /// <summary>
-        /// <para>The query text.</para>
+        /// <para>The query content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What I like</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to rerank the search results.</para>
+        /// <para>Specifies whether to enable reranking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Rerank { get; set; }
 
         /// <summary>
+        /// <para>The retrieval option.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>reranker,llm_rank</para>
         /// </summary>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public double? Threshold { get; set; }
 
         /// <summary>
-        /// <para>The number of top-K results to return.</para>
+        /// <para>The top-K entries to return in the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

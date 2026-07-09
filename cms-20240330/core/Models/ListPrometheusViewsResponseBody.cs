@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned.</para>
+        /// <para>The maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListPrometheusViewsResponseBodyPrometheusViews> PrometheusViews { get; set; }
         public class ListPrometheusViewsResponseBodyPrometheusViews : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created. The time is in UTC and in the \<c>yyyy-MM-ddTHH:mmZ\\</c> format.</para>
+            /// <para>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-12T02:18:36Z</para>
@@ -50,7 +50,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The instance type. Valid values are \<c>prom-view\\</c> for a new-version aggregation view and \<c>global-view\\</c> for an old-version aggregation view.</para>
+            /// <para>The instance type:
+            /// prom-view: aggregated view of the new version.
+            /// global-view: aggregated view of the legacy version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prom-view</para>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The billing method. The value is fixed to \<c>FREE\\</c>.</para>
+            /// <para>The billing type. Currently, the fixed value is FREE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREE</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The product to which the Prometheus instance belongs. Valid values: \<c>arms\\</c> and \<c>cms\\</c>.</para>
+            /// <para>The product to which the Prometheus instance belongs (arms or cms).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cms</para>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The number of Prometheus instances in the view.</para>
+            /// <para>The number of Prometheus instances included in the view.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrometheusViewId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Prometheus view.</para>
+            /// <para>The Prometheus view name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>view1</para>
@@ -120,7 +122,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. The value is fixed to \<c>PrometheusView\\</c>.</para>
+            /// <para>The resource group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfm3gn5i6bigbi</para>
+            /// </summary>
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
+            /// <para>The fixed value: PrometheusView.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrometheusView</para>
@@ -130,7 +142,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the backend data storage.</para>
+            /// <para>The backend data storage status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -172,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-9A629907C1F0</para>

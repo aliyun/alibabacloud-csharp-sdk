@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The add-on name.</para>
+        /// <para>The addon name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-default</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the attached resource.</para>
+        /// <para>The ID of the bound resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>622d27c2e87d49debceeebc7c642610e</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string BindResourceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the entity groups to filter by. Separate multiple IDs with commas.</para>
+        /// <para>The entity IDs used for filtering, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eg-1,eg-2,eg-3</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EntityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions to query. Separate multiple region IDs with commas.</para>
+        /// <para>The region IDs used for filtering, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing,cn-hangzhou</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. The default value is 30. The maximum value is 100.</para>
+        /// <para>The maximum number of results to return. Default value: 30. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first request. You can obtain the token from the response to the previous request.</para>
+        /// <para>The token used to retrieve more results. You do not need to specify this parameter for the first request. Use the token returned from the previous query for subsequent requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mvnX6zqg3P</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The policy name.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prod-database</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceId { get; set; }
 
         /// <summary>
-        /// <para>A general-purpose query string.</para>
+        /// <para>The keyword used for general queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned.</para>
+        /// <para>The maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<ListPrometheusInstancesResponseBodyPrometheusInstances> PrometheusInstances { get; set; }
         public class ListPrometheusInstancesResponseBodyPrometheusInstances : TeaModel {
             /// <summary>
-            /// <para>The permission type. Valid values: readWrite, readOnly, and httpReadOnly.</para>
+            /// <para>The access type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>readWrite</description></item>
+            /// <item><description>readOnly</description></item>
+            /// <item><description>httpReadOnly</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>readWrite</para>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is in UTC and the format is yyyy-MM-ddTHH:mmZ.</para>
+            /// <para>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -70,10 +75,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>POSTPAY: Pay-as-you-go, billed by metrics.
-            /// POSTPAY_GB: Pay-as-you-go, billed by data written.
-            /// PREPAY: Subscription.
-            /// FREE: Free.</para>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>POSTPAY: pay-as-you-go by metric volume.</description></item>
+            /// <item><description>POSTPAY_GB: pay-as-you-go by write volume.</description></item>
+            /// <item><description>PREPAY: subscription.</description></item>
+            /// <item><description>FREE: free.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY_GB</para>
@@ -123,6 +131,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-aek2bhocin5e2na</para>
+            /// </summary>
+            [NameInMap("resourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
+            /// <summary>
             /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
@@ -133,7 +151,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the backend data storage.</para>
+            /// <para>The backend data storage status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pending2Running</para>
@@ -184,7 +202,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>

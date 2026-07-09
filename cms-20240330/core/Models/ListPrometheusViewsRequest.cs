@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsRequest : TeaModel {
         /// <summary>
-        /// <para>The region IDs by which to filter the results.</para>
+        /// <para>Filters by region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou,cn-beijing</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the Prometheus view instances.</para>
+        /// <para>The list of Prometheus view instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>view-xxx</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the Prometheus view.</para>
+        /// <para>The Prometheus view name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>view1</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The instance version. Valid values: V1 and V2.</para>
+        /// <para>The instance version: V1 or V2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

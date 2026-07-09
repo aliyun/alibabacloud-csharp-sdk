@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetMemoryStoreResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Unix timestamp (in milliseconds) when the memory store was created.</para>
+        /// <para>The creation time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>A list of custom extraction strategies.</para>
+        /// <para>The custom extraction strategies.</para>
         /// </summary>
         [NameInMap("customExtractionStrategies")]
         [Validation(Required=false)]
         public List<CustomExtractionStrategy> CustomExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>The description of the memory store.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The built-in extraction strategies. Valid values are <c>Episodic</c>, <c>Summary</c>, and <c>Fact</c>.</para>
+        /// <para>The extraction strategies. Valid values: Episodic, Summary, and Fact.</para>
         /// </summary>
         [NameInMap("extractionStrategies")]
         [Validation(Required=false)]
         public List<string> ExtractionStrategies { get; set; }
 
         /// <summary>
-        /// <para>The name of the memory store.</para>
+        /// <para>The memory store name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-memory-store</para>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration for short-term memory storage.</para>
+        /// <para>The short-term memory storage.</para>
         /// </summary>
         [NameInMap("shortTermStorage")]
         [Validation(Required=false)]
         public GetMemoryStoreResponseBodyShortTermStorage ShortTermStorage { get; set; }
         public class GetMemoryStoreResponseBodyShortTermStorage : TeaModel {
             /// <summary>
-            /// <para>The name of the Simple Log Service Logstore.</para>
+            /// <para>The Simple Log Service Logstore name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>memory-store</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service Project.</para>
+            /// <para>The Simple Log Service project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wk_cms_data_warehouse</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The short-term memory retention time, in seconds.</para>
+        /// <para>The retention period of short-term memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -124,21 +124,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The configuration for the trace source. This parameter is returned only when <c>sourceType</c> is set to <c>Trace</c>.</para>
+        /// <para>The configuration used when sourceType is set to Trace.</para>
         /// </summary>
         [NameInMap("traceSourceConfig")]
         [Validation(Required=false)]
         public GetMemoryStoreResponseBodyTraceSourceConfig TraceSourceConfig { get; set; }
         public class GetMemoryStoreResponseBodyTraceSourceConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to include Large Language Model (LLM) output in the memory extraction.</para>
+            /// <para>Specifies whether to include LLM output in memory extraction.</para>
             /// </summary>
             [NameInMap("includeOutput")]
             [Validation(Required=false)]
             public bool? IncludeOutput { get; set; }
 
             /// <summary>
-            /// <para>The query to filter traces from Simple Log Service.</para>
+            /// <para>The Simple Log Service query statement used to filter traces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>The workspace where the trace is located.</para>
+            /// <para>The workspace where the trace resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-workspace</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The Unix timestamp (in milliseconds) when the memory store was last updated.</para>
+        /// <para>The update time.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-xxxxxx-cn-beijing</para>
