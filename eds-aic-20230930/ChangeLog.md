@@ -1,3 +1,7 @@
+2026-07-09 Version: 4.27.1
+- Update API ListPolicyGroups: add response parameters Body.PolicyGroupModel.$.AccessPolicies.
+
+
 2026-07-07 Version: 4.27.0
 - Support API ActivateEdgeMobileAgent.
 - Support API CreateEdgeMobileAgentPackage.

@@ -12180,7 +12180,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policies.</para>
+        /// <para>Queries the details of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12238,7 +12238,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policies.</para>
+        /// <para>Queries the details of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12296,7 +12296,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policies.</para>
+        /// <para>Queries the details of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12314,7 +12314,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries policies.</para>
+        /// <para>Queries the details of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">

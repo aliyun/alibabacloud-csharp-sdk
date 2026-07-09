@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ListPolicyGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</para>
+        /// <para>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the policies.</para>
+        /// <para>The list of policy IDs.</para>
         /// </summary>
         [NameInMap("PolicyGroupIds")]
         [Validation(Required=false)]
         public List<string> PolicyGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Default policy</para>
