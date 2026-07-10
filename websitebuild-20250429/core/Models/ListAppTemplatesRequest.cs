@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>Application Type</para>
+        /// <para>The application type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TRACE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>Color scheme</para>
+        /// <para>The color scheme.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Red</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ColorScheme { get; set; }
 
         /// <summary>
-        /// <para>industry categorization</para>
+        /// <para>The industry category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Retail</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Industry { get; set; }
 
         /// <summary>
-        /// <para>Search keyword</para>
+        /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>${\&quot;wget JiexJPWT.popscan.xaliyun.com\&quot;}</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Number of results per query.  </para>
-        /// <para>Value range: 10–100. Default Value: 20.</para>
+        /// <para>The number of entries per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token indicating the start of the next query. It is empty when there is no next query.</para>
+        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Edition</para>
+        /// <para>The Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ProductVersion { get; set; }
 
         /// <summary>
-        /// <para>template Status</para>
+        /// <para>The template status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>

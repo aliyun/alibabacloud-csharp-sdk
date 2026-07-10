@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message. Not currently used. Ignore it.</para>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Faulty parameters</para>
+        /// <para>The error arguments.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Number of results returned per query.  </para>
+        /// <para>The number of entries per query.</para>
         /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public ListAppTemplatesResponseBodyModule Module { get; set; }
         public class ListAppTemplatesResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>Request Result.</para>
+            /// <para>The request result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListAppTemplatesResponseBodyModuleData> Data { get; set; }
             public class ListAppTemplatesResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>application Type</para>
+                /// <para>The application type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>supabase</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AppType { get; set; }
 
                 /// <summary>
-                /// <para>application instance ID</para>
+                /// <para>The application instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WD20250703155602000001</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BizId { get; set; }
 
                 /// <summary>
-                /// <para>Color</para>
+                /// <para>The color.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Red</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ColorScheme { get; set; }
 
                 /// <summary>
-                /// <para>Color name</para>
+                /// <para>The color name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>red</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ColorSchemeName { get; set; }
 
                 /// <summary>
-                /// <para>The actual data volume of the original table copied during DMS lockless change.</para>
+                /// <para>The actual amount of data copied from the original table during a DMS lock-free schema change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? CopyCount { get; set; }
 
                 /// <summary>
-                /// <para>Creator ID.</para>
+                /// <para>The creator ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SOAR</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>Creation Time</para>
+                /// <para>The creation time.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Updated At</para>
+                /// <para>The modification time.</para>
                 /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
                 /// 
                 /// <b>Example:</b>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>primary key</para>
+                /// <para>The primary key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9953352</para>
@@ -194,10 +194,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Industry of the file to be analyzed. Default value: <b>common</b> (general industry). Select an appropriate industry to enable the backend to match an algorithm combination suitable for that industry. Valid values:  </para>
+                /// <para>The industry of the file to be analyzed. Default value: <b>common</b> (general industry). Select an appropriate industry so that the backend matches the applicable algorithm combination. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><b>microVideo</b>: Short video industry.  </description></item>
-                /// <item><description><b>common</b>: General industry.</description></item>
+                /// <item><description><b>microVideo</b>: short video industry.</description></item>
+                /// <item><description><b>common</b>: general industry.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Industry { get; set; }
 
                 /// <summary>
-                /// <para>Industry Name</para>
+                /// <para>The industry name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string IndustryName { get; set; }
 
                 /// <summary>
-                /// <para>Editor ID</para>
+                /// <para>The ID of the last modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
-                /// <para>Number of likes.</para>
+                /// <para>The number of likes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -238,14 +238,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? LikeCount { get; set; }
 
                 /// <summary>
-                /// <para>Whether the current user has liked it</para>
+                /// <para>Indicates whether the current user has liked this template.</para>
                 /// </summary>
                 [NameInMap("Liked")]
                 [Validation(Required=false)]
                 public bool? Liked { get; set; }
 
                 /// <summary>
-                /// <para>Remediation action.</para>
+                /// <para>The remediation action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;memFrom\&quot;: \&quot;text\&quot;, \&quot;uid\&quot;: \&quot;text\&quot;, \&quot;labels\&quot;: \&quot;jsonb\&quot;, \&quot;content\&quot;: \&quot;text\&quot;, \&quot;fromId\&quot;: \&quot;text\&quot;, \&quot;uuid\&quot;: \&quot;text\&quot;}</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Metadata { get; set; }
 
                 /// <summary>
-                /// <para>Preview URL</para>
+                /// <para>The preview URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://preview-lyj.aliyuncs.com/preview/b2c5a245c44946b99cf5435210bbb8b8?subSceneIds=728166">https://preview-lyj.aliyuncs.com/preview/b2c5a245c44946b99cf5435210bbb8b8?subSceneIds=728166</a></para>
@@ -265,10 +265,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PreviewUrl { get; set; }
 
                 /// <summary>
-                /// <para>Edition. Valid values:  </para>
+                /// <para>The product version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>BasicVersion</b>: Basic Edition.  </description></item>
-                /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.</description></item>
+                /// <item><description><b>BasicVersion</b>: Basic edition.</description></item>
+                /// <item><description><b>EnterpriseVersion</b>: Enterprise edition.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ProductVersion { get; set; }
 
                 /// <summary>
-                /// <para>Edition name.</para>
+                /// <para>The Edition name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.1</para>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ProductVersionName { get; set; }
 
                 /// <summary>
-                /// <para>Share Count</para>
+                /// <para>The number of shares.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? ShareCount { get; set; }
 
                 /// <summary>
-                /// <para>File Status</para>
+                /// <para>The file status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RUNNING</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Template ID</para>
+                /// <para>The template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de10bf7d782392a70f293a3b1f7bb8fc</para>
@@ -319,9 +319,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateId { get; set; }
 
                 /// <summary>
-                /// <para>Template Name.  </para>
+                /// <para>The template name.</para>
                 /// <list type="bullet">
-                /// <item><description>Maximum length: 128 characters.</description></item>
+                /// <item><description>Maximum length: 128.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>Application thumbnail</para>
+                /// <para>The application thumbnail URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ThumbnailUrl { get; set; }
 
                 /// <summary>
-                /// <para>View Count.</para>
+                /// <para>The number of views.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? ViewCount { get; set; }
 
                 /// <summary>
-                /// <para>weight</para>
+                /// <para>The weight.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>255</para>
@@ -364,14 +364,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Decision weight</para>
+            /// <para>The decision weight.</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
             public ListAppTemplatesResponseBodyModuleNext Next { get; set; }
             public class ListAppTemplatesResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>Application Type</para>
+                /// <para>The application type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>memory</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AppType { get; set; }
 
                 /// <summary>
-                /// <para>bizId of the associated application instance</para>
+                /// <para>The BizId of the associated application instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WS20260502160409000001</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BizId { get; set; }
 
                 /// <summary>
-                /// <para>Color</para>
+                /// <para>The color.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>red</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ColorScheme { get; set; }
 
                 /// <summary>
-                /// <para>Color scheme name</para>
+                /// <para>The color name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>red</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ColorSchemeName { get; set; }
 
                 /// <summary>
-                /// <para>The actual data volume of the original table copied during DMS lockless change.</para>
+                /// <para>The actual amount of data copied from the original table during a DMS lock-free schema change.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? CopyCount { get; set; }
 
                 /// <summary>
-                /// <para>Tenant User Information</para>
+                /// <para>The tenant user information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>208116853206125255</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>Creation Time</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-17 20:43:21</para>
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Updated At</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-18T10:03:56+08:00</para>
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Primary key</para>
+                /// <para>The primary key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000039405002</para>
@@ -461,11 +461,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Industry. Default value: <b>common</b> (General Industry). Valid values:  </para>
+                /// <para>The industry. Default value: <b>common</b> (general industry). Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>microVideo</b>: Short Video Industry.  </para>
+                /// <item><description><para><b>microVideo</b>: short video industry.</para>
                 /// </description></item>
-                /// <item><description><para><b>common</b>: General Industry.</para>
+                /// <item><description><para><b>common</b>: general industry.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -477,7 +477,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Industry { get; set; }
 
                 /// <summary>
-                /// <para>Industry Name</para>
+                /// <para>The industry name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -487,7 +487,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string IndustryName { get; set; }
 
                 /// <summary>
-                /// <para>ID of the last modifier</para>
+                /// <para>The ID of the last modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -497,7 +497,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string LastModifier { get; set; }
 
                 /// <summary>
-                /// <para>Like count.</para>
+                /// <para>The number of likes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -507,14 +507,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? LikeCount { get; set; }
 
                 /// <summary>
-                /// <para>Whether the current user has liked the item.</para>
+                /// <para>Indicates whether the current user has liked this template.</para>
                 /// </summary>
                 [NameInMap("Liked")]
                 [Validation(Required=false)]
                 public bool? Liked { get; set; }
 
                 /// <summary>
-                /// <para>Fix Content.</para>
+                /// <para>The remediation content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;knowledge_point\&quot;:\&quot;text\&quot;,\&quot;trunk_id\&quot;:\&quot;text\&quot;,\&quot;doc_name\&quot;:\&quot;text\&quot;,\&quot;knowledge_point_id\&quot;:\&quot;text\&quot;,\&quot;doc_id\&quot;:\&quot;text\&quot;,\&quot;trunk_content\&quot;:\&quot;text\&quot;}</para>
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Metadata { get; set; }
 
                 /// <summary>
-                /// <para>Preview URL</para>
+                /// <para>The preview URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://preview-lyj.aliyuncs.com/preview/b989c9ac526e4fb48e018805f43d5fb1?subSceneIds=816576">https://preview-lyj.aliyuncs.com/preview/b989c9ac526e4fb48e018805f43d5fb1?subSceneIds=816576</a></para>
@@ -534,10 +534,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PreviewUrl { get; set; }
 
                 /// <summary>
-                /// <para>Edition. Valid values:  </para>
+                /// <para>The product version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>BasicVersion</b>: Basic Edition.  </description></item>
-                /// <item><description><b>EnterpriseVersion</b>: Enterprise Edition.  <remarks>
+                /// <item><description><b>BasicVersion</b>: Basic edition.</description></item>
+                /// <item><description><b>EnterpriseVersion</b>: Enterprise edition.<remarks>
                 /// <para>This parameter is required only when ProductForm is set to IntegrationForm.</para>
                 /// </remarks>
                 /// </description></item>
@@ -551,7 +551,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ProductVersion { get; set; }
 
                 /// <summary>
-                /// <para>Edition name.</para>
+                /// <para>The Edition name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.2</para>
@@ -561,7 +561,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ProductVersionName { get; set; }
 
                 /// <summary>
-                /// <para>Share Count</para>
+                /// <para>The number of shares.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -571,7 +571,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? ShareCount { get; set; }
 
                 /// <summary>
-                /// <para>Possible values: unknown, init, testing, online</para>
+                /// <para>Valid values: unknown, init, testing, online.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Succeeded</para>
@@ -581,7 +581,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Template ID</para>
+                /// <para>The template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3802aefc8cb0003b71286c47afc83624</para>
@@ -591,7 +591,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateId { get; set; }
 
                 /// <summary>
-                /// <para>Template Name</para>
+                /// <para>The template name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>iem</para>
@@ -601,7 +601,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>Application thumbnail</para>
+                /// <para>The application thumbnail URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -611,7 +611,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ThumbnailUrl { get; set; }
 
                 /// <summary>
-                /// <para>View count.</para>
+                /// <para>The number of views.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -621,7 +621,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? ViewCount { get; set; }
 
                 /// <summary>
-                /// <para>Weight</para>
+                /// <para>The weight.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -633,7 +633,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Whether there is a next page.</para>
+            /// <para>Indicates whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -643,7 +643,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -653,7 +653,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether there is a previous page.</para>
+            /// <para>Indicates whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>For the current query, aside from paging limits, the server-side processes at most the latest 1000 records. If the result exceeds 1000 records, <b>ResultLimit</b> is <b>true</b>; you should narrow the Time Range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to the pagination limit, the server processes a maximum of 1000 recent records per query. If the results exceed 1000 records, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -673,7 +673,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? ResultLimit { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -683,7 +683,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? TotalItemNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -695,7 +695,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Token for starting the next query. It is empty if there is no next query.</para>
+        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -715,7 +715,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -725,7 +725,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -735,7 +735,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

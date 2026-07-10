@@ -232,6 +232,126 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Grants proxy-based O&amp;M permissions for an application instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeAppProxyOpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeAppProxyOpsResponse
+        /// </returns>
+        public AuthorizeAppProxyOpsResponse AuthorizeAppProxyOpsWithOptions(AuthorizeAppProxyOpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeAppProxyOps",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuthorizeAppProxyOpsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants proxy-based O&amp;M permissions for an application instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeAppProxyOpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeAppProxyOpsResponse
+        /// </returns>
+        public async Task<AuthorizeAppProxyOpsResponse> AuthorizeAppProxyOpsWithOptionsAsync(AuthorizeAppProxyOpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
+            {
+                body["ConversationId"] = request.ConversationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeAppProxyOps",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuthorizeAppProxyOpsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants proxy-based O&amp;M permissions for an application instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeAppProxyOpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeAppProxyOpsResponse
+        /// </returns>
+        public AuthorizeAppProxyOpsResponse AuthorizeAppProxyOps(AuthorizeAppProxyOpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AuthorizeAppProxyOpsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Grants proxy-based O&amp;M permissions for an application instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeAppProxyOpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeAppProxyOpsResponse
+        /// </returns>
+        public async Task<AuthorizeAppProxyOpsResponse> AuthorizeAppProxyOpsAsync(AuthorizeAppProxyOpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AuthorizeAppProxyOpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks resource usage in batches.</para>
         /// </summary>
         /// 
@@ -13348,12 +13468,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query template list</para>
+        /// <para>Queries the list of website templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13431,12 +13551,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query template list</para>
+        /// <para>Queries the list of website templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13514,12 +13634,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query template list</para>
+        /// <para>Queries the list of website templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13537,12 +13657,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query template list</para>
+        /// <para>Queries the list of website templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
