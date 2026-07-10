@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ChannelCorpCreateRequest : TeaModel {
+        [NameInMap("administrator_email")]
+        [Validation(Required=false)]
+        public string AdministratorEmail { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -16,15 +20,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AdministratorName { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>18378889782</para>
-        /// </summary>
         [NameInMap("administrator_phone")]
         [Validation(Required=false)]
         public string AdministratorPhone { get; set; }
+
+        [NameInMap("base_currency")]
+        [Validation(Required=false)]
+        public string BaseCurrency { get; set; }
+
+        [NameInMap("btrip_region")]
+        [Validation(Required=false)]
+        public string BtripRegion { get; set; }
 
         [NameInMap("city")]
         [Validation(Required=false)]
@@ -37,23 +43,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string CorpName { get; set; }
 
+        [NameInMap("corp_name_en")]
+        [Validation(Required=false)]
+        public string CorpNameEn { get; set; }
+
+        [NameInMap("extend_field")]
+        [Validation(Required=false)]
+        public string ExtendField { get; set; }
+
         [NameInMap("province")]
         [Validation(Required=false)]
         public string Province { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public int? Scope { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>00001</para>
         /// </summary>
         [NameInMap("third_corp_id")]
         [Validation(Required=false)]

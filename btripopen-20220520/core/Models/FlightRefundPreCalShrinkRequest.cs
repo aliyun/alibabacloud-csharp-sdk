@@ -11,18 +11,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class FlightRefundPreCalShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>dis123</para>
         /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("is_voluntary")]
         [Validation(Required=false)]
         public string IsVoluntary { get; set; }

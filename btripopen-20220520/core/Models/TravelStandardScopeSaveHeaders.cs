@@ -15,9 +15,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>feth00jqwls</para>
         /// </summary>
         [NameInMap("x-acs-btrip-corp-token")]
         [Validation(Required=false)]

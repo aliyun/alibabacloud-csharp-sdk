@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AsyncCreateOrderKey { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("async_create_order_mode")]
         [Validation(Required=false)]
         public bool? AsyncCreateOrderMode { get; set; }
@@ -56,9 +52,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cheshiapi</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
@@ -66,9 +59,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>7fb731deeb4510b86c17e8c8c25740_11</para>
         /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
@@ -94,9 +84,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public class FlightCreateOrderV2RequestTravelers : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1991-01-22</para>
             /// </summary>
             [NameInMap("birthday")]
             [Validation(Required=false)]
@@ -115,9 +102,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
             /// </summary>
             [NameInMap("cert_type")]
             [Validation(Required=false)]
@@ -171,9 +155,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
             /// </summary>
             [NameInMap("passenger_type")]
             [Validation(Required=false)]
@@ -200,9 +181,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>18155711459129970552412</para>
             /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]

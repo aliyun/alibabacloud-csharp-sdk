@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CloseReason { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1709708165000</para>
-            /// </summary>
             [NameInMap("close_time")]
             [Validation(Required=false)]
             public string CloseTime { get; set; }
@@ -63,10 +59,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<IntlFlightOrderDetailResponseBodyModuleJourneyList> JourneyList { get; set; }
             public class IntlFlightOrderDetailResponseBodyModuleJourneyList : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>HKG</para>
-                /// </summary>
                 [NameInMap("arr_city_code")]
                 [Validation(Required=false)]
                 public string ArrCityCode { get; set; }
@@ -79,10 +71,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string ArrTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SHA</para>
-                /// </summary>
                 [NameInMap("dep_city_code")]
                 [Validation(Required=false)]
                 public string DepCityCode { get; set; }
@@ -353,28 +341,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("journey_index")]
                 [Validation(Required=false)]
                 public int? JourneyIndex { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("transfer_time")]
                 [Validation(Required=false)]
                 public int? TransferTime { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1012000000000000</para>
-            /// </summary>
             [NameInMap("order_id")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
@@ -395,10 +371,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public Dictionary<string, List<ModuleOrderItemListBaggageRuleOfferBaggageInfoMapValue>> OfferBaggageInfoMap { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("structured_baggage")]
                     [Validation(Required=false)]
                     public bool? StructuredBaggage { get; set; }
@@ -417,26 +389,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public int? PassengerType { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>21300</para>
-                    /// </summary>
                     [NameInMap("sell_price")]
                     [Validation(Required=false)]
                     public int? SellPrice { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>19300</para>
-                    /// </summary>
                     [NameInMap("tax")]
                     [Validation(Required=false)]
                     public int? Tax { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2000</para>
-                    /// </summary>
                     [NameInMap("ticket_price")]
                     [Validation(Required=false)]
                     public int? TicketPrice { get; set; }
@@ -447,18 +407,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public IntlFlightOrderDetailResponseBodyModuleOrderItemListRefundChangeRule RefundChangeRule { get; set; }
                 public class IntlFlightOrderDetailResponseBodyModuleOrderItemListRefundChangeRule : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>false</para>
-                    /// </summary>
                     [NameInMap("cancel_fee_ind")]
                     [Validation(Required=false)]
                     public bool? CancelFeeInd { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>false</para>
-                    /// </summary>
                     [NameInMap("change_fee_ind")]
                     [Validation(Required=false)]
                     public bool? ChangeFeeInd { get; set; }
@@ -479,10 +431,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string RefundRuleDesc { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("structured_refund")]
                     [Validation(Required=false)]
                     public bool? StructuredRefund { get; set; }
@@ -499,10 +447,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? OrderStatus { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>F11374007131319304192</para>
-            /// </summary>
             [NameInMap("out_order_id")]
             [Validation(Required=false)]
             public string OutOrderId { get; set; }
@@ -519,18 +463,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string FullName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("gender")]
                 [Validation(Required=false)]
                 public int? Gender { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1001101</para>
-                /// </summary>
                 [NameInMap("job_no")]
                 [Validation(Required=false)]
                 public string JobNo { get; set; }
@@ -539,18 +475,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string Nationality { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>CN</para>
-                /// </summary>
                 [NameInMap("nationality_code")]
                 [Validation(Required=false)]
                 public string NationalityCode { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>8432002</para>
-                /// </summary>
                 [NameInMap("passenger_id")]
                 [Validation(Required=false)]
                 public long? PassengerId { get; set; }
@@ -563,18 +491,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? Type { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>12292812036903456</para>
-                /// </summary>
                 [NameInMap("user_id")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("user_type")]
                 [Validation(Required=false)]
                 public int? UserType { get; set; }
@@ -665,26 +585,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string PayLatestTime { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("pay_status")]
             [Validation(Required=false)]
             public int? PayStatus { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2024-03-06 15:00:35</para>
-            /// </summary>
             [NameInMap("pay_time")]
             [Validation(Required=false)]
             public string PayTime { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>8</para>
-            /// </summary>
             [NameInMap("pay_type")]
             [Validation(Required=false)]
             public int? PayType { get; set; }
@@ -693,10 +601,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string SuccessTime { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>21300</para>
-            /// </summary>
             [NameInMap("total_price")]
             [Validation(Required=false)]
             public long? TotalPrice { get; set; }
@@ -709,10 +613,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? TotalTicketPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
             [NameInMap("trip_type")]
             [Validation(Required=false)]
             public int? TripType { get; set; }
@@ -723,10 +623,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

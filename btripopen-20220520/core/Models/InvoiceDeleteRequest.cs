@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class InvoiceDeleteRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>340049</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]

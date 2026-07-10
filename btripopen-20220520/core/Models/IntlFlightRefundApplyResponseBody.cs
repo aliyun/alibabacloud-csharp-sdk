@@ -29,18 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public IntlFlightRefundApplyResponseBodyModule Module { get; set; }
         public class IntlFlightRefundApplyResponseBodyModule : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2025011317110900006</para>
-            /// </summary>
             [NameInMap("out_refund_apply_id")]
             [Validation(Required=false)]
             public string OutRefundApplyId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1000000005186043</para>
-            /// </summary>
             [NameInMap("refund_apply_id")]
             [Validation(Required=false)]
             public string RefundApplyId { get; set; }

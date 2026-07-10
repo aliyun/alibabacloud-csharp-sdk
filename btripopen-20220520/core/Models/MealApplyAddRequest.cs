@@ -18,9 +18,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public class MealApplyAddRequestApplyUser : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>userId1</para>
             /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
@@ -28,10 +25,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>23</para>
-        /// </summary>
         [NameInMap("cost_center_id")]
         [Validation(Required=false)]
         public long? CostCenterId { get; set; }
@@ -40,10 +33,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ExtendField { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>123</para>
-        /// </summary>
         [NameInMap("invoice_id")]
         [Validation(Required=false)]
         public long? InvoiceId { get; set; }
@@ -62,10 +51,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<MealApplyAddRequestItineraryListCities> Cities { get; set; }
             public class MealApplyAddRequestItineraryListCities : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>330702</para>
-                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
@@ -78,9 +63,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2025-02-05 00:00:00</para>
             /// </summary>
             [NameInMap("end_date")]
             [Validation(Required=false)]
@@ -88,28 +70,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2025-02-05 00:00:00</para>
             /// </summary>
             [NameInMap("start_date")]
             [Validation(Required=false)]
             public string StartDate { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2134</para>
-            /// </summary>
             [NameInMap("thirdpart_itinerary_id")]
             [Validation(Required=false)]
             public string ThirdpartItineraryId { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("meal_amount")]
         [Validation(Required=false)]
         public long? MealAmount { get; set; }
@@ -121,10 +92,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string MealCause { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>project123</para>
-        /// </summary>
         [NameInMap("project_code")]
         [Validation(Required=false)]
         public string ProjectCode { get; set; }
@@ -135,9 +102,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -145,26 +109,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1234</para>
         /// </summary>
         [NameInMap("third_part_apply_id")]
         [Validation(Required=false)]
         public string ThirdPartApplyId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1200F00010</para>
-        /// </summary>
         [NameInMap("third_part_cost_center_id")]
         [Validation(Required=false)]
         public string ThirdPartCostCenterId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>GA15131</para>
-        /// </summary>
         [NameInMap("third_part_invoice_id")]
         [Validation(Required=false)]
         public string ThirdPartInvoiceId { get; set; }

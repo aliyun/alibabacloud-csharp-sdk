@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ModuleFlightItemListBestPriceItemSubItemsShoppingItemMapValueCabinQuantityValue : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>R</para>
-        /// </summary>
         [NameInMap("cabin")]
         [Validation(Required=false)]
         public string Cabin { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Y</para>
-        /// </summary>
         [NameInMap("cabin_class")]
         [Validation(Required=false)]
         public string CabinClass { get; set; }
@@ -37,10 +29,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Specification { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>A</para>
-        /// </summary>
         [NameInMap("quantity")]
         [Validation(Required=false)]
         public string Quantity { get; set; }
@@ -49,10 +37,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<string> LinkCabins { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("reshop_change_cabin")]
         [Validation(Required=false)]
         public bool? ReshopChangeCabin { get; set; }
@@ -65,10 +49,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string InfantBasicCabin { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2</para>
-        /// </summary>
         [NameInMap("inner_cabin_class")]
         [Validation(Required=false)]
         public int? InnerCabinClass { get; set; }

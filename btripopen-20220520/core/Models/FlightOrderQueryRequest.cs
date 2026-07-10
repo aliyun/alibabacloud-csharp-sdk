@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class FlightOrderQueryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>246584390</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]

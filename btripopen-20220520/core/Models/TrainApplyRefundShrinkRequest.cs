@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class TrainApplyRefundShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1002145190081005400</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456778</para>
         /// </summary>
         [NameInMap("out_refund_id")]
         [Validation(Required=false)]

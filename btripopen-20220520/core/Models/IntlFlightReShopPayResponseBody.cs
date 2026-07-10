@@ -29,18 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public IntlFlightReShopPayResponseBodyModule Module { get; set; }
         public class IntlFlightReShopPayResponseBodyModule : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>100000</para>
-            /// </summary>
             [NameInMap("actual_pay_price")]
             [Validation(Required=false)]
             public long? ActualPayPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
             [NameInMap("pay_status")]
             [Validation(Required=false)]
             public int? PayStatus { get; set; }

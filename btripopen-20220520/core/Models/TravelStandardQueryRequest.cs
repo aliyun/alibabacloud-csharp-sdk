@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class TravelStandardQueryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
         /// </summary>
         [NameInMap("from_group")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2006523763</para>
         /// </summary>
         [NameInMap("rule_code")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderPreValidateResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -25,10 +21,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public HotelOrderPreValidateResponseBodyModule Module { get; set; }
         public class HotelOrderPreValidateResponseBodyModule : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>demo</para>
-            /// </summary>
             [NameInMap("extend_info")]
             [Validation(Required=false)]
             public string ExtendInfo { get; set; }
@@ -43,10 +35,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>fb5e1abf33924b6c912bd6d80deec0eb-4</para>
-            /// </summary>
             [NameInMap("itinerary_no")]
             [Validation(Required=false)]
             public string ItineraryNo { get; set; }
@@ -63,18 +51,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public List<HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList> PromotionDetailInfoList { get; set; }
                 public class HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("check_status")]
                     [Validation(Required=false)]
                     public bool? CheckStatus { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("need_check")]
                     [Validation(Required=false)]
                     public bool? NeedCheck { get; set; }
@@ -83,44 +63,24 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public string PromotionCode { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>12893</para>
-                    /// </summary>
                     [NameInMap("promotion_id")]
                     [Validation(Required=false)]
                     public string PromotionId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>demo</para>
-                    /// </summary>
                     [NameInMap("promotion_name")]
                     [Validation(Required=false)]
                     public string PromotionName { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>100</para>
-                    /// </summary>
                     [NameInMap("promotion_price")]
                     [Validation(Required=false)]
                     public long? PromotionPrice { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("promotion_type")]
                     [Validation(Required=false)]
                     public string PromotionType { get; set; }
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("promotion_total_price")]
                 [Validation(Required=false)]
                 public long? PromotionTotalPrice { get; set; }
@@ -143,26 +103,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? MaxBookingNum { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("price")]
                 [Validation(Required=false)]
                 public long? Price { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2023-01-19</para>
-                /// </summary>
                 [NameInMap("rate_start_time")]
                 [Validation(Required=false)]
                 public string RateStartTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("room_count")]
                 [Validation(Required=false)]
                 public int? RoomCount { get; set; }
@@ -175,20 +123,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string RoundingPrice { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("service_fee")]
                 [Validation(Required=false)]
                 public long? ServiceFee { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>5314280514218</para>
-            /// </summary>
             [NameInMap("rate_plan_id")]
             [Validation(Required=false)]
             public long? RatePlanId { get; set; }
@@ -209,18 +149,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                     [Validation(Required=false)]
                     public List<HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList> BtripHotelCancelPolicyInfoDTOList { get; set; }
                     public class HotelOrderPreValidateResponseBodyModuleRatePlanInfoBtripHotelCancelPolicyDTOBtripHotelCancelPolicyInfoDTOList : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("hour")]
                         [Validation(Required=false)]
                         public long? Hour { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("value")]
                         [Validation(Required=false)]
                         public long? Value { get; set; }
@@ -245,18 +177,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public List<string> CertTypeList { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>12:00</para>
-                /// </summary>
                 [NameInMap("earliest_check_in_time")]
                 [Validation(Required=false)]
                 public string EarliestCheckInTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>17:00</para>
-                /// </summary>
+                [NameInMap("hour_item_arrival_time_info")]
+                [Validation(Required=false)]
+                public HotelOrderPreValidateResponseBodyModuleRatePlanInfoHourItemArrivalTimeInfo HourItemArrivalTimeInfo { get; set; }
+                public class HotelOrderPreValidateResponseBodyModuleRatePlanInfoHourItemArrivalTimeInfo : TeaModel {
+                    [NameInMap("actual_live_hour")]
+                    [Validation(Required=false)]
+                    public string ActualLiveHour { get; set; }
+
+                    [NameInMap("earliest_check_in_time")]
+                    [Validation(Required=false)]
+                    public string EarliestCheckInTime { get; set; }
+
+                    [NameInMap("latest_check_in_time")]
+                    [Validation(Required=false)]
+                    public string LatestCheckInTime { get; set; }
+
+                    [NameInMap("latest_check_out_time")]
+                    [Validation(Required=false)]
+                    public string LatestCheckOutTime { get; set; }
+
+                    [NameInMap("live_hour")]
+                    [Validation(Required=false)]
+                    public string LiveHour { get; set; }
+
+                }
+
                 [NameInMap("latest_check_out_time")]
                 [Validation(Required=false)]
                 public string LatestCheckOutTime { get; set; }
@@ -265,88 +215,50 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public int? MaxBookingNum { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("max_occupancy_num")]
                 [Validation(Required=false)]
                 public int? MaxOccupancyNum { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("need_certificate")]
                 [Validation(Required=false)]
                 public bool? NeedCertificate { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("need_email")]
                 [Validation(Required=false)]
                 public bool? NeedEmail { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("need_english_name")]
                 [Validation(Required=false)]
                 public bool? NeedEnglishName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
+                [NameInMap("rp_type")]
+                [Validation(Required=false)]
+                public int? RpType { get; set; }
+
                 [NameInMap("total_order_price")]
                 [Validation(Required=false)]
                 public long? TotalOrderPrice { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("total_room_price")]
                 [Validation(Required=false)]
                 public long? TotalRoomPrice { get; set; }
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>nonUltron_1673575241156_d91ea8ad16735752359161037bf6cf_c54d3768312a4b249b719f126377bf82</para>
-            /// </summary>
             [NameInMap("validate_res_key")]
             [Validation(Required=false)]
             public string ValidateResKey { get; set; }
 
         }
 
-        /// <summary>
-        /// <para>requestId</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>21041ce316577904808056433edbb2</para>
-        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

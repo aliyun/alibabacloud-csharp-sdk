@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyAddRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>4000</para>
-        /// </summary>
         [NameInMap("budget")]
         [Validation(Required=false)]
         public long? Budget { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("budget_merge")]
         [Validation(Required=false)]
         public int? BudgetMerge { get; set; }
@@ -141,10 +133,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>departId01</para>
-        /// </summary>
         [NameInMap("depart_id")]
         [Validation(Required=false)]
         public string DepartId { get; set; }
@@ -153,12 +141,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepartName { get; set; }
 
-        /// <summary>
-        /// <para>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;cost_center&quot;:&quot;成本中心&quot;}</para>
-        /// </summary>
         [NameInMap("extend_field")]
         [Validation(Required=false)]
         public string ExtendField { get; set; }
@@ -225,34 +207,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ApplyAddRequestExternalTravelerStandard ExternalTravelerStandard { get; set; }
         public class ApplyAddRequestExternalTravelerStandard : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("business_discount")]
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("economy_discount")]
             [Validation(Required=false)]
             public int? EconomyDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("first_discount")]
             [Validation(Required=false)]
             public int? FirstDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>F</para>
-            /// </summary>
             [NameInMap("flight_cabins")]
             [Validation(Required=false)]
             public string FlightCabins { get; set; }
@@ -269,10 +235,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyAddRequestExternalTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyAddRequestExternalTravelerStandardHotelCitys : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
@@ -281,10 +243,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1009</para>
-                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
@@ -325,18 +283,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string InternationalFlightCabins { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
             [NameInMap("reserve_type")]
             [Validation(Required=false)]
             public int? ReserveType { get; set; }
@@ -345,28 +295,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? TrainRuleCode { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1000</para>
-        /// </summary>
         [NameInMap("flight_budget")]
         [Validation(Required=false)]
         public long? FlightBudget { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1000</para>
-        /// </summary>
         [NameInMap("hotel_budget")]
         [Validation(Required=false)]
         public long? HotelBudget { get; set; }
@@ -375,28 +313,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ApplyAddRequestHotelShare HotelShare { get; set; }
         public class ApplyAddRequestHotelShare : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>70</para>
-            /// </summary>
             [NameInMap("param")]
             [Validation(Required=false)]
             public string Param { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Y</para>
-        /// </summary>
         [NameInMap("international_flight_cabins")]
         [Validation(Required=false)]
         public string InternationalFlightCabins { get; set; }
@@ -420,10 +346,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ArrCity { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>HGH</para>
-            /// </summary>
             [NameInMap("arr_city_code")]
             [Validation(Required=false)]
             public string ArrCityCode { get; set; }
@@ -439,10 +361,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Attribute { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>12138</para>
-            /// </summary>
             [NameInMap("cost_center_id")]
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
@@ -454,37 +372,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DepCity { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>BJS</para>
-            /// </summary>
             [NameInMap("dep_city_code")]
             [Validation(Required=false)]
             public string DepCityCode { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2017-01-01 00:00:00</para>
             /// </summary>
             [NameInMap("dep_date")]
             [Validation(Required=false)]
             public string DepDate { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>34711</para>
-            /// </summary>
             [NameInMap("invoice_id")]
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>123456</para>
             /// </summary>
             [NameInMap("itinerary_id")]
             [Validation(Required=false)]
@@ -500,26 +404,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("need_hotel")]
             [Validation(Required=false)]
             public bool? NeedHotel { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("need_traffic")]
             [Validation(Required=false)]
             public bool? NeedTraffic { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>projecttow</para>
-            /// </summary>
             [NameInMap("project_code")]
             [Validation(Required=false)]
             public string ProjectCode { get; set; }
@@ -532,27 +424,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<string> ProvinceTravelCityAdcodes { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>thirdpart34711</para>
-            /// </summary>
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>thridpart12138</para>
-            /// </summary>
             [NameInMap("thirdpart_cost_center_id")]
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
             /// </summary>
             [NameInMap("traffic_type")]
             [Validation(Required=false)]
@@ -560,9 +441,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
             /// </summary>
             [NameInMap("trip_way")]
             [Validation(Required=false)]
@@ -570,10 +448,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("itinerary_rule")]
         [Validation(Required=false)]
         public int? ItineraryRule { get; set; }
@@ -598,9 +472,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>BJS,HGH</para>
             /// </summary>
             [NameInMap("city_code_set")]
             [Validation(Required=false)]
@@ -613,10 +484,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string CitySet { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>12345</para>
-            /// </summary>
             [NameInMap("cost_center_id")]
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
@@ -631,19 +498,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DepDate { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>12345</para>
-            /// </summary>
             [NameInMap("invoice_id")]
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>123</para>
             /// </summary>
             [NameInMap("itinerary_id")]
             [Validation(Required=false)]
@@ -659,10 +519,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>projecttow</para>
-            /// </summary>
             [NameInMap("project_code")]
             [Validation(Required=false)]
             public string ProjectCode { get; set; }
@@ -675,27 +531,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<string> ProvinceTravelCityAdcodes { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>thridpart12138</para>
-            /// </summary>
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>thridpart12138</para>
-            /// </summary>
             [NameInMap("thirdpart_cost_center_id")]
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
             /// </summary>
             [NameInMap("traffic_type")]
             [Validation(Required=false)]
@@ -703,10 +548,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("limit_traveler")]
         [Validation(Required=false)]
         public int? LimitTraveler { get; set; }
@@ -723,10 +564,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string PaymentDepartmentName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
@@ -737,18 +574,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12345</para>
         /// </summary>
         [NameInMap("thirdpart_apply_id")]
         [Validation(Required=false)]
         public string ThirdpartApplyId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>00714131</para>
-        /// </summary>
         [NameInMap("thirdpart_business_id")]
         [Validation(Required=false)]
         public string ThirdpartBusinessId { get; set; }
@@ -757,18 +587,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ThirdpartDepartId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("together_book_rule")]
         [Validation(Required=false)]
         public int? TogetherBookRule { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1000</para>
-        /// </summary>
         [NameInMap("train_budget")]
         [Validation(Required=false)]
         public long? TrainBudget { get; set; }
@@ -817,10 +639,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ThirdpartDepartId { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>wu51531</para>
-            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -835,10 +653,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<ApplyAddRequestTravelerStandard> TravelerStandard { get; set; }
         public class ApplyAddRequestTravelerStandard : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("business_discount")]
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
@@ -863,26 +677,298 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
+            [NameInMap("car_standard")]
+            [Validation(Required=false)]
+            public ApplyAddRequestTravelerStandardCarStandard CarStandard { get; set; }
+            public class ApplyAddRequestTravelerStandardCarStandard : TeaModel {
+                [NameInMap("book_allow_info")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardBookAllowInfo BookAllowInfo { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardBookAllowInfo : TeaModel {
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("book_allow")]
+                    [Validation(Required=false)]
+                    public bool? BookAllow { get; set; }
+
+                }
+
+                [NameInMap("car_helper")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardCarHelper CarHelper { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardCarHelper : TeaModel {
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("car_helper_type")]
+                    [Validation(Required=false)]
+                    public string CarHelperType { get; set; }
+
+                }
+
+                [NameInMap("car_time_control")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardCarTimeControl CarTimeControl { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardCarTimeControl : TeaModel {
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("time_limit")]
+                    [Validation(Required=false)]
+                    public List<ApplyAddRequestTravelerStandardCarStandardCarTimeControlTimeLimit> TimeLimit { get; set; }
+                    public class ApplyAddRequestTravelerStandardCarStandardCarTimeControlTimeLimit : TeaModel {
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("end_time")]
+                        [Validation(Required=false)]
+                        public string EndTime { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("start_time")]
+                        [Validation(Required=false)]
+                        public string StartTime { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("time_switch")]
+                    [Validation(Required=false)]
+                    public bool? TimeSwitch { get; set; }
+
+                }
+
+                [NameInMap("city_control_info")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardCityControlInfo CityControlInfo { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardCityControlInfo : TeaModel {
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("city_control_type")]
+                    [Validation(Required=false)]
+                    public int? CityControlType { get; set; }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("city_infos")]
+                    [Validation(Required=false)]
+                    public List<ApplyAddRequestTravelerStandardCarStandardCityControlInfoCityInfos> CityInfos { get; set; }
+                    public class ApplyAddRequestTravelerStandardCarStandardCityControlInfoCityInfos : TeaModel {
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("adcode")]
+                        [Validation(Required=false)]
+                        public string Adcode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("city_code")]
+                        [Validation(Required=false)]
+                        public string CityCode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("city_name")]
+                        [Validation(Required=false)]
+                        public string CityName { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("cross_city_info")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardCrossCityInfo CrossCityInfo { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardCrossCityInfo : TeaModel {
+                    [NameInMap("cross_city_list")]
+                    [Validation(Required=false)]
+                    public List<ApplyAddRequestTravelerStandardCarStandardCrossCityInfoCrossCityList> CrossCityList { get; set; }
+                    public class ApplyAddRequestTravelerStandardCarStandardCrossCityInfoCrossCityList : TeaModel {
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("from_adcode")]
+                        [Validation(Required=false)]
+                        public string FromAdcode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("from_city_code")]
+                        [Validation(Required=false)]
+                        public string FromCityCode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("from_city_name")]
+                        [Validation(Required=false)]
+                        public string FromCityName { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("to_adcode")]
+                        [Validation(Required=false)]
+                        public string ToAdcode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("to_city_code")]
+                        [Validation(Required=false)]
+                        public string ToCityCode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("to_city_name")]
+                        [Validation(Required=false)]
+                        public string ToCityName { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("cross_city_type")]
+                    [Validation(Required=false)]
+                    public int? CrossCityType { get; set; }
+
+                }
+
+                [NameInMap("electronic_fence_info")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardElectronicFenceInfo ElectronicFenceInfo { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardElectronicFenceInfo : TeaModel {
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("electronic_fence_locations_from")]
+                    [Validation(Required=false)]
+                    public List<ApplyAddRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom> ElectronicFenceLocationsFrom { get; set; }
+                    public class ApplyAddRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsFrom : TeaModel {
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("address")]
+                        [Validation(Required=false)]
+                        public string Address { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("latitude")]
+                        [Validation(Required=false)]
+                        public string Latitude { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("longitude")]
+                        [Validation(Required=false)]
+                        public string Longitude { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("radius")]
+                        [Validation(Required=false)]
+                        public int? Radius { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("electronic_fence_locations_to")]
+                    [Validation(Required=false)]
+                    public List<ApplyAddRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo> ElectronicFenceLocationsTo { get; set; }
+                    public class ApplyAddRequestTravelerStandardCarStandardElectronicFenceInfoElectronicFenceLocationsTo : TeaModel {
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("address")]
+                        [Validation(Required=false)]
+                        public string Address { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("latitude")]
+                        [Validation(Required=false)]
+                        public string Latitude { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("longitude")]
+                        [Validation(Required=false)]
+                        public string Longitude { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("radius")]
+                        [Validation(Required=false)]
+                        public int? Radius { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("electronic_fence_type")]
+                    [Validation(Required=false)]
+                    public int? ElectronicFenceType { get; set; }
+
+                }
+
+                [NameInMap("level_codes")]
+                [Validation(Required=false)]
+                public string LevelCodes { get; set; }
+
+                [NameInMap("modify_destination_info")]
+                [Validation(Required=false)]
+                public ApplyAddRequestTravelerStandardCarStandardModifyDestinationInfo ModifyDestinationInfo { get; set; }
+                public class ApplyAddRequestTravelerStandardCarStandardModifyDestinationInfo : TeaModel {
+                    /// <summary>
+                    /// <para>This parameter is required.</para>
+                    /// </summary>
+                    [NameInMap("modify_destination")]
+                    [Validation(Required=false)]
+                    public bool? ModifyDestination { get; set; }
+
+                }
+
+                [NameInMap("times_total")]
+                [Validation(Required=false)]
+                public int? TimesTotal { get; set; }
+
+                [NameInMap("times_type")]
+                [Validation(Required=false)]
+                public int? TimesType { get; set; }
+
+            }
+
             [NameInMap("economy_discount")]
             [Validation(Required=false)]
             public int? EconomyDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("first_discount")]
             [Validation(Required=false)]
             public int? FirstDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Y</para>
-            /// </summary>
             [NameInMap("flight_cabins")]
             [Validation(Required=false)]
             public string FlightCabins { get; set; }
@@ -899,10 +985,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyAddRequestTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyAddRequestTravelerStandardHotelCitys : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
@@ -911,10 +993,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1009</para>
-                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
@@ -955,18 +1033,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string InternationalFlightCabins { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
             [NameInMap("reserve_type")]
             [Validation(Required=false)]
             public int? ReserveType { get; set; }
@@ -975,18 +1045,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public long? TrainRuleCode { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>wfffeng</para>
-            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -1000,10 +1062,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string TripCause { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("trip_day")]
         [Validation(Required=false)]
         public int? TripDay { get; set; }
@@ -1015,27 +1073,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string TripTitle { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>union001</para>
-        /// </summary>
         [NameInMap("union_no")]
         [Validation(Required=false)]
         public string UnionNo { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>thridpart12138</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
@@ -1045,10 +1092,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string UserName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1000</para>
-        /// </summary>
         [NameInMap("vehicle_budget")]
         [Validation(Required=false)]
         public long? VehicleBudget { get; set; }

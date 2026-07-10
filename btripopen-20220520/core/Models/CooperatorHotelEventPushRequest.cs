@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CooperatorHotelEventPushRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>11</para>
-        /// </summary>
         [NameInMap("change_order_status")]
         [Validation(Required=false)]
         public int? ChangeOrderStatus { get; set; }
@@ -23,9 +19,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>coop_123456</para>
         /// </summary>
         [NameInMap("cooperator_order_id")]
         [Validation(Required=false)]
@@ -33,9 +26,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>USER_LEAVE</para>
         /// </summary>
         [NameInMap("event")]
         [Validation(Required=false)]
@@ -47,9 +37,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>204-09-01 10:55:20</para>
         /// </summary>
         [NameInMap("event_time")]
         [Validation(Required=false)]
@@ -57,9 +44,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]

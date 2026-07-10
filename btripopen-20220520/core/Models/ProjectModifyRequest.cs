@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ProjectModifyRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>pro_code</para>
-        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
+
+        [NameInMap("has_manager")]
+        [Validation(Required=false)]
+        public bool? HasManager { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -24,28 +24,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>234</para>
-        /// </summary>
         [NameInMap("third_part_cost_center_id")]
         [Validation(Required=false)]
         public string ThirdPartCostCenterId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>340049</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
         public string ThirdPartId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>123</para>
-        /// </summary>
         [NameInMap("third_part_invoice_id")]
         [Validation(Required=false)]
         public string ThirdPartInvoiceId { get; set; }

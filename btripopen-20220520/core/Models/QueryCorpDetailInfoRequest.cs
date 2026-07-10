@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string AccountId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>btripxxxxxx</para>
-        /// </summary>
         [NameInMap("target_corp_id")]
         [Validation(Required=false)]
         public string TargetCorpId { get; set; }

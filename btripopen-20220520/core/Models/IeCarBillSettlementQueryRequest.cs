@@ -9,10 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IeCarBillSettlementQueryRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20250725</para>
-        /// </summary>
+        [NameInMap("apply_id")]
+        [Validation(Required=false)]
+        public string ApplyId { get; set; }
+
         [NameInMap("bill_batch")]
         [Validation(Required=false)]
         public string BillBatch { get; set; }
@@ -25,19 +25,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BillRecordTimeStart { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1002002203361199686</para>
-        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
         [NameInMap("page_no")]
         [Validation(Required=false)]
@@ -45,42 +38,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10</para>
         /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2021-10-02</para>
-        /// </summary>
         [NameInMap("period_end")]
         [Validation(Required=false)]
         public string PeriodEnd { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2021-10-01</para>
-        /// </summary>
         [NameInMap("period_start")]
         [Validation(Required=false)]
         public string PeriodStart { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4MDAwMDAwMDA3MzA1MGJj</para>
-        /// </summary>
         [NameInMap("scroll_id")]
         [Validation(Required=false)]
         public string ScrollId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("scroll_mod")]
         [Validation(Required=false)]
         public bool? ScrollMod { get; set; }

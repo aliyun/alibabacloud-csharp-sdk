@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class DeleteEmployeesFromCustomRoleShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12345</para>
         /// </summary>
         [NameInMap("role_id")]
         [Validation(Required=false)]

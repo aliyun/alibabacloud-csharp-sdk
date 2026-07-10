@@ -13,18 +13,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public long? Disable { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("need_org_entity")]
         [Validation(Required=false)]
         public bool? NeedOrgEntity { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>cost1</para>
-        /// </summary>
         [NameInMap("thirdpart_id")]
         [Validation(Required=false)]
         public string ThirdpartId { get; set; }
@@ -33,10 +25,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Title { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>user1</para>
-        /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }

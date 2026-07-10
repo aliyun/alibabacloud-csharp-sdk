@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class InsureOrderApplyRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100000102</para>
         /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
@@ -25,42 +22,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1000003000000490</para>
         /// </summary>
         [NameInMap("ins_order_id")]
         [Validation(Required=false)]
         public string InsOrderId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>PostalSavingsBank</para>
-        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>202310101026030</para>
-        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1020030003332000</para>
-        /// </summary>
         [NameInMap("out_sub_order_id")]
         [Validation(Required=false)]
         public string OutSubOrderId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>fliggy</para>
-        /// </summary>
         [NameInMap("supplier_code")]
         [Validation(Required=false)]
         public string SupplierCode { get; set; }

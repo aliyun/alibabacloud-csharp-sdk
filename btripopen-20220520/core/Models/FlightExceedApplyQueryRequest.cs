@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightExceedApplyQueryRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>175634</para>
-        /// </summary>
         [NameInMap("apply_id")]
         [Validation(Required=false)]
         public long? ApplyId { get; set; }

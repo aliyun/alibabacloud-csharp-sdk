@@ -11,18 +11,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class IntlFlightRefundDetailRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1002145190081005400</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>40820102379649052</para>
-        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }

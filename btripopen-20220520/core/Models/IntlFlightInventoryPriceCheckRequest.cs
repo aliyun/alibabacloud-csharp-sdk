@@ -27,27 +27,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BuyerName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ZJTD</para>
-        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>102000</para>
-        /// </summary>
         [NameInMap("order_price")]
         [Validation(Required=false)]
         public long? OrderPrice { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>22111acaf9ea47c09ed0db6abc45be2d_0</para>
         /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
@@ -64,7 +53,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-01-01</para>
+            /// <para>1998-12-28</para>
             /// </summary>
             [NameInMap("birthday")]
             [Validation(Required=false)]
@@ -79,9 +68,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public class IntlFlightInventoryPriceCheckRequestPassengerListCertInfo : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>H123456</para>
                 /// </summary>
                 [NameInMap("cert_no")]
                 [Validation(Required=false)]
@@ -89,18 +75,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
                 /// </summary>
                 [NameInMap("cert_type")]
                 [Validation(Required=false)]
                 public int? CertType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2033-01-09</para>
-                /// </summary>
                 [NameInMap("cert_valid_date")]
                 [Validation(Required=false)]
                 public string CertValidDate { get; set; }
@@ -153,10 +132,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string Nationality { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>CN</para>
-            /// </summary>
             [NameInMap("nationality_code")]
             [Validation(Required=false)]
             public string NationalityCode { get; set; }
@@ -165,7 +140,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>18012341234</para>
+            /// <para>13100008888</para>
             /// </summary>
             [NameInMap("phone")]
             [Validation(Required=false)]
@@ -185,7 +160,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10001</para>
+            /// <para>12292812036903456</para>
             /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]

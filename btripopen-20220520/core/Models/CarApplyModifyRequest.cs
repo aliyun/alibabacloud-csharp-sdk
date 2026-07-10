@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CarApplyModifyRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>2022-07-12 16:12:53</para>
-        /// </summary>
         [NameInMap("operate_time")]
         [Validation(Required=false)]
         public string OperateTime { get; set; }
@@ -23,9 +19,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -33,9 +26,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>IRGS1413</para>
         /// </summary>
         [NameInMap("third_part_apply_id")]
         [Validation(Required=false)]
@@ -43,9 +33,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>open62141</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

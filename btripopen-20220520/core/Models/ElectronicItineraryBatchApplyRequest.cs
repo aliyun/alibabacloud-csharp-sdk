@@ -20,19 +20,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string PurchaserName { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>tax3213132131</para>
-            /// </summary>
             [NameInMap("purchaser_tax_no")]
             [Validation(Required=false)]
             public string PurchaserTaxNo { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
             /// </summary>
             [NameInMap("purchaser_type")]
             [Validation(Required=false)]
@@ -40,9 +33,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>781-2205431917</para>
             /// </summary>
             [NameInMap("ticket_no")]
             [Validation(Required=false)]
@@ -50,10 +40,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("can_reprint")]
         [Validation(Required=false)]
         public bool? CanReprint { get; set; }

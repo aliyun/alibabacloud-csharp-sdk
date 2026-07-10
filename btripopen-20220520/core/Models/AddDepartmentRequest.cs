@@ -22,18 +22,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>dept123</para>
         /// </summary>
         [NameInMap("out_dept_id")]
         [Validation(Required=false)]
         public string OutDeptId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>dept456</para>
-        /// </summary>
         [NameInMap("out_dept_pid")]
         [Validation(Required=false)]
         public string OutDeptPid { get; set; }

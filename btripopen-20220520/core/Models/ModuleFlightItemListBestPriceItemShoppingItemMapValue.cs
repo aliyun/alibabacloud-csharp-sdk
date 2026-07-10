@@ -17,18 +17,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition SegmentPosition { get; set; }
             public class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("journey_index")]
                 [Validation(Required=false)]
                 public int? JourneyIndex { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("segment_index")]
                 [Validation(Required=false)]
                 public int? SegmentIndex { get; set; }
@@ -63,34 +55,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ModuleFlightItemListBestPriceItemShoppingItemMapValueSearchPrice SearchPrice { get; set; }
         public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSearchPrice : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>17400</para>
-            /// </summary>
             [NameInMap("floor_price")]
             [Validation(Required=false)]
             public int? FloorPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>121000</para>
-            /// </summary>
             [NameInMap("ticket_price")]
             [Validation(Required=false)]
             public int? TicketPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>17400</para>
-            /// </summary>
             [NameInMap("sell_price")]
             [Validation(Required=false)]
             public int? SellPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>17400</para>
-            /// </summary>
             [NameInMap("original_sell_price")]
             [Validation(Required=false)]
             public int? OriginalSellPrice { get; set; }
@@ -99,18 +75,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? BaseTotalPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>17400</para>
-            /// </summary>
             [NameInMap("before_control_price")]
             [Validation(Required=false)]
             public int? BeforeControlPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>11000</para>
-            /// </summary>
             [NameInMap("tax")]
             [Validation(Required=false)]
             public int? Tax { get; set; }
@@ -119,26 +87,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? SupplyPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>242000</para>
-            /// </summary>
             [NameInMap("basic_cabin_price")]
             [Validation(Required=false)]
             public int? BasicCabinPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>5000</para>
-            /// </summary>
             [NameInMap("build_price")]
             [Validation(Required=false)]
             public int? BuildPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>6000</para>
-            /// </summary>
             [NameInMap("oil_price")]
             [Validation(Required=false)]
             public int? OilPrice { get; set; }
@@ -151,20 +107,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? BusinessStandardPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>242000</para>
-            /// </summary>
             [NameInMap("common_standard_price")]
             [Validation(Required=false)]
             public int? CommonStandardPrice { get; set; }
 
-            /// <summary>
-            /// <para>fdPrice</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>fdPrice</para>
-            /// </summary>
             [NameInMap("inter_ticket_price")]
             [Validation(Required=false)]
             public int? InterTicketPrice { get; set; }
@@ -197,10 +143,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public int? CompetitionPromotionPrice { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>17400</para>
-            /// </summary>
             [NameInMap("min_before_control_price_of_normal")]
             [Validation(Required=false)]
             public int? MinBeforeControlPriceOfNormal { get; set; }
@@ -213,18 +155,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 [Validation(Required=false)]
                 public string DiscountInfo { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0.8</para>
-                /// </summary>
                 [NameInMap("discount_num")]
                 [Validation(Required=false)]
                 public double? DiscountNum { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("show_ticket_price")]
                 [Validation(Required=false)]
                 public bool? ShowTicketPrice { get; set; }
@@ -241,18 +175,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSegmentPosition SegmentPosition { get; set; }
             public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSegmentPosition : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("journey_index")]
                 [Validation(Required=false)]
                 public int? JourneyIndex { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("segment_index")]
                 [Validation(Required=false)]
                 public int? SegmentIndex { get; set; }
@@ -263,26 +189,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice SearchPrice { get; set; }
             public class ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>120000</para>
-                /// </summary>
                 [NameInMap("sell_price")]
                 [Validation(Required=false)]
                 public int? SellPrice { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>120000</para>
-                /// </summary>
                 [NameInMap("ticket_price")]
                 [Validation(Required=false)]
                 public int? TicketPrice { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>6000</para>
-                /// </summary>
                 [NameInMap("tax")]
                 [Validation(Required=false)]
                 public int? Tax { get; set; }
@@ -291,12 +205,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <para>id</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ADT07df0bd9-f803-4a50-8449-f4bd675d9939</para>
-        /// </summary>
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }

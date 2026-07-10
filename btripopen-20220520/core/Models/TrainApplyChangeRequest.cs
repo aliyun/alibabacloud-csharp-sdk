@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TrainApplyChangeRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("accept_no_seat")]
         [Validation(Required=false)]
         public string AcceptNoSeat { get; set; }
@@ -26,9 +22,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public class TrainApplyChangeRequestChangeTrainInfoS : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>BTC</para>
             /// </summary>
             [NameInMap("arr_station_code")]
             [Validation(Required=false)]
@@ -50,9 +43,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
                 public class TrainApplyChangeRequestChangeTrainInfoSChangeTicketInfoSPassengerInfo : TeaModel {
                     /// <summary>
                     /// <para>This parameter is required.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</para>
                     /// </summary>
                     [NameInMap("passenger_cert_no")]
                     [Validation(Required=false)]
@@ -60,9 +50,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     /// <summary>
                     /// <para>This parameter is required.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>170d9ac6f8807f9ec603c688f45f78a41</para>
                     /// </summary>
                     [NameInMap("passenger_cert_type")]
                     [Validation(Required=false)]
@@ -70,9 +57,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     /// <summary>
                     /// <para>This parameter is required.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>123456</para>
                     /// </summary>
                     [NameInMap("passenger_id")]
                     [Validation(Required=false)]
@@ -80,9 +64,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                     /// <summary>
                     /// <para>This parameter is required.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>949c9f34f677a0e5d249dfc94f5e62cc7</para>
                     /// </summary>
                     [NameInMap("passenger_name")]
                     [Validation(Required=false)]
@@ -92,9 +73,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>14</para>
                 /// </summary>
                 [NameInMap("seat_type")]
                 [Validation(Required=false)]
@@ -102,9 +80,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100</para>
                 /// </summary>
                 [NameInMap("ticket_price")]
                 [Validation(Required=false)]
@@ -112,9 +87,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
                 /// </summary>
                 [NameInMap("ticket_type")]
                 [Validation(Required=false)]
@@ -122,27 +94,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>null</para>
-            /// </summary>
             [NameInMap("choose_bed_s")]
             [Validation(Required=false)]
             public string ChooseBedS { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1T</para>
-            /// </summary>
             [NameInMap("choose_seat_s")]
             [Validation(Required=false)]
             public string ChooseSeatS { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>BDC</para>
             /// </summary>
             [NameInMap("dep_station_code")]
             [Validation(Required=false)]
@@ -150,9 +111,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2024-05-06 15:19:01</para>
             /// </summary>
             [NameInMap("dep_time")]
             [Validation(Required=false)]
@@ -160,9 +118,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2024-05-06 15:19:01</para>
             /// </summary>
             [NameInMap("original_dep_time")]
             [Validation(Required=false)]
@@ -170,9 +125,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>K234</para>
             /// </summary>
             [NameInMap("original_train_no")]
             [Validation(Required=false)]
@@ -180,9 +132,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>K2345</para>
             /// </summary>
             [NameInMap("train_no")]
             [Validation(Required=false)]
@@ -190,27 +139,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>0</para>
-        /// </summary>
         [NameInMap("force_match")]
         [Validation(Required=false)]
         public string ForceMatch { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("is_pay_now")]
         [Validation(Required=false)]
         public bool? IsPayNow { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1017028198411054446</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
@@ -218,9 +156,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12345</para>
         /// </summary>
         [NameInMap("out_change_apply_id")]
         [Validation(Required=false)]
@@ -228,9 +163,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class AirportSearchResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>SUCCESS</para>
-        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
@@ -21,9 +17,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>module。</para>
-        /// </summary>
         [NameInMap("module")]
         [Validation(Required=false)]
         public AirportSearchResponseBodyModule Module { get; set; }
@@ -32,10 +25,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<AirportSearchResponseBodyModuleCities> Cities { get; set; }
             public class AirportSearchResponseBodyModuleCities : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>HGH</para>
-                /// </summary>
                 [NameInMap("code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
@@ -62,36 +51,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("nearby")]
             [Validation(Required=false)]
             public bool? Nearby { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>210f07f316603757445272547d959f</para>
-        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

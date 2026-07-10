@@ -18,9 +18,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12345</para>
         /// </summary>
         [NameInMap("distribute_order_id")]
         [Validation(Required=false)]
@@ -28,9 +25,6 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2627694109810885616</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
