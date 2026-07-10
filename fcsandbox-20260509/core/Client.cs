@@ -1599,6 +1599,126 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新 ApiKey</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public UpdateApiKeyResponse UpdateApiKeyWithOptions(string apiKeyID, UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApiKey",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/api-keys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyID),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 ApiKey</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public async Task<UpdateApiKeyResponse> UpdateApiKeyWithOptionsAsync(string apiKeyID, UpdateApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateApiKey",
+                Version = "2026-05-09",
+                Protocol = "HTTPS",
+                Pathname = "/pop/2026-05-09/api-keys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(apiKeyID),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 ApiKey</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public UpdateApiKeyResponse UpdateApiKey(string apiKeyID, UpdateApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateApiKeyWithOptions(apiKeyID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 ApiKey</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateApiKeyResponse
+        /// </returns>
+        public async Task<UpdateApiKeyResponse> UpdateApiKeyAsync(string apiKeyID, UpdateApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateApiKeyWithOptionsAsync(apiKeyID, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新 quota 配置</para>
         /// </summary>
         /// 
