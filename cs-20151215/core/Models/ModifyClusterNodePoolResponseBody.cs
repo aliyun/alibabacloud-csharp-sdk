@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterNodePoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>Node pool ID.</para>
+        /// <para>The node pool ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np737c3ac1ac684703b9e10673aa2c****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodepoolId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>687C5BAA-D103-4993-884B-C35E4314****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Task ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T-5fd211e924e1d00787000293</para>

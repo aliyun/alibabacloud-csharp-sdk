@@ -3288,7 +3288,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes with the same attributes, allowing unified management and O&amp;M of nodes, such as node upgrades and auto scaling. You can further leverage the automated O&amp;M capabilities of node pools to use features such as automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, reducing O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3394,7 +3394,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes with the same attributes, allowing unified management and O&amp;M of nodes, such as node upgrades and auto scaling. You can further leverage the automated O&amp;M capabilities of node pools to use features such as automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, reducing O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3500,7 +3500,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes with the same attributes, allowing unified management and O&amp;M of nodes, such as node upgrades and auto scaling. You can further leverage the automated O&amp;M capabilities of node pools to use features such as automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, reducing O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3519,7 +3519,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes with the same attributes, allowing unified management and O&amp;M of nodes, such as node upgrades and auto scaling. You can further leverage the automated O&amp;M capabilities of node pools to use features such as automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, reducing O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7472,7 +7472,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the configuration of a specified node pool in a cluster by node pool ID.</para>
+        /// <para>Queries the configuration of a specified node pool in a cluster by node pool ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7508,7 +7508,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the configuration of a specified node pool in a cluster by node pool ID.</para>
+        /// <para>Queries the configuration of a specified node pool in a cluster by node pool ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7544,7 +7544,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the configuration of a specified node pool in a cluster by node pool ID.</para>
+        /// <para>Queries the configuration of a specified node pool in a cluster by node pool ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7559,7 +7559,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the configuration of a specified node pool in a cluster by node pool ID.</para>
+        /// <para>Queries the configuration of a specified node pool in a cluster by node pool ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7574,7 +7574,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all node pools in a cluster.</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7620,7 +7620,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all node pools in a cluster.</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7666,7 +7666,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all node pools in a cluster.</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7685,7 +7685,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of all node pools in a cluster.</para>
+        /// <para>Queries all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15974,7 +15974,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a target node pool by specifying its node pool ID.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16001,6 +16001,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
             {
                 body["concurrency"] = request.Concurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EfloNodeGroup))
+            {
+                body["eflo_node_group"] = request.EfloNodeGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
@@ -16048,7 +16052,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a target node pool by specifying its node pool ID.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16075,6 +16079,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
             {
                 body["concurrency"] = request.Concurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EfloNodeGroup))
+            {
+                body["eflo_node_group"] = request.EfloNodeGroup;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KubernetesConfig))
             {
@@ -16122,7 +16130,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a target node pool by specifying its node pool ID.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16141,7 +16149,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a target node pool by specifying its node pool ID.</para>
+        /// <para>Updates the configuration of a node pool based on the node pool ID by calling the ModifyClusterNodePool operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16308,13 +16316,13 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyNodePoolNodeConfig operation to modify the node configuration in a cluster node pool, such as kubelet configuration and node rolling update configuration. Modifying node configuration changes the node configuration in batches and restarts kubelet, which may affect node operations and workload operations. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and rolling update configurations. Modifying node configurations applies changes in batches and restarts kubelet, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK allows you to modify the kubelet configuration of nodes in a node pool. After the modification is complete, the changes automatically take effect on the nodes in the node pool, and newly added nodes in the node pool also use the new configuration.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16377,13 +16385,13 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyNodePoolNodeConfig operation to modify the node configuration in a cluster node pool, such as kubelet configuration and node rolling update configuration. Modifying node configuration changes the node configuration in batches and restarts kubelet, which may affect node operations and workload operations. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and rolling update configurations. Modifying node configurations applies changes in batches and restarts kubelet, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK allows you to modify the kubelet configuration of nodes in a node pool. After the modification is complete, the changes automatically take effect on the nodes in the node pool, and newly added nodes in the node pool also use the new configuration.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16446,13 +16454,13 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyNodePoolNodeConfig operation to modify the node configuration in a cluster node pool, such as kubelet configuration and node rolling update configuration. Modifying node configuration changes the node configuration in batches and restarts kubelet, which may affect node operations and workload operations. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and rolling update configurations. Modifying node configurations applies changes in batches and restarts kubelet, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK allows you to modify the kubelet configuration of nodes in a node pool. After the modification is complete, the changes automatically take effect on the nodes in the node pool, and newly added nodes in the node pool also use the new configuration.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16472,13 +16480,13 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyNodePoolNodeConfig operation to modify the node configuration in a cluster node pool, such as kubelet configuration and node rolling update configuration. Modifying node configuration changes the node configuration in batches and restarts kubelet, which may affect node operations and workload operations. We recommend that you perform this operation during off-peak hours.</para>
+        /// <para>Modifies the node configurations in a cluster node pool, such as kubelet configurations and rolling update configurations. Modifying node configurations applies changes in batches and restarts kubelet, which may affect node operations and workload execution. Perform this operation during off-peak hours.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>ACK allows you to modify the kubelet configuration of nodes in a node pool. After the modification is complete, the changes automatically take effect on the nodes in the node pool, and newly added nodes in the node pool also use the new configuration.</para>
+        /// <para>ACK supports modifying the kubelet configurations of nodes in a node pool. After the modification, the new configurations automatically take effect on existing nodes in the node pool. New nodes added to the node pool also use the new configurations.</para>
         /// </remarks>
         /// </description>
         /// 

@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ContainerdConfig ContainerdConfig { get; set; }
 
         /// <summary>
-        /// <para>The kubelet parameter configuration.</para>
+        /// <para>The kubelet parameter settings.</para>
         /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
         /// <summary>
-        /// <para>The list of specified nodes to upgrade.</para>
+        /// <para>The list of nodes to upgrade.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The operating system parameter configuration.</para>
+        /// <para>The operating system parameter settings.</para>
         /// </summary>
         [NameInMap("os_config")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
             /// <summary>
-            /// <para>The Hugepage configuration.</para>
+            /// <para>The hugepage configuration.</para>
             /// </summary>
             [NameInMap("hugepage")]
             [Validation(Required=false)]
             public Hugepage Hugepage { get; set; }
 
             /// <summary>
-            /// <para>The custom sysctl parameter configuration.</para>
+            /// <para>The custom sysctl parameter settings.</para>
             /// </summary>
             [NameInMap("sysctl")]
             [Validation(Required=false)]
