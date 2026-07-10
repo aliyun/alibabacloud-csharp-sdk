@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CredentialProductVerifyV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result object.</para>
+        /// <para>The result object.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public CredentialProductVerifyV2ResponseBodyResultObject ResultObject { get; set; }
         public class CredentialProductVerifyV2ResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Additional information in JSON format.</para>
+            /// <para>The additional information in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -64,10 +64,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string MaterialInfo { get; set; }
 
             /// <summary>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Low risk</description></item>
-            /// <item><description>1: High risk</description></item>
-            /// <item><description>2: Suspicious</description></item>
+            /// <item><description>0: low risk</description></item>
+            /// <item><description>1: high risk</description></item>
+            /// <item><description>2: suspicious.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,18 +79,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>Map of risk scores.</para>
+            /// <para>The risk score map.</para>
             /// </summary>
             [NameInMap("RiskScore")]
             [Validation(Required=false)]
             public Dictionary<string, string> RiskScore { get; set; }
 
             /// <summary>
-            /// <para>Risk tags, separated by commas, including:</para>
+            /// <para>The risk labels. Multiple labels are separated by commas. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PS: Image has been photoshopped</description></item>
-            /// <item><description>LOW_QUALITY_PRODUCT: Low quality (low clarity)</description></item>
-            /// <item><description>SAME_BACKGROUND: Similar background</description></item>
+            /// <item><description>PS: image manipulation</description></item>
+            /// <item><description>LOW_QUALITY_PRODUCT: low quality (low clarity)</description></item>
+            /// <item><description>SAME_BACKGROUND: similar image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

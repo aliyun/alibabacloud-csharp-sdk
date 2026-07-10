@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CompareFaceVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, other values indicate failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Face comparison result information.</para>
+        /// <para>The face comparison result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public CompareFaceVerifyResponseBodyResultObject ResultObject { get; set; }
         public class CompareFaceVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Unique identifier for the real-person authentication request.</para>
+            /// <para>The unique identifier of the ID Verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
-            /// <para>Whether the verification passed, T for pass, F for fail.</para>
+            /// <para>Indicates whether the verification passed. A value of T indicates passed. A value of F indicates not passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>T</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Face comparison score.</para>
+            /// <para>The face comparison score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99.60875</para>

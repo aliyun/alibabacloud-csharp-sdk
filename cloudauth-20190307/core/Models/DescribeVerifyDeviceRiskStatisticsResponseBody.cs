@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyDeviceRiskStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B3193814-AE54-50C5-9070-68B69C07287D</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Authentication result.</para>
+        /// <para>The verification result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeVerifyDeviceRiskStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyDeviceRiskStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Suspected fake face percentage: total number of suspected fake faces / total number of risks.</para>
+            /// <para>The suspected fake face percentage: total number of suspected fake faces / total number of risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string FaceAttackRate { get; set; }
 
             /// <summary>
-            /// <para>Total number of suspected fake identities.</para>
+            /// <para>The total number of suspected fake identities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IdFakeRate { get; set; }
 
             /// <summary>
-            /// <para>Data items in the response.</para>
+            /// <para>The data items in the response.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeVerifyDeviceRiskStatisticsResponseBodyResultObjectItems> Items { get; set; }
             public class DescribeVerifyDeviceRiskStatisticsResponseBodyResultObjectItems : TeaModel {
                 /// <summary>
-                /// <para>Daily call count.</para>
+                /// <para>The number of daily transactions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public long? DailyCallCount { get; set; }
 
                 /// <summary>
-                /// <para>Date.</para>
+                /// <para>The date.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string Date { get; set; }
 
                 /// <summary>
-                /// <para>Abnormal device risk ratio.</para>
+                /// <para>The abnormal device risk ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string DeviceRiskRate { get; set; }
 
                 /// <summary>
-                /// <para>Abnormal identity risk ratio.</para>
+                /// <para>The abnormal identity risk ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>Number of risks.</para>
+            /// <para>The number of risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? RiskCount { get; set; }
 
             /// <summary>
-            /// <para>Root percentage: total number of root / total number of risks.</para>
+            /// <para>The root percentage: total number of rooted devices / total number of risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string RootRate { get; set; }
 
             /// <summary>
-            /// <para>Simulator percentage: total number of simulators / total number of risks.</para>
+            /// <para>The emulator percentage: total number of emulators / total number of risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string SimulatorRate { get; set; }
 
             /// <summary>
-            /// <para>Virtual video percentage: total number of virtual videos / total number of risks.</para>
+            /// <para>The virtual video percentage: total number of virtual videos / total number of risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23.2</para>

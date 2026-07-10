@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Mobile2MetaVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result object.</para>
+        /// <para>The result object.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public Mobile2MetaVerifyResponseBodyResultObject ResultObject { get; set; }
         public class Mobile2MetaVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification result:</para>
+            /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Consistent verification</description></item>
-            /// <item><description>2: Inconsistent verification</description></item>
-            /// <item><description>3: No record found</description></item>
+            /// <item><description>1: Consistent.</description></item>
+            /// <item><description>2: Inconsistent.</description></item>
+            /// <item><description>3: No record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Operator name:</para>
+            /// <para>The carrier name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CMCC: China Mobile</description></item>
             /// <item><description>CUCC: China Unicom</description></item>
-            /// <item><description>CTCC: China Telecom</description></item>
+            /// <item><description>CTCC: China Telecom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

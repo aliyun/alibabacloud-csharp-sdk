@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteCloudauthstSceneRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the scene to be deleted.</para>
+        /// <para>The ID of the scene to be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

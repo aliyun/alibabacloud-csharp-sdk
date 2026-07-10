@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteControlStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>API name, same as <b>ProductCode</b>.</para>
+        /// <para>The API name, same as <b>ProductCode</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_PRO</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>Security rule ID.</para>
+        /// <para>The security rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Product type, currently only supports <b>ANT_CLOUD_AUTH</b> (Financial-grade Real Person), all others have been phased out.</para>
+        /// <para>The product type. Currently, only <b>ANT_CLOUD_AUTH</b> (financial-grade real-person authentication) is supported. All other types have been discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANT_CLOUD_AUTH</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

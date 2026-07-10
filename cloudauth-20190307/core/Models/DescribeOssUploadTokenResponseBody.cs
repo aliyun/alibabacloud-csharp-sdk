@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeOssUploadTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information about the OSS upload Token.</para>
+        /// <para>The OSS upload token information.</para>
         /// </summary>
         [NameInMap("OssUploadToken")]
         [Validation(Required=false)]
         public DescribeOssUploadTokenResponseBodyOssUploadToken OssUploadToken { get; set; }
         public class DescribeOssUploadTokenResponseBodyOssUploadToken : TeaModel {
             /// <summary>
-            /// <para>OSS bucket for file storage.</para>
+            /// <para>The OSS bucket for file storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloudauth-zhangjiakou-external</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>Access endpoint.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string EndPoint { get; set; }
 
             /// <summary>
-            /// <para>Expiration time.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582636610000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Expired { get; set; }
 
             /// <summary>
-            /// <para>The Key required for file upload.</para>
+            /// <para>The key required for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STS.NU8rUBj****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>File storage path.</para>
+            /// <para>The file storage path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod/RdNLC@Ox2n-1s7NMt</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The Secret required for file upload.</para>
+            /// <para>The secret required for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FwmnyoqT8dHj7nJLuM67T****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Secret { get; set; }
 
             /// <summary>
-            /// <para>The Token required for file upload.</para>
+            /// <para>The token required for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uWia500nTS5knZaDzq4/KqpvhcLnO****</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>The ID of this request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FA2C773-47DB-4156-B1EE-5B047321A939</para>

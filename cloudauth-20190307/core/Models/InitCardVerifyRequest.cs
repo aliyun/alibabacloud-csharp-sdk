@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class InitCardVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Security Token, used for anti-replay and anti-tampering checks. If this parameter is passed, the CallbackToken field will be displayed in the callback address.</para>
+        /// <para>The security token used for anti-replay and anti-tampering verification. If you specify this parameter, the CallbackToken field is included in the callback URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NMjvQanQgplBSaEI0sL86WnQplB</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CallbackToken { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description>The callback notification address for the authentication result, which must start with https.</description></item>
-        /// <item><description>The platform will call back this address after completing the authentication and automatically add the certifyId and passed fields, example: <a href="https://www.aliyun.com?certifyId=xxxx&passed=T">https://www.aliyun.com?certifyId=xxxx&amp;passed=T</a></description></item>
-        /// <item><description>Warning
-        /// The callback is triggered only when the authentication is completed. If the authentication is abandoned, interrupted abnormally, or not performed, no notification will be sent. It is recommended that when you receive the callback notification, if necessary, you can obtain detailed authentication information through the query interface.</description></item>
-        /// </list>
+        /// <para>The callback URL for authentication results. The URL must start with https. After the authentication is complete, the system sends a callback to this URL with the certifyId and passed fields automatically appended. Example: <a href="https://www.aliyun.com?certifyId=xxxx&passed=T">https://www.aliyun.com?certifyId=xxxx&amp;passed=T</a></para>
+        /// <remarks>
+        /// <para><b>Warning</b> The callback is triggered only when the authentication is complete. No notification is sent if the authentication is abandoned, interrupted, or not performed. After you receive the callback notification, call the query operation to obtain the authentication details if needed.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
@@ -35,11 +33,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>Number of card pages collected by the SDK</para>
+        /// <para>The number of card pages to be collected by the SDK. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>You can input 1 or 2; input 1 to collect the front side, input 2 to collect both the front and back sides.</para>
+        /// <item><description><para>1: collects the front side only.</para>
         /// </description></item>
-        /// <item><description><para>If the verification type is ID period (VerifyMeta value is ID_PERIOD), you must input 2.</para>
+        /// <item><description><para>2: collects both the front and back sides.</para>
+        /// </description></item>
+        /// <item><description><para>If the verification type is ID card validity period (VerifyMeta is set to ID_PERIOD), set this parameter to 2.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CardPageNumber { get; set; }
 
         /// <summary>
-        /// <para>Type of identification</para>
+        /// <para>The document type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Resident Second Generation ID Card: IDENTITY_CARD</description></item>
+        /// <item><description>IDENTITY_CARD: resident identity card.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CardType { get; set; }
 
         /// <summary>
-        /// <para>Enumeration of photo-taking methods (manual/auto)</para>
+        /// <para>The photo capture mode (manual or automatic). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Take a photo: shoot</description></item>
-        /// <item><description>Scan: scan </description></item>
-        /// <item><description>Auto switch: auto</description></item>
+        /// <item><description>shoot: manual capture</description></item>
+        /// <item><description>scan: scan mode </description></item>
+        /// <item><description>auto: automatic switchover.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +81,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string DocScanMode { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier you define, used for subsequent troubleshooting.
-        /// Supports a combination of 32 alphanumeric characters, please ensure uniqueness.</para>
+        /// <para>A custom business unique identifier that you define for subsequent troubleshooting. The value is a combination of letters and digits up to 32 characters in length. Make sure the value is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>MetaInfo environment parameter, which needs to be obtained through the client SDK.</para>
+        /// <para>The MetaInfo environment parameter. Obtain this value by using the client SDK.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,9 +103,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string MetaInfo { get; set; }
 
         /// <summary>
-        /// <para>Verification method, value:</para>
+        /// <para>The verification mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OCR_VERIFY: OCR recognition and verification mode.</description></item>
+        /// <item><description>OCR_VERIFY: OCR recognition and authentication mode.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -118,11 +117,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>Whether to temporarily store the images collected by the app.</para>
+        /// <para>Specifies whether to temporarily store images collected by the app. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Yes</description></item>
-        /// <item><description>N: No</description></item>
-        /// <item><description>If \&quot;Yes\&quot; is selected here, the query interface will support returning the card image information.</description></item>
+        /// <item><description>Y: Yes.</description></item>
+        /// <item><description>N: No.</description></item>
+        /// <item><description>If you set this parameter to Y, the query operation returns card image information.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -134,9 +133,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PictureSave { get; set; }
 
         /// <summary>
-        /// <para>Verification type, value:</para>
+        /// <para>The verification type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Identity two elements (name + ID number): ID_2_META</description></item>
+        /// <item><description>ID_2_META: two-factor identity verification (name + ID card number).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Id2MetaVerifyWithOCRAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>Input stream for the portrait side of the ID card image.
-        /// Choose one between CertUrl and CertFile.</para>
+        /// <para>The input stream of the portrait side image of the ID card.
+        /// Specify either CertUrl or CertFile.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public Stream CertFileObject { get; set; }
 
         /// <summary>
-        /// <para>National emblem side of the ID card image address.
-        /// Choose one between CertNationalUrl and CertNationalFile, or omit both.</para>
+        /// <para>The image of the national emblem side of the ID card.
+        /// Specify either CertNationalUrl or CertNationalFile. You can also leave both empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public Stream CertNationalFileObject { get; set; }
 
         /// <summary>
-        /// <para>National emblem side of the ID card image URL. National emblem side
-        /// A publicly accessible HTTP or HTTPS link.
-        /// Choose one between CertNationalUrl and CertNationalFile, or omit both.</para>
+        /// <para>The URL of the national emblem side image of the ID card.
+        /// A publicly accessible HTTP or HTTPS URL.
+        /// Specify either CertNationalUrl or CertNationalFile. You can also leave both empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNationalUrl { get; set; }
 
         /// <summary>
-        /// <para>Portrait side of the ID card image.
-        /// A publicly accessible HTTP or HTTPS link.
-        /// Choose one between CertUrl and CertFile.</para>
+        /// <para>The image of the portrait side of the ID card.
+        /// A publicly accessible HTTP or HTTPS URL.
+        /// Specify either CertUrl or CertFile.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></para>

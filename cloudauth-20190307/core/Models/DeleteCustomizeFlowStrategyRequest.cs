@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteCustomizeFlowStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>API name, same as <b>ProductCode</b>.</para>
+        /// <para>The API name, same as <b>ProductCode</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_PRO</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>Policy ID.</para>
+        /// <para>The policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Product type, currently only supports <b>ANT_CLOUD_AUTH</b> (Financial-grade Real Person), all others have been phased out.</para>
+        /// <para>The product type. Currently, only <b>ANT_CLOUD_AUTH</b> (financial-grade ID Verification) is supported. All other types have been discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANT_CLOUD_AUTH</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>regionId</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>User ID</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>126005125163xxxx</para>

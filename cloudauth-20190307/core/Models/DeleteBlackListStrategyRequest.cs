@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteBlackListStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Rule ID.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Product Name:</para>
+        /// <para>The product name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>id2meta</b>: ID card two-factor verification</description></item>
-        /// <item><description><b>mobile3Meta</b>: Mobile phone number factor verification</description></item>
-        /// <item><description><b>bankcardMeta</b>: Bank card factor verification</description></item>
+        /// <item><description><b>id2meta</b>: ID card two-element verification.</description></item>
+        /// <item><description><b>mobile3Meta</b>: Mobile number element verification.</description></item>
+        /// <item><description><b>bankcardMeta</b>: Bank card element verification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CompareFaceVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Whether cropping is allowed. Default is not allowed, T/F.</para>
+        /// <para>Specifies whether cropping is allowed. Default value: F.</para>
         /// <list type="bullet">
-        /// <item><description>T: Indicates that cropping is required</description></item>
-        /// <item><description>F: Indicates that cropping is not required (default F)</description></item>
+        /// <item><description>T: detection is required.</description></item>
+        /// <item><description>F: detection is required. (Default: F).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Crop { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier for the merchant\&quot;s request. The value is a 32-character alphanumeric combination, where the first few characters are a custom abbreviation defined by the merchant, followed by a period, and the latter part can be a random or incrementing sequence.</para>
+        /// <para>The unique identifier of the merchant request.</para>
+        /// <para>The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Authentication scenario ID.</para>
+        /// <para>The verification scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000006</para>
@@ -54,9 +55,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>The CertifyId of a previously successful real-person verification, where the photo taken during that verification is used as the face comparison photo.</para>
+        /// <para>The CertifyId from a previous successful ID Verification. The photo captured during that verification is used as the face comparison photo.</para>
         /// <remarks>
-        /// <para>Among the four ways to input facial photos (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to provide.</para>
+        /// <para>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,9 +68,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SourceCertifyId { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoding of the photo.</para>
+        /// <para>The Base64-encoded photo.</para>
         /// <remarks>
-        /// <para>Choose one of the four ways to input a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,9 +81,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SourceFaceContrastPicture { get; set; }
 
         /// <summary>
-        /// <para>OSS photo URL, currently only supports authorized OSS photo URLs.</para>
+        /// <para>The OSS photo URL. Only authorized OSS photo URLs are supported.</para>
         /// <remarks>
-        /// <para>Four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS. Choose one of them to input.</para>
+        /// <para>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,9 +94,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SourceFaceContrastPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Name of the authorized OSS bucket.</para>
+        /// <para>The bucket name of the authorized OSS space.</para>
         /// <remarks>
-        /// <para>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,9 +107,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SourceOssBucketName { get; set; }
 
         /// <summary>
-        /// <para>Filename of the authorized OSS space.</para>
+        /// <para>The file name in the authorized OSS space.</para>
         /// <remarks>
-        /// <para>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -119,9 +120,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SourceOssObjectName { get; set; }
 
         /// <summary>
-        /// <para>CertifyId from a previously successful real-person authentication, where the photo taken during the authentication is used for face comparison.</para>
+        /// <para>The CertifyId from a previous successful ID Verification. The photo captured during that verification is used as the face comparison photo.</para>
         /// <remarks>
-        /// <para>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -132,9 +133,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string TargetCertifyId { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoding of the reference photo.</para>
+        /// <para>The Base64-encoded reference photo.</para>
         /// <remarks>
-        /// <para>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -145,9 +146,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string TargetFaceContrastPicture { get; set; }
 
         /// <summary>
-        /// <para>OSS address of the reference photo. Currently, only authorized OSS addresses are supported.</para>
+        /// <para>The OSS URL of the reference photo. Only authorized OSS photo URLs are supported.</para>
         /// <remarks>
-        /// <para>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,9 +159,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string TargetFaceContrastPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Name of the authorized OSS bucket.</para>
+        /// <para>The bucket name of the authorized OSS space.</para>
         /// <remarks>
-        /// <para>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -171,9 +172,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string TargetOssBucketName { get; set; }
 
         /// <summary>
-        /// <para>File name in the authorized OSS space.</para>
+        /// <para>The file name in the authorized OSS space.</para>
         /// <remarks>
-        /// <para>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</para>
+        /// <para>You can use one of the following four methods to submit a reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS. Select one method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

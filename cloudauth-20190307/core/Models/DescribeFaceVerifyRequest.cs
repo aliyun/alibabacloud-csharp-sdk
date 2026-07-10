@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeFaceVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Unique identifier for real-person authentication.</para>
+        /// <para>The unique identifier of the ID Verification request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91707dc296d469ad38e4c5efa6a0f24b</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyId { get; set; }
 
         /// <summary>
-        /// <para>Image return type.</para>
+        /// <para>The image return type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>JPG</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PictureReturnType { get; set; }
 
         /// <summary>
-        /// <para>Authentication scene ID.</para>
+        /// <para>The ID of the verification scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000006</para>

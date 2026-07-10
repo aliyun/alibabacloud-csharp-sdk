@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Id2MetaStandardVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>ID number:</para>
+        /// <para>The ID card number.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is normal: enter the plain text of the ID number.</description></item>
-        /// <item><description>When <c>paramType</c> is md5:
-        /// The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</description></item>
+        /// <item><description>If ParamType is set to normal, enter the ID card number in plaintext.</description></item>
+        /// <item><description>If ParamType is set to md5, the format is: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,10 +24,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: unencrypted.</description></item>
-        /// <item><description>md5: md5 encrypted.</description></item>
+        /// <item><description>normal: not encrypted.</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,10 +38,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>Name:</para>
+        /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is normal: enter the plain text of the name.</description></item>
-        /// <item><description>When <c>paramType</c> is md5: the first character of the name (encrypted) + the rest of the name (plain text).</description></item>
+        /// <item><description>If ParamType is set to normal, enter the name in plaintext.</description></item>
+        /// <item><description>If ParamType is set to md5, the format is: first character of the name (ciphertext) + remaining characters of the name (plaintext).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

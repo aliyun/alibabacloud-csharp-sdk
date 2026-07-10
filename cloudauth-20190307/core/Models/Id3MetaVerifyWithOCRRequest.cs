@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Id3MetaVerifyWithOCRRequest : TeaModel {
         /// <summary>
-        /// <para>Input stream for the portrait side of the ID card image. Choose either CertUrl or CertFile.</para>
+        /// <para>The input stream of the portrait side image of the ID card. Specify either CertUrl or CertFile.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertFile { get; set; }
 
         /// <summary>
-        /// <para>URL for the national emblem side of the ID card image. Choose either CertNationalUrl or CertNationalFile, or omit both.</para>
+        /// <para>The image of the national emblem side of the ID card. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNationalFile { get; set; }
 
         /// <summary>
-        /// <para>National emblem side of the ID card image URL. A publicly accessible HTTP or HTTPS link. You can choose either CertNationalUrl or CertNationalFile, or omit both.</para>
+        /// <para>The URL of the national emblem side image of the ID card. Specify a publicly accessible HTTP or HTTPS URL. Specify either CertNationalUrl or CertNationalFile, or leave both empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNationalUrl { get; set; }
 
         /// <summary>
-        /// <para>Portrait side of the ID card image. A publicly accessible HTTP or HTTPS link. Choose either CertUrl or CertFile.</para>
+        /// <para>The image of the portrait side of the ID card. Specify a publicly accessible HTTP or HTTPS URL. Specify either CertUrl or CertFile.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></para>

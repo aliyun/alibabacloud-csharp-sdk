@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyPersonasOsStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123906BE-752B-51E3-A8FF-52F53B659CE6</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Processing result.</para>
+        /// <para>The processing result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeVerifyPersonasOsStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyPersonasOsStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Total number of authenticated devices.</para>
+            /// <para>The total number of devices used for ID Verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AllDeviceCnt { get; set; }
 
             /// <summary>
-            /// <para>Number of authenticated Android devices.</para>
+            /// <para>The number of Android devices used for ID Verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? DeviceAndroidCnt { get; set; }
 
             /// <summary>
-            /// <para>Proportion of Android devices.</para>
+            /// <para>The proportion of Android devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>58.33</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeviceAndroidRate { get; set; }
 
             /// <summary>
-            /// <para>Number of authenticated iOS devices.</para>
+            /// <para>The number of iOS devices used for ID Verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? DeviceIosCnt { get; set; }
 
             /// <summary>
-            /// <para>Proportion of iOS devices.</para>
+            /// <para>The proportion of iOS devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>41.67</para>

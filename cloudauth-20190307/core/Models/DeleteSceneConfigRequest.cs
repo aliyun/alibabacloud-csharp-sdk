@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteSceneConfigRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the intent authentication configuration.</para>
+        /// <para>The ID of the ID Verification scenario configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

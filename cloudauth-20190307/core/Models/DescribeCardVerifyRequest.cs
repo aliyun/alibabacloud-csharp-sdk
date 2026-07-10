@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeCardVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Authentication request ID.
-        /// You must first call the initialization interface InitCardVerify to submit an authentication request in order to get the authentication request ID.</para>
+        /// <para>The verification request ID.
+        /// You must first call the InitCardVerify operation to submit a verification request before you can obtain the verification request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

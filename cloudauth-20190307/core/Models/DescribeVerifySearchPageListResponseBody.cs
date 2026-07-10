@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifySearchPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Paged list data.</para>
+        /// <para>The paginated list data.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeVerifySearchPageListResponseBodyItems> Items { get; set; }
         public class DescribeVerifySearchPageListResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Desensitized ID card number.</para>
+            /// <para>The desensitized ID card number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3****************2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertNo { get; set; }
 
             /// <summary>
-            /// <para>Authentication ID.</para>
+            /// <para>The certification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>shad861465f2aaeeb805b519e1a93ab2</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
-            /// <para>Extended information.</para>
+            /// <para>The extended information.</para>
             /// </summary>
             [NameInMap("ExtInfo")]
             [Validation(Required=false)]
             public DescribeVerifySearchPageListResponseBodyItemsExtInfo ExtInfo { get; set; }
             public class DescribeVerifySearchPageListResponseBodyItemsExtInfo : TeaModel {
                 /// <summary>
-                /// <para>Desensitized name.</para>
+                /// <para>The desensitized name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>何*</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string CertName { get; set; }
 
                 /// <summary>
-                /// <para>Facial bodyguard label.</para>
+                /// <para>The Face Guard tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HOOK,ROOT</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string DeviceRisk { get; set; }
 
                 /// <summary>
-                /// <para>是否是人脸攻击：</para>
+                /// <para>Specifies whether a face attack is detected:</para>
                 /// <list type="bullet">
-                /// <item><description><b>T</b>：是</description></item>
-                /// <item><description><b>F</b>：否</description></item>
+                /// <item><description><b>T</b>: Yes.</description></item>
+                /// <item><description><b>F</b>: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string FaceAttack { get; set; }
 
                 /// <summary>
-                /// <para>Face attack score, ranging from 0 to 1, with values closer to 1 indicating a higher likelihood of an attack.</para>
+                /// <para>The face attack score. The value ranges from 0 to 1. A value closer to 1 indicates a higher likelihood of an attack.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0000445161</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public float? FaceAttackScore { get; set; }
 
                 /// <summary>
-                /// <para>Whether the face is occluded. T if occluded, otherwise F.</para>
+                /// <para>Specifies whether the face is occluded. T indicates occlusion detected. F indicates no occlusion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>T</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string FaceOcclusion { get; set; }
 
                 /// <summary>
-                /// <para>Face-to-ID card comparison score.</para>
+                /// <para>The face-to-ID card comparison score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.9</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public float? IdCardVerifyScore { get; set; }
 
                 /// <summary>
-                /// <para>Photo OSS bucket.</para>
+                /// <para>The OSS bucket for photos.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai-aliyun-cloudauth-XXX</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string OssBucketName { get; set; }
 
                 /// <summary>
-                /// <para>OCR ID card face file name.</para>
+                /// <para>The file name of the OCR ID card face image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string OssIdFaceObjectName { get; set; }
 
                 /// <summary>
-                /// <para>OCR ID card national emblem file name.</para>
+                /// <para>The file name of the OCR ID card national emblem image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string OssIdNationalEmblemObjectName { get; set; }
 
                 /// <summary>
-                /// <para>Storage object name.</para>
+                /// <para>The storage object name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>verify/XXXXX1251634779/sha6a0a0cab01288c7aa8ac3f45220eb_0_normal.jpeg</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string OssObjectName { get; set; }
 
                 /// <summary>
-                /// <para>Liveness face quality score.</para>
+                /// <para>The liveness face quality score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public float? QualityScore { get; set; }
 
                 /// <summary>
-                /// <para>Face comparison score.</para>
+                /// <para>The face comparison score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public float? VerifyScore { get; set; }
 
                 /// <summary>
-                /// <para>ASR text list.</para>
+                /// <para>The list of ASR texts.</para>
                 /// </summary>
                 [NameInMap("asrTexts")]
                 [Validation(Required=false)]
                 public List<string> AsrTexts { get; set; }
 
                 /// <summary>
-                /// <para>Screen recording file OSS name list.</para>
+                /// <para>The list of screen recording file OSS object names.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public List<string> ScreenVideoObjectNames { get; set; }
 
                 /// <summary>
-                /// <para>Audio file OSS name list.</para>
+                /// <para>The list of audio file OSS object names.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>Verification time for this authentication.</para>
+            /// <para>The verification time of this authentication record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-14 15:40:13</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string GmtVerify { get; set; }
 
             /// <summary>
-            /// <para>Liveness detection scheme.</para>
+            /// <para>The liveness detection scheme.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MULTI_ACTION</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier for the customer request.</para>
+            /// <para>The unique identifier for the customer request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -245,10 +245,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string OuterOrderNo { get; set; }
 
             /// <summary>
-            /// <para>Whether the authentication passed. Values:</para>
+            /// <para>Specifies whether the authentication passed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>T</b>: Passed.</description></item>
-            /// <item><description><b>F</b>: Not passed.</description></item>
+            /// <item><description><b>F</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Product code.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ID_PRO</para>
@@ -269,10 +269,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>Business scenario risk:</para>
+            /// <para>The business scenario risk:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No risk</description></item>
-            /// <item><description><b>1</b>: Risk present</description></item>
+            /// <item><description><b>0</b>: No risk.</description></item>
+            /// <item><description><b>1</b>: Risk detected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -283,10 +283,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? RiskBizScenario { get; set; }
 
             /// <summary>
-            /// <para>Device risk:</para>
+            /// <para>The device risk:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No risk</description></item>
-            /// <item><description><b>1</b>: Risk present</description></item>
+            /// <item><description><b>0</b>: No risk.</description></item>
+            /// <item><description><b>1</b>: Risk detected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -297,10 +297,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? RiskDevice { get; set; }
 
             /// <summary>
-            /// <para>DeviceToken risk:</para>
+            /// <para>The DeviceToken risk:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No risk</description></item>
-            /// <item><description><b>1</b>: Risk present</description></item>
+            /// <item><description><b>0</b>: No risk.</description></item>
+            /// <item><description><b>1</b>: Risk detected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -311,10 +311,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? RiskDeviceToken { get; set; }
 
             /// <summary>
-            /// <para>General risk:</para>
+            /// <para>The generic risk:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No risk</description></item>
-            /// <item><description><b>1</b>: Risk present</description></item>
+            /// <item><description><b>0</b>: No risk.</description></item>
+            /// <item><description><b>1</b>: Risk detected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -325,10 +325,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? RiskGeneric { get; set; }
 
             /// <summary>
-            /// <para>Large model mining risk:</para>
+            /// <para>The large model mining risk:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No risk</description></item>
-            /// <item><description><b>1</b>: Risk present</description></item>
+            /// <item><description><b>0</b>: No risk.</description></item>
+            /// <item><description><b>1</b>: Risk detected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? RiskModelMining { get; set; }
 
             /// <summary>
-            /// <para>Whether it is root (pass 1 if selected, otherwise do not pass; corresponds to identity label risk type).</para>
+            /// <para>Specifies whether the device is rooted. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the identity tag risk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? Root { get; set; }
 
             /// <summary>
-            /// <para>Scene ID.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000015352</para>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// <para>Whether it is a simulator (pass 1 if selected, otherwise do not pass; corresponds to device label risk type).</para>
+            /// <para>Specifies whether the device is a simulator. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the device tag risk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? Simulator { get; set; }
 
             /// <summary>
-            /// <para>System returned error code.</para>
+            /// <para>The error code returned by the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>207</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>198123xxxxxx</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>Whether it is virtual adaptation (pass 1 if selected, otherwise do not pass; corresponds to behavior label risk type).</para>
+            /// <para>Specifies whether virtual video is used. Set to 1 if selected; otherwise, do not pass this parameter. This parameter corresponds to the behavior tag risk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of the current request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47D87BC1-D956-573A-8A15-A9007A76F56C</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

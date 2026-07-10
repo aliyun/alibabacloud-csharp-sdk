@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryVerifyFlowPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>List of returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<QueryVerifyFlowPackageResponseBodyItems> Items { get; set; }
         public class QueryVerifyFlowPackageResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Name of the resource package.</para>
+            /// <para>The name of the resource plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>实人认证流量包</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CommodityName { get; set; }
 
             /// <summary>
-            /// <para>Current available capacity.</para>
+            /// <para>The current remaining available capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public double? CurrCapacity { get; set; }
 
             /// <summary>
-            /// <para>Proportion of current remaining capacity to total capacity.</para>
+            /// <para>The ratio of the current remaining capacity to the total capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0%</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CurrProportion { get; set; }
 
             /// <summary>
-            /// <para>Details of the flow package.</para>
+            /// <para>The data transfer plan details.</para>
             /// </summary>
             [NameInMap("FlowDetails")]
             [Validation(Required=false)]
             public List<QueryVerifyFlowPackageResponseBodyItemsFlowDetails> FlowDetails { get; set; }
             public class QueryVerifyFlowPackageResponseBodyItemsFlowDetails : TeaModel {
                 /// <summary>
-                /// <para>Total amount.</para>
+                /// <para>The total capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public double? Capacity { get; set; }
 
                 /// <summary>
-                /// <para>Name of the flow package.</para>
+                /// <para>The name of the data transfer plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>实人认证流量包</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string CommodityName { get; set; }
 
                 /// <summary>
-                /// <para>Remaining amount.</para>
+                /// <para>The remaining capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public double? CurrCapacity { get; set; }
 
                 /// <summary>
-                /// <para>Proportion of remaining amount.</para>
+                /// <para>The ratio of the remaining capacity to the total capacity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100%</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string CurrProportion { get; set; }
 
                 /// <summary>
-                /// <para>Expiration date.</para>
+                /// <para>The expiration time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string ExpireDate { get; set; }
 
                 /// <summary>
-                /// <para>Instance name</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tf-testacccn-hangzhouapigate84369</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Status.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Effective date.</para>
+                /// <para>The effective period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>Total quota.</para>
+            /// <para>The total quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public double? TotalCapacity { get; set; }
 
             /// <summary>
-            /// <para>Used capacity.</para>
+            /// <para>The used capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>969434DF-926B-4997-9881-4DE94E39F805</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the response was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

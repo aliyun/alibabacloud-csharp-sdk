@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VehicleMetaVerifyV2Request : TeaModel {
         /// <summary>
-        /// <para>ID number.</para>
-        /// <para>This is a required field when VerifyMetaType is VEHICLE_3_META.</para>
+        /// <para>The ID card number.</para>
+        /// <para>This parameter is required when VerifyMetaType is set to VEHICLE_3_META.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When paramType is normal, enter plain text.</description></item>
-        /// <item><description>When paramType is md5, enter the first 6 digits in plain text + MD5 (32 lowercase) of the birth date + the last 4 digits in plain text.</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter the first 6 digits of the ID card number in plaintext + the MD5-encrypted date of birth (32-bit lowercase MD5) + the last 4 digits of the ID card number.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: Unencrypted.</description></item>
-        /// <item><description>md5: Md5 encrypted.</description></item>
+        /// <item><description>normal: not encrypted.</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>Name</para>
+        /// <para>The name.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When paramType is normal, enter plain text.</description></item>
-        /// <item><description>When paramType is md5, enter the first character of the name as MD5 (32 lowercase) + the rest of the name in plain text.</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter the MD5-encrypted first character of the name (32-bit lowercase MD5) + the remaining characters of the name in plaintext.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>License plate number</para>
+        /// <para>The license plate number.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When paramType is normal, enter plain text.</description></item>
-        /// <item><description>When paramType is md5, enter all but the last two characters in plain text + the last two characters as MD5 (32 lowercase).</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter the license plate number excluding the last two characters in plaintext + the MD5-encrypted last two characters (32-bit lowercase MD5).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string VehicleNum { get; set; }
 
         /// <summary>
-        /// <para>Vehicle type</para>
+        /// <para>The vehicle type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02</para>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string VehicleType { get; set; }
 
         /// <summary>
-        /// <para>Verification type</para>
+        /// <para>The verification type.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>VEHICLE_2_META: Two-element verification, name + license plate number verification;</description></item>
-        /// <item><description>VEHICLE_3_META: Three-element verification, name + license plate number + ID number verification;</description></item>
+        /// <item><description>VEHICLE_2_META: two-element verification. Verifies the name and license plate number.</description></item>
+        /// <item><description>VEHICLE_3_META: three-element verification. Verifies the name, license plate number, and ID card number.</description></item>
         /// </list>
         /// </remarks>
         /// 

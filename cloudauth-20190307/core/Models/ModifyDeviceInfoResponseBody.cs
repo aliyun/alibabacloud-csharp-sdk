@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyDeviceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>If the Duration in the request parameters is not empty, this field represents the start time of the authorization after the device validity period has been extended. One year of Duration is calculated as 365 days. Example: 20180101.</para>
+        /// <para>If the Duration request parameter is not empty, this field indicates the authorization start time after the device validity period is extended. One year in Duration is calculated as 365 days. Example: 20180101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20190401</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BeginDay { get; set; }
 
         /// <summary>
-        /// <para>Corresponds to the BizType in the request parameters.</para>
+        /// <para>The value corresponds to the BizType in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FACE_TEST</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Corresponds to the DeviceId in the request parameters.</para>
+        /// <para>The value corresponds to the DeviceId in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string DeviceId { get; set; }
 
         /// <summary>
-        /// <para>If the Duration in the request parameters is not empty, this field represents the expiration time of the authorization after the device validity period has been extended. One year of Duration is calculated as 365 days. Example: 20180101.</para>
+        /// <para>If the Duration request parameter is not empty, this field indicates the authorization expiration time after the device validity period is extended. One year in Duration is calculated as 365 days. Example: 20180101.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20200330</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Corresponds to the UserDeviceId in the request parameters.</para>
+        /// <para>The value corresponds to the UserDeviceId in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3iJ1AY$oHcu7mC69</para>

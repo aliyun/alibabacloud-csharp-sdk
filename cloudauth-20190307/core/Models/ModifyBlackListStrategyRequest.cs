@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyBlackListStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Blacklist rule.</para>
+        /// <para>The blacklist rule.</para>
         /// </summary>
         [NameInMap("BlackListStrategy")]
         [Validation(Required=false)]
         public ModifyBlackListStrategyRequestBlackListStrategy BlackListStrategy { get; set; }
         public class ModifyBlackListStrategyRequestBlackListStrategy : TeaModel {
             /// <summary>
-            /// <para>Blacklist string, with each blacklist entry separated by commas.</para>
+            /// <para>The blacklist string. Separate multiple entries with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1,127.0.0.2</para>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizContent { get; set; }
 
             /// <summary>
-            /// <para>List Type:</para>
+            /// <para>The blacklist type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mobile</b>: Mobile number blacklist</description></item>
-            /// <item><description><b>ip</b>: IP blacklist</description></item>
-            /// <item><description><b>identifyNum</b>: ID number blacklist</description></item>
-            /// <item><description><b>bankCard</b>: Bank card blacklist</description></item>
+            /// <item><description><b>mobile</b>: mobile number blacklist.</description></item>
+            /// <item><description><b>ip</b>: IP blacklist.</description></item>
+            /// <item><description><b>identifyNum</b>: ID card blacklist.</description></item>
+            /// <item><description><b>bankCard</b>: bank card blacklist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizKey { get; set; }
 
             /// <summary>
-            /// <para>Rule ID:</para>
+            /// <para>The rule ID. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Empty</b>: Add a new rule</description></item>
-            /// <item><description><b>Non-empty</b>: Modify an existing rule</description></item>
+            /// <item><description><b>Empty</b>: creates a rule.</description></item>
+            /// <item><description><b>Not empty</b>: modifies a rule.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Product Name:</para>
+            /// <para>The product name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>id2meta</b>: ID card two-factor verification</description></item>
-            /// <item><description><b>mobile3Meta</b>: Mobile number factor verification</description></item>
-            /// <item><description><b>bankcardMeta</b>: Bank card factor verification</description></item>
+            /// <item><description><b>id2meta</b>: ID card two-element verification.</description></item>
+            /// <item><description><b>mobile3Meta</b>: mobile number element verification.</description></item>
+            /// <item><description><b>bankcardMeta</b>: bank card element verification.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>Verification Status:</para>
+            /// <para>The authentication status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Verification passed</description></item>
-            /// <item><description><b>2</b>: Verification failed</description></item>
+            /// <item><description><b>1</b>: Authentication passed.</description></item>
+            /// <item><description><b>2</b>: Authentication failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyFailStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2C596D1-B14B-5D79-9672-61D7686912B2</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Authentication result.</para>
+        /// <para>The authentication result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeVerifyFailStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyFailStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Line chart of failure reasons.</para>
+            /// <para>The line chart of failure reasons.</para>
             /// </summary>
             [NameInMap("Column")]
             [Validation(Required=false)]
             public DescribeVerifyFailStatisticsResponseBodyResultObjectColumn Column { get; set; }
             public class DescribeVerifyFailStatisticsResponseBodyResultObjectColumn : TeaModel {
                 /// <summary>
-                /// <para>Column information.</para>
+                /// <para>The column information.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<DescribeVerifyFailStatisticsResponseBodyResultObjectColumnItems> Items { get; set; }
                 public class DescribeVerifyFailStatisticsResponseBodyResultObjectColumnItems : TeaModel {
                     /// <summary>
-                    /// <para>Error code.</para>
+                    /// <para>The error code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>404</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>Failure count.</para>
+                    /// <para>The number of failures.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Date: Date</para>
+                    /// <para>Date: the date.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2025-10-16</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 }
 
                 /// <summary>
-                /// <para>Total count.</para>
+                /// <para>The total count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -85,21 +85,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>Bar chart of failure reasons.</para>
+            /// <para>The bar chart of failure reasons.</para>
             /// </summary>
             [NameInMap("Line")]
             [Validation(Required=false)]
             public DescribeVerifyFailStatisticsResponseBodyResultObjectLine Line { get; set; }
             public class DescribeVerifyFailStatisticsResponseBodyResultObjectLine : TeaModel {
                 /// <summary>
-                /// <para>Column information.</para>
+                /// <para>The column information.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<DescribeVerifyFailStatisticsResponseBodyResultObjectLineItems> Items { get; set; }
                 public class DescribeVerifyFailStatisticsResponseBodyResultObjectLineItems : TeaModel {
                     /// <summary>
-                    /// <para>Error code.</para>
+                    /// <para>The error code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>404</para>
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>Returned quantity data.</para>
+                    /// <para>The returned count data.</para>
                     /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public List<DescribeVerifyFailStatisticsResponseBodyResultObjectLineItemsData> Data { get; set; }
                     public class DescribeVerifyFailStatisticsResponseBodyResultObjectLineItemsData : TeaModel {
                         /// <summary>
-                        /// <para>Error code.</para>
+                        /// <para>The error code.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>404</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                         public string Code { get; set; }
 
                         /// <summary>
-                        /// <para>Count.</para>
+                        /// <para>The count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>9</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                         public long? Count { get; set; }
 
                         /// <summary>
-                        /// <para>Date.</para>
+                        /// <para>The date.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2025-10-16</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 }
 
                 /// <summary>
-                /// <para>Total count.</para>
+                /// <para>The total count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

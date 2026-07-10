@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>Whether the age is over 14 years old:</para>
+        /// <para>Specifies whether the age is older than 14. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>T</b>: Over</description></item>
-        /// <item><description><b>F</b>: Under</description></item>
+        /// <item><description><b>T</b>: older than 14</description></item>
+        /// <item><description><b>F</b>: younger than 14.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string AgeGt { get; set; }
 
         /// <summary>
-        /// <para>End date of the query.</para>
+        /// <para>The end time of the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>Product Code.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_PRO</para>
@@ -45,11 +45,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Service type:</para>
+        /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>antcloudauth</b>: Financial-grade real-person authentication.</description></item>
-        /// <item><description><b>cloudauthst</b> (discontinued): Enhanced real-person authentication.</description></item>
-        /// <item><description><b>cloudauth</b> (discontinued): Real-person authentication.</description></item>
+        /// <item><description><b>antcloudauth</b>: financial-grade ID Verification.</description></item>
+        /// <item><description><b>cloudauthst</b> (discontinued): enhanced ID Verification.</description></item>
+        /// <item><description><b>cloudauth</b> (discontinued): ID Verification.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Start date of the query.</para>
+        /// <para>The start time of the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

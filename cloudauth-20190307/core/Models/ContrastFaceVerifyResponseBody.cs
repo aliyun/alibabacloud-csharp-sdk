@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ContrastFaceVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Request result</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public ContrastFaceVerifyResponseBodyResultObject ResultObject { get; set; }
         public class ContrastFaceVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Unique identifier for the real-person verification request.</para>
+            /// <para>The unique identifier of the ID Verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>91707dc296d469ad38e4c5efa6a0****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
-            /// <para>Information about the authenticated entity, which is usually empty in general authentication scenarios.</para>
+            /// <para>The subject information of the verification. This is returned as empty in common verification scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IdentityInfo { get; set; }
 
             /// <summary>
-            /// <para>Attachment information of the authenticated entity, mainly image materials, in JSON format, as follows.</para>
+            /// <para>The supplementary material information of the verification subject, primarily image-based materials, in JSON format as follows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;verifyScore&quot;: 50.28594166529785}}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string MaterialInfo { get; set; }
 
             /// <summary>
-            /// <para>Whether it passed, T for pass, F for fail.</para>
+            /// <para>Indicates whether the verification is passed. A value of T indicates passed. A value of F indicates not passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>T</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Description of the authentication result. For details, see the SubCode explanation below.</para>
+            /// <para>The verification result description. For more information, see the SubCode description below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

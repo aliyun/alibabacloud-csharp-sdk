@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ContrastFaceVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Real name.</para>
+        /// <para>The real name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>张三</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertName { get; set; }
 
         /// <summary>
-        /// <para>ID number</para>
+        /// <para>The certificate number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330103xxxxxxxxxxxx</para>
@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         /// <summary>
-        /// <para>Type of identification. Currently, only IDENTITY_CARD is supported and must be provided.</para>
+        /// <para>The certificate type.
+        /// Currently only ID cards are supported. You must set this parameter to IDENTITY_CARD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IDENTITY_CARD</para>
@@ -40,9 +41,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The CertifyId of a previously passed real-person authentication, with the photo taken during that authentication used as the comparison photo. </para>
+        /// <para>The CertifyId from a previous successful ID Verification. The photo from that verification is used as the comparison photo.</para>
         /// <remarks>
-        /// <para>Among the four ways to input images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to provide.</para>
+        /// <para>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,10 +54,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyId { get; set; }
 
         /// <summary>
-        /// <para>Allow face image cropping:</para>
+        /// <para>Specifies whether to allow cropping of the face image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>T</b> – Cropping is allowed.</description></item>
-        /// <item><description><b>F</b> (default) – Cropping is not allowed.</description></item>
+        /// <item><description><para>T: Allowed.</para>
+        /// </description></item>
+        /// <item><description><para>F (default): Not allowed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Crop { get; set; }
 
         /// <summary>
-        /// <para>Risk Identification - Device Token</para>
+        /// <para>The device token for risk identification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</para>
@@ -77,9 +80,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string DeviceToken { get; set; }
 
         /// <summary>
-        /// <para>Encryption type. Leave it empty if no encryption is required.</para>
-        /// <para>If you enable encrypted transmission, you must specify the encryption algorithm; currently, only the SM2 (Chinese national standard) algorithm is supported.</para>
-        /// <para>When an encryption algorithm is specified, encrypt both <b>CertName</b> and <b>CertNo</b> and submit the resulting ciphertext. For more details on parameter encryption, see the <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/description-of-parameter-encryption?spm=a2c4g.11186623.0.0.49541a8554cELI#task-2229332">Parameter Encryption documentation</a>.</para>
+        /// <para>The encryption type. An empty value indicates no encryption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SM2</para>
@@ -89,19 +90,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string EncryptType { get; set; }
 
         /// <summary>
-        /// <para>Local video file.</para>
+        /// <para>The local video file.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("FaceContrastFile")]
         [Validation(Required=false)]
         public string FaceContrastFile { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoded photo</para>
+        /// <para>The Base64-encoded photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
@@ -111,9 +110,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceContrastPicture { get; set; }
 
         /// <summary>
-        /// <para>OSS photo URL, currently only supports authorized OSS photo URLs.</para>
+        /// <para>The OSS photo URL. Currently only authorized OSS photo URLs are supported.</para>
         /// <remarks>
-        /// <para>Among the four ways to input images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to input.</para>
+        /// <para>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceContrastPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>User IP.</para>
+        /// <para>The IP address of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>114.xxx.xxx.xxx</para>
@@ -134,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>User\&quot;s phone number.</para>
+        /// <para>The mobile phone number of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130xxxxxxxx</para>
@@ -144,10 +143,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Liveness detection type. Possible values:</para>
-        /// <para>• <b>NO_LIVENESS</b> – Liveness detection is disabled.</para>
-        /// <para>• <b>FRONT_CAMERA_LIVENESS</b> (default) – Liveness detection on face images captured with the mobile device’s front camera.</para>
-        /// <para>• <b>REAR_CAMERA_LIVENESS</b> – Liveness detection on face images captured in other scenarios (e.g., via the rear camera).</para>
+        /// <para>The liveness detection type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FRONT_CAMERA_LIVENESS</para>
@@ -157,7 +153,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>Authorized OSS space Bucket name. In the methods of passing images, including FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS, choose one to pass in.</para>
+        /// <para>The bucket name of the authorized OSS space.</para>
+        /// <remarks>
+        /// <para>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-aliyun-cloudauth-xxxxx</para>
@@ -167,9 +166,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>Filename of the authorized OSS space.</para>
+        /// <para>The file name in the authorized OSS space.</para>
         /// <remarks>
-        /// <para>Among the four ways to input images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to input.</para>
+        /// <para>Among the four methods of passing in images (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS), select only one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -180,7 +179,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OssObjectName { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier for the merchant\&quot;s request. It is a 32-character alphanumeric combination. The first few characters are a custom abbreviation defined by the merchant, followed by a period, and the latter part can be a random or incrementing sequence.</para>
+        /// <para>The unique identifier of the merchant request.
+        /// The value is a 32-character alphanumeric string. The first few characters are a custom abbreviation defined by the merchant, the middle part can be a time segment, and the last part can be a random or incremental sequence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Authentication scenario ID.</para>
+        /// <para>The verification scenario ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000006</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Custom user ID defined by the customer\&quot;s business.</para>
+        /// <para>The custom user ID defined by the business.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>

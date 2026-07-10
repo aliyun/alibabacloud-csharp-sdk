@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VehicleInsureQueryRequest : TeaModel {
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: Unencrypted.</description></item>
-        /// <item><description><b>md5</b>: MD5 encrypted.</description></item>
+        /// <item><description><b>normal</b>: not encrypted.</description></item>
+        /// <item><description><b>md5</b>: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>License plate number</para>
+        /// <para>The license plate number.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is set to <c>normal</c>, enter the plain text.</description></item>
-        /// <item><description>When <c>paramType</c> is set to <c>md5</c>, enter the plain text of all but the last two characters of the license plate + the MD5 encryption (32 lowercase characters) of the last two characters of the license plate.</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter the plaintext of the license plate number excluding the last two characters, concatenated with the MD5-encrypted value of the last two characters (32-bit lowercase MD5).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string VehicleNum { get; set; }
 
         /// <summary>
-        /// <para>Driver\&quot;s license vehicle type.</para>
+        /// <para>The vehicle type on the driving license.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string VehicleType { get; set; }
 
         /// <summary>
-        /// <para>Vehicle identification code, i.e., the vehicle VIN</para>
+        /// <para>The vehicle identification number (VIN).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is set to <c>normal</c>, enter the plain text.</description></item>
-        /// <item><description>When <c>paramType</c> is set to <c>md5</c>, enter the plain text of all but the last four characters of the VIN + the MD5 encryption (32 lowercase characters) of the last four characters of the VIN.</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter the plaintext of the VIN excluding the last 4 characters, concatenated with the MD5-encrypted value of the last 4 characters (32-bit lowercase MD5).</description></item>
         /// </list>
         /// </remarks>
         /// 

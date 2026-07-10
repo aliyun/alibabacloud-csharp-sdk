@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeOssStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Service code:</para>
+        /// <para>The service code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>antcloudauth: Financial-grade real-person authentication</description></item>
-        /// <item><description>cloudauthst (discontinued): Enhanced real-person authentication</description></item>
+        /// <item><description>antcloudauth: Chinese financial-grade ID Verification.</description></item>
+        /// <item><description>cloudauthst (discontinued): ID Verification Enhanced Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

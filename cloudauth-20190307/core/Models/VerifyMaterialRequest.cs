@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VerifyMaterialRequest : TeaModel {
         /// <summary>
-        /// <para>A unique ID that identifies a single authentication task, not exceeding 64 characters. For a single authentication task, the system supports unlimited submissions until the final authentication is passed and the task is completed.</para>
+        /// <para>The unique ID that identifies a verification task. The value can be up to 64 characters in length. For a single verification task, the system supports unlimited submissions until the verification is passed and the task is completed.</para>
         /// <remarks>
-        /// <para>Different BizIds are required for different authentication tasks.</para>
+        /// <para>Use a different BizId for each new verification task.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Identifier for the business scenario using the real-person authentication service. Please refer to <a href="https://help.aliyun.com/document_detail/127885.html">Business Setup</a> and complete the creation in the console first.</para>
+        /// <para>The business scenario identifier for the ID Verification service. Create one in the console first. For more information, see <a href="https://help.aliyun.com/document_detail/127885.html">Business settings</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>HTTP or HTTPS link to the frontal face image.</para>
+        /// <para>The HTTP or HTTPS URL of the front-facing facial photo.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceImageUrl { get; set; }
 
         /// <summary>
-        /// <para>HTTP or HTTPS link to the national emblem side of the ID card.</para>
+        /// <para>The HTTP or HTTPS URL of the national emblem side of the ID card.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example3.jpg</a></para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardBackImageUrl { get; set; }
 
         /// <summary>
-        /// <para>HTTP or HTTPS link to the portrait side of the ID card image.</para>
+        /// <para>The HTTP or HTTPS URL of the portrait side of the ID card.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example2.jpg</a></para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardFrontImageUrl { get; set; }
 
         /// <summary>
-        /// <para>ID number.</para>
+        /// <para>The ID card number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardNumber { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

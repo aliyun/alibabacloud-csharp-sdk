@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeepfakeDetectRequest : TeaModel {
         /// <summary>
-        /// <para>Enter the Base64 encoded string of the face image.</para>
+        /// <para>The Base64-encoded face image.</para>
         /// <remarks>
-        /// <para>Either FaceUrl or FaceBase64 must be provided.</para>
+        /// <para>Specify either FaceUrl or FaceBase64.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceBase64 { get; set; }
 
         /// <summary>
-        /// <para>Input <b>IMAGE</b> to indicate an image type.</para>
+        /// <para>The input type of the face material. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>IMAGE (default): face image</description></item>
+        /// <item><description>VIDEO: face video</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Video processing takes longer. Set the timeout to more than 3 seconds.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
@@ -33,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceInputType { get; set; }
 
         /// <summary>
-        /// <para>Enter the URL of the face image.</para>
+        /// <para>The URL of the face image.</para>
         /// <remarks>
-        /// <para>Either FaceUrl or FaceBase64 must be provided.</para>
+        /// <para>Specify either FaceUrl or FaceBase64.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceUrl { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier for the merchant\&quot;s request, consisting of a 32-character alphanumeric combination. The first few characters can be a custom abbreviation defined by the merchant, the middle part may include a timestamp, and the latter part can use a random or incrementing sequence.</para>
+        /// <para>The unique identifier of the merchant request. The value is a 32-character alphanumeric string. The first few characters consist of a custom merchant abbreviation, the middle part can contain a time segment, and the last part can use a random or incremental sequence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c******</para>

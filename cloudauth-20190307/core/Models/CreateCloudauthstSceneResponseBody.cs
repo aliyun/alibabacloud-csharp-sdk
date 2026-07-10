@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateCloudauthstSceneResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result, indicating whether the operation was successful.</para>
+        /// <para>The returned result that indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

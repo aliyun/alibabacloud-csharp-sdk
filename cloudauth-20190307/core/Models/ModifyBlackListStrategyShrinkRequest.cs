@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyBlackListStrategyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Blacklist rule.</para>
+        /// <para>The blacklist rule.</para>
         /// </summary>
         [NameInMap("BlackListStrategy")]
         [Validation(Required=false)]
         public string BlackListStrategyShrink { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

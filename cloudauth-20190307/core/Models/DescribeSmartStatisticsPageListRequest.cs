@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeSmartStatisticsPageListRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>End time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Scene ID.</para>
+        /// <para>The scene ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneId { get; set; }
 
         /// <summary>
-        /// <para>ServiceCode for the real person cloud product, only value: <b>cloudauthst</b>.</para>
+        /// <para>The ServiceCode of the ID Verification product. The value can only be <b>cloudauthst</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudauthst</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Start time, using UTC format, in the form of yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

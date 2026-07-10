@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class BankMetaVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Bank card number.</para>
+        /// <para>The bank card number.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is <c>normal</c>, enter the plain text bank card number.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>md5</c>, enter the part of the card number except the last 6 digits in plain text + the last 6 digits encrypted with MD5 (32 lowercase).</description></item>
+        /// <item><description>If paramType is set to normal, enter the bank card number in plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter the card number excluding the last 6 digits in plaintext + the MD5 hash (32-bit lowercase) of the last 6 digits.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BankCard { get; set; }
 
         /// <summary>
-        /// <para>ID number.</para>
+        /// <para>The ID card number.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>ProductType</c> is <c>BANK_CARD_3_META</c>, this field is required.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>normal</c>, enter the plain text ID number.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>md5</c>, enter the first 6 digits of the ID number in plain text + the birth date encrypted with MD5 (32 lowercase MD5) + the last 4 digits of the ID number.</description></item>
+        /// <item><description>This parameter is required if ProductType is set to BANK_CARD_3_META.</description></item>
+        /// <item><description>If paramType is set to normal, enter the ID card number in plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter the first 6 digits of the ID card number in plaintext + the MD5 hash (32-bit lowercase) of the date of birth + the last 4 digits of the ID card number.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Identity type.</para>
+        /// <para>The identity document type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01</para>
@@ -49,11 +49,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentityType { get; set; }
 
         /// <summary>
-        /// <para>Mobile phone number.</para>
+        /// <para>The phone number.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>ProductType</c> is <c>BANK_CARD_4_META</c>, this field is required.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>normal</c>, enter the plain text mobile phone number.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>md5</c>, enter the mobile phone number (32 lowercase MD5).</description></item>
+        /// <item><description>This parameter is required if ProductType is set to BANK_CARD_4_META.</description></item>
+        /// <item><description>If paramType is set to normal, enter the phone number in plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter the MD5 hash (32-bit lowercase) of the phone number.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: Unencrypted.</description></item>
-        /// <item><description>md5: MD5 encrypted.</description></item>
+        /// <item><description>normal: not encrypted.</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>Product type to call:</para>
+        /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BANK_CARD_2_META: Bank card number + name verification.</description></item>
-        /// <item><description>BANK_CARD_3_META: Bank card number + name + ID number verification.</description></item>
-        /// <item><description>BANK_CARD_4_META: Bank card number + name + ID number + mobile phone number verification.</description></item>
+        /// <item><description>BANK_CARD_2_META: bank card number + name verification.</description></item>
+        /// <item><description>BANK_CARD_3_META: bank card number + name + ID card number verification.</description></item>
+        /// <item><description>BANK_CARD_4_META: bank card number + name + ID card number + phone number verification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is <c>normal</c>, enter the plain text name.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>md5</c>, encrypt the first character of the name with MD5 (32 lowercase MD5) + the rest of the name in plain text.</description></item>
+        /// <item><description>If paramType is set to normal, enter the name in plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, enter the MD5 hash (32-bit lowercase) of the first character of the name + the remaining characters of the name in plaintext.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>VERIFY_BANK_CARD: Bank card authentication mode. It indicates whether the provided bank card number matches the user\&quot;s real name, ID number, and mobile phone number.</para>
+        /// <para>VERIFY_BANK_CARD: bank card verification mode. Specifies whether the provided bank card number matches the real name, ID card number, and phone number of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VERIFY_BANK_CARD</para>

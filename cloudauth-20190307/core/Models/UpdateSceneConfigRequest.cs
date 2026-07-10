@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class UpdateSceneConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Scene configuration information, in JSON format. For the specific structure definition, please refer to more information about the configuration.</para>
+        /// <para>The scenario configuration in JSON format. For the specific structure definition, refer to the additional information about configurations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>Willingness configuration ID.</para>
+        /// <para>The ID of the intent configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Selected authentication scene.</para>
+        /// <para>The selected verification scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

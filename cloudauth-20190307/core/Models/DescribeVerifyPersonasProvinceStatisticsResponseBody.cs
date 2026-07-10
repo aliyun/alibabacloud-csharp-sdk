@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyPersonasProvinceStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9821F95-CC18-5439-BB1C-21A0FF0C2003</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Query result.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Total number of devices.</para>
+            /// <para>The total number of devices.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AllUserCnt { get; set; }
 
             /// <summary>
-            /// <para>Data items.</para>
+            /// <para>The data items.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObjectItems> Items { get; set; }
             public class DescribeVerifyPersonasProvinceStatisticsResponseBodyResultObjectItems : TeaModel {
                 /// <summary>
-                /// <para>Total number of devices in the province.</para>
+                /// <para>The total number of devices in the province.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public long? ProvinceCnt { get; set; }
 
                 /// <summary>
-                /// <para>Province name.</para>
+                /// <para>The province name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>浙江</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string ProvinceName { get; set; }
 
                 /// <summary>
-                /// <para>Percentage of the total for this province.</para>
+                /// <para>The percentage of the province relative to the total.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>35.71</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeListFaceVerifyDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
         public DescribeListFaceVerifyDataResponseBodyMonitorData MonitorData { get; set; }
         public class DescribeListFaceVerifyDataResponseBodyMonitorData : TeaModel {
             /// <summary>
-            /// <para>Face verification data.</para>
+            /// <para>The facial recognition data.</para>
             /// </summary>
             [NameInMap("FaceVerifyData")]
             [Validation(Required=false)]
             public List<DescribeListFaceVerifyDataResponseBodyMonitorDataFaceVerifyData> FaceVerifyData { get; set; }
             public class DescribeListFaceVerifyDataResponseBodyMonitorDataFaceVerifyData : TeaModel {
                 /// <summary>
-                /// <para>Verification statistics time.</para>
+                /// <para>The authentication statistics time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-10-16T00:00:00.000Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string ConDate { get; set; }
 
                 /// <summary>
-                /// <para>Number of failed verifications.</para>
+                /// <para>The number of authentication-failed transactions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string FailCnt { get; set; }
 
                 /// <summary>
-                /// <para>Verification scheme.</para>
+                /// <para>The authentication solution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Liveness</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Scene ID.</para>
+                /// <para>The scene ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000011644</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string SceneId { get; set; }
 
                 /// <summary>
-                /// <para>Number of successful verifications.</para>
+                /// <para>The number of authentication-passed transactions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string SuccCnt { get; set; }
 
                 /// <summary>
-                /// <para>Total number of verifications.</para>
+                /// <para>The total number of authentication requests.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EBD373EA-07FC-50BC-906F-B8950B6ED462</para>

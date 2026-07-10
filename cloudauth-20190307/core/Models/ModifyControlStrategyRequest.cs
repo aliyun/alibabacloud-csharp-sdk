@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyControlStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>List of security alarm rules.</para>
+        /// <para>The list of security alert rules.</para>
         /// </summary>
         [NameInMap("ControlStrategyList")]
         [Validation(Required=false)]
         public List<ModifyControlStrategyRequestControlStrategyList> ControlStrategyList { get; set; }
         public class ModifyControlStrategyRequestControlStrategyList : TeaModel {
             /// <summary>
-            /// <para>API name, same as <b>ProductCode</b>.</para>
+            /// <para>The API name, which is the same as <b>ProductCode</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ID_PRO</para>
@@ -27,15 +27,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ApiName { get; set; }
 
             /// <summary>
-            /// <para>Rule configuration type:</para>
+            /// <para>The rule configuration type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>QPS</b>: QPS greater than</description></item>
-            /// <item><description><b>SUCCESS_RATE_5_MIN</b>: Success rate in the last 5 minutes less than</description></item>
-            /// <item><description><b>RESP_TIME_5_MIN</b>: Average response time in the last 5 minutes greater than</description></item>
-            /// <item><description><b>AMOUNT_RISE</b>: Call volume growth ratio greater than</description></item>
-            /// <item><description><b>AMOUNT_FALL</b>: Call volume decline ratio less than</description></item>
-            /// <item><description><b>PASSED_RATE_1_HOUR</b>: Verification consistency rate in the last hour less than</description></item>
-            /// <item><description><b>PARAM_ERROR_RATE_1_HOUR</b>: Parameter error rate in the last hour greater than</description></item>
+            /// <item><description><b>SUCCESS_RATE_5_MIN</b>: success rate in the last 5 minutes less than</description></item>
+            /// <item><description><b>RESP_TIME_5_MIN</b>: average response time in the last 5 minutes greater than</description></item>
+            /// <item><description><b>AMOUNT_RISE</b>: call volume increase compared to the previous period greater than</description></item>
+            /// <item><description><b>AMOUNT_FALL</b>: call volume decrease compared to the previous period less than</description></item>
+            /// <item><description><b>PASSED_RATE_1_HOUR</b>: verification consistency rate in the last hour less than</description></item>
+            /// <item><description><b>PARAM_ERROR_RATE_1_HOUR</b>: parameter error rate in the last hour greater than.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>Rule ID.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>38</para>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Status:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b>: Disabled</description></item>
-            /// <item><description><b>normal</b>: Enabled</description></item>
+            /// <item><description><b>disabled</b>: Disabled.</description></item>
+            /// <item><description><b>normal</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Alarm threshold for the rule.</para>
+            /// <para>The alert threshold of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Product type, currently only supports <b>ANT_CLOUD_AUTH</b> (Financial-grade Real Person), all others are phased out.</para>
+        /// <para>The product type. Currently, only <b>ANT_CLOUD_AUTH</b> (financial-grade ID Verification) is supported. All other types have been discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANT_CLOUD_AUTH</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Region ID of the intelligent access gateway instance.</para>
+        /// <para>The region ID of the Smart Access Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

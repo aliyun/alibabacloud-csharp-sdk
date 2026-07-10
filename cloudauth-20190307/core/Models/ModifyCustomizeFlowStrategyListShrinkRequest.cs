@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyCustomizeFlowStrategyListShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Product type, currently only supports <b>ANT_CLOUD_AUTH</b> (Financial-grade real person), all others have been phased out.</para>
+        /// <para>The product type. Currently, only <b>ANT_CLOUD_AUTH</b> (financial-grade ID Verification) is supported. All other types have been discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANT_CLOUD_AUTH</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Strategy list.</para>
+        /// <para>The policy list.</para>
         /// </summary>
         [NameInMap("StrategyObject")]
         [Validation(Required=false)]

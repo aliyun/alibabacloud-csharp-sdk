@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeListAntCloudAuthScenesRequest : TeaModel {
         /// <summary>
-        /// <para>Scenario ID.</para>
+        /// <para>The scene ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000xxxx</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class AIGCFaceVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Base64 encoded photo.</para>
+        /// <para>The Base64-encoded photo.</para>
         /// <remarks>
-        /// <para>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
+        /// <para>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceContrastPicture { get; set; }
 
         /// <summary>
-        /// <para>Portrait address, accessible via public HTTP or HTTPS link.</para>
+        /// <para>The URL of the face image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// <remarks>
-        /// <para>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
+        /// <para>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceContrastPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Authorized OSS bucket name.</para>
+        /// <para>The name of the authorized OSS bucket.</para>
         /// <remarks>
-        /// <para>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
+        /// <para>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>Authorized OSS file name.</para>
+        /// <para>The file name in the authorized OSS bucket.</para>
         /// <remarks>
-        /// <para>Choose one of the three ways to input images: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
+        /// <para>You can use one of the following methods to pass in the image: FaceContrastPicture, FaceContrastPictureUrl, or OSS.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OssObjectName { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier defined by the client side, used for subsequent troubleshooting. The value should be a combination of letters and numbers with a maximum length of 32 characters, please ensure its uniqueness.</para>
+        /// <para>The custom business unique identifier on the client side, used for subsequent troubleshooting. The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string OuterOrderNo { get; set; }
 
         /// <summary>
-        /// <para>Product solution</para>
+        /// <para>The product plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LR_FR_AIGC</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</para>
+        /// <para>The ID of the verification scenario. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000xxxx</para>

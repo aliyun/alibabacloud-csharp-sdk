@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyTokenRequest : TeaModel {
         /// <summary>
-        /// <para>Verification ID. A unique ID that identifies a verification task, not exceeding 64 characters. For a single verification task, the system supports unlimited submissions until the final verification is passed and the task is completed.</para>
+        /// <para>The authentication ID. A unique ID that identifies an authentication task. The value can be up to 64 characters in length. For a single authentication task, the system supports unlimited submissions until the authentication is passed and the task is completed.</para>
         /// <remarks>
-        /// <para>Different BizIds are required for different verification tasks.</para>
+        /// <para>Use a different BizId for each different authentication task.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Identifier for the business scenario using the real person authentication service. Please refer to <a href="https://help.aliyun.com/document_detail/127885.html">Business Settings</a> and complete the creation in the console first.</para>
+        /// <para>The business scenario identifier for using the ID Verification service. Create one in the console first. For more information, see <a href="https://help.aliyun.com/document_detail/127885.html">Business settings</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Callback seed.</para>
+        /// <para>The callback seed.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CallbackSeed { get; set; }
 
         /// <summary>
-        /// <para>Callback URL.</para>
+        /// <para>The callback URL.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>HTTP or HTTPS link to the retained portrait photo.</para>
+        /// <para>The HTTP or HTTPS URL of the retained face photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FaceRetainedImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Redirect URL for failed verification.</para>
+        /// <para>The redirect URL upon verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string FailedRedirectUrl { get; set; }
 
         /// <summary>
-        /// <para>HTTP or HTTPS link to the national emblem side of the ID card image.</para>
+        /// <para>The HTTP or HTTPS URL of the national emblem side of the ID card image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardBackImageUrl { get; set; }
 
         /// <summary>
-        /// <para>HTTP or HTTPS link to the portrait side of the ID card image.</para>
+        /// <para>The HTTP or HTTPS URL of the portrait side of the ID card image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardFrontImageUrl { get; set; }
 
         /// <summary>
-        /// <para>ID card number.</para>
+        /// <para>The ID card number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330100xxxxxxxxxxxx</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdCardNumber { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>张三</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Redirect URL upon successful verification.</para>
+        /// <para>The redirect URL upon successful verification.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string PassedRedirectUrl { get; set; }
 
         /// <summary>
-        /// <para>ID of the end user, such as the account ID of the end user.</para>
+        /// <para>The ID of the end user, such as the account ID of the end user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user111</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>User IP.</para>
+        /// <para>The IP address of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.<em><b>.</b></em></para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserIp { get; set; }
 
         /// <summary>
-        /// <para>User phone number.</para>
+        /// <para>The phone number of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>187********</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserPhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>User registration time. Expressed in timestamp format, unit: milliseconds.</para>
+        /// <para>The registration time of the user. Specify the value in UNIX timestamp format. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1577808000000</para>

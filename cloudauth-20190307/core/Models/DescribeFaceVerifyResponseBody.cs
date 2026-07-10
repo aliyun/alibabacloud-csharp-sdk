@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeFaceVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 indicates success, other values indicate failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information</para>
+        /// <para>The returned result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeFaceVerifyResponseBodyResultObject ResultObject { get; set; }
         public class DescribeFaceVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Device risk label.</para>
+            /// <para>The device risk label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ROOT,VPN,HOOK</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeviceRisk { get; set; }
 
             /// <summary>
-            /// <para>Device token.</para>
+            /// <para>The device token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>McozS1ZWRcRZStlERcZZo_QOytx5jcgZoZJEoRLOxxxxxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeviceToken { get; set; }
 
             /// <summary>
-            /// <para>Information about the authenticated subject, usually empty in general authentication scenarios.</para>
+            /// <para>The identity information of the verification subject. This field is empty in common verification scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IdentityInfo { get; set; }
 
             /// <summary>
-            /// <para>Attachment information of the authenticated subject, mainly image materials. JSON format, see example below.</para>
+            /// <para>The supplementary material information of the verification subject, primarily image-based materials. The value is in JSON format. See the example below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;pictureUrl&quot;: &quot;<a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg%22,%22ossBucketName">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg&quot;,&quot;ossBucketName</a>&quot;: &quot;cn-shanghai-aliyun-cloudauth-1260051251634779&quot;,&quot;ossObjectName&quot;: &quot;verify/1260051251634779/6ba7bcfccf33f56cdb44ed086f36ce3e0.jpeg&quot;}}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string MaterialInfo { get; set; }
 
             /// <summary>
-            /// <para>Whether it passed, T for pass, F for fail.</para>
+            /// <para>Indicates whether the verification is passed. A value of T indicates passed. A value of F indicates not passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>T</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Description of the authentication result. For details, see the SubCode explanation below.</para>
+            /// <para>The verification result description. For more information, see the SubCode description below.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>Whether the response was successful.</para>
+            /// <para>Indicates whether the response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -117,13 +117,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Success { get; set; }
 
             /// <summary>
-            /// <para>Records the identity information and corresponding encoding entered by the user under the rare character mode. The returned data is a JSON formatted string, which will be an empty string if there are no rare characters in the name.</para>
+            /// <para>The identity information and corresponding encoding entered by the user in rare character mode. The value is a JSON-formatted string. An empty string is returned if the name does not contain rare characters.</para>
             /// <list type="bullet">
-            /// <item><description><para>name: Refers to the name entered by the user.</para>
+            /// <item><description><para>name: the name entered by the user.</para>
             /// </description></item>
-            /// <item><description><para>verifyName: Refers to the final name encoding after verification. For example, if a rare character is verified through transcoding: “Mr. Wang”, the actual verified name is “Wang Xiansheng”.</para>
+            /// <item><description><para>verifyName: the final name encoding that passed verification. For example, if a rare character is verified through transcoding: &quot;王先生&quot;, the actual verified name is &quot;王先升&quot;.</para>
             /// </description></item>
-            /// <item><description><para>number: Refers to the identification number entered by the user.</para>
+            /// <item><description><para>number: the ID number entered by the user.</para>
             /// </description></item>
             /// </list>
             /// 

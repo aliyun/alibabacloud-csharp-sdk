@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyResultRequest : TeaModel {
         /// <summary>
-        /// <para>Authentication ID. A unique ID that identifies an authentication task, not exceeding 64 characters. For a single authentication task, the system supports an unlimited number of submissions until the final authentication is successful and the task is completed. &gt; You need to use a different BizId for each new authentication task.</para>
+        /// <para>The verification ID. A unique ID that identifies a verification task. The value can be up to 64 characters in length. For a single verification task, the system supports unlimited submissions until the verification is passed and the task is completed.</para>
+        /// <remarks>
+        /// <para>Use a different BizId for each verification task.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Business scenario identifier for real-person authentication service</para>
+        /// <para>The business scenario identifier of the ID Verification service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Id2MetaPeriodVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>ID number:</para>
+        /// <para>The ID card number.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is <c>normal</c>: Enter the plain text of the ID number.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>md5</c>:
-        /// The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</description></item>
+        /// <item><description>If paramType is set to normal, enter the ID card number in plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, the value is in the following format: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,10 +24,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: Unencrypted.</description></item>
-        /// <item><description>md5: MD5 encrypted.</description></item>
+        /// <item><description>normal: not encrypted.</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,10 +38,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> = <c>normal</c>: Enter the plain text of the name.</description></item>
-        /// <item><description>When <c>paramType</c> = <c>md5</c>: The first character of the name MD5 encrypted (32 lowercase MD5) + the rest of the name in plain text.</description></item>
+        /// <item><description>paramType = normal: enter the name in plaintext.</description></item>
+        /// <item><description>paramType = md5: the first character of the name is MD5-encrypted (32-bit lowercase MD5) + the remaining characters of the name in plaintext.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>End date of ID validity, format: YYYYMMDD</para>
+        /// <para>The expiration date of the ID card validity period. Format: YYYYMMDD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20301001</para>
@@ -63,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ValidityEndDate { get; set; }
 
         /// <summary>
-        /// <para>Start date of ID validity, format: YYYYMMDD</para>
+        /// <para>The start date of the ID card validity period. Format: YYYYMMDD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20201001</para>

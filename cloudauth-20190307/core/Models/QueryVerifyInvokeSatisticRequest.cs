@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryVerifyInvokeSatisticRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>End date of the query.</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1761926399999</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>List of product codes to query. Please refer to the productCode under the corresponding ProductType.</para>
+        /// <para>The list of product codes to query. For more information, refer to the productCode under the corresponding ProductType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_PRO</para>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductProgramList { get; set; }
 
         /// <summary>
-        /// <para>Product type:</para>
+        /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FINANCE_VERIFY</b>: Financial-grade real-person verification</description></item>
-        /// <item><description><b>SMART_VERIFY</b>: Enhanced real-person verification (discontinued)</description></item>
-        /// <item><description><b>FACE_VERIFY</b>: Real-person verification (discontinued)</description></item>
+        /// <item><description><b>FINANCE_VERIFY</b>: financial-grade ID Verification</description></item>
+        /// <item><description><b>SMART_VERIFY</b>: enhanced ID Verification (discontinued)</description></item>
+        /// <item><description><b>FACE_VERIFY</b>: ID Verification (discontinued).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>List of application scenarios.</para>
+        /// <para>The list of common scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneIdList { get; set; }
 
         /// <summary>
-        /// <para>Start date of the query.</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1743436800000</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? StartDate { get; set; }
 
         /// <summary>
-        /// <para>Statistics dimension:</para>
+        /// <para>The statistical dimension. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>day</b>: daily</description></item>
-        /// <item><description><b>month</b>: monthly</description></item>
+        /// <item><description><b>month</b>: monthly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

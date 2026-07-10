@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryControlStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Product type, currently only supports ANT_CLOUD_AUTH (financial-grade real person), all others have been phased out.</para>
+        /// <para>The product type. Currently, only ANT_CLOUD_AUTH (financial-grade ID Verification) is supported. All other product types have been discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANT_CLOUD_AUTH</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

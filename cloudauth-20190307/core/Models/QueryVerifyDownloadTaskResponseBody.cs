@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryVerifyDownloadTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Whether the download task is completed:</para>
+        /// <para>Indicates whether the download task is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Completed</description></item>
-        /// <item><description><b>false</b>: Not completed</description></item>
+        /// <item><description><b>true</b>: Complete.</description></item>
+        /// <item><description><b>false</b>: Not complete.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? Finish { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</para>
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Task status:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: File generation in progress</description></item>
-        /// <item><description><b>2</b>: File generation completed</description></item>
-        /// <item><description><b>3</b>: File generation failed</description></item>
+        /// <item><description><b>1</b>: The file is being generated.</description></item>
+        /// <item><description><b>2</b>: The file is generated.</description></item>
+        /// <item><description><b>3</b>: The file failed to be generated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>Download URL.</para>
+        /// <para>The download URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://xxx/xxx.csv">http://xxx/xxx.csv</a></para>

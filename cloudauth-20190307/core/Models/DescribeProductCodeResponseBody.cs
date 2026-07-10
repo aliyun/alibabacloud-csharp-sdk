@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeProductCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current query page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>List of product code information.</para>
+        /// <para>The list of product code information.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeProductCodeResponseBodyItems> Items { get; set; }
         public class DescribeProductCodeResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Product code.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ID_PRO</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>Name corresponding to the product code.</para>
+            /// <para>The name corresponding to the product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>APP认证</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Number of products per page.</para>
+        /// <para>The number of products displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7FBBADA3-9A66-5759-8AF8-2F99F5BE13F7</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of returned results.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

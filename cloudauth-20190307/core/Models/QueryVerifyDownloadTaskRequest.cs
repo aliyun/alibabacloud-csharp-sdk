@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryVerifyDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Download task ID.</para>
+        /// <para>The download task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202411194002618</para>

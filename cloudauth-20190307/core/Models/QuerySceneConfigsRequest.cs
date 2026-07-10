@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QuerySceneConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>Scene type.</para>
+        /// <para>The scenario type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

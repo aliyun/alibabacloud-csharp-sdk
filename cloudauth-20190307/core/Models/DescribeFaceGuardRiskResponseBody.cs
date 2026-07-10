@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeFaceGuardRiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code, <b>200</b> indicates successful response from the interface.</para>
+        /// <para>The response code. <b>200</b> indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6163397-15C5-419C-9ACC-B7C83E0B4C10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeFaceGuardRiskResponseBodyResultObject ResultObject { get; set; }
         public class DescribeFaceGuardRiskResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Unique real-person authentication identifier.</para>
+            /// <para>The unique identifier for ID Verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha43d9cabd52d370d9f4cca9468f71e</para>
@@ -56,12 +56,19 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public string CertifyId { get; set; }
 
+            /// <summary>
+            /// <para>The device risk probability predicted by the device assistant algorithm. A higher score indicates a higher device risk.</para>
+            /// <para>Value range: 0 to 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("GuardRiskScore")]
             [Validation(Required=false)]
             public double? GuardRiskScore { get; set; }
 
             /// <summary>
-            /// <para>Extended information, in JSON format. (Customized return based on tenant requirements)</para>
+            /// <para>The extended information in JSON format. The returned content is customized based on tenant requirements.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -80,11 +87,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string RiskExtends { get; set; }
 
             /// <summary>
-            /// <para>Device risk tags.</para>
+            /// <para>The device risk labels.</para>
             /// <list type="bullet">
-            /// <item><description><para>Multiple device risk tags are separated by commas (,). For example, “ROOT,VPN,HOOK”,</para>
+            /// <item><description><para>Multiple device risk labels are separated by commas (,), such as &quot;ROOT,VPN,HOOK&quot;.</para>
             /// </description></item>
-            /// <item><description><para>For more information about device risk tags and their meanings, please refer to the official documentation on Face Guard Tag Descriptions.</para>
+            /// <item><description><para>For more information about device risk labels and their descriptions, see the Face Guard label description in the official documentation.</para>
             /// </description></item>
             /// </list>
             /// 

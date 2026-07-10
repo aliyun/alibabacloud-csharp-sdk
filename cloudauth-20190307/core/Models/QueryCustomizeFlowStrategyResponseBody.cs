@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryCustomizeFlowStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Processing result.</para>
+        /// <para>The processing result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string AccumulateKey { get; set; }
 
             /// <summary>
-            /// <para>Flow control statistical window, unit: <b>minutes</b>.</para>
+            /// <para>The rate limiting statistical window. Unit: <b>minutes</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string AccumulateWindow { get; set; }
 
             /// <summary>
-            /// <para>API name, same as <b>ProductCode</b>.</para>
+            /// <para>The API name, which is the same as <b>ProductCode</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ID_PRO</para>
@@ -89,12 +89,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ApiName { get; set; }
 
             /// <summary>
-            /// <para>Flow type:</para>
+            /// <para>The flow type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ACCUMULATE</b>: ID card reappears</description></item>
-            /// <item><description><b>PASSED_RATE</b>: Pass rate less than</description></item>
-            /// <item><description><b>SUB_CODE_205</b>: Authentication failed and liveness attack 205 ratio greater than</description></item>
-            /// <item><description><b>SUB_CODE_206</b>: Authentication failed and liveness attack 206 ratio greater than</description></item>
+            /// <item><description><b>ACCUMULATE</b>: repeated occurrence of an ID card number.</description></item>
+            /// <item><description><b>PASSED_RATE</b>: pass rate less than the threshold.</description></item>
+            /// <item><description><b>SUB_CODE_205</b>: authentication failed and the proportion of liveness attack 205 is greater than the threshold.</description></item>
+            /// <item><description><b>SUB_CODE_206</b>: authentication failed and the proportion of liveness attack 206 is greater than the threshold.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string FlowType { get; set; }
 
             /// <summary>
-            /// <para>Rule ID.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234822</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Operation.</para>
+            /// <para>The operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>match</para>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>Status:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b>: Disabled</description></item>
-            /// <item><description><b>normal</b>: Enabled</description></item>
+            /// <item><description><b>disabled</b>: Disabled.</description></item>
+            /// <item><description><b>normal</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Threshold.</para>
+            /// <para>The threshold.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Threshold { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>126005125163xxxx</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Whether the response was successful.</para>
+        /// <para>Indicates whether the response is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryControlStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The response code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>B506328A-D84B-4750-82C7-6A207C585CF1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Processing result.</para>
+        /// <para>The processing result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public List<QueryControlStrategyResponseBodyResultObject> ResultObject { get; set; }
         public class QueryControlStrategyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>API name, same as the <b>ProductCode</b> of the authentication interface.</para>
+            /// <para>The API name, which is the same as the ProductCode of the verification operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ID_PRO</para>
@@ -57,15 +57,15 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ApiName { get; set; }
 
             /// <summary>
-            /// <para>Rule configuration type:</para>
+            /// <para>The rule configuration type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>QPS</b>: QPS greater than</description></item>
-            /// <item><description><b>SUCCESS_RATE_5_MIN</b>: Success rate in the last 5 minutes less than</description></item>
-            /// <item><description><b>RESP_TIME_5_MIN</b>: Average response time in the last 5 minutes greater than</description></item>
-            /// <item><description><b>AMOUNT_RISE</b>: Call volume growth ratio greater than</description></item>
-            /// <item><description><b>AMOUNT_FALL</b>: Call volume decline ratio less than</description></item>
-            /// <item><description><b>PASSED_RATE_1_HOUR</b>: Verification consistency rate in the last hour less than</description></item>
-            /// <item><description><b>PARAM_ERROR_RATE_1_HOUR</b>: Parameter error rate in the last hour greater than</description></item>
+            /// <item><description><b>SUCCESS_RATE_5_MIN</b>: success rate in the last 5 minutes less than</description></item>
+            /// <item><description><b>RESP_TIME_5_MIN</b>: average response time in the last 5 minutes greater than</description></item>
+            /// <item><description><b>AMOUNT_RISE</b>: call volume increase compared to the previous period greater than</description></item>
+            /// <item><description><b>AMOUNT_FALL</b>: call volume decrease compared to the previous period less than</description></item>
+            /// <item><description><b>PASSED_RATE_1_HOUR</b>: verification consistency rate in the last hour less than</description></item>
+            /// <item><description><b>PARAM_ERROR_RATE_1_HOUR</b>: parameter error rate in the last hour greater than.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>Rule ID.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>234822</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Status:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b>: Disabled</description></item>
-            /// <item><description><b>normal</b>: Enabled</description></item>
+            /// <item><description><b>disabled</b>: Disabled.</description></item>
+            /// <item><description><b>normal</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Alarm threshold for rule configuration.</para>
+            /// <para>The alert threshold for configure alerting of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.9</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public double? Threshold { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>126005125163xxxx</para>

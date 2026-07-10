@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Vehicle5ItemQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0D******</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public Vehicle5ItemQueryResponseBodyResultObject ResultObject { get; set; }
         public class Vehicle5ItemQueryResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification result code:</para>
+            /// <para>The verification result code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Found (charged)</description></item>
-            /// <item><description><b>3</b>: No record found (not charged)</description></item>
+            /// <item><description><b>1</b>: Match found (billable).</description></item>
+            /// <item><description><b>3</b>: No record found (not billable).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Vehicle information</para>
+            /// <para>The vehicle information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateAntCloudAuthSceneRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable binding of the mini program:</para>
+        /// <para>Specifies whether to enable mini program binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: Enable</description></item>
-        /// <item><description><b>N (default)</b>: Not enabled</description></item>
+        /// <item><description><b>Y</b>: enabled</description></item>
+        /// <item><description><b>N (default)</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BindMiniProgram { get; set; }
 
         /// <summary>
-        /// <para>Content of the uploaded verification file.</para>
+        /// <para>The content of the uploaded verification file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>774c4aab45981ff4a86cde9255a11xxx</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CheckFileBody { get; set; }
 
         /// <summary>
-        /// <para>Name of the uploaded verification file.</para>
+        /// <para>The name of the uploaded verification file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试.txt</para>
@@ -43,12 +43,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string CheckFileName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable enhanced device risk detection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Y</b>: enabled</description></item>
+        /// <item><description><b>N</b>: disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>N</para>
+        /// </summary>
         [NameInMap("DeviceRiskPlus")]
         [Validation(Required=false)]
         public string DeviceRiskPlus { get; set; }
 
         /// <summary>
-        /// <para>Mini program name.</para>
+        /// <para>The mini program name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试APP</para>
@@ -58,11 +68,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string MiniProgramName { get; set; }
 
         /// <summary>
-        /// <para>Binding platform for the mini program:</para>
+        /// <para>The mini program platform to bind. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>WECHAT</b>: WeChat</description></item>
         /// <item><description><b>ALIPAY</b>: Alipay</description></item>
-        /// <item><description><b>TIKTOK</b>: TikTok</description></item>
+        /// <item><description><b>TIKTOK</b>: TikTok.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,16 +82,28 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
+        /// <summary>
+        /// <para>The number of face photos for evidence storage (1-5).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ReturnPicCount")]
         [Validation(Required=false)]
         public long? ReturnPicCount { get; set; }
 
+        /// <summary>
+        /// <para>The duration of the evidence storage video, in seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ReturnVideoLength")]
         [Validation(Required=false)]
         public long? ReturnVideoLength { get; set; }
 
         /// <summary>
-        /// <para>Scene name.</para>
+        /// <para>The scenario name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,10 +114,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>Whether to deliver the files generated from the authentication to the customer\&quot;s OSS:</para>
+        /// <para>Specifies whether to deliver the files generated during authentication to the customer\&quot;s OSS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: Yes</description></item>
-        /// <item><description><b>N</b>: No</description></item>
+        /// <item><description><b>Y</b>: Yes.</description></item>
+        /// <item><description><b>N</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

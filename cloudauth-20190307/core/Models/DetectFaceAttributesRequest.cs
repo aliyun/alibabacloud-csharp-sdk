@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DetectFaceAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>Identifier for the business scenario using real-person authentication services.</para>
+        /// <para>The business scenario identifier for the ID Verification service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RPBasicTest</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The photo to be detected, see the instructions for uploading image addresses for format description. A maximum of 5 faces can be detected in a single image.</para>
+        /// <para>The photo to be detected. For format details, see the notes on uploading image addresses. A maximum of 5 faces can be detected in a single image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

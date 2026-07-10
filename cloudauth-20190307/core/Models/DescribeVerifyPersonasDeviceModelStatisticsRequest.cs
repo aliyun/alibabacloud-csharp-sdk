@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyPersonasDeviceModelStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>Product Code.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_PRO</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Scene ID.</para>
+        /// <para>The scene ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000015316</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Service type:</para>
+        /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>antcloudauth</b>: Financial-grade real-person authentication.</description></item>
-        /// <item><description><b>cloudauthst</b> (discontinued): Enhanced real-person authentication.</description></item>
+        /// <item><description><b>antcloudauth</b>: financial-grade ID Verification.</description></item>
+        /// <item><description><b>cloudauthst</b> (discontinued): enhanced ID Verification.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Time range for the query, indicating how many days back.</para>
+        /// <para>The time range for the query, specified as the number of preceding days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryVerifyInvokeSatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code, <b>200</b> indicates a successful response.</para>
+        /// <para>The response code. <b>200</b> indicates a successful response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>List of returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<QueryVerifyInvokeSatisticResponseBodyItems> Items { get; set; }
         public class QueryVerifyInvokeSatisticResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>List of statistical data.</para>
+            /// <para>The list of statistics data.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryVerifyInvokeSatisticResponseBodyItemsData> Data { get; set; }
             public class QueryVerifyInvokeSatisticResponseBodyItemsData : TeaModel {
                 /// <summary>
-                /// <para>Number of occurrences of the statistic.</para>
+                /// <para>The count of the statistical value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public string StatisticsCount { get; set; }
 
                 /// <summary>
-                /// <para>ProductCode。</para>
+                /// <para>The product code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ID_PRO</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             }
 
             /// <summary>
-            /// <para>Statistics date.</para>
+            /// <para>The statistics date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-10-16</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FA2C773-47DB-4156-B1EE-5B047321A939</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the response was successful.</para>
+        /// <para>Indicates whether the response is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeListFaceVerifyInfosRequest : TeaModel {
         /// <summary>
-        /// <para>Verification ID.</para>
+        /// <para>The authentication ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shs414a8b392a3a338abe0504c75c056</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyId { get; set; }
 
         /// <summary>
-        /// <para>Query the end time of the verification.</para>
+        /// <para>The end time of the authentication query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1760716800000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? GmtEnd { get; set; }
 
         /// <summary>
-        /// <para>Query the start time of the verification.</para>
+        /// <para>The start time of the authentication query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1760112000000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? GmtStart { get; set; }
 
         /// <summary>
-        /// <para>Pagination parameter: current page number.</para>
+        /// <para>The current page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page for paginated queries. Maximum value: 100, default value: 10.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Scene ID.</para>
+        /// <para>The scene ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000009699</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Verification status:</para>
+        /// <para>The authentication status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Verification passed.</description></item>
-        /// <item><description><b>2</b>: Verification failed.</description></item>
+        /// <item><description><b>1</b>: Authentication passed.</description></item>
+        /// <item><description><b>2</b>: Authentication failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

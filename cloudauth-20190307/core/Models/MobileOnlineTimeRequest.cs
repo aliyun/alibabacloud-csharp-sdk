@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class MobileOnlineTimeRequest : TeaModel {
         /// <summary>
-        /// <para>Mobile number:</para>
+        /// <para>The phone number. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <c>paramType</c> is <c>normal</c>: provide the plaintext mobile number.</description></item>
-        /// <item><description>When <c>paramType</c> is <c>md5</c>: provide the encrypted mobile number.</description></item>
+        /// <item><description>If paramType is set to normal, pass in the phone number in plaintext.</description></item>
+        /// <item><description>If paramType is set to md5, pass in the phone number in ciphertext.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: unencrypted.</description></item>
-        /// <item><description>md5: md5 encrypted.</description></item>
+        /// <item><description>normal: not encrypted.</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

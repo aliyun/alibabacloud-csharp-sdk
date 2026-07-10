@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateVerifySettingRequest : TeaModel {
         /// <summary>
-        /// <para>Verification scenario name, supporting Chinese, English, numbers, and hyphens (-), with a maximum of 20 characters.</para>
+        /// <para>The name of the verification scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizName { get; set; }
 
         /// <summary>
-        /// <para>Verification scenario identifier, supporting English letters, numbers, and hyphens (-), with a maximum of 20 characters.</para>
+        /// <para>The identifier of the verification scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Whether to use the system\&quot;s default guide page.</para>
+        /// <para>Specifies whether to use the default system guide page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? GuideStep { get; set; }
 
         /// <summary>
-        /// <para>Whether to use the system\&quot;s default authorization page.</para>
+        /// <para>Specifies whether to use the default system authorization page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? PrivacyStep { get; set; }
 
         /// <summary>
-        /// <para>Whether to use the system\&quot;s default result page.</para>
+        /// <para>Specifies whether to use the default system result page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? ResultStep { get; set; }
 
         /// <summary>
-        /// <para>The name of the authentication solution to use, such as <b>RPBasic</b>, <b>RPBioOnly</b>, etc. For all supported authentication solutions, see <a href="https://help.aliyun.com/document_detail/127521.html">Authentication Solutions</a>.</para>
+        /// <para>The name of the verification solution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

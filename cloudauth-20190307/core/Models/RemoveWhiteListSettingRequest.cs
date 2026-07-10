@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class RemoveWhiteListSettingRequest : TeaModel {
         /// <summary>
-        /// <para>IDs of the whitelist to be deleted in bulk.</para>
+        /// <para>The IDs of the whitelists to delete in batch.</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<long?> Ids { get; set; }
 
         /// <summary>
-        /// <para>ServiceCode for the real person cloud product, only value: <b>antcloudauth</b>.</para>
+        /// <para>The ServiceCode of the ID Verification service. Set this parameter to <b>antcloudauth</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>antcloudauth</para>

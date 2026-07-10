@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeSmartStatisticsPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Returned data list.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeSmartStatisticsPageListResponseBodyItems> Items { get; set; }
         public class DescribeSmartStatisticsPageListResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Date. Format: <i>month/day</i></para>
+            /// <para>The date. Format: <i>month/day</i>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11/8</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Date { get; set; }
 
             /// <summary>
-            /// <para>Pass rate.</para>
+            /// <para>The pass rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string PassRate { get; set; }
 
             /// <summary>
-            /// <para>Product solution Code, please refer to the Enhanced Real Person Help Documentation.</para>
+            /// <para>The product solution code. For more information, refer to the enhanced ID Verification documentation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SMART_VERIFY</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>Scene ID.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20**40</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// <para>Scene name.</para>
+            /// <para>The scene name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>****实名认证</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>Number of successful calls.</para>
+            /// <para>The number of successful calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>Total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Number of items displayed per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96943***4E39F805</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

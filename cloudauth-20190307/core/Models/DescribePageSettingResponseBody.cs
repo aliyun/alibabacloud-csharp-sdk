@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribePageSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>Failure reasons.</para>
+        /// <para>The failure reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public Dictionary<string, object> FailReasons { get; set; }
 
         /// <summary>
-        /// <para>The ID of this request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C58A8581-6A5B-55F1-B2EF-1CEAC97DA181</para>

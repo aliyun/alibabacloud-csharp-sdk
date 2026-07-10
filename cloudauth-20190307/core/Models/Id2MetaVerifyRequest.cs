@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Id2MetaVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>ID number:</para>
+        /// <para>The ID card number.</para>
         /// <para>Note
-        /// Only supports the ID numbers of second-generation resident IDs and Hong Kong, Macao, and Taiwan residence permits.</para>
+        /// Only second-generation resident ID card numbers and Hong Kong, Macao, and Taiwan residence permit numbers are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>When paramType is normal: enter the plaintext ID number.</para>
+        /// <item><description><para>If ParamType is set to normal, enter the ID card number in plaintext.</para>
         /// </description></item>
-        /// <item><description><para>When paramType is md5: first 6 digits of the ID number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID number (plaintext).</para>
+        /// <item><description><para>If ParamType is set to md5, the format is: first 6 digits of the ID card number (plaintext) + date of birth (ciphertext) + last 4 digits of the ID card number (plaintext).</para>
         /// </description></item>
         /// </list>
         /// 
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Encryption method:</para>
+        /// <para>The encryption method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>normal: plaintext, no encryption</para>
+        /// <item><description><para>normal: plaintext without encryption</para>
         /// </description></item>
-        /// <item><description><para>md5: MD5 encryption</para>
+        /// <item><description><para>md5: MD5 encryption.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,11 +46,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>Name:</para>
+        /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description><para>When paramType is normal: enter the plaintext name.</para>
+        /// <item><description><para>If ParamType is set to normal, enter the name in plaintext.</para>
         /// </description></item>
-        /// <item><description><para>When paramType is md5: first character of the name in ciphertext + rest of the name in plaintext.</para>
+        /// <item><description><para>If ParamType is set to md5, the format is: first character of the name (ciphertext) + remaining characters of the name (plaintext).</para>
         /// </description></item>
         /// </list>
         /// 

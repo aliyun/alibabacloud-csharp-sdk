@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Mobile2MetaVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>Phone number:</para>
+        /// <para>The mobile phone number. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When paramType is normal: input the plaintext phone number.</description></item>
-        /// <item><description>When paramType is md5: input the encrypted phone number.</description></item>
+        /// <item><description>If ParamType is set to normal, pass in the mobile phone number in plaintext.</description></item>
+        /// <item><description>If ParamType is set to md5, pass in the MD5-encrypted mobile phone number.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Encryption method:</para>
+        /// <para>The encryption method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>normal: plaintext without encryption</description></item>
-        /// <item><description>md5: MD5 encryption</description></item>
+        /// <item><description>md5: MD5 encryption.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,10 +42,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>Name:</para>
+        /// <para>The name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When paramType is normal: input the plaintext name.</description></item>
-        /// <item><description>When paramType is md5: input the encrypted name.</description></item>
+        /// <item><description>If ParamType is set to normal, pass in the name in plaintext.</description></item>
+        /// <item><description>If ParamType is set to md5, pass in the MD5-encrypted name.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

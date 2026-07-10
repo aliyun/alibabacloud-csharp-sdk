@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateSceneConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Intention authentication configuration, as a JSON string.</para>
+        /// <para>The willingness authentication configuration, in JSON string format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>Scene ID.</para>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Configuration type.</para>
+        /// <para>The configuration type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

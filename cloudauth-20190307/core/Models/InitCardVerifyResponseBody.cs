@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class InitCardVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.
-        /// Important</para>
-        /// <list type="bullet">
-        /// <item><description>This parameter indicates whether the interface was called correctly. For detailed return code descriptions, see the error codes.</description></item>
-        /// <item><description>Business results should be viewed through the fields in ResultObject.</description></item>
-        /// </list>
+        /// <para>The response code. A value of 200 indicates success. Other values indicate failure.</para>
+        /// <remarks>
+        /// <para><b>Important</b> This parameter indicates whether the operation is called correctly. For more information about return codes, see error codes. Check the fields in ResultObject for the business result.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -25,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -35,7 +33,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -45,18 +43,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public InitCardVerifyResponseBodyResultObject ResultObject { get; set; }
         public class InitCardVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification request ID, a unique identifier for the verification service\&quot;s authentication request.</para>
+            /// <para>The verification request ID, which is the unique identifier of the verification service authentication request.</para>
             /// <list type="bullet">
-            /// <item><description><para>When querying the authentication result, the authentication request ID must be provided.</para>
+            /// <item><description><para>You must specify the authentication request ID when you query the authentication result.</para>
             /// </description></item>
-            /// <item><description><para>The CertifyId field is a billing statistics field. To facilitate subsequent bill reconciliation, please retain this field information locally. The CertifyId returned by the initialization interface is valid for 30 minutes and can only be submitted once for authentication. Please apply it within the validity period to avoid reuse.</para>
+            /// <item><description><para>The CertifyId field is used for billing statistics. Save this field locally for future bill reconciliation. The CertifyId returned by the initialization operation is valid for 30 minutes and can be submitted for authentication only once. Use it within the validity period and do not reuse it.</para>
             /// </description></item>
             /// </list>
             /// 

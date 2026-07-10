@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeCloudauthstSceneListRequest : TeaModel {
         /// <summary>
-        /// <para>Product Code</para>
+        /// <para>The commodity code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SMART_CARD</para>

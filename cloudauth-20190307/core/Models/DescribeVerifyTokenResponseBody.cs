@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeVerifyTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>OSS upload token information.</para>
+        /// <para>The OSS upload token information.</para>
         /// </summary>
         [NameInMap("OssUploadToken")]
         [Validation(Required=false)]
         public DescribeVerifyTokenResponseBodyOssUploadToken OssUploadToken { get; set; }
         public class DescribeVerifyTokenResponseBodyOssUploadToken : TeaModel {
             /// <summary>
-            /// <para>OSS file storage bucket.</para>
+            /// <para>The OSS bucket for file storage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloudauth-zhangjiakou-external</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>Access endpoint.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss-cn-zhangjiakou.aliyuncs.com">https://oss-cn-zhangjiakou.aliyuncs.com</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string EndPoint { get; set; }
 
             /// <summary>
-            /// <para>Expiration time. Expressed in timestamp format, unit: milliseconds.</para>
+            /// <para>The expiration time. The value is in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582636610000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>File storage path.</para>
+            /// <para>The file storage path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod/RdNLC@Ox2n-1s7NMt</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The entry link for the original H5 verification scheme, which has been discontinued and no longer supports new integrations. If you need to integrate an H5 verification scheme, it is recommended to use the <a href="https://help.aliyun.com/document_detail/173779.html">PC or mobile H5 web integration solution</a> of financial-grade real-person authentication.</para>
+        /// <para>The entry URL for the legacy H5 authentication scheme. This scheme has been discontinued and no longer accepts new integrations. If you need H5 authentication, use the <a href="https://help.aliyun.com/document_detail/173779.html">PC or mobile H5 web integration scheme</a> of financial-grade ID Verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string VerifyPageUrl { get; set; }
 
         /// <summary>
-        /// <para>The token for this verification, used to link various interfaces in the verification request, valid for 30 minutes.</para>
+        /// <para>The token for this authentication, which is used to connect the various operations in the authentication request. The token is valid for 30 minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c302c0797679457685410ee51a5ba375</para>

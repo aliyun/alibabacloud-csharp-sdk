@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QuerySceneConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Willingness configuration list.</para>
+        /// <para>The list of intent verification configurations.</para>
         /// </summary>
         [NameInMap("sceneConfigs")]
         [Validation(Required=false)]
         public List<QuerySceneConfigsResponseBodySceneConfigs> SceneConfigs { get; set; }
         public class QuerySceneConfigsResponseBodySceneConfigs : TeaModel {
             /// <summary>
-            /// <para>Specific configuration content, in JSON string format.</para>
+            /// <para>The specific configuration content, in JSON string format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;faceCompareMode\&quot;:\&quot;CUSTOM\&quot;,\&quot;certConfigs\&quot;:[{\&quot;index\&quot;:0,\&quot;openVoiceCompare\&quot;:false,\&quot;openCustomizedContent\&quot;:true,\&quot;model\&quot;:\&quot;QA\&quot;}],\&quot;screenEvidence\&quot;:true}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760782820000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760782820000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Configuration ID.</para>
+            /// <para>The configuration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>607</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Scene ID.</para>
+            /// <para>The scenario ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000009045</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// <para>Configuration type.</para>
+            /// <para>The configuration type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VOLUNTARY</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Scene configuration version number.</para>
+            /// <para>The version number of the scenario configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

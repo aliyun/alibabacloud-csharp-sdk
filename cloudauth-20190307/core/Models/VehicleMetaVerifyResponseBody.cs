@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VehicleMetaVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code, <b>200</b> indicates that the API response was successful.</para>
+        /// <para>The return code. <b>200</b> indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FC3D6AC-9FED-4311-8DA7-C4BF4*****</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public VehicleMetaVerifyResponseBodyResultObject ResultObject { get; set; }
         public class VehicleMetaVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification result.</para>
+            /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Consistent (billable)</description></item>
-            /// <item><description>2: Inconsistent (billable)</description></item>
-            /// <item><description>3: No record found (non-billable)</description></item>
+            /// <item><description>1: Consistent (billable).</description></item>
+            /// <item><description>2: Inconsistent (billable).</description></item>
+            /// <item><description>3: No record found (not billable).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

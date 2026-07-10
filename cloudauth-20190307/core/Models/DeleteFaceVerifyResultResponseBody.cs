@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DeleteFaceVerifyResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>Return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DeleteFaceVerifyResultResponseBodyResultObject ResultObject { get; set; }
         public class DeleteFaceVerifyResultResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Unique identifier for real-person authentication.</para>
+            /// <para>The unique identifier for real-person authentication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha58aeae7ea2f5ed069530f58df4e6d</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
-            /// <para>Deletion result. Possible values are as follows:</para>
+            /// <para>The deletion result. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Deletion successful.</description></item>
             /// <item><description>N: Deletion failed.</description></item>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeleteResult { get; set; }
 
             /// <summary>
-            /// <para>Reason for deletion failure</para>
+            /// <para>The reason for deletion failure.</para>
             /// <list type="bullet">
-            /// <item><description>NOT_DELETE_REPEATEDLY: Cannot be deleted repeatedly</description></item>
-            /// <item><description>NEED_QUERY_VERIFY_RESULT: Need to query the verification result first, then delete</description></item>
+            /// <item><description>NOT_DELETE_REPEATEDLY: The data cannot be deleted repeatedly.</description></item>
+            /// <item><description>NEED_QUERY_VERIFY_RESULT: You must query the authentication result before deleting.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

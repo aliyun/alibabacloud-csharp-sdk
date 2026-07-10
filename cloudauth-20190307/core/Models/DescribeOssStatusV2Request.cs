@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeOssStatusV2Request : TeaModel {
         /// <summary>
-        /// <para>ServiceCode for Real Person Cloud products:</para>
+        /// <para>The ServiceCode of the ID Verification product. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>antcloudauth</b>: Financial-grade real person authentication</description></item>
-        /// <item><description><b>cloudauthst (discontinued)</b>: Enhanced real person authentication</description></item>
+        /// <item><description><b>antcloudauth</b>: financial-grade ID Verification.</description></item>
+        /// <item><description><b>cloudauthst (discontinued)</b>: enhanced ID Verification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Visitor\&quot;s source IP address.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120.25.41.25</para>

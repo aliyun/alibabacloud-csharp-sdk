@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class ModifyCustomizeFlowStrategyListRequest : TeaModel {
         /// <summary>
-        /// <para>Product type, currently only supports <b>ANT_CLOUD_AUTH</b> (Financial-grade real person), all others have been phased out.</para>
+        /// <para>The product type. Currently, only <b>ANT_CLOUD_AUTH</b> (financial-grade ID Verification) is supported. All other types have been discontinued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANT_CLOUD_AUTH</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Strategy list.</para>
+        /// <para>The policy list.</para>
         /// </summary>
         [NameInMap("StrategyObject")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string AccumulateKey { get; set; }
 
             /// <summary>
-            /// <para>Flow control statistical window size, in minutes.</para>
+            /// <para>The size of the rate limiting statistical window, in minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AccumulateWindow { get; set; }
 
             /// <summary>
-            /// <para>API name, same as <b>ProductCode</b>.</para>
+            /// <para>The API name, which is the same as <b>ProductCode</b>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -60,12 +60,12 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string ApiName { get; set; }
 
             /// <summary>
-            /// <para>Flow type:</para>
+            /// <para>The flow type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ACCUMULATE</b>: Repeated appearance of ID card</description></item>
-            /// <item><description><b>PASSED_RATE</b>: Pass rate less than</description></item>
-            /// <item><description><b>SUB_CODE_205</b>: Authentication failed and liveness attack 205 ratio greater than</description></item>
-            /// <item><description><b>SUB_CODE_206</b>: Authentication failed and liveness attack 206 ratio greater than</description></item>
+            /// <item><description><b>ACCUMULATE</b>: repeated occurrence of an ID card.</description></item>
+            /// <item><description><b>PASSED_RATE</b>: pass rate is less than.</description></item>
+            /// <item><description><b>SUB_CODE_205</b>: authentication failed and the proportion of liveness attack 205 is greater than.</description></item>
+            /// <item><description><b>SUB_CODE_206</b>: authentication failed and the proportion of liveness attack 206 is greater than.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string FlowType { get; set; }
 
             /// <summary>
-            /// <para>Rule ID.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>38</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Operation.</para>
+            /// <para>The operation.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>Status:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b>: Disabled</description></item>
-            /// <item><description><b>normal</b>: Enabled</description></item>
+            /// <item><description><b>disabled</b>: disabled.</description></item>
+            /// <item><description><b>normal</b>: enabled.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Flow control threshold.</para>
+            /// <para>The rate limiting threshold.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? Threshold { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>126005125163xxxx</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VehicleMetaVerifyV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code, <b>200</b> indicates successful API response.</para>
+        /// <para>The return code. <b>200</b> indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A6229C0-E156-48E4-B6EC-0F528B******</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public VehicleMetaVerifyV2ResponseBodyResultObject ResultObject { get; set; }
         public class VehicleMetaVerifyV2ResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification result code:</para>
+            /// <para>The verification result code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Verification consistent.</description></item>
-            /// <item><description><b>2</b>: Verification inconsistent.</description></item>
+            /// <item><description><b>1</b>: Consistent.</description></item>
+            /// <item><description><b>2</b>: Inconsistent.</description></item>
             /// <item><description><b>3</b>: No record found.</description></item>
             /// </list>
             /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Detailed vehicle information.</para>
+            /// <para>The vehicle details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{

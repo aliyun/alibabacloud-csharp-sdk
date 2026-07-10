@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Vehicle5ItemQueryRequest : TeaModel {
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: Unencrypted.</description></item>
-        /// <item><description><b>md5</b>: MD5 encrypted.</description></item>
+        /// <item><description><b>normal</b>: Not encrypted.</description></item>
+        /// <item><description><b>md5</b>: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>License plate number</para>
+        /// <para>The license plate number.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>When paramType is set to normal, enter the plain text.</description></item>
-        /// <item><description>When paramType is set to md5, enter the plain text of all but the last two characters of the license plate + MD5 encryption (32-bit lowercase MD5) of the last two characters.</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter the plaintext of the license plate number excluding the last two characters, concatenated with the MD5-encrypted last two characters (32-bit lowercase MD5).</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string VehicleNum { get; set; }
 
         /// <summary>
-        /// <para>Vehicle type</para>
+        /// <para>The vehicle type.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>02: Ordinary passenger car</description></item>
-        /// <item><description>52: New energy passenger car</description></item>
+        /// <item><description>02: standard passenger car</description></item>
+        /// <item><description>52: new energy passenger car.</description></item>
         /// </list>
         /// </remarks>
         /// 

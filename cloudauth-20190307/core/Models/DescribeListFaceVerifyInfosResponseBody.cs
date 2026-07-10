@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeListFaceVerifyInfosResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of face verification records.</para>
+        /// <para>The list of facial recognition authentication records.</para>
         /// </summary>
         [NameInMap("FaceVerifyInfos")]
         [Validation(Required=false)]
         public List<DescribeListFaceVerifyInfosResponseBodyFaceVerifyInfos> FaceVerifyInfos { get; set; }
         public class DescribeListFaceVerifyInfosResponseBodyFaceVerifyInfos : TeaModel {
             /// <summary>
-            /// <para>Business code.</para>
+            /// <para>The business code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUD_FACE</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Name.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>赵四</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertName { get; set; }
 
             /// <summary>
-            /// <para>ID number.</para>
+            /// <para>The certificate number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500382199805086199</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertNo { get; set; }
 
             /// <summary>
-            /// <para>ID of the certificate.</para>
+            /// <para>The certificate ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha8ff58e964152c4c4d21005fb98ecb</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CertifyId { get; set; }
 
             /// <summary>
-            /// <para>Creation time of the face recognition record.</para>
+            /// <para>The creation time of the facial recognition record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-02T11:16:06Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Scene ID.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000010145</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// <para>Verification status:</para>
+            /// <para>The authentication status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Verification passed.</description></item>
-            /// <item><description><b>2</b>: Verification failed.</description></item>
+            /// <item><description><b>1</b>: Authentication passed.</description></item>
+            /// <item><description><b>2</b>: Authentication failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The specified page number returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? ItemsPerPage { get; set; }
 
         /// <summary>
-        /// <para>Pagination parameter: current page number.</para>
+        /// <para>The current page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>ID of the current request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CC27D8E-24BF-5056-B14E-9F26719C9A8D</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of verifications.</para>
+        /// <para>The total number of authentication records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CredentialVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The response code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D6163397-15C5-419C-9ACC-B7C83E0B4C10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public CredentialVerifyResponseBodyResultObject ResultObject { get; set; }
         public class CredentialVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Additional information in JSON format.</para>
+            /// <para>The additional information in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string MaterialInfo { get; set; }
 
             /// <summary>
-            /// <para>OCR recognition result.</para>
+            /// <para>The OCR recognition result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -84,11 +84,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string OcrInfo { get; set; }
 
             /// <summary>
-            /// <para>Risk result</para>
+            /// <para>The risk result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Low risk</description></item>
-            /// <item><description><b>1</b>: High risk</description></item>
-            /// <item><description><b>2</b>: Suspicious</description></item>
+            /// <item><description><b>0</b>: Low risk.</description></item>
+            /// <item><description><b>1</b>: High risk.</description></item>
+            /// <item><description><b>2</b>: Suspicious.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,21 +99,23 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>Risk score map.</para>
+            /// <para>The risk score map.</para>
             /// </summary>
             [NameInMap("RiskScore")]
             [Validation(Required=false)]
             public Dictionary<string, string> RiskScore { get; set; }
 
             /// <summary>
-            /// <para>Risk tags, separated by commas (,), including:</para>
+            /// <para>The risk tags, separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PS</b>: Image manipulation.</description></item>
-            /// <item><description><b>SCREEN_PHOTO</b>: Screen recapture.</description></item>
-            /// <item><description><b>SCREENSHOT</b>: Screenshot.</description></item>
-            /// <item><description><b>WATERMARK</b>: Watermark.</description></item>
-            /// <item><description><b>SAME_BACKGROUND</b>: Similar background.</description></item>
-            /// <item><description><b>ORIGINAL_PHOTO</b>: Not the original image</description></item>
+            /// <item><description>PS: image manipulation.</description></item>
+            /// <item><description>SCREEN_PHOTO: screen recapture.</description></item>
+            /// <item><description>SCREENSHOT: screenshot.</description></item>
+            /// <item><description>WATERMARK: watermark.</description></item>
+            /// <item><description>COLOR_PRINT: color print copy.</description></item>
+            /// <item><description>WEB_IMAGE: web image.</description></item>
+            /// <item><description>SAME_FACE: similar face.</description></item>
+            /// <item><description>SAME_BACKGROUND: similar background.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string RiskTag { get; set; }
 
             /// <summary>
-            /// <para>Authority verification details.</para>
+            /// <para>The authoritative verification details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string VerifyDetail { get; set; }
 
             /// <summary>
-            /// <para>The verification result.</para>
+            /// <para>The authoritative verification result.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -146,17 +148,17 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string VerifyResult { get; set; }
 
             /// <summary>
-            /// <para>Qwen interpretation.</para>
+            /// <para>The Qwen interpretation.</para>
             /// </summary>
             [NameInMap("VlResult")]
             [Validation(Required=false)]
             public CredentialVerifyResponseBodyResultObjectVlResult VlResult { get; set; }
             public class CredentialVerifyResponseBodyResultObjectVlResult : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the call was successful. Valid values:</para>
+                /// <para>Indicates whether the Qwen interpretation is successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: The call was successful.</description></item>
-                /// <item><description><b>false</b>: The call failed.</description></item>
+                /// <item><description>true: Successful.</description></item>
+                /// <item><description>false: Failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -167,13 +169,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
                 public bool? Success { get; set; }
 
                 /// <summary>
-                /// <para>Image understanding result:</para>
-                /// <list type="bullet">
-                /// <item><description><para>When PromptModel is DEFAULT, the output format refers to the example on the right.</para>
-                /// </description></item>
-                /// <item><description><para>When PromptModel is CUSTOM, the output format follows the agreed format of the Prompt.</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The Qwen interpretation content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;这张图有没有明显的PS特征\&quot;:0,\&quot;图片是否为正常经营照片\&quot;:1,\&quot;图片中有没有58、美团、大众点评字样\&quot;:0,\&quot;这张图有没有网站信息\&quot;:0,\&quot;图片经营的场景是否为酒店\&quot;:0}</para>

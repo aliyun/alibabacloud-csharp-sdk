@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CreateCloudauthstSceneRequest : TeaModel {
         /// <summary>
-        /// <para>Product code.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Scene name.</para>
+        /// <para>The scenario name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>Whether to deliver the files generated from the authentication to the customer\&quot;s OSS:</para>
+        /// <para>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: Enable</description></item>
-        /// <item><description><b>N</b>: Disable</description></item>
+        /// <item><description><b>Y</b>: Enabled.</description></item>
+        /// <item><description><b>N</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

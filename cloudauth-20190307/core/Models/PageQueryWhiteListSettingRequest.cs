@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class PageQueryWhiteListSettingRequest : TeaModel {
         /// <summary>
-        /// <para>ID number.</para>
+        /// <para>The certificate number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>330103xxxxxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         /// <summary>
-        /// <para>Unique identifier for real person authentication.</para>
+        /// <para>The unique identifier of the ID Verification request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sha75b4e19a1ddda059b920757b0e12b</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyId { get; set; }
 
         /// <summary>
-        /// <para>Current page number, default is 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</para>
+        /// <para>The verification scenario ID. This ID is automatically generated after you create a verification scenario in the console. For more information about how to create a verification scenario, refer to Add a verification scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000xxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>ServiceCode of the real person cloud product, value: <b>antcloudauth</b>.</para>
+        /// <para>The ServiceCode of the ID Verification cloud service. Value: <b>antcloudauth</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>antcloudauth</para>
@@ -70,11 +70,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Status:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DELETE: Deleted</description></item>
-        /// <item><description>VALID: Not deleted and within the validity period, valid</description></item>
-        /// <item><description>INVALID: Not deleted but outside the validity period, invalid</description></item>
+        /// <item><description>DELETE: Deleted.</description></item>
+        /// <item><description>VALID: Not deleted and within the validity period (valid).</description></item>
+        /// <item><description>INVALID: Not deleted but outside the validity period (invalid).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>End date of validity (timestamp in milliseconds)</para>
+        /// <para>The end date of the validity period (timestamp in milliseconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725379200000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ValidEndDate { get; set; }
 
         /// <summary>
-        /// <para>Start date of validity (timestamp in milliseconds)</para>
+        /// <para>The start date of the validity period (timestamp in milliseconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725120000000</para>

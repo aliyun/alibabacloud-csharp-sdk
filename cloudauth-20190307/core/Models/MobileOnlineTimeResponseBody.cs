@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class MobileOnlineTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B506328A-D84B-4750-82C7-6A207C585CF1</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public MobileOnlineTimeResponseBodyResultObject ResultObject { get; set; }
         public class MobileOnlineTimeResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification result code.</para>
+            /// <para>The verification result code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Verification consistent</description></item>
-            /// <item><description>2: Verification inconsistent</description></item>
-            /// <item><description>3: No record found</description></item>
+            /// <item><description>1: Consistent.</description></item>
+            /// <item><description>2: Inconsistent.</description></item>
+            /// <item><description>3: No record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Operator name</para>
+            /// <para>The name of the telecommunications service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CMCC: China Mobile </description></item>
-            /// <item><description>CUCC: China Unicom </description></item>
-            /// <item><description>CTCC: China Telecom</description></item>
+            /// <item><description>CMCC: China Mobile. </description></item>
+            /// <item><description>CUCC: China Unicom. </description></item>
+            /// <item><description>CTCC: China Telecom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,12 +77,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string IspName { get; set; }
 
             /// <summary>
+            /// <para>The network duration code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: [0,3) indicates the online duration is 0~3 months </description></item>
-            /// <item><description>2: [3,6) indicates the online duration is 3~6 months </description></item>
-            /// <item><description>3: [6,12) indicates the online duration is 6~12 months </description></item>
-            /// <item><description>4: [12,24) indicates the online duration is 12~24 months </description></item>
-            /// <item><description>5: [24,+) indicates the online duration is more than 24 months</description></item>
+            /// <item><description>1: [0,3) indicates a network duration of 0 to 3 months.</description></item>
+            /// <item><description>2: [3,6) indicates a network duration of 3 to 6 months.</description></item>
+            /// <item><description>3: [6,12) indicates a network duration of 6 to 12 months.</description></item>
+            /// <item><description>4: [12,24) indicates a network duration of 12 to 24 months.</description></item>
+            /// <item><description>5: [24,+) indicates a network duration of more than 24 months.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribePageFaceVerifyDataRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number, default is 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Required, end time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</para>
+        /// <para>Required. The end time in the yyyy-MM-dd format. The default value is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-30</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Product code.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_PLUS</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Scene ID.</para>
+        /// <para>The scene ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36**01</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Required, start time, format is yyyy-MM-dd, default is yyyy-MM-dd 00:00:00, the query interval cannot exceed 90 days.</para>
+        /// <para>Required. The start time in the yyyy-MM-dd format. The default value is yyyy-MM-dd 00:00:00. The maximum query interval is 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-10</para>

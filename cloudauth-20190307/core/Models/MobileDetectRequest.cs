@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class MobileDetectRequest : TeaModel {
         /// <summary>
-        /// <para>List of phone numbers.</para>
+        /// <para>The list of phone numbers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19833232569</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Mobiles { get; set; }
 
         /// <summary>
-        /// <para>Encryption method:</para>
+        /// <para>The encryption method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: plaintext, no encryption</description></item>
-        /// <item><description>md5: MD5 encryption</description></item>
+        /// <item><description>normal: plaintext without encryption</description></item>
+        /// <item><description>md5: MD5 encryption.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

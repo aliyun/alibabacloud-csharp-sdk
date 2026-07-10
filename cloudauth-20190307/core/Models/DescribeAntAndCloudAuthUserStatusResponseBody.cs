@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeAntAndCloudAuthUserStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether financial-grade real-person authentication is activated. Values:</para>
+        /// <para>Indicates whether financial-grade ID Verification is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Activated</description></item>
-        /// <item><description><b>false</b>: Not activated</description></item>
+        /// <item><description><b>true</b>: Activated.</description></item>
+        /// <item><description><b>false</b>: Not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? AntcloudauthEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether real-person authentication is activated. Values:</para>
+        /// <para>Indicates whether ID Verification is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Activated</description></item>
-        /// <item><description><b>false</b>: Not activated</description></item>
+        /// <item><description><b>true</b>: Activated.</description></item>
+        /// <item><description><b>false</b>: Not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? CloudauthEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the enhanced version of real-person authentication is activated. Values:</para>
+        /// <para>Indicates whether enhanced ID Verification is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Activated</description></item>
-        /// <item><description><b>false</b>: Not activated</description></item>
+        /// <item><description><b>true</b>: Activated.</description></item>
+        /// <item><description><b>false</b>: Not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? CloudauthstEnabled { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether information verification is activated. Values:</para>
+        /// <para>Indicates whether information verification is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Activated</description></item>
-        /// <item><description><b>false</b>: Not activated</description></item>
+        /// <item><description><b>true</b>: Activated.</description></item>
+        /// <item><description><b>false</b>: Not activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? InforverifyEnabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of this request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3FE07CCE-DF47-51C2-9D32-CD70ED62C91B</para>

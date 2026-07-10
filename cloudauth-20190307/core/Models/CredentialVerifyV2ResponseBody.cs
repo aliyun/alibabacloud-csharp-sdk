@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CredentialVerifyV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 for success, others for failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public CredentialVerifyV2ResponseBodyResultObject ResultObject { get; set; }
         public class CredentialVerifyV2ResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Additional information in JSON format.</para>
+            /// <para>The additional information in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{</para>
@@ -64,7 +64,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string MaterialInfo { get; set; }
 
             /// <summary>
-            /// <para>OCR recognition result.</para>
+            /// <para>The OCR recognition result.</para>
+            /// <remarks>
+            /// <para>Danger: Deprecated.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -84,11 +87,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string OcrInfo { get; set; }
 
             /// <summary>
-            /// <para>Risk result</para>
+            /// <para>The risk result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: Low risk</description></item>
-            /// <item><description>1: High risk</description></item>
-            /// <item><description>2: Suspicious</description></item>
+            /// <item><description>0: Low risk.</description></item>
+            /// <item><description>1: High risk.</description></item>
+            /// <item><description>2: Suspicious.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,21 +102,21 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>Risk score map.</para>
+            /// <para>The risk score map.</para>
             /// </summary>
             [NameInMap("RiskScore")]
             [Validation(Required=false)]
             public Dictionary<string, string> RiskScore { get; set; }
 
             /// <summary>
-            /// <para>Risk tags, separated by commas (,), including:</para>
+            /// <para>The risk tags, separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PS: Image manipulation.</description></item>
-            /// <item><description>SCREEN_PHOTO: Screen recapture.</description></item>
-            /// <item><description>SCREENSHOT: Screenshot.</description></item>
-            /// <item><description>WATERMARK: Watermark.</description></item>
-            /// <item><description>SAME_BACKGROUND: Similar background.</description></item>
-            /// <item><description>ORIGINAL_PHOTO: Not the original image</description></item>
+            /// <item><description>PS: image manipulation.</description></item>
+            /// <item><description>SCREEN_PHOTO: screen recapture.</description></item>
+            /// <item><description>SCREENSHOT: screenshot.</description></item>
+            /// <item><description>WATERMARK: watermark.</description></item>
+            /// <item><description>SAME_BACKGROUND: similar background.</description></item>
+            /// <item><description>ORIGINAL_PHOTO: non-original image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +127,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string RiskTag { get; set; }
 
             /// <summary>
-            /// <para>Authority verification details.</para>
+            /// <para>The authoritative verification details.</para>
+            /// <remarks>
+            /// <para>Danger: Deprecated.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -134,7 +140,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string VerifyDetail { get; set; }
 
             /// <summary>
-            /// <para>Authority verification result</para>
+            /// <para>The authoritative verification result.</para>
+            /// <remarks>
+            /// <para>Danger: Deprecated.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -146,39 +155,31 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string VerifyResult { get; set; }
 
             /// <summary>
-            /// <para>Qwen interpretation.</para>
+            /// <para>This feature is offline. This parameter no longer takes effect.</para>
             /// </summary>
             [NameInMap("VlResult")]
             [Validation(Required=false)]
             public CredentialVerifyV2ResponseBodyResultObjectVlResult VlResult { get; set; }
             public class CredentialVerifyV2ResponseBodyResultObjectVlResult : TeaModel {
                 /// <summary>
-                /// <para>Qwen interpretation success indicator</para>
-                /// <para>true: Success</para>
-                /// <para>false: Failure</para>
+                /// <para>This feature is offline. This parameter no longer takes effect.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <list type="bullet">
+                /// <item><description></description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
                 public bool? Success { get; set; }
 
                 /// <summary>
-                /// <para>Image understanding result:</para>
-                /// <list type="bullet">
-                /// <item><description><para>When PromptModel is DEFAULT, the output format refers to the example on the right.</para>
-                /// </description></item>
-                /// <item><description><para>When PromptModel is CUSTOM, the output format follows the agreed format of the Prompt.</para>
-                /// </description></item>
-                /// </list>
+                /// <para>This feature is offline. This parameter no longer takes effect.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{
-                ///  &quot;CHK_DOOR_PHOTO&quot;:1, -- 是否门头照 1：是 0：否
-                ///  &quot;CHK_INTERIOR_PHOTO&quot;:0, -- 是否内景照 1：是 0：否
-                ///  &quot;CHK_COUNTER_PHOTO&quot;:0 -- 是否柜台照 1：是 0：否
-                /// }</para>
+                /// <list type="bullet">
+                /// <item><description></description></item>
+                /// </list>
                 /// </summary>
                 [NameInMap("VlContent")]
                 [Validation(Required=false)]

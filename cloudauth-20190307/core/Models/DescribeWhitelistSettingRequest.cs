@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeWhitelistSettingRequest : TeaModel {
         /// <summary>
-        /// <para>ID Number</para>
+        /// <para>The ID card number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>320321XXXXXXXX701X</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNo { get; set; }
 
         /// <summary>
-        /// <para>Certification ID</para>
+        /// <para>The certification ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>shsf57a4e0d9981c3bd66dc754f3d3cd</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertifyId { get; set; }
 
         /// <summary>
-        /// <para>Pagination parameter: current page number, default value is 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specify the language to query. Values:</para>
+        /// <para>The language of the query result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page for pagination.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Scene ID.</para>
+        /// <para>The scene ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000004530</para>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Service Code:</para>
+        /// <para>The service code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enhanced Financial Grade</b>: cloudauthst</description></item>
-        /// <item><description><b>Financial Grade</b>: antcloudauth</description></item>
+        /// <item><description><b>cloudauthst</b>: enhanced financial-grade edition.</description></item>
+        /// <item><description><b>antcloudauth</b>: financial-grade edition.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Visitor\&quot;s source IP address.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113.140.85.74</para>
@@ -101,11 +101,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>Whitelist status:</para>
+        /// <para>The whitelist status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VALID</b>: Valid</description></item>
-        /// <item><description><b>INVALID</b>: Invalid</description></item>
-        /// <item><description><b>DELETED</b>: Deleted</description></item>
+        /// <item><description><b>VALID</b>: valid.</description></item>
+        /// <item><description><b>INVALID</b>: invalid.</description></item>
+        /// <item><description><b>DELETED</b>: deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Expiration date.</para>
+        /// <para>The end time of the validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1730304000000</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? ValidEndDate { get; set; }
 
         /// <summary>
-        /// <para>Effective start time (in seconds timestamp).</para>
+        /// <para>The start time of the validity period. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1759939200000</para>
@@ -134,6 +134,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [NameInMap("ValidStartDate")]
         [Validation(Required=false)]
         public long? ValidStartDate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUPER</para>
+        /// </summary>
+        [NameInMap("WhitelistType")]
+        [Validation(Required=false)]
+        public string WhitelistType { get; set; }
 
     }
 

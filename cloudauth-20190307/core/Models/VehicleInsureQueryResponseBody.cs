@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class VehicleInsureQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 indicates success, others indicate failure.</para>
+        /// <para>The return code. A value of 200 indicates success. Other values indicate failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response message for the request information.</para>
+        /// <para>The response message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A6229C0-E156-48E4-B6EC-0F52********</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result information.</para>
+        /// <para>The result information.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public VehicleInsureQueryResponseBodyResultObject ResultObject { get; set; }
         public class VehicleInsureQueryResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Verification result code:</para>
+            /// <para>The verification result code. Valid values:</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>1: Found (charged)</description></item>
-            /// <item><description>3: No record found (not charged)</description></item>
+            /// <item><description>1: record found (billable).</description></item>
+            /// <item><description>3: no record found (not billable).</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Insurance date information</para>
+            /// <para>The insurance date information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{

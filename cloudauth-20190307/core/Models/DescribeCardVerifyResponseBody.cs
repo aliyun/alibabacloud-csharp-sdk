@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeCardVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code: 200 indicates success, all others indicate failure.
-        /// Important</para>
+        /// <para>The response code. 200 indicates success. Other values indicate failure.</para>
+        /// <remarks>
+        /// <para><b>Important</b></para>
         /// <list type="bullet">
-        /// <item><description>This parameter indicates whether the interface was called correctly. For detailed return code explanations, please refer to the error codes.</description></item>
-        /// <item><description>Please check the business verification results through the fields in ResultObject.</description></item>
+        /// <item><description>This parameter indicates whether the operation is called correctly. For more information about return codes, refer to error codes.</description></item>
+        /// <item><description>Check the business verification result by viewing the fields in ResultObject.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -25,11 +27,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Interface call return message.
-        /// Important</para>
+        /// <para>The response message of the operation.</para>
+        /// <remarks>
+        /// <para><b>Important</b></para>
         /// <list type="bullet">
-        /// <item><description>This parameter only indicates whether there was an exception with the interface.</description></item>
+        /// <item><description>This parameter only indicates whether the operation is abnormal.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF03****</para>
@@ -49,18 +53,18 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result object.</para>
+        /// <para>The result object.</para>
         /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DescribeCardVerifyResponseBodyResultObject ResultObject { get; set; }
         public class DescribeCardVerifyResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Identity verification result:</para>
+            /// <para>The identity verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Consistent</description></item>
-            /// <item><description>2: Inconsistent</description></item>
-            /// <item><description>3: No Record Found</description></item>
+            /// <item><description>1: consistent</description></item>
+            /// <item><description>2: inconsistent</description></item>
+            /// <item><description>3: no record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Submitted ID card information for verification.</para>
+            /// <para>The ID card information submitted for verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;address&quot;:&quot;浙江省杭州市余杭区文一西路969号&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CardInfo { get; set; }
 
             /// <summary>
-            /// <para>Image comparison score.</para>
+            /// <para>The image comparison score.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string FaceDetail { get; set; }
 
             /// <summary>
-            /// <para>ID card information read by OCR.</para>
+            /// <para>The ID card information read by OCR.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;address&quot;:&quot;浙江省杭州市余杭区文一西路969号&quot;,&quot;birthDate&quot;:&quot;19901226&quot;,&quot;certName&quot;:&quot;张三&quot;,&quot;certNo&quot;:&quot;1234561990122*****&quot;,&quot;nationality&quot;:&quot;汉&quot;,&quot;authority&quot;:&quot;xxx公安局&quot;,&quot;startDate&quot;:&quot;20201130&quot;,&quot;endDate&quot;:&quot;20301130&quot;}</para>
@@ -103,10 +107,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string OcrCardInfo { get; set; }
 
             /// <summary>
-            /// <para>Returned photo URLs.</para>
+            /// <para>The returned photo URLs.</para>
             /// <list type="bullet">
-            /// <item><description>certUrl  Front side</description></item>
-            /// <item><description>certNationalUrl  National emblem side</description></item>
+            /// <item><description>certUrl: front side</description></item>
+            /// <item><description>certNationalUrl: national emblem side.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

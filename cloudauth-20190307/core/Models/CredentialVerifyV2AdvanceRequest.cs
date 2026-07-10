@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class CredentialVerifyV2AdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>Relevant certificate number.</para>
+        /// <para>The certificate number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4601*****</para>
@@ -20,22 +20,23 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CertNum { get; set; }
 
         /// <summary>
+        /// <para>The credential name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>01: Personal ID cards<list type="bullet">
+        /// <item><description>01: personal card or certificate<list type="bullet">
         /// <item><description>0101: ID card</description></item>
-        /// <item><description>0102: Bank card</description></item>
-        /// <item><description>0104: Teacher qualification certificate</description></item>
-        /// <item><description>0107: Student ID card</description></item>
+        /// <item><description>0102: bank card</description></item>
+        /// <item><description>0104: teacher qualification certificate</description></item>
+        /// <item><description>0107: student ID card</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>02: Business scenario<list type="bullet">
-        /// <item><description>0201: Storefront photo</description></item>
-        /// <item><description>0202: Counter photo</description></item>
-        /// <item><description>0203: Scene photo</description></item>
+        /// <item><description>02: business scenario<list type="bullet">
+        /// <item><description>0201: storefront photo</description></item>
+        /// <item><description>0202: counter photo</description></item>
+        /// <item><description>0203: scene photo</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>03: Corporate qualifications<list type="bullet">
-        /// <item><description>0301: Business license</description></item>
+        /// <item><description>03: enterprise qualification<list type="bullet">
+        /// <item><description>0301: business license.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -48,11 +49,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CredName { get; set; }
 
         /// <summary>
-        /// <para>Credential type:</para>
+        /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>01: Personal ID cards</description></item>
-        /// <item><description>02: Business scenario</description></item>
-        /// <item><description>03: Corporate qualifications</description></item>
+        /// <item><description>01: personal card or certificate</description></item>
+        /// <item><description>02: business scenario</description></item>
+        /// <item><description>03: enterprise qualification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CredType { get; set; }
 
         /// <summary>
-        /// <para>ID number.</para>
+        /// <para>The ID card number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4****************1</para>
@@ -73,27 +74,27 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoded image, choose one from <c>imageUrl</c>, <c>imageFile</c>, or <c>imageContext</c>.</para>
+        /// <para>The Base64-encoded image. Specify one of imageUrl, imageFile, or imageContext.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>base64</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("ImageContext")]
         [Validation(Required=false)]
         public string ImageContext { get; set; }
 
         /// <summary>
-        /// <para>Image input stream, choose one from <c>imageUrl</c>, <c>imageFile</c>, or <c>imageContext</c>.</para>
+        /// <para>The input stream of the image. Specify one of imageUrl, imageFile, or imageContext.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("ImageFile")]
         [Validation(Required=false)]
         public Stream ImageFileObject { get; set; }
 
         /// <summary>
-        /// <para>Image URL, choose one from <c>imageUrl</c>, <c>imageFile</c>, or <c>imageContext</c>.</para>
+        /// <para>The URL of the image. Specify one of imageUrl, imageFile, or imageContext.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg">http://marry.momocdn.com/avatar/3B/B6/3BB6527E-7467-926E-1048-B43614F20CC420230803_L.jpg</a></para>
@@ -103,10 +104,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable authoritative authentication</para>
+        /// <para>Specifies whether to enable authoritative verification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b><b>0</b></b>: No</description></item>
-        /// <item><description><b>1</b>: Yes</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.<remarks>
+        /// <para>Danger: Deprecated.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +121,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IsCheck { get; set; }
 
         /// <summary>
-        /// <para>Whether to use OCR</para>
+        /// <para>Specifies whether to enable OCR.</para>
+        /// <remarks>
+        /// <para>Danger: Deprecated.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -127,31 +134,31 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IsOcr { get; set; }
 
         /// <summary>
-        /// <para>Merchant details:</para>
-        /// <para>MerchantName: Merchant name</para>
-        /// <para>BusinessType: Industry information</para>
-        /// <para>BusinessContent: Business content</para>
-        /// <para>This field is required when PromptModel is set to DEFAULT.</para>
+        /// <para>This feature is offline. This parameter no longer takes effect.</para>
         /// </summary>
         [NameInMap("MerchantDetail")]
         [Validation(Required=false)]
         public List<CredentialVerifyV2AdvanceRequestMerchantDetail> MerchantDetail { get; set; }
         public class CredentialVerifyV2AdvanceRequestMerchantDetail : TeaModel {
             /// <summary>
-            /// <para>Keyword key.</para>
+            /// <para>This feature is offline. This parameter no longer takes effect.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MerchantName</para>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Keyword value.</para>
+            /// <para>This feature is offline. This parameter no longer takes effect.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -160,27 +167,20 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         }
 
         /// <summary>
-        /// <para>Merchant ID. This field is required when <b><b>CredName</b></b> is set to <b>02</b>.</para>
+        /// <para>The merchant ID. This parameter is required when CredName is set to 02.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>无。</para>
         /// </summary>
         [NameInMap("MerchantId")]
         [Validation(Required=false)]
         public string MerchantId { get; set; }
 
         /// <summary>
-        /// <para>Invocation mode:</para>
+        /// <para>The call mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ANTI_FAKE_CHECK: Image anti-forgery check</para>
-        /// </description></item>
-        /// <item><description><para>ANTI_FAKE_VL: Image anti-forgery check and semantic understanding</para>
-        /// </description></item>
-        /// <item><description><para>IMAGE_VL_COG: Image semantic understanding</para>
-        /// </description></item>
+        /// <item><description>ANTI_FAKE_CHECK (default): image anti-forgery detection.</description></item>
         /// </list>
-        /// <para>Default value: ANTI_FAKE_CHECK</para>
-        /// <para>When CredType is set to 02, ProductCode can only be ANTI_FAKE_VL or IMAGE_VL_COG.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANTI_FAKE_CHECK</para>
@@ -190,35 +190,31 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Customer-defined prompt content for image semantic understanding.</para>
-        /// <para>This field is required when PromptModel is set to CUSTOM.</para>
+        /// <para>This feature is offline. This parameter no longer takes effect.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>Prompt acquisition method for image semantic understanding:</para>
-        /// <list type="bullet">
-        /// <item><description><para>DEFAULT: System default</para>
-        /// </description></item>
-        /// <item><description><para>CUSTOM: Customer-defined</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Note: When ProductCode is set to ANTI_FAKE_VL or IMAGE_VL_COG, this parameter must be provided.</para>
+        /// <para>This feature is offline. This parameter no longer takes effect.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DEFAULT</para>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
         /// </summary>
         [NameInMap("PromptModel")]
         [Validation(Required=false)]
         public string PromptModel { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>张三</para>

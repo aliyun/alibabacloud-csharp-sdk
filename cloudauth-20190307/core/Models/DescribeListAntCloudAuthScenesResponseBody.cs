@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class DescribeListAntCloudAuthScenesResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CC1AB3F5-22A2-589F-ABDD-B766694AA671</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of scenarios.</para>
+        /// <para>The list of scenes.</para>
         /// </summary>
         [NameInMap("Scenes")]
         [Validation(Required=false)]
         public List<DescribeListAntCloudAuthScenesResponseBodyScenes> Scenes { get; set; }
         public class DescribeListAntCloudAuthScenesResponseBodyScenes : TeaModel {
             /// <summary>
-            /// <para>Application ID.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2a3a13b6-ee85-457e-bd15-b48115cb396e</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? AppId { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable binding to a mini program:</para>
+            /// <para>Specifies whether to enable mini program binding. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Y</b>: Enabled</description></item>
-            /// <item><description><b>N (default)</b>: Not enabled</description></item>
+            /// <item><description><b>Y</b>: Enabled.</description></item>
+            /// <item><description><b>N (default)</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string BindMiniProgram { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1260051251634779</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Creator.</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>189884094677xxxx</para>
@@ -71,7 +71,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Enhanced device detection capability: - <b>Y</b>: Enable - <b>N</b>: Disable</para>
+            /// <para>Specifies whether to enable enhanced device risk detection. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>Y</b>: Enabled.</description></item>
+            /// <item><description><b>N</b>: Disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>N</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string DeviceRiskPlus { get; set; }
 
             /// <summary>
-            /// <para>Bound domain.</para>
+            /// <para>The bound domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.ddos.com">www.ddos.com</a></para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Mini program name.</para>
+            /// <para>The mini program name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试APP</para>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string MiniProgramName { get; set; }
 
             /// <summary>
-            /// <para>Modifier.</para>
+            /// <para>The modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>189884094677xxxx</para>
@@ -111,11 +115,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>Bound mini program platform:</para>
+            /// <para>The mini program platform. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>WECHAT</b>: WeChat</description></item>
             /// <item><description><b>ALIPAY</b>: Alipay</description></item>
-            /// <item><description><b>TIKTOK</b>: TikTok</description></item>
+            /// <item><description><b>TIKTOK</b>: TikTok.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>Number of face photos stored (1-5).</para>
+            /// <para>The number of evidence face photos (1 to 5).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? ReturnPicCount { get; set; }
 
             /// <summary>
-            /// <para>Duration of the stored video (in seconds).</para>
+            /// <para>The duration of the evidence video, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? ReturnVideoLength { get; set; }
 
             /// <summary>
-            /// <para>Scenario ID.</para>
+            /// <para>The scene ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100001xxxx</para>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public long? SceneId { get; set; }
 
             /// <summary>
-            /// <para>Scenario name.</para>
+            /// <para>The scene name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试场景</para>
@@ -166,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>Whether it is enabled, with a value of 1 indicating enabled.</para>
+            /// <para>Indicates whether the scene is enabled. The value 1 indicates enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -176,10 +180,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Whether to deliver the files generated from the authentication to the customer\&quot;s OSS:</para>
+            /// <para>Specifies whether to deliver files generated during authentication to the customer\&quot;s OSS. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Y</b>: Enabled</description></item>
-            /// <item><description><b>N</b>: Disabled</description></item>
+            /// <item><description><b>Y</b>: Enabled.</description></item>
+            /// <item><description><b>N</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -190,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             public string StoreImage { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the instance.</para>
+            /// <para>The time when the instance was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1260051251634779</para>

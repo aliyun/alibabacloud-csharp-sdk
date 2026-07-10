@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class Mobile3MetaSimpleVerifyRequest : TeaModel {
         /// <summary>
-        /// <para>ID number:</para>
+        /// <para>ID card number:</para>
         /// <para>Note
-        /// Only supports the ID numbers of second-generation resident IDs and Hong Kong, Macao, and Taiwan residence permits.</para>
+        /// Only the ID numbers of the second-generation resident ID card and Hong Kong, Macao, and Taiwan residence permits are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>When paramType is normal: enter the plaintext ID number.</para>
+        /// <item><description><para>When paramType is set to normal: pass in the ID card number in plaintext.</para>
         /// </description></item>
-        /// <item><description><para>When paramType is md5: enter the encrypted ID number.</para>
+        /// <item><description><para>When paramType is set to md5: pass in the encrypted ID card number.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Mobile phone number:</para>
+        /// <para>Mobile number:</para>
         /// <list type="bullet">
-        /// <item><description><para>When paramType is normal: enter the plaintext mobile phone number.</para>
+        /// <item><description><para>When paramType is set to normal: pass in the mobile number in plaintext.</para>
         /// </description></item>
-        /// <item><description><para>When paramType is md5: enter the encrypted mobile phone number.</para>
+        /// <item><description><para>When paramType is set to md5: pass in the encrypted mobile number.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Encryption method:</para>
         /// <list type="bullet">
-        /// <item><description><para>normal: plaintext, not encrypted</para>
+        /// <item><description><para>normal: plaintext, no encryption</para>
         /// </description></item>
         /// <item><description><para>md5: MD5 encryption</para>
         /// </description></item>
@@ -66,9 +66,9 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         /// <summary>
         /// <para>Name:</para>
         /// <list type="bullet">
-        /// <item><description><para>When paramType is normal: enter the plaintext name.</para>
+        /// <item><description><para>When paramType is set to normal: pass in the name in plaintext.</para>
         /// </description></item>
-        /// <item><description><para>When paramType is md5: enter the encrypted name.</para>
+        /// <item><description><para>When paramType is set to md5: pass in the encrypted name.</para>
         /// </description></item>
         /// </list>
         /// 

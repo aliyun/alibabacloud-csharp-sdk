@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class QueryVerifyFlowPackageRequest : TeaModel {
         /// <summary>
-        /// <para>Product type:</para>
+        /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FINANCE_VERIFY</b>: Financial Grade Real Person Verification</description></item>
-        /// <item><description><b>SMART_VERIFY</b>: Enhanced Real Person Verification (discontinued)</description></item>
-        /// <item><description><b>FACE_VERIFY</b>: Real Person Verification (discontinued)</description></item>
+        /// <item><description><b>FINANCE_VERIFY</b>: Financial-Grade ID Verification</description></item>
+        /// <item><description><b>SMART_VERIFY</b>: Enhanced ID Verification (discontinued)</description></item>
+        /// <item><description><b>FACE_VERIFY</b>: ID Verification (discontinued).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
