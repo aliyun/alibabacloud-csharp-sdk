@@ -17,21 +17,51 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListDataAssetsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDataAssetsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The data assets.</para>
+            /// <para>The list of data assets.</para>
             /// </summary>
             [NameInMap("DataAssets")]
             [Validation(Required=false)]
             public List<ListDataAssetsResponseBodyPagingInfoDataAssets> DataAssets { get; set; }
             public class ListDataAssetsResponseBodyPagingInfoDataAssets : TeaModel {
+                [NameInMap("AssetCategories")]
+                [Validation(Required=false)]
+                public List<ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories> AssetCategories { get; set; }
+                public class ListDataAssetsResponseBodyPagingInfoDataAssetsAssetCategories : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1001</para>
+                    /// </summary>
+                    [NameInMap("AssetDomainId")]
+                    [Validation(Required=false)]
+                    public string AssetDomainId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>cate-xxxxxx</para>
+                    /// </summary>
+                    [NameInMap("Id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>资产域名称</para>
+                    /// </summary>
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
                 /// <summary>
-                /// <para>The mappings between data assets and tags.</para>
+                /// <para>The list of tags associated with the data asset.</para>
                 /// </summary>
                 [NameInMap("DataAssetTagMappings")]
                 [Validation(Required=false)]
                 public List<ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings> DataAssetTagMappings { get; set; }
                 public class ListDataAssetsResponseBodyPagingInfoDataAssetsDataAssetTagMappings : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the lineage-based automatic backtrack feature is enabled for the mapping.</para>
+                    /// <para>Indicates whether automatic lineage tracing is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -71,12 +101,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The way in which the mapping between the data asset and the tag is created. Valid values:</para>
+                    /// <para>The source of the mapping between the data asset and the tag. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>System</para>
-                    /// </description></item>
-                    /// <item><description><para>UserDefined</para>
-                    /// </description></item>
+                    /// <item><description>System: The mapping is created by the data asset governance system.</description></item>
+                    /// <item><description>UserDefined: The mapping is manually created by a user.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -99,12 +127,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
+                /// <para>The workspace environment to which the data asset belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Dev: development environment</para>
-                /// </description></item>
-                /// <item><description><para>Prod: production environment</para>
-                /// </description></item>
+                /// <item><description>Dev: development environment.</description></item>
+                /// <item><description>Prod: production environment.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -145,11 +171,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data asset. Valid values:</para>
+                /// <para>The Asset Type of the data asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>ACS::DataWorks::Table</para>
+                /// <item><description><para>ACS::DataWorks::Table: table.</para>
                 /// </description></item>
-                /// <item><description><para>ACS::DataWorks::Task</para>
+                /// <item><description><para>ACS::DataWorks::Task: scheduling node.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -183,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -195,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1ec92159376</para>

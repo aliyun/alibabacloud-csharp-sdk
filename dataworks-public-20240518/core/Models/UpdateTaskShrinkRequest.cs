@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The unique code of the client. This code uniquely identifies a task. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the task, the system automatically generates a unique code. The unique code is uniquely associated with the task ID. If you specify this parameter when you update or delete the task, the value of this parameter must be the unique code that is used to create the task.</para>
+        /// <para>The client unique code of the node, used to uniquely identify a node. This code is used to implement asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. When updating or deleting a resource, if this parameter is specified, it must be consistent with the client unique code used during creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Task_0bc5213917368545132902xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientUniqueCode { get; set; }
 
         /// <summary>
-        /// <para>The information about the associated data source.</para>
+        /// <para>The associated data source information.</para>
         /// </summary>
         [NameInMap("DataSource")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DependenciesShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the task.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -44,12 +44,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prod</para>
-        /// </description></item>
-        /// <item><description><para>Dev</para>
-        /// </description></item>
+        /// <item><description>Prod: production.</description></item>
+        /// <item><description>Dev: development.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,12 +76,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InputsShrink { get; set; }
 
         /// <summary>
-        /// <para>The instance generation mode.</para>
+        /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>T+1: the next day</para>
-        /// </description></item>
-        /// <item><description><para>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</para>
-        /// </description></item>
+        /// <item><description>T+1: The instance is generated the next day.</description></item>
+        /// <item><description>Immediately: The instance is generated immediately. Note: Only periodic instances whose scheduled time is at least ten minutes after the node publish time are generated normally. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish nodes, but new nodes do not automatically generate instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InstanceMode { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL node</para>
@@ -111,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string OutputsShrink { get; set; }
 
         /// <summary>
-        /// <para>The account ID of the task owner.</para>
+        /// <para>The account ID of the node owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -121,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</para>
+        /// <para>The retry time interval, in milliseconds. The value cannot exceed 1800000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60000</para>
@@ -131,14 +127,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunInterval { get; set; }
 
         /// <summary>
-        /// <para>The rerun mode. Valid values:</para>
+        /// <para>Specifies whether the node can be rerun. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AllDenied: The task cannot be rerun.</para>
-        /// </description></item>
-        /// <item><description><para>FailureAllowed: The task can be rerun only after it fails.</para>
-        /// </description></item>
-        /// <item><description><para>AllAllowed: The task can always be rerun.</para>
-        /// </description></item>
+        /// <item><description>AllDenied: The node cannot be rerun regardless of whether it succeeds or fails.</description></item>
+        /// <item><description>FailureAllowed: The node can be rerun only when it fails.</description></item>
+        /// <item><description>AllAllowed: The node can be rerun regardless of whether it succeeds or fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</para>
+        /// <para>The number of retries. This parameter takes effect when the node is configured to allow reruns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -159,28 +152,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? RerunTimes { get; set; }
 
         /// <summary>
-        /// <para>Runtime environment configurations, such as resource group information.</para>
+        /// <para>The environment configuration, such as resource group information.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public string RuntimeResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The run script information.</para>
+        /// <para>The script information.</para>
         /// </summary>
         [NameInMap("Script")]
         [Validation(Required=false)]
         public string ScriptShrink { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of node tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>Task execution timeout in seconds. Must be greater than 3600.</para>
+        /// <para>The node execution timeout period, in seconds. The value must be greater than 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -190,7 +183,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The triggering method.</para>
+        /// <para>The node trigger method.</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]

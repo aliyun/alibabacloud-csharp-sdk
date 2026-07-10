@@ -10,18 +10,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataAssetsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The data asset IDs.</para>
+        /// <b>Example:</b>
+        /// <para>1001</para>
+        /// </summary>
+        [NameInMap("AssetDomainId")]
+        [Validation(Required=false)]
+        public long? AssetDomainId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cate-xxxxxxxx</para>
+        /// </summary>
+        [NameInMap("CategoryUuid")]
+        [Validation(Required=false)]
+        public string CategoryUuid { get; set; }
+
+        /// <summary>
+        /// <para>The list of unique data asset IDs.</para>
         /// </summary>
         [NameInMap("DataAssetIds")]
         [Validation(Required=false)]
         public string DataAssetIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the data asset. Valid values:</para>
+        /// <para>The Asset Type of the data asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ACS::DataWorks::Table</para>
+        /// <item><description><para>ACS::DataWorks::Table: table.</para>
         /// </description></item>
-        /// <item><description><para>ACS::DataWorks::Task</para>
+        /// <item><description><para>ACS::DataWorks::Task: scheduling node.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,12 +49,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DataAssetType { get; set; }
 
         /// <summary>
-        /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
+        /// <para>The workspace environment to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Dev: development environment</para>
-        /// </description></item>
-        /// <item><description><para>Prod: production environment</para>
-        /// </description></item>
+        /// <item><description>Dev: development environment.</description></item>
+        /// <item><description>Prod: production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,6 +61,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>资产域名称</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
@@ -69,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -79,14 +101,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to data assets. This parameter specifies a filter condition.</para>
+        /// <para>The list of tags associated with data assets. Tags are used as query filters:</para>
         /// <list type="bullet">
-        /// <item><description><para>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you do not configure this parameter, tag-based filtering is not performed.</para>
-        /// </description></item>
+        /// <item><description>Multiple values have an OR relationship. For example, <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c> queries data assets that contain any of the specified tags.</description></item>
+        /// <item><description>If this parameter is not specified or is left empty, no tag-based filtering is applied.</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

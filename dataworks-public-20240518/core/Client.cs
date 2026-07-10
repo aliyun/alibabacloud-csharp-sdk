@@ -32960,12 +32960,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about DataWorks data assets to which tags are added by page.</para>
+        /// <para>Queries DataWorks data assets that are associated with tags by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -33013,12 +33013,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about DataWorks data assets to which tags are added by page.</para>
+        /// <para>Queries DataWorks data assets that are associated with tags by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -33066,12 +33066,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about DataWorks data assets to which tags are added by page.</para>
+        /// <para>Queries DataWorks data assets that are associated with tags by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -33089,12 +33089,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about DataWorks data assets to which tags are added by page.</para>
+        /// <para>Queries DataWorks data assets that are associated with tags by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available only for DataWorks Enterprise Edition or a more advanced edition.</para>
+        /// <para>You must purchase DataWorks Enterprise Edition or a higher edition to use this feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56420,7 +56420,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
+        /// <para>Updates a specified node. The modifications are synchronized to DataStudio, where a new saved version is created.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -56568,7 +56568,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
+        /// <para>Updates a specified node. The modifications are synchronized to DataStudio, where a new saved version is created.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -56716,7 +56716,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
+        /// <para>Updates a specified node. The modifications are synchronized to DataStudio, where a new saved version is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56734,7 +56734,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a task. The changes are synchronized to Data Studio, which creates a new saved version.</para>
+        /// <para>Updates a specified node. The modifications are synchronized to DataStudio, where a new saved version is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -57120,12 +57120,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow in full update mode.</para>
+        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to DataStudio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -57237,12 +57237,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow in full update mode.</para>
+        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to DataStudio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -57354,12 +57354,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow in full update mode.</para>
+        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to DataStudio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -57377,12 +57377,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified workflow in full update mode.</para>
+        /// <para>Updates a specified workflow by using the full update method. Fields that can be synchronously updated to DataStudio include: owner, data source, schedule resource group, description, and trigger run mode (Normal, Skip, or Pause).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DataWorks Basic Edition or higher is required.</para>
+        /// <para>DataWorks Basic Edition or a more advanced edition is required.</para>
         /// </description>
         /// 
         /// <param name="request">

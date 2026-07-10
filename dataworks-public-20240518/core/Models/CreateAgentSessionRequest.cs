@@ -120,6 +120,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     [Validation(Required=false)]
                     public string Mode { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Serverless_res_group_123123123_564657857</para>
+                    /// </summary>
+                    [NameInMap("ResourceGroupId")]
+                    [Validation(Required=false)]
+                    public string ResourceGroupId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>skill-name-1,skill-name2,skill-name-3</para>
+                    /// </summary>
+                    [NameInMap("Skills")]
+                    [Validation(Required=false)]
+                    public string Skills { get; set; }
+
                 }
 
             }

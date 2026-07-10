@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateWorkflowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</para>
+        /// <para>The client unique code of the workflow, used for asynchronous operations and idempotence. If not specified during creation, the system automatically generates one, and the code is uniquely bound to the resource ID. If this parameter is specified during update or deletion, it must be consistent with the client unique code used during creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Workflow_0bc5213917368545132902xxxxxxxx</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The project environment.</para>
+        /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prod</para>
-        /// </description></item>
-        /// <item><description><para>Dev</para>
-        /// </description></item>
+        /// <item><description>Prod: production</description></item>
+        /// <item><description>Dev: development</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,12 +62,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The instance generation mode.</para>
+        /// <para>The instance generation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>T+1: the next day</para>
-        /// </description></item>
-        /// <item><description><para>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</para>
-        /// </description></item>
+        /// <item><description>T+1: Instances are generated the next day.</description></item>
+        /// <item><description>Immediately: Instances are generated immediately. Periodic instances are generated only if the scheduled time of the workflow is at least 10 minutes after the workflow is published. During the full instance generation period (22:00 to 24:00), real-time instance generation is not available. You can submit and publish workflows during this period, but instances are not regenerated after submission.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string InstanceMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the workflow.</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The parameters.</para>
+        /// <para>The parameter list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>para1=$bizdate para2=$[yyyymmdd]</para>
@@ -119,21 +115,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of workflow tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>Details about tasks.</para>
+        /// <para>The node list.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public string TasksShrink { get; set; }
 
         /// <summary>
-        /// <para>The trigger method.</para>
+        /// <para>The trigger configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Trigger")]
