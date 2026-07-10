@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
 {
     public class QueryRecognitionResultRequest : TeaModel {
         /// <summary>
+        /// <para>Business idempotent request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ORDER_001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         public string OrderUniqueId { get; set; }
 
         /// <summary>
+        /// <para>Platform Task ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TASK_001</para>
         /// </summary>

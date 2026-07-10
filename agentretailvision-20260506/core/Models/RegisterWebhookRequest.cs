@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
 {
     public class RegisterWebhookRequest : TeaModel {
         /// <summary>
+        /// <para>The key used for callback signature verification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>your_secret_key</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         public string CallbackSecret { get; set; }
 
         /// <summary>
+        /// <para>The default callback URL. A public HTTPS URL is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/callback">https://example.com/callback</a></para>
         /// </summary>

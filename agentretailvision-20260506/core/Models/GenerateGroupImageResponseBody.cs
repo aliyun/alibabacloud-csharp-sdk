@@ -8,43 +8,33 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
 {
-    public class ImportProductsResponseBody : TeaModel {
+    public class GenerateGroupImageResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>202</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The product information.</para>
+        /// <para>The composite image generation result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ImportProductsResponseBodyData Data { get; set; }
-        public class ImportProductsResponseBodyData : TeaModel {
+        public GenerateGroupImageResponseBodyData Data { get; set; }
+        public class GenerateGroupImageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The product ID assigned by the business party. This ID must be unique within the same business party.</para>
+            /// <para>The composite image request ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ITEM_001</para>
+            /// <para>a5561c14-b5cd-49a4-ab79-01a63b10d99c</para>
             /// </summary>
-            [NameInMap("ItemUniqueId")]
+            [NameInMap("GroupId")]
             [Validation(Required=false)]
-            public string ItemUniqueId { get; set; }
-
-            /// <summary>
-            /// <para>The platform product ID, which is globally unique.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>PLAT_001</para>
-            /// </summary>
-            [NameInMap("PlatformItemId")]
-            [Validation(Required=false)]
-            public string PlatformItemId { get; set; }
+            public string GroupId { get; set; }
 
         }
 

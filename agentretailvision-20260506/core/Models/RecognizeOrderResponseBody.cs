@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
 {
     public class RecognizeOrderResponseBody : TeaModel {
         /// <summary>
+        /// <para>Error code. This parameter is not returned during a normal call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Recognition task information</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RecognizeOrderResponseBodyData Data { get; set; }
         public class RecognizeOrderResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Unique idempotent ID of the business party</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ORDER_001</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
             public string OrderUniqueId { get; set; }
 
             /// <summary>
+            /// <para>Platform task ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TASK_001</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Task status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PROCESSING</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         }
 
         /// <summary>
+        /// <para>Error message. This parameter is not returned during a normal call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful. true: The call is successful. false: The call has failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

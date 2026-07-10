@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "agentretailvision.cn-beijing.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentretailvision", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +43,220 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品导入</para>
+        /// <para>Generates a composite image for single-item multi-image or multi-item scenarios.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When <c>groupType=1</c>, <c>platformItemIdList</c> must contain only one element.</description></item>
+        /// <item><description>When <c>groupType=2</c>, <c>platformItemIdList</c> can contain 1 to 10 elements.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateGroupImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateGroupImageResponse
+        /// </returns>
+        public GenerateGroupImageResponse GenerateGroupImageWithOptions(GenerateGroupImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GenerateGroupImageShrinkRequest request = new GenerateGroupImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PlatformItemIdList))
+            {
+                request.PlatformItemIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PlatformItemIdList, "PlatformItemIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackSecret))
+            {
+                query["CallbackSecret"] = request.CallbackSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformItemIdListShrink))
+            {
+                query["PlatformItemIdList"] = request.PlatformItemIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateGroupImage",
+                Version = "2026-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateGroupImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a composite image for single-item multi-image or multi-item scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When <c>groupType=1</c>, <c>platformItemIdList</c> must contain only one element.</description></item>
+        /// <item><description>When <c>groupType=2</c>, <c>platformItemIdList</c> can contain 1 to 10 elements.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// GenerateGroupImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateGroupImageResponse
+        /// </returns>
+        public async Task<GenerateGroupImageResponse> GenerateGroupImageWithOptionsAsync(GenerateGroupImageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GenerateGroupImageShrinkRequest request = new GenerateGroupImageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PlatformItemIdList))
+            {
+                request.PlatformItemIdListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PlatformItemIdList, "PlatformItemIdList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackSecret))
+            {
+                query["CallbackSecret"] = request.CallbackSecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                query["GroupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupType))
+            {
+                query["GroupType"] = request.GroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformItemIdListShrink))
+            {
+                query["PlatformItemIdList"] = request.PlatformItemIdListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateGroupImage",
+                Version = "2026-05-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateGroupImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a composite image for single-item multi-image or multi-item scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When <c>groupType=1</c>, <c>platformItemIdList</c> must contain only one element.</description></item>
+        /// <item><description>When <c>groupType=2</c>, <c>platformItemIdList</c> can contain 1 to 10 elements.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateGroupImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateGroupImageResponse
+        /// </returns>
+        public GenerateGroupImageResponse GenerateGroupImage(GenerateGroupImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateGroupImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a composite image for single-item multi-image or multi-item scenarios.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>When <c>groupType=1</c>, <c>platformItemIdList</c> must contain only one element.</description></item>
+        /// <item><description>When <c>groupType=2</c>, <c>platformItemIdList</c> can contain 1 to 10 elements.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GenerateGroupImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateGroupImageResponse
+        /// </returns>
+        public async Task<GenerateGroupImageResponse> GenerateGroupImageAsync(GenerateGroupImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateGroupImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds product information. After a successful import, the platform returns a globally unique platform_item_id for subsequent updates and recognition result association.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to add product information.</description></item>
+        /// <item><description>After you import products to the product library, they are stored in Alibaba Cloud OSS for direct recall and retrieval by the product recognition API.</description></item>
+        /// <item><description>You must provide at least one main image URL, and the <c>item_unique_id</c> must be unique within the same business party.</description></item>
+        /// <item><description>You can optionally provide multi-angle views and extra images to improve recognition accuracy.</description></item>
+        /// <item><description>The <c>device_id</c> field can be used to establish an association between a device and product vectors, but it is not required.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ImportProductsRequest
@@ -115,8 +331,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品导入</para>
+        /// <para>Adds product information. After a successful import, the platform returns a globally unique platform_item_id for subsequent updates and recognition result association.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to add product information.</description></item>
+        /// <item><description>After you import products to the product library, they are stored in Alibaba Cloud OSS for direct recall and retrieval by the product recognition API.</description></item>
+        /// <item><description>You must provide at least one main image URL, and the <c>item_unique_id</c> must be unique within the same business party.</description></item>
+        /// <item><description>You can optionally provide multi-angle views and extra images to improve recognition accuracy.</description></item>
+        /// <item><description>The <c>device_id</c> field can be used to establish an association between a device and product vectors, but it is not required.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ImportProductsRequest
@@ -191,8 +419,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品导入</para>
+        /// <para>Adds product information. After a successful import, the platform returns a globally unique platform_item_id for subsequent updates and recognition result association.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to add product information.</description></item>
+        /// <item><description>After you import products to the product library, they are stored in Alibaba Cloud OSS for direct recall and retrieval by the product recognition API.</description></item>
+        /// <item><description>You must provide at least one main image URL, and the <c>item_unique_id</c> must be unique within the same business party.</description></item>
+        /// <item><description>You can optionally provide multi-angle views and extra images to improve recognition accuracy.</description></item>
+        /// <item><description>The <c>device_id</c> field can be used to establish an association between a device and product vectors, but it is not required.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportProductsRequest
@@ -209,8 +449,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品导入</para>
+        /// <para>Adds product information. After a successful import, the platform returns a globally unique platform_item_id for subsequent updates and recognition result association.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to add product information.</description></item>
+        /// <item><description>After you import products to the product library, they are stored in Alibaba Cloud OSS for direct recall and retrieval by the product recognition API.</description></item>
+        /// <item><description>You must provide at least one main image URL, and the <c>item_unique_id</c> must be unique within the same business party.</description></item>
+        /// <item><description>You can optionally provide multi-angle views and extra images to improve recognition accuracy.</description></item>
+        /// <item><description>The <c>device_id</c> field can be used to establish an association between a device and product vectors, but it is not required.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportProductsRequest
@@ -227,7 +479,9 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务状态</para>
+        /// <para>At least one result retrieval method must be integrated: webhook callback or task status query. Both methods can be used simultaneously.
+        ///     •	If the user chooses the webhook callback method, the receiving endpoint must be prepared in advance and implemented according to the following request and response parameters.
+        ///     •	After the recognition task is completed, the platform will push the results to the business party based on the callback URL bound to the task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -273,7 +527,9 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务状态</para>
+        /// <para>At least one result retrieval method must be integrated: webhook callback or task status query. Both methods can be used simultaneously.
+        ///     •	If the user chooses the webhook callback method, the receiving endpoint must be prepared in advance and implemented according to the following request and response parameters.
+        ///     •	After the recognition task is completed, the platform will push the results to the business party based on the callback URL bound to the task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -319,7 +575,9 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务状态</para>
+        /// <para>At least one result retrieval method must be integrated: webhook callback or task status query. Both methods can be used simultaneously.
+        ///     •	If the user chooses the webhook callback method, the receiving endpoint must be prepared in advance and implemented according to the following request and response parameters.
+        ///     •	After the recognition task is completed, the platform will push the results to the business party based on the callback URL bound to the task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -337,7 +595,9 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务状态</para>
+        /// <para>At least one result retrieval method must be integrated: webhook callback or task status query. Both methods can be used simultaneously.
+        ///     •	If the user chooses the webhook callback method, the receiving endpoint must be prepared in advance and implemented according to the following request and response parameters.
+        ///     •	After the recognition task is completed, the platform will push the results to the business party based on the callback URL bound to the task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -355,8 +615,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>购物识别</para>
+        /// <para>Used for intelligent recognition scenarios. Requires uploading the OSS address of shopping videos. The platform creates an asynchronous recognition task and immediately returns a task_id. Notifications are sent via webhook, and the results need to be actively retrieved through the query API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>The user must provide <c>caller_uid</c> and <c>order_unique_id</c> as required parameters.</description></item>
+        /// <item><description>The <c>video_urls</c> parameter supports video files in mp4, avi, mov, and mkv formats, with a size limit of 100 MB, a duration of no more than 3 minutes, a resolution between 480p and 1080p, and specific aspect ratio requirements.</description></item>
+        /// <item><description>At least one of <c>device_id</c> or <c>candidate_items</c> must be provided to specify the recognition scope. If both are provided, the system first filters by the device product library and then further filters based on the candidate items list.</description></item>
+        /// <item><description>Optionally, the user can specify a <c>callback_url</c> to receive notifications of the recognition results. If not provided, the pre-registered default webhook address is used.</description></item>
+        /// <item><description>If a request is submitted repeatedly with the same <c>order_unique_id</c>, the system directly returns the previously existing task status.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RecognizeOrderRequest
@@ -423,8 +695,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>购物识别</para>
+        /// <para>Used for intelligent recognition scenarios. Requires uploading the OSS address of shopping videos. The platform creates an asynchronous recognition task and immediately returns a task_id. Notifications are sent via webhook, and the results need to be actively retrieved through the query API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>The user must provide <c>caller_uid</c> and <c>order_unique_id</c> as required parameters.</description></item>
+        /// <item><description>The <c>video_urls</c> parameter supports video files in mp4, avi, mov, and mkv formats, with a size limit of 100 MB, a duration of no more than 3 minutes, a resolution between 480p and 1080p, and specific aspect ratio requirements.</description></item>
+        /// <item><description>At least one of <c>device_id</c> or <c>candidate_items</c> must be provided to specify the recognition scope. If both are provided, the system first filters by the device product library and then further filters based on the candidate items list.</description></item>
+        /// <item><description>Optionally, the user can specify a <c>callback_url</c> to receive notifications of the recognition results. If not provided, the pre-registered default webhook address is used.</description></item>
+        /// <item><description>If a request is submitted repeatedly with the same <c>order_unique_id</c>, the system directly returns the previously existing task status.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RecognizeOrderRequest
@@ -491,8 +775,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>购物识别</para>
+        /// <para>Used for intelligent recognition scenarios. Requires uploading the OSS address of shopping videos. The platform creates an asynchronous recognition task and immediately returns a task_id. Notifications are sent via webhook, and the results need to be actively retrieved through the query API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>The user must provide <c>caller_uid</c> and <c>order_unique_id</c> as required parameters.</description></item>
+        /// <item><description>The <c>video_urls</c> parameter supports video files in mp4, avi, mov, and mkv formats, with a size limit of 100 MB, a duration of no more than 3 minutes, a resolution between 480p and 1080p, and specific aspect ratio requirements.</description></item>
+        /// <item><description>At least one of <c>device_id</c> or <c>candidate_items</c> must be provided to specify the recognition scope. If both are provided, the system first filters by the device product library and then further filters based on the candidate items list.</description></item>
+        /// <item><description>Optionally, the user can specify a <c>callback_url</c> to receive notifications of the recognition results. If not provided, the pre-registered default webhook address is used.</description></item>
+        /// <item><description>If a request is submitted repeatedly with the same <c>order_unique_id</c>, the system directly returns the previously existing task status.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RecognizeOrderRequest
@@ -509,8 +805,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>购物识别</para>
+        /// <para>Used for intelligent recognition scenarios. Requires uploading the OSS address of shopping videos. The platform creates an asynchronous recognition task and immediately returns a task_id. Notifications are sent via webhook, and the results need to be actively retrieved through the query API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request Description</h2>
+        /// <list type="bullet">
+        /// <item><description>The user must provide <c>caller_uid</c> and <c>order_unique_id</c> as required parameters.</description></item>
+        /// <item><description>The <c>video_urls</c> parameter supports video files in mp4, avi, mov, and mkv formats, with a size limit of 100 MB, a duration of no more than 3 minutes, a resolution between 480p and 1080p, and specific aspect ratio requirements.</description></item>
+        /// <item><description>At least one of <c>device_id</c> or <c>candidate_items</c> must be provided to specify the recognition scope. If both are provided, the system first filters by the device product library and then further filters based on the candidate items list.</description></item>
+        /// <item><description>Optionally, the user can specify a <c>callback_url</c> to receive notifications of the recognition results. If not provided, the pre-registered default webhook address is used.</description></item>
+        /// <item><description>If a request is submitted repeatedly with the same <c>order_unique_id</c>, the system directly returns the previously existing task status.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RecognizeOrderRequest
@@ -527,7 +835,7 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Webhook注册</para>
+        /// <para>Registers or updates the default webhook callback URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -573,7 +881,7 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Webhook注册</para>
+        /// <para>Registers or updates the default webhook callback URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -619,7 +927,7 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Webhook注册</para>
+        /// <para>Registers or updates the default webhook callback URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -637,7 +945,7 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Webhook注册</para>
+        /// <para>Registers or updates the default webhook callback URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -655,8 +963,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品更新</para>
+        /// <para>Updates the information of an existing item on the platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The platform_item_id parameter is used as the primary identifier for the update.</description></item>
+        /// <item><description>If both platform_item_id and item_unique_id are specified, they must point to the same item.</description></item>
+        /// <item><description>The item title (image_title) and the list of main image URLs (main_image) are required. The main_image parameter must contain at least one image.</description></item>
+        /// <item><description>Optional parameters include the multi-angle image list (multi_view_images), the list of additional image URLs (extra_images), and the device ID (device_id).</description></item>
+        /// <item><description>In multi_view_images, each object must contain the image OSS address (url) and the shooting angle (angle). Valid values of angle: top view (up), bottom view (down), left view (left), right view (right), front view (front), and back view (back).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateProductRequest
@@ -735,8 +1055,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品更新</para>
+        /// <para>Updates the information of an existing item on the platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The platform_item_id parameter is used as the primary identifier for the update.</description></item>
+        /// <item><description>If both platform_item_id and item_unique_id are specified, they must point to the same item.</description></item>
+        /// <item><description>The item title (image_title) and the list of main image URLs (main_image) are required. The main_image parameter must contain at least one image.</description></item>
+        /// <item><description>Optional parameters include the multi-angle image list (multi_view_images), the list of additional image URLs (extra_images), and the device ID (device_id).</description></item>
+        /// <item><description>In multi_view_images, each object must contain the image OSS address (url) and the shooting angle (angle). Valid values of angle: top view (up), bottom view (down), left view (left), right view (right), front view (front), and back view (back).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateProductRequest
@@ -815,8 +1147,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品更新</para>
+        /// <para>Updates the information of an existing item on the platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The platform_item_id parameter is used as the primary identifier for the update.</description></item>
+        /// <item><description>If both platform_item_id and item_unique_id are specified, they must point to the same item.</description></item>
+        /// <item><description>The item title (image_title) and the list of main image URLs (main_image) are required. The main_image parameter must contain at least one image.</description></item>
+        /// <item><description>Optional parameters include the multi-angle image list (multi_view_images), the list of additional image URLs (extra_images), and the device ID (device_id).</description></item>
+        /// <item><description>In multi_view_images, each object must contain the image OSS address (url) and the shooting angle (angle). Valid values of angle: top view (up), bottom view (down), left view (left), right view (right), front view (front), and back view (back).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateProductRequest
@@ -833,8 +1177,20 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商品更新</para>
+        /// <para>Updates the information of an existing item on the platform.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>The platform_item_id parameter is used as the primary identifier for the update.</description></item>
+        /// <item><description>If both platform_item_id and item_unique_id are specified, they must point to the same item.</description></item>
+        /// <item><description>The item title (image_title) and the list of main image URLs (main_image) are required. The main_image parameter must contain at least one image.</description></item>
+        /// <item><description>Optional parameters include the multi-angle image list (multi_view_images), the list of additional image URLs (extra_images), and the device ID (device_id).</description></item>
+        /// <item><description>In multi_view_images, each object must contain the image OSS address (url) and the shooting angle (angle). Valid values of angle: top view (up), bottom view (down), left view (left), right view (right), front view (front), and back view (back).</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateProductRequest

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
 {
     public class UpdateProductRequest : TeaModel {
         /// <summary>
+        /// <para>The device ID, which is used to establish the vector association between the device and the item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DEVICE_001</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         [Validation(Required=false)]
         public string DeviceId { get; set; }
 
+        /// <summary>
+        /// <para>The list of additional image URLs that can be provided.</para>
+        /// </summary>
         [NameInMap("ExtraImages")]
         [Validation(Required=false)]
         public List<string> ExtraImages { get; set; }
 
         /// <summary>
+        /// <para>The title of the item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>可口可乐330ml</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         public string ImageTitle { get; set; }
 
         /// <summary>
+        /// <para>The business-side item ID, which is unique within the same business party.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ITEM_001</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         public string ItemUniqueId { get; set; }
 
         /// <summary>
+        /// <para>The list of main image URLs for the item. At least one image is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;<a href="https://img.example.com/item1.jpg%22%5D">https://img.example.com/item1.jpg&quot;]</a></para>
         /// </summary>
@@ -45,11 +56,22 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         [Validation(Required=false)]
         public List<string> MainImage { get; set; }
 
+        /// <summary>
+        /// <para>The list of multi-angle images for the item.</para>
+        /// </summary>
         [NameInMap("MultiViewImages")]
         [Validation(Required=false)]
         public List<UpdateProductRequestMultiViewImages> MultiViewImages { get; set; }
         public class UpdateProductRequestMultiViewImages : TeaModel {
             /// <summary>
+            /// <para>The angle of the digital human.</para>
+            /// <list type="bullet">
+            /// <item><description>0: front view, the default angle</description></item>
+            /// <item><description>1: 30 degrees from the left</description></item>
+            /// <item><description>2: 30 degrees from the right</description></item>
+            /// </list>
+            /// <para>For a preview of each angle, refer to <a href="https://help.aliyun.com/document_detail/447834.html#a989eb5075t9y">3D Digital Human Video Synthesis User Guide</a>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -58,6 +80,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
             public string Angle { get; set; }
 
             /// <summary>
+            /// <para>The URL of the image.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://nova-tems.oss-cn-shanghai.aliyuncs.com/crop/33dfc602-c9a4-11f0-ac99-ee21a901d6ec.png?OSSAccessKeyId=****&Expires=1764058353&Signature=">https://nova-tems.oss-cn-shanghai.aliyuncs.com/crop/33dfc602-c9a4-11f0-ac99-ee21a901d6ec.png?OSSAccessKeyId=****&amp;Expires=1764058353&amp;Signature=</a>****</para>
             /// </summary>
@@ -68,6 +92,8 @@ namespace AlibabaCloud.SDK.AgentRetailVision20260506.Models
         }
 
         /// <summary>
+        /// <para>The platform item ID, which is globally unique.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PLAT_001</para>
         /// </summary>
