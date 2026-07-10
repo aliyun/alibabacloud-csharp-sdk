@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudAccountRolesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The cloud account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,14 +30,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>CloudAccountRoleId: The ID of the cloud role.</para>
-            /// </description></item>
-            /// <item><description><para>CloudAccountRoleName: The name of the cloud role.</para>
-            /// </description></item>
-            /// <item><description><para>CloudAccountRoleExternalId: The external ID of the cloud role.</para>
-            /// </description></item>
-            /// <item><description><para>CloudAccountRoleUsageType: The usage type of the cloud role.</para>
-            /// </description></item>
+            /// <item><description>CloudAccountRoleId: the cloud role ID.</description></item>
+            /// <item><description>CloudAccountRoleName: the cloud role name.</description></item>
+            /// <item><description>CloudAccountRoleExternalId: the external identifier of the cloud role.</description></item>
+            /// <item><description>CloudAccountRoleUsageType: the usage type of the cloud role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -48,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of values for the filter field.</para>
+            /// <para>The values of the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -68,9 +64,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return on each page.</para>
+        /// <para>The maximum number of records per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>The default value is 20.</para>
+        /// <item><description><para>If this parameter is not specified, the default value is 20.</para>
         /// </description></item>
         /// <item><description><para>The maximum value is 100.</para>
         /// </description></item>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the start of the next page of results.</para>
+        /// <para>The token that identifies the start position of the next page.</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>

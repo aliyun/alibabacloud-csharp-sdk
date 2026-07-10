@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>The application creation type. If unspecified, only user-created (<c>user_custom</c>) applications are returned. To query applications of all types, set this parameter to <c>all</c>.</para>
+        /// <para>The application creation type. If this parameter is left empty, applications of the user_custom type are queried by default. To query applications of all types, set this parameter to all.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system_init</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationCreationType { get; set; }
 
         /// <summary>
-        /// <para>The application identity type. If unspecified, only applications of the <c>application</c> type are returned. To query all identity types, set this parameter to <c>all</c>.</para>
+        /// <para>The application identity type. If this parameter is left empty, applications of the application type are queried by default. To query applications of all identity types, set this parameter to all.</para>
         /// 
         /// <b>Example:</b>
         /// <para>application</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationIdentityType { get; set; }
 
         /// <summary>
-        /// <para>A list of application IDs.</para>
+        /// <para>The list of application IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ram Account SSO</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>The application name. Only prefix matching is supported.</para>
+        /// <para>The application name. Only left fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ram Account SSO</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>The authorization type for application access. Valid values:</para>
+        /// <para>The application access authorization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>authorize_required</c>: Access requires explicit authorization.</para>
-        /// </description></item>
-        /// <item><description><para><c>default_all</c>: All members have access by default.</para>
-        /// </description></item>
+        /// <item><description>authorize_required: Explicit authorization is required for access.</description></item>
+        /// <item><description>default_all: All members have access permissions by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// <para>A list of custom fields.</para>
+        /// <para>The list of custom fields.</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
@@ -75,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The custom field identifier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>agent_type</c>: The agent type.</description></item>
+            /// <item><description>agent_type: the agent type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the M2M client identity.</para>
+        /// <para>Specifies whether the M2M Client identity is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -117,6 +115,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("M2MClientStatus")]
         [Validation(Required=false)]
         public string M2MClientStatus { get; set; }
+
+        [NameInMap("ManagedServiceCode")]
+        [Validation(Required=false)]
+        public string ManagedServiceCode { get; set; }
 
         /// <summary>
         /// <para>The page number.</para>
@@ -139,7 +141,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the resource server capability.</para>
+        /// <para>Specifies whether the ResourceServer capability is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -148,8 +150,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ResourceServerStatus { get; set; }
 
+        [NameInMap("ServiceManaged")]
+        [Validation(Required=false)]
+        public bool? ServiceManaged { get; set; }
+
         /// <summary>
-        /// <para>A filter for the Single Sign-On (SSO) type. You can specify multiple types, separated by a comma. Example: <c>oauth2/m2m,oidc+oauth2/m2m</c>.</para>
+        /// <para>The SSO type filter condition. Multiple types can be separated by commas, such as oauth2/m2m,oidc+oauth2/m2m.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oauth2/m2m</para>
@@ -161,10 +167,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The application status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>enabled</c>: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para><c>disabled</c>: Disabled.</para>
-        /// </description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

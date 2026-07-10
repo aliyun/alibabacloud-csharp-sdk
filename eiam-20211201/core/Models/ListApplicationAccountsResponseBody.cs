@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of account information.</para>
+        /// <para>The list of application accounts.</para>
         /// </summary>
         [NameInMap("ApplicationAccounts")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application account.</para>
+            /// <para>The application account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationUsername { get; set; }
 
             /// <summary>
-            /// <para>The time when the account was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1737510353000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IDaaS EIAM instance.</para>
+            /// <para>The IDaaS EIAM instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_eznwtkkaucljizh6qqu7ptxxxx</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

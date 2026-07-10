@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetCloudAccountRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The cloud account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud role.</para>
+        /// <para>The cloud role ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

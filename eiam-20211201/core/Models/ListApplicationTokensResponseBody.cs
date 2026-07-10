@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationTokensResponseBodyApplicationTokens> ApplicationTokens { get; set; }
         public class ListApplicationTokensResponseBodyApplicationTokens : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID.</para>
+            /// <para>aliUid。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1973166921975xxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The application token.</para>
+            /// <para>The application tokens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYktxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationToken { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application token.</para>
+            /// <para>The application token ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token_ndfxxigahelfne2y2hodehrxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTokenId { get; set; }
 
             /// <summary>
-            /// <para>The type of the application token.</para>
+            /// <para>The application token type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bearer_token</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the application token.</para>
+            /// <para>The application token description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jwqtts-0430</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IDaaS EIAM instance.</para>
+            /// <para>The IDaaS EIAM instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ki6hd7ihir4ybawogqk6kqxxxx</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The enabling status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

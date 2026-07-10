@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCloudAccountRequest : TeaModel {
         /// <summary>
-        /// <para>A client token that ensures the idempotence of the request. The client must generate a unique token for each request. The token must consist of only ASCII characters and be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountExternalId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud account.</para>
+        /// <para>The cloud account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_accout_xxxx</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountName { get; set; }
 
         /// <summary>
-        /// <para>The name of the identity provider.</para>
+        /// <para>The identity provider name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas-eiam-oidc-provider</para>
@@ -52,12 +52,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountProviderName { get; set; }
 
         /// <summary>
-        /// <para>The site of the cloud account. Valid values:</para>
+        /// <para>The cloud account site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>global: international site</para>
-        /// </description></item>
-        /// <item><description><para>china_mainland: China mainland site</para>
-        /// </description></item>
+        /// <item><description>global: international site.</description></item>
+        /// <item><description>china_mainland: China site.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,9 +66,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountSite { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud account. Valid value:</para>
+        /// <para>The cloud account type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>alibaba_cloud: Alibaba Cloud</description></item>
+        /// <item><description>alibaba_cloud: Alibaba Cloud.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,7 +90,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

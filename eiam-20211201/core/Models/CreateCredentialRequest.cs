@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>A client-generated token that ensures the idempotence of the request. This token must be a unique value that contains only ASCII characters and is no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public CreateCredentialRequestCredentialContent CredentialContent { get; set; }
         public class CreateCredentialRequestCredentialContent : TeaModel {
             /// <summary>
-            /// <para>The credential content of the API key type.</para>
+            /// <para>The credential content of the API key credential type.</para>
             /// </summary>
             [NameInMap("ApiKeyContent")]
             [Validation(Required=false)]
             public CreateCredentialRequestCredentialContentApiKeyContent ApiKeyContent { get; set; }
             public class CreateCredentialRequestCredentialContentApiKeyContent : TeaModel {
                 /// <summary>
-                /// <para>The API key.</para>
+                /// <para>The API key content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklnertyt5ddwizncxxxx</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The credential content of the OAuth client type.</para>
+            /// <para>The credential content of the OAuth client authentication credential type.</para>
             /// </summary>
             [NameInMap("OAuthClientContent")]
             [Validation(Required=false)]
             public CreateCredentialRequestCredentialContentOAuthClientContent OAuthClientContent { get; set; }
             public class CreateCredentialRequestCredentialContentOAuthClientContent : TeaModel {
                 /// <summary>
-                /// <para>The <c>client_id</c> of the OAuth protocol.</para>
+                /// <para>The client_id of the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dmvncmxersdxxxxxx</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The <c>client_secret</c> of the OAuth protocol.</para>
+                /// <para>The client_secret of the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklncmwizncxxxx</para>
@@ -105,12 +105,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialName { get; set; }
 
         /// <summary>
-        /// <para>The use case label of the credential. Valid values:</para>
+        /// <para>The Scenarios label of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>llm</c>: large language model.</para>
-        /// </description></item>
-        /// <item><description><para><c>saas</c>: third-party SaaS.</para>
-        /// </description></item>
+        /// <item><description>llm: large language model.</description></item>
+        /// <item><description>saas: third-party SaaS service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +123,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialSharingScope { get; set; }
 
         /// <summary>
-        /// <para>The ID of the credential\&quot;s subject.</para>
+        /// <para>The subject ID of the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_werthgfdsasffxxxxx</para>
@@ -135,9 +133,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialSubjectId { get; set; }
 
         /// <summary>
-        /// <para>The subject type of the credential. Valid value:</para>
+        /// <para>The subject type of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>authentication_token_provider</c>: an authentication token provider.</description></item>
+        /// <item><description>authentication_token_provider: authentication token provider.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,10 +148,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>api_key</c>: an API key.</para>
-        /// </description></item>
-        /// <item><description><para><c>oauth_client</c>: an OAuth client.</para>
-        /// </description></item>
+        /// <item><description>api_key: API key authentication credential.</description></item>
+        /// <item><description>oauth_client: OAuth client authentication credential.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

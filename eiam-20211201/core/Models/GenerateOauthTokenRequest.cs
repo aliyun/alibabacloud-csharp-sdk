@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The scope of permissions.</para>
+        /// <para>The permission scopes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScopeValues")]

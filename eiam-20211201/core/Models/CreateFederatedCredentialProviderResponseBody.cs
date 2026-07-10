@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateFederatedCredentialProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the federated credential provider.</para>
+        /// <para>The ID of the federated trust source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fcp_sada123XXXX</para>

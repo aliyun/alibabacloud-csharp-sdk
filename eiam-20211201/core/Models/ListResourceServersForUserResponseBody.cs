@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServersForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListResourceServersForUserResponseBodyResourceServers> ResourceServers { get; set; }
         public class ListResourceServersForUserResponseBodyResourceServers : TeaModel {
             /// <summary>
-            /// <para>The ID of the ResourceServer application.</para>
+            /// <para>The ResourceServer application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_nbsomva32b6utec3hgi7scxxxx</para>
@@ -77,14 +77,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The list of granted Scope permissions.</para>
+            /// <para>The list of authorized Scope permissions.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListResourceServersForUserResponseBodyResourceServersResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListResourceServersForUserResponseBodyResourceServersResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether a direct authorization exists.</para>
+                /// <para>Indicates whether direct authorization exists. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Direct authorization exists.</description></item>
+                /// <item><description>false: Direct authorization does not exist.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasDirectAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether an inherited permission exists.</para>
+                /// <para>Indicates whether inherited authorization exists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -104,7 +108,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasInheritAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Scope permission.</para>
+                /// <para>The Scope permission ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Scope permission.</para>
+                /// <para>The Scope permission name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read All User</para>

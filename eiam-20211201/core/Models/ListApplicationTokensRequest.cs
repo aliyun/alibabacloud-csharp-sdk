@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The type of the application token.</para>
+        /// <para>The application token type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

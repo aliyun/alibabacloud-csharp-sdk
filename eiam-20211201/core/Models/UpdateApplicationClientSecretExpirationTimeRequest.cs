@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the client secret. This is a UNIX timestamp in milliseconds. The minimum validity period is 1 day, and the maximum validity period is 3 years.</para>
+        /// <para>The expiration time of the client secret. The value is a UNIX timestamp in milliseconds. The minimum validity period that can be set is 1 day, and the maximum validity period is 3 years.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the client secret.</para>
+        /// <para>The client secret.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

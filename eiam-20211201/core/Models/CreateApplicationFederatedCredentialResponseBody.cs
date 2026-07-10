@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationFederatedCredentialResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the application federated credential.</para>
+        /// <para>The application federated identity credential ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>afc_asd123daxxxx</para>

@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTokenId { get; set; }
 
             /// <summary>
-            /// <para>The type of the application token.</para>
+            /// <para>The application token type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bearer_token</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IDaaS EIAM instance.</para>
+            /// <para>The IDaaS EIAM instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ki6hd7ihir4ybawogqk6kqxxxx</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the token was last used.</para>
+            /// <para>The last used time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735610930000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The enabling status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

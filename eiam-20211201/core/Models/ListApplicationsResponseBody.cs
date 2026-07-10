@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of applications.</para>
+        /// <para>The list of application information.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListApplicationsResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>Indicates how the application was created.</para>
+            /// <para>The application creation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_custom</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The identity type of the application.</para>
+            /// <para>The application identity type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationIdentityType { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAML Application</para>
@@ -57,12 +57,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The source used to create the application. Valid values:</para>
+            /// <para>The application creation source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>urn:alibaba:idaas:app:source:template</c>: Application template.</para>
-            /// </description></item>
-            /// <item><description><para><c>urn:alibaba:idaas:app:source:standard</c>: Standard protocol.</para>
-            /// </description></item>
+            /// <item><description>urn:alibaba:idaas:app:source:template: Application template.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:source:standard: Standard protocol.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationSourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application template.</para>
+            /// <para>The application template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt_xxx_xxx</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The time the application was created, as a Unix timestamp in milliseconds.</para>
+            /// <para>The time when the application was created, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -103,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the application.</para>
+            /// <para>The application description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A test application</para>
@@ -113,22 +111,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>A string containing a JSON array of features supported by the application. Valid values:</para>
+            /// <para>The features supported by the application, returned as a JSON array string. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>sso</c>: SSO.</para>
-            /// </description></item>
-            /// <item><description><para><c>slo</c>: SLO.</para>
-            /// </description></item>
-            /// <item><description><para><c>provision</c>: Provisioning.</para>
-            /// </description></item>
-            /// <item><description><para><c>api_invoke</c>: API invocation.</para>
-            /// </description></item>
-            /// <item><description><para><c>m2m_client</c>: M2M client.</para>
-            /// </description></item>
-            /// <item><description><para><c>resource_server</c>: Resource server.</para>
-            /// </description></item>
-            /// <item><description><para><c>other</c>: Other.</para>
-            /// </description></item>
+            /// <item><description>sso: Single sign-on.</description></item>
+            /// <item><description>slo: Single logout.</description></item>
+            /// <item><description>provision: Account synchronization.</description></item>
+            /// <item><description>api_invoke: API access. </description></item>
+            /// <item><description>m2m_client: M2M Client capability.</description></item>
+            /// <item><description>resource_server: API service capability.</description></item>
+            /// <item><description>other: Fallback.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +150,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LogoUrl { get; set; }
 
             /// <summary>
-            /// <para>The service code of the cloud service that manages the application template.</para>
+            /// <para>The ServiceCode of the Alibaba Cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rpa</para>
@@ -169,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ManagedServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the resource server.</para>
+            /// <para>The unique identifier of the ResourceServer.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com">https://example.com</a></para>
@@ -179,7 +170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The source type of the resource server.</para>
+            /// <para>The resource server source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:cloud:idaas:resourceserver:source:custom</para>
@@ -189,7 +180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerSourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the resource server.</para>
+            /// <para>The resource server status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -199,7 +190,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application template is managed by a cloud service.</para>
+            /// <para>Indicates whether the application template is managed by an Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -209,16 +200,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The SSO protocol. Valid values:</para>
+            /// <para>The single sign-on (SSO) logon protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>saml2</c>: SAML 2.0</para>
-            /// </description></item>
-            /// <item><description><para><c>oidc</c>: OpenID Connect (OIDC)</para>
-            /// </description></item>
-            /// <item><description><para><c>oauth2/m2m</c>: OAuth 2.0</para>
-            /// </description></item>
-            /// <item><description><para><c>oidc+oauth2/m2m</c>: OIDC and OAuth 2.0</para>
-            /// </description></item>
+            /// <item><description>saml2: SAML 2.0 protocol.</description></item>
+            /// <item><description>oidc: OpenID Connect protocol.</description></item>
+            /// <item><description>oauth2/m2m: OAuth 2.0 protocol.</description></item>
+            /// <item><description>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,14 +216,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SsoType { get; set; }
 
             /// <summary>
-            /// <para>The status of the application. Valid values:</para>
+            /// <para>The application status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>enabled</c>: The application is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><c>disabled</c>: The application is disabled.</para>
-            /// </description></item>
-            /// <item><description><para><c>deleted</c>: The application is soft-deleted.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
+            /// <item><description>deleted: Soft deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -247,7 +231,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time the application was last updated, as a Unix timestamp in milliseconds.</para>
+            /// <para>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>

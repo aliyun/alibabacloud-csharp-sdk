@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationGrantScopeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The permissions of the Developer API feature.</para>
+        /// <para>The authorization scope.</para>
         /// </summary>
         [NameInMap("ApplicationGrantScope")]
         [Validation(Required=false)]
         public GetApplicationGrantScopeResponseBodyApplicationGrantScope ApplicationGrantScope { get; set; }
         public class GetApplicationGrantScopeResponseBodyApplicationGrantScope : TeaModel {
             /// <summary>
-            /// <para>The permissions of the Developer API feature.</para>
+            /// <para>The collection of API authorization scopes.</para>
             /// </summary>
             [NameInMap("GrantScopes")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

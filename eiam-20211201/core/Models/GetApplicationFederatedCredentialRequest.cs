@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationFederatedCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application\&quot;s federated credential.</para>
+        /// <para>The application federated credential ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

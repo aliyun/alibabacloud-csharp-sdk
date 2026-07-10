@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ObtainApplicationClientSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The secret information.</para>
+        /// <para>The client secret information.</para>
         /// </summary>
         [NameInMap("ApplicationClientSecret")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientSecret { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the client secret. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration time of the client secret. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1749830226000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The last time the client secret was used. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the client secret was last used. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -89,10 +89,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the client secret. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>enabled: The secret is enabled.</para>
-            /// </description></item>
-            /// <item><description><para>disabled: The secret is disabled.</para>
-            /// </description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

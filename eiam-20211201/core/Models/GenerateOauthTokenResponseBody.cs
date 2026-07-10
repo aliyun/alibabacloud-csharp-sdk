@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GenerateOauthTokenResponseBodyTokenResponse TokenResponse { get; set; }
         public class GenerateOauthTokenResponseBodyTokenResponse : TeaModel {
             /// <summary>
-            /// <para>The access token.</para>
+            /// <para>Access Token。</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AccessToken { get; set; }
 
             /// <summary>
-            /// <para>The expiration time, in Unix timestamp format (seconds since epoch).</para>
+            /// <para>The expiration time, in UNIX timestamp format. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1770186372</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? ExpiresIn { get; set; }
 
             /// <summary>
-            /// <para>The token type. Only Bearer is supported.</para>
+            /// <para>The token type. Currently, only Bearer is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bearer</para>

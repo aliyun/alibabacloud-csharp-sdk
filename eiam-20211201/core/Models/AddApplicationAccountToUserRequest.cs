@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the application account.</para>
+        /// <para>The application account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

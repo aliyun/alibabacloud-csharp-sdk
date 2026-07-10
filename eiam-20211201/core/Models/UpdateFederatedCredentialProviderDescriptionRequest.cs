@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateFederatedCredentialProviderDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the federated credential provider.</para>
+        /// <para>The description of the federated trust source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The federated credential provider ID.</para>
+        /// <para>The federated trust source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

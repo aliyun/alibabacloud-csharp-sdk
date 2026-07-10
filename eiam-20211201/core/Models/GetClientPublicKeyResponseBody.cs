@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetClientPublicKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information about the application\&quot;s ClientPublicKey.</para>
+        /// <para>The application ClientPublicKey information.</para>
         /// </summary>
         [NameInMap("ClientPublicKey")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application\&quot;s ClientPublicKey.</para>
+            /// <para>The ID of the application ClientPublicKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientPublicKeyId { get; set; }
 
             /// <summary>
-            /// <para>The time when the public key was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1731305755000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the key was last used.</para>
+            /// <para>The last time the key pair was used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1771305755000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the primary key.</para>
+            /// <para>Indicates whether the key pair is used with priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

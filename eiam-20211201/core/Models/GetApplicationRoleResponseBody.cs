@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the application role.</para>
+        /// <para>The application role information.</para>
         /// </summary>
         [NameInMap("ApplicationRole")]
         [Validation(Required=false)]
         public GetApplicationRoleResponseBodyApplicationRole ApplicationRole { get; set; }
         public class GetApplicationRoleResponseBodyApplicationRole : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application role.</para>
+            /// <para>The application role ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approle_01kh2vuo8v9splv8maak1d22rxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationRoleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application role.</para>
+            /// <para>The application role name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Admin Role</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationRoleName { get; set; }
 
             /// <summary>
-            /// <para>The value of the application role.</para>
+            /// <para>The application role value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin_role</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationRoleValue { get; set; }
 
             /// <summary>
-            /// <para>The description of the application role.</para>
+            /// <para>The application role description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Admin Role Description</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxx</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

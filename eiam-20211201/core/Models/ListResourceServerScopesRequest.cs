@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServerScopesRequest : TeaModel {
         /// <summary>
-        /// <para>Application ID.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Authorization type.</para>
+        /// <para>The authorization type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>authorize_required</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Number of rows per page in paginated queries.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next page query. Set this to the NextToken value returned by the previous API call. Leave empty for the first query.</para>
+        /// <para>The pagination token (NextToken) used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Token for the previous page query. Set this to the PreviousToken value returned by the previous API call.</para>
+        /// <para>The pagination token for the previous page. Set this parameter to the PreviousToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
-        /// <para>List of Scope permission IDs.</para>
+        /// <para>The list of scope permission IDs.</para>
         /// </summary>
         [NameInMap("ResourceServerScopeIds")]
         [Validation(Required=false)]
         public List<string> ResourceServerScopeIds { get; set; }
 
         /// <summary>
-        /// <para>Scope permission name.</para>
+        /// <para>The scope permission name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>读取全部用户</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerScopeName { get; set; }
 
         /// <summary>
-        /// <para>Scope permission type.</para>
+        /// <para>The scope permission type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:resourceserver:scope:delegated</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerScopeType { get; set; }
 
         /// <summary>
-        /// <para>Scope permission value.</para>
+        /// <para>The scope permission value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User:Write:ALL</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the application role.</para>
+        /// <para>The application role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>approle_01kghbvoptu5262q35aalvq7cxxxx</para>

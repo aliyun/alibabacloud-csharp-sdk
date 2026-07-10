@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public SetApplicationProvisioningConfigRequestCallbackProvisioningConfig CallbackProvisioningConfig { get; set; }
         public class SetApplicationProvisioningConfigRequestCallbackProvisioningConfig : TeaModel {
             /// <summary>
-            /// <para>The destination address where the application accepts IDaaS event callbacks.</para>
+            /// <para>The destination URL where the application receives IDaaS event callbacks.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/event/callback">https://example.com/event/callback</a></para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The symmetric key for encrypting and decrypting IDaaS event callbacks. The key uses the AES-256 algorithm and is in hexadecimal format.</para>
+            /// <para>The symmetric encryption and decryption key for IDaaS event callbacks. The key uses the AES256 algorithm and is in hexadecimal encoding format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ad3b248**************************b3561a73d7</para>
@@ -48,12 +48,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EncryptKey { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to encrypt IDaaS event callback messages. Valid values:</para>
+            /// <para>Specifies whether IDaaS event callback messages are encrypted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Encrypt the messages.</para>
-            /// </description></item>
-            /// <item><description><para>false: Do not encrypt the messages. The messages are transmitted in plaintext.</para>
-            /// </description></item>
+            /// <item><description>true: Encrypted.</description></item>
+            /// <item><description>false: Not encrypted. Messages are transmitted in plaintext.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? EncryptRequired { get; set; }
 
             /// <summary>
-            /// <para>The list of message types for the IDaaS event callback listener.</para>
+            /// <para>The list of IDaaS event callback message types to listen for.</para>
             /// </summary>
             [NameInMap("ListenEventScopes")]
             [Validation(Required=false)]
@@ -94,12 +92,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to synchronize passwords for IDaaS user event callbacks. Valid values:</para>
+        /// <para>Specifies whether IDaaS user event callbacks synchronize passwords. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Synchronize passwords.</para>
-        /// </description></item>
-        /// <item><description><para>false: Do not synchronize passwords.</para>
-        /// </description></item>
+        /// <item><description>true: Passwords are synchronized.</description></item>
+        /// <item><description>false: Passwords are not synchronized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,12 +106,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? ProvisionPassword { get; set; }
 
         /// <summary>
-        /// <para>The account synchronization protocol. Valid values:</para>
+        /// <para>The account synchronization protocol type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>idaas_callback: IDaaS custom event callback for account synchronization.</para>
-        /// </description></item>
-        /// <item><description><para>scim2: System for Cross-domain Identity Management (SCIM) protocol for synchronization.</para>
-        /// </description></item>
+        /// <item><description>idaas_callback: IDaaS custom event callback-based account synchronization.</description></item>
+        /// <item><description>scim2: System for Cross-domain Identity Management protocol-based synchronization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -127,23 +121,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ProvisionProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The IDaaS SCIM protocol synchronization configuration parameters. This parameter is required when ProvisionProtocolType is set to scim2.</para>
+        /// <para>The IDaaS System for Cross-domain Identity Management protocol synchronization configuration parameters. This parameter is required when ProvisionProtocolType is set to scim2.</para>
         /// </summary>
         [NameInMap("ScimProvisioningConfig")]
         [Validation(Required=false)]
         public SetApplicationProvisioningConfigRequestScimProvisioningConfig ScimProvisioningConfig { get; set; }
         public class SetApplicationProvisioningConfigRequestScimProvisioningConfig : TeaModel {
             /// <summary>
-            /// <para>The configuration parameters for SCIM protocol synchronization.</para>
+            /// <para>The System for Cross-domain Identity Management protocol synchronization configuration parameters.</para>
             /// </summary>
             [NameInMap("AuthnConfiguration")]
             [Validation(Required=false)]
             public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration AuthnConfiguration { get; set; }
             public class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The authorization mode for the SCIM protocol interface. Valid values:</para>
+                /// <para>The authorization pattern for the System for Cross-domain Identity Management protocol API. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>oauth2: OAuth2 mode.</description></item>
+                /// <item><description>oauth2: OAuth2 pattern.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -154,12 +148,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthnMode { get; set; }
 
                 /// <summary>
-                /// <para>The authorization configuration parameters. The usage is as follows:</para>
+                /// <para>The authorization configuration parameters. Usage:</para>
                 /// <list type="bullet">
-                /// <item><description><para>If GrantType is set to client_credentials, you can update ClientId, ClientSecret, and AuthnMethod.</para>
-                /// </description></item>
-                /// <item><description><para>If GrantType is set to bearer_token, you can update AccessToken.</para>
-                /// </description></item>
+                /// <item><description>If GrantType is set to client_credentials, you can update ClientId, ClientSecret, and AuthnMethod.</description></item>
+                /// <item><description>If GrantType is set to bearer_token, you can update AccessToken.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("AuthnParam")]
@@ -167,7 +159,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam AuthnParam { get; set; }
                 public class SetApplicationProvisioningConfigRequestScimProvisioningConfigAuthnConfigurationAuthnParam : TeaModel {
                     /// <summary>
-                    /// <para>The access token. You can update this field when the grant type is bearer_token.</para>
+                    /// <para>The access token. This field can be updated when GrantType is set to bearer_token.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>k52x2ru63rlkflina5utgkxxxx</para>
@@ -177,12 +169,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string AccessToken { get; set; }
 
                     /// <summary>
-                    /// <para>The authentication method for the SCIM protocol. Valid values:</para>
+                    /// <para>The System for Cross-domain Identity Management protocol authentication pattern. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>client_secret_basic: The key is passed in the request header.</para>
-                    /// </description></item>
-                    /// <item><description><para>client_secret_post: The key is passed in the request body.</para>
-                    /// </description></item>
+                    /// <item><description>client_secret_basic: Passes the secret through the request header.</description></item>
+                    /// <item><description>client_secret_post: Passes the secret through the request body.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -225,12 +215,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The authorization grant type for the SCIM protocol. Valid values:</para>
+                /// <para>The System for Cross-domain Identity Management protocol authorization pattern. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>client_credentials: Client credentials mode.</para>
-                /// </description></item>
-                /// <item><description><para>bearer_token: Bearer token mode.</para>
-                /// </description></item>
+                /// <item><description>client_credentials: Client credentials pattern.</description></item>
+                /// <item><description>bearer_token: Bearer token pattern.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -243,9 +231,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The scope of a full push for the SCIM protocol. Valid values:</para>
+            /// <para>The System for Cross-domain Identity Management protocol full push scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>urn:alibaba:idaas:app:scim:User:PUSH: Full synchronization of users.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:scim:User:PUSH: Full user synchronization.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("FullPushScopes")]
@@ -253,14 +241,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> FullPushScopes { get; set; }
 
             /// <summary>
-            /// <para>The operations on the target resource for the SCIM protocol. Valid values:</para>
+            /// <para>The System for Cross-domain Identity Management protocol target resource operation actions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>urn:alibaba:idaas:app:scim:User:CREATE: Create an account.</para>
-            /// </description></item>
-            /// <item><description><para>urn:alibaba:idaas:app:scim:User:UPDATE: Update an account.</para>
-            /// </description></item>
-            /// <item><description><para>urn:alibaba:idaas:app:scim:User:DELETE: Delete an account.</para>
-            /// </description></item>
+            /// <item><description>urn:alibaba:idaas:app:scim:User:CREATE: Account creation.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:scim:User:UPDATE: Account update.</description></item>
+            /// <item><description>urn:alibaba:idaas:app:scim:User:DELETE: Account deletion.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("ProvisioningActions")]
@@ -268,7 +253,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> ProvisioningActions { get; set; }
 
             /// <summary>
-            /// <para>The base URL where the application accepts IDaaS SCIM protocol synchronization.</para>
+            /// <para>The base URL where the application accepts IDaaS synchronization requests based on the System for Cross-domain Identity Management protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/scim">https://example.com/scim</a></para>

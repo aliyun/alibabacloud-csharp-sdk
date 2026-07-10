@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the application template.</para>
+        /// <para>The application template information.</para>
         /// </summary>
         [NameInMap("ApplicationTemplate")]
         [Validation(Required=false)]
         public GetApplicationTemplateResponseBodyApplicationTemplate ApplicationTemplate { get; set; }
         public class GetApplicationTemplateResponseBodyApplicationTemplate : TeaModel {
             /// <summary>
-            /// <para>The ID of the application template.</para>
+            /// <para>The application template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt_ramintlrole_ixxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application template.</para>
+            /// <para>The application template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the application template.</para>
+            /// <para>The application template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba Cloud SSO</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The URL of the help document for the application template.</para>
+            /// <para>The help document URL of the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/document_detail/409xxx.html">https://example.com/document_detail/409xxx.html</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string HelpDocumentUrl { get; set; }
 
             /// <summary>
-            /// <para>The URL of the logo for the application template.</para>
+            /// <para>The logo URL of the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png">https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png</a></para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ManagedServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The sales information about the application template.</para>
+            /// <para>The sale information of the application template.</para>
             /// </summary>
             [NameInMap("SaleInfo")]
             [Validation(Required=false)]
             public GetApplicationTemplateResponseBodyApplicationTemplateSaleInfo SaleInfo { get; set; }
             public class GetApplicationTemplateResponseBodyApplicationTemplateSaleInfo : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the application template is permanently free.</para>
+                /// <para>Indicates whether the application template is always free.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The URL of the console for the Alibaba Cloud service that manages the application template.</para>
+            /// <para>The console URL of the Alibaba Cloud service that manages the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The supported Single Sign-On (SSO) protocols.</para>
+            /// <para>The supported SSO protocols.</para>
             /// </summary>
             [NameInMap("SsoTypes")]
             [Validation(Required=false)]

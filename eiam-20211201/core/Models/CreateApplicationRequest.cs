@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The identity type of the application. The default value is application. Valid values:</para>
+        /// <para>The application identity type. Default value: application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>application: A standard application.</para>
-        /// </description></item>
-        /// <item><description><para>agent: An automated agent.</para>
-        /// </description></item>
+        /// <item><description>application: application.</description></item>
+        /// <item><description>agent: agent.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,12 +49,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Specifies how the application is created. Valid values:</para>
+        /// <para>The source from which the application is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>urn:alibaba:idaas:app:source:template: Creates the application from an application template.</para>
-        /// </description></item>
-        /// <item><description><para>urn:alibaba:idaas:app:source:standard: Creates the application from a standard protocol.</para>
-        /// </description></item>
+        /// <item><description>urn:alibaba:idaas:app:source:template: application template.</description></item>
+        /// <item><description>urn:alibaba:idaas:app:source:standard: standard protocol.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationSourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application template. This parameter is required if ApplicationSourceType is urn:alibaba:idaas:app:source:template.</para>
+        /// <para>The application template ID. This parameter is required when ApplicationSourceType is set to urn:alibaba:idaas:app:source:template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apt_ramuser_mjqrsi</para>
@@ -123,12 +119,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// <para>The single sign-on (SSO) protocol. Valid values:</para>
+        /// <para>The single sign-on protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>saml2: SAML 2.0</para>
-        /// </description></item>
-        /// <item><description><para>oidc: OpenID Connect</para>
-        /// </description></item>
+        /// <item><description>saml2: SAML 2.0 protocol.</description></item>
+        /// <item><description>oidc: OpenID Connect protocol.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

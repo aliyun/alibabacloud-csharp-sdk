@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AddApplicationAccountToUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the application account.</para>
+        /// <para>The application account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aac_m6z7awz5kresi2ezgajsbkxxxx</para>

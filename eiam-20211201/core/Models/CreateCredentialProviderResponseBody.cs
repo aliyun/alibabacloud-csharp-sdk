@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCredentialProviderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the credential provider.</para>
+        /// <para>The credential provider ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</para>

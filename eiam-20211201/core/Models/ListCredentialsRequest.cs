@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> CredentialExternalIds { get; set; }
 
         /// <summary>
-        /// <para>The credential IDs.</para>
+        /// <para>The list of credential IDs.</para>
         /// </summary>
         [NameInMap("CredentialIds")]
         [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListCredentialsRequestFilter> Filter { get; set; }
         public class ListCredentialsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The field to filter on. Valid value:</para>
+            /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>CredentialIdentifier</c>: the credential identifier.</description></item>
+            /// <item><description>CredentialIdentifier: the credential identifier.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The values for the specified filter field.</para>
+            /// <para>The list of filter field values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -69,12 +69,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>Default value: 20.</para>
-        /// </description></item>
-        /// <item><description><para>Maximum value: 100.</para>
-        /// </description></item>
+        /// <item><description>Default value: 20.</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The credential statuses.</para>
+        /// <para>The list of credential statuses.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

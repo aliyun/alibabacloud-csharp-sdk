@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The health check result of the cloud account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>success: Succeeded.</description></item>
-                /// <item><description>failed: Failed.</description></item>
+                /// <item><description>success: The health check succeeded.</description></item>
+                /// <item><description>failed: The health check failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of rows per page for paging.</para>
+        /// <para>The number of rows per page when paging is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the current call.</para>
+        /// <para>The token returned for the current call to indicate the starting position of the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

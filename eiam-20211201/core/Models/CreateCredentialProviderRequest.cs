@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCredentialProviderRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. It is used to ensure the idempotence of the request.</para>
-        /// <para>Generate a parameter value from your client to make sure that the value is unique among different requests. The ClientToken parameter can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The idempotency token that ensures the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public CreateCredentialProviderRequestCredentialProviderConfigJwtProviderConfig JwtProviderConfig { get; set; }
             public class CreateCredentialProviderRequestCredentialProviderConfigJwtProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The list of allowed issuers for JWTs.</para>
+                /// <para>The list of allowed JWT issuers.</para>
                 /// <remarks>
-                /// <para>The list can contain a maximum of 200 issuers.</para>
+                /// <para>The list can contain up to 200 entries.</para>
                 /// </remarks>
                 /// </summary>
                 [NameInMap("AllowedTokenIssuers")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public List<string> AllowedTokenIssuers { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the short-lived token derivation feature for JWTs.</para>
+                /// <para>Specifies whether to enable the JWT derived short token capability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? DerivedShortTokenEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the JSON Web Token (JWT). Unit: seconds.</para>
+                /// <para>The validity period of the JWT. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>900</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public int? Expiration { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the cleanup of expired JWTs.</para>
+                /// <para>Specifies whether to enable JWT expiration cleanup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig OAuthProviderConfig { get; set; }
             public class CreateCredentialProviderRequestCredentialProviderConfigOAuthProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>The client ID. This parameter corresponds to the client_id parameter in the OAuth protocol.</para>
+                /// <para>The client_id in the OAuth protocol, which is the client ID.</para>
                 /// <remarks>
-                /// <para>The client ID cannot exceed 128 characters in length.</para>
+                /// <para>The length cannot exceed 128 characters.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The client key. This parameter corresponds to the client_secret parameter in the OAuth protocol.</para>
+                /// <para>The client_secret in the OAuth protocol, which is the client secret.</para>
                 /// <remarks>
-                /// <para>The client key cannot exceed 1024 characters in length.</para>
+                /// <para>The length cannot exceed 1024 characters.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -113,24 +113,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientSecret { get; set; }
 
                 /// <summary>
-                /// <para>The scope of permissions. This parameter corresponds to the scope parameter in the OAuth protocol.</para>
+                /// <para>The scope in the OAuth protocol, which specifies the permission scope.</para>
                 /// <remarks>
-                /// <para>The scope that you configure for the OAuth credential provider is used as a fallback value. If you do not specify the scope parameter when you call a DeveloperAPI operation to obtain an OAuth access token, the scope that you configure for the credential provider is used.</para>
+                /// <para>The Scope configuration on the credential provider serves as the default value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</para>
                 /// </remarks>
                 /// <remarks>
-                /// <para>Notice: </para>
+                /// <para>Notice: Separate multiple Scope values with spaces.</para>
                 /// </remarks>
-                /// <para>Separate multiple scopes with spaces.</para>
-                /// <para>The following limits apply to a single scope:</para>
+                /// <para>The following restrictions apply to each individual Scope value:</para>
                 /// <ol>
-                /// <item><description><para>The scope can contain lowercase letters, digits, and the following special characters: <c>|/:_-.</c></para>
-                /// </description></item>
-                /// <item><description><para>The scope must contain lowercase letters or digits.</para>
-                /// </description></item>
-                /// <item><description><para>The scope must start with a special character <c>.</c>, a lowercase letter, or a digit.</para>
-                /// </description></item>
-                /// <item><description><para>The scope cannot exceed 1024 characters in length.</para>
-                /// </description></item>
+                /// <item><description>Allowed characters: lowercase letters, digits, and the special characters <c>|/:_-.</c></description></item>
+                /// <item><description>Must contain at least one lowercase letter or digit.</description></item>
+                /// <item><description>Must start with the special character <c>.</c>, a lowercase letter, or a digit.</description></item>
+                /// <item><description>The length cannot exceed 1024 characters.</description></item>
                 /// </ol>
                 /// 
                 /// <b>Example:</b>
@@ -141,9 +136,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// <para>The token endpoint. This parameter corresponds to the token endpoint in the OAuth protocol.</para>
+                /// <para>The token endpoint of the OAuth protocol.</para>
                 /// <remarks>
-                /// <para>The value must start with <c>http://</c> or <c>https://</c> and cannot exceed 1024 characters in length.</para>
+                /// <para>The value must start with <c>http://</c> or <c>https://</c>, and the length cannot exceed 1024 characters.</para>
                 /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -159,9 +154,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The identifier of the credential provider.</para>
+        /// <para>The business identifier of the credential provider.</para>
         /// <remarks>
-        /// <para>The identifier can contain uppercase letters, lowercase letters, digits, and the following special characters: <c>.-_</c>. The identifier cannot exceed 64 characters in length.</para>
+        /// <para>Allowed characters include uppercase and lowercase letters, digits, and the special characters <c>.-_</c>. The length cannot exceed 64 characters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -175,7 +170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The name of the credential provider.</para>
         /// <remarks>
-        /// <para>The name cannot exceed 64 characters in length.</para>
+        /// <para>The length cannot exceed 64 characters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -189,10 +184,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The type of the credential provider. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>oauth: OAuth credential provider</para>
-        /// </description></item>
-        /// <item><description><para>jwt: JWT credential provider</para>
-        /// </description></item>
+        /// <item><description>oauth: OAuth credential provider</description></item>
+        /// <item><description>jwt: JWT credential provider</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -206,7 +199,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The description.</para>
         /// <remarks>
-        /// <para>The description cannot exceed 128 characters in length.</para>
+        /// <para>The length cannot exceed 128 characters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateClientPublicKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the client public key for the application.</para>
+        /// <para>The ID of the application ClientPublicKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KEYCKmEYW9byWTdjuRbmCjd2Bhg6VpkAxxxx</para>

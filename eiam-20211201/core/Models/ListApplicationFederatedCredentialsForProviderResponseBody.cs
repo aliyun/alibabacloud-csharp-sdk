@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application federated credential.</para>
+            /// <para>The application federated credential name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialName { get; set; }
 
             /// <summary>
-            /// <para>The type of the application federated credential.</para>
+            /// <para>The application federated credential type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oidc</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the application federated credential.</para>
+            /// <para>The application federated credential description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The federated credential provider ID.</para>
+            /// <para>The federated trust source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcp_adasd12dxxxxx</para>
@@ -107,7 +107,131 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the application federated credential.</para>
+            /// <para>The OIDC structured configuration. This applies to structured mode with the OIDC type.</para>
+            /// </summary>
+            [NameInMap("OidcVerificationConfig")]
+            [Validation(Required=false)]
+            public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfig OidcVerificationConfig { get; set; }
+            public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfig : TeaModel {
+                /// <summary>
+                /// <para>The Azure VM scenario configuration.</para>
+                /// </summary>
+                [NameInMap("AzureVmConfig")]
+                [Validation(Required=false)]
+                public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigAzureVmConfig AzureVmConfig { get; set; }
+                public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigAzureVmConfig : TeaModel {
+                    [NameInMap("PrincipalId")]
+                    [Validation(Required=false)]
+                    public string PrincipalId { get; set; }
+
+                    [NameInMap("ResourceGroupName")]
+                    [Validation(Required=false)]
+                    public string ResourceGroupName { get; set; }
+
+                    [NameInMap("SubscriptionId")]
+                    [Validation(Required=false)]
+                    public string SubscriptionId { get; set; }
+
+                    [NameInMap("VmNames")]
+                    [Validation(Required=false)]
+                    public List<string> VmNames { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The GCP VM scenario configuration.</para>
+                /// </summary>
+                [NameInMap("GcpVmConfig")]
+                [Validation(Required=false)]
+                public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGcpVmConfig GcpVmConfig { get; set; }
+                public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGcpVmConfig : TeaModel {
+                    /// <summary>
+                    /// <para>The list of VM instance IDs. A maximum of 10 IDs are supported.</para>
+                    /// </summary>
+                    [NameInMap("InstanceIds")]
+                    [Validation(Required=false)]
+                    public List<string> InstanceIds { get; set; }
+
+                    [NameInMap("ProjectId")]
+                    [Validation(Required=false)]
+                    public string ProjectId { get; set; }
+
+                    /// <summary>
+                    /// <para>The sub claim that corresponds to the service account.</para>
+                    /// </summary>
+                    [NameInMap("ServiceAccountId")]
+                    [Validation(Required=false)]
+                    public string ServiceAccountId { get; set; }
+
+                }
+
+                [NameInMap("GenericConfig")]
+                [Validation(Required=false)]
+                public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGenericConfig GenericConfig { get; set; }
+                public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigGenericConfig : TeaModel {
+                    [NameInMap("Subject")]
+                    [Validation(Required=false)]
+                    public string Subject { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The Kubernetes scenario configuration.</para>
+                /// </summary>
+                [NameInMap("KubernetesConfig")]
+                [Validation(Required=false)]
+                public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig KubernetesConfig { get; set; }
+                public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsOidcVerificationConfigKubernetesConfig : TeaModel {
+                    /// <summary>
+                    /// <para>The Kubernetes namespace.</para>
+                    /// </summary>
+                    [NameInMap("Namespace")]
+                    [Validation(Required=false)]
+                    public string Namespace { get; set; }
+
+                    /// <summary>
+                    /// <para>The pod name prefix.</para>
+                    /// </summary>
+                    [NameInMap("PodNamePrefix")]
+                    [Validation(Required=false)]
+                    public string PodNamePrefix { get; set; }
+
+                    /// <summary>
+                    /// <para>The Kubernetes service account name.</para>
+                    /// </summary>
+                    [NameInMap("ServiceAccountName")]
+                    [Validation(Required=false)]
+                    public string ServiceAccountName { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The OIDC scenario profile. Valid values: generic, kubernetes, gcp_vm, and azure_vm.</para>
+                /// </summary>
+                [NameInMap("Profile")]
+                [Validation(Required=false)]
+                public string Profile { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The PKCS#7 structured configuration. This applies to structured mode with the PKCS#7 type.</para>
+            /// </summary>
+            [NameInMap("Pkcs7VerificationConfig")]
+            [Validation(Required=false)]
+            public ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsPkcs7VerificationConfig Pkcs7VerificationConfig { get; set; }
+            public class ListApplicationFederatedCredentialsForProviderResponseBodyApplicationFederatedCredentialsPkcs7VerificationConfig : TeaModel {
+                /// <summary>
+                /// <para>The list of allowed instance IDs. A maximum of 10 IDs are supported.</para>
+                /// </summary>
+                [NameInMap("InstanceIds")]
+                [Validation(Required=false)]
+                public List<string> InstanceIds { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The application federated credential status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -126,10 +250,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? UpdateTime { get; set; }
 
+            /// <summary>
+            /// <para>The verification condition. In freedom mode, this is a manually entered value. In structured mode, this is the final compiled value.</para>
+            /// </summary>
+            [NameInMap("VerificationCondition")]
+            [Validation(Required=false)]
+            public string VerificationCondition { get; set; }
+
+            /// <summary>
+            /// <para>The verification mode. Valid values: freedom and structured.</para>
+            /// </summary>
+            [NameInMap("VerificationMode")]
+            [Validation(Required=false)]
+            public string VerificationMode { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The maximum number of entries returned per page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -139,7 +277,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -149,7 +287,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The query token returned by this call.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -169,7 +307,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

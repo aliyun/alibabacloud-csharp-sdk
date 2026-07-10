@@ -32,21 +32,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The advanced configuration of the SCIM server.</para>
+        /// <para>The SCIM server advanced configuration.</para>
         /// </summary>
         [NameInMap("ScimServerAdvancedConfig")]
         [Validation(Required=false)]
         public UpdateApplicationAdvancedConfigRequestScimServerAdvancedConfig ScimServerAdvancedConfig { get; set; }
         public class UpdateApplicationAdvancedConfigRequestScimServerAdvancedConfig : TeaModel {
             /// <summary>
-            /// <para>A list of IDs of supported custom user fields.</para>
+            /// <para>The list of supported user custom field IDs.</para>
             /// </summary>
             [NameInMap("SupportedUserCustomFieldIds")]
             [Validation(Required=false)]
             public List<string> SupportedUserCustomFieldIds { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the user extension fields.</para>
+            /// <para>The namespace of user extended fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</para>

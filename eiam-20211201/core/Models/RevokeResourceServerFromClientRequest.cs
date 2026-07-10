@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RevokeResourceServerFromClientRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the client application.</para>
+        /// <para>The ID of the Client application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource server application.</para>
+        /// <para>The ID of the ResourceServer application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

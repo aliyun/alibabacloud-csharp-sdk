@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationClientSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the client secret.</para>
+        /// <para>The client secret information.</para>
         /// </summary>
         [NameInMap("ApplicationClientSecret")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The value of the client secret.</para>
+            /// <para>The client secret of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientSecret { get; set; }
 
             /// <summary>
-            /// <para>The ID of the client secret.</para>
+            /// <para>The client secret ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sci_k52x2ru63rlkflina5utgkxxxx</para>

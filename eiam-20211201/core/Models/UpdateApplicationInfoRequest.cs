@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The collection of application visibility settings.</para>
+        /// <para>The application visibility settings.</para>
         /// </summary>
         [NameInMap("ApplicationVisibility")]
         [Validation(Required=false)]
         public List<string> ApplicationVisibility { get; set; }
 
         /// <summary>
-        /// <para>The idempotent token.</para>
+        /// <para>The idempotence token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>

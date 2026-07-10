@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>应用角色ID。</para>
+        /// <para>The application role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the users. A single request can contain up to 100 user IDs.</para>
+        /// <para>The list of account IDs. You can specify up to 100 account IDs in a single request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListFederatedCredentialProvidersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of federated credential providers.</para>
+        /// <para>The list of federated trust sources.</para>
         /// </summary>
         [NameInMap("FederatedCredentialProviders")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The provider\&quot;s creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729061324000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The provider\&quot;s description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the federated credential provider.</para>
+            /// <para>The federated trust source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcp_asda123XXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FederatedCredentialProviderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the federated credential provider.</para>
+            /// <para>The name of the federated trust source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pkcs7test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FederatedCredentialProviderName { get; set; }
 
             /// <summary>
-            /// <para>The type of the federated credential provider.</para>
+            /// <para>The type of the federated trust source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pkcs7</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network access endpoint.</para>
+            /// <para>The network access endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>inae_public</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>The OpenID Connect (OIDC) configuration.</para>
+            /// <para>The OIDC configuration.</para>
             /// </summary>
             [NameInMap("OidcProviderConfig")]
             [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string DynamicJwks { get; set; }
 
                 /// <summary>
-                /// <para>The issuer.</para>
+                /// <para>Issuer</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the last JWKS retrieval.</para>
+                /// <para>The time when the JWKS was last obtained.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1729061324000</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string JwksSource { get; set; }
 
                 /// <summary>
-                /// <para>The JSON Web Key Set (JWKS) endpoint.</para>
+                /// <para>The JWKS endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -210,21 +210,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfig Pkcs7ProviderConfig { get; set; }
             public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>A list of PKCS7 certificates.</para>
+                /// <para>The list of PKCS7 certificates.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
                 public List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificates> Certificates { get; set; }
                 public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificates : TeaModel {
                     /// <summary>
-                    /// <para>The metadata of the certificate.</para>
+                    /// <para>The certificate metadata.</para>
                     /// </summary>
                     [NameInMap("CertificateMetadata")]
                     [Validation(Required=false)]
                     public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificatesCertificateMetadata CertificateMetadata { get; set; }
                     public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPkcs7ProviderConfigCertificatesCertificateMetadata : TeaModel {
                         /// <summary>
-                        /// <para>The expiration time.</para>
+                        /// <para>The time when the certificate expires.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1729061324000</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? NotAfter { get; set; }
 
                         /// <summary>
-                        /// <para>The validity start time.</para>
+                        /// <para>The effective period of the certificate.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1729061324000</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The content of the certificate.</para>
+                    /// <para>The certificate content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-----BEGIN CERTIFICATE-----
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The Cryptographic Message Syntax (CMS) verification mode.</para>
+                /// <para>The CMS verification mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cert</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string CmsVerificationMode { get; set; }
 
                 /// <summary>
-                /// <para>The validity period of the signature.</para>
+                /// <para>The signature effective time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? SignatureEffectiveTime { get; set; }
 
                 /// <summary>
-                /// <para>The expression used to obtain the signing time.</para>
+                /// <para>The expression used to retrieve the signing time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pkcs7.payload.jsonData.audience.signingTime</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SigningTimeValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>The source of the certificate trust anchor.</para>
+                /// <para>The certificate trust anchor source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alibaba_cloud</para>
@@ -329,21 +329,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfig PrivateCaProviderConfig { get; set; }
             public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>A list of root certificates.</para>
+                /// <para>The root certificates.</para>
                 /// </summary>
                 [NameInMap("Certificates")]
                 [Validation(Required=false)]
                 public List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificates> Certificates { get; set; }
                 public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificates : TeaModel {
                     /// <summary>
-                    /// <para>The metadata of the certificate.</para>
+                    /// <para>The certificate metadata.</para>
                     /// </summary>
                     [NameInMap("CertificateMetadata")]
                     [Validation(Required=false)]
                     public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificatesCertificateMetadata CertificateMetadata { get; set; }
                     public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersPrivateCaProviderConfigCertificatesCertificateMetadata : TeaModel {
                         /// <summary>
-                        /// <para>The expiration time.</para>
+                        /// <para>The time when the certificate expires.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1729061324000</para>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                         public long? NotAfter { get; set; }
 
                         /// <summary>
-                        /// <para>The validity start time.</para>
+                        /// <para>The effective period of the certificate.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1729061324000</para>
@@ -365,7 +365,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     }
 
                     /// <summary>
-                    /// <para>The content of the root certificate.</para>
+                    /// <para>The root certificate content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>-----BEGIN CERTIFICATE-----
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>The fingerprint of the root certificate.</para>
+                    /// <para>The root certificate fingerprint.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2b18947a6a9fc7764fd8b5fb18a863b0c6daxxx</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The method for obtaining the root certificate.</para>
+                /// <para>The method used to retrieve the root certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The provider\&quot;s status.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The provider\&quot;s last update time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1729061324000</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. This parameter is empty if all results have been returned.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token for the previous page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

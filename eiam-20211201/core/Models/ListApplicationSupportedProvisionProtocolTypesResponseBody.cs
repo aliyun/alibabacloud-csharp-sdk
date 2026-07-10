@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationSupportedProvisionProtocolTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The supported synchronization protocols for the application.</para>
+        /// <para>The list of synchronization types supported by the application.</para>
         /// </summary>
         [NameInMap("ApplicationSupportedProvisionProtocolType")]
         [Validation(Required=false)]
         public ListApplicationSupportedProvisionProtocolTypesResponseBodyApplicationSupportedProvisionProtocolType ApplicationSupportedProvisionProtocolType { get; set; }
         public class ListApplicationSupportedProvisionProtocolTypesResponseBodyApplicationSupportedProvisionProtocolType : TeaModel {
             /// <summary>
-            /// <para>The account synchronization protocols that the application supports. Valid values:</para>
+            /// <para>The account synchronization type supported by the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>idaas_callback: event callback.</para>
-            /// </description></item>
-            /// <item><description><para>scim2: System for Cross-domain Identity Management (SCIM) protocol.</para>
-            /// </description></item>
+            /// <item><description>idaas_callback: Event callback type.</description></item>
+            /// <item><description>scim2: System for Cross-domain Identity Management protocol type.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("ProvisionProtocolType")]
