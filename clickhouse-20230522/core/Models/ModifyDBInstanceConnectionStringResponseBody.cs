@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceConnectionStringResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBInstanceConnectionStringResponseBodyData Data { get; set; }
         public class ModifyDBInstanceConnectionStringResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint of the cluster.</para>
+            /// <para>The connection string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</para>

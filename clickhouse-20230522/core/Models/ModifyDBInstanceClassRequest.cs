@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceClassRequest : TeaModel {
         /// <summary>
+        /// <para>The autoscaling configuration for the compute group.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public ModifyDBInstanceClassRequestAutoScaleConfig AutoScaleConfig { get; set; }
         public class ModifyDBInstanceClassRequestAutoScaleConfig : TeaModel {
             /// <summary>
+            /// <para>The number of burstable nodes for autoscaling.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? BurstNum { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable or disable autoscaling. Valid values: <c>enable</c> and <c>disable</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enable</para>
             /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>Information about the VSwitches.</para>
+            /// </summary>
             [NameInMap("VSwitchInfos")]
             [Validation(Required=false)]
             public List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> VSwitchInfos { get; set; }
             public class ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos : TeaModel {
+                /// <summary>
+                /// <para>The VSwitch IDs.</para>
+                /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public List<string> VSwitchIds { get; set; }
 
                 /// <summary>
+                /// <para>The zone ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing-XXX</para>
                 /// </summary>
@@ -53,6 +67,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         }
 
+        /// <summary>
+        /// <para>The compute group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-gs5j3sua77*******-clickhouse</para>
+        /// </summary>
         [NameInMap("ComputingGroupId")]
         [Validation(Required=false)]
         public string ComputingGroupId { get; set; }
@@ -62,13 +82,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cc-xxxxxxx</para>
+        /// <para>cc-gs5j3sua77*******</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of nodes. Valid values: 2 to 16.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -77,6 +99,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
+        /// <para>The maximum capacity per node for serverless autoscaling. Valid values: 4 to 32. This value must be greater than the minimum value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -85,6 +109,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeScaleMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum capacity per node for serverless autoscaling. Valid values: 4 to 32.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>
@@ -103,7 +129,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum capacity for elastic scaling.</para>
+        /// <para>The maximum capacity for serverless autoscaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -113,16 +139,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum capacity for elastic scaling.</para>
+        /// <para>The minimum capacity for serverless autoscaling.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("ScaleMin")]
         [Validation(Required=false)]
         public long? ScaleMin { get; set; }
 
         /// <summary>
+        /// <para>The pre-purchased storage capacity in GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -131,6 +159,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public long? StorageQuota { get; set; }
 
         /// <summary>
+        /// <para>The storage type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>

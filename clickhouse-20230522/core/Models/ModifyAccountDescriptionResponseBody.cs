@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cc-xxxxx</para>
+            /// <para>cc-bp1anv7jo84t****</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx-xxx-xxx</para>
+        /// <para>7FFC9EBE-5023-5D5D-A5F0-1607E0F2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

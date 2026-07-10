@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EnterpriseDBCluster</para>
         /// </summary>

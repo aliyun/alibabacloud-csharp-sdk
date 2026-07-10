@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestCluster</para>
+            /// <para>Cluster test</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The result sets.</para>
+            /// <para>The list of slow log records.</para>
             /// </summary>
             [NameInMap("ResultSet")]
             [Validation(Required=false)]
             public List<DescribeSlowLogRecordsResponseBodyDataResultSet> ResultSet { get; set; }
             public class DescribeSlowLogRecordsResponseBodyDataResultSet : TeaModel {
                 /// <summary>
-                /// <para>The address to which the query statement is sent.</para>
+                /// <para>The IP address from which the query was initiated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0:0:0:0:0:ffff:1edd65ea</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialQueryId { get; set; }
 
                 /// <summary>
-                /// <para>The user who executes the query statement.</para>
+                /// <para>The user who initiated the query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bany</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? MemoryUsage { get; set; }
 
                 /// <summary>
-                /// <para>The query statement that is running.</para>
+                /// <para>The statement that was being executed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select * from test</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Query { get; set; }
 
                 /// <summary>
-                /// <para>The execution duration of slow SQL queries. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
+                /// <para>The execution duration of the slow query. The minimum value is <b>1000</b>. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? QueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</para>
+                /// <para>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-09-11 16:00:00</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string QueryStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The size of the data that is scanned. Unit: bytes.</para>
+                /// <para>The size of the scanned data. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4507128020832</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? ReadBytes { get; set; }
 
                 /// <summary>
-                /// <para>The number of read rows.</para>
+                /// <para>The number of rows read.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? ResultBytes { get; set; }
 
                 /// <summary>
-                /// <para>The type of the slow query logs.</para>
+                /// <para>The type of the slow query log.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ExceptionWhileProcessing</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

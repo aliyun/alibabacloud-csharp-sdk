@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 /// <para>The description of the database account.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Used for test</para>
+                /// <para>Test</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 /// <summary>
                 /// <para>Indicates whether the column is the primary key of the table. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

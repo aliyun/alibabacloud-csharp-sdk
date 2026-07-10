@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cc-xxxxxxx</para>
+        /// <para>cc-bp1anv7jo84t****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

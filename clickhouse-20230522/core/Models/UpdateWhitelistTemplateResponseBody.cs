@@ -9,19 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class UpdateWhitelistTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the whitelist template.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateWhitelistTemplateResponseBodyData Data { get; set; }
         public class UpdateWhitelistTemplateResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of whitelist templates.</para>
+            /// </summary>
             [NameInMap("Templates")]
             [Validation(Required=false)]
             public List<UpdateWhitelistTemplateResponseBodyDataTemplates> Templates { get; set; }
             public class UpdateWhitelistTemplateResponseBodyDataTemplates : TeaModel {
+                /// <summary>
+                /// <para>The list of associated instances.</para>
+                /// </summary>
                 [NameInMap("DbInstances")]
                 [Validation(Required=false)]
                 public List<UpdateWhitelistTemplateResponseBodyDataTemplatesDbInstances> DbInstances { get; set; }
                 public class UpdateWhitelistTemplateResponseBodyDataTemplatesDbInstances : TeaModel {
                     /// <summary>
+                    /// <para>The instance ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>asdfwef</para>
                     /// </summary>
@@ -32,6 +43,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 }
 
                 /// <summary>
+                /// <para>The IP address whitelist.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>192.168.1.1,10.0.0.1</para>
                 /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string SecurityIPList { get; set; }
 
                 /// <summary>
+                /// <para>The whitelist template ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>g-asdfwem</para>
                 /// </summary>
@@ -52,7 +67,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// <para>Request ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

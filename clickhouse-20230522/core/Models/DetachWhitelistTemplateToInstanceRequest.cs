@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DetachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the ClickHouse instances, separated by commas. You can specify up to 20 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The whitelist template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

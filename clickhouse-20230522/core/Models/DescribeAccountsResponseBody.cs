@@ -36,12 +36,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 /// <summary>
                 /// <para>The type of the database account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: standard account</description></item>
-                /// <item><description><b>6</b>: privileged account</description></item>
+                /// <item><description><para><b>1</b>: standard account</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: privileged account</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>NormalAccount</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Used for test</para>
+                /// <para>For testing</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -60,9 +62,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 /// <summary>
                 /// <para>The state of the database account. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The database account is being created.</description></item>
-                /// <item><description><b>1</b>: The database account is in use.</description></item>
-                /// <item><description><b>3</b>: The database account is being deleted.</description></item>
+                /// <item><description><para><b>0</b>: The database account is being created.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: The database account is in use.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: The database account is being deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,9 +92,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <summary>
             /// <para>The number of entries per page. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>30</b> (default)</description></item>
-            /// <item><description><b>50</b></description></item>
-            /// <item><description><b>100</b></description></item>
+            /// <item><description><para><b>30</b> (default)</para>
+            /// </description></item>
+            /// <item><description><para><b>50</b></para>
+            /// </description></item>
+            /// <item><description><para><b>100</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSlowLogTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>clusterTest</para>
+            /// <para>Cluster test</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The result sets.</para>
+            /// <para>The result set.</para>
             /// </summary>
             [NameInMap("ResultSet")]
             [Validation(Required=false)]
             public List<DescribeSlowLogTrendResponseBodyDataResultSet> ResultSet { get; set; }
             public class DescribeSlowLogTrendResponseBodyDataResultSet : TeaModel {
                 /// <summary>
-                /// <para>The average execution duration of slow SQL queries. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
+                /// <para>The average execution duration, in milliseconds, of slow SQL queries within the time interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? AvgQueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The total number of SQL queries within the specified time range.</para>
+                /// <para>The number of slow SQL queries in the time interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? Cnt { get; set; }
 
                 /// <summary>
-                /// <para>The maximum execution duration of slow SQL queries. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
+                /// <para>The maximum execution duration, in milliseconds, of slow SQL queries within the time interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? MaxQueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The minimum execution duration of slow SQL queries. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
+                /// <para>The minimum execution duration, in milliseconds, of slow SQL queries within the time interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? MinQueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range to query. The time is in the yyyy-MM-dd hh:mm:ss format. The time is displayed in UTC.</para>
+                /// <para>The start of the time interval for the data point. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-13 17:48:00</para>

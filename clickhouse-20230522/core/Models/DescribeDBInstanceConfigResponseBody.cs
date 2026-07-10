@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstanceConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned results.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstanceConfigResponseBodyData Data { get; set; }
         public class DescribeDBInstanceConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-bp100p4q1g9z3****</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The user parameters.</para>
+            /// </summary>
             [NameInMap("Params")]
             [Validation(Required=false)]
             public List<DescribeDBInstanceConfigResponseBodyDataParams> Params { get; set; }
             public class DescribeDBInstanceConfigResponseBodyDataParams : TeaModel {
                 /// <summary>
+                /// <para>The parameter description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Maximum number of concurrently executed queries. Zero means unlimited.</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Comment { get; set; }
 
                 /// <summary>
+                /// <para>The default value of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DefaultValue { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the parameter takes effect dynamically (without requiring a restart).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public int? IsDynamic { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the parameter can be modified by users.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public int? IsUserModifiable { get; set; }
 
                 /// <summary>
+                /// <para>The parameter name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>max_concurrent_queries</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The valid values of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[0-100]</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Optional { get; set; }
 
                 /// <summary>
+                /// <para>The parameter dependencies.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string ParamRelyRule { get; set; }
 
                 /// <summary>
+                /// <para>The value of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -94,7 +118,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

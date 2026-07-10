@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-beijing</description></item>
-        /// </list>
+        /// <para>The region ID. You can call the <a href="cdb.doc.dita#doc-api-clickhouse-DescribeRegions"><del>DescribeRegions</del></a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

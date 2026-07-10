@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration that you want to modify.</para>
+        /// <para>The type of attribute to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MaintainTime: the O\&amp;M time</description></item>
-        /// <item><description>DBInstanceDescription: the cluster name</description></item>
+        /// <item><description><para>MaintainTime: Modify the O\&amp;M window.</para>
+        /// </description></item>
+        /// <item><description><para>DBInstanceDescription: Modify the instance name.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string AttributeType { get; set; }
 
         /// <summary>
-        /// <para>The new value of the configuration.</para>
+        /// <para>The new value for the attribute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>

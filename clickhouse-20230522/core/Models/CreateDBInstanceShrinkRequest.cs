@@ -19,12 +19,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string BackupSetId { get; set; }
 
+        /// <summary>
+        /// <para>The edition of the instance. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><c>enterprise</c>: Enterprise Edition</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>enterprise</para>
+        /// </summary>
         [NameInMap("Category")]
         [Validation(Required=false)]
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token. Make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-provided token to ensure request idempotence. It must be unique across requests, contain only ASCII characters, and not exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AB</para>
@@ -34,21 +43,27 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Used for test</para>
+        /// <para>Cluster test</para>
         /// </summary>
         [NameInMap("DBInstanceDescription")]
         [Validation(Required=false)]
         public string DBInstanceDescription { get; set; }
 
+        /// <summary>
+        /// <para>The time zone of the database, which must be an IANA time zone identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Asia/Shanghai</para>
+        /// </summary>
         [NameInMap("DBTimeZone")]
         [Validation(Required=false)]
         public string DBTimeZone { get; set; }
 
         /// <summary>
-        /// <para>The deployment status of the cluster.</para>
+        /// <para>The deployment mode of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>multi_az</para>
@@ -78,13 +93,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The configurations of multi-zone deployment.</para>
+        /// <para>The multi-zone configuration.</para>
         /// </summary>
         [NameInMap("MultiZone")]
         [Validation(Required=false)]
         public string MultiZoneShrink { get; set; }
 
         /// <summary>
+        /// <para>The number of nodes. Valid values: 2 to 16. This parameter is required when you configure an elastic scaling range by using the <c>NodeScaleMin</c> and <c>NodeScaleMax</c> parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -93,6 +110,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of nodes for serverless elastic scaling. Valid values: 4 to 32. The value must be greater than the <c>NodeScaleMin</c> parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -101,6 +120,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeScaleMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of nodes for serverless elastic scaling. Valid values: 4 to 32.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>
@@ -109,7 +130,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? NodeScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The region ID</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,6 +141,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-*****</para>
         /// </summary>
@@ -128,7 +151,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The maximum capacity for auto scaling.</para>
+        /// <para>This parameter is deprecated. Use the <c>NodeCount</c>, <c>NodeScaleMin</c>, and <c>NodeScaleMax</c> parameters to configure elastic scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -138,7 +161,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum capacity for auto scaling.</para>
+        /// <para>This parameter is deprecated. Use the <c>NodeCount</c>, <c>NodeScaleMin</c>, and <c>NodeScaleMax</c> parameters to configure elastic scaling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -148,7 +171,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the source instance. This parameter is required when restoring from a backup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-2ze1*********</para>
@@ -173,11 +196,16 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
+        /// <summary>
+        /// <para>The tags to add to the instance.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateDBInstanceShrinkRequestTags> Tags { get; set; }
         public class CreateDBInstanceShrinkRequestTags : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user_123</para>
             /// </summary>
@@ -186,8 +214,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>示例字符串</para>
+            /// <para>example string</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -196,7 +226,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6xmupdn7v6ui9f****</para>

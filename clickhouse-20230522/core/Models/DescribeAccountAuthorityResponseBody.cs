@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeAccountAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Account { get; set; }
 
             /// <summary>
-            /// <para>The databases on which permissions are granted.</para>
+            /// <para>A list of authorized databases.</para>
             /// </summary>
             [NameInMap("AllowDatabases")]
             [Validation(Required=false)]
             public List<string> AllowDatabases { get; set; }
 
             /// <summary>
-            /// <para>The dictionaries on which permissions are granted.</para>
+            /// <para>A list of authorized dictionaries.</para>
             /// </summary>
             [NameInMap("AllowDictionaries")]
             [Validation(Required=false)]
@@ -51,10 +51,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string DBInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the DDL permissions are granted to the database account. Valid values:</para>
+            /// <para>Indicates whether DDL permissions are granted to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The account has the permissions to execute DDL statements.</description></item>
-            /// <item><description><b>false</b>: The account does not have the permissions to execute DDL statements.</description></item>
+            /// <item><description><para><b>true</b>: DDL operations are allowed.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: DDL operations are prohibited.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,11 +67,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public bool? DdlAuthority { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the DML permissions are granted to the database account. Valid values:</para>
+            /// <para>The DML permissions that are granted to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</description></item>
-            /// <item><description>1: The account only has the permissions to read data from the database.</description></item>
-            /// <item><description>2: The account only has the permissions to read data from the database and modify the settings of the database.</description></item>
+            /// <item><description><para>0: Read, write, and change settings queries are allowed.</para>
+            /// </description></item>
+            /// <item><description><para>1: Only read data queries are allowed.</para>
+            /// </description></item>
+            /// <item><description><para>2: Read data and change settings queries are allowed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +85,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public int? DmlAuthority { get; set; }
 
             /// <summary>
-            /// <para>All databases.</para>
+            /// <para>A list of all databases.</para>
             /// </summary>
             [NameInMap("TotalDatabases")]
             [Validation(Required=false)]
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F5178C10-1407-4987-9133-DE4DC9119F75</para>
+        /// <para>F5178C10-1407-4987-9133-DE4DC911****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

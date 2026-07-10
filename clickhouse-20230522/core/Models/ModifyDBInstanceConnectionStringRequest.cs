@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
+        /// <summary>
+        /// <para>The computing group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-2ze34****-clickhouse</para>
+        /// </summary>
         [NameInMap("ComputingGroupId")]
         [Validation(Required=false)]
         public string ComputingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the cluster.</para>
+        /// <para>The connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-2ze34****-clickhouse..clickhouseserver.pre.rds.aliyuncs.com</para>
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the endpoint that is used to connect to the database.</para>
+        /// <para>The connection string prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-****-clickhouse</para>
@@ -44,17 +50,31 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The network type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Vpc</c>: VPC</para>
+        /// </description></item>
+        /// <item><description><para><c>Public</c>: public network</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Public</para>
+        /// </summary>
         [NameInMap("DBInstanceNetType")]
         [Validation(Required=false)]
         public string DBInstanceNetType { get; set; }
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>The database ports that you want to disable. Separate multiple ports with commas (,).</para>
+        /// <item><description><para>The database ports to disable. You can specify multiple ports, separated by commas.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is supported only for clusters whose minor engine version is 24.10.1.11098_1 or later.</para>
-        /// <para>**</para>
-        /// <para><b>Note</b> If you create a cluster whose minor engine version is earlier than 24.10.1.11098_1 and you update the minor engine version to 24.10.1.11098_1 or later, the cluster still does not support this parameter.</para>
+        /// <item><description><para>This parameter is supported only for clusters with a kernel version of 24.10.1.11098_1 or later.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is not supported for clusters that were upgraded to kernel version 24.10.1.11098_1 or later from an earlier version.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The number of days to retain backups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string BackupRetentionPeriod { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The backup cycle.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
+        /// <para>The backup time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string PreferredBackupTime { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

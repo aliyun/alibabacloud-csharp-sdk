@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstanceConfigChangeLogResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The result set.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstanceConfigChangeLogResponseBodyData Data { get; set; }
         public class DescribeDBInstanceConfigChangeLogResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-bp100p4q1g9z3****</para>
             /// </summary>
@@ -21,15 +26,27 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string DBInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The parameter change records.</para>
+            /// </summary>
             [NameInMap("ParamChangeLogs")]
             [Validation(Required=false)]
             public List<DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs> ParamChangeLogs { get; set; }
             public class DescribeDBInstanceConfigChangeLogResponseBodyDataParamChangeLogs : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the configuration takes effect:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The execution plan takes effect.</description></item>
+                /// <item><description>false: The execution plan does not take effect.</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("Applied")]
                 [Validation(Required=false)]
                 public bool? Applied { get; set; }
 
                 /// <summary>
+                /// <para>The time when the change was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-25 13:46:06</para>
                 /// </summary>
@@ -38,6 +55,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
+                /// <para>The time when the change was modified.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-25 13:46:06</para>
                 /// </summary>
@@ -46,6 +65,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>The operation ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -54,6 +75,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? ID { get; set; }
 
                 /// <summary>
+                /// <para>The name of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>max_concurrent_queries</para>
                 /// </summary>
@@ -62,6 +85,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The new parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -70,6 +95,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string NewValue { get; set; }
 
                 /// <summary>
+                /// <para>The old parameter value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
                 /// </summary>

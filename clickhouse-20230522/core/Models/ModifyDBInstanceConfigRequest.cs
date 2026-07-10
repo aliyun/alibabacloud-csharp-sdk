@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The API data parameter settings in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;max_concurrent_queries&quot;:&quot;100&quot;}</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Parameters { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ListInstanceLinkedWhitelistTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>RegionId</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

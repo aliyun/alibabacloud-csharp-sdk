@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBInstanceConfigResponseBodyData Data { get; set; }
         public class ModifyDBInstanceConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cc-uf6lkzf*****</para>
             /// </summary>

@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DetachWhitelistTemplateToInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetachWhitelistTemplateToInstanceResponseBodyData Data { get; set; }
         public class DetachWhitelistTemplateToInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>A list of instances that failed to detach.</para>
+            /// </summary>
             [NameInMap("DetachFailList")]
             [Validation(Required=false)]
             public List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachFailList> DetachFailList { get; set; }
             public class DetachWhitelistTemplateToInstanceResponseBodyDataDetachFailList : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>my-database</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string DBInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The reason the detach operation failed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>处理异常</para>
                 /// </summary>
@@ -35,11 +45,16 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
             }
 
+            /// <summary>
+            /// <para>A list of successfully detached instances.</para>
+            /// </summary>
             [NameInMap("DetachSuccessedList")]
             [Validation(Required=false)]
             public List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedList> DetachSuccessedList { get; set; }
             public class DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedList : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>my-database</para>
                 /// </summary>
@@ -47,15 +62,23 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 [Validation(Required=false)]
                 public string DBInstanceId { get; set; }
 
+                /// <summary>
+                /// <para>A list of whitelist templates.</para>
+                /// </summary>
                 [NameInMap("Templates")]
                 [Validation(Required=false)]
                 public List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplates> Templates { get; set; }
                 public class DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplates : TeaModel {
+                    /// <summary>
+                    /// <para>A list of associated instances.</para>
+                    /// </summary>
                     [NameInMap("DbInstances")]
                     [Validation(Required=false)]
                     public List<DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplatesDbInstances> DbInstances { get; set; }
                     public class DetachWhitelistTemplateToInstanceResponseBodyDataDetachSuccessedListTemplatesDbInstances : TeaModel {
                         /// <summary>
+                        /// <para>The instance ID.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>asdfwef</para>
                         /// </summary>
@@ -66,6 +89,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     }
 
                     /// <summary>
+                    /// <para>The IP whitelist.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>192.168.1.1,10.0.0.1</para>
                     /// </summary>
@@ -74,6 +99,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string SecurityIPList { get; set; }
 
                     /// <summary>
+                    /// <para>The whitelist template ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>g-asdfwem</para>
                     /// </summary>
@@ -82,6 +109,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                     public string TemplateId { get; set; }
 
                     /// <summary>
+                    /// <para>The whitelist template name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>demo_template</para>
                     /// </summary>
@@ -94,6 +123,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
+            /// <para>The status of the operation. A value of <c>ok</c> indicates success.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ok</para>
             /// </summary>
@@ -104,7 +135,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
-        /// <para>Request ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

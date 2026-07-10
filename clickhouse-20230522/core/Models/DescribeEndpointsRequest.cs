@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeEndpointsRequest : TeaModel {
         /// <summary>
+        /// <para>The computing group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc-*****-clickhouse</para>
         /// </summary>

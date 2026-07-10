@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class KillProcessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public KillProcessResponseBodyData Data { get; set; }
         public class KillProcessResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of queries that are terminated.</para>
+            /// <para>The number of terminated tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

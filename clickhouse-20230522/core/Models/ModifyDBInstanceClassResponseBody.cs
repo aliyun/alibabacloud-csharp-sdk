@@ -10,12 +10,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ModifyDBInstanceClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBInstanceClassResponseBodyData Data { get; set; }
         public class ModifyDBInstanceClassResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The compute group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cc-gs5j3sua77*******-clickhouse</para>
+            /// </summary>
             [NameInMap("ComputingGroupId")]
             [Validation(Required=false)]
             public string ComputingGroupId { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cc-xxxxxxx</para>
+            /// <para>cc-gs5j3sua77*******</para>
             /// </summary>
             [NameInMap("DBInstanceID")]
             [Validation(Required=false)]
@@ -34,14 +40,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cc-xxxxxxx</para>
+            /// <para>cc-gs5j3sua77*******</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The maximum capacity for elastic scaling.</para>
+            /// <para>The maximum capacity for serverless autoscaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public long? ScaleMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum capacity for elastic scaling.</para>
+            /// <para>The minimum capacity for serverless autoscaling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

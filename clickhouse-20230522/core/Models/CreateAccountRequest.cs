@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The type of the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NormalAccount</b>: standard account</description></item>
-        /// <item><description><b>SuperAccount</b>: privileged account</description></item>
+        /// <item><description><para><b>NormalAccount</b>: standard account</para>
+        /// </description></item>
+        /// <item><description><para><b>SuperAccount</b>: privileged account</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>The description of the account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Used for account</para>
+        /// <para>For testing</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -80,8 +82,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <summary>
             /// <para>Specifies whether to grant the DDL permissions to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The account has the permissions to execute DDL statements.</description></item>
-            /// <item><description><b>false</b>: The account does not have the permissions to execute DDL statements.</description></item>
+            /// <item><description><para><b>true</b>: The account has the permissions to execute DDL statements.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The account does not have the permissions to execute DDL statements.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,9 +98,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <summary>
             /// <para>Specifies whether to grant the DML permissions to the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</description></item>
-            /// <item><description><b>1</b>: The account only has the permissions to read data from the database.</description></item>
-            /// <item><description><b>2</b>: The account only has the permissions to read data from the database and modify the settings of the database.</description></item>
+            /// <item><description><para><b>0</b>: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: The account only has the permissions to read data from the database.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: The account only has the permissions to read data from the database and modify the settings of the database.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,9 +118,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <summary>
         /// <para>The password of the database account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The following special characters are supported: ! @ # $ % ^ &amp; * ( ) _ + - =</description></item>
-        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description><para>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// </description></item>
+        /// <item><description><para>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =</para>
+        /// </description></item>
+        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

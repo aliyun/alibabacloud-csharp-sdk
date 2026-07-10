@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2FED790E-FB61-4721-8C1C-07C627FA5A19</para>
+        /// <para>2FED790E-FB61-4721-8C1C-07C627FA****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

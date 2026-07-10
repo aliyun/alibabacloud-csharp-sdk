@@ -65,6 +65,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
                 {"rus-west-1-pop", "clickhouse.aliyuncs.com"},
                 {"us-east-1", "clickhouse.aliyuncs.com"},
                 {"us-west-1", "clickhouse.aliyuncs.com"},
+                {"me-central-1", "clickhouse.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "clickhouse.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "clickhouse.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "clickhouse.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "clickhouse.aliyuncs.com"},
+                {"cn-huhehaote", "clickhouse.cn-huhehaote.aliyuncs.com"},
+                {"cn-guangzhou", "clickhouse.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "clickhouse.cn-chengdu.aliyuncs.com"},
+                {"ap-southeast-6", "clickhouse.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "clickhouse.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "clickhouse.aliyuncs.com"},
+                {"ap-northeast-1", "clickhouse.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -86,7 +98,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>白名单模板关联实例</para>
+        /// <para>Attaches a whitelist template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136,7 +148,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>白名单模板关联实例</para>
+        /// <para>Attaches a whitelist template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -186,7 +198,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>白名单模板关联实例</para>
+        /// <para>Attaches a whitelist template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -204,7 +216,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>白名单模板关联实例</para>
+        /// <para>Attaches a whitelist template to instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -222,7 +234,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a ClickHouse Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -276,7 +288,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a ClickHouse Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -330,7 +342,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a ClickHouse Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -348,7 +360,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源转组</para>
+        /// <para>Changes the resource group of a ClickHouse Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -554,7 +566,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy for a specified ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -612,7 +624,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy for a specified ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -670,7 +682,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy for a specified ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -688,7 +700,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a backup policy for a specified ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Creates a backup policy for a specified ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -706,7 +718,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -760,7 +772,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -814,7 +826,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -832,7 +844,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse database.</para>
+        /// <para>Creates a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -850,7 +862,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>To create a ClickHouse Enterprise Edition cluster, call the <c>CreateDBInstance</c> API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -986,7 +998,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>To create a ClickHouse Enterprise Edition cluster, call the <c>CreateDBInstance</c> API.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1122,7 +1134,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>To create a ClickHouse Enterprise Edition cluster, call the <c>CreateDBInstance</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1140,7 +1152,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>To create a ClickHouse Enterprise Edition cluster, call the <c>CreateDBInstance</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1158,7 +1170,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint.</para>
+        /// <para>Creates a public endpoint that provides a public address to access a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1216,7 +1228,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint.</para>
+        /// <para>Creates a public endpoint that provides a public address to access a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1274,7 +1286,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint.</para>
+        /// <para>Creates a public endpoint that provides a public address to access a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1292,7 +1304,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a public endpoint.</para>
+        /// <para>Creates a public endpoint that provides a public address to access a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1310,7 +1322,615 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增白名单模板</para>
+        /// <para>Creates a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgResponse
+        /// </returns>
+        public CreateLangfuseOrgResponse CreateLangfuseOrgWithOptions(CreateLangfuseOrgRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerEmail))
+            {
+                query["OwnerEmail"] = request.OwnerEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseOrg",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseOrgResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgResponse
+        /// </returns>
+        public async Task<CreateLangfuseOrgResponse> CreateLangfuseOrgWithOptionsAsync(CreateLangfuseOrgRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerEmail))
+            {
+                query["OwnerEmail"] = request.OwnerEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseOrg",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseOrgResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgResponse
+        /// </returns>
+        public CreateLangfuseOrgResponse CreateLangfuseOrg(CreateLangfuseOrgRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLangfuseOrgWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgResponse
+        /// </returns>
+        public async Task<CreateLangfuseOrgResponse> CreateLangfuseOrgAsync(CreateLangfuseOrgRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLangfuseOrgWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgMemberResponse
+        /// </returns>
+        public CreateLangfuseOrgMemberResponse CreateLangfuseOrgMemberWithOptions(CreateLangfuseOrgMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseOrgMember",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseOrgMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgMemberRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgMemberResponse
+        /// </returns>
+        public async Task<CreateLangfuseOrgMemberResponse> CreateLangfuseOrgMemberWithOptionsAsync(CreateLangfuseOrgMemberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseOrgMember",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseOrgMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgMemberResponse
+        /// </returns>
+        public CreateLangfuseOrgMemberResponse CreateLangfuseOrgMember(CreateLangfuseOrgMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLangfuseOrgMemberWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds a user to a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseOrgMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseOrgMemberResponse
+        /// </returns>
+        public async Task<CreateLangfuseOrgMemberResponse> CreateLangfuseOrgMemberAsync(CreateLangfuseOrgMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLangfuseOrgMemberWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseProjectResponse
+        /// </returns>
+        public CreateLangfuseProjectResponse CreateLangfuseProjectWithOptions(CreateLangfuseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseProject",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseProjectResponse
+        /// </returns>
+        public async Task<CreateLangfuseProjectResponse> CreateLangfuseProjectWithOptionsAsync(CreateLangfuseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseProject",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseProjectResponse
+        /// </returns>
+        public CreateLangfuseProjectResponse CreateLangfuseProject(CreateLangfuseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLangfuseProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseProjectResponse
+        /// </returns>
+        public async Task<CreateLangfuseProjectResponse> CreateLangfuseProjectAsync(CreateLangfuseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLangfuseProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseUserResponse
+        /// </returns>
+        public CreateLangfuseUserResponse CreateLangfuseUserWithOptions(CreateLangfuseUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgRole))
+            {
+                query["OrgRole"] = request.OrgRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseUser",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseUserResponse
+        /// </returns>
+        public async Task<CreateLangfuseUserResponse> CreateLangfuseUserWithOptionsAsync(CreateLangfuseUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgRole))
+            {
+                query["OrgRole"] = request.OrgRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLangfuseUser",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLangfuseUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseUserResponse
+        /// </returns>
+        public CreateLangfuseUserResponse CreateLangfuseUser(CreateLangfuseUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLangfuseUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLangfuseUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLangfuseUserResponse
+        /// </returns>
+        public async Task<CreateLangfuseUserResponse> CreateLangfuseUserAsync(CreateLangfuseUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLangfuseUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1362,7 +1982,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增白名单模板</para>
+        /// <para>Creates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1414,7 +2034,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增白名单模板</para>
+        /// <para>Creates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1432,7 +2052,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增白名单模板</para>
+        /// <para>Creates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1594,7 +2214,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1640,7 +2260,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1686,7 +2306,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1704,7 +2324,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Deletes the backup policy for a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1722,7 +2342,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
+        /// <para>Call this operation to delete a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1772,7 +2392,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
+        /// <para>Call this operation to delete a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1822,7 +2442,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
+        /// <para>Call this operation to delete a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1840,7 +2460,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an ApsaraDB for ClickHouse database.</para>
+        /// <para>Call this operation to delete a database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1858,7 +2478,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1904,7 +2524,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1950,7 +2570,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1968,7 +2588,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>The DeleteDBInstance operation releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1986,7 +2606,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a public endpoint.</para>
+        /// <para>Deletes a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2044,7 +2664,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a public endpoint.</para>
+        /// <para>Deletes a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2102,7 +2722,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a public endpoint.</para>
+        /// <para>Deletes a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2120,7 +2740,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a public endpoint.</para>
+        /// <para>Deletes a public endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2138,7 +2758,695 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除白名单模板</para>
+        /// <para>Releases a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseInstanceResponse
+        /// </returns>
+        public DeleteLangfuseInstanceResponse DeleteLangfuseInstanceWithOptions(DeleteLangfuseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseInstance",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseInstanceResponse
+        /// </returns>
+        public async Task<DeleteLangfuseInstanceResponse> DeleteLangfuseInstanceWithOptionsAsync(DeleteLangfuseInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseInstance",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseInstanceResponse
+        /// </returns>
+        public DeleteLangfuseInstanceResponse DeleteLangfuseInstance(DeleteLangfuseInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLangfuseInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseInstanceResponse
+        /// </returns>
+        public async Task<DeleteLangfuseInstanceResponse> DeleteLangfuseInstanceAsync(DeleteLangfuseInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLangfuseInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgResponse
+        /// </returns>
+        public DeleteLangfuseOrgResponse DeleteLangfuseOrgWithOptions(DeleteLangfuseOrgRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseOrg",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseOrgResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgResponse
+        /// </returns>
+        public async Task<DeleteLangfuseOrgResponse> DeleteLangfuseOrgWithOptionsAsync(DeleteLangfuseOrgRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseOrg",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseOrgResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgResponse
+        /// </returns>
+        public DeleteLangfuseOrgResponse DeleteLangfuseOrg(DeleteLangfuseOrgRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLangfuseOrgWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgResponse
+        /// </returns>
+        public async Task<DeleteLangfuseOrgResponse> DeleteLangfuseOrgAsync(DeleteLangfuseOrgRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLangfuseOrgWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a user from a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgMembershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgMembershipResponse
+        /// </returns>
+        public DeleteLangfuseOrgMembershipResponse DeleteLangfuseOrgMembershipWithOptions(DeleteLangfuseOrgMembershipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseOrgMembership",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseOrgMembershipResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a user from a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgMembershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgMembershipResponse
+        /// </returns>
+        public async Task<DeleteLangfuseOrgMembershipResponse> DeleteLangfuseOrgMembershipWithOptionsAsync(DeleteLangfuseOrgMembershipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseOrgMembership",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseOrgMembershipResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a user from a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgMembershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgMembershipResponse
+        /// </returns>
+        public DeleteLangfuseOrgMembershipResponse DeleteLangfuseOrgMembership(DeleteLangfuseOrgMembershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLangfuseOrgMembershipWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a user from a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseOrgMembershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseOrgMembershipResponse
+        /// </returns>
+        public async Task<DeleteLangfuseOrgMembershipResponse> DeleteLangfuseOrgMembershipAsync(DeleteLangfuseOrgMembershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLangfuseOrgMembershipWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseProjectResponse
+        /// </returns>
+        public DeleteLangfuseProjectResponse DeleteLangfuseProjectWithOptions(DeleteLangfuseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseProject",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseProjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseProjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseProjectResponse
+        /// </returns>
+        public async Task<DeleteLangfuseProjectResponse> DeleteLangfuseProjectWithOptionsAsync(DeleteLangfuseProjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseProject",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseProjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseProjectResponse
+        /// </returns>
+        public DeleteLangfuseProjectResponse DeleteLangfuseProject(DeleteLangfuseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLangfuseProjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseProjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseProjectResponse
+        /// </returns>
+        public async Task<DeleteLangfuseProjectResponse> DeleteLangfuseProjectAsync(DeleteLangfuseProjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLangfuseProjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseUserResponse
+        /// </returns>
+        public DeleteLangfuseUserResponse DeleteLangfuseUserWithOptions(DeleteLangfuseUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseUser",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseUserResponse
+        /// </returns>
+        public async Task<DeleteLangfuseUserResponse> DeleteLangfuseUserWithOptionsAsync(DeleteLangfuseUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLangfuseUser",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLangfuseUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseUserResponse
+        /// </returns>
+        public DeleteLangfuseUserResponse DeleteLangfuseUser(DeleteLangfuseUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLangfuseUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLangfuseUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLangfuseUserResponse
+        /// </returns>
+        public async Task<DeleteLangfuseUserResponse> DeleteLangfuseUserAsync(DeleteLangfuseUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLangfuseUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2188,7 +3496,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除白名单模板</para>
+        /// <para>Deletes a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2238,7 +3546,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除白名单模板</para>
+        /// <para>Deletes a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2256,7 +3564,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除白名单模板</para>
+        /// <para>Deletes a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2274,7 +3582,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Call the DescribeAccountAuthority operation to query the permissions of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2324,7 +3632,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Call the DescribeAccountAuthority operation to query the permissions of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2374,7 +3682,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Call the DescribeAccountAuthority operation to query the permissions of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2392,7 +3700,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the permissions of a database account.</para>
+        /// <para>Call the DescribeAccountAuthority operation to query the permissions of an account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2562,7 +3870,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup policy of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2608,7 +3916,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup policy of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2654,7 +3962,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup policy of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2672,7 +3980,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup policy of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2690,7 +3998,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2756,7 +4064,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2822,7 +4130,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2840,7 +4148,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the backup sets of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Queries the backup sets of a ClickHouse Enterprise Edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2858,7 +4166,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2904,7 +4212,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2950,7 +4258,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2968,7 +4276,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Call DescribeDBInstanceAttribute to query the details of an ApsaraDB for ClickHouse enterprise edition cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2986,7 +4294,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置</para>
+        /// <para>Queries the parameter configuration of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3024,7 +4332,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置</para>
+        /// <para>Queries the parameter configuration of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3062,7 +4370,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置</para>
+        /// <para>Queries the parameter configuration of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3080,7 +4388,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置</para>
+        /// <para>Queries the parameter configuration of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3098,7 +4406,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置记录</para>
+        /// <para>Queries the parameter configuration records of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3136,7 +4444,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置记录</para>
+        /// <para>Queries the parameter configuration records of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3174,7 +4482,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置记录</para>
+        /// <para>Queries the parameter configuration records of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3192,7 +4500,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例参数配置记录</para>
+        /// <para>Queries the parameter configuration records of an instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3354,7 +4662,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Call the DescribeDBInstances API to query a list of DB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3428,7 +4736,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Call the DescribeDBInstances API to query a list of DB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3502,7 +4810,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Call the DescribeDBInstances API to query a list of DB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3520,7 +4828,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of ApsaraDB for ClickHouse clusters.</para>
+        /// <para>Call the DescribeDBInstances API to query a list of DB instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3538,7 +4846,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3588,7 +4896,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3638,7 +4946,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3656,7 +4964,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>To retrieve the cluster endpoints, call DescribeEndpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3674,7 +4982,1151 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views running queries.</para>
+        /// <para>Queries the access endpoint of a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseEndpointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseEndpointsResponse
+        /// </returns>
+        public DescribeLangfuseEndpointsResponse DescribeLangfuseEndpointsWithOptions(DescribeLangfuseEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseEndpoints",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseEndpointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access endpoint of a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseEndpointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseEndpointsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseEndpointsResponse> DescribeLangfuseEndpointsWithOptionsAsync(DescribeLangfuseEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseEndpoints",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseEndpointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access endpoint of a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseEndpointsResponse
+        /// </returns>
+        public DescribeLangfuseEndpointsResponse DescribeLangfuseEndpoints(DescribeLangfuseEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseEndpointsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the access endpoint of a Langfuse instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseEndpointsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseEndpointsResponse> DescribeLangfuseEndpointsAsync(DescribeLangfuseEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseEndpointsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the member information of a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgMembershipsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgMembershipsResponse
+        /// </returns>
+        public DescribeLangfuseOrgMembershipsResponse DescribeLangfuseOrgMembershipsWithOptions(DescribeLangfuseOrgMembershipsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseOrgMemberships",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseOrgMembershipsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the member information of a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgMembershipsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgMembershipsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseOrgMembershipsResponse> DescribeLangfuseOrgMembershipsWithOptionsAsync(DescribeLangfuseOrgMembershipsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseOrgMemberships",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseOrgMembershipsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the member information of a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgMembershipsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgMembershipsResponse
+        /// </returns>
+        public DescribeLangfuseOrgMembershipsResponse DescribeLangfuseOrgMemberships(DescribeLangfuseOrgMembershipsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseOrgMembershipsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the member information of a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgMembershipsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgMembershipsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseOrgMembershipsResponse> DescribeLangfuseOrgMembershipsAsync(DescribeLangfuseOrgMembershipsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseOrgMembershipsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Langfuse实例组织列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgsResponse
+        /// </returns>
+        public DescribeLangfuseOrgsResponse DescribeLangfuseOrgsWithOptions(DescribeLangfuseOrgsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseOrgs",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseOrgsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Langfuse实例组织列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseOrgsResponse> DescribeLangfuseOrgsWithOptionsAsync(DescribeLangfuseOrgsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseOrgs",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseOrgsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Langfuse实例组织列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgsResponse
+        /// </returns>
+        public DescribeLangfuseOrgsResponse DescribeLangfuseOrgs(DescribeLangfuseOrgsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseOrgsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Langfuse实例组织列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseOrgsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseOrgsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseOrgsResponse> DescribeLangfuseOrgsAsync(DescribeLangfuseOrgsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseOrgsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user roles in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectMembershipsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectMembershipsResponse
+        /// </returns>
+        public DescribeLangfuseProjectMembershipsResponse DescribeLangfuseProjectMembershipsWithOptions(DescribeLangfuseProjectMembershipsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseProjectMemberships",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseProjectMembershipsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user roles in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectMembershipsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectMembershipsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseProjectMembershipsResponse> DescribeLangfuseProjectMembershipsWithOptionsAsync(DescribeLangfuseProjectMembershipsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseProjectMemberships",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseProjectMembershipsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user roles in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectMembershipsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectMembershipsResponse
+        /// </returns>
+        public DescribeLangfuseProjectMembershipsResponse DescribeLangfuseProjectMemberships(DescribeLangfuseProjectMembershipsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseProjectMembershipsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user roles in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectMembershipsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectMembershipsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseProjectMembershipsResponse> DescribeLangfuseProjectMembershipsAsync(DescribeLangfuseProjectMembershipsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseProjectMembershipsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse projects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectsResponse
+        /// </returns>
+        public DescribeLangfuseProjectsResponse DescribeLangfuseProjectsWithOptions(DescribeLangfuseProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseProjects",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseProjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse projects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseProjectsResponse> DescribeLangfuseProjectsWithOptionsAsync(DescribeLangfuseProjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseProjects",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseProjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse projects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectsResponse
+        /// </returns>
+        public DescribeLangfuseProjectsResponse DescribeLangfuseProjects(DescribeLangfuseProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseProjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse projects.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseProjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseProjectsResponse
+        /// </returns>
+        public async Task<DescribeLangfuseProjectsResponse> DescribeLangfuseProjectsAsync(DescribeLangfuseProjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseProjectsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Langfuse whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseSecurityIPListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseSecurityIPListResponse
+        /// </returns>
+        public DescribeLangfuseSecurityIPListResponse DescribeLangfuseSecurityIPListWithOptions(DescribeLangfuseSecurityIPListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseSecurityIPList",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseSecurityIPListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Langfuse whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseSecurityIPListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseSecurityIPListResponse
+        /// </returns>
+        public async Task<DescribeLangfuseSecurityIPListResponse> DescribeLangfuseSecurityIPListWithOptionsAsync(DescribeLangfuseSecurityIPListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseSecurityIPList",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseSecurityIPListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Langfuse whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseSecurityIPListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseSecurityIPListResponse
+        /// </returns>
+        public DescribeLangfuseSecurityIPListResponse DescribeLangfuseSecurityIPList(DescribeLangfuseSecurityIPListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseSecurityIPListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Langfuse whitelist.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseSecurityIPListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseSecurityIPListResponse
+        /// </returns>
+        public async Task<DescribeLangfuseSecurityIPListResponse> DescribeLangfuseSecurityIPListAsync(DescribeLangfuseSecurityIPListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseSecurityIPListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUserResponse
+        /// </returns>
+        public DescribeLangfuseUserResponse DescribeLangfuseUserWithOptions(DescribeLangfuseUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseUser",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUserResponse
+        /// </returns>
+        public async Task<DescribeLangfuseUserResponse> DescribeLangfuseUserWithOptionsAsync(DescribeLangfuseUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseUser",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUserResponse
+        /// </returns>
+        public DescribeLangfuseUserResponse DescribeLangfuseUser(DescribeLangfuseUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUserResponse
+        /// </returns>
+        public async Task<DescribeLangfuseUserResponse> DescribeLangfuseUserAsync(DescribeLangfuseUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUsersResponse
+        /// </returns>
+        public DescribeLangfuseUsersResponse DescribeLangfuseUsersWithOptions(DescribeLangfuseUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseUsers",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUsersResponse
+        /// </returns>
+        public async Task<DescribeLangfuseUsersResponse> DescribeLangfuseUsersWithOptionsAsync(DescribeLangfuseUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLangfuseUsers",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLangfuseUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUsersResponse
+        /// </returns>
+        public DescribeLangfuseUsersResponse DescribeLangfuseUsers(DescribeLangfuseUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLangfuseUsersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of Langfuse users.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLangfuseUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLangfuseUsersResponse
+        /// </returns>
+        public async Task<DescribeLangfuseUsersResponse> DescribeLangfuseUsersAsync(DescribeLangfuseUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLangfuseUsersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes currently running queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3752,7 +6204,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views running queries.</para>
+        /// <para>Describes currently running queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3830,7 +6282,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views running queries.</para>
+        /// <para>Describes currently running queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3848,7 +6300,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views running queries.</para>
+        /// <para>Describes currently running queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3866,7 +6318,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云数据库ClickHouse所有地域和可用区的信息</para>
+        /// <para>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -3896,7 +6348,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云数据库ClickHouse所有地域和可用区的信息</para>
+        /// <para>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -3926,7 +6378,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云数据库ClickHouse所有地域和可用区的信息</para>
+        /// <para>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3940,7 +6392,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云数据库ClickHouse所有地域和可用区的信息</para>
+        /// <para>Returns information about the available regions and zones for ApsaraDB for ClickHouse.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3954,7 +6406,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelist of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries a whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4000,7 +6452,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelist of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries a whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4046,7 +6498,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelist of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries a whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4064,7 +6516,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the whitelist of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Queries a whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4082,7 +6534,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow query logs.</para>
+        /// <para>Call DescribeSlowLogRecords to query slow log records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4152,7 +6604,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow query logs.</para>
+        /// <para>Call DescribeSlowLogRecords to query slow log records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4222,7 +6674,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow query logs.</para>
+        /// <para>Call DescribeSlowLogRecords to query slow log records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4240,7 +6692,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of slow query logs.</para>
+        /// <para>Call DescribeSlowLogRecords to query slow log records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4258,7 +6710,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of slow query logs.</para>
+        /// <para>Queries the slow log trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4324,7 +6776,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of slow query logs.</para>
+        /// <para>Queries the slow log trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4390,7 +6842,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of slow query logs.</para>
+        /// <para>Queries the slow log trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4408,7 +6860,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of slow query logs.</para>
+        /// <para>Queries the slow log trend.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4426,7 +6878,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消白名单模板和实例关联关系</para>
+        /// <para>Disassociate a whitelist template from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4476,7 +6928,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消白名单模板和实例关联关系</para>
+        /// <para>Disassociate a whitelist template from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4526,7 +6978,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消白名单模板和实例关联关系</para>
+        /// <para>Disassociate a whitelist template from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4544,7 +6996,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消白名单模板和实例关联关系</para>
+        /// <para>Disassociate a whitelist template from an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4562,7 +7014,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板详情</para>
+        /// <para>Queries the details of a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4608,7 +7060,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板详情</para>
+        /// <para>Queries the details of a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4654,7 +7106,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板详情</para>
+        /// <para>Queries the details of a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4672,7 +7124,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板详情</para>
+        /// <para>Queries the details of a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4690,7 +7142,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an ongoing query.</para>
+        /// <para>Terminates a running task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4744,7 +7196,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an ongoing query.</para>
+        /// <para>Terminates a running task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4798,7 +7250,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an ongoing query.</para>
+        /// <para>Terminates a running task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4816,7 +7268,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminates an ongoing query.</para>
+        /// <para>Terminates a running task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4834,7 +7286,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ClickHouse时区参数枚举值</para>
+        /// <para>Lists the available time zones for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4880,7 +7332,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ClickHouse时区参数枚举值</para>
+        /// <para>Lists the available time zones for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4926,7 +7378,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ClickHouse时区参数枚举值</para>
+        /// <para>Lists the available time zones for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4944,7 +7396,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举ClickHouse时区参数枚举值</para>
+        /// <para>Lists the available time zones for ClickHouse.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4962,7 +7414,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例关联的白名单模板清单</para>
+        /// <para>Lists the IP address whitelist templates linked to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5008,7 +7460,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例关联的白名单模板清单</para>
+        /// <para>Lists the IP address whitelist templates linked to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5054,7 +7506,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例关联的白名单模板清单</para>
+        /// <para>Lists the IP address whitelist templates linked to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5072,7 +7524,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例关联的白名单模板清单</para>
+        /// <para>Lists the IP address whitelist templates linked to an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5090,7 +7542,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板清单</para>
+        /// <para>Queries the whitelist templates associated with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5144,7 +7596,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板清单</para>
+        /// <para>Queries the whitelist templates associated with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5198,7 +7650,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板清单</para>
+        /// <para>Queries the whitelist templates associated with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5216,7 +7668,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询白名单模板清单</para>
+        /// <para>Queries the whitelist templates associated with an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5534,8 +7986,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
@@ -5592,8 +8051,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
@@ -5650,8 +8116,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
@@ -5668,8 +8141,15 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</para>
+        /// <para>Modifies the backup policy of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Data backup is supported only for ApsaraDB for ClickHouse clusters that run version 20.3, 20.8, or 21.8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBackupPolicyRequest
@@ -5686,7 +8166,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5744,7 +8224,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5802,7 +8282,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5820,7 +8300,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>You can call the ModifyDBInstanceAttribute operation to modify the configuration of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5838,8 +8318,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Use <c>ModifyDBInstanceClass</c> to modify the scaling configuration of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyDBInstanceClassRequest
@@ -5926,8 +8411,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Use <c>ModifyDBInstanceClass</c> to modify the scaling configuration of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ModifyDBInstanceClassRequest
@@ -6014,8 +8504,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Use <c>ModifyDBInstanceClass</c> to modify the scaling configuration of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDBInstanceClassRequest
@@ -6032,8 +8527,13 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Use <c>ModifyDBInstanceClass</c> to modify the scaling configuration of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API, make sure that you understand the billing method and <a href="https://help.aliyun.com/document_detail/167450.html">pricing</a> of ApsaraDB for ClickHouse.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDBInstanceClassRequest
@@ -6050,7 +8550,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例参数配置</para>
+        /// <para>Modifies the parameter settings for a DB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6100,7 +8600,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例参数配置</para>
+        /// <para>Modifies the parameter settings for a DB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6150,7 +8650,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例参数配置</para>
+        /// <para>Modifies the parameter settings for a DB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6168,7 +8668,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例参数配置</para>
+        /// <para>Modifies the parameter settings for a DB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6186,7 +8686,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the connection string of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6252,7 +8752,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the connection string of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6318,7 +8818,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the connection string of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6336,7 +8836,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the endpoint of an ApsaraDB for ClickHouse cluster.</para>
+        /// <para>Modifies the connection string of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6350,6 +8850,318 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDBInstanceConnectionStringWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseOrgMembershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseOrgMembershipResponse
+        /// </returns>
+        public ModifyLangfuseOrgMembershipResponse ModifyLangfuseOrgMembershipWithOptions(ModifyLangfuseOrgMembershipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLangfuseOrgMembership",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLangfuseOrgMembershipResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseOrgMembershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseOrgMembershipResponse
+        /// </returns>
+        public async Task<ModifyLangfuseOrgMembershipResponse> ModifyLangfuseOrgMembershipWithOptionsAsync(ModifyLangfuseOrgMembershipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLangfuseOrgMembership",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLangfuseOrgMembershipResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseOrgMembershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseOrgMembershipResponse
+        /// </returns>
+        public ModifyLangfuseOrgMembershipResponse ModifyLangfuseOrgMembership(ModifyLangfuseOrgMembershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyLangfuseOrgMembershipWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse organization.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseOrgMembershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseOrgMembershipResponse
+        /// </returns>
+        public async Task<ModifyLangfuseOrgMembershipResponse> ModifyLangfuseOrgMembershipAsync(ModifyLangfuseOrgMembershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyLangfuseOrgMembershipWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseProjectMembershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseProjectMembershipResponse
+        /// </returns>
+        public ModifyLangfuseProjectMembershipResponse ModifyLangfuseProjectMembershipWithOptions(ModifyLangfuseProjectMembershipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLangfuseProjectMembership",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLangfuseProjectMembershipResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseProjectMembershipRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseProjectMembershipResponse
+        /// </returns>
+        public async Task<ModifyLangfuseProjectMembershipResponse> ModifyLangfuseProjectMembershipWithOptionsAsync(ModifyLangfuseProjectMembershipRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrganizationId))
+            {
+                query["OrganizationId"] = request.OrganizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Role))
+            {
+                query["Role"] = request.Role;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyLangfuseProjectMembership",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyLangfuseProjectMembershipResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseProjectMembershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseProjectMembershipResponse
+        /// </returns>
+        public ModifyLangfuseProjectMembershipResponse ModifyLangfuseProjectMembership(ModifyLangfuseProjectMembershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyLangfuseProjectMembershipWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a user in a Langfuse project.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyLangfuseProjectMembershipRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyLangfuseProjectMembershipResponse
+        /// </returns>
+        public async Task<ModifyLangfuseProjectMembershipResponse> ModifyLangfuseProjectMembershipAsync(ModifyLangfuseProjectMembershipRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyLangfuseProjectMembershipWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6654,6 +9466,150 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetLangfuseUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetLangfuseUserPasswordResponse
+        /// </returns>
+        public ResetLangfuseUserPasswordResponse ResetLangfuseUserPasswordWithOptions(ResetLangfuseUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewPassword))
+            {
+                query["NewPassword"] = request.NewPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetLangfuseUserPassword",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetLangfuseUserPasswordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetLangfuseUserPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetLangfuseUserPasswordResponse
+        /// </returns>
+        public async Task<ResetLangfuseUserPasswordResponse> ResetLangfuseUserPasswordWithOptionsAsync(ResetLangfuseUserPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewPassword))
+            {
+                query["NewPassword"] = request.NewPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetLangfuseUserPassword",
+                Version = "2023-05-22",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetLangfuseUserPasswordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetLangfuseUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetLangfuseUserPasswordResponse
+        /// </returns>
+        public ResetLangfuseUserPasswordResponse ResetLangfuseUserPassword(ResetLangfuseUserPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetLangfuseUserPasswordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of a Langfuse user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResetLangfuseUserPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetLangfuseUserPasswordResponse
+        /// </returns>
+        public async Task<ResetLangfuseUserPasswordResponse> ResetLangfuseUserPasswordAsync(ResetLangfuseUserPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetLangfuseUserPasswordWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7042,7 +9998,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新白名单模板</para>
+        /// <para>Updates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7096,7 +10052,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新白名单模板</para>
+        /// <para>Updates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7150,7 +10106,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新白名单模板</para>
+        /// <para>Updates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7168,7 +10124,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新白名单模板</para>
+        /// <para>Updates a whitelist template.</para>
         /// </summary>
         /// 
         /// <param name="request">

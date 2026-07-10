@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeProcessListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>For testing</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The result sets.</para>
+            /// <para>The result set.</para>
             /// </summary>
             [NameInMap("ResultSet")]
             [Validation(Required=false)]
             public List<DescribeProcessListResponseBodyDataResultSet> ResultSet { get; set; }
             public class DescribeProcessListResponseBodyDataResultSet : TeaModel {
                 /// <summary>
-                /// <para>The address to which the query statement is sent.</para>
+                /// <para>The address from which the query was initiated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0:0:0:0:0:ffff:1edd65ea</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialQueryId { get; set; }
 
                 /// <summary>
-                /// <para>The user who executes the query statement.</para>
+                /// <para>The user who initiated the query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bany</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string InitialUser { get; set; }
 
                 /// <summary>
-                /// <para>The query statement that is running.</para>
+                /// <para>The query statement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>select * from test</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string Query { get; set; }
 
                 /// <summary>
-                /// <para>The minimum query duration. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
+                /// <para>The execution duration of the query, in milliseconds (ms).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public long? QueryDurationMs { get; set; }
 
                 /// <summary>
-                /// <para>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+                /// <para>The start time of the query. The time is in UTC and follows the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-07-23T10:13:23Z</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that match the filter criteria.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

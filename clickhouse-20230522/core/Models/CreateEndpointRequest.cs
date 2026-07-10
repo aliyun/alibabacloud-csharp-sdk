@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateEndpointRequest : TeaModel {
+        /// <summary>
+        /// <para>The computing group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-bp100p4q1g9z3****-clickhouse</para>
+        /// </summary>
         [NameInMap("ComputingGroupId")]
         [Validation(Required=false)]
         public string ComputingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</para>
+        /// <para>The prefix for the connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</para>
@@ -35,11 +41,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Public</description></item>
-        /// </list>
+        /// <para>The network type. Set this value to Public to create a public endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Public</para>

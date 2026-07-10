@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class AttachWhitelistTemplateToInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ClickHouse instance ID. Separate multiple instance IDs with commas. A maximum of 20 instances can be attached at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>RegionId</para>
+        /// <para>Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

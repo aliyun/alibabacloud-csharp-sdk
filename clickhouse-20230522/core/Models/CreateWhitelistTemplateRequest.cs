@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class CreateWhitelistTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>RegionId</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The IP addresses in the whitelist. Separate multiple IP addresses with commas (,). You can add up to 100 IP addresses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
+        /// <para>The name of the whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

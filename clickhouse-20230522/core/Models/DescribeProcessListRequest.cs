@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeProcessListRequest : TeaModel {
+        /// <summary>
+        /// <para>The computing group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-gs5j3sua77******-clickhouse</para>
+        /// </summary>
         [NameInMap("ComputingGroupId")]
         [Validation(Required=false)]
         public string ComputingGroupId { get; set; }
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string InitialQueryId { get; set; }
 
         /// <summary>
-        /// <para>The user who executes the query statement.</para>
+        /// <para>The query user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testuser</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string InitialUser { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the query statement.</para>
+        /// <para>The keyword in the query statement.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELECT</para>
@@ -65,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The execution duration of slow SQL queries. Minimum value: 1000. Unit: milliseconds.</para>
+        /// <para>The minimum query execution duration, in milliseconds (ms). Only queries that run for this duration or longer are returned. The minimum value is 1,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -85,15 +91,18 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string QueryDurationMs { get; set; }
 
         /// <summary>
-        /// <para>Specifies the columns by which the query results are sorted in descending order.</para>
+        /// <para>The criteria by which to sort the results. The results are sorted in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The query results are sorted by the query_duration_ms column.</description></item>
-        /// <item><description>1: The query results are sorted by the query_duration_ms and query_start_time columns.</description></item>
-        /// <item><description>2: The query results are sorted by the query_duration_ms, query_start_time, and user columns.</description></item>
+        /// <item><description><para>0: Sorts by <c>query_duration_ms</c>.</para>
+        /// </description></item>
+        /// <item><description><para>1: Sorts by <c>query_duration_ms</c> and <c>query_start_time</c>.</para>
+        /// </description></item>
+        /// <item><description><para>2: Sorts by <c>query_duration_ms</c>, <c>query_start_time</c>, and <c>user</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>id</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("QueryOrder")]
         [Validation(Required=false)]

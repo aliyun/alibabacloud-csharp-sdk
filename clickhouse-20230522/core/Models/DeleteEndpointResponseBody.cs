@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DeleteEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5178C10-1407-4987-9133-DE4DC9119F75</para>

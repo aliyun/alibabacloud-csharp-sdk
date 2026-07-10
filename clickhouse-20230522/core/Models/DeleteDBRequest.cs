@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination database.</para>
+        /// <para>The name of the target database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of time zones that ClickHouse supports.</para>
+        /// </summary>
         [NameInMap("TimeZones")]
         [Validation(Required=false)]
         public List<ListClickHouseDBTimezonesResponseBodyTimeZones> TimeZones { get; set; }
         public class ListClickHouseDBTimezonesResponseBodyTimeZones : TeaModel {
             /// <summary>
+            /// <para>The enumeration value for the time zone.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
             /// </summary>

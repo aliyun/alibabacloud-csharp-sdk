@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C342F3DD-1FF7-55E9-A1A1-098D*******</para>

@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestCluster</para>
+            /// <para>Cluster test</para>
             /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The details about the whitelists.</para>
+            /// <para>The whitelist groups.</para>
             /// </summary>
             [NameInMap("GroupItems")]
             [Validation(Required=false)]
             public List<DescribeSecurityIPListResponseBodyDataGroupItems> GroupItems { get; set; }
             public class DescribeSecurityIPListResponseBodyDataGroupItems : TeaModel {
                 /// <summary>
-                /// <para>The name of the whitelist.</para>
+                /// <para>The name of the whitelist group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the whitelist.</para>
+                /// <para>The group tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
                 public string GroupTag { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses and CIDR blocks in the whitelist.</para>
+                /// <para>The IP addresses in the whitelist group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.0.XX.XX</para>

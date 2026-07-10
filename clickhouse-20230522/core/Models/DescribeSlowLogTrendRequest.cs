@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeSlowLogTrendRequest : TeaModel {
+        /// <summary>
+        /// <para>The computing group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cc-bp100p4q1g9z3****-clickhouse</para>
+        /// </summary>
         [NameInMap("ComputingGroupId")]
         [Validation(Required=false)]
         public string ComputingGroupId { get; set; }
@@ -25,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-07 10:03:00</para>
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The code of the cloud service.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clickhouse</para>
@@ -45,7 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string Product { get; set; }
 
         /// <summary>
-        /// <para>The execution duration of slow SQL queries. Minimum value: <b>1000</b>. Unit: milliseconds.</para>
+        /// <para>The minimum execution duration of a slow SQL query, in milliseconds. The minimum value is <b>1000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -65,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. The time is in UTC and uses the yyyy-MM-dd hh:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-13 17:48:00</para>

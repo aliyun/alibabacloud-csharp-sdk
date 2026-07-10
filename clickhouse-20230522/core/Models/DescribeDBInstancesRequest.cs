@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster IDs. Separate multiple cluster IDs with commas (,).</para>
+        /// <para>A comma-separated list of instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-xxxxx,cx-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The cluster status.</para>
+        /// <para>The instance status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public string DBInstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -79,11 +79,19 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The tags for filtering instances.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DescribeDBInstances</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTags> Tags { get; set; }
         public class DescribeDBInstancesRequestTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user_123</para>
             /// </summary>
@@ -92,8 +100,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>example value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -102,6 +112,8 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         }
 
         /// <summary>
+        /// <para>A comma-separated list of VPC IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</para>
         /// </summary>
