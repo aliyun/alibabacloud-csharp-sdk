@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class E2BListedTemplate : TeaModel {
-        [NameInMap("aliases")]
-        [Validation(Required=false)]
-        public List<string> Aliases { get; set; }
-
         [NameInMap("buildStatus")]
         [Validation(Required=false)]
         public string BuildStatus { get; set; }
@@ -33,10 +29,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
-        [NameInMap("lastSpawnedAt")]
-        [Validation(Required=false)]
-        public string LastSpawnedAt { get; set; }
-
         [NameInMap("logConfiguration")]
         [Validation(Required=false)]
         public LogConfiguration LogConfiguration { get; set; }
@@ -56,10 +48,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("resourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
-
-        [NameInMap("spawnCount")]
-        [Validation(Required=false)]
-        public int? SpawnCount { get; set; }
 
         [NameInMap("statusReason")]
         [Validation(Required=false)]

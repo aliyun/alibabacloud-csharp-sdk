@@ -9,14 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class E2BListedSandbox : TeaModel {
-        [NameInMap("alias")]
-        [Validation(Required=false)]
-        public string Alias { get; set; }
-
-        [NameInMap("clientID")]
-        [Validation(Required=false)]
-        public string ClientID { get; set; }
-
         [NameInMap("cpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
@@ -28,10 +20,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("endAt")]
         [Validation(Required=false)]
         public string EndAt { get; set; }
-
-        [NameInMap("envdVersion")]
-        [Validation(Required=false)]
-        public string EnvdVersion { get; set; }
 
         [NameInMap("memoryMB")]
         [Validation(Required=false)]
@@ -76,10 +64,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("userID")]
         [Validation(Required=false)]
         public string UserID { get; set; }
-
-        [NameInMap("volumeMounts")]
-        [Validation(Required=false)]
-        public List<E2BVolumeMount> VolumeMounts { get; set; }
 
     }
 

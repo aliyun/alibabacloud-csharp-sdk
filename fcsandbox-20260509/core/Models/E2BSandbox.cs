@@ -13,18 +13,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string AccessEndpoint { get; set; }
 
-        [NameInMap("alias")]
-        [Validation(Required=false)]
-        public string Alias { get; set; }
-
-        [NameInMap("allowInternetAccess")]
-        [Validation(Required=false)]
-        public bool? AllowInternetAccess { get; set; }
-
-        [NameInMap("clientID")]
-        [Validation(Required=false)]
-        public string ClientID { get; set; }
-
         [NameInMap("cpuCount")]
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
@@ -41,14 +29,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string EndAt { get; set; }
 
-        [NameInMap("envdAccessToken")]
-        [Validation(Required=false)]
-        public string EnvdAccessToken { get; set; }
-
-        [NameInMap("envdVersion")]
-        [Validation(Required=false)]
-        public string EnvdVersion { get; set; }
-
         [NameInMap("fcFunctionName")]
         [Validation(Required=false)]
         public string FcFunctionName { get; set; }
@@ -61,10 +41,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string FcSessionID { get; set; }
 
-        [NameInMap("lifecycle")]
-        [Validation(Required=false)]
-        public E2BLifecycle Lifecycle { get; set; }
-
         [NameInMap("memoryMB")]
         [Validation(Required=false)]
         public int? MemoryMB { get; set; }
@@ -72,10 +48,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("metadata")]
         [Validation(Required=false)]
         public Dictionary<string, string> Metadata { get; set; }
-
-        [NameInMap("network")]
-        [Validation(Required=false)]
-        public E2BNetwork Network { get; set; }
 
         [NameInMap("resourceGroupID")]
         [Validation(Required=false)]
@@ -112,10 +84,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("userID")]
         [Validation(Required=false)]
         public string UserID { get; set; }
-
-        [NameInMap("volumeMounts")]
-        [Validation(Required=false)]
-        public List<E2BVolumeMount> VolumeMounts { get; set; }
 
     }
 

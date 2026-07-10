@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class E2BTemplate : TeaModel {
-        [NameInMap("aliases")]
-        [Validation(Required=false)]
-        public List<string> Aliases { get; set; }
-
         [NameInMap("buildStatus")]
         [Validation(Required=false)]
         public string BuildStatus { get; set; }
+
+        [NameInMap("category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
 
         [NameInMap("cpuCount")]
         [Validation(Required=false)]
@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
-
-        [NameInMap("lastSpawnedAt")]
-        [Validation(Required=false)]
-        public string LastSpawnedAt { get; set; }
 
         [NameInMap("logConfiguration")]
         [Validation(Required=false)]
@@ -41,6 +37,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public List<string> Names { get; set; }
 
+        [NameInMap("networkConfiguration")]
+        [Validation(Required=false)]
+        public NetworkConfiguration NetworkConfiguration { get; set; }
+
         [NameInMap("public")]
         [Validation(Required=false)]
         public bool? Public { get; set; }
@@ -48,10 +48,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("resourceGroupID")]
         [Validation(Required=false)]
         public string ResourceGroupID { get; set; }
-
-        [NameInMap("spawnCount")]
-        [Validation(Required=false)]
-        public int? SpawnCount { get; set; }
 
         [NameInMap("statusReason")]
         [Validation(Required=false)]
