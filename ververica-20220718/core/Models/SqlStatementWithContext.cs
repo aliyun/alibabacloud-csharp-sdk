@@ -44,16 +44,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         ///     score BIGINT
         /// ) WITH (
         ///    \&quot;connector\&quot; = \&quot;datagen\&quot;
-        /// );
-        /// CREATE TEMPORARY TABLE print_table (
-        ///    name VARCHAR,
-        ///    score BIGINT
-        /// ) WITH (
-        ///   \&quot;connector\&quot;=\&quot;print\&quot;,
-        ///   \&quot;logger\&quot;=\&quot;true\&quot;
         /// );</para>
-        /// <para>INSERT INTO print_table
-        /// select * from datagen_source;</para>
         /// </summary>
         [NameInMap("statement")]
         [Validation(Required=false)]

@@ -1,3 +1,7 @@
+2026-07-10 Version: 1.10.0
+- Support API StartSqlExecution.
+
+
 2026-07-01 Version: 1.9.3
 - Generated csharp 2022-07-18 for ververica.
 

@@ -10666,6 +10666,144 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSqlExecutionRequest
+        /// </param>
+        /// <param name="headers">
+        /// StartSqlExecutionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSqlExecutionResponse
+        /// </returns>
+        public StartSqlExecutionResponse StartSqlExecutionWithOptions(string namespace_, StartSqlExecutionRequest request, StartSqlExecutionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSqlExecution",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-execution",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSqlExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSqlExecutionRequest
+        /// </param>
+        /// <param name="headers">
+        /// StartSqlExecutionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSqlExecutionResponse
+        /// </returns>
+        public async Task<StartSqlExecutionResponse> StartSqlExecutionWithOptionsAsync(string namespace_, StartSqlExecutionRequest request, StartSqlExecutionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartSqlExecution",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-execution",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartSqlExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSqlExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSqlExecutionResponse
+        /// </returns>
+        public StartSqlExecutionResponse StartSqlExecution(string namespace_, StartSqlExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StartSqlExecutionHeaders headers = new StartSqlExecutionHeaders();
+            return StartSqlExecutionWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartSqlExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartSqlExecutionResponse
+        /// </returns>
+        public async Task<StartSqlExecutionResponse> StartSqlExecutionAsync(string namespace_, StartSqlExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StartSqlExecutionHeaders headers = new StartSqlExecutionHeaders();
+            return await StartSqlExecutionWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Stops the application of a scheduled plan.</para>
         /// </summary>
         /// 

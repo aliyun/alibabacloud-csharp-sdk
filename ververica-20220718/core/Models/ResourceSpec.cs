@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ResourceSpec : TeaModel {
         /// <summary>
+        /// <para>The CPU size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public double? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The memory size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4Gi</para>
         /// </summary>
