@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListApplicationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The API status or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>2xx</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
-        /// </description></item>
-        /// <item><description><para><b>4xx</b>: The request was invalid.</para>
-        /// </description></item>
-        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
-        /// </description></item>
+        /// <item><description><b>2xx</b>: Success.</description></item>
+        /// <item><description><b>3xx</b>: Redirection.</description></item>
+        /// <item><description><b>4xx</b>: Request error.</description></item>
+        /// <item><description><b>5xx</b>: Server error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,14 +36,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The object that contains pagination details and the array of applications.</para>
+        /// <para>The application list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListApplicationsResponseBodyData Data { get; set; }
         public class ListApplicationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>An array of application objects.</para>
+            /// <para>The application list.</para>
             /// </summary>
             [NameInMap("Applications")]
             [Validation(Required=false)]
@@ -56,10 +52,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 /// <summary>
                 /// <para>Indicates whether the application is being deleted. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>true</b>: The application is being deleted.</para>
-                /// </description></item>
-                /// <item><description><para><b>false</b>: The application is not being deleted.</para>
-                /// </description></item>
+                /// <item><description><b>true</b>: The application is being deleted.</description></item>
+                /// <item><description><b>false</b>: The application is not being deleted.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -70,7 +64,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? AppDeletingStatus { get; set; }
 
                 /// <summary>
-                /// <para>The description of the application.</para>
+                /// <para>The application description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>description</para>
@@ -80,7 +74,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppDescription { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f7730764-d88f-4b9a-8d8e-cd8efbfe****</para>
@@ -100,7 +94,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The application\&quot;s deployment method.</para>
+                /// <para>The deployment type of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Image</para>
@@ -110,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the base application. This parameter is returned only for canary release applications.</para>
+                /// <para>The base application ID. This property exists only for canary release applications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx-xxx-xx-xxx</para>
@@ -120,14 +114,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string BaseAppId { get; set; }
 
                 /// <summary>
-                /// <para>An array of canary release applications associated with this application.</para>
+                /// <para>The list of canary release applications for this application.</para>
                 /// </summary>
                 [NameInMap("Children")]
                 [Validation(Required=false)]
                 public List<ListApplicationsResponseBodyDataApplicationsChildren> Children { get; set; }
                 public class ListApplicationsResponseBodyDataApplicationsChildren : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the canary release application is being deleted.</para>
+                    /// <para>Indicates whether the application is being deleted.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -147,7 +141,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string AppDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the canary release application.</para>
+                    /// <para>The application ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>xxx-xxx-xxx-xxx</para>
@@ -157,7 +151,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string AppId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the canary release application.</para>
+                    /// <para>The application name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>app1</para>
@@ -167,7 +161,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string AppName { get; set; }
 
                     /// <summary>
-                    /// <para>The application\&quot;s deployment method.</para>
+                    /// <para>The deployment type of the application.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Image</para>
@@ -177,7 +171,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string AppType { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the base application.</para>
+                    /// <para>The base application ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ee99cce6-1c8e-4bfa-96c3-3e2fa9******</para>
@@ -187,7 +181,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string BaseAppId { get; set; }
 
                     /// <summary>
-                    /// <para>The CPU specification.</para>
+                    /// <para>The CPU size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2000</para>
@@ -197,14 +191,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? Cpu { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates if the application is configured to stop automatically when idle.</para>
+                    /// <para>Indicates whether idle mode is enabled.</para>
                     /// </summary>
                     [NameInMap("EnableIdle")]
                     [Validation(Required=false)]
                     public string EnableIdle { get; set; }
 
                     /// <summary>
-                    /// <para>The configured number of instances for the canary release application.</para>
+                    /// <para>The number of instances.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -214,14 +208,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? Instances { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the canary release application is stateful.</para>
+                    /// <para>Specifies whether the application is stateful.</para>
                     /// </summary>
                     [NameInMap("IsStateful")]
                     [Validation(Required=false)]
                     public bool? IsStateful { get; set; }
 
                     /// <summary>
-                    /// <para>The memory specification.</para>
+                    /// <para>The memory size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2048</para>
@@ -231,7 +225,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? Mem { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether Microservices Engine (MSE) is enabled for the application.</para>
+                    /// <para>Indicates whether MSE microservice governance is enabled for the application.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -251,7 +245,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string NamespaceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the namespace.</para>
+                    /// <para>The namespace name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>demo</para>
@@ -261,14 +255,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string NamespaceName { get; set; }
 
                     /// <summary>
-                    /// <para>The edition of the application:</para>
+                    /// <para>The application version. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>lite: Lite</para>
-                    /// </description></item>
-                    /// <item><description><para>std: Standard</para>
-                    /// </description></item>
-                    /// <item><description><para>pro: Pro</para>
-                    /// </description></item>
+                    /// <item><description>lite: Lite Edition</description></item>
+                    /// <item><description>std: Standard Edition</description></item>
+                    /// <item><description>pro: Professional Edition</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -316,7 +307,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? RunningInstances { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether an auto scaling policy is enabled.</para>
+                    /// <para>Indicates whether the elastic scaling policy is enabled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -326,7 +317,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public bool? ScaleRuleEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the auto scaling policy.</para>
+                    /// <para>The type of the elastic scaling rule.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>timing</para>
@@ -336,7 +327,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string ScaleRuleType { get; set; }
 
                     /// <summary>
-                    /// <para>An array of tags assigned to the canary release application.</para>
+                    /// <para>The application tags.</para>
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
@@ -367,22 +358,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The CPU allocated to each instance, measured in millicores. This value cannot be 0. Valid values:</para>
+                /// <para>The CPU required for each instance, in millicores. This value cannot be 0. Only the following defined specifications are supported:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>500</b></para>
-                /// </description></item>
-                /// <item><description><para><b>1000</b></para>
-                /// </description></item>
-                /// <item><description><para><b>2000</b></para>
-                /// </description></item>
-                /// <item><description><para><b>4000</b></para>
-                /// </description></item>
-                /// <item><description><para><b>8000</b></para>
-                /// </description></item>
-                /// <item><description><para><b>16000</b></para>
-                /// </description></item>
-                /// <item><description><para><b>32000</b></para>
-                /// </description></item>
+                /// <item><description><b>500</b></description></item>
+                /// <item><description><b>1000</b></description></item>
+                /// <item><description><b>2000</b></description></item>
+                /// <item><description><b>4000</b></description></item>
+                /// <item><description><b>8000</b></description></item>
+                /// <item><description><b>16000</b></description></item>
+                /// <item><description><b>32000</b></description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -393,7 +377,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The disk size in GB.</para>
+                /// <para>The disk storage size, in GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -403,7 +387,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// <para>Indicates if the application is configured to stop automatically when idle.</para>
+                /// <para>Indicates whether idle mode is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -413,7 +397,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string EnableIdle { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the container image.</para>
+                /// <para>The image URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>registry.cn-hangzhou.aliyuncs.com/sae-serverless-demo/sae-demo:microservice-java-provider-v1.0</para>
@@ -423,7 +407,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ImageUrl { get; set; }
 
                 /// <summary>
-                /// <para>The configured number of application instances.</para>
+                /// <para>The number of application instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -433,42 +417,32 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Instances { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the application is stateful.</para>
+                /// <para>Specifies whether the application is stateful.</para>
                 /// </summary>
                 [NameInMap("IsStateful")]
                 [Validation(Required=false)]
                 public bool? IsStateful { get; set; }
 
                 /// <summary>
-                /// <para>The labels of the application.</para>
+                /// <para>The labels.</para>
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Labels { get; set; }
 
                 /// <summary>
-                /// <para>The memory allocated to each instance, measured in megabytes (MB). This value cannot be 0 and must be compatible with the CPU allocation. The following options are available:</para>
+                /// <para>The memory required for each instance, in MB. This value cannot be 0. The memory has a one-to-one mapping with CPU. Only the following defined specifications are supported:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1024</b>: For a CPU allocation of 500 or 1,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>2048</b>: For a CPU allocation of 500, 1,000, or 2,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>4096</b>: For a CPU allocation of 1,000, 2,000, or 4,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>8192</b>: For a CPU allocation of 2,000, 4,000, or 8,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>12288</b>: For a CPU allocation of 12,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>16384</b>: For a CPU allocation of 4,000, 8,000, or 16,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>24576</b>: For a CPU allocation of 12,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>32768</b>: For a CPU allocation of 16,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>65536</b>: For a CPU allocation of 8,000, 16,000, or 32,000 millicores.</para>
-                /// </description></item>
-                /// <item><description><para><b>131072</b>: For a CPU allocation of 32,000 millicores.</para>
-                /// </description></item>
+                /// <item><description><b>1024</b>: corresponds to 500 and 1000 millicores of CPU.</description></item>
+                /// <item><description><b>2048</b>: corresponds to 500, 1000, and 2000 millicores of CPU.</description></item>
+                /// <item><description><b>4096</b>: corresponds to 1000, 2000, and 4000 millicores of CPU.</description></item>
+                /// <item><description><b>8192</b>: corresponds to 2000, 4000, and 8000 millicores of CPU.</description></item>
+                /// <item><description><b>12288</b>: corresponds to 12000 millicores of CPU.</description></item>
+                /// <item><description><b>16384</b>: corresponds to 4000, 8000, and 16000 millicores of CPU.</description></item>
+                /// <item><description><b>24576</b>: corresponds to 12000 millicores of CPU.</description></item>
+                /// <item><description><b>32768</b>: corresponds to 16000 millicores of CPU.</description></item>
+                /// <item><description><b>65536</b>: corresponds to 8000, 16000, and 32000 millicores of CPU.</description></item>
+                /// <item><description><b>131072</b>: corresponds to 32000 millicores of CPU.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -479,7 +453,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Mem { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether Microservices Engine (MSE) is enabled for the application.</para>
+                /// <para>Indicates whether MSE microservice governance is enabled for the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -489,13 +463,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? MseEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the MSE namespace. This value determines the service edition.</para>
+                /// <para>The MSE microservice governance namespace.</para>
                 /// <list type="bullet">
-                /// <item><description><para>default: Free edition</para>
+                /// <item><description><para>default: Free Edition</para>
                 /// </description></item>
-                /// <item><description><para>sae-pro: Professional edition</para>
+                /// <item><description><para>sae-pro: Professional Edition</para>
                 /// </description></item>
-                /// <item><description><para>sae-ent: Enterprise edition</para>
+                /// <item><description><para>sae-ent: Enterprise Edition</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -507,7 +481,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MseNamespaceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the namespace.</para>
+                /// <para>The namespace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing:demo</para>
@@ -517,7 +491,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NamespaceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the namespace.</para>
+                /// <para>The namespace name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>demo</para>
@@ -527,14 +501,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NamespaceName { get; set; }
 
                 /// <summary>
-                /// <para>The edition of the application:</para>
+                /// <para>The application version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>lite: Lite</para>
-                /// </description></item>
-                /// <item><description><para>std: Standard</para>
-                /// </description></item>
-                /// <item><description><para>pro: Pro</para>
-                /// </description></item>
+                /// <item><description>lite: Lite Edition</description></item>
+                /// <item><description>std: Standard Edition</description></item>
+                /// <item><description>pro: Professional Edition</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -545,7 +516,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NewSaeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the application\&quot;s deployment package.</para>
+                /// <para>The deployment package URL.</para>
                 /// </summary>
                 [NameInMap("PackageUrl")]
                 [Validation(Required=false)]
@@ -561,8 +532,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string ProgrammingLanguage { get; set; }
 
+                [NameInMap("RaspEnabled")]
+                [Validation(Required=false)]
+                public bool? RaspEnabled { get; set; }
+
                 /// <summary>
-                /// <para>The ID of the region where the application is deployed.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -589,7 +564,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? RunningInstances { get; set; }
 
                 /// <summary>
-                /// <para>An array of tags assigned to the application.</para>
+                /// <para>The application tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -618,7 +593,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the VPC.</para>
+                /// <para>VPC ID。</para>
                 /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
@@ -637,7 +612,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -659,12 +634,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. This parameter is returned only if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>A successful request does not return the <b>ErrorCode</b> field.</para>
-        /// </description></item>
-        /// <item><description><para>A failed request returns the <b>ErrorCode</b> field. For more information, see the <b>Error codes</b> section in this topic.</para>
-        /// </description></item>
+        /// <item><description>If the request is successful, the <b>ErrorCode</b> field is not returned.</description></item>
+        /// <item><description>If the request fails, the <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -672,7 +645,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information about the call result.</para>
+        /// <para>The additional information about the call result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -682,7 +655,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -692,7 +665,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B4D805CA-926D-41B1-8E63-7AD0C1ED****</para>
@@ -702,12 +675,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the application list is retrieved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Retrieved.</description></item>
+        /// <item><description><b>false</b>: Not retrieved.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -718,7 +689,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of applications.</para>
+        /// <para>The total number of applications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

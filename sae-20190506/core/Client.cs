@@ -1233,7 +1233,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an application.</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1261,6 +1261,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
             {
                 request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RaspConfig))
+            {
+                request.RaspConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RaspConfig, "RaspConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
@@ -1490,6 +1494,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PythonModules))
             {
                 query["PythonModules"] = request.PythonModules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RaspConfigShrink))
+            {
+                query["RaspConfig"] = request.RaspConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Readiness))
             {
@@ -1639,7 +1647,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an application.</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1667,6 +1675,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
             {
                 request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RaspConfig))
+            {
+                request.RaspConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RaspConfig, "RaspConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
@@ -1897,6 +1909,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["PythonModules"] = request.PythonModules;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RaspConfigShrink))
+            {
+                query["RaspConfig"] = request.RaspConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Readiness))
             {
                 query["Readiness"] = request.Readiness;
@@ -2045,7 +2061,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an application.</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2064,7 +2080,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an application.</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6529,7 +6545,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy an application.</para>
+        /// <para>Deploys an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6557,6 +6573,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
             {
                 request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RaspConfig))
+            {
+                request.RaspConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RaspConfig, "RaspConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
@@ -6786,6 +6806,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PythonModules))
             {
                 query["PythonModules"] = request.PythonModules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RaspConfigShrink))
+            {
+                query["RaspConfig"] = request.RaspConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Readiness))
             {
@@ -6927,7 +6951,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy an application.</para>
+        /// <para>Deploys an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6955,6 +6979,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
             {
                 request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RaspConfig))
+            {
+                request.RaspConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RaspConfig, "RaspConfig", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SidecarContainersConfig))
             {
@@ -7185,6 +7213,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["PythonModules"] = request.PythonModules;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RaspConfigShrink))
+            {
+                query["RaspConfig"] = request.RaspConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Readiness))
             {
                 query["Readiness"] = request.Readiness;
@@ -7325,7 +7357,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy an application.</para>
+        /// <para>Deploys an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7344,7 +7376,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy an application.</para>
+        /// <para>Deploys an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7541,7 +7573,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of an application.</para>
+        /// <para>Retrieves the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7591,7 +7623,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of an application.</para>
+        /// <para>Retrieves the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7641,7 +7673,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of an application.</para>
+        /// <para>Retrieves the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7660,7 +7692,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the configuration of an application.</para>
+        /// <para>Retrieves the configuration information of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15771,7 +15803,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a list of applications.</para>
+        /// <para>Retrieves a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15831,6 +15863,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProgrammingLanguage))
+            {
+                query["ProgrammingLanguage"] = request.ProgrammingLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
             {
                 query["Reverse"] = request.Reverse;
@@ -15861,7 +15897,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a list of applications.</para>
+        /// <para>Retrieves a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15921,6 +15957,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProgrammingLanguage))
+            {
+                query["ProgrammingLanguage"] = request.ProgrammingLanguage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
             {
                 query["Reverse"] = request.Reverse;
@@ -15951,7 +15991,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a list of applications.</para>
+        /// <para>Retrieves a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15970,7 +16010,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a list of applications.</para>
+        /// <para>Retrieves a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">

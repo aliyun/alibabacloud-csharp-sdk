@@ -10,16 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeployApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code. Values:</para>
+        /// <para>The API status or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>2xx</b>: Success.</para>
-        /// </description></item>
-        /// <item><description><para><b>3xx</b>: Redirection.</para>
-        /// </description></item>
-        /// <item><description><para><b>4xx</b>: Request error.</para>
-        /// </description></item>
-        /// <item><description><para><b>5xx</b>: Server error.</para>
-        /// </description></item>
+        /// <item><description><b>2xx</b>: success.</description></item>
+        /// <item><description><b>3xx</b>: redirection.</description></item>
+        /// <item><description><b>4xx</b>: request error.</description></item>
+        /// <item><description><b>5xx</b>: server error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -30,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The returned change order ID. Use it to query task execution status.</para>
+            /// <para>The returned change order ID, which is used to query the task execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01db03d3-3ee9-48b3-b3d0-dfce2d88****</para>
@@ -57,12 +53,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ChangeOrderId { get; set; }
 
             /// <summary>
-            /// <para>Whether RAM users need approval to deploy changes. Values:</para>
+            /// <para>Indicates whether the change published by a Resource Access Management (RAM) user requires approval. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Approval required.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b>: No approval required.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: approval is required.</description></item>
+            /// <item><description><b>false</b>: approval is not required.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,12 +69,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Values:</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>On success: This field is not returned.</para>
-        /// </description></item>
-        /// <item><description><para>On failure: This field is returned. For details, see the <b>Error codes</b> section in this topic.</para>
-        /// </description></item>
+        /// <item><description>If the request is successful, the <b>ErrorCode</b> field is not returned.</description></item>
+        /// <item><description>If the request fails, the <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,12 +83,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. Values:</para>
+        /// <para>The additional information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>On success, returns <b>success</b>.</para>
-        /// </description></item>
-        /// <item><description><para>On failure, returns a specific error code.</para>
-        /// </description></item>
+        /// <item><description>If the request is successful, <b>success</b> is returned.</description></item>
+        /// <item><description>If the request fails, a specific error code is returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,12 +107,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the deployment succeeded. Values:</para>
+        /// <para>Indicates whether the application deployment is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Deployment succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Deployment failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: the deployment is successful.</description></item>
+        /// <item><description><b>false</b>: the deployment failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,7 +121,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID for precise query of call information.</para>
+        /// <para>The trace ID, which is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac1a0b2215622246421415014e****</para>

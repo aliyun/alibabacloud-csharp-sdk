@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeployApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Authorize cross-account image pulls using RAM roles</a>.</para>
+        /// <para>The ARN of the RAM role required for cross-account image pulling. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012****:role/adminrole</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AcrAssumeRoleArn { get; set; }
 
         /// <summary>
-        /// <para>The Container Registry Enterprise Edition instance ID. Required when <b>ImageUrl</b> is from Container Registry Enterprise Edition.</para>
+        /// <para>The Container Registry Enterprise instance ID. This parameter is required when <b>ImageUrl</b> is set to a Container Registry Enterprise instance image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-xxxxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>The ALB gateway readiness gate configuration.</para>
+        /// <para>The ALB gateway ReadinessGate configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -61,12 +61,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Whether to associate an EIP. Values:</para>
+        /// <para>Specifies whether to associate an elastic IP address (EIP). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Associate.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Do not associate.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: associates an EIP.</description></item>
+        /// <item><description><b>false</b>: does not associate an EIP.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,12 +75,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? AssociateEip { get; set; }
 
         /// <summary>
-        /// <para>Whether to automatically enable application Auto Scaling rules. Values:</para>
+        /// <para>Specifies whether to automatically enable the application elastic scaling policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enable.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disable.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +89,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? AutoEnableApplicationScalingRule { get; set; }
 
         /// <summary>
-        /// <para>The wait time between batches, in seconds.</para>
+        /// <para>The interval between deployment batches. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -103,7 +99,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? BatchWaitTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the release task.</para>
+        /// <para>The description of the change order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Start application</para>
@@ -113,14 +109,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ChangeOrderDesc { get; set; }
 
         /// <summary>
-        /// <para>The startup command for your image. This command must be an executable object inside the container. Example:</para>
+        /// <para>The image startup command. The command must be an executable object in the container. Example:</para>
         /// <pre><c>command:
         ///       - echo
         ///       - abc
         ///       - &gt;
         ///       - file0
         /// </c></pre>
-        /// <para>In this example, Command=&quot;echo&quot; and <c>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>.</para>
+        /// <para>Based on the preceding example, <c>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>echo</para>
@@ -130,9 +126,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>The arguments for the startup command <b>Command</b>. Format:</para>
+        /// <para>The arguments of the image startup command. These are the arguments required by the startup command specified in <b>Command</b>. Format:</para>
         /// <para><c>[&quot;a&quot;,&quot;b&quot;]</c></para>
-        /// <para>In the earlier example, <c>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>. The value <c>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c> must be converted to a string in JSON array format. Leave this field empty if no arguments are needed.</para>
+        /// <para>In the preceding example, <c>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c>, where <c>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</c> must be converted to a String type, and the internal format is a JSON array. If this parameter is not required, leave it empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;a&quot;,&quot;b&quot;]</para>
@@ -142,18 +138,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CommandArgs { get; set; }
 
         /// <summary>
-        /// <para>The mount description for a <b>ConfigMap</b>. Use configuration items created on the namespace configuration page to inject configuration into your container. Parameters:</para>
+        /// <para>The <b>ConfigMap</b> mount description. Use a ConfigMap created on the namespace configuration items page to inject configuration information into the container. Settings:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>configMapId</b>: The ID of the ConfigMap instance. Get it by calling the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> API.</para>
-        /// </description></item>
-        /// <item><description><para><b>key</b>: The key.</para>
-        /// </description></item>
+        /// <item><description><b>configMapId</b>: the ConfigMap instance ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation.</description></item>
+        /// <item><description><b>key</b>: the key.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can mount all keys by passing <c>sae-sys-configmap-all</c>.</para>
+        /// <para>You can mount all keys by passing the <c>sae-sys-configmap-all</c> parameter.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>mountPath</b>: The mount path.</description></item>
+        /// <item><description><b>mountPath</b>: the mount path.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,24 +158,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ConfigMapMountDesc { get; set; }
 
         /// <summary>
-        /// <para>The CPU required per instance, in milliCPU. Cannot be zero. Supported fixed specifications:</para>
+        /// <para>The CPU resources required for each instance. Unit: millicores. This parameter cannot be set to 0. Only the following defined specifications are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>500</b></para>
-        /// </description></item>
-        /// <item><description><para><b>1000</b></para>
-        /// </description></item>
-        /// <item><description><para><b>2000</b></para>
-        /// </description></item>
-        /// <item><description><para><b>4000</b></para>
-        /// </description></item>
-        /// <item><description><para><b>8000</b></para>
-        /// </description></item>
-        /// <item><description><para><b>12000</b></para>
-        /// </description></item>
-        /// <item><description><para><b>16000</b></para>
-        /// </description></item>
-        /// <item><description><para><b>32000</b></para>
-        /// </description></item>
+        /// <item><description><b>500</b></description></item>
+        /// <item><description><b>1000</b></description></item>
+        /// <item><description><b>2000</b></description></item>
+        /// <item><description><b>4000</b></description></item>
+        /// <item><description><b>8000</b></description></item>
+        /// <item><description><b>12000</b></description></item>
+        /// <item><description><b>16000</b></description></item>
+        /// <item><description><b>32000</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,12 +178,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Cpu { get; set; }
 
         /// <summary>
-        /// <para>Custom host mappings inside your container. Values:</para>
+        /// <para>The custom host mapping in the container. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>hostName</b>: A domain name or hostname.</para>
-        /// </description></item>
-        /// <item><description><para><b>ip</b>: An IP address.</para>
-        /// </description></item>
+        /// <item><description><b>hostName</b>: the domain name or hostname.</description></item>
+        /// <item><description><b>ip</b>: the IP address.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,12 +192,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CustomHostAlias { get; set; }
 
         /// <summary>
-        /// <para>The custom image type. Set to an empty string for non-custom images:</para>
+        /// <para>The custom image type. If the image is not a custom image, set this parameter to an empty string:</para>
         /// <list type="bullet">
-        /// <item><description><para>internet: Public network image</para>
-        /// </description></item>
-        /// <item><description><para>intranet: Private network image</para>
-        /// </description></item>
+        /// <item><description>internet: public image.</description></item>
+        /// <item><description>intranet: private image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,12 +206,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CustomImageNetworkType { get; set; }
 
         /// <summary>
-        /// <para>This parameter applies only to stopped applications. If you call <b>DeployApplication</b> on a running application, it deploys immediately.</para>
+        /// <para>This parameter takes effect only for applications in the stopped state. If you call the <b>DeployApplication</b> operation for a running application, the application is immediately redeployed.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Default. Deploys immediately, applies the new configuration, and starts instances.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Applies the new configuration only. Does not start application instances.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: default value. Deploys immediately, applies the new deployment configuration, and starts instances.</description></item>
+        /// <item><description><b>false</b>: applies the new deployment configuration only, without starting application instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -240,18 +220,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Deploy { get; set; }
 
         /// <summary>
-        /// <para>The .NET framework version:</para>
+        /// <para>The version of the .NET framework: </para>
         /// <list type="bullet">
-        /// <item><description><para>.NET 3.1</para>
-        /// </description></item>
-        /// <item><description><para>.NET 5.0</para>
-        /// </description></item>
-        /// <item><description><para>.NET 6.0</para>
-        /// </description></item>
-        /// <item><description><para>.NET 7.0</para>
-        /// </description></item>
-        /// <item><description><para>.NET 8.0</para>
-        /// </description></item>
+        /// <item><description>.NET 3.1</description></item>
+        /// <item><description>.NET 5.0</description></item>
+        /// <item><description>.NET 6.0</description></item>
+        /// <item><description>.NET 7.0</description></item>
+        /// <item><description>.NET 8.0</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -262,7 +237,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Dotnet { get; set; }
 
         /// <summary>
-        /// <para>The version of the application runtime environment for HSF applications, such as Ali-Tomcat containers.</para>
+        /// <para>The version of the application runtime environment in the HSF framework, such as the Ali-Tomcat container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.5.3</para>
@@ -272,7 +247,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EdasContainerVersion { get; set; }
 
         /// <summary>
-        /// <para>The configuration for shared temporary storage.</para>
+        /// <para>The shared ephemeral storage configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;name\&quot;:\&quot;workdir\&quot;,\&quot;mountPath\&quot;:\&quot;/usr/local/tomcat/webapps\&quot;}]</para>
@@ -282,12 +257,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EmptyDirDesc { get; set; }
 
         /// <summary>
-        /// <para>Whether to integrate with AHAS. Values:</para>
+        /// <para>Specifies whether to enable Application High Availability Service (AHAS). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Integrate with AHAS.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Do not integrate with AHAS.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables AHAS.</description></item>
+        /// <item><description><b>false</b>: does not enable AHAS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -298,12 +271,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EnableAhas { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable CPU Burst:</para>
+        /// <para>Specifies whether to enable the CPU Burst feature:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enable.</para>
-        /// </description></item>
-        /// <item><description><para>false: Do not enable.</para>
-        /// </description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -314,12 +285,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableCpuBurst { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable traffic canary rules. These rules apply only to Spring Cloud and Dubbo applications. Values:</para>
+        /// <para>Specifies whether to enable traffic canary release rules. This rule applies only to applications that use the Spring Cloud or Dubbo framework. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enable canary rules.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disable canary rules.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables canary release rules.</description></item>
+        /// <item><description><b>false</b>: disables canary release rules.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -330,7 +299,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableGreyTagRoute { get; set; }
 
         /// <summary>
-        /// <para>Whether to reuse the namespace Agent version configuration.</para>
+        /// <para>Specifies whether to reuse the namespace Agent version configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -340,12 +309,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableNamespaceAgentVersion { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the new ARMS feature:</para>
+        /// <para>Specifies whether to enable the new ARMS feature:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enable.</para>
-        /// </description></item>
-        /// <item><description><para>false: Do not enable.</para>
-        /// </description></item>
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -356,7 +323,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableNewArms { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable Prometheus custom metric collection.</para>
+        /// <para>Specifies whether to enable custom Prometheus metric collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -366,12 +333,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnablePrometheus { get; set; }
 
         /// <summary>
-        /// <para>Whether to isolate sidecar resources:</para>
+        /// <para>Specifies whether to enable sidecar resource isolation:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Isolate.</para>
-        /// </description></item>
-        /// <item><description><para>false: Do not isolate.</para>
-        /// </description></item>
+        /// <item><description>true: enables isolation.</description></item>
+        /// <item><description>false: does not enable isolation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -382,38 +347,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableSidecarResourceIsolated { get; set; }
 
         /// <summary>
-        /// <para>The environment variables for your container. You can define custom variables or reference configuration items. To reference a configuration item, first create a ConfigMap instance. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Values:</para>
+        /// <para>The container environment variable parameters. You can customize environment variables or reference ConfigMap items. To reference a ConfigMap item, create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Custom configuration</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>name</b>: The name of the environment variable.</para>
-        /// </description></item>
-        /// <item><description><para><b>value</b>: The value of the environment variable. Takes precedence over valueFrom.</para>
-        /// </description></item>
+        /// <item><description>Custom configuration<list type="bullet">
+        /// <item><description><b>name</b>: the name of the environment variable.</description></item>
+        /// <item><description><b>value</b>: the value of the environment variable. This takes priority over valueFrom.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Reference a configuration item (valueFrom)</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>name</b>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, use <c>sae-sys-configmap-all-&lt;configmap-name&gt;</c>, for example <c>sae-sys-configmap-all-test1</c>.</para>
-        /// </description></item>
-        /// <item><description><para><b>valueFrom</b>: The reference type. Set to <c>configMapRef</c>.</para>
-        /// </description></item>
-        /// <item><description><para><b>configMapId</b>: The ID of the ConfigMap instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>key</b>: The key. Omit this field if you reference all keys.</para>
-        /// </description></item>
+        /// <item><description>Reference a ConfigMap item (valueFrom)<list type="bullet">
+        /// <item><description><b>name</b>: the name of the environment variable. To reference all keys, enter <c>sae-sys-configmap-all-&lt;ConfigMap name&gt;</c>, such as <c>sae-sys-configmap-all-test1</c>.</description></item>
+        /// <item><description><b>valueFrom</b>: the environment variable reference. Set the value to <c>configMapRef</c>.</description></item>
+        /// <item><description><b>configMapId</b>: the ConfigMap ID.</description></item>
+        /// <item><description><b>key</b>: the key. Do not set this field if you want to reference all keys.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Reference a secret (valueFrom)</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>name</b>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, use <c>sae-sys-secret-all-&lt;secret-name&gt;</c>, for example <c>sae-sys-secret-all-test1</c>.</para>
-        /// </description></item>
-        /// <item><description><para><b>valueFrom</b>: The reference type. Set to <c>secretRef</c>.</para>
-        /// </description></item>
-        /// <item><description><para><b>secretId</b>: The ID of the secret.</para>
-        /// </description></item>
-        /// <item><description><para><b>key</b>: The key. Omit this field if you reference all keys.</para>
-        /// </description></item>
+        /// <item><description>Reference a secret (valueFrom)<list type="bullet">
+        /// <item><description><b>name</b>: the name of the environment variable. To reference all keys, enter <c>sae-sys-secret-all-&lt;secret name&gt;</c>, such as <c>sae-sys-secret-all-test1</c>.</description></item>
+        /// <item><description><b>valueFrom</b>: the environment variable reference. Set the value to <c>secretRef</c>.</description></item>
+        /// <item><description><b>secretId</b>: the secret ID.</description></item>
+        /// <item><description><b>key</b>: the key. Do not set this field if you want to reference all keys.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -430,18 +382,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string GpuConfig { get; set; }
 
         /// <summary>
-        /// <para>The Nginx version:</para>
+        /// <para>The Nginx version.</para>
         /// <list type="bullet">
-        /// <item><description><para>nginx 1.20</para>
-        /// </description></item>
-        /// <item><description><para>nginx 1.22</para>
-        /// </description></item>
-        /// <item><description><para>nginx 1.24</para>
-        /// </description></item>
-        /// <item><description><para>nginx 1.26</para>
-        /// </description></item>
-        /// <item><description><para>nginx 1.28</para>
-        /// </description></item>
+        /// <item><description>nginx 1.20</description></item>
+        /// <item><description>nginx 1.22</description></item>
+        /// <item><description>nginx 1.24</description></item>
+        /// <item><description>nginx 1.26</description></item>
+        /// <item><description>nginx 1.28</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -452,7 +399,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Html { get; set; }
 
         /// <summary>
-        /// <para>The ID of the corresponding secret.</para>
+        /// <para>The corresponding secret ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -462,7 +409,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ImagePullSecrets { get; set; }
 
         /// <summary>
-        /// <para>The registry address of your image. Required when <b>Package Type</b> is <b>Image</b>.</para>
+        /// <para>The image URL. This parameter is required when <b>Package Type</b> is set to <b>Image</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</para>
@@ -472,14 +419,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The initialization container configuration.</para>
+        /// <para>The init container configuration.</para>
         /// </summary>
         [NameInMap("InitContainersConfig")]
         [Validation(Required=false)]
         public string InitContainersConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>Startup arguments for your JAR package. Default startup command: <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c></para>
+        /// <para>The startup arguments for a JAR package-based application. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-Xms4G -Xmx4G</para>
@@ -489,7 +436,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string JarStartArgs { get; set; }
 
         /// <summary>
-        /// <para>Startup options for your JAR package. Default startup command: <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c></para>
+        /// <para>The startup options for a JAR package-based application. The default startup command is <c>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom-option</para>
@@ -499,22 +446,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string JarStartOptions { get; set; }
 
         /// <summary>
-        /// <para>The JDK version that your deployment package depends on. Supported versions include the following:</para>
+        /// <para>The JDK version on which the deployment package depends. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Open JDK 8</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Open JDK 7</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Dragonwell 11</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Dragonwell 8</b></para>
-        /// </description></item>
-        /// <item><description><para><b>openjdk-8u191-jdk-alpine3.9</b></para>
-        /// </description></item>
-        /// <item><description><para><b>openjdk-7u201-jdk-alpine3.9</b></para>
-        /// </description></item>
+        /// <item><description><b>Open JDK 8</b></description></item>
+        /// <item><description><b>Open JDK 7</b></description></item>
+        /// <item><description><b>Dragonwell 11</b></description></item>
+        /// <item><description><b>Dragonwell 8</b></description></item>
+        /// <item><description><b>openjdk-8u191-jdk-alpine3.9</b></description></item>
+        /// <item><description><b>openjdk-7u201-jdk-alpine3.9</b></description></item>
         /// </list>
-        /// <para>This parameter is not supported when <b>Package Type</b> is <b>Image</b>.</para>
+        /// <para>This parameter is not supported when <b>Package Type</b> is set to <b>Image</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Open JDK 8</para>
@@ -524,14 +465,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Jdk { get; set; }
 
         /// <summary>
-        /// <para>The configuration for collecting logs to Kafka. Values:</para>
+        /// <para>The summary of log collection configurations for Kafka. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>kafkaEndpoint</b>: The endpoint for the Kafka API.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafkaInstanceId</b>: The Kafka instance ID.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafkaConfigs</b>: The configuration for one or more log entries. For examples and details, see the \<em>\<em>kafkaConfigs\</em>\</em> request parameter in this topic.</para>
-        /// </description></item>
+        /// <item><description><b>kafkaEndpoint</b>: the endpoint of the Kafka API.</description></item>
+        /// <item><description><b>kafkaInstanceId</b>: the Kafka instance ID.</description></item>
+        /// <item><description><b>kafkaConfigs</b>: the configuration summary for one or more log entries. For example values and parameter descriptions, see the <b>kafkaConfigs</b> request parameter in this topic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -546,38 +484,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string LabelsShrink { get; set; }
 
         /// <summary>
-        /// <para>Health checks for your container. Containers that fail health checks are terminated and restarted. Supported methods:</para>
+        /// <para>The container health check. Containers that fail the health check are shutdown and recovered. The following methods are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>exec</b>: For example, <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</c></para>
-        /// </description></item>
-        /// <item><description><para><b>httpGet</b>: For example, <c>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</c></para>
-        /// </description></item>
-        /// <item><description><para><b>tcpSocket</b>: For example, <c>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</c></para>
-        /// </description></item>
+        /// <item><description><b>exec</b>: for example, <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</c></description></item>
+        /// <item><description><b>httpGet</b>: for example, <c>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</c></description></item>
+        /// <item><description><b>tcpSocket</b>: for example, <c>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</c></description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can select only one health check method.</para>
+        /// <para>Only one method can be selected for health checks.</para>
         /// </remarks>
-        /// <para>Parameters:</para>
+        /// <para>Settings:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>exec.command</b>: The health check command.</para>
-        /// </description></item>
-        /// <item><description><para><b>httpGet.path</b>: The path to access.</para>
-        /// </description></item>
-        /// <item><description><para><b>httpGet.scheme</b>: <b>HTTP</b> or <b>HTTPS</b>.</para>
-        /// </description></item>
-        /// <item><description><para><b>httpGet.isContainKeyWord</b>: <b>true</b> means the response contains a keyword. <b>false</b> means it does not. If omitted, advanced features are disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>httpGet.keyWord</b>: Your custom keyword. Include <b>isContainKeyWord</b> when using this field.</para>
-        /// </description></item>
-        /// <item><description><para><b>tcpSocket.port</b>: The port for TCP connection checks.</para>
-        /// </description></item>
-        /// <item><description><para><b>initialDelaySeconds</b>: The delay before the first health check, in seconds. Default is 10.</para>
-        /// </description></item>
-        /// <item><description><para><b>periodSeconds</b>: The interval between health checks, in seconds. Default is 30.</para>
-        /// </description></item>
-        /// <item><description><para><b>timeoutSeconds</b>: The timeout for each health check, in seconds. Default is 1. If set to 0 or omitted, the default is 1 second.</para>
-        /// </description></item>
+        /// <item><description><b>exec.command</b>: sets the health check command.</description></item>
+        /// <item><description><b>httpGet.path</b>: the access path.</description></item>
+        /// <item><description><b>httpGet.scheme</b>: <b>HTTP</b> or <b>HTTPS</b>.</description></item>
+        /// <item><description><b>httpGet.isContainKeyWord</b>: <b>true</b> indicates that the keyword is included, <b>false</b> indicates that the keyword is not included, and the absence of this field indicates that the advanced feature is not used.</description></item>
+        /// <item><description><b>httpGet.keyWord</b>: the custom keyword. The <b>isContainKeyWord</b> field must be present when this parameter is used.</description></item>
+        /// <item><description><b>tcpSocket.port</b>: the port for TCP connection detection.</description></item>
+        /// <item><description><b>initialDelaySeconds</b>: sets the initial delay for the health check. Default value: 10. Unit: seconds.</description></item>
+        /// <item><description><b>periodSeconds</b>: sets the health check epoch. Default value: 30. Unit: seconds.</description></item>
+        /// <item><description><b>timeoutSeconds</b>: sets the health check timeout period. Default value: 1. Unit: seconds. If this parameter is set to 0 or is not set, the default timeout period is 1 second.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -592,8 +518,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string LokiConfigs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of surge instances as a percentage of total instances. Values:</para>
-        /// <para>If the minimum available instances is 100%, the maximum surge cannot be set to 0. If set to -1, the system uses its recommended value: 30% of your current instance count. For example, with 10 instances, 10 × 30% = 3.</para>
+        /// <para>The maximum surge instance percentage. Valid values:</para>
+        /// <para>If the minimum number of available instances is 100%, the maximum surge cannot be set to 0. If this parameter is set to <b>-1</b>, the system-recommended value of 30% is used, which is 30% of the current number of instances. For example, if the current number of instances is 10, the value is 10 × 30% = 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -603,8 +529,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MaxSurgeInstanceRatio { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of surge instances during a rolling update. Values:</para>
-        /// <para>If the minimum available instances is 100%, the maximum surge cannot be set to 0. If set to -1, the system uses its recommended value: 30% of your current instance count. For example, with 10 instances, 10 × 30% = 3.</para>
+        /// <para>The maximum number of surge instances. Valid values:</para>
+        /// <para>If the minimum number of available instances is 100%, the maximum surge cannot be set to 0.
+        /// If this parameter is set to <b>-1</b>, the system-recommended value of 30% is used, which is 30% of the current number of instances. For example, if the current number of instances is 10, the value is 10 × 30% = 3.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -614,28 +541,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MaxSurgeInstances { get; set; }
 
         /// <summary>
-        /// <para>The memory required per instance, in MB. Cannot be zero. Memory and CPU are paired. Supported fixed specifications:</para>
+        /// <para>The memory required for each instance. Unit: MB. This parameter cannot be set to 0. The memory has a one-to-one mapping with CPU. Only the following defined specifications are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1024</b>: Pairs with 500 and 1000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>2048</b>: Pairs with 500, 1000, and 2000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>4096</b>: Pairs with 1000, 2000, and 4000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>8192</b>: Pairs with 2000, 4000, and 8000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>12288</b>: Pairs with 12000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>16384</b>: Pairs with 4000, 8000, and 16000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>24576</b>: Pairs with 12000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>32768</b>: Pairs with 16000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>65536</b>: Pairs with 8000, 16000, and 32000 milliCPU.</para>
-        /// </description></item>
-        /// <item><description><para><b>131072</b>: Pairs with 32000 milliCPU.</para>
-        /// </description></item>
+        /// <item><description><b>1024</b>: corresponds to 500 and 1000 millicores of CPU.</description></item>
+        /// <item><description><b>2048</b>: corresponds to 500, 1000, and 2000 millicores of CPU.</description></item>
+        /// <item><description><b>4096</b>: corresponds to 1000, 2000, and 4000 millicores of CPU.</description></item>
+        /// <item><description><b>8192</b>: corresponds to 2000, 4000, and 8000 millicores of CPU.</description></item>
+        /// <item><description><b>12288</b>: corresponds to 12000 millicores of CPU.</description></item>
+        /// <item><description><b>16384</b>: corresponds to 4000, 8000, and 16000 millicores of CPU.</description></item>
+        /// <item><description><b>24576</b>: corresponds to 12000 millicores of CPU.</description></item>
+        /// <item><description><b>32768</b>: corresponds to 16000 millicores of CPU.</description></item>
+        /// <item><description><b>65536</b>: corresponds to 8000, 16000, and 32000 millicores of CPU.</description></item>
+        /// <item><description><b>131072</b>: corresponds to 32000 millicores of CPU.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -646,17 +563,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>Select a Nacos registry center. Values:</para>
+        /// <para>Specifies the Nacos registry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Built-in Nacos in SAE.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Self-managed Nacos.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: MSE Nacos Commercial Edition.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Serverless App Engine built-in Nacos.</description></item>
+        /// <item><description><b>1</b>: self-managed Nacos.</description></item>
+        /// <item><description><b>2</b>: Microservices Engine (MSE) commercial edition Nacos.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you select built-in Nacos in SAE, you cannot retrieve its configuration.</para>
+        /// <para>If you select Serverless App Engine built-in Nacos, you cannot obtain the configuration of the built-in Nacos.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -667,7 +581,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroRegistration { get; set; }
 
         /// <summary>
-        /// <para>The registry configuration. Applies only when the registry type is MSE Nacos Enterprise Edition.</para>
+        /// <para>The registry configuration, which takes effect only when the registry type is MSE Nacos Enterprise Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</para>
@@ -677,25 +591,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroRegistrationConfig { get; set; }
 
         /// <summary>
-        /// <para>Configure microservice governance features.</para>
+        /// <para>Configures microservice governance.</para>
         /// <list type="bullet">
-        /// <item><description><para>Enable microservice governance (enable):</para>
+        /// <item><description><para>Specifies whether to enable microservice governance (enable):</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Enable</para>
+        /// <item><description><para>true: enabled.</para>
         /// </description></item>
-        /// <item><description><para>false: Disable</para>
+        /// <item><description><para>false: disabled.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Configure graceful start and shutdown (mseLosslessRule):</para>
+        /// <item><description><para>Configures lossless online/offline (mseLosslessRule):</para>
         /// <list type="bullet">
-        /// <item><description><para>delayTime: Delay time</para>
+        /// <item><description><para>delayTime: the delay time.</para>
         /// </description></item>
-        /// <item><description><para>enable: Whether to enable graceful start. true enables it. false disables it.</para>
+        /// <item><description><para>enable: specifies whether to enable the lossless online feature. true indicates enabled, and false indicates disabled.</para>
         /// </description></item>
-        /// <item><description><para>notice: Whether to enable notifications. true enables them. false disables them.</para>
+        /// <item><description><para>notice: specifies whether to enable the notification feature. true indicates enabled, and false indicates disabled.</para>
         /// </description></item>
-        /// <item><description><para>warmupTime: Warm-up duration for small traffic, in seconds.</para>
+        /// <item><description><para>warmupTime: the warm-up duration for low-traffic scenarios. Unit: seconds.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -709,15 +623,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MicroserviceEngineConfig { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of available instances as a percentage of total instances. Values:</para>
+        /// <para>The minimum percentage of available instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>-1</b>: Use the default value. No percentage is applied.</para>
-        /// </description></item>
-        /// <item><description><para><b>0–100</b>: Percentage value. Rounded up. For example, if set to <b>50</b>% and you have 5 instances, the minimum is 3.</para>
-        /// </description></item>
+        /// <item><description><b>-1</b>: the initialization value, which indicates that the percentage is not used.</description></item>
+        /// <item><description><b>0~100</b>: the unit is percentage, rounded up. For example, if this parameter is set to <b>50</b>% and the current number of instances is 5, the minimum number of available instances is 3.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If both <b>MinReadyInstances</b> and <b>MinReadyInstanceRatio</b> are provided, and <b>MinReadyInstanceRatio</b> is not <b>-1</b>, then <b>MinReadyInstanceRatio</b> takes precedence. For example, if <b>MinReadyInstances</b> is <b>5</b> and <b>MinReadyInstanceRatio</b> is <b>50</b>, the system calculates the minimum based on 50%.</para>
+        /// <para>When both <b>MinReadyInstance</b> and <b>MinReadyInstanceRatio</b> are specified and the value of <b>MinReadyInstanceRatio</b> is not <b>-1</b>, the <b>MinReadyInstanceRatio</b> parameter takes precedence. For example, if <b>MinReadyInstances</b> is set to <b>5</b> and <b>MinReadyInstanceRatio</b> is set to <b>50</b>, the value <b>50</b> is used to calculate the minimum number of available instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -728,15 +640,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MinReadyInstanceRatio { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of instances that remain available during a rolling update. Values:</para>
+        /// <para>The minimum number of available instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If set to <b>0</b>, your application experiences downtime during updates.</para>
-        /// </description></item>
-        /// <item><description><para>If set to -1, the system uses its recommended value: 25% of your current instance count. For example, with 5 instances, 5 × 25% = 1.25, rounded up to 2.</para>
-        /// </description></item>
+        /// <item><description>If this parameter is set to <b>0</b>, service is interrupted during the upgrade.</description></item>
+        /// <item><description>If this parameter is set to <b>-1</b>, the system-recommended value is used, which is 25% of the current number of instances. If the current number of instances is 5, 5 × 25% = 1.25, which is rounded up to 2.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>We recommend setting this value to at least 1 to avoid service interruptions.</para>
+        /// <para>The minimum number of available instances for each rolling deployment should be ≥ 1 to prevent service interruption.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -747,7 +657,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MinReadyInstances { get; set; }
 
         /// <summary>
-        /// <para>We recommend using <b>NasConfigs</b> instead of this field. The NAS mount description. If your NAS configuration remains unchanged, omit this parameter. To clear your NAS configuration, set this field to an empty string.</para>
+        /// <para>We do not recommend that you configure this field. Configure <b>NasConfigs</b> instead. The NAS mount description. If the configuration has not changed during deployment, you do not need to set this parameter (that is, the <b>MountDesc</b> field does not need to be included in the request). To clear the NAS configuration, set the value of this field to an empty string (that is, set the value of the <b>MountDesc</b> field to &quot;&quot; in the request).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</para>
@@ -757,7 +667,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MountDesc { get; set; }
 
         /// <summary>
-        /// <para>We recommend using <b>NasConfigs</b> instead of this field. The mount target of the NAS in your application\&quot;s VPC. If your NAS configuration remains unchanged, omit this parameter. To clear your NAS configuration, set this field to an empty string.</para>
+        /// <para>We do not recommend that you configure this field. Configure <b>NasConfigs</b> instead. The mount point of the NAS file system in the VPC of the application. If the configuration has not changed during deployment, you do not need to set this parameter (that is, the <b>MountHost</b> field does not need to be included in the request). To clear the NAS configuration, set the value of this field to an empty string (that is, set the value of the <b>MountHost</b> field to &quot;&quot; in the request).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10d3b4bc9****.com</para>
@@ -767,18 +677,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string MountHost { get; set; }
 
         /// <summary>
-        /// <para>The configuration for mounting NAS. Values:</para>
+        /// <para>The NAS mount configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>mountPath</b>: The mount path in the container.</para>
-        /// </description></item>
-        /// <item><description><para><b>readOnly</b>: Set to <b>false</b> for read and write permissions.</para>
-        /// </description></item>
-        /// <item><description><para><b>nasId</b>: The NAS ID.</para>
-        /// </description></item>
-        /// <item><description><para><b>mountDomain</b>: The mount target address. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</para>
-        /// </description></item>
-        /// <item><description><para><b>nasPath</b>: The relative directory in NAS.</para>
-        /// </description></item>
+        /// <item><description><b>mountPath</b>: the container mount path.</description></item>
+        /// <item><description><b>readOnly</b>: set to <b>false</b> for read and write permission.</description></item>
+        /// <item><description><b>nasId</b>: the NAS ID.</description></item>
+        /// <item><description><b>mountDomain</b>: the container mount point address. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</description></item>
+        /// <item><description><b>nasPath</b>: the NAS relative file directory.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -789,7 +694,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NasConfigs { get; set; }
 
         /// <summary>
-        /// <para>We recommend using <b>NasConfigs</b> instead of this field. The ID of the NAS file system. If your NAS configuration remains unchanged, omit this parameter. To clear your NAS configuration, set this field to an empty string.</para>
+        /// <para>We do not recommend that you configure this field. Configure <b>NasConfigs</b> instead. The ID of the NAS file system. If the configuration has not changed during deployment, you do not need to set this parameter (that is, the <b>NasId</b> field does not need to be included in the request). To clear the NAS configuration, set the value of this field to an empty string (that is, set the value of the <b>NasId</b> field to &quot;&quot; in the request).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10d3b4****</para>
@@ -801,12 +706,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The application version:</para>
         /// <list type="bullet">
-        /// <item><description><para>lite: Lite Edition</para>
-        /// </description></item>
-        /// <item><description><para>std: Standard Edition</para>
-        /// </description></item>
-        /// <item><description><para>pro: Professional Edition</para>
-        /// </description></item>
+        /// <item><description>lite: lite edition.</description></item>
+        /// <item><description>std: standard edition.</description></item>
+        /// <item><description>pro: professional edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -819,7 +721,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The RAM role for identity authentication.</para>
         /// <remarks>
-        /// <para>Create an OIDC identity provider and an associated role in the same region before using this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Create an OIDC identity provider</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Create a role for SSO identity providers</a>.</para>
+        /// <para>Create an OIDC identity provider and an identity provider role in the same region in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Create an OIDC identity provider</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Create a role for SSO identity provider</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -840,7 +742,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OssAkId { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey secret for OSS read and write operations.</para>
+        /// <para>The AccessKey Secret for OSS read and write operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
@@ -850,20 +752,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OssAkSecret { get; set; }
 
         /// <summary>
-        /// <para>The OSS mount description. Parameters:</para>
+        /// <para>The OSS mount description. Parameter settings:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>bucketName</b>: The name of the bucket.</para>
-        /// </description></item>
-        /// <item><description><para><b>bucketPath</b>: The directory or object in OSS. If the directory does not exist, an error occurs.</para>
-        /// </description></item>
-        /// <item><description><para><b>mountPath</b>: The path in your SAE container. If the path exists, it is overwritten. If it does not exist, it is created.</para>
-        /// </description></item>
-        /// <item><description><para><b>readOnly</b>: Whether the container path has read-only access to the mounted resource. Values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Read-only.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Read and write.</para>
-        /// </description></item>
+        /// <item><description><b>bucketName</b>: the bucket name.</description></item>
+        /// <item><description><b>bucketPath</b>: the folder or object that you created in OSS. If the OSS mount folder does not exist, an exception is triggered.</description></item>
+        /// <item><description><b>mountPath</b>: the container path in Serverless App Engine. If the path already exists, it is an overwrite relationship. If the path does not exist, it is created.</description></item>
+        /// <item><description><b>readOnly</b>: specifies whether the container path has read-only permission on the mounted folder resources. Valid values:<list type="bullet">
+        /// <item><description><b>true</b>: read-only permission.</description></item>
+        /// <item><description><b>false</b>: read and write permission.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -876,46 +772,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OssMountDescs { get; set; }
 
         /// <summary>
-        /// <para>The type of your application package. Values:</para>
+        /// <para>The application package type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>For Java applications: <b>FatJar</b>, <b>War</b>, and <b>Image</b>.</para>
-        /// </description></item>
-        /// <item><description><para>For PHP applications:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>PhpZip</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_5_4</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_5_4_ALPINE</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_5_5</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_5_5_ALPINE</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_5_6</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_5_6_ALPINE</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_0_ALPINE</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_1_ALPINE</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_2_ALPINE</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_3</b></para>
-        /// </description></item>
-        /// <item><description><para><b>IMAGE_PHP_7_3_ALPINE</b></para>
-        /// </description></item>
+        /// <item><description>When you deploy with Java, the following types are supported: <b>FatJar</b>, <b>War</b>, and <b>Image</b>.</description></item>
+        /// <item><description>When you deploy with PHP, the following types are supported:<list type="bullet">
+        /// <item><description><b>PhpZip</b></description></item>
+        /// <item><description><b>IMAGE_PHP_5_4</b></description></item>
+        /// <item><description><b>IMAGE_PHP_5_4_ALPINE</b></description></item>
+        /// <item><description><b>IMAGE_PHP_5_5</b></description></item>
+        /// <item><description><b>IMAGE_PHP_5_5_ALPINE</b></description></item>
+        /// <item><description><b>IMAGE_PHP_5_6</b></description></item>
+        /// <item><description><b>IMAGE_PHP_5_6_ALPINE</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_0</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_0_ALPINE</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_1</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_1_ALPINE</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_2</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_2_ALPINE</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_3</b></description></item>
+        /// <item><description><b>IMAGE_PHP_7_3_ALPINE</b></description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>For Python applications: <b>PythonZip</b> and <b>Image</b>.</para>
-        /// </description></item>
+        /// <item><description>When you deploy with Python, the following types are supported: <b>PythonZip</b> and <b>Image</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -926,7 +804,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PackageType { get; set; }
 
         /// <summary>
-        /// <para>The URL of your deployment package. Required when <b>Package Type</b> is <b>FatJar</b>, <b>War</b>, or <b>PythonZip</b>.</para>
+        /// <para>The URL of the deployment package. This parameter is required when <b>Package Type</b> is set to <b>FatJar</b>, <b>War</b>, or <b>PythonZip</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar</a></para>
@@ -936,7 +814,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PackageUrl { get; set; }
 
         /// <summary>
-        /// <para>The version number of your deployment package. Required when <b>Package Type</b> is <b>FatJar</b>, <b>War</b>, or <b>PythonZip</b>.</para>
+        /// <para>The version number of the deployment package. This parameter is required when <b>Package Type</b> is set to <b>FatJar</b>, <b>War</b>, or <b>PythonZip</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.1</para>
@@ -946,7 +824,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PackageVersion { get; set; }
 
         /// <summary>
-        /// <para>The PHP version that your PHP deployment package depends on. Not supported for images.</para>
+        /// <para>The PHP version on which the deployment package depends. Not supported for images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PHP-FPM 7.0</para>
@@ -956,7 +834,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Php { get; set; }
 
         /// <summary>
-        /// <para>The mount path for PHP application monitoring. Ensure your PHP server loads the configuration file at this path. You do not need to manage the configuration content. SAE renders the correct configuration automatically.</para>
+        /// <para>The mount path for PHP application monitoring. Ensure that the PHP server loads the configuration file from this path. You do not need to manage the configuration content because Serverless App Engine automatically renders the correct configuration file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/local/etc/php/conf.d/arms.ini</para>
@@ -976,7 +854,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PhpConfig { get; set; }
 
         /// <summary>
-        /// <para>The mount path for the PHP startup configuration. Ensure your PHP server uses this configuration file to start.</para>
+        /// <para>The mount path for the PHP application startup configuration. Ensure that the PHP server uses this configuration file for startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/local/etc/php/php.ini</para>
@@ -986,7 +864,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PhpConfigLocation { get; set; }
 
         /// <summary>
-        /// <para>A script that runs after your container starts. It executes immediately after the container is created. Format: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</c></para>
+        /// <para>The script that is run after the container starts. A script is triggered immediately after the container is created. Format: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\\]}}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</para>
@@ -996,7 +874,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PostStart { get; set; }
 
         /// <summary>
-        /// <para>A script that runs before your container stops. It executes just before the container is deleted. Format: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</c></para>
+        /// <para>The script that is run before the container stops. A script is triggered before the container is deleted. Format: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;\\]}}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</para>
@@ -1006,14 +884,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PreStop { get; set; }
 
         /// <summary>
-        /// <para>Enable K8s Service registration and discovery. Values:</para>
+        /// <para>Enables K8s Service-based service registration and discovery. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>portProtocols</b>: Port and protocol. Port range is [1,65535]. Protocols supported: <b>TCP</b> and <b>UDP</b>.</para>
-        /// </description></item>
-        /// <item><description><para>portAndProtocol: Port and protocol. Port range is [1,65535]. Protocols supported: <b>TCP</b> and <b>UDP</b>. <b>portProtocols</b> takes precedence. If both are set, only <b>portProtocols</b> applies.</para>
-        /// </description></item>
-        /// <item><description><para><b>enable</b>: Enable K8s Service registration and discovery.</para>
-        /// </description></item>
+        /// <item><description><b>portProtocols</b>: the port and protocol. Valid port values: [1,65535]. Valid protocol values: <b>TCP</b> and <b>UDP</b>.</description></item>
+        /// <item><description><b>portAndProtocol</b>: the port and protocol. Valid port values: [1,65535]. Valid protocol values: <b>TCP</b> and <b>UDP</b>. <b>portProtocols is recommended. If portProtocols is set, only portProtocols takes effect</b>.</description></item>
+        /// <item><description><b>enable</b>: enables K8s Service-based service registration and discovery.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1024,7 +899,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string PvtzDiscoverySvc { get; set; }
 
         /// <summary>
-        /// <para>The Python runtime environment. Supported: <b>PYTHON 3.9.15</b>.</para>
+        /// <para>The Python environment. <b>PYTHON 3.9.15</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PYTHON 3.9.15</para>
@@ -1034,7 +909,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Python { get; set; }
 
         /// <summary>
-        /// <para>Custom module dependencies. By default, dependencies defined in requirements.txt in the root directory are installed. If no configuration or custom packages exist, specify the dependencies to install.</para>
+        /// <para>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If no dependencies are configured or custom packages are needed, you can specify the dependencies to install.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Flask==2.0</para>
@@ -1043,10 +918,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string PythonModules { get; set; }
 
+        [NameInMap("RaspConfig")]
+        [Validation(Required=false)]
+        public string RaspConfigShrink { get; set; }
+
         /// <summary>
-        /// <para>Startup status checks for your application. Containers that repeatedly fail readiness checks are terminated and restarted. Containers that fail readiness checks receive no SLB traffic. Supports <b>exec</b>, <b>httpGet</b>, and <b>tcpSocket</b>. For examples, see the <b>Liveness</b> parameter.</para>
+        /// <para>The application startup status check. Containers that fail multiple health checks are shut down and restarted. Containers that do not pass the health check do not receive SLB traffic. The <b>exec</b>, <b>httpGet</b>, and <b>tcpSocket</b> methods are supported. For specific examples, see the <b>Liveness</b> parameter.</para>
         /// <remarks>
-        /// <para>You can select only one health check method.</para>
+        /// <para>Only one method can be selected for health checks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1067,18 +946,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The mount description for a <b>Secret</b>. Use secrets created on the namespace secrets page to inject sensitive information into your container. Parameters:</para>
+        /// <para>The <b>Secret</b> mount description. Use a secret created on the namespace secrets page to inject sensitive information into the container. Settings:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>secretId</b>: The ID of the secret instance. Get it by calling the ListSecrets API.</para>
-        /// </description></item>
-        /// <item><description><para><b>key</b>: The key.</para>
-        /// </description></item>
+        /// <item><description><b>secretId</b>: the secret instance ID. You can obtain it by calling the ListSecrets operation.</description></item>
+        /// <item><description><b>key</b>: the key.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can mount all keys by passing <c>sae-sys-secret-all</c>.</para>
+        /// <para>You can mount all keys by passing the <c>sae-sys-secret-all</c> parameter.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>mountPath</b>: The mount path.</description></item>
+        /// <item><description><b>mountPath</b>: the mount path.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1099,7 +976,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The canary tags configured for your application.</para>
+        /// <para>The canary release tags configured for the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</para>
@@ -1109,36 +986,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ServiceTags { get; set; }
 
         /// <summary>
-        /// <para>Container configuration information.</para>
+        /// <para>The sidecar container configuration.</para>
         /// </summary>
         [NameInMap("SidecarContainersConfig")]
         [Validation(Required=false)]
         public string SidecarContainersConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The configuration for collecting logs to Simple Log Service (SLS).</para>
+        /// <para>The configuration for log collection to Simple Log Service.</para>
         /// <list type="bullet">
-        /// <item><description><para>Using SAE-managed SLS resources: <c>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</c>.</para>
-        /// </description></item>
-        /// <item><description><para>Using custom SLS resources: <c>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</c>.</para>
-        /// </description></item>
+        /// <item><description>Use SLS resources automatically created by Serverless App Engine: <c>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</c>.</description></item>
+        /// <item><description>Use custom SLS resources: <c>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</c>.</description></item>
         /// </list>
-        /// <para>Parameters:</para>
+        /// <para>Settings:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>projectName</b>: The name of the SLS project.</para>
-        /// </description></item>
-        /// <item><description><para><b>logDir</b>: The log file path.</para>
-        /// </description></item>
-        /// <item><description><para>logType: The log type. <b>stdout</b> means standard output logs from the container. Only one <b>stdout</b> entry is allowed. If omitted, file logs are collected.</para>
-        /// </description></item>
-        /// <item><description><para><b>logstoreName</b>: The name of the SLS Logstore.</para>
-        /// </description></item>
-        /// <item><description><para><b>logtailName</b>: The name of the SLS Logtail. If omitted, a new Logtail is created.</para>
-        /// </description></item>
+        /// <item><description><b>projectName</b>: the name of the project in Simple Log Service.  </description></item>
+        /// <item><description><b>logDir</b>: the log path.</description></item>
+        /// <item><description><b>logType</b>: the log type. <b>stdout</b> indicates container standard output logs, and only one entry can be set. If this parameter is not set, file logs are collected.</description></item>
+        /// <item><description><b>logstoreName</b>: the name of the Logstore in Simple Log Service.</description></item>
+        /// <item><description><b>logtailName</b>: the name of the Logtail in Simple Log Service. If this parameter is not specified, a new Logtail is created by automatic creation.</description></item>
         /// </list>
-        /// <para>If your SLS collection configuration remains unchanged across deployments, omit this parameter. To disable SLS collection, set this field to an empty string.</para>
+        /// <para>If the SLS collection configuration has not changed during multiple deployments, you do not need to set this parameter (that is, the <b>SlsConfigs</b> field does not need to be included in the request). If you no longer need the SLS collection feature, set the value of this field to an empty string (that is, set the value of the <b>SlsConfigs</b> field to &quot;&quot; in the request).</para>
         /// <remarks>
-        /// <para>Projects automatically created by SAE are deleted when the application is deleted. Do not select these projects when choosing an existing project.</para>
+        /// <para>A project that is automatically created with the application is deleted when the application is deleted. Therefore, do not select a project that is automatically created by Serverless App Engine when selecting an existing project.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1149,27 +1019,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SlsConfigs { get; set; }
 
         /// <summary>
-        /// <para>The SLS log tags.</para>
+        /// <para>sls log tags</para>
         /// </summary>
         [NameInMap("SlsLogEnvTags")]
         [Validation(Required=false)]
         public string SlsLogEnvTags { get; set; }
 
         /// <summary>
-        /// <para>Enable application startup probing.</para>
+        /// <para>Enables the application startup probe.</para>
         /// <list type="bullet">
-        /// <item><description><para>Success: The application starts successfully. If you configure Liveness and Readiness checks, they run after startup.</para>
-        /// </description></item>
-        /// <item><description><para>Failure: The application fails to start. SAE reports an error and restarts the container automatically.</para>
-        /// </description></item>
+        /// <item><description>Check succeeded: indicates that the application started successfully. If you configured Liveness and Readiness checks, they are performed after the application starts successfully.</description></item>
+        /// <item><description>Check failed: indicates that the application failed to start. An exception is reported and the application is automatically restarted.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Description</para>
+        /// <para>This is the description content.</para>
         /// <list type="bullet">
-        /// <item><description><para>Supports exec, httpGet, and tcpSocket. For examples, see the Liveness parameter.</para>
-        /// </description></item>
-        /// <item><description><para>You can select only one health check method.</para>
-        /// </description></item>
+        /// <item><description>The exec, httpGet, and tcpSocket methods are supported. For specific examples, see the Liveness parameter.</description></item>
+        /// <item><description>Only one method can be selected for health checks.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -1181,36 +1047,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string StartupProbe { get; set; }
 
         /// <summary>
-        /// <para>Configures service discovery and end-to-end canary release based on a Kubernetes Service:</para>
+        /// <para>Configures K8s Service-based service registration and discovery with end-to-end canary release:</para>
         /// <list type="bullet">
-        /// <item><description><para>enable: Specifies whether to enable the end-to-end canary release feature.</para>
-        /// <list type="bullet">
-        /// <item><description><para>true: Enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para>false: Disables the feature.</para>
-        /// </description></item>
+        /// <item><description>enable: specifies whether to enable end-to-end canary release based on K8s Service.<list type="bullet">
+        /// <item><description>true: enabled.</description></item>
+        /// <item><description>false: disabled.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>namespaceId: The namespace ID.</para>
-        /// </description></item>
-        /// <item><description><para>portAndProtocol: The listening port and protocol. The format is {&quot;\<port>:\<protocol>&quot;:&quot;\<target_port>&quot;}.</para>
-        /// </description></item>
-        /// <item><description><para>portProtocols: A list of ports and protocols for the service.</para>
-        /// <list type="bullet">
-        /// <item><description><para>port: The port number.</para>
-        /// </description></item>
-        /// <item><description><para>protocol: The protocol.</para>
-        /// </description></item>
-        /// <item><description><para>targetPort: The container port.</para>
-        /// </description></item>
+        /// <item><description>namespaceId: the namespace ID.</description></item>
+        /// <item><description>portAndProtocol: the listening port and protocol. Format: {&quot;port:protocol type&quot;:&quot;container port&quot;}.</description></item>
+        /// <item><description>portProtocols: defines the service port and protocol.<list type="bullet">
+        /// <item><description>port: the port.</description></item>
+        /// <item><description>protocol: the protocol.</description></item>
+        /// <item><description>targetPort: the container port.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>pvtzDiscoveryName: The service discovery name.</para>
-        /// </description></item>
-        /// <item><description><para>serviceId: The service ID.</para>
-        /// </description></item>
-        /// <item><description><para>serviceName: The service name.</para>
-        /// </description></item>
+        /// <item><description>pvtzDiscoveryName: the service discovery name.</description></item>
+        /// <item><description>serviceId: the service ID.</description></item>
+        /// <item><description>serviceName: the service name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1221,7 +1075,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string SwimlanePvtzDiscoverySvc { get; set; }
 
         /// <summary>
-        /// <para>The graceful shutdown timeout, in seconds. Default is 30. Valid values: 1–300.</para>
+        /// <para>The graceful shutdown timeout period. Default value: 30. Unit: seconds. Valid values: 1 to 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -1231,7 +1085,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? TerminationGracePeriodSeconds { get; set; }
 
         /// <summary>
-        /// <para>The time zone. Default is <b>Asia/Shanghai</b>.</para>
+        /// <para>The time zone. Default value: <b>Asia/Shanghai</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Shanghai</para>
@@ -1241,18 +1095,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Timezone { get; set; }
 
         /// <summary>
-        /// <para>The Tomcat configuration. Set to an empty string or {} to delete the configuration. Values:</para>
+        /// <para>The Tomcat configuration. Set this parameter to &quot;&quot; or &quot;{}&quot; to delete the configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>port</b>: Port range is 1024–65535. Ports below 1024 require root privileges. Because containers run with admin privileges, use ports above 1024. Default is 8080.</para>
-        /// </description></item>
-        /// <item><description><para><b>contextPath</b>: The access path. Default is the root directory /.</para>
-        /// </description></item>
-        /// <item><description><para><b>maxThreads</b>: The size of the connection pool. Default is 400.</para>
-        /// </description></item>
-        /// <item><description><para>uriEncoding: The encoding format for Tomcat. Options include <b>UTF-8</b>, <b>ISO-8859-1</b>, <b>GBK</b>, and <b>GB2312</b>. Default is <b>ISO-8859-1</b>.</para>
-        /// </description></item>
-        /// <item><description><para><b>useBodyEncodingForUri</b>: Whether to use body encoding for URLs. Default is <b>true</b>.</para>
-        /// </description></item>
+        /// <item><description><b>port</b>: the port number. Valid values: 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. Default value: 8080.</description></item>
+        /// <item><description><b>contextPath</b>: the access path. Default value: root directory &quot;/&quot;.</description></item>
+        /// <item><description><b>maxThreads</b>: the connection pool size. Default value: 400.</description></item>
+        /// <item><description><b>uriEncoding</b>: the encoding format of Tomcat. Valid values: <b>UTF-8</b>, <b>ISO-8859-1</b>, <b>GBK</b>, and <b>GB2312</b>. Default value: <b>ISO-8859-1</b>.</description></item>
+        /// <item><description><b>useBodyEncodingForUri</b>: specifies whether to use <b>BodyEncoding for URL</b>. Default value: <b>true</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1263,30 +1112,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string TomcatConfig { get; set; }
 
         /// <summary>
-        /// <para>The release strategy. When MinReadyInstances equals 1, set UpdateStrategy to an empty string. When <b>MinReadyInstances</b> is greater than 1, examples include the following:</para>
+        /// <para>The deployment policy. When the minimum number of available instances is 1, the value of the <b>UpdateStrategy</b> field is &quot;&quot;. When the minimum number of available instances is greater than 1, examples are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>Canary release with 1 instance, followed by 2 automatic batches with a 1-minute interval: <c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></para>
-        /// </description></item>
-        /// <item><description><para>Canary release with 1 instance, followed by 2 manual batches: <c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></para>
-        /// </description></item>
-        /// <item><description><para>Two automatic batches with a 0-minute interval: <c>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</c></para>
-        /// </description></item>
+        /// <item><description>Grayscale 1 instance + 2 subsequent batches + automatic batching + 1-minute batch interval: <c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></description></item>
+        /// <item><description>Grayscale 1 instance + 2 subsequent batches + manual batching: <c>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;manual&quot;},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</c></description></item>
+        /// <item><description>2 batches + automatic batching + 0-minute batch interval: <c>{&quot;type&quot;:&quot;BatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:0}}</c></description></item>
         /// </list>
-        /// <para>Parameters:</para>
+        /// <para>Settings:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>type</b>: The release strategy type. Options are <b>GrayBatchUpdate</b> (canary release) or <b>BatchUpdate</b> (phased release).</para>
+        /// <item><description><para><b>type</b>: the publish policy type. Valid values: <b>GrayBatchUpdate</b> (grayscale publish) and <b>BatchUpdate</b> (batch publish).</para>
         /// </description></item>
-        /// <item><description><para><b>batchUpdate</b>: The phased release strategy.</para>
+        /// <item><description><para><b>batchUpdate</b>: the batch publish policy.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>batch</b>: The number of batches.</para>
-        /// </description></item>
-        /// <item><description><para><b>releaseType</b>: How batches are processed. Options are <b>auto</b> (automatic) or <b>manual</b> (manual).</para>
-        /// </description></item>
-        /// <item><description><para><b>batchWaitTime</b>: The wait time between batches, in minutes.</para>
-        /// </description></item>
+        /// <item><description><b>batch</b>: the number of publish batches.</description></item>
+        /// <item><description><b>releaseType</b>: the processing method between batches. Valid values: <b>auto</b> (automatic) and <b>manual</b> (manual).</description></item>
+        /// <item><description><b>batchWaitTime</b>: the interval between batches. Unit: minutes.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>grayUpdate</b>: The number of canary instances. Required when <b>type</b> is <b>GrayBatchUpdate</b>.</para>
+        /// <item><description><para><b>grayUpdate</b>: the number of grayscale instances. This parameter is required when <b>type</b> is set to <b>GrayBatchUpdate</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -1298,7 +1141,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string UpdateStrategy { get; set; }
 
         /// <summary>
-        /// <para>The virtual switch where your application instance elastic network interfaces reside. This switch must be in the specified VPC.</para>
+        /// <para>The vSwitch where the network interface controllers (NICs) of the application instance reside. The vSwitch must be in the specified VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp12mw1f8k3jgygk9****</para>
@@ -1308,7 +1151,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The startup command for your WAR package. Configure it the same way as the startup command for images. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Set the startup command</a>.</para>
+        /// <para>The startup command for deploying a WAR package-based application. The configuration procedure is the same as that for the startup command of an image-based deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</para>
@@ -1318,14 +1161,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string WarStartOptions { get; set; }
 
         /// <summary>
-        /// <para>The Tomcat version that your deployment package depends on. Supported versions include the following:</para>
+        /// <para>The Tomcat version on which the deployment package depends. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>apache-tomcat-7.0.91</b></para>
-        /// </description></item>
-        /// <item><description><para><b>apache-tomcat-8.5.42</b></para>
-        /// </description></item>
+        /// <item><description><b>apache-tomcat-7.0.91</b></description></item>
+        /// <item><description><b>apache-tomcat-8.5.42</b></description></item>
         /// </list>
-        /// <para>This parameter is not supported when <b>Package Type</b> is <b>Image</b>.</para>
+        /// <para>This parameter is not supported when <b>Package Type</b> is set to <b>Image</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apache-tomcat-7.0.91</para>
