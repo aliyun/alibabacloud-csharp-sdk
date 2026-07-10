@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTaskAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access information for the model in a test deployment.</para>
+        /// <para>The access information of the model in the test deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<b>.</b>.**\&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccessInfo { get; set; }
 
         /// <summary>
-        /// <para>The cluster network type.</para>
+        /// <para>The network type of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The task creation time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-12T03:45:13Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task01</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pm-2ze99***</para>
@@ -62,12 +62,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The training status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ACTIVATION</b>: Training in progress.</para>
-        /// </description></item>
-        /// <item><description><para><b>COMPLETED</b>: Training successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>FAILED</b>: Training failed.</para>
-        /// </description></item>
+        /// <item><description><b>ACTIVATION</b>: Training in progress.</description></item>
+        /// <item><description><b>COMPLETED</b>: Training succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: Training failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,14 +75,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The training status description. Valid values:</para>
+        /// <para>The training status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ACTIVATION</b>: Training in progress.</para>
-        /// </description></item>
-        /// <item><description><para><b>COMPLETED</b>: Training successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>FAILED</b>: Training failed.</para>
-        /// </description></item>
+        /// <item><description><b>ACTIVATION</b>: Training in progress.</description></item>
+        /// <item><description><b>COMPLETED</b>: Training succeeded.</description></item>
+        /// <item><description><b>FAILED</b>: Training failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,9 +100,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version. Valid value:</para>
+        /// <para>The version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3.1</b>: Model operator tuning.</description></item>
+        /// <item><description><b>3.1</b>: model operator tuning.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The datasets used for the task.</para>
+        /// <para>The datasets.</para>
         /// </summary>
         [NameInMap("DataSets")]
         [Validation(Required=false)]
@@ -146,7 +140,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The proportion of the training set reserved for validation.</para>
+            /// <para>The ratio of data split from the training set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -156,12 +150,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SplitDatasetRatio { get; set; }
 
             /// <summary>
-            /// <para>The type of the dataset. Valid values:</para>
+            /// <para>The type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>train</b>: The training set.</para>
-            /// </description></item>
-            /// <item><description><para><b>eval</b>: The validation set.</para>
-            /// </description></item>
+            /// <item><description><b>train</b>: training set.</description></item>
+            /// <item><description><b>eval</b>: validation set.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,14 +166,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>A list of objects containing additional information about the task.</para>
+        /// <para>The additional information, including runtime parameters.</para>
         /// </summary>
         [NameInMap("ExtraInfo")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid value:</para>
+        /// <para>The type of the instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>18</b>.</description></item>
         /// </list>
@@ -196,10 +188,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Locked.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Unlocked.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Locked.</description></item>
+        /// <item><description><b>1</b>: Unlocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -230,14 +220,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainStartTime { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of output model paths from the model fine-tuning task.</para>
+        /// <para>The list of output model paths in the model fine-tuning scenario.</para>
         /// </summary>
         [NameInMap("ModelPath")]
         [Validation(Required=false)]
         public string ModelPath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>45D24263-7E3A-4140-9472-************</para>
@@ -247,7 +237,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of objects containing information about each training task.</para>
+        /// <para>The task information.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
@@ -264,7 +254,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CompletedTime { get; set; }
 
             /// <summary>
-            /// <para>The base model.</para>
+            /// <para>The foundation model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qwen-1.7B</para>
@@ -274,7 +264,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The path to the custom model.</para>
+            /// <para>The path of the custom model.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qwen-1.7B</para>
@@ -284,12 +274,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelPath { get; set; }
 
             /// <summary>
-            /// <para>The source of the model. Valid values:</para>
+            /// <para>The model source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>public</b>: A pre-built model.</para>
-            /// </description></item>
-            /// <item><description><para><b>custom</b>: A custom model.</para>
-            /// </description></item>
+            /// <item><description><b>public</b>: pre-trained model.</description></item>
+            /// <item><description><b>custom</b>: custom model.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -322,10 +310,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>sft</b>: Supervised Fine-tuning.</para>
-            /// </description></item>
-            /// <item><description><para><b>grpo</b>: Reinforcement learning.</para>
-            /// </description></item>
+            /// <item><description><b>sft</b>: SFT-efficient training.</description></item>
+            /// <item><description><b>grpo</b>: GRPO-reinforcement learning.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -338,10 +324,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The training method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>lora</b>: Low-Rank Adaptation (LoRA) training.</para>
-            /// </description></item>
-            /// <item><description><para><b>full</b>: Full training.</para>
-            /// </description></item>
+            /// <item><description><b>lora</b></description></item>
+            /// <item><description><b>full</b>: full-parameter training.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -353,8 +337,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        [NameInMap("TuneArch")]
+        [Validation(Required=false)]
+        public string TuneArch { get; set; }
+
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-**********</para>

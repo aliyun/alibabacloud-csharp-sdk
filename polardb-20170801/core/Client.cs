@@ -5252,7 +5252,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model operator instance.</para>
+        /// <para>Creates a model creation operator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5333,6 +5333,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["TaskName"] = request.TaskName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TuneArch))
+            {
+                query["TuneArch"] = request.TuneArch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
             {
                 query["VPCId"] = request.VPCId;
@@ -5366,7 +5370,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model operator instance.</para>
+        /// <para>Creates a model creation operator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5447,6 +5451,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["TaskName"] = request.TaskName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TuneArch))
+            {
+                query["TuneArch"] = request.TuneArch;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
             {
                 query["VPCId"] = request.VPCId;
@@ -5480,7 +5488,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model operator instance.</para>
+        /// <para>Creates a model creation operator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5498,7 +5506,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model operator instance.</para>
+        /// <para>Creates a model creation operator instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7511,12 +7519,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster can have up to three manually created backups at a time.</para>
-        /// </description></item>
-        /// <item><description><para>If you receive the error message <c>Exceeding the daily backup times of this DB cluster</c>, this indicates that three manual backups already exist for your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation again.</para>
-        /// </description></item>
-        /// <item><description><para>After you call this operation, a backup job is created in the background. The job may take a long time to complete if the data volume is large.</para>
-        /// </description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7538,6 +7543,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -7587,12 +7596,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster can have up to three manually created backups at a time.</para>
-        /// </description></item>
-        /// <item><description><para>If you receive the error message <c>Exceeding the daily backup times of this DB cluster</c>, this indicates that three manual backups already exist for your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation again.</para>
-        /// </description></item>
-        /// <item><description><para>After you call this operation, a backup job is created in the background. The job may take a long time to complete if the data volume is large.</para>
-        /// </description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7614,6 +7620,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -7663,12 +7673,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster can have up to three manually created backups at a time.</para>
-        /// </description></item>
-        /// <item><description><para>If you receive the error message <c>Exceeding the daily backup times of this DB cluster</c>, this indicates that three manual backups already exist for your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation again.</para>
-        /// </description></item>
-        /// <item><description><para>After you call this operation, a backup job is created in the background. The job may take a long time to complete if the data volume is large.</para>
-        /// </description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -7695,12 +7702,9 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Each cluster can have up to three manually created backups at a time.</para>
-        /// </description></item>
-        /// <item><description><para>If you receive the error message <c>Exceeding the daily backup times of this DB cluster</c>, this indicates that three manual backups already exist for your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete a backup</a> before you call this operation again.</para>
-        /// </description></item>
-        /// <item><description><para>After you call this operation, a backup job is created in the background. The job may take a long time to complete if the data volume is large.</para>
-        /// </description></item>
+        /// <item><description>Each cluster can have up to three manually created backups at the same time.</description></item>
+        /// <item><description>If the error message <c>Exceeding the daily backup times of this DB cluster</c> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</description></item>
+        /// <item><description>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -22808,7 +22812,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get task instance details</para>
+        /// <para>Retrieves the details of a task instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22874,7 +22878,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get task instance details</para>
+        /// <para>Retrieves the details of a task instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22940,7 +22944,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get task instance details</para>
+        /// <para>Retrieves the details of a task instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22958,7 +22962,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get task instance details</para>
+        /// <para>Retrieves the details of a task instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23356,15 +23360,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model operators for a specified PolarDB instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API returns a list of model operators filtered by the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure the provided <c>RelativeDBClusterId</c> matches the ID of an existing PolarDB database instance. Otherwise, no data will be returned.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23431,15 +23435,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model operators for a specified PolarDB instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API returns a list of model operators filtered by the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure the provided <c>RelativeDBClusterId</c> matches the ID of an existing PolarDB database instance. Otherwise, no data will be returned.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23506,15 +23510,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model operators for a specified PolarDB instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API returns a list of model operators filtered by the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure the provided <c>RelativeDBClusterId</c> matches the ID of an existing PolarDB database instance. Otherwise, no data will be returned.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -23533,15 +23537,15 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of model operators for a specified PolarDB instance.</para>
+        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API returns a list of model operators filtered by the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
-        /// <item><description>Note: Ensure the provided <c>RelativeDBClusterId</c> matches the ID of an existing PolarDB database instance. Otherwise, no data will be returned.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26808,7 +26812,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Application Log Details</para>
+        /// <para>Queries the log details of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26902,7 +26906,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Application Log Details</para>
+        /// <para>Queries the log details of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26996,7 +27000,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Application Log Details</para>
+        /// <para>Queries the log details of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27014,7 +27018,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AI Application Log Details</para>
+        /// <para>Queries the log details of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28116,7 +28120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available models in an AI cluster.</para>
+        /// <para>Retrieves the list of AI cluster models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28162,7 +28166,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available models in an AI cluster.</para>
+        /// <para>Retrieves the list of AI cluster models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28208,7 +28212,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available models in an AI cluster.</para>
+        /// <para>Retrieves the list of AI cluster models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28226,7 +28230,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the available models in an AI cluster.</para>
+        /// <para>Retrieves the list of AI cluster models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28908,7 +28912,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup information for a PolarDB cluster.</para>
+        /// <para>Queries the backup information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28998,7 +29002,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup information for a PolarDB cluster.</para>
+        /// <para>Queries the backup information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29088,7 +29092,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup information for a PolarDB cluster.</para>
+        /// <para>Queries the backup information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29106,7 +29110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries backup information for a PolarDB cluster.</para>
+        /// <para>Queries the backup information of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29416,7 +29420,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying budget policies</para>
+        /// <para>Queries cost budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29461,6 +29465,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeRefName))
+            {
+                query["ScopeRefName"] = request.ScopeRefName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -29486,7 +29494,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying budget policies</para>
+        /// <para>Queries cost budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29531,6 +29539,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeRefName))
+            {
+                query["ScopeRefName"] = request.ScopeRefName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -29556,7 +29568,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying budget policies</para>
+        /// <para>Queries cost budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29574,7 +29586,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Querying budget policies</para>
+        /// <para>Queries cost budget policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30320,7 +30332,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of consumers.</para>
+        /// <para>Queries the list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30344,6 +30356,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
             {
                 query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerName))
+            {
+                query["ConsumerName"] = request.ConsumerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerNameList))
+            {
+                query["ConsumerNameList"] = request.ConsumerNameList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
@@ -30382,7 +30402,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of consumers.</para>
+        /// <para>Queries the list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30406,6 +30426,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerId))
             {
                 query["ConsumerId"] = request.ConsumerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerName))
+            {
+                query["ConsumerName"] = request.ConsumerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerNameList))
+            {
+                query["ConsumerNameList"] = request.ConsumerNameList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
@@ -30444,7 +30472,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of consumers.</para>
+        /// <para>Queries the list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30462,7 +30490,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of consumers.</para>
+        /// <para>Queries the list of consumers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31240,7 +31268,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelists and security groups that are allowed to access a database cluster.</para>
+        /// <para>Queries the IP whitelist and security groups that are allowed to access a database cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31268,6 +31296,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -31298,7 +31330,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelists and security groups that are allowed to access a database cluster.</para>
+        /// <para>Queries the IP whitelist and security groups that are allowed to access a database cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31326,6 +31358,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -31356,7 +31392,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelists and security groups that are allowed to access a database cluster.</para>
+        /// <para>Queries the IP whitelist and security groups that are allowed to access a database cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31374,7 +31410,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP whitelists and security groups that are allowed to access a database cluster.</para>
+        /// <para>Queries the IP whitelist and security groups that are allowed to access a database cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33504,6 +33540,298 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the price of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeDBClusterPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBClusterPriceResponse
+        /// </returns>
+        public DescribeDBClusterPriceResponse DescribeDBClusterPriceWithOptions(DescribeDBClusterPriceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeDBClusterPriceShrinkRequest request = new DescribeDBClusterPriceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBNodes))
+            {
+                request.DBNodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBNodes, "DBNodes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationCategory))
+            {
+                query["CreationCategory"] = request.CreationCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeClass))
+            {
+                query["DBNodeClass"] = request.DBNodeClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeIds))
+            {
+                query["DBNodeIds"] = request.DBNodeIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeNum))
+            {
+                query["DBNodeNum"] = request.DBNodeNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodesShrink))
+            {
+                query["DBNodes"] = request.DBNodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
+            {
+                query["DBVersion"] = request.DBVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStandbyCluster))
+            {
+                query["HotStandbyCluster"] = request.HotStandbyCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
+            {
+                query["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedIops))
+            {
+                query["ProvisionedIops"] = request.ProvisionedIops;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessType))
+            {
+                query["ServerlessType"] = request.ServerlessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageChargeType))
+            {
+                query["StorageChargeType"] = request.StorageChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBClusterPrice",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBClusterPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeDBClusterPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBClusterPriceResponse
+        /// </returns>
+        public async Task<DescribeDBClusterPriceResponse> DescribeDBClusterPriceWithOptionsAsync(DescribeDBClusterPriceRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeDBClusterPriceShrinkRequest request = new DescribeDBClusterPriceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DBNodes))
+            {
+                request.DBNodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DBNodes, "DBNodes", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreationCategory))
+            {
+                query["CreationCategory"] = request.CreationCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeClass))
+            {
+                query["DBNodeClass"] = request.DBNodeClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeIds))
+            {
+                query["DBNodeIds"] = request.DBNodeIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeNum))
+            {
+                query["DBNodeNum"] = request.DBNodeNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodesShrink))
+            {
+                query["DBNodes"] = request.DBNodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBVersion))
+            {
+                query["DBVersion"] = request.DBVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStandbyCluster))
+            {
+                query["HotStandbyCluster"] = request.HotStandbyCluster;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
+            {
+                query["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
+            {
+                query["OrderType"] = request.OrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisionedIops))
+            {
+                query["ProvisionedIops"] = request.ProvisionedIops;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessType))
+            {
+                query["ServerlessType"] = request.ServerlessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageChargeType))
+            {
+                query["StorageChargeType"] = request.StorageChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSpace))
+            {
+                query["StorageSpace"] = request.StorageSpace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDBClusterPrice",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDBClusterPriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBClusterPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBClusterPriceResponse
+        /// </returns>
+        public DescribeDBClusterPriceResponse DescribeDBClusterPrice(DescribeDBClusterPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDBClusterPriceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of a cluster.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDBClusterPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDBClusterPriceResponse
+        /// </returns>
+        public async Task<DescribeDBClusterPriceResponse> DescribeDBClusterPriceAsync(DescribeDBClusterPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDBClusterPriceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a database cluster proxy.</para>
         /// </summary>
         /// 
@@ -33701,6 +34029,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["OwnerId"] = request.OwnerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
                 query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
@@ -33758,6 +34090,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -44916,7 +45252,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看polarfs信息</para>
+        /// <para>Queries PolarFS information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44990,7 +45326,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看polarfs信息</para>
+        /// <para>Queries PolarFS information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45064,7 +45400,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看polarfs信息</para>
+        /// <para>Queries PolarFS information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45082,7 +45418,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看polarfs信息</para>
+        /// <para>Queries PolarFS information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58192,7 +58528,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies the access whitelist for a cluster. The whitelist can be an IP address whitelist or a security group.</para>
+        /// <para>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58232,6 +58568,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -58274,7 +58614,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies the access whitelist for a cluster. The whitelist can be an IP address whitelist or a security group.</para>
+        /// <para>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58314,6 +58654,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -58356,7 +58700,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies the access whitelist for a cluster. The whitelist can be an IP address whitelist or a security group.</para>
+        /// <para>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58374,7 +58718,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies the access whitelist for a cluster. The whitelist can be an IP address whitelist or a security group.</para>
+        /// <para>Creates or modifies the whitelist of a cluster, including the IP whitelist and security groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61340,7 +61684,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SSL encryption for a PolarDB cluster, or updates its CA certificate.</para>
+        /// <para>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61357,6 +61701,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionString))
+            {
+                query["ConnectionString"] = request.ConnectionString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -61376,6 +61724,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -61414,7 +61766,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SSL encryption for a PolarDB cluster, or updates its CA certificate.</para>
+        /// <para>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61431,6 +61783,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionString))
+            {
+                query["ConnectionString"] = request.ConnectionString;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
@@ -61450,6 +61806,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PfsInstanceId))
+            {
+                query["PfsInstanceId"] = request.PfsInstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -61488,7 +61848,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SSL encryption for a PolarDB cluster, or updates its CA certificate.</para>
+        /// <para>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -61506,7 +61866,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables SSL encryption for a PolarDB cluster, or updates its CA certificate.</para>
+        /// <para>Enables or shuts down the Secure Sockets Layer (SSL) encryption feature for a PolarDB cluster, or updates the CA certificate of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">

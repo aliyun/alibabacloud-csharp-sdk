@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of SSL connection information.</para>
+        /// <para>The list of SSL connection information.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,15 +27,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBEndpointId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</para>
+            /// <para>Indicates whether automatic SSL certificate rotation is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Enable</b>: enabled</para>
+            /// <item><description><para><b>Enable</b>: Enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>Disable</b>: disabled</para>
+            /// <item><description><para><b>Disable</b>: Disabled.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is supported only when the database engine is compatible with PostgreSQL or Oracle syntax.</para>
+            /// <para>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SSLAutoRotate { get; set; }
 
             /// <summary>
-            /// <para>The SSL connection endpoint.</para>
+            /// <para>The SSL connection address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-************.mysql.polardb.rds.aliyuncs.com</para>
@@ -56,12 +56,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SSLConnectionString { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SSL encryption is enabled. Valid values:</para>
+            /// <para>Indicates whether Secure Sockets Layer (SSL) encryption is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Enabled</b>: enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>Disabled</b>: disabled.</para>
-            /// </description></item>
+            /// <item><description><b>Enabled</b>: Enabled.</description></item>
+            /// <item><description><b>Disabled</b>: Shutdown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SSLEnabled { get; set; }
 
             /// <summary>
-            /// <para>The certificate validity period. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
+            /// <para>The expiration time of the SSL certificate. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-13T07:14:22Z</para>
@@ -94,11 +92,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</para>
+        /// <para>Indicates whether automatic SSL certificate rotation is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enable</b>: enabled</para>
+        /// <item><description><para><b>Enable</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>Disable</b>: disabled</para>
+        /// <item><description><para><b>Disable</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// <remarks>

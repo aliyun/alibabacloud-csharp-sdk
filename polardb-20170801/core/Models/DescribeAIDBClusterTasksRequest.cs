@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The model operator type.</para>
+        /// <para>The template operator type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aitrain</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarDB instance.</para>
+        /// <para>The instance ID of the PolarDB instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBudgetPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of budget policies.</para>
+        /// <para>The list of budget policies.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeBudgetPoliciesResponseBodyItems> Items { get; set; }
         public class DescribeBudgetPoliciesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The alert threshold, as a percentage (0 to 100).</para>
+            /// <para>The alert threshold percentage. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AlertThresholdPct { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert threshold was triggered.</para>
+            /// <para>Indicates whether the alert threshold has been triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? AlertTriggered { get; set; }
 
             /// <summary>
-            /// <para>The ID of the dimension object. This parameter is required when <c>BudgetDimensionType</c> is set to <c>ConsumerGroup</c> or <c>Consumer</c>.</para>
+            /// <para>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-p3gk2oh55c**</para>
@@ -47,12 +47,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetDimensionRefId { get; set; }
 
             /// <summary>
-            /// <para>The dimension of the budget policy. Valid values:</para>
+            /// <para>The policy type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>ConsumerGroup</b>: consumer group</para>
-            /// </description></item>
-            /// <item><description><para><b>Consumer</b>: consumer</para>
-            /// </description></item>
+            /// <item><description><b>ConsumerGroup</b>: total budget for a user group</description></item>
+            /// <item><description><b>Consumer</b>: total budget for a user</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetDimensionType { get; set; }
 
             /// <summary>
-            /// <para>The number of budget points.</para>
+            /// <para>The budget points.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -85,12 +83,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The budget type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>GlobalTotal</b>: Global budget</para>
-            /// </description></item>
-            /// <item><description><para><b>ConsumerTotal</b>: Consumer budget</para>
-            /// </description></item>
-            /// <item><description><para><b>ConsumerGroupTotal</b>: Consumer group budget</para>
-            /// </description></item>
+            /// <item><description><b>GlobalTotal</b>: global total budget</description></item>
+            /// <item><description><b>ConsumerTotal</b>: total budget for a user</description></item>
+            /// <item><description><b>ConsumerGroupTotal</b>: total budget for a user group</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string BudgetType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the budget was exceeded.</para>
+            /// <para>Indicates whether the quota has been exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -131,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The gateway cluster ID.</para>
+            /// <para>The gateway instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxxxx</para>
@@ -141,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
-            /// <para>The day of the month (1 to 28) on which the budget is reset.</para>
+            /// <para>The day of the month on which the budget resets. Valid values: 1 to 28.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -151,12 +146,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ResetDayOfMonth { get; set; }
 
             /// <summary>
-            /// <para>The status of the policy. Valid values:</para>
+            /// <para>The policy status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Enabled</b>: enabled</para>
-            /// </description></item>
-            /// <item><description><para><b>Disabled</b>: disabled</para>
-            /// </description></item>
+            /// <item><description><b>Enabled</b>: enabled</description></item>
+            /// <item><description><b>Disenabled</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,7 +192,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -210,7 +203,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>

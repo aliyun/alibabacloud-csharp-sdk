@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAvailableModelsRequest : TeaModel {
         /// <summary>
-        /// <para>The service type. The value must be set to <c>aideploy</c>.</para>
+        /// <para>aideploy</para>
         /// 
         /// <b>Example:</b>
         /// <para>aideploy</para>

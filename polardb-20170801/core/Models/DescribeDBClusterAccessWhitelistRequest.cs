@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pfs-xxx</para>
+        /// </summary>
+        [NameInMap("PfsInstanceId")]
+        [Validation(Required=false)]
+        public string PfsInstanceId { get; set; }
+
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }

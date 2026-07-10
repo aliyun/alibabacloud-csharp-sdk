@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeConsumersRequest : TeaModel {
         /// <summary>
-        /// <para>The consumer group ID.</para>
+        /// <para>The user group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-xxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerGroupId { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-mqveroemc***</para>
@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ConsumerId")]
         [Validation(Required=false)]
         public string ConsumerId { get; set; }
+
+        [NameInMap("ConsumerName")]
+        [Validation(Required=false)]
+        public string ConsumerName { get; set; }
+
+        [NameInMap("ConsumerNameList")]
+        [Validation(Required=false)]
+        public string ConsumerNameList { get; set; }
 
         /// <summary>
         /// <para>The gateway instance ID.</para>
@@ -41,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,14 +59,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values are:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b>. The default is <b>30</b>.</para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b>
+        /// Default value: <b>30</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

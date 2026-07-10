@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The engine version.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.0</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAvailableModelsResponseBodyItems> Items { get; set; }
         public class DescribeAvailableModelsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The required GPU configurations.</para>
+            /// <para>The supported GPU types.</para>
             /// </summary>
             [NameInMap("GpuRequired")]
             [Validation(Required=false)]
             public List<DescribeAvailableModelsResponseBodyItemsGpuRequired> GpuRequired { get; set; }
             public class DescribeAvailableModelsResponseBodyItemsGpuRequired : TeaModel {
                 /// <summary>
-                /// <para>The minimum number of GPUs required.</para>
+                /// <para>The minimum number of GPUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The minimum number of CPU cores required.</para>
+            /// <para>The minimum number of CPUs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MinimumCpu { get; set; }
 
             /// <summary>
-            /// <para>The minimum memory required, in MiB.</para>
+            /// <para>The minimum memory size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16384</para>
@@ -112,10 +112,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public List<string> SupportedGpuModels { get; set; }
 
+            [NameInMap("TuneArch")]
+            [Validation(Required=false)]
+            public string TuneArch { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AA69096-757C-4647-B36C-29EBC2******</para>

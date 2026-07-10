@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccelerateType { get; set; }
 
         /// <summary>
-        /// <para>The acceleration storage space, in GB.</para>
+        /// <para>The acceleration storage space. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? AcceleratedStorageSpace { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the acceleration cache is enabled. Valid values:</para>
+        /// <para>Specifies whether the acceleration cache is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: enabled.</description></item>
-        /// <item><description><b>OFF</b>: disabled.</description></item>
+        /// <item><description><b>ON</b>: Enabled.</description></item>
+        /// <item><description><b>OFF</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AcceleratingEnable { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth, in MB/s.</para>
+        /// <para>The bandwidth. Unit: MB/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth baseline, in MB/s/TiB.</para>
+        /// <para>The bandwidth baseline. Unit: MB/s/TiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? BandwidthBaseLine { get; set; }
 
         /// <summary>
-        /// <para>The storage bucket ID.</para>
+        /// <para>The bucket ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -150,11 +150,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        [NameInMap("DBEndpointId")]
+        [Validation(Required=false)]
+        public string DBEndpointId { get; set; }
+
         /// <summary>
         /// <para>The database ecosystem type. Valid values: </para>
         /// <list type="bullet">
         /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b>.</description></item>
+        /// <item><description><b>PostgreSQL</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,10 +168,62 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBType { get; set; }
 
+        [NameInMap("EndpointItems")]
+        [Validation(Required=false)]
+        public List<DescribePolarFsAttributeResponseBodyEndpointItems> EndpointItems { get; set; }
+        public class DescribePolarFsAttributeResponseBodyEndpointItems : TeaModel {
+            [NameInMap("AddressItems")]
+            [Validation(Required=false)]
+            public List<DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems> AddressItems { get; set; }
+            public class DescribePolarFsAttributeResponseBodyEndpointItemsAddressItems : TeaModel {
+                [NameInMap("ConnectionString")]
+                [Validation(Required=false)]
+                public string ConnectionString { get; set; }
+
+                [NameInMap("IPAddress")]
+                [Validation(Required=false)]
+                public string IPAddress { get; set; }
+
+                [NameInMap("NetType")]
+                [Validation(Required=false)]
+                public string NetType { get; set; }
+
+                [NameInMap("Port")]
+                [Validation(Required=false)]
+                public string Port { get; set; }
+
+                [NameInMap("VPCId")]
+                [Validation(Required=false)]
+                public string VPCId { get; set; }
+
+                [NameInMap("VSwitchId")]
+                [Validation(Required=false)]
+                public string VSwitchId { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ep-xxxxxxxxx</para>
+            /// </summary>
+            [NameInMap("DBEndpointId")]
+            [Validation(Required=false)]
+            public string DBEndpointId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>S3Gateway</para>
+            /// </summary>
+            [NameInMap("EndpointType")]
+            [Validation(Required=false)]
+            public string EndpointType { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The expiration time of the cluster.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
+        /// <para>This parameter is returned only for clusters that use the <b>Prepaid</b> (subscription) billing method. An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -180,7 +236,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether the cluster has expired.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription).</para>
+        /// <para>This parameter is returned only for clusters that use the <b>Prepaid</b> (subscription) billing method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -203,9 +259,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock mode. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>Unlock</b>: not locked.</description></item>
-        /// <item><description><b>ManualLock</b>: manually locked. </description></item>
-        /// <item><description><b>LockByExpiration</b>: automatically locked due to cluster expiration.</description></item>
+        /// <item><description><b>Unlock</b>: Not locked.</description></item>
+        /// <item><description><b>ManualLock</b>: Manually locked. </description></item>
+        /// <item><description><b>LockByExpiration</b>: Automatically locked due to cluster expiration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,6 +271,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string LockMode { get; set; }
 
+        [NameInMap("MaxscaleEndpointId")]
+        [Validation(Required=false)]
+        public string MaxscaleEndpointId { get; set; }
+
+        [NameInMap("MetaConnString")]
+        [Validation(Required=false)]
+        public string MetaConnString { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>pc-xxxxxxxxxxxxxxxxx</para>
@@ -223,8 +287,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string MetaInstanceName { get; set; }
 
+        [NameInMap("MetaMxsConnString")]
+        [Validation(Required=false)]
+        public string MetaMxsConnString { get; set; }
+
         /// <summary>
-        /// <para>The metadata URL for Fuse mounting (encrypted).</para>
+        /// <para>The encrypted metadata URL for Fuse mounting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e6cc1d2e2a6fa292038d999fda6501*****</para>
@@ -329,7 +397,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The instance version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PolarFS 2.0</b>: 2.0</description></item>
+        /// <item><description><b>PolarFS 2.0</b>: 2.0.</description></item>
         /// <item><description><b>PolarFS 1.0</b>: 1.0.</description></item>
         /// </list>
         /// 
@@ -401,7 +469,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The storage space, in GB.</para>
+        /// <para>The storage space. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -411,12 +479,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>Valid values for the High-performance Edition storage type:</para>
+        /// <para>The storage type for the High-performance Edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ESSDPL1</b></description></item>
         /// <item><description><b>ESSDPL0</b></description></item>
         /// </list>
-        /// <para>Valid values for the Basic Edition storage type:</para>
+        /// <para>The storage type for the Basic Edition. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>city_redundancy</b>: zone-redundant storage.</description></item>
         /// </list>
@@ -429,7 +497,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The used storage space, in bytes.</para>
+        /// <para>The used storage space. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3012558848</para>
@@ -437,6 +505,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("StorageUsed")]
         [Validation(Required=false)]
         public double? StorageUsed { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>lakebase_acc</para>
+        /// </summary>
+        [NameInMap("UserDefaultAccName")]
+        [Validation(Required=false)]
+        public string UserDefaultAccName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>EncryptedSecretKey==</para>
+        /// </summary>
+        [NameInMap("UserDefaultAccSk")]
+        [Validation(Required=false)]
+        public string UserDefaultAccSk { get; set; }
 
         /// <summary>
         /// <para>The VPC ID.</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeConsumersResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of consumers.</para>
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeConsumersResponseBodyItems> Items { get; set; }
         public class DescribeConsumersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The models that the consumer is allowed to access, specified as a JSON array in string format.</para>
+            /// <para>The list of supported models.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;[]&quot;</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AllowedModels { get; set; }
 
             /// <summary>
-            /// <para>The full API key. This value is returned only by this operation.</para>
+            /// <para>The full API key, returned only in this response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The consumer group ID.</para>
+            /// <para>The user group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-xxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The consumer group name.</para>
+            /// <para>The user group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerGroupName { get; set; }
 
             /// <summary>
-            /// <para>The consumer ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-mqveroemc***</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ConsumerId { get; set; }
 
             /// <summary>
-            /// <para>The time when the consumer was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-28T09:56:03+08:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the consumer was last modified.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-04T16:09:29+08:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The total usage.</para>
+            /// <para>The total cumulative usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? LifetimeCostCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of tokens consumed.</para>
+            /// <para>The total cost for the current month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? LifetimeTokenCount { get; set; }
 
             /// <summary>
-            /// <para>The month-to-date usage.</para>
+            /// <para>The usage for the current month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MtdCostCount { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens consumed month-to-date.</para>
+            /// <para>The total cumulative cost.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? MtdTokenCount { get; set; }
 
             /// <summary>
-            /// <para>The consumer name.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The consumer nickname.</para>
+            /// <para>The nickname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yonghu</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values: 30, 50, and 100. The default value is 30.</para>
+        /// <para>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>

@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The backup mode. Valid values:</para>
+        /// <para>The backup mode. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Automated</b>: System automatic backup.</para>
-        /// </description></item>
-        /// <item><description><para><b>Manual</b>: Manual backup.</para>
-        /// </description></item>
+        /// <item><description><b>Automated</b>: automatic backup.</description></item>
+        /// <item><description><b>Manual</b>: manual backup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupMode { get; set; }
 
         /// <summary>
-        /// <para>The destination region for cross-region backup.</para>
+        /// <para>The destination region for cross-region backups.</para>
         /// <remarks>
-        /// <para>This parameter is supported only for PolarDB for MySQL.</para>
+        /// <para>Currently, only PolarDB for MySQL supports this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,10 +49,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The backup status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Success</b>: The backup is complete.</para>
-        /// </description></item>
-        /// <item><description><para><b>Failed</b>: The backup failed.</para>
-        /// </description></item>
+        /// <item><description><b>Success</b>: The backup is complete.</description></item>
+        /// <item><description><b>Failed</b>: The backup failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The end time must be later than the start time. Specify the time in <c>YYYY-MM-DDThh:mmZ</c> format (UTC time).</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer greater than 0 and no greater than the maximum value of the Integer type. Default value: <b>1</b>.</para>
+        /// <para>The page number. Set the value to an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -105,14 +101,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: <b>30</b>.</para>
         /// 
@@ -132,7 +125,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in <c>YYYY-MM-DDThh:mmZ</c> format (UTC time).</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

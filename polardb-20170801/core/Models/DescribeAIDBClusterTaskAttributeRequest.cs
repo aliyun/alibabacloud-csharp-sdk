@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTaskAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pm-2ze99***</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The query mode. Valid value:</para>
+        /// <para>The query mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RelatedAITask</b>: Returns the task details.</description></item>
+        /// <item><description><b>RelatedAITask</b>: queries task details.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>A client token to ensure the idempotence of the request. The client generates this value, which must be unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token is case-sensitive and can contain only ASCII characters. The token can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("Comment")]
+        [Validation(Required=false)]
+        public string Comment { get; set; }
 
         /// <summary>
         /// <para>The cluster ID.</para>

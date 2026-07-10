@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the model operator instance.</para>
+        /// <para>The instance ID of the generated model service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pm-2zo88***</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CED079B7-A408-41A1-BFF1-EC608E******</para>

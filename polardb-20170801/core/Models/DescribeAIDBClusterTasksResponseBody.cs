@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The engine.</para>
+        /// <para>The cluster engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_ai</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The engine version.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>A list of model operators.</para>
+        /// <para>The cluster endpoint details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeAIDBClusterTasksResponseBodyItems> Items { get; set; }
         public class DescribeAIDBClusterTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The completion time.</para>
+            /// <para>The task completion time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-09T18:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeDescription { get; set; }
 
             /// <summary>
-            /// <para>The model operator instance ID.</para>
+            /// <para>The instance ID of the model operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pm-2ze***</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// <para>The instance status. This parameter is not always returned.</para>
+            /// <para>The instance status. This parameter may not be returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeStatus { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance status.</para>
+            /// <para>The instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeStatusDesc { get; set; }
 
             /// <summary>
-            /// <para>The availability zone.</para>
+            /// <para>The zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-i</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DataZoneId { get; set; }
 
             /// <summary>
-            /// <para>The engine.</para>
+            /// <para>The cluster engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polardb_ai</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The engine version.</para>
+            /// <para>The database engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The model path.</para>
+            /// <para>The path.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelSource { get; set; }
 
             /// <summary>
-            /// <para>The runtime parameters.</para>
+            /// <para>The running parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RunningTimes { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The task start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-09T18:00:00Z</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The training mode.</para>
+            /// <para>The mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sft</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TrainMode { get; set; }
 
             /// <summary>
-            /// <para>The training type.</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lora</para>
@@ -196,10 +196,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string TrainType { get; set; }
 
+            [NameInMap("TuneArch")]
+            [Validation(Required=false)]
+            public string TuneArch { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The PolarDB cluster ID.</para>
+        /// <para>The ID of the PolarDB cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze***</para>
@@ -209,7 +213,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RelativeDBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>

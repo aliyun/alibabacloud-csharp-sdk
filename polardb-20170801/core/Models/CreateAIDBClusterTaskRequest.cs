@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the training dataset. This parameter is required for fine-tuning.</para>
+        /// <para>The training dataset ID. This parameter is required for fine-tuning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pds-2zetrain***</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetPath { get; set; }
 
         /// <summary>
-        /// <para>The ID of the validation dataset. This parameter is required for evaluation.</para>
+        /// <para>The validation dataset ID. This parameter is required for evaluation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pds-2zetrain***</para>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EvalDatasetPath { get; set; }
 
         /// <summary>
-        /// <para>The type of model service. Valid values:</para>
+        /// <para>The model service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>aitrain</b>: For model operator tuning.</description></item>
+        /// <item><description><b>aitrain</b>: model operator tuning</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,10 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The model name.</para>
         /// <list type="bullet">
-        /// <item><description><para>For a <b>preset model</b>, specify the model name.</para>
-        /// </description></item>
-        /// <item><description><para>For a <b>custom model</b>, specify the path to the model. This option is for models trained in a cold storage edition instance.</para>
-        /// </description></item>
+        /// <item><description><b>For a preset model, specify the name of the selected model.</b></description></item>
+        /// <item><description><b>For a custom model, specify the path where the model is stored (the model trained in a cold storage instance).</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,10 +82,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The model source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>public</b>: A preset model.</para>
-        /// </description></item>
-        /// <item><description><para><b>custom</b>: A custom model.</para>
-        /// </description></item>
+        /// <item><description><b>public</b>: preset model</description></item>
+        /// <item><description><b>custom</b>: custom model</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelSource { get; set; }
 
         /// <summary>
-        /// <para>The type of the custom model.</para>
+        /// <para>The custom model type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3</para>
@@ -135,7 +131,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The runtime parameters, specified as a JSON string.</para>
+        /// <para>The running parameters in JSON string format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The description of the model service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -165,8 +161,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
+        [NameInMap("TuneArch")]
+        [Validation(Required=false)]
+        public string TuneArch { get; set; }
+
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>

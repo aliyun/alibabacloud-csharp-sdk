@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string BackupsLevel { get; set; }
 
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
+                public string Comment { get; set; }
+
                 [NameInMap("ConsistentTime")]
                 [Validation(Required=false)]
                 public string ConsistentTime { get; set; }
@@ -112,15 +116,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total size of level-2 backups in the specified region, in bytes.</para>
+        /// <para>The total size of level-2 backups in the specified region. Unit: bytes.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Supported only for storage classes PSL4 and PSL5.</para>
-        /// </description></item>
-        /// <item><description><para>Supported only for clusters with the level-2 backup feature enabled.</para>
-        /// </description></item>
-        /// <item><description><para>If this field is not returned, the level-2 backup size is 0.</para>
-        /// </description></item>
+        /// <item><description>Only PSL4 and PSL5 storage types are supported.</description></item>
+        /// <item><description>Only clusters with the level-2 backup feature enabled are supported.</description></item>
+        /// <item><description>If this parameter is not returned, the level-2 backup size is 0.</description></item>
         /// </list>
         /// </remarks>
         /// 
