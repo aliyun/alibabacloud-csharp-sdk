@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The collection of alternative instance families from which alternative instance types are selected. You can set up to 10 instance families in this parameter.</para>
+        /// <para>Settings for the collection of alternative instance families from which alternative instance types are selected. You can specify up to 10 instance families.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.hfg6</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The network type of the ECS instance. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>vpc: virtual private cloud (VPC).</description></item>
-        /// <item><description>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Retirement notice</a>.</description></item>
+        /// <item><description>classic: classic network. The classic network is no longer available. For more information, see <a href="https://help.aliyun.com/document_detail/2833134.html">Discontinuation notice</a>.</description></item>
         /// </list>
         /// <para>Default value: vpc.</para>
         /// <para>This parameter is required.</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The priority recommendation strategy. Valid values:</para>
+        /// <para>The priority-based recommendation strategy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>InventoryFirst: inventory first.</description></item>
         /// <item><description>PriceFirst: price first. Instance types are sorted by the hourly vCPU unit price in ascending order.</description></item>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>SpotAsPriceGo: a spot instance for which the system automatically bids at up to the pay-as-you-go price.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When you use SpotStrategy, set InstanceChargeType to PostPaid.</para>
+        /// <para>When you use SpotStrategy, set InstanceChargerType to PostPaid.</para>
         /// </remarks>
         /// <para>Default value: NoSpot.</para>
         /// 

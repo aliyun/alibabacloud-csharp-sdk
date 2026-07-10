@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateLaunchTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the launch template.</para>
+        /// <para>The launch template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-m5eiaupmvm2op9d****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the launch template.</para>
+        /// <para>The launch template version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? LaunchTemplateVersionNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

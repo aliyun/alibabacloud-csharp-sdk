@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal period. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
+        /// <para>The auto-renewal duration. Unit: months. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
         /// <list type="bullet">
         /// <item><description><para>When <c>PeriodUnit=Month</c>, the default value is 1.</para>
         /// </description></item>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The renewal period. The unit of the renewal period is determined by the <c>PeriodUnit</c> parameter. Valid values:</para>
+        /// <para>The renewal duration. The unit of the duration is determined by the <c>PeriodUnit</c> parameter. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>When <c>PeriodUnit</c> is set to <c>Weekly</c>: 1, 2, and 3.</para>
         /// </description></item>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal period. Valid values:</para>
+        /// <para>The unit of the renewal duration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Weekly: week</para>
         /// </description></item>

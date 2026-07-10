@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>The system disk architecture. If you create the image\&quot;s system disk from a data disk snapshot, you must specify this parameter to identify the system disk architecture. Valid values:</para>
+        /// <para>The system architecture. After a data disk snapshot is specified as the system disk of the image, use this parameter to specify the system architecture of the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>i386</para>
-        /// </description></item>
-        /// <item><description><para>x86_64</para>
-        /// </description></item>
-        /// <item><description><para>arm64</para>
-        /// </description></item>
+        /// <item><description>i386.</description></item>
+        /// <item><description>x86_64.</description></item>
+        /// <item><description>arm64.</description></item>
         /// </list>
         /// <para>Default value: x86_64.</para>
         /// 
@@ -31,17 +28,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The boot mode of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BIOS: BIOS boot mode.</para>
-        /// </description></item>
-        /// <item><description><para>UEFI: UEFI boot mode.</para>
-        /// </description></item>
-        /// <item><description><para>UEFI-Preferred: The image supports both BIOS and UEFI boot modes. The UEFI boot mode is preferred. This is the default value.</para>
-        /// </description></item>
+        /// <item><description>BIOS: BIOS boot mode.</description></item>
+        /// <item><description>UEFI: UEFI boot mode.</description></item>
+        /// <item><description>(Default) UEFI-Preferred: dual boot mode.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>If you specify a boot mode that the image does not support, instances created from the image may fail to start. Before you specify this parameter, ensure you know the boot modes that the image supports. For more information, see <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes</a>.</para>
+        /// <notice>
+        /// 
+        /// <para>To prevent instances from failing to start due to an unsupported boot mode, make sure that you understand the boot modes supported by the target image before specifying this parameter. For more information about image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</para>
+        /// </notice>
         /// 
         /// <b>Example:</b>
         /// <para>BIOS</para>
@@ -51,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BootMode { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token to ensure the request is idempotent. You must ensure that the token is unique across different requests. The <c>ClientToken</c> value can contain only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -61,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The image description. It must be 2 to 256 characters long and cannot start with http\:// or https\://.</para>
+        /// <para>The description of the image. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ImageTestDescription</para>
@@ -71,9 +65,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The image check policy. If you do not specify this parameter, no check is performed. Only the Standard mode is supported.</para>
+        /// <para>The image detection strategy. If this parameter is not specified, detection is not triggered. Only the Standard detection mode is supported. </para>
         /// <remarks>
-        /// <para>This feature is supported for most Linux and Windows versions. For more information about the check items and the operating systems that support this feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating systems that support image check</a>.</para>
+        /// <para>Most Linux and Windows versions are supported. For more information about image detection items and operating system limitations, see <a href="https://help.aliyun.com/document_detail/439819.html">Image detection overview</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limitations for image detection</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,18 +78,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DetectionStrategy { get; set; }
 
         /// <summary>
-        /// <para>The mappings between disks and snapshots used to create the custom image. If you need to create a custom image from a system disk snapshot and data disk snapshots, specify this parameter.</para>
+        /// <para>The disk and snapshot information used to create the custom image. Use this parameter to specify snapshots when you want to create a custom image from system disk and data disk snapshots.</para>
         /// </summary>
         [NameInMap("DiskDeviceMapping")]
         [Validation(Required=false)]
         public List<CreateImageRequestDiskDeviceMapping> DiskDeviceMapping { get; set; }
         public class CreateImageRequestDiskDeviceMapping : TeaModel {
             /// <summary>
-            /// <para>The device name of the disk in the custom image. Valid values:</para>
+            /// <para>The device name in the custom image. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>The device name of the system disk must be /dev/xvda.</para>
             /// </description></item>
-            /// <item><description><para>The device names of data disks are assigned in sequence from /dev/xvdb to /dev/xvdz and cannot be repeated.</para>
+            /// <item><description><para>Data disk device names are sequentially ordered from /dev/xvdb to /dev/xvdz and cannot be duplicated.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -107,12 +101,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The type of the disk in the image. You can specify this parameter to use a data disk snapshot as the system disk of the image. If you do not specify this parameter, the disk type is determined by the type of the source snapshot. Valid values:</para>
+            /// <para>The type of the disk in the new image. You can use this parameter to specify a data disk snapshot as the system disk of the image. If this parameter is not specified, the disk type defaults to the type of the disk corresponding to the snapshot. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>system: system disk. You can specify only one system disk snapshot.</para>
-            /// </description></item>
-            /// <item><description><para>data: data disk. You can specify a maximum of 16 data disk snapshots.</para>
-            /// </description></item>
+            /// <item><description>system: system disk. Only one system disk snapshot can be specified.</description></item>
+            /// <item><description>data: data disk. Up to 16 data disk snapshots can be specified.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,18 +115,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskType { get; set; }
 
             /// <summary>
-            /// <para>The size of the cloud disk, in GiB. The valid values and default value of <c>DiskDeviceMapping.N.Size</c> vary based on whether <c>DiskDeviceMapping.N.SnapshotId</c> is specified.</para>
+            /// <para>The size of the disk, in GiB. The valid values and default value of DiskDeviceMapping.N.Size depend on DiskDeviceMapping.N.SnapshotId:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>DiskDeviceMapping.N.SnapshotId</c> is not specified, the value of this parameter depends on the disk type:</para>
-            /// <list type="bullet">
-            /// <item><description><para>For basic disks, the value range is 5 to 2,000 and the default value is 5.</para>
-            /// </description></item>
-            /// <item><description><para>For other disk types, the value range is 20 to 32,768 and the default value is 20.</para>
-            /// </description></item>
+            /// <item><description>If SnapshotId is not specified, the valid values and default value of Size are:<list type="bullet">
+            /// <item><description>Basic disk: 5 to 2000 GiB. Default value: 5.</description></item>
+            /// <item><description>Other disk types: 20 to 32768 GiB. Default value: 20.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>If <c>DiskDeviceMapping.N.SnapshotId</c> is specified, the value of <c>DiskDeviceMapping.N.Size</c> must be greater than or equal to the snapshot\&quot;s size. The default value is the snapshot\&quot;s size.</para>
-            /// </description></item>
+            /// <item><description>If SnapshotId is specified, the value of Size must be greater than or equal to the size of the snapshot. Default value: the size of the snapshot.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot.</para>
+            /// <para>The snapshot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp17441ohwkdca0****</para>
@@ -156,36 +144,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
-        /// <summary>
-        /// <para>Specifies whether to perform a dry run to check the request. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true: performs a dry run but does not create the image. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: Sends the request to perform the operation. If the request is valid, a 2xx HTTP status code is returned and the image is created.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
-        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The image attributes.</para>
+        /// <para>The image feature properties.</para>
         /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public CreateImageRequestFeatures Features { get; set; }
         public class CreateImageRequestFeatures : TeaModel {
             /// <summary>
-            /// <para>The instance metadata access mode. Valid values:</para>
+            /// <para>The metadata access mode of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>v1: The normal mode. When you create an ECS instance from an image that has the metadata access mode set to this value, you cannot configure the instance metadata access mode as Enforced.</para>
-            /// </description></item>
-            /// <item><description><para>v2: The enforced mode. When you create an ECS instance from an image that has the metadata access mode set to this value, you can configure the instance metadata access mode as Enforced.</para>
-            /// </description></item>
+            /// <item><description>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to &quot;security hardening mode only&quot;.</description></item>
+            /// <item><description>v2: When you create an ECS instance from this image, you can set the metadata access mode to &quot;security hardening mode only&quot;.</description></item>
             /// </list>
-            /// <para>Default value: v1 if you create the image from a snapshot. If you create the image from an instance, the value is inherited from the source instance\&quot;s image.</para>
+            /// <para>Default value: When creating an image from a snapshot, the default is v1. When creating an image from an instance, the default is the ImdsSupport value of the image used when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v2</para>
@@ -197,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The name of the image family. The name must be 2 to 128 characters long and start with a letter or a Chinese character. It cannot start with aliyun or acs:, nor contain http\:// or https\://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The image family name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with aliyun or acs:. It cannot contain http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>hangzhou-daily-update</para>
@@ -207,7 +183,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageFamily { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. The name must be 2 to 128 characters long. It must start with a letter or a Chinese character and must not start with http\:// or https\://. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The image name. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestCentOS</para>
@@ -217,9 +193,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The version of the image.</para>
+        /// <para>The image version.</para>
         /// <remarks>
-        /// <para>If you specify an instance ID (<c>InstanceId</c>) and the instance was created from an Alibaba Cloud Marketplace image (or a custom image based on a Marketplace image), this parameter must match the <c>ImageVersion</c> of the instance\&quot;s image or be left empty.</para>
+        /// <para>If you specify an instance ID (<c>InstanceId</c>) and the image of the instance is an Alibaba Cloud Marketplace image or a custom image created from an Alibaba Cloud Marketplace image, this parameter must be the same as the <c>ImageVersion</c> of the current instance image or left empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -230,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. This parameter is required when you create a custom image from an instance.</para>
+        /// <para>The instance ID. This parameter is required when you create a custom image from an instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1g6zv0ce8oghu7****</para>
@@ -248,60 +224,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The operating system distribution. You must specify this parameter to identify the operating system distribution when you use a data disk snapshot to create the image\&quot;s system disk. Valid values:</para>
+        /// <para>The operating system distribution. After a data disk snapshot is specified as the system disk of the image, use this parameter to specify the operating system distribution of the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Aliyun</para>
-        /// </description></item>
-        /// <item><description><para>Anolis</para>
-        /// </description></item>
-        /// <item><description><para>CentOS</para>
-        /// </description></item>
-        /// <item><description><para>Ubuntu</para>
-        /// </description></item>
-        /// <item><description><para>CoreOS</para>
-        /// </description></item>
-        /// <item><description><para>SUSE</para>
-        /// </description></item>
-        /// <item><description><para>Debian</para>
-        /// </description></item>
-        /// <item><description><para>OpenSUSE</para>
-        /// </description></item>
-        /// <item><description><para>FreeBSD</para>
-        /// </description></item>
-        /// <item><description><para>RedHat</para>
-        /// </description></item>
-        /// <item><description><para>Kylin</para>
-        /// </description></item>
-        /// <item><description><para>UOS</para>
-        /// </description></item>
-        /// <item><description><para>Fedora</para>
-        /// </description></item>
-        /// <item><description><para>Fedora CoreOS</para>
-        /// </description></item>
-        /// <item><description><para>CentOS Stream</para>
-        /// </description></item>
-        /// <item><description><para>AlmaLinux</para>
-        /// </description></item>
-        /// <item><description><para>Rocky Linux</para>
-        /// </description></item>
-        /// <item><description><para>Gentoo</para>
-        /// </description></item>
-        /// <item><description><para>Customized Linux</para>
-        /// </description></item>
-        /// <item><description><para>Others Linux</para>
-        /// </description></item>
-        /// <item><description><para>Windows Server 2022</para>
-        /// </description></item>
-        /// <item><description><para>Windows Server 2019</para>
-        /// </description></item>
-        /// <item><description><para>Windows Server 2016</para>
-        /// </description></item>
-        /// <item><description><para>Windows Server 2012</para>
-        /// </description></item>
-        /// <item><description><para>Windows Server 2008</para>
-        /// </description></item>
-        /// <item><description><para>Windows Server 2003</para>
-        /// </description></item>
+        /// <item><description>Aliyun</description></item>
+        /// <item><description>Anolis</description></item>
+        /// <item><description>CentOS</description></item>
+        /// <item><description>Ubuntu</description></item>
+        /// <item><description>CoreOS</description></item>
+        /// <item><description>SUSE</description></item>
+        /// <item><description>Debian</description></item>
+        /// <item><description>OpenSUSE</description></item>
+        /// <item><description>FreeBSD</description></item>
+        /// <item><description>RedHat</description></item>
+        /// <item><description>Kylin</description></item>
+        /// <item><description>UOS</description></item>
+        /// <item><description>Fedora</description></item>
+        /// <item><description>Fedora CoreOS</description></item>
+        /// <item><description>CentOS Stream</description></item>
+        /// <item><description>AlmaLinux</description></item>
+        /// <item><description>Rocky Linux</description></item>
+        /// <item><description>Gentoo</description></item>
+        /// <item><description>Customized Linux</description></item>
+        /// <item><description>Others Linux</description></item>
+        /// <item><description>Windows Server 2022</description></item>
+        /// <item><description>Windows Server 2019</description></item>
+        /// <item><description>Windows Server 2016</description></item>
+        /// <item><description>Windows Server 2012</description></item>
+        /// <item><description>Windows Server 2008</description></item>
+        /// <item><description>Windows Server 2003</description></item>
         /// </list>
         /// <para>Default value: Others Linux.</para>
         /// 
@@ -313,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the image will be created. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -324,9 +274,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to add the custom image. If you do not specify this parameter, the image is added to the default resource group.</para>
+        /// <para>The ID of the resource group to which the custom image belongs. If this parameter is not set, the created image belongs to the default resource group.</para>
         /// <remarks>
-        /// <para>As a RAM user, you must have the required permissions to call this operation. If you leave <c>ResourceGroupId</c> empty, the <c>Forbidden: User not authorized to operate on the specified resource</c> error is returned if you lack permissions on the default resource group. To resolve this issue, specify the ID of a resource group for which you have permissions, or ask an administrator to grant you permissions on the default resource group.</para>
+        /// <para>If you invoke this operation as a Resource Access Management (RAM) user and <c>ResourceGroupId</c> is left empty, note that when the RAM user does not have permissions on the default resource group, the error message <c>Forbidden: User not authorized to operate on the specified resource</c> is returned. Set a resource group ID that the RAM user has permissions on, or grant the RAM user permissions on the default resource group before invoking this operation again.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -345,9 +295,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot used to create the custom image.</para>
+        /// <para>The snapshot ID used to create the custom image.</para>
         /// <remarks>
-        /// <para>If you create a custom image from only a system disk snapshot, you can use either this parameter or the <c>DiskDeviceMapping.N.SnapshotId</c> parameter. If you want to include data disk snapshots, you must use the <c>DiskDeviceMapping.N.SnapshotId</c> parameter to specify the snapshots.</para>
+        /// <para>If you want to create a custom image only from the system disk snapshot of an instance, you can use this parameter or the <c>DiskDeviceMapping.N.SnapshotId</c> parameter. To include data disk snapshots, use only the <c>DiskDeviceMapping.N.SnapshotId</c> parameter to specify snapshots.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -358,17 +308,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the image.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateImageRequestTag> Tag { get; set; }
         public class CreateImageRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the image.</para>
-            /// <remarks>
-            /// <para>For compatibility, we recommend that you use the <c>Tag.N.Key</c> parameter.</para>
-            /// </remarks>
+            /// <para>The tag key of the image. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KeyTest</para>
@@ -378,7 +325,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the image. Valid values of N: 1 to 20. The tag value can be an empty string, up to 128 characters long, and cannot start with <c>acs:</c> or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the image. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ValueTest</para>
