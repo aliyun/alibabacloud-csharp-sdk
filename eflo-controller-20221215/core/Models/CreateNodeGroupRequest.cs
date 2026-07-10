@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateNodeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster to which the node group belongs.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the node group.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeGroup")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public CreateNodeGroupRequestNodeGroup NodeGroup { get; set; }
         public class CreateNodeGroupRequestNodeGroup : TeaModel {
             /// <summary>
-            /// <para>The availability zone of the node group.</para>
+            /// <para>The zone.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Az { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable file system mounting.</para>
+            /// <para>Specifies whether file storage mounting is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? FileSystemMountEnabled { get; set; }
 
             /// <summary>
-            /// <para>The image ID for the nodes.</para>
+            /// <para>The image ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the key pair for SSH login.</para>
+            /// <para>The key pair name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-keypair</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string KeyPairName { get; set; }
 
             /// <summary>
-            /// <para>The password to log in to the nodes.</para>
+            /// <para>The logon password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-LoginPassword</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>The machine type for the nodes.</para>
+            /// <para>The machine type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -92,17 +92,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>The description of the node group.</para>
+            /// <para>The node group description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Node group description</para>
+            /// <para>节点分组描述</para>
             /// </summary>
             [NameInMap("NodeGroupDescription")]
             [Validation(Required=false)]
             public string NodeGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the node group.</para>
+            /// <para>The node group name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -113,7 +113,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeGroupName { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM role to attach to the nodes. You can call the RAM API <c>ListRoles</c> operation to query the RAM roles that you have created. The trust entity of the specified role must be Intelligent Computing Lingjun.<br><b>Note:</b> You cannot detach an existing role by clearing this parameter.<br></para>
+            /// <para>The RAM role name of the node. You can call the RAM API ListRoles to query the RAM roles you have created. The trusted entity of the role must be set to Lingjun AI Computing Service.</para>
+            /// <remarks>
+            /// <para>Note: Clearing an existing role is not currently supported.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>xianwen-test-ram-role</para>
@@ -123,16 +126,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string RamRoleName { get; set; }
 
             /// <summary>
-            /// <para>The system disk configuration for the nodes.</para>
+            /// <para>The system disk configuration of the node.</para>
             /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
             public CreateNodeGroupRequestNodeGroupSystemDisk SystemDisk { get; set; }
             public class CreateNodeGroupRequestNodeGroupSystemDisk : TeaModel {
                 /// <summary>
-                /// <para>The type of the system disk. Valid values:</para>
+                /// <para>The cloud disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>cloud_essd</c>: ESSD.</description></item>
+                /// <item><description>cloud_essd: Enterprise SSD (ESSD) cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,12 +146,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD system disk. Valid values:</para>
+                /// <para>The performance level (PL) of the ESSD cloud disk used as the system disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>PL0</c>: A single disk delivers up to 10,000 random read/write IOPS.</para>
-                /// </description></item>
-                /// <item><description><para><c>PL1</c>: A single disk delivers up to 50,000 random read/write IOPS.</para>
-                /// </description></item>
+                /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -159,7 +160,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The size of the system disk, in GB.</para>
+                /// <para>The disk size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -171,19 +172,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The user data passed to the nodes at launch.</para>
+            /// <para>A custom executable shell script that must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>#!/bin/bash
-            /// uptime
-            /// echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</para>
+            /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
             /// </summary>
             [NameInMap("UserData")]
             [Validation(Required=false)]
             public string UserData { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable GPU virtualization.</para>
+            /// <para>Specifies whether GPU virtualization splitting is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -195,7 +194,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The configuration of the node unit.</para>
+        /// <para>The node information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;NodeUnitId\&quot;:\&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f\&quot;,\&quot;ResourceGroupId\&quot;:\&quot;\&quot;,\&quot;MaxNodes\&quot;:0,\&quot;NodeUnitName\&quot;:\&quot;asi_cn-serverless-sale_e01-lingjun-psale\&quot;}</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Standard cluster test</para>
+        /// <para>标准集群测试</para>
         /// </summary>
         [NameInMap("ClusterDescription")]
         [Validation(Required=false)]
         public string ClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard_Cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster.</para>
+        /// <para>The cluster type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Lite</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public object BasicArgs { get; set; }
 
                 /// <summary>
-                /// <para>The node pool configuration. This is used to establish the mapping between node groups and node pools. This parameter is required when ComponentType is set to ACKEdge. Otherwise, leave it empty.</para>
+                /// <para>The node pool configuration, which is used to establish the mapping between node groups and node pools. This parameter is required when ComponentType is set to ACKEdge. Leave this parameter empty for other component types.</para>
                 /// </summary>
                 [NameInMap("NodeUnits")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. The default value is False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public CreateClusterRequestNetworks Networks { get; set; }
         public class CreateClusterRequestNetworks : TeaModel {
             /// <summary>
-            /// <para>The IP address allocation policy.</para>
+            /// <para>The IP allocation policy.</para>
             /// </summary>
             [NameInMap("IpAllocationPolicy")]
             [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The source cluster subnet for the IP address.</para>
+                        /// <para>The cluster subnet from which the IP address is allocated.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>172.16.0.0/24</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The source cluster subnet for the IP address.</para>
+                        /// <para>The cluster subnet from which the IP address is allocated.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>192.168.1.0/24</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string Name { get; set; }
 
                         /// <summary>
-                        /// <para>The source cluster subnet for the IP address.</para>
+                        /// <para>The cluster subnet from which the IP address is allocated.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10.0.0.0/24</para>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public CreateClusterRequestNetworksNewVpdInfo NewVpdInfo { get; set; }
             public class CreateClusterRequestNetworksNewVpdInfo : TeaModel {
                 /// <summary>
-                /// <para>The Cloud Enterprise Network (CEN) ID.</para>
+                /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cen-1gb1eftc5qp2ao75fo</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CenId { get; set; }
 
                 /// <summary>
-                /// <para>The Cloud Link CIDR block.</para>
+                /// <para>The cloud link CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172.16.0.0/24</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CloudLinkCidr { get; set; }
 
                 /// <summary>
-                /// <para>The Cloud Link ID.</para>
+                /// <para>The cloud link ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vcc-cn-c4dtycm5i08</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CloudLinkId { get; set; }
 
                 /// <summary>
-                /// <para>The VPC.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-0jl2x45apm6odc2c10h25</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string MonitorVpcId { get; set; }
 
                 /// <summary>
-                /// <para>The vSwitch.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-0jl2w3ffbghkss0x2foff</para>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string MonitorVswitchId { get; set; }
 
                 /// <summary>
-                /// <para>The CIDR block of the cluster.</para>
+                /// <para>The cluster CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.0.0/16</para>
@@ -360,14 +360,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string VpdCidr { get; set; }
 
                 /// <summary>
-                /// <para>The subnets of the cluster.</para>
+                /// <para>The cluster subnets.</para>
                 /// </summary>
                 [NameInMap("VpdSubnets")]
                 [Validation(Required=false)]
                 public List<CreateClusterRequestNetworksNewVpdInfoVpdSubnets> VpdSubnets { get; set; }
                 public class CreateClusterRequestNetworksNewVpdInfoVpdSubnets : TeaModel {
                     /// <summary>
-                    /// <para>The CIDR block of the subnet.</para>
+                    /// <para>The subnet CIDR block.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10.0.1.8/24</para>
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public CreateClusterRequestNetworksVpdInfo VpdInfo { get; set; }
             public class CreateClusterRequestNetworksVpdInfo : TeaModel {
                 /// <summary>
-                /// <para>The VPD ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpd-vfuz6ejv</para>
@@ -479,7 +479,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The vSwitches for the node.</para>
+        /// <para>The node vSwitches.</para>
         /// </summary>
         [NameInMap("NimizVSwitches")]
         [Validation(Required=false)]
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<CreateClusterRequestNodeGroups> NodeGroups { get; set; }
         public class CreateClusterRequestNodeGroups : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable file system mounting.</para>
+            /// <para>Specifies whether file system mounting is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -503,21 +503,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? FileSystemMountEnabled { get; set; }
 
             /// <summary>
-            /// <para>The list of supernodes.</para>
+            /// <para>The list of hyper nodes.</para>
             /// </summary>
             [NameInMap("HyperNodes")]
             [Validation(Required=false)]
             public List<CreateClusterRequestNodeGroupsHyperNodes> HyperNodes { get; set; }
             public class CreateClusterRequestNodeGroupsHyperNodes : TeaModel {
                 /// <summary>
-                /// <para>The list of data disks.</para>
+                /// <para>The list of data cloud disks.</para>
                 /// </summary>
                 [NameInMap("DataDisk")]
                 [Validation(Required=false)]
                 public List<CreateClusterRequestNodeGroupsHyperNodesDataDisk> DataDisk { get; set; }
                 public class CreateClusterRequestNodeGroupsHyperNodesDataDisk : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable performance burst.</para>
+                    /// <para>Specifies whether to enable I/O performance burst.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -527,9 +527,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? BurstingEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The disk type. Valid value:</para>
+                    /// <para>The cloud disk type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>cloud_essd: ESSD.</description></item>
+                    /// <item><description>cloud_essd: Enterprise SSD (ESSD).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Category { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to delete the data disk when the node is released.</para>
+                    /// <para>Specifies whether the data cloud disk is deleted when the node is unsubscribed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -550,16 +550,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? DeleteWithNode { get; set; }
 
                     /// <summary>
-                    /// <para>The performance level of the ESSD that you create as a data disk. Valid values:</para>
+                    /// <para>Settings for the performance level (PL) when an ESSD is created as the data cloud disk. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>PL0: A single disk delivers up to 10,000 random read/write IOPS.</para>
-                    /// </description></item>
-                    /// <item><description><para>PL1: A single disk delivers up to 50,000 random read/write IOPS.</para>
-                    /// </description></item>
-                    /// <item><description><para>PL2: A single disk delivers up to 100,000 random read/write IOPS.</para>
-                    /// </description></item>
-                    /// <item><description><para>PL3: A single disk delivers up to 1,000,000 random read/write IOPS.</para>
-                    /// </description></item>
+                    /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</description></item>
+                    /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</description></item>
+                    /// <item><description>PL2: a maximum of 100,000 random read/write IOPS per cloud disk.</description></item>
+                    /// <item><description>PL3: a maximum of 1,000,000 random read/write IOPS per cloud disk.</description></item>
                     /// </list>
                     /// <para>Default value: PL1.</para>
                     /// 
@@ -571,7 +567,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string PerformanceLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk.</para>
+                    /// <para>The provisioned performance of read/write IOPS for the ESSD AutoPL cloud disk (per disk).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10000</para>
@@ -581,7 +577,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public long? ProvisionedIops { get; set; }
 
                     /// <summary>
-                    /// <para>The disk size in GiB.</para>
+                    /// <para>The cloud disk size. Unit: GiB.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>180</para>
@@ -603,7 +599,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Hostname { get; set; }
 
                 /// <summary>
-                /// <para>The supernode ID.</para>
+                /// <para>The hyper node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e01-dw72u2c23jk</para>
@@ -645,7 +641,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The OS image ID.</para>
+            /// <para>The system image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i190297201634099844192</para>
@@ -655,7 +651,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the key pair.</para>
+            /// <para>The key pair name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-keypair</para>
@@ -668,7 +664,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The logon password.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Password</para>
+            /// <para>密码</para>
             /// </summary>
             [NameInMap("LoginPassword")]
             [Validation(Required=false)]
@@ -685,17 +681,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>The description of the node group.</para>
+            /// <para>The node group description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default node group</para>
+            /// <para>默认节点组</para>
             /// </summary>
             [NameInMap("NodeGroupDescription")]
             [Validation(Required=false)]
             public string NodeGroupDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the node group.</para>
+            /// <para>The node group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>emr-default</para>
@@ -712,14 +708,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public List<CreateClusterRequestNodeGroupsNodes> Nodes { get; set; }
             public class CreateClusterRequestNodeGroupsNodes : TeaModel {
                 /// <summary>
-                /// <para>The specifications of the data disk.</para>
+                /// <para>The data cloud disk specifications.</para>
                 /// </summary>
                 [NameInMap("DataDisk")]
                 [Validation(Required=false)]
                 public List<CreateClusterRequestNodeGroupsNodesDataDisk> DataDisk { get; set; }
                 public class CreateClusterRequestNodeGroupsNodesDataDisk : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to enable performance burst.</para>
+                    /// <para>Specifies whether to enable I/O performance burst.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -729,7 +725,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? BurstingEnabled { get; set; }
 
                     /// <summary>
-                    /// <para>The type.</para>
+                    /// <para>The cloud disk type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cloud_essd</para>
@@ -739,7 +735,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string Category { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to delete the data disk when the node is released.</para>
+                    /// <para>Specifies whether the data cloud disk is deleted when the node is unsubscribed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -749,7 +745,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public bool? DeleteWithNode { get; set; }
 
                     /// <summary>
-                    /// <para>The performance metric of the data disk.</para>
+                    /// <para>The performance parameter of the data cloud disk.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PL0</para>
@@ -759,7 +755,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string PerformanceLevel { get; set; }
 
                     /// <summary>
-                    /// <para>The provisioned performance (IOPS). The value must be in the range of 0 to 50,000.</para>
+                    /// <para>The provisioned performance (IOPS). Valid values: 0 to 50000.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000</para>
@@ -769,7 +765,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public long? ProvisionedIops { get; set; }
 
                     /// <summary>
-                    /// <para>The disk size.</para>
+                    /// <para>The cloud disk size.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -821,7 +817,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-0jlasms92fdxqd3wlf8ny</para>
@@ -833,8 +829,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The name of the RAM role for the node. You can call the ListRoles operation of the RAM API to query the RAM roles that you have created. The trusted entity of the role must be Intelligent Computing LINGJUN.
-            /// Note: You cannot clear an existing role.</para>
+            /// <para>The RAM role name of the node. You can call the RAM API ListRoles to query the node RAM roles that you have created. The trusted entity of the specified role must be set to Lingjun AI Computing Service.
+            /// Note: Clearing an existing role is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xianwen-test-ram-role</para>
@@ -844,16 +840,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string RamRoleName { get; set; }
 
             /// <summary>
-            /// <para>The information about the system disk.</para>
+            /// <para>The system cloud disk information.</para>
             /// </summary>
             [NameInMap("SystemDisk")]
             [Validation(Required=false)]
             public CreateClusterRequestNodeGroupsSystemDisk SystemDisk { get; set; }
             public class CreateClusterRequestNodeGroupsSystemDisk : TeaModel {
                 /// <summary>
-                /// <para>The disk type. Valid value:</para>
+                /// <para>The cloud disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>cloud_essd: enhanced SSD (ESSD).</description></item>
+                /// <item><description>cloud_essd: Enterprise SSD (ESSD).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -864,12 +860,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of the ESSD that you create as a system disk. Valid values:</para>
+                /// <para>Settings for the performance level (PL) when an ESSD is created as the system cloud disk. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>PL0: A single disk delivers up to 10,000 random read/write input/output operations per second (IOPS).</para>
-                /// </description></item>
-                /// <item><description><para>PL1: A single disk delivers up to 50,000 random read/write IOPS.</para>
-                /// </description></item>
+                /// <item><description>PL0: a maximum of 10,000 random read/write IOPS per cloud disk.</description></item>
+                /// <item><description>PL1: a maximum of 50,000 random read/write IOPS per cloud disk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -880,7 +874,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The unit is GB.</para>
+                /// <para>The cloud disk size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9999</para>
@@ -892,7 +886,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The instance user data. The data must be Base64-encoded. The raw data can be up to 16 KB in size.</para>
+            /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
@@ -902,7 +896,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string UserData { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable GPU virtualization.</para>
+            /// <para>Specifies whether to enable GPU splitting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -951,7 +945,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<CreateClusterRequestTag> Tag { get; set; }
         public class CreateClusterRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-name</para>
@@ -961,7 +955,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>

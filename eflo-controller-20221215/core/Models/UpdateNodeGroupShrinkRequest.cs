@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
-    public class UpdateNodeGroupRequest : TeaModel {
+    public class UpdateNodeGroupShrinkRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether file storage mounting is supported.</para>
         /// 
@@ -82,13 +82,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
-        public UpdateNodeGroupRequestSystemDisk SystemDisk { get; set; }
-        public class UpdateNodeGroupRequestSystemDisk : TeaModel {
-            [NameInMap("PerformanceLevel")]
-            [Validation(Required=false)]
-            public string PerformanceLevel { get; set; }
-
-        }
+        public string SystemDiskShrink { get; set; }
 
         /// <summary>
         /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>

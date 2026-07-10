@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ExtendClusterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i15b480fbd2fcdbc2869cd80</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Whether to allow skipping failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>Combined policy for IP allocation. Each policy can only select one policy type, and multiple policies can be combined.</para>
+        /// <para>The combined IP allocation policy. Each policy can use only one policy type, and multiple policies can be combined.</para>
         /// </summary>
         [NameInMap("IpAllocationPolicy")]
         [Validation(Required=false)]
         public string IpAllocationPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>Node groups.</para>
+        /// <para>The node groups.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public string NodeGroupsShrink { get; set; }
 
         /// <summary>
-        /// <para>vSwitch zone ID.</para>
+        /// <para>The zone ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-b</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string VSwitchZoneId { get; set; }
 
         /// <summary>
-        /// <para>Cluster subnet list.</para>
+        /// <para>The list of cluster subnets.</para>
         /// </summary>
         [NameInMap("VpdSubnets")]
         [Validation(Required=false)]

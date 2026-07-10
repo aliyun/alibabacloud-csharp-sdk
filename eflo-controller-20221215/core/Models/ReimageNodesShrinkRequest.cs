@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip failed nodes. The default value is False.</para>
+        /// <para>Specifies whether to skip failed nodes. Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -37,11 +37,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom data.</para>
+        /// <para>The custom executable shell script. The script must be Base64-encoded. The maximum size of the raw data is 16 KB.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>#!/bin/sh
-        /// echo &quot;Hello World. The time is now $(date -R)!&quot; | tee /root/userdata_test.txt</para>
+        /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

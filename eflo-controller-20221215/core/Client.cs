@@ -792,12 +792,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new LINGJUN Cluster.</para>
+        /// <para>Creates a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭远程会话的接口。</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -903,12 +903,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new LINGJUN Cluster.</para>
+        /// <para>Creates a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭远程会话的接口。</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1014,12 +1014,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new LINGJUN Cluster.</para>
+        /// <para>Creates a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭远程会话的接口。</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1037,12 +1037,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a new LINGJUN Cluster.</para>
+        /// <para>Creates a Lingjun AI Computing Service cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭远程会话的接口。</para>
+        /// <para>Closes a remote session.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1428,12 +1428,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a node group in a cluster.</para>
+        /// <para>Creates a node group in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1493,12 +1493,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a node group in a cluster.</para>
+        /// <para>Creates a node group in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1558,12 +1558,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a node group in a cluster.</para>
+        /// <para>Creates a node group in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1581,12 +1581,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a node group in a cluster.</para>
+        /// <para>Creates a node group in a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4236,7 +4236,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends a cluster.</para>
+        /// <para>Scales out a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4317,7 +4317,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends a cluster.</para>
+        /// <para>Scales out a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4398,7 +4398,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends a cluster.</para>
+        /// <para>Scales out a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4421,7 +4421,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Extends a cluster.</para>
+        /// <para>Scales out a cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7112,7 +7112,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reimages the specified nodes.</para>
+        /// <para>Reinstalls machines.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7172,7 +7172,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reimages the specified nodes.</para>
+        /// <para>Reinstalls machines.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7232,7 +7232,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reimages the specified nodes.</para>
+        /// <para>Reinstalls machines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7250,7 +7250,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reimages the specified nodes.</para>
+        /// <para>Reinstalls machines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8661,10 +8661,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateNodeGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -8674,9 +8674,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <returns>
         /// UpdateNodeGroupResponse
         /// </returns>
-        public UpdateNodeGroupResponse UpdateNodeGroupWithOptions(UpdateNodeGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateNodeGroupResponse UpdateNodeGroupWithOptions(UpdateNodeGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateNodeGroupShrinkRequest request = new UpdateNodeGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
+            {
+                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemMountEnabled))
             {
@@ -8705,6 +8711,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
                 body["RamRoleName"] = request.RamRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
+            {
+                body["SystemDisk"] = request.SystemDiskShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
@@ -8736,10 +8746,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateNodeGroupRequest
         /// </param>
         /// <param name="runtime">
@@ -8749,9 +8759,15 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <returns>
         /// UpdateNodeGroupResponse
         /// </returns>
-        public async Task<UpdateNodeGroupResponse> UpdateNodeGroupWithOptionsAsync(UpdateNodeGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateNodeGroupResponse> UpdateNodeGroupWithOptionsAsync(UpdateNodeGroupRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateNodeGroupShrinkRequest request = new UpdateNodeGroupShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SystemDisk))
+            {
+                request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemMountEnabled))
             {
@@ -8780,6 +8796,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
             {
                 body["RamRoleName"] = request.RamRoleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskShrink))
+            {
+                body["SystemDisk"] = request.SystemDiskShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
@@ -8811,7 +8831,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8834,7 +8854,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// <para>Creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
         /// </description>
         /// 
         /// <param name="request">
