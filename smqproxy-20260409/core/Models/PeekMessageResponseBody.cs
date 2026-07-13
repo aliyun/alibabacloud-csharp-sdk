@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SMQProxy20260409.Models
 
         [NameInMap("UserProperties")]
         [Validation(Required=false)]
-        public string UserProperties { get; set; }
+        public Dictionary<string, UserPropertiesValue> UserProperties { get; set; }
 
     }
 

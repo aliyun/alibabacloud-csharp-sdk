@@ -22,10 +22,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
             AlibabaCloud.GatewayMns.Client gatewayClient = new AlibabaCloud.GatewayMns.Client();
             this._spi = gatewayClient;
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-hangzhou", "mns.cn-hangzhou.aliyuncs.com"},
-            };
         }
 
 
@@ -440,18 +436,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>批量发送消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>一次 Batch 请求的消息总大小不得超过 64 KB。</description></item>
-        /// <item><description><c>BatchSendMessage</c> 与 <c>SendMessage</c> 使用相同的 URL 路径，通过 Body 结构区分：包含 <c>Messages</c> 数组即为批量发送，否则为单条发送。</description></item>
-        /// <item><description>批量操作的返回结果可能同时包含成功和失败的子消息。</description></item>
-        /// <item><description>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 参数来指定消息分组 ID。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// BatchSendMessageRequest
         /// </param>
@@ -497,18 +481,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <summary>
         /// <para>批量发送消息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>一次 Batch 请求的消息总大小不得超过 64 KB。</description></item>
-        /// <item><description><c>BatchSendMessage</c> 与 <c>SendMessage</c> 使用相同的 URL 路径，通过 Body 结构区分：包含 <c>Messages</c> 数组即为批量发送，否则为单条发送。</description></item>
-        /// <item><description>批量操作的返回结果可能同时包含成功和失败的子消息。</description></item>
-        /// <item><description>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 参数来指定消息分组 ID。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// BatchSendMessageRequest
@@ -556,18 +528,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>批量发送消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>一次 Batch 请求的消息总大小不得超过 64 KB。</description></item>
-        /// <item><description><c>BatchSendMessage</c> 与 <c>SendMessage</c> 使用相同的 URL 路径，通过 Body 结构区分：包含 <c>Messages</c> 数组即为批量发送，否则为单条发送。</description></item>
-        /// <item><description>批量操作的返回结果可能同时包含成功和失败的子消息。</description></item>
-        /// <item><description>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 参数来指定消息分组 ID。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// BatchSendMessageRequest
         /// </param>
@@ -586,18 +546,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <summary>
         /// <para>批量发送消息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>一次 Batch 请求的消息总大小不得超过 64 KB。</description></item>
-        /// <item><description><c>BatchSendMessage</c> 与 <c>SendMessage</c> 使用相同的 URL 路径，通过 Body 结构区分：包含 <c>Messages</c> 数组即为批量发送，否则为单条发送。</description></item>
-        /// <item><description>批量操作的返回结果可能同时包含成功和失败的子消息。</description></item>
-        /// <item><description>每次请求中可以包含多个消息对象，每个消息对象可以设置不同的延迟时间和优先级。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 参数来指定消息分组 ID。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// BatchSendMessageRequest
@@ -1016,17 +964,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>发布消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</description></item>
-        /// <item><description>推送到 Queue 和 HTTP Endpoint 时不需要设置 <c>MessageAttributes</c>。</description></item>
-        /// <item><description>推送到邮件、短信或移动推送时需要设置对应的 <c>MessageAttributes</c> 子属性。</description></item>
-        /// <item><description>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// PublishMessageRequest
         /// </param>
@@ -1051,6 +988,10 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageBody))
             {
                 body["MessageBody"] = request.MessageBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageGroupId))
+            {
+                body["MessageGroupId"] = request.MessageGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTag))
             {
@@ -1081,17 +1022,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>发布消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</description></item>
-        /// <item><description>推送到 Queue 和 HTTP Endpoint 时不需要设置 <c>MessageAttributes</c>。</description></item>
-        /// <item><description>推送到邮件、短信或移动推送时需要设置对应的 <c>MessageAttributes</c> 子属性。</description></item>
-        /// <item><description>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// PublishMessageRequest
         /// </param>
@@ -1116,6 +1046,10 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageBody))
             {
                 body["MessageBody"] = request.MessageBody;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageGroupId))
+            {
+                body["MessageGroupId"] = request.MessageGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTag))
             {
@@ -1146,17 +1080,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>发布消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</description></item>
-        /// <item><description>推送到 Queue 和 HTTP Endpoint 时不需要设置 <c>MessageAttributes</c>。</description></item>
-        /// <item><description>推送到邮件、短信或移动推送时需要设置对应的 <c>MessageAttributes</c> 子属性。</description></item>
-        /// <item><description>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// PublishMessageRequest
         /// </param>
@@ -1175,17 +1098,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <summary>
         /// <para>发布消息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>消息发布后会被推送到该 Topic 下所有 Subscription 的 Endpoint。</description></item>
-        /// <item><description>推送到 Queue 和 HTTP Endpoint 时不需要设置 <c>MessageAttributes</c>。</description></item>
-        /// <item><description>推送到邮件、短信或移动推送时需要设置对应的 <c>MessageAttributes</c> 子属性。</description></item>
-        /// <item><description>消息内容建议事先进行 Base64 编码以避免特殊字符问题。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// PublishMessageRequest
@@ -1336,19 +1248,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>发送消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>SendMessage</b> 接口用于将消息发送至指定队列。</description></item>
-        /// <item><description>消息可以立即被消费或通过设置 <c>DelaySeconds</c> 参数来延迟消费。</description></item>
-        /// <item><description>发送的消息可以指定优先级，数值越小表示优先级越高。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 来保证同一分组内消息的顺序投递。</description></item>
-        /// <item><description>用户还可以自定义属性 <c>UserProperties</c>，以 JSON 格式字符串形式提供额外信息。</description></item>
-        /// <item><description>当 <c>DelaySeconds</c> 大于 0 时，API 返回的 <c>ReceiptHandle</c> 可用来在消息变为 Active 状态前删除该延迟消息。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// SendMessageRequest
         /// </param>
@@ -1410,19 +1309,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <summary>
         /// <para>发送消息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>SendMessage</b> 接口用于将消息发送至指定队列。</description></item>
-        /// <item><description>消息可以立即被消费或通过设置 <c>DelaySeconds</c> 参数来延迟消费。</description></item>
-        /// <item><description>发送的消息可以指定优先级，数值越小表示优先级越高。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 来保证同一分组内消息的顺序投递。</description></item>
-        /// <item><description>用户还可以自定义属性 <c>UserProperties</c>，以 JSON 格式字符串形式提供额外信息。</description></item>
-        /// <item><description>当 <c>DelaySeconds</c> 大于 0 时，API 返回的 <c>ReceiptHandle</c> 可用来在消息变为 Active 状态前删除该延迟消息。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// SendMessageRequest
@@ -1486,19 +1372,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <para>发送消息</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>SendMessage</b> 接口用于将消息发送至指定队列。</description></item>
-        /// <item><description>消息可以立即被消费或通过设置 <c>DelaySeconds</c> 参数来延迟消费。</description></item>
-        /// <item><description>发送的消息可以指定优先级，数值越小表示优先级越高。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 来保证同一分组内消息的顺序投递。</description></item>
-        /// <item><description>用户还可以自定义属性 <c>UserProperties</c>，以 JSON 格式字符串形式提供额外信息。</description></item>
-        /// <item><description>当 <c>DelaySeconds</c> 大于 0 时，API 返回的 <c>ReceiptHandle</c> 可用来在消息变为 Active 状态前删除该延迟消息。</description></item>
-        /// </list>
-        /// </description>
-        /// 
         /// <param name="request">
         /// SendMessageRequest
         /// </param>
@@ -1517,19 +1390,6 @@ namespace AlibabaCloud.SDK.SMQProxy20260409
         /// <summary>
         /// <para>发送消息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>SendMessage</b> 接口用于将消息发送至指定队列。</description></item>
-        /// <item><description>消息可以立即被消费或通过设置 <c>DelaySeconds</c> 参数来延迟消费。</description></item>
-        /// <item><description>发送的消息可以指定优先级，数值越小表示优先级越高。</description></item>
-        /// <item><description>对于 FIFO 队列，可以通过 <c>MessageGroupId</c> 来保证同一分组内消息的顺序投递。</description></item>
-        /// <item><description>用户还可以自定义属性 <c>UserProperties</c>，以 JSON 格式字符串形式提供额外信息。</description></item>
-        /// <item><description>当 <c>DelaySeconds</c> 大于 0 时，API 返回的 <c>ReceiptHandle</c> 可用来在消息变为 Active 状态前删除该延迟消息。</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// SendMessageRequest
