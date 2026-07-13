@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCloudPhoneNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the bandwidth package order.</para>
+        /// <para>The bandwidth plan order information.</para>
         /// </summary>
         [NameInMap("NetworkPackageOrderModel")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageId { get; set; }
 
             /// <summary>
-            /// <para>The order ID of the bandwidth package.</para>
+            /// <para>The bandwidth plan order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25954415983*****</para>
@@ -39,21 +39,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>A list of Cloud Phone matrices.</para>
+        /// <para>The cloud phone matrix information.</para>
         /// </summary>
         [NameInMap("NodeInfos")]
         [Validation(Required=false)]
         public List<CreateCloudPhoneNodeResponseBodyNodeInfos> NodeInfos { get; set; }
         public class CreateCloudPhoneNodeResponseBodyNodeInfos : TeaModel {
             /// <summary>
-            /// <para>A list of Cloud Phone instance IDs.</para>
+            /// <para>The list of cloud phone instance IDs.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Cloud Phone matrix.</para>
+            /// <para>The cloud phone matrix ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpn-e5kxgjyt8s1mb****</para>

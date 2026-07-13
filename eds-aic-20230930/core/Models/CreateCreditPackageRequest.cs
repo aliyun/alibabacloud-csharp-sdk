@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCreditPackageRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable auto-payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables auto-payment. Make sure that your account has a sufficient balance.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (Default): Creates an unpaid order.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): generates an order without charging your account.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your account has an insufficient balance, you can set this parameter to false. This generates an unpaid order. You can then pay for the order in the Wuying Cloud Phone management console.</para>
+        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,6 +25,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
+
+        [NameInMap("ChannelCookie")]
+        [Validation(Required=false)]
+        public string ChannelCookie { get; set; }
 
         /// <summary>
         /// <para>The number of credits.</para>
@@ -38,8 +40,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string CreditAmount { get; set; }
 
+        [NameInMap("PackageAmount")]
+        [Validation(Required=false)]
+        public string PackageAmount { get; set; }
+
         /// <summary>
-        /// <para>The subscription duration. The PeriodUnit parameter specifies the unit for the duration.</para>
+        /// <para>The duration for which you want to purchase the resource. The unit is specified by PeriodUnit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -49,13 +55,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration.
-        /// Valid values:</para>
+        /// <para>The unit of the duration for which you want to purchase the resource.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Month</b>: The period is measured in months.</para>
-        /// </description></item>
-        /// <item><description><para><b>Year</b>: The period is measured in years.</para>
-        /// </description></item>
+        /// <item><description><b>Month</b>: month.</description></item>
+        /// <item><description><b>Year</b>: year.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotional campaign.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>

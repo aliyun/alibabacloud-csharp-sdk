@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCreditPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the credit package.</para>
+        /// <para>The ID of the credit booster package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crp-xagydbhfkah****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CreditPackageId { get; set; }
 
         /// <summary>
-        /// <para>The status of the credit package.</para>
+        /// <para>The status of the credit booster package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>

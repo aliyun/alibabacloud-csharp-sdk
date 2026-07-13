@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateMobileAgentPackageRequest : TeaModel {
         /// <summary>
-        /// <para>The number of packages.</para>
+        /// <para>The number of resource plans.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,15 +20,13 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Amount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables auto-payment. You must ensure that your account balance is sufficient.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): An unpaid order is generated. Your account is not charged.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables automatic payment. Make sure that your account balance is sufficient.</description></item>
+        /// <item><description><b>false</b> (default): generates an order without charging the account.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If your account balance is insufficient, you can set this parameter to <c>false</c> to generate an unpaid order. Then, you can log in to the Wuying Cloud Phone management console to pay for the order.</para>
+        /// <para>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the CloudPhone console to complete the payment.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,10 +39,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables auto-renewal.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b> (default): Disables auto-renewal.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables auto-renewal.</description></item>
+        /// <item><description><b>false</b> (default): disables auto-renewal.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The region where the instance is located. Currently, only <c>cn-hangzhou</c> is supported.</para>
+        /// <para>The region in which the instance resides. Currently, only cn-hangzhou is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -64,8 +60,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("ChannelCookie")]
+        [Validation(Required=false)]
+        public string ChannelCookie { get; set; }
+
         /// <summary>
-        /// <para>The credit amount.</para>
+        /// <para>The credit quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000.0</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the node instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudPhone</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The package specification.</para>
+        /// <para>The resource plan specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? PackageSpecId { get; set; }
 
         /// <summary>
-        /// <para>The callback URL to which the user is redirected after a successful payment.</para>
+        /// <para>The redirect URL after a successful payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PaidCallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription period. The unit of the period is specified by the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The duration for which you want to purchase the resource. The unit is specified by <c>PeriodUnit</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -133,13 +133,11 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription period.
-        /// Valid values:</para>
+        /// <para>The unit of the duration for which you want to purchase the resource.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Month</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Year</b></para>
-        /// </description></item>
+        /// <item><description><b>Month</b>: month.</description></item>
+        /// <item><description><b>Year</b>: year.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -150,7 +148,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The ID of the promotional campaign.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>

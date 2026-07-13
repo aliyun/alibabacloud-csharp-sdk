@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
@@ -48,13 +48,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public class ResumeAgentTaskResponseBodyTasks : TeaModel {
             /// <summary>
             /// <para>The current status of the task. Valid values:</para>
-            /// <para><c>PENDING</c>: The task is being created.</para>
-            /// <para><c>RUNNING</c>: The task is running.</para>
-            /// <para><c>COMPLETED</c>: The task has completed.</para>
-            /// <para><c>FAILED</c>: The task has failed.</para>
-            /// <para><c>TIMEOUT</c>: The task has timed out.</para>
-            /// <para><c>PAUSING</c>: The task is pausing.</para>
-            /// <para><c>PAUSED</c>: The task is paused.</para>
+            /// <list type="bullet">
+            /// <item><description>PENDING: The task is being created.</description></item>
+            /// <item><description>RUNNING: The task is running.</description></item>
+            /// <item><description>COMPLETED: The task is completed.</description></item>
+            /// <item><description>FAILED: The task has failed.</description></item>
+            /// <item><description>TIMEOUT: The task has timed out.</description></item>
+            /// <item><description>PAUSING: The task is being paused.</description></item>
+            /// <item><description>PAUSED: The task is paused.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The ID of the mobile instance.</para>
+            /// <para>The Mobile node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-ek65k51zoxia3x8xz</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was resumed, in ISO 8601 format.</para>
+            /// <para>The time when the task is resumed, in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-13T17:42:19Z</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ResumingAt { get; set; }
 
             /// <summary>
-            /// <para>The globally unique ID of the task.</para>
+            /// <para>The task ID, which is globally unique.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-imr0fufqd7cle****</para>

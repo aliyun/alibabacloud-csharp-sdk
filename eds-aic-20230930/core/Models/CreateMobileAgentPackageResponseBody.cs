@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateMobileAgentPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of package IDs.</para>
+        /// <para>The list of resource plan IDs.</para>
         /// </summary>
         [NameInMap("MobileAgentPackageIds")]
         [Validation(Required=false)]

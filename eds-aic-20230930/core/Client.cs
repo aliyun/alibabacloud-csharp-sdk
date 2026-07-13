@@ -1788,17 +1788,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</para>
+        /// <para>Creates pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can organize instances with the same functional purpose into the same instance group for unified management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
-        /// Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
+        /// When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</para>
         /// <list type="bullet">
-        /// <item><description>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</description></item>
-        /// <item><description>To enable automatic payments, set AutoPay to true.</description></item>
+        /// <item><description>If the billing method of the instance group is subscription (PrePaid), the default value of AutoPay is false. After you invoke this operation, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually pay for the order.</description></item>
+        /// <item><description>If you want to enable automatic payment, set AutoPay to true.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1845,6 +1844,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
@@ -1959,17 +1962,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</para>
+        /// <para>Creates pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can organize instances with the same functional purpose into the same instance group for unified management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
-        /// Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
+        /// When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</para>
         /// <list type="bullet">
-        /// <item><description>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</description></item>
-        /// <item><description>To enable automatic payments, set AutoPay to true.</description></item>
+        /// <item><description>If the billing method of the instance group is subscription (PrePaid), the default value of AutoPay is false. After you invoke this operation, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually pay for the order.</description></item>
+        /// <item><description>If you want to enable automatic payment, set AutoPay to true.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2016,6 +2018,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
@@ -2130,17 +2136,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</para>
+        /// <para>Creates pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can organize instances with the same functional purpose into the same instance group for unified management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
-        /// Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
+        /// When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</para>
         /// <list type="bullet">
-        /// <item><description>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</description></item>
-        /// <item><description>To enable automatic payments, set AutoPay to true.</description></item>
+        /// <item><description>If the billing method of the instance group is subscription (PrePaid), the default value of AutoPay is false. After you invoke this operation, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually pay for the order.</description></item>
+        /// <item><description>If you want to enable automatic payment, set AutoPay to true.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2159,17 +2164,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can group instances with similar functions into an instance group to manage them as a single unit.</para>
+        /// <para>Creates pay-as-you-go or subscription cloud phone instance groups. An instance group can manage multiple instances. You can organize instances with the same functional purpose into the same instance group for unified management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;
-        /// Before you create a cloud phone instance group, you must complete identity verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">Individual identity verification</a>.
-        /// Note that creating a cloud phone instance group incurs charges. Before you proceed, make sure that you understand the <a href="https://help.aliyun.com/document_detail/2807121.html">billing method</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Before creating a cloud phone instance group, complete real-name verification. For more information, see <a href="https://help.aliyun.com/document_detail/48263.html">verify your identity - Individual account</a>.
+        /// When you create a cloud phone instance group, note that creating an instance group incurs resource charges. Familiarize yourself with the <a href="https://help.aliyun.com/document_detail/2807121.html">billable methods</a> of cloud phone instance groups in advance.</para>
         /// <list type="bullet">
-        /// <item><description>If the billing method for the instance group is subscription (PrePaid), AutoPay is set to false by default. After you call the API, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Alibaba Cloud Expenses and Costs</a> to manually pay for the order.</description></item>
-        /// <item><description>To enable automatic payments, set AutoPay to true.</description></item>
+        /// <item><description>If the billing method of the instance group is subscription (PrePaid), the default value of AutoPay is false. After you invoke this operation, go to &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list">Expenses and Costs</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list">Expenses and Costs</a> to manually pay for the order.</description></item>
+        /// <item><description>If you want to enable automatic payment, set AutoPay to true.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2492,7 +2496,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</para>
+        /// <para>Creates a cloud phone matrix.
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2538,6 +2543,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
@@ -2670,7 +2679,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</para>
+        /// <para>Creates a cloud phone matrix.
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2716,6 +2726,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
             {
@@ -2848,7 +2862,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</para>
+        /// <para>Creates a cloud phone matrix.
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2866,7 +2881,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In Cloud Phone, a matrix is a logical resource management unit that represents a physical server instance. Creating a matrix provisions a physical server, which you can then partition into multiple independent Cloud Phone instances. These instances share the compute, storage, and network resources of the matrix. The matrix configuration determines how many instances you can create.</para>
+        /// <para>Creates a cloud phone matrix.
+        /// In the Wuying Cloud Phone system, a matrix (Cloud Phone Server) is a logical resource management unit that represents a physical server instance. The physical server can be divided into multiple independently running cloud phone instances that share the underlying compute, storage, and network resources of the matrix. Creating a matrix is equivalent to obtaining a physical server on which you can create cloud phone instances. The number of cloud phone instances varies based on the configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2884,12 +2900,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an order for a credit package.</para>
+        /// <para>Purchases a credit booster pack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2910,9 +2926,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
             {
                 query["CreditAmount"] = request.CreditAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageAmount))
+            {
+                query["PackageAmount"] = request.PackageAmount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -2947,12 +2971,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an order for a credit package.</para>
+        /// <para>Purchases a credit booster pack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2973,9 +2997,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
             {
                 query["CreditAmount"] = request.CreditAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageAmount))
+            {
+                query["PackageAmount"] = request.PackageAmount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -3010,12 +3042,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an order for a credit package.</para>
+        /// <para>Purchases a credit booster pack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3033,12 +3065,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an order for a credit package.</para>
+        /// <para>Purchases a credit booster pack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before calling this operation, ensure that you understand the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11186623.help-menu-254658.d_0_1_1.78bc5732j49PWP">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Elastic Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3548,12 +3580,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order for a package.</para>
+        /// <para>Purchases a resource plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3585,6 +3617,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
             {
@@ -3647,12 +3683,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order for a package.</para>
+        /// <para>Purchases a resource plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3684,6 +3720,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
             {
@@ -3746,12 +3786,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order for a package.</para>
+        /// <para>Purchases a resource plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3769,12 +3809,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order for a package.</para>
+        /// <para>Purchases a resource plan.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a billable operation. Before you call this operation, review the <a href="https://help.aliyun.com/zh/ecp/jvs-mobile-billing-instructions?spm=a2c4g.11174283.help-menu-254658.d_0_1_1.23695732Cpmwbs">billing methods and pricing</a> of Wuying Cloud Phone.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of Alibaba Cloud CloudPhone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5560,7 +5600,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of specified Agent Tasks.</para>
+        /// <para>Queries information about Agent Tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5602,7 +5642,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of specified Agent Tasks.</para>
+        /// <para>Queries information about Agent Tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5644,7 +5684,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of specified Agent Tasks.</para>
+        /// <para>Queries information about Agent Tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5662,7 +5702,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves details of specified Agent Tasks.</para>
+        /// <para>Queries information about Agent Tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7116,7 +7156,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of one or more credit packages.</para>
+        /// <para>Queries credit booster packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7162,7 +7202,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of one or more credit packages.</para>
+        /// <para>Queries credit booster packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7208,7 +7248,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of one or more credit packages.</para>
+        /// <para>Queries credit booster packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7226,7 +7266,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of one or more credit packages.</para>
+        /// <para>Queries credit booster packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15884,7 +15924,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes paused agent automation tasks on a mobile instance.</para>
+        /// <para>Resumes an automated Agent task that is running on a Mobile node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15905,9 +15945,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AdditionalPrompt"] = request.AdditionalPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClarificationAnswers))
+            {
+                query["ClarificationAnswers"] = request.ClarificationAnswers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
             {
                 query["TaskIds"] = request.TaskIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolCallId))
+            {
+                query["ToolCallId"] = request.ToolCallId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15930,7 +15978,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes paused agent automation tasks on a mobile instance.</para>
+        /// <para>Resumes an automated Agent task that is running on a Mobile node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15951,9 +15999,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AdditionalPrompt"] = request.AdditionalPrompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClarificationAnswers))
+            {
+                query["ClarificationAnswers"] = request.ClarificationAnswers;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
             {
                 query["TaskIds"] = request.TaskIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolCallId))
+            {
+                query["ToolCallId"] = request.ToolCallId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15976,7 +16032,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes paused agent automation tasks on a mobile instance.</para>
+        /// <para>Resumes an automated Agent task that is running on a Mobile node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15994,7 +16050,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes paused agent automation tasks on a mobile instance.</para>
+        /// <para>Resumes an automated Agent task that is running on a Mobile node.</para>
         /// </summary>
         /// 
         /// <param name="request">

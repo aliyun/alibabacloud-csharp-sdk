@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Shared Bandwidth instance.</para>
+        /// <para>The ID of the Internet Shared Bandwidth instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cbwp-uf6g3hgg*******8s3lxiob3</para>
@@ -60,8 +60,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("ChannelCookie")]
+        [Validation(Required=false)]
+        public string ChannelCookie { get; set; }
+
         /// <summary>
-        /// <para>The billing method. Only the subscription billing method is supported.</para>
+        /// <para>The billing type. Only subscription is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The number of Cloud Phone matrices to purchase.</para>
+        /// <para>The number of cloud phone matrices to purchase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public CreateCloudPhoneNodeRequestDisplayConfig DisplayConfig { get; set; }
         public class CreateCloudPhoneNodeRequestDisplayConfig : TeaModel {
             /// <summary>
-            /// <para>The dots per inch (DPI). Valid values: 72 to 600.</para>
+            /// <para>The DPI. Valid values: 72 to 600.</para>
             /// 
             /// <b>Example:</b>
             /// <para>240</para>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet publicly available.</para>
+            /// <para>This parameter is not yet available for public use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -122,7 +126,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The downstream bandwidth limit, in Mbit/s.</para>
+        /// <para>The downstream bandwidth throttling. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -169,14 +173,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NetworkId { get; set; }
 
         /// <summary>
-        /// <para>The network settings for the instance.</para>
+        /// <para>The network mapping information of the instance.</para>
         /// </summary>
         [NameInMap("NetworkInfo")]
         [Validation(Required=false)]
         public CreateCloudPhoneNodeRequestNetworkInfo NetworkInfo { get; set; }
         public class CreateCloudPhoneNodeRequestNetworkInfo : TeaModel {
             /// <summary>
-            /// <para>The name of the bandwidth package.</para>
+            /// <para>The name of the bandwidth plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>inst-bandwidth-pkg-1</para>
@@ -196,17 +200,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The billing method for the bandwidth package. Valid values:</para>
+            /// <para>The billable methods of the bandwidth plan. Valid values:</para>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PayByBandwidth</b> (default): pay-by-bandwidth.</para>
-            /// </description></item>
-            /// <item><description><para><b>PayBy95</b>: pay-by-95th-percentile. Note: This billing method is not supported for IPv6 public bandwidth by default. To enable it, contact your account manager.</para>
-            /// </description></item>
+            /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
+            /// <item><description><b>PayBy95</b>: pay-by-95th-percentile. IPv6 Internet bandwidth does not support pay-by-95th-percentile billing by default. To use this billing method, contact your account manager.</description></item>
             /// </list>
-            /// <para>\-</para>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-            /// <para><b>PayByBandwidth</b> (default): pay-by-bandwidth.</para>
+            /// <list type="bullet">
+            /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PayByBandwidth</para>
@@ -216,7 +219,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The number of Cloud Phone instances that share one elastic IP address (EIP).</para>
+            /// <para>The ratio of IP addresses to instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>128</para>
@@ -236,7 +239,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Isp { get; set; }
 
             /// <summary>
-            /// <para>The maximum bandwidth of the bandwidth package, in Mbit/s. This value limits the aggregate bandwidth of all instances that use the package.</para>
+            /// <para>The maximum bandwidth of the bandwidth plan. Unit: Mbit/s. The total bandwidth of all instances that use this bandwidth plan is subject to this limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -250,7 +253,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PaidCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The billing method.</para>
+            /// <para>The billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -282,7 +285,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The name of the Cloud Phone matrix.</para>
+        /// <para>The name of the cloud phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_name</para>
@@ -296,12 +299,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. The unit is specified by the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The subscription duration. The unit is specified by PeriodUnit.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <b>Year</b>, this parameter can only be set to 1.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <b>Month</b>, valid values are 1, 2, 3, and 6.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to <b>year</b>, the value can only be 1.</description></item>
+        /// <item><description>If PeriodUnit is set to <b>month</b>, valid values are 1, 2, 3, and 6.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -322,7 +323,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The number of Cloud Phone instances to create in a single Cloud Phone matrix.</para>
+        /// <para>The number of cloud phone instances to create in a single matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -332,7 +333,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PhoneCount { get; set; }
 
         /// <summary>
-        /// <para>The size of the independent internal storage, in GiB.</para>
+        /// <para>The size of the independent device storage. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -346,7 +347,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The vertical resolution, in pixels.</para>
+        /// <para>The height of the resolution. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -356,7 +357,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionHeight { get; set; }
 
         /// <summary>
-        /// <para>The horizontal resolution, in pixels.</para>
+        /// <para>The width of the resolution. Unit: pixels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>720</para>
@@ -366,9 +367,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ResolutionWidth { get; set; }
 
         /// <summary>
-        /// <para>The size of the shared internal storage, in GiB.</para>
+        /// <para>The size of the shared device storage. Unit: GiB.</para>
         /// <remarks>
-        /// <para>The size must exceed 10 GiB per instance in the matrix.</para>
+        /// <para>The minimum value of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -379,7 +380,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? ServerShareDataVolume { get; set; }
 
         /// <summary>
-        /// <para>The server type.</para>
+        /// <para>The specifications of the cloud phone matrix.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -390,7 +391,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ServerType { get; set; }
 
         /// <summary>
-        /// <para>The streaming mode for instances in the Cloud Phone matrix. Defaults to preemption mode.</para>
+        /// <para>The streaming mode for instances in the cloud phone matrix. If this parameter is not specified, the default value is preemptive mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -404,7 +405,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? SwapSize { get; set; }
 
         /// <summary>
-        /// <para>The resource tags.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -433,7 +434,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The upstream bandwidth limit, in Mbit/s.</para>
+        /// <para>The upstream bandwidth throttling. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -443,7 +444,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? UpBandwidthLimit { get; set; }
 
         /// <summary>
-        /// <para>The template for instance creation. Set this parameter to <c>Random</c> to use a random template, or specify a template ID to use a specific template.</para>
+        /// <para>Specifies whether to use a template during creation. Set this parameter to <c>Random</c> to use a random template from the template list. Alternatively, specify a template ID to use that template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Random</para>
@@ -453,7 +454,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UseTemplate { get; set; }
 
         /// <summary>
-        /// <para>The VSwitch ID.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-2zeekryyc1q3sm72l****</para>
