@@ -9,26 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 {
     public class ReadOutboundTaskCallListResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("Current")]
         [Validation(Required=false)]
         public int? Current { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>successful</para>
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -37,6 +25,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
         [Validation(Required=false)]
         public List<ReadOutboundTaskCallListResponseBodyRecords> Records { get; set; }
         public class ReadOutboundTaskCallListResponseBodyRecords : TeaModel {
+            [NameInMap("BillingDuration")]
+            [Validation(Required=false)]
+            public long? BillingDuration { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-09-23 19:38:44</para>
@@ -225,6 +217,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>客户待跟进</para>
+            /// </summary>
+            [NameInMap("Remark")]
+            [Validation(Required=false)]
+            public string Remark { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
             [NameInMap("RetryCount")]
@@ -289,50 +289,26 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>202BFA44-28D8-571E-B992-BA70F2E92FB0</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
         [NameInMap("Size")]
         [Validation(Required=false)]
         public int? Size { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>True</para>
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1743387963</para>
-        /// </summary>
         [NameInMap("Timestamp")]
         [Validation(Required=false)]
         public string Timestamp { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>3</para>
-        /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]
         public long? Total { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>F47D4976-FC5A-5687-A890-B7923D3B429B</para>
-        /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

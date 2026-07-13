@@ -10,8 +10,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 {
     public class QueryTaskConcurrencyRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>B9191F0E57</para>
+        /// </summary>
+        [NameInMap("ApplicationCode")]
+        [Validation(Required=false)]
+        public string ApplicationCode { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

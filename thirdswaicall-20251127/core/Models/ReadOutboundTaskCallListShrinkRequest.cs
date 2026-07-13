@@ -11,6 +11,38 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
     public class ReadOutboundTaskCallListShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1735689600000</para>
+        /// </summary>
+        [NameInMap("CallEndTimeBegin")]
+        [Validation(Required=false)]
+        public long? CallEndTimeBegin { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1767225600000</para>
+        /// </summary>
+        [NameInMap("CallEndTimeEnd")]
+        [Validation(Required=false)]
+        public long? CallEndTimeEnd { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1735689600000</para>
+        /// </summary>
+        [NameInMap("CallStartTimeBegin")]
+        [Validation(Required=false)]
+        public long? CallStartTimeBegin { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1767225600000</para>
+        /// </summary>
+        [NameInMap("CallStartTimeEnd")]
+        [Validation(Required=false)]
+        public long? CallStartTimeEnd { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("Current")]
@@ -50,8 +82,6 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
-        /// 
         /// <b>Example:</b>
         /// <para>51CC272E-D879-1B23-B98E-FCFB072D362B</para>
         /// </summary>

@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
+            {
+                body["ApplicationCode"] = request.ApplicationCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
@@ -98,6 +102,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
+            {
+                body["ApplicationCode"] = request.ApplicationCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
@@ -186,6 +194,22 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
                 request.LabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelTags, "LabelTags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallEndTimeBegin))
+            {
+                body["CallEndTimeBegin"] = request.CallEndTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallEndTimeEnd))
+            {
+                body["CallEndTimeEnd"] = request.CallEndTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStartTimeBegin))
+            {
+                body["CallStartTimeBegin"] = request.CallStartTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStartTimeEnd))
+            {
+                body["CallStartTimeEnd"] = request.CallStartTimeEnd;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
@@ -270,6 +294,22 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
                 request.LabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelTags, "LabelTags", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallEndTimeBegin))
+            {
+                body["CallEndTimeBegin"] = request.CallEndTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallEndTimeEnd))
+            {
+                body["CallEndTimeEnd"] = request.CallEndTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStartTimeBegin))
+            {
+                body["CallStartTimeBegin"] = request.CallStartTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStartTimeEnd))
+            {
+                body["CallStartTimeEnd"] = request.CallStartTimeEnd;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 body["Current"] = request.Current;
