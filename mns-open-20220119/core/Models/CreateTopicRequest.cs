@@ -9,53 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class CreateTopicRequest : TeaModel {
-        /// <summary>
-        /// <para>Specifies whether to enable the log management feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: enabled.</description></item>
-        /// <item><description>false: disabled. Default value: false.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("EnableLogging")]
         [Validation(Required=false)]
         public bool? EnableLogging { get; set; }
 
-        /// <summary>
-        /// <para>The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10240</para>
-        /// </summary>
+        [NameInMap("EnableSSE")]
+        [Validation(Required=false)]
+        public bool? EnableSSE { get; set; }
+
+        [NameInMap("KmsKeyId")]
+        [Validation(Required=false)]
+        public string KmsKeyId { get; set; }
+
         [NameInMap("MaxMessageSize")]
         [Validation(Required=false)]
         public long? MaxMessageSize { get; set; }
 
-        /// <summary>
-        /// <para>The tags.</para>
-        /// </summary>
+        [NameInMap("SseAlgorithm")]
+        [Validation(Required=false)]
+        public string SseAlgorithm { get; set; }
+
+        [NameInMap("SseType")]
+        [Validation(Required=false)]
+        public string SseType { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateTopicRequestTag> Tag { get; set; }
         public class CreateTopicRequestTag : TeaModel {
-            /// <summary>
-            /// <para>The tag key.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>tag1</para>
-            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            /// <summary>
-            /// <para>The tag value.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>joyce.wang</para>
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -63,11 +48,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The name of the topic that you want to create.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]

@@ -35,18 +35,10 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         [Validation(Required=false)]
         public List<CreateEventRuleRequestEndpoints> Endpoints { get; set; }
         public class CreateEventRuleRequestEndpoints : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>http</para>
-            /// </summary>
             [NameInMap("EndpointType")]
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>test-xxx-queue</para>
-            /// </summary>
             [NameInMap("EndpointValue")]
             [Validation(Required=false)]
             public string EndpointValue { get; set; }
@@ -69,9 +61,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>oss</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
@@ -79,9 +68,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rule-xsXDW</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

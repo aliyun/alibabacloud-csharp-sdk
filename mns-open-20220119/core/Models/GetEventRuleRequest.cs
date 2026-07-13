@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
     public class GetEventRuleRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>oss</para>
         /// </summary>
         [NameInMap("ProductName")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rule-xsXDW</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]

@@ -19,6 +19,38 @@ namespace AlibabaCloud.SDK.Mns_open20220119
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "mns-open.us-west-1.aliyuncs.com"},
+                {"us-east-1", "mns-open.us-east-1.aliyuncs.com"},
+                {"me-east-1", "mns-open.me-east-1.aliyuncs.com"},
+                {"me-central-1", "mns-open.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "mns-open.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "mns-open.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "mns-open.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "mns-open.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "mns-open.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "mns-open.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "mns-open.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "mns-open.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "mns-open.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "mns-open.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "mns-open.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "mns-open.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "mns-open.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-heyuan", "mns-open.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou-finance", "mns-open.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "mns-open.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "mns-open.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "mns-open.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "mns-open.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "mns-open.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-5", "mns-open.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "mns-open.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "mns-open.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "mns-open.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "mns-open.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("mns-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +71,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>AuthorizeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -95,7 +127,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>AuthorizeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -151,7 +183,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>AuthorizeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -169,7 +201,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>AuthorizeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -399,7 +431,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>CreateQueue</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -438,6 +470,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                query["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumMessageSize))
             {
                 query["MaximumMessageSize"] = request.MaximumMessageSize;
@@ -457,6 +497,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueType))
             {
                 query["QueueType"] = request.QueueType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                query["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                query["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -491,7 +539,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>CreateQueue</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -530,6 +578,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                query["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumMessageSize))
             {
                 query["MaximumMessageSize"] = request.MaximumMessageSize;
@@ -549,6 +605,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueType))
             {
                 query["QueueType"] = request.QueueType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                query["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                query["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -583,7 +647,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>CreateQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -601,7 +665,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue.</para>
+        /// <para>CreateQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -619,7 +683,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a topic.</para>
+        /// <para>CreateTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -649,9 +713,25 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 body["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                body["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                body["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMessageSize))
             {
                 body["MaxMessageSize"] = request.MaxMessageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                body["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                body["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -679,7 +759,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a topic.</para>
+        /// <para>CreateTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -709,9 +789,25 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 body["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                body["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                body["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMessageSize))
             {
                 body["MaxMessageSize"] = request.MaxMessageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                body["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                body["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -739,7 +835,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a topic.</para>
+        /// <para>CreateTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -757,7 +853,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a topic.</para>
+        /// <para>CreateTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -903,7 +999,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a queue.</para>
+        /// <para>DeleteQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -945,7 +1041,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a queue.</para>
+        /// <para>DeleteQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -987,7 +1083,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a queue.</para>
+        /// <para>DeleteQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1101,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a queue.</para>
+        /// <para>DeleteQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1023,7 +1119,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic.</para>
+        /// <para>删除订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1065,7 +1161,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic.</para>
+        /// <para>删除订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1107,7 +1203,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic.</para>
+        /// <para>删除订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1125,7 +1221,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a topic.</para>
+        /// <para>删除订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1143,7 +1239,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>DisableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1185,7 +1281,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>DisableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1323,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>DisableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1245,7 +1341,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</para>
+        /// <para>DisableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1263,7 +1359,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>EnableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1305,7 +1401,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>EnableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1347,7 +1443,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>EnableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1365,7 +1461,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</para>
+        /// <para>EnableEndpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1631,7 +1727,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an existing queue.</para>
+        /// <para>GetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1677,7 +1773,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an existing queue.</para>
+        /// <para>GetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1723,7 +1819,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an existing queue.</para>
+        /// <para>GetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1741,7 +1837,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an existing queue.</para>
+        /// <para>GetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +1855,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a subscription.</para>
+        /// <para>GetSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1805,7 +1901,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a subscription.</para>
+        /// <para>GetSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1851,7 +1947,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a subscription.</para>
+        /// <para>GetSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1869,7 +1965,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a subscription.</para>
+        /// <para>GetSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +1983,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>查询主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1933,7 +2029,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>查询主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1979,7 +2075,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>查询主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1997,7 +2093,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of a topic.</para>
+        /// <para>查询主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2211,7 +2307,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</para>
+        /// <para>ListQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2269,7 +2365,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</para>
+        /// <para>ListQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2327,7 +2423,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</para>
+        /// <para>ListQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2345,7 +2441,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues that belong to an Alibaba Cloud account. The queues are displayed by page.</para>
+        /// <para>ListQueue</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2363,7 +2459,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all subscriptions to a topic. The subscriptions are displayed by page.</para>
+        /// <para>ListSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2425,7 +2521,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all subscriptions to a topic. The subscriptions are displayed by page.</para>
+        /// <para>ListSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2583,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all subscriptions to a topic. The subscriptions are displayed by page.</para>
+        /// <para>ListSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2505,7 +2601,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all subscriptions to a topic. The subscriptions are displayed by page.</para>
+        /// <para>ListSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2523,7 +2619,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</para>
+        /// <para>ListTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2581,7 +2677,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</para>
+        /// <para>ListTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2639,7 +2735,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</para>
+        /// <para>ListTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2657,7 +2753,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the topics that belong to an Alibaba Cloud account. The topics are displayed by page.</para>
+        /// <para>ListTopic</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2675,7 +2771,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>RevokeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2731,7 +2827,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>RevokeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2787,7 +2883,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>RevokeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2805,7 +2901,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</para>
+        /// <para>RevokeEndpointAcl</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2823,7 +2919,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a queue.</para>
+        /// <para>SetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2862,6 +2958,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                query["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumMessageSize))
             {
                 query["MaximumMessageSize"] = request.MaximumMessageSize;
@@ -2877,6 +2981,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
                 query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                query["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                query["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
             {
@@ -2907,7 +3019,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a queue.</para>
+        /// <para>SetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2946,6 +3058,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                query["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaximumMessageSize))
             {
                 query["MaximumMessageSize"] = request.MaximumMessageSize;
@@ -2961,6 +3081,14 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueueName))
             {
                 query["QueueName"] = request.QueueName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                query["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                query["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantRateLimitPolicyShrink))
             {
@@ -2991,7 +3119,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a queue.</para>
+        /// <para>SetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3009,7 +3137,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a queue.</para>
+        /// <para>SetQueueAttributes</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3027,7 +3155,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a subscription.</para>
+        /// <para>ModifySubscription</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3099,7 +3227,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a subscription.</para>
+        /// <para>ModifySubscription</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3171,7 +3299,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a subscription.</para>
+        /// <para>ModifySubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3189,7 +3317,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a subscription.</para>
+        /// <para>ModifySubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3207,7 +3335,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a topic.</para>
+        /// <para>编辑订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3228,9 +3356,25 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                query["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMessageSize))
             {
                 query["MaxMessageSize"] = request.MaxMessageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                query["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                query["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -3257,7 +3401,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a topic.</para>
+        /// <para>编辑订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3278,9 +3422,25 @@ namespace AlibabaCloud.SDK.Mns_open20220119
             {
                 query["EnableLogging"] = request.EnableLogging;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSSE))
+            {
+                query["EnableSSE"] = request.EnableSSE;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["KmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxMessageSize))
             {
                 query["MaxMessageSize"] = request.MaxMessageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseAlgorithm))
+            {
+                query["SseAlgorithm"] = request.SseAlgorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SseType))
+            {
+                query["SseType"] = request.SseType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
             {
@@ -3307,7 +3467,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a topic.</para>
+        /// <para>编辑订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3325,7 +3485,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a topic.</para>
+        /// <para>编辑订阅主题</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3343,7 +3503,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription to a topic.</para>
+        /// <para>CreateSubscription</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3455,7 +3615,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription to a topic.</para>
+        /// <para>CreateSubscription</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3567,7 +3727,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription to a topic.</para>
+        /// <para>CreateSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3585,7 +3745,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a subscription to a topic.</para>
+        /// <para>CreateSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3603,7 +3763,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscription.</para>
+        /// <para>DeleteSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3649,7 +3809,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscription.</para>
+        /// <para>DeleteSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3695,7 +3855,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscription.</para>
+        /// <para>DeleteSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3713,7 +3873,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscription.</para>
+        /// <para>DeleteSubscription</para>
         /// </summary>
         /// 
         /// <param name="request">

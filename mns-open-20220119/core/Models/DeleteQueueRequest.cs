@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class DeleteQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the queue.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>tf-testAccMNSQueue-525478433321945943</para>
         /// </summary>
         [NameInMap("QueueName")]
         [Validation(Required=false)]

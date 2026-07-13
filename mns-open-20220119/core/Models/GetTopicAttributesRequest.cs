@@ -9,29 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Mns_open20220119.Models
 {
     public class GetTopicAttributesRequest : TeaModel {
-        /// <summary>
-        /// <para>The tag.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<GetTopicAttributesRequestTag> Tag { get; set; }
         public class GetTopicAttributesRequestTag : TeaModel {
-            /// <summary>
-            /// <para>The tag key.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>tag1</para>
-            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            /// <summary>
-            /// <para>The tag value.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>test</para>
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -39,11 +24,7 @@ namespace AlibabaCloud.SDK.Mns_open20220119.Models
         }
 
         /// <summary>
-        /// <para>The name of the topic.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>demo-topic</para>
         /// </summary>
         [NameInMap("TopicName")]
         [Validation(Required=false)]
