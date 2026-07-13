@@ -5332,7 +5332,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves entities to be remediated and a list of playbooks.</para>
+        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5402,7 +5402,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves entities to be remediated and a list of playbooks.</para>
+        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5472,7 +5472,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves entities to be remediated and a list of playbooks.</para>
+        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5490,7 +5490,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves entities to be remediated and a list of playbooks.</para>
+        /// <para>Retrieves the list of entities that require disposition and the list of playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8224,6 +8224,162 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCapacityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of user data storage on the Log Management page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataStorageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataStorageResponse
+        /// </returns>
+        public GetDataStorageResponse GetDataStorageWithOptions(GetDataStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataStorage",
+                Version = "2022-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataStorageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of user data storage on the Log Management page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataStorageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataStorageResponse
+        /// </returns>
+        public async Task<GetDataStorageResponse> GetDataStorageWithOptionsAsync(GetDataStorageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                body["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataStorage",
+                Version = "2022-06-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataStorageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of user data storage on the Log Management page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataStorageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataStorageResponse
+        /// </returns>
+        public GetDataStorageResponse GetDataStorage(GetDataStorageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataStorageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of user data storage on the Log Management page.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class to help with specific configuration examples. For more information, see <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetDataStorageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataStorageResponse
+        /// </returns>
+        public async Task<GetDataStorageResponse> GetDataStorageAsync(GetDataStorageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataStorageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
