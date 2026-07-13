@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class DescribeCheckDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of entries to return on each page. The default value is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned from the last API call. For more information about how to set this parameter, see the API description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cae**********699</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string ResourceArn { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the data protection rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule-000***dav</para>
         /// </summary>

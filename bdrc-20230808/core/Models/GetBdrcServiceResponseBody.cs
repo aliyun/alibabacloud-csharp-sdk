@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class GetBdrcServiceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data that is returned if the call is successful.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBdrcServiceResponseBodyData Data { get; set; }
         public class GetBdrcServiceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the service was enabled (UNIX timestamp).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1726169608</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public long? OpenTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the data protection score was updated (UNIX timestamp).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1726169608</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public long? ProtectionScoreUpdatedTime { get; set; }
 
             /// <summary>
+            /// <para>The initialization status of the service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public string ServiceInitializeStatus { get; set; }
 
             /// <summary>
+            /// <para>The enabling status of the service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OPENED</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         }
 
         /// <summary>
+        /// <para>The unique identity of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5748C531-80B1-5C31-8421-63A1830B9E48</para>
         /// </summary>

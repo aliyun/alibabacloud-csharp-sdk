@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class CheckRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CheckRulesResponseBodyData Data { get; set; }
         public class CheckRulesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The unique ID of the asynchronous task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t-0000e4w0u1v592zdf6s7</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>700683DE-0154-56D4-8D76-3B7A2C2C7DF9</para>
         /// </summary>

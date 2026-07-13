@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class EnableCheckProductRequest : TeaModel {
         /// <summary>
+        /// <para>The product type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

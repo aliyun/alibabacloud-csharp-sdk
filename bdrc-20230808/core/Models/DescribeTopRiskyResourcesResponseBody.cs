@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class DescribeTopRiskyResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned in the response.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeTopRiskyResourcesResponseBodyData Data { get; set; }
         public class DescribeTopRiskyResourcesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>A list of resource objects.</para>
+            /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<DescribeTopRiskyResourcesResponseBodyDataContent> Content { get; set; }
             public class DescribeTopRiskyResourcesResponseBodyDataContent : TeaModel {
                 /// <summary>
+                /// <para>The size of data in the Archive storage class, in bytes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? ArchiveDataSize { get; set; }
 
                 /// <summary>
+                /// <para>The number of checks that failed.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? CheckFailedCount { get; set; }
 
                 /// <summary>
+                /// <para>The size of data in the Cold Archive storage class, in bytes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? ColdArchiveDataSize { get; set; }
 
                 /// <summary>
+                /// <para>The timestamp indicating when the resource was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1697798340</para>
                 /// </summary>
@@ -49,11 +63,19 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>The data redundancy type. For example, \&quot;LRS\&quot; (locally redundant storage).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>LRS</para>
+                /// </summary>
                 [NameInMap("DataRedundancyType")]
                 [Validation(Required=false)]
                 public string DataRedundancyType { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the data protection score assessment is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public bool? EnableCheck { get; set; }
 
                 /// <summary>
+                /// <para>The size of data in the Infrequent Access (IA) storage class, in bytes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? IaDataSize { get; set; }
 
                 /// <summary>
+                /// <para>The product type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ecs</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ProductType { get; set; }
 
                 /// <summary>
+                /// <para>The data protection score of the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
                 /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public int? ProtectionScore { get; set; }
 
                 /// <summary>
+                /// <para>The timestamp when the protection score was last updated.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1726036498</para>
                 /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? ProtectionScoreUpdatedTime { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the region.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -102,6 +134,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>acs:ecs:cn-hangzhou:xxxxxxxx:instance/xxxxx</para>
                 /// </summary>
@@ -110,6 +144,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ResourceArn { get; set; }
 
                 /// <summary>
+                /// <para>The resource ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>i-xxxxxxxx</para>
                 /// </summary>
@@ -118,6 +154,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>The resource name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test-server</para>
                 /// </summary>
@@ -126,6 +164,18 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the Alibaba Cloud account that owns the resource.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123***7890</para>
+                /// </summary>
+                [NameInMap("ResourceOwnerId")]
+                [Validation(Required=false)]
+                public long? ResourceOwnerId { get; set; }
+
+                /// <summary>
+                /// <para>The resource type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ACS::ECS::Instance</para>
                 /// </summary>
@@ -134,6 +184,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
+                /// <para>The number of identified risks.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -142,6 +194,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? RiskCount { get; set; }
 
                 /// <summary>
+                /// <para>The size of data in the Standard storage class, in bytes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -150,6 +204,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? StandardDataSize { get; set; }
 
                 /// <summary>
+                /// <para>The status of the resource.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
                 /// </summary>
@@ -157,11 +213,19 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                /// <summary>
+                /// <para>The storage class of the data. For example, \&quot;Standard\&quot;.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>STANDARD</para>
+                /// </summary>
                 [NameInMap("StorageClass")]
                 [Validation(Required=false)]
                 public string StorageClass { get; set; }
 
                 /// <summary>
+                /// <para>The total data size, in bytes.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -170,7 +234,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public long? TotalDataSize { get; set; }
 
                 /// <summary>
-                /// <para>vSwitch ID</para>
+                /// <para>The ID of the vSwitch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-xxxxxxxx</para>
@@ -180,7 +244,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>vpc ID</para>
+                /// <para>The ID of the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxxxxxxx</para>
@@ -190,6 +254,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the zone.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-j</para>
                 /// </summary>
@@ -200,6 +266,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             }
 
             /// <summary>
+            /// <para>The maximum number of entries to return on each page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -208,6 +276,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
+            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If this parameter is not returned, it indicates that all results have been returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e557bc9a65fe22cb5e2a3b240f06b0de</para>
             /// </summary>
@@ -216,6 +286,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>The total number of matching entries. This parameter is optional and might not be returned in the response.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -226,6 +298,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34081B20-C4C0-514F-93F6-8EEC3D1A587E</para>
         /// </summary>

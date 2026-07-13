@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class DisableCheckResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique request identity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>86DEBAC9-AB6A-59AB-9E5C-A540E579ECC9</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class CloseBdrcServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>663D8898-E0B5-5964-BF28-A191CE6A1825</para>
         /// </summary>

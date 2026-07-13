@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class DisableCheckResourceRequest : TeaModel {
         /// <summary>
+        /// <para>Unique resource identity</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

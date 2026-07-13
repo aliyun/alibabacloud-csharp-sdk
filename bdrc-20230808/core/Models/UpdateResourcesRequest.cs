@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class UpdateResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The resource type. If this parameter is not specified, all types of resources are updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
         /// </summary>

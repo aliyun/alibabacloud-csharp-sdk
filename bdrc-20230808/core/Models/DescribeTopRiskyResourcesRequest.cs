@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class DescribeTopRiskyResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the resource category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rc-000***123</para>
+        /// </summary>
+        [NameInMap("ResourceCategoryId")]
+        [Validation(Required=false)]
+        public string ResourceCategoryId { get; set; }
+
+        [NameInMap("ResourceOwnerIds")]
+        [Validation(Required=false)]
+        public List<long?> ResourceOwnerIds { get; set; }
+
+        /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
         /// </summary>

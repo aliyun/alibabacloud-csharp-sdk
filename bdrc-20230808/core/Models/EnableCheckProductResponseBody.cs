@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class EnableCheckProductResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8724BC18-904D-5A0D-BFF4-F0554F0037E7</para>
         /// </summary>

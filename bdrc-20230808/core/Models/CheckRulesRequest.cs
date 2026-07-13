@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
 {
     public class CheckRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.BDRC20230808.Models
         public string ResourceArn { get; set; }
 
         /// <summary>
+        /// <para>The ID of the rule to update. If you do not specify this parameter, all rules are updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rule-000***dav</para>
         /// </summary>
