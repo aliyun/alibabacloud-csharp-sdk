@@ -4724,7 +4724,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
         /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
@@ -4866,7 +4866,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
         /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
@@ -5008,7 +5008,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
         /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
@@ -5036,7 +5036,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
         /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
@@ -43335,8 +43335,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询增值税发票扫描件</para>
+        /// <para>Queries VAT invoice detail data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries VAT invoice detail data.</para>
+        /// <ol>
+        /// <item><description>The value-added service API requires special approval. Contact the business travel customer operations team before submitting a permission request.</description></item>
+        /// <item><description>To use this API, enable the value-added service data permission in your application. For the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this API, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VatInvoiceScanQueryRequest
@@ -43406,8 +43416,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询增值税发票扫描件</para>
+        /// <para>Queries VAT invoice detail data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries VAT invoice detail data.</para>
+        /// <ol>
+        /// <item><description>The value-added service API requires special approval. Contact the business travel customer operations team before submitting a permission request.</description></item>
+        /// <item><description>To use this API, enable the value-added service data permission in your application. For the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this API, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VatInvoiceScanQueryRequest
@@ -43477,8 +43497,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询增值税发票扫描件</para>
+        /// <para>Queries VAT invoice detail data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries VAT invoice detail data.</para>
+        /// <ol>
+        /// <item><description>The value-added service API requires special approval. Contact the business travel customer operations team before submitting a permission request.</description></item>
+        /// <item><description>To use this API, enable the value-added service data permission in your application. For the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this API, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VatInvoiceScanQueryRequest
@@ -43496,8 +43526,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询增值税发票扫描件</para>
+        /// <para>Queries VAT invoice detail data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries VAT invoice detail data.</para>
+        /// <ol>
+        /// <item><description>The value-added service API requires special approval. Contact the business travel customer operations team before submitting a permission request.</description></item>
+        /// <item><description>To use this API, enable the value-added service data permission in your application. For the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this API, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// VatInvoiceScanQueryRequest

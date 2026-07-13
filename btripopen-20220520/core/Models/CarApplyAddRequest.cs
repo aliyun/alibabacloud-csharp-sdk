@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>The cities for car service. Separate multiple cities with Chinese commas (，).
-        /// Note: A maximum of 10 cities can be specified. The values in city and city_code_set must correspond one-to-one.</para>
+        /// Note: A maximum of 10 cities are supported. The values in city and city_code_set must correspond one to one.</para>
         /// 
         /// <b>Example:</b>
         /// <para>北京，杭州</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>The city code set for intra-city car service. Separate multiple cities with Chinese commas (，).
         /// Note: 1) Either city_code_set or city is required. If both are specified, city_code_set takes precedence.
-        /// A maximum of 10 cities can be specified.</para>
+        /// A maximum of 10 cities are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110100，330100</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>The ID of the third-party cost center associated with the approval form.</para>
         /// <remarks>
-        /// <para>Warning: This field is required. To make it optional, contact the operations team.</para>
+        /// <para>Warning: This field is required. To make it optional, contact operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         /// <summary>
         /// <para>The ID of the third-party invoice header associated with the approval form.</para>
         /// <remarks>
-        /// <para>Warning: This field is required. To make it optional, contact the operations team.</para>
+        /// <para>Warning: This field is required. To make it optional, contact operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -164,10 +164,11 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public int? TimesTotal { get; set; }
 
         /// <summary>
-        /// <para>The type of available usage count for the approval form. If the enterprise does not need to limit the number of times the approval form can be used, set this parameter to 1 (unlimited) and set both times_total and times_used to 0. Valid values:</para>
+        /// <para>The usage count type of the approval form. If the enterprise does not need to limit the number of times the approval form can be used, set this parameter to 1 (unlimited) and set both times_total and times_used to 0.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: unlimited.</description></item>
-        /// <item><description>2: user-specified count.</description></item>
+        /// <item><description>1: Unlimited.</description></item>
+        /// <item><description>2: User-specified count.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -206,7 +207,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public List<CarApplyAddRequestTravelerStandard> TravelerStandard { get; set; }
         public class CarApplyAddRequestTravelerStandard : TeaModel {
             /// <summary>
-            /// <para>The cross-city car service rules. This parameter is optional. If specified, cross-city rules are read from the approval form data.</para>
+            /// <para>The cross-city car service rules. Optional. If specified, cross-city rules are read from the approval form data.</para>
             /// </summary>
             [NameInMap("car_city_set")]
             [Validation(Required=false)]
@@ -214,7 +215,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public class CarApplyAddRequestTravelerStandardCarCitySet : TeaModel {
                 /// <summary>
                 /// <para>The cross-city city code. Only 6-digit codes are supported. Separate multiple values with Chinese commas.
-                /// Note: A maximum of 10 cities can be specified. The values in city_code and city_name must correspond one-to-one.</para>
+                /// Note: A maximum of 10 cities are supported. The values in city_code and city_name must correspond one to one.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -226,7 +227,7 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>The cross-city city name. Separate multiple values with Chinese commas.
-                /// Note: A maximum of 10 cities can be specified. The values in city_code and city_name must correspond one-to-one.</para>
+                /// Note: A maximum of 10 cities are supported. The values in city_code and city_name must correspond one to one.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
