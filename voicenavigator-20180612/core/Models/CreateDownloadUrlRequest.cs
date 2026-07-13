@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string DownloadTaskId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. Call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to obtain it.</para>
+        /// <para>The ID of the file. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

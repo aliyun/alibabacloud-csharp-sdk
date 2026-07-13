@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ExportStatisticalDataRequest : TeaModel {
         /// <summary>
-        /// <para>The start of the query time range. The value must be a Unix timestamp in milliseconds.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582266750353</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTimeLeftRange { get; set; }
 
         /// <summary>
-        /// <para>The end of the query time range. The value must be a Unix timestamp in milliseconds.</para>
+        /// <para>The end time used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582266750353</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ExportType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Voice Navigator instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

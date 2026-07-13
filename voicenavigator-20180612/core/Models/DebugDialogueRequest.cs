@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DebugDialogueRequest : TeaModel {
         /// <summary>
-        /// <para>The context of the conversation.</para>
+        /// <para>The conversation context.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AdditionalContext { get; set; }
 
         /// <summary>
-        /// <para>The ID of the conversation.</para>
+        /// <para>The user utterance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s utterance.</para>
+        /// <para>The user utterance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

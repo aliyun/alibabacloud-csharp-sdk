@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The capability type of the instance.<br>
-        /// DEFAULT: Full capabilities.<br>
-        /// VOICE_ONLY: Voice-only capabilities, which do not include conversation intervention.<br><br></para>
+        /// <para>The instance ability type.<br>
+        /// DEFAULT: full abilities.<br>
+        /// VOICE_ONLY: only voice abilities, without dialog intervention.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VOICE_ONLY</para>
@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AbilityType { get; set; }
 
         /// <summary>
-        /// <para>Applicable operations.</para>
+        /// <para>The list of applicable operations.</para>
         /// </summary>
         [NameInMap("ApplicableOperations")]
         [Validation(Required=false)]
         public List<string> ApplicableOperations { get; set; }
 
         /// <summary>
-        /// <para>The concurrency of the instance.</para>
+        /// <para>The instance concurrency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? Concurrency { get; set; }
 
         /// <summary>
-        /// <para>The description of the instance.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>导航测试实例描述信息</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The last modification time of the instance.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683216000000</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The user who last modified the instance.</para>
+        /// <para>The user who last updated the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2508711*******</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Published</para>

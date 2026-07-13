@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeExportProgressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL of the file.</para>
+        /// <para>The file URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://ssml-test.oss-cn-shanghai.aliyuncs.com/key">http://ssml-test.oss-cn-shanghai.aliyuncs.com/key</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FileHttpUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b19af5ce5314ac08108d1b33fe20e15</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the export task.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISHED</para>

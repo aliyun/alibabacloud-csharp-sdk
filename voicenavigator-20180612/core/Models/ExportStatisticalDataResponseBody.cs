@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ExportStatisticalDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the asynchronous export task.</para>
+        /// <para>The asynchronous export task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6be5a9f1-406e-424e-a17b-b6fb86ee3cc9</para>

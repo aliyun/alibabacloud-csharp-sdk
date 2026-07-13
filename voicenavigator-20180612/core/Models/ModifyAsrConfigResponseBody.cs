@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the modification.</para>
+        /// <para>The modification result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

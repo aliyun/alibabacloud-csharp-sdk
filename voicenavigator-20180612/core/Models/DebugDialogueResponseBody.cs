@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DebugDialogueResponseBody : TeaModel {
         /// <summary>
-        /// <para>The next action returned by the dialogue engine.</para>
+        /// <para>The action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Broadcast</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the returned action, as a JSON string.</para>
+        /// <para>The action parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Interactive Voice Response (IVR) playback can be interrupted.</para>
+        /// <para>Indicates whether the IVR broadcast can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The textual response from the dialogue engine.</para>
+        /// <para>The broadcast content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80d11be3-faad-4101-b4b0-59dbea28aaf0</para>

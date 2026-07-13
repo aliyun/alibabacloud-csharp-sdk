@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>get upload tool url success</para>

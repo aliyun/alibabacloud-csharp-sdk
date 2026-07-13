@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public ListDownloadTasksResponseBodyDownloadTasks DownloadTasks { get; set; }
         public class ListDownloadTasksResponseBodyDownloadTasks : TeaModel {
             /// <summary>
-            /// <para>A list of download tasks.</para>
+            /// <para>The list of download tasks.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListDownloadTasksResponseBodyDownloadTasksList> List { get; set; }
             public class ListDownloadTasksResponseBodyDownloadTasksList : TeaModel {
                 /// <summary>
-                /// <para>A list of download task files.</para>
+                /// <para>The list of download task files.</para>
                 /// </summary>
                 [NameInMap("DownloadTaskFiles")]
                 [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                     public string FileId { get; set; }
 
                     /// <summary>
-                    /// <para>The progress of the file download.</para>
+                    /// <para>The completion progress of the download task.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>70</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                     public int? Progress { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the file.</para>
+                    /// <para>The status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Published</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The title of the file.</para>
+                    /// <para>The title.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CBU阿里通信反馈-声音延迟</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the task.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Expired</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The title of the task.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>批量高阶内存整理_2022_02_17_10</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

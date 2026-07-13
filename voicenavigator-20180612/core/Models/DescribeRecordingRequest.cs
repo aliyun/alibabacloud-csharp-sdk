@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeRecordingRequest : TeaModel {
         /// <summary>
-        /// <para>The conversation ID.</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

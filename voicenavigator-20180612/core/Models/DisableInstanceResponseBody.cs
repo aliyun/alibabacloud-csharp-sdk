@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. A value of \&quot;true\&quot; indicates that the operation was successful.</para>
+        /// <para>The deletion status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

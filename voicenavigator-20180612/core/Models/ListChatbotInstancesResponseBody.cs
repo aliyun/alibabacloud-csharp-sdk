@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListChatbotInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of chatbot instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Bots")]
         [Validation(Required=false)]
         public List<ListChatbotInstancesResponseBodyBots> Bots { get; set; }
         public class ListChatbotInstancesResponseBodyBots : TeaModel {
             /// <summary>
-            /// <para>The avatar of the chatbot instance.</para>
+            /// <para>The icon of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dss0.ali.com/70cFuHS.jpg">https://dss0.ali.com/70cFuHS.jpg</a></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Avatar { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582266750353</para>
@@ -47,8 +47,6 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The description of the chatbot instance.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>‘’</para>
             /// </summary>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string LanguageCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the chatbot instance.</para>
+            /// <para>The name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试机器人</para>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +117,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of chatbot instances.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

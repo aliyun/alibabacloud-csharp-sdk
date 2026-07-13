@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ExportConversationDetailsRequest : TeaModel {
+        [NameInMap("AbTestId")]
+        [Validation(Required=false)]
+        public string AbTestId { get; set; }
+
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The left boundary of the start date range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582266750353</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? BeginTimeLeftRange { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
+        /// <para>The right boundary of the start date range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1640793599000</para>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? DebugConversation { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,29 +59,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>An array of optional parameters.</para>
+        /// <para>The optional parameters.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
         public List<string> Options { get; set; }
 
-        /// <summary>
-        /// <para>The result of the conversation.</para>
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public int? Result { get; set; }
 
-        /// <summary>
-        /// <para>The minimum number of conversation turns.</para>
-        /// </summary>
         [NameInMap("RoundsLeftRange")]
         [Validation(Required=false)]
         public int? RoundsLeftRange { get; set; }
 
-        /// <summary>
-        /// <para>The maximum number of conversation turns.</para>
-        /// </summary>
         [NameInMap("RoundsRightRange")]
         [Validation(Required=false)]
         public int? RoundsRightRange { get; set; }

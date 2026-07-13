@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>A JSON-formatted string that contains a list of digital worker instance IDs.</para>
+        /// <para>The list of digital employee scenario IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;e4bebxxxxxxxxxxx&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceIdListJsonString { get; set; }
 
         /// <summary>
-        /// <para>The instance name. This parameter is used for filtering.</para>
+        /// <para>The scenario name used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试</para>
@@ -30,23 +30,23 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The NLU service type. This parameter is used to filter instances by the source of their conversational AI capabilities. If you do not set this parameter, instances of all types are returned.</para>
+        /// <para>The NLU type used to filter by dialog capability source. If this parameter is not specified, all types are selected.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>MANAGED</c>: managed. This value is deprecated.</para>
+        /// <item><description><para>MANAGED: managed (deprecated).</para>
         /// </description></item>
-        /// <item><description><para><c>AUTHORIZED</c>: authorized. In the public cloud, this indicates the Chatbot service.</para>
+        /// <item><description><para>AUTHORIZED: authorized. In the public cloud, this refers to Chatbot service.</para>
         /// </description></item>
-        /// <item><description><para><c>PROVIDED</c>: private. This service is configured in the console with parameters such as <c>as</c>, <c>sk</c>, and <c>chatEndpoint</c>.</para>
+        /// <item><description><para>PROVIDED: private. Configured by specifying the AccessKey ID, AccessKey Secret, and chatEndpoint in the O&amp;M console.</para>
         /// </description></item>
-        /// <item><description><para><c>CCC_AUTHORIZED</c>: a chatbot authorized by Cloud Connect Center (CCC).</para>
+        /// <item><description><para>CCC_AUTHORIZED: uses a Chatbot authorized by Cloud Call Center.</para>
         /// </description></item>
-        /// <item><description><para><c>CCC_FUNCTION</c>: Alibaba Cloud Function Compute.</para>
+        /// <item><description><para>CCC_FUNCTION: uses Alibaba Cloud Function Compute.</para>
         /// </description></item>
-        /// <item><description><para><c>SSE_FUNCTION</c>: a streaming function service. This refers to a Function Compute instance that supports Server-Sent Events (SSE) for integration with third-party large language model (LLM) chatbots.</para>
+        /// <item><description><para>SSE_FUNCTION: uses a streaming function service. Function Compute that supports SSE, used to connect to third-party large language model chatbots.</para>
         /// </description></item>
-        /// <item><description><para><c>PROMPTS</c>: integration with foundational models such as Qwen.</para>
+        /// <item><description><para>PROMPTS: connects to Qwen foundation models.</para>
         /// </description></item>
-        /// <item><description><para><c>LOCAL</c>: a private cloud instance of Chatbot.</para>
+        /// <item><description><para>LOCAL: private cloud, local Chatbot.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string NluServiceTypeListJsonString { get; set; }
 
         /// <summary>
-        /// <para>The inbound number. This parameter is used for filtering.</para>
+        /// <para>The inbound number used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>021xxxxxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Number { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,12 +90,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The instance status. This parameter is used for filtering. If you do not set this parameter, instances in all statuses are returned.</para>
+        /// <para>The scenario status used as a filter condition. If this parameter is not specified, all statuses are selected.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>DISABLED</c>: disabled</para>
-        /// </description></item>
-        /// <item><description><para><c>PUBLISHED</c>: published</para>
-        /// </description></item>
+        /// <item><description>DISABLED: offline.</description></item>
+        /// <item><description>PUBLISHED: published.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +106,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>If you set <c>UnionSource</c> to <c>CCC</c>, set this parameter to the ID of your CCC instance.</para>
+        /// <para>When UnionSource is set to CCC, set UnionInstanceId to the instance ID of Cloud Call Center.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,7 +119,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <summary>
         /// <para>The source.</para>
         /// <list type="bullet">
-        /// <item><description><c>CCC</c>: Cloud Connect Center</description></item>
+        /// <item><description>CCC: Cloud Call Center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

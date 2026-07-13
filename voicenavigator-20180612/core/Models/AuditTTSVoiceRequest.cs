@@ -9,24 +9,48 @@ using Tea;
 namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class AuditTTSVoiceRequest : TeaModel {
+        /// <summary>
+        /// <para>The AccessKey ID of the namespace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b4331******a4640ce1f88e27ac8df0</para>
+        /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public string AccessKey { get; set; }
 
+        /// <summary>
+        /// <para>The AppKey of the third-party voice configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>be******</para>
+        /// </summary>
         [NameInMap("AppKey")]
         [Validation(Required=false)]
         public string AppKey { get; set; }
 
+        /// <summary>
+        /// <para>The TTS engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ali</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The extended parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("ExtParams")]
         [Validation(Required=false)]
         public string ExtParams { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the navigation instance.</para>
+        /// <para>The navigation instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,10 +60,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("PitchRate")]
         [Validation(Required=false)]
         public string PitchRate { get; set; }
 
+        /// <summary>
+        /// <para>The AccessKey secret.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ZDc3********DAzM2E0YjM5NTFkMDQ1</para>
+        /// </summary>
         [NameInMap("SecretKey")]
         [Validation(Required=false)]
         public string SecretKey { get; set; }
@@ -56,7 +90,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string SpeechRate { get; set; }
 
         /// <summary>
-        /// <para>The text to preview.</para>
+        /// <para>The preview text.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

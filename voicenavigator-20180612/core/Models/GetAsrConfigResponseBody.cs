@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public GetAsrConfigResponseBodyData Data { get; set; }
         public class GetAsrConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The application key.</para>
+            /// <para>The engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>your-app-key</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>The acoustic model ID.</para>
+            /// <para>The ASR acoustic model ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrAcousticModelId { get; set; }
 
             /// <summary>
-            /// <para>The ASR class vocabulary ID.</para>
+            /// <para>The ASR hotword ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrClassVocabularyId { get; set; }
 
             /// <summary>
-            /// <para>The customization ID.</para>
+            /// <para>The ASR dataset ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrOverrides { get; set; }
 
             /// <summary>
-            /// <para>The vocabulary ID. You can view the ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Vocabulary Management page</a>.</para>
+            /// <para>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>Parameters for the iFLYTEK engine.</para>
+            /// <para>The iFLYTEK engine parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EngineXufei</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string EngineXufei { get; set; }
 
             /// <summary>
-            /// <para>The NLS service type.</para>
+            /// <para>NluServiceType</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authorized</para>

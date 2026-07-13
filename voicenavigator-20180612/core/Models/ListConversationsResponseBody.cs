@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ListConversationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of conversation objects.</para>
+        /// <para>The list of sessions.</para>
         /// </summary>
         [NameInMap("Conversations")]
         [Validation(Required=false)]
         public List<ListConversationsResponseBodyConversations> Conversations { get; set; }
         public class ListConversationsResponseBodyConversations : TeaModel {
+            [NameInMap("AbTestName")]
+            [Validation(Required=false)]
+            public string AbTestName { get; set; }
+
             /// <summary>
             /// <para>The called number.</para>
             /// 
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string CallingNumber { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the conversation.</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>82b2eaae-ce5c-45f8-8231-f15b6b27e55c</para>
@@ -55,7 +59,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public List<string> DsReportTitles { get; set; }
 
             /// <summary>
-            /// <para>The reason that the conversation ended. Valid values:<br>1: The conversation completed normally.<br>2: The bot hung up after a recognition failure.<br>3: The call was disconnected due to a silence timeout.<br>4: The user hung up after a recognition failure.<br>5: The user hung up for an unknown reason.<br>6: The call was transferred to an agent because an intent was matched.<br>7: The call was transferred to an agent due to a recognition failure.<br>8: No interaction from the user.<br>9: The call was interrupted by a system error.<br>10: The call was transferred to an IVR system because an intent was matched.<br>11: The call was transferred to an IVR system due to a recognition failure.<br><br><br><br><br><br><br><br><br><br><br></para>
+            /// <para>The reason for hanging up. Valid values:
+            ///      1: Normal completion.
+            ///      2: Bot hung up after unrecognized input.
+            ///      3: Hung up due to silence timeout.
+            ///      4: User hung up after unrecognized input.
+            ///      5: User hung up without reason.
+            ///      6: Transferred to human agent due to intent match.
+            ///      7: Transferred to human agent due to unrecognized input.
+            ///      8: No interaction from the user side.
+            ///      9: System exception interruption.
+            ///      10: Transferred to IVR due to intent match.
+            ///      11: Transferred to IVR due to unrecognized input.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -65,7 +80,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? EndReason { get; set; }
 
             /// <summary>
-            /// <para>The end time of the conversation, represented as a Unix timestamp in milliseconds.</para>
+            /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582266750353</para>
@@ -75,7 +90,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the final audio playback was completed before the call was disconnected.</para>
+            /// <para>Indicates whether the last playback was completed when the session ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -85,7 +100,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public bool? HasLastPlaybackCompleted { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the conversation was transferred to an agent.</para>
+            /// <para>Indicates whether the session was transferred to a human agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -95,7 +110,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public bool? HasToAgent { get; set; }
 
             /// <summary>
-            /// <para>The number of rounds in the conversation.</para>
+            /// <para>The number of conversation rounds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -105,7 +120,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? Rounds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the conversation was run in a sandbox environment.</para>
+            /// <para>Indicates whether the session is in a sandbox environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -115,7 +130,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public bool? SandBox { get; set; }
 
             /// <summary>
-            /// <para>The ID of the skill group.</para>
+            /// <para>The skill group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>skg-123</para>
@@ -125,7 +140,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string SkillGroup { get; set; }
 
             /// <summary>
-            /// <para>The start time of the conversation, represented as a Unix timestamp in milliseconds.</para>
+            /// <para>The start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1641625694286</para>
@@ -167,7 +182,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of conversations.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

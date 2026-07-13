@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeStatisticalDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of conversations.</para>
+        /// <para>The total number of sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? ConversationTotalNum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public long? ResolvedQuestionTotalNum { get; set; }
 
         /// <summary>
-        /// <para>The array of statistical data over time.</para>
+        /// <para>The array of statistics grouped by time dimension.</para>
         /// </summary>
         [NameInMap("StatisticalDataReports")]
         [Validation(Required=false)]
         public List<DescribeStatisticalDataResponseBodyStatisticalDataReports> StatisticalDataReports { get; set; }
         public class DescribeStatisticalDataResponseBodyStatisticalDataReports : TeaModel {
             /// <summary>
-            /// <para>The pass rate of multi-turn dialogues.</para>
+            /// <para>The multi-turn session pass rate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80.00%</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public int? ResolvedQuestionNum { get; set; }
 
             /// <summary>
-            /// <para>The date of the statistics.</para>
+            /// <para>The statistical date.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19:00:00</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string StatisticalDate { get; set; }
 
             /// <summary>
-            /// <para>The total number of conversations.</para>
+            /// <para>The total number of sessions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         }
 
         /// <summary>
-        /// <para>The total pass rate of multi-turn dialogues.</para>
+        /// <para>The total multi-turn session pass rate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80.00%</para>
