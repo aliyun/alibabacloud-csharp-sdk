@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Line { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,8 +66,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>If you set SubDomain to <c>a.www.example.com</c> and leave</para>
-        /// <para>DomainName empty, the system returns the DNS records that contain the hostname <c>a.www</c> for the domain name example.com. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to <a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <c>a</c> for the domain name <a href="http://www.example.com">www.example.com</a>. If you set SubDomain to a.<a href="http://www.example.com">www.example.com</a> and set DomainName to a.<a href="http://www.example.com">www.example.com</a>, the system returns the DNS records that contain the hostname <c>@</c> for the domain name a.<a href="http://www.example.com">www.example.com</a>.</para>
+        /// <para>For example, if you set SubDomain to a.www\.example.com:</para>
+        /// <para>If you do not specify DomainName, the system queries the DNS records for the hostname a.www of the domain name example.com.</para>
+        /// <para>If you set DomainName to www\.example.com, the system queries the DNS records for the hostname a of the domain name www\.example.com.</para>
+        /// <para>If you set DomainName to &quot;a.www\.example.com&quot;, the system queries the DNS records for the hostname @ of the domain name a.www\.example.com.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,8 +80,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SubDomain { get; set; }
 
         /// <summary>
-        /// <para>The type of DNS records. If you do not specify this parameter, all types of DNS records for the subdomain name are returned.</para>
-        /// <para>Valid values: <b>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</b>.</para>
+        /// <para>The type of the DNS record. If you do not specify this parameter, all types of DNS records for the subdomain are returned.</para>
+        /// <para>The record types are case-insensitive and include the following: <b>A, MX, CNAME, TXT, REDIRECT_URL, FORWARD_URL, NS, AAAA, and SRV</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MX</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.2.0</para>

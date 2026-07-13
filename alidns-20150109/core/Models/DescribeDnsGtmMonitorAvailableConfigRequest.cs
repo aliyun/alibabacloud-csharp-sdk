@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmMonitorAvailableConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. The default value is en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

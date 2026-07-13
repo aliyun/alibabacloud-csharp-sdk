@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInterAuthStatisticsZoneOverviewResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The overview data for the zone.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeInterAuthStatisticsZoneOverviewResponseBodyData Data { get; set; }
         public class DescribeInterAuthStatisticsZoneOverviewResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of domain names with refused responses.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? RefusedDomainCount { get; set; }
 
             /// <summary>
+            /// <para>The number of domain names with a sudden drop in QPS.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>66</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? SuddenDropDomainCount { get; set; }
 
             /// <summary>
+            /// <para>The number of domain names with a sudden increase in QPS.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>56</para>
             /// </summary>
@@ -40,7 +49,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>

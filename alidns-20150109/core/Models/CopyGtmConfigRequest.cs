@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class CopyGtmConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the object that is copied. Only the INSTANCE type is supported.</para>
+        /// <para>The type of copy. Only INSTANCE is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInterAuthStatisticsZoneOverviewRequest : TeaModel {
         /// <summary>
+        /// <para>The statistical period. Valid values: DAY, WEEK, and MONTH.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DAY、WEEK、MONTH</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string OverviewPeriod { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DescribeInterAuthStatisticsZoneOverview</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ServerRegion { get; set; }
 
         /// <summary>
+        /// <para>The name of the zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cheng.suow.cc</para>
         /// </summary>

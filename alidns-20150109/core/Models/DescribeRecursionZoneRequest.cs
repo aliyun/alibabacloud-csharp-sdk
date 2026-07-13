@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecursionZoneRequest : TeaModel {
         /// <summary>
+        /// <para>The zone ID. This is the unique identifier of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

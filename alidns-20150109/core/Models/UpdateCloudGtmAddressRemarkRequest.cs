@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en-US (default): English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,28 +26,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the address. This ID uniquely identifies the address.</para>
+        /// <para>The unique ID of the address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>addr-89518218114368**92</para>
+        /// <para>addr-89518218114368****</para>
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
         public string AddressId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request. The token must be unique across requests and can be up to 64 ASCII characters long.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The input parameter serves as the updated note; if an empty value is passed, the note will be deleted.</para>
+        /// <para>The new remarks for the address. To delete the remarks, leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

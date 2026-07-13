@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the global line is recommended.</para>
+        /// <para>Indicates whether a global line is suggested.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainResolveStatisticsSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries returned on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics.</para>
+        /// <para>The list of statistics.</para>
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
         public List<DescribeDomainResolveStatisticsSummaryResponseBodyStatistics> Statistics { get; set; }
         public class DescribeDomainResolveStatisticsSummaryResponseBodyStatistics : TeaModel {
             /// <summary>
-            /// <para>The number of DNS requests.</para>
+            /// <para>The number of requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>35509014</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The type of the domain name. Valid values:</para>
+            /// <para>The type of the domain name.</para>
             /// <list type="bullet">
-            /// <item><description>PUBLIC: hosted public domain name</description></item>
-            /// <item><description>CACHE: cache-accelerated domain name</description></item>
+            /// <item><description><para>PUBLIC: Authoritative domain name</para>
+            /// </description></item>
+            /// <item><description><para>CACHE: Authoritative proxy domain name</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

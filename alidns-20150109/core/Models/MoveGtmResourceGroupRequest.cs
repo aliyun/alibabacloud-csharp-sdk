@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class MoveGtmResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: en, zh, and ja. Default value: en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The ID of the new resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

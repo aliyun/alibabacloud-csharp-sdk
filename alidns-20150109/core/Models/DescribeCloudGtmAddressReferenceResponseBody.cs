@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmAddressReferenceResponseBody : TeaModel {
         /// <summary>
-        /// <para>IP address or domain name.</para>
+        /// <para>The IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The address ID. This ID uniquely identifies the address.</para>
+        /// <para>The unique ID of the address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>addr-89564584963974**40</para>
+        /// <para>addr-89564584963974****</para>
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Address name.</para>
+        /// <para>The name of the address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Address-1</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>

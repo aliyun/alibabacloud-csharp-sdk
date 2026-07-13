@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmAccessStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The line codes of access regions.</para>
+        /// <para>The source of the DNS requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;default&quot;, &quot;mobile&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AccessLines { get; set; }
 
         /// <summary>
-        /// <para>The ID of the default address pool.</para>
+        /// <para>The ID of the primary address pool collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hrsix</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DefaultAddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failover address pool.</para>
+        /// <para>The ID of the failover address pool collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hrsyw</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FailoverAddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access policy that you want to query for the GTM instance.</para>
+        /// <para>The ID of the access policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>The name of the access policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>访问策略测试</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

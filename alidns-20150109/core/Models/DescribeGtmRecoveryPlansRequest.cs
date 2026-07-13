@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlansRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword for the query. Fuzzy match is supported by disaster recovery plan name.</para>
+        /// <para>The keyword for the query. This parameter supports a fuzzy search by disaster recovery plan name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</para>
+        /// <para>The language of the response. Valid values are <c>en</c> for English and <c>zh</c> for Chinese. The default value is <c>zh</c>.</para>
+        /// <para>en: English.</para>
+        /// <para>en: English</para>
+        /// <para>Default value: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. The page number starts from <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. Pages start from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class PreviewGtmRecoveryPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number. The value starts from <b>1</b>. Default: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned per page. Maximum value: <b>100</b>. Default: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>853805EA-3D47-47D5-9A1A-A45C24313ABD</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned on all pages.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

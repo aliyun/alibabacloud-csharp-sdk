@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b> (default): English</description></item>
+        /// <item><description><para><b>zh-CN</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en-US</b> (default): English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,38 +26,38 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that you can use to ensure the idempotence of the request. Make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a> operation to query the value of ConfigId for the access domain name.</para>
+        /// <para>The ID of the domain name instance configuration. For the same access domain name and GTM instance, you can configure both A and AAAA records. This results in two domain name instance configurations for the same GTM instance. The ConfigId uniquely identifies the configuration object that you want to modify.</para>
+        /// <para>Call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the ConfigId of a domain name instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Config-000**11</para>
+        /// <para>Config-000****</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GTM 3.0 instance for which you want to modify the TTL configuration.</para>
+        /// <para>The ID of the GTM 3.0 instance that you want to modify.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-cn-wwo3a3hbz**</para>
+        /// <para>gtm-cn-wwo3a3h****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Host record of the domain accessed by GTM.</para>
+        /// <para>The host record of the GTM access domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleHostname { get; set; }
 
         /// <summary>
-        /// <para>The zone (such as example.com) or subzone (such as a.example.com) of the GTM access domain name. In most cases, the zone or subzone is hosted in Authoritative DNS Resolution of the Alibaba Cloud DNS console within the account to which the GTM instance belongs.</para>
+        /// <para>The root domain (such as example.com) or subdomain (such as a.example.com) of the GTM access domain name. This is usually a domain name that is hosted in the authoritative zone of the Alibaba Cloud DNS console under the account that owns the GTM instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleZoneName { get; set; }
 
         /// <summary>
-        /// <para>The global TTL value, in seconds. The global TTL value affects how long the DNS records that map the access domain name to the addresses in the address pools are cached in the local DNS servers of Internet service providers (ISPs).</para>
+        /// <para>The global Time to Live (TTL) in seconds. This is the TTL for the DNS record that resolves the access domain name to an address in an address pool. The TTL affects how long the DNS record is cached on a carrier\&quot;s Local DNS server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

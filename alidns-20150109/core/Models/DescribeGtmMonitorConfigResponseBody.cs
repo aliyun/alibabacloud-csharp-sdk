@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the time when the health check configuration was created.</para>
+        /// <para>The UNIX timestamp that indicates when the health check configuration was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</para>
+        /// <para>The number of consecutive health checks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -96,25 +96,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</para>
-        /// <para>HTTP or HTTPS:</para>
+        /// <para>The extended information. The parameters vary based on the protocol.</para>
+        /// <para>For HTTP and HTTPS:</para>
         /// <list type="bullet">
-        /// <item><description>port: the port to check.</description></item>
-        /// <item><description>failureRate: the failure rate.</description></item>
-        /// <item><description>code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</description></item>
-        /// <item><description>host: the host configuration.</description></item>
-        /// <item><description>path: the health check URL.</description></item>
+        /// <item><description><para>port: The health check port.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
+        /// <item><description><para>code: The return code. A response is considered abnormal if its status code is greater than the specified value. Valid values: 400 and 500.</para>
+        /// </description></item>
+        /// <item><description><para>host: The Host header of the request.</para>
+        /// </description></item>
+        /// <item><description><para>path: The path of the URL.</para>
+        /// </description></item>
         /// </list>
-        /// <para>PING:</para>
+        /// <para>For PING:</para>
         /// <list type="bullet">
-        /// <item><description>packetNum: the number of ping packets.</description></item>
-        /// <item><description>packetLossRate: the loss rate of ping packets.</description></item>
-        /// <item><description>failureRate: the failure rate.</description></item>
+        /// <item><description><para>packetNum: The number of ping packets.</para>
+        /// </description></item>
+        /// <item><description><para>packetLossRate: The packet loss rate.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
         /// </list>
-        /// <para>TCP:</para>
+        /// <para>For TCP:</para>
         /// <list type="bullet">
-        /// <item><description>port: the port to check.</description></item>
-        /// <item><description>failureRate: the failure rate.</description></item>
+        /// <item><description><para>port: The health check port.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +145,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -145,7 +155,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</para>
+        /// <para>The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -165,7 +175,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the time when the health check configuration was last updated.</para>
+        /// <para>The UNIX timestamp that indicates when the health check configuration was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

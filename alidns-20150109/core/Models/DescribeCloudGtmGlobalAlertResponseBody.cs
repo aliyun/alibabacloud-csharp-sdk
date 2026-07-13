@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmGlobalAlertResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The alert configurations.</para>
+        /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public DescribeCloudGtmGlobalAlertResponseBodyAlertConfig AlertConfig { get; set; }
@@ -53,6 +56,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
+        /// <summary>
+        /// <para>The alert notification groups.</para>
+        /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public DescribeCloudGtmGlobalAlertResponseBodyAlertGroup AlertGroup { get; set; }

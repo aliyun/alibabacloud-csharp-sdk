@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the values of specific response parameters.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether additional information is required. Default value: <b>false</b>. If the value is <b>true</b>, the AccessStrategyNum and AddressPoolNum parameters are returned.</para>
+        /// <para>Specifies whether to return additional information. The default value is <b>false</b>. If you set this parameter to <b>true</b>, the response includes AccessStrategyNum (the number of access policies) and AddressPoolNum (the number of address pools).</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

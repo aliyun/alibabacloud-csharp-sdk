@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribePdnsRequestStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics on the DNS requests.</para>
+        /// <para>A list of request statistics.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribePdnsRequestStatisticResponseBodyData> Data { get; set; }
         public class DescribePdnsRequestStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of DoH requests, including HTTP and HTTPS requests.</para>
+            /// <para>The total number of DNS-over-HTTPS (DoH) requests. This value includes both HTTP and HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of HTTPS requests. On the Traffic Analysis tab of the Public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</para>
+            /// <para>The number of HTTPS requests. On the Traffic Analysis tab of the Public DNS console, this parameter includes the number of DNS-over-HTTPS (DoH) requests. Therefore, DoH requests are not displayed separately in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? IpCount { get; set; }
 
             /// <summary>
-            /// <para>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp of the statistics. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706716800000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? UdpTotalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based requests.</para>
+            /// <para>The number of IPv4 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4Count { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based HTTP requests.</para>
+            /// <para>The number of IPv4 HTTP requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based HTTPS requests.</para>
+            /// <para>The number of IPv4 HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4HttpsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based requests.</para>
+            /// <para>The number of IPv6 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V6Count { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based HTTP requests.</para>
+            /// <para>The number of IPv6 HTTP requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V6HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based HTTPS requests.</para>
+            /// <para>The number of IPv6 HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>

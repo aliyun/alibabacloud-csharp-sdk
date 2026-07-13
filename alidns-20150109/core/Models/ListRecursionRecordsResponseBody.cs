@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListRecursionRecordsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of records returned for the current request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>500</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token used to start the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4698691</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The current page number. The value starts from 1. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -126,6 +134,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>
@@ -134,6 +144,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -142,6 +154,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

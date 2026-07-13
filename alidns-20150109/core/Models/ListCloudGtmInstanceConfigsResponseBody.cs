@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Current page number, starting from <b>1</b>, default is <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</para>
+        /// <para>The number of entries per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries for domain instance configurations.</para>
+        /// <para>The total number of domain name instance configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

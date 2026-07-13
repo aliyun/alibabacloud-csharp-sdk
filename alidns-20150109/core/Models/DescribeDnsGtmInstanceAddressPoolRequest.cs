@@ -10,18 +10,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstanceAddressPoolRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the address pool.</para>
+        /// <para>The ID of the address pool.&lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspools?spm=a2c4g.11186623.help-menu-29697.d_0_5_1_3_9_7.1cee430dbd1I3y">DescribeDnsGtmInstanceAddressPools</a> operation to obtain the ID.
+        /// &lt;props=&quot;intl&quot;&gt;You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspools?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstanceAddressPools</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testpool1</para>
+        /// <para>test*****</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

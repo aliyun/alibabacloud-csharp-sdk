@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>345345</para>
+        /// <para>34****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

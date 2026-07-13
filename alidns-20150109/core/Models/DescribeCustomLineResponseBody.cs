@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The code of the custom line.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hra0yc-597</para>
+        /// <para>hra0yc-*********</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -30,37 +30,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The ID/Name of the custom line.</para>
+        /// <para>The ID of the custom line.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>597</para>
+        /// <para>5*******</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</para>
+        /// <para>The list of IP address segments. Use a hyphen (-) to separate the start and end IP addresses. Each line represents one segment. You can specify from 1 to 50 segments. For a single IP address, use the format IP1-IP1. IP address segments cannot overlap.</para>
         /// </summary>
         [NameInMap("IpSegmentList")]
         [Validation(Required=false)]
         public List<DescribeCustomLineResponseBodyIpSegmentList> IpSegmentList { get; set; }
         public class DescribeCustomLineResponseBodyIpSegmentList : TeaModel {
             /// <summary>
-            /// <para>The end IP address of the CIDR block.</para>
+            /// <para>The end IP address of the segment.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>11.1.1.3</para>
+            /// <para>1.1.XX.XX</para>
             /// </summary>
             [NameInMap("EndIp")]
             [Validation(Required=false)]
             public string EndIp { get; set; }
 
             /// <summary>
-            /// <para>The start IP address of the CIDR block.</para>
+            /// <para>The start IP address of the segment.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>11.1.1.2</para>
+            /// <para>1.2.XX.XX</para>
             /// </summary>
             [NameInMap("StartIp")]
             [Validation(Required=false)]
@@ -70,13 +70,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>The name of the custom line.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试线路</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B57C121B-A45F-44D8-A9B2-13E5A5044195</para>

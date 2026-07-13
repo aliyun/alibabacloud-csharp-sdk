@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class BindInstanceDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names.</para>
+        /// <para>A list of domain names.</para>
         /// <remarks>
-        /// <para> Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</para>
+        /// <para>Separate multiple domain names with a comma (,). You can specify up to 100 domain names.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,18 +24,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the Alibaba Cloud DNS instance. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-listcloudgtminstances">ListCloudGtmInstances</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sdfasdf</para>
+        /// <para>s********</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: zh</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

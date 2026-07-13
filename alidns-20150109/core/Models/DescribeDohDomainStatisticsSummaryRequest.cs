@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>The default value is the day when you perform the operation.</para>
+        /// <para>The end date of the query. The format is YYYY-MM-DD.</para>
+        /// <para>The default value is the current date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -31,7 +31,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language of the request and response. The default value is <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The number of the page to return. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,8 +67,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>You can query only the DNS records of the last 90 days. <c>The value of StartDate must be greater than or equal to the difference between the current date and 90</c>.</para>
+        /// <para>The start date of the query. The format is YYYY-MM-DD.</para>
+        /// <para>You can query data only from the last 90 days. This means <c>StartDate &gt;= Now - 90</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>

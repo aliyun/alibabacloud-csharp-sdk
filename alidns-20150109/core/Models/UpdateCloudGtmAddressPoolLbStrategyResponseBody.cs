@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateCloudGtmAddressPoolLbStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the address pool. This ID uniquely identifies the address pool.</para>
+        /// <para>The unique ID of the address pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pool-89528023225442**16</para>
+        /// <para>pool-89528023225442****</para>
         /// </summary>
         [NameInMap("AddressPoolId")]
         [Validation(Required=false)]
         public string AddressPoolId { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B57C121B-A45F-44D8-A9B2-13E5A5044195</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the modification operation was successful:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: Operation successful</description></item>
-        /// <item><description>false: Operation failed</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

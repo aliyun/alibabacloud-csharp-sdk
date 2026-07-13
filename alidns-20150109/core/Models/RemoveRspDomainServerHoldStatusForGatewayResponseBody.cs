@@ -9,19 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class RemoveRspDomainServerHoldStatusForGatewayResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details about the access denial. This field appears only when Resource Access Management (RAM) authentication fails.</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
+            /// <para>The unauthorized operation that was attempted.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>CreateUser</para>
+            /// <para>RemoveRspDomainServerHoldStatusForGateway</para>
             /// </summary>
             [NameInMap("AuthAction")]
             [Validation(Required=false)]
             public string AuthAction { get; set; }
 
             /// <summary>
+            /// <para>The display name of the authorized entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2015555733387XXXX</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the owner of the authorized entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10469733312XXX</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
+            /// <para>The identity type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SubUser</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
+            /// <para>The complete diagnostic information after encryption.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
             /// </summary>
@@ -54,6 +67,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
+            /// <para>The reason why authorization failed. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>ExplicitDeny: Access is explicitly denied.</para>
+            /// </description></item>
+            /// <item><description><para>ImplicitDeny: Access is implicitly denied.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
             /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
+            /// <para>The policy type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DlpSend</para>
             /// </summary>
@@ -71,11 +94,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RemoveRspDomainServerHoldStatusForGatewayResponseBodyData Data { get; set; }
         public class RemoveRspDomainServerHoldStatusForGatewayResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -83,6 +111,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
+            /// <summary>
+            /// <para>The domain\&quot;s serverHold status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>enable</para>
+            /// </summary>
             [NameInMap("ServerHoldStatus")]
             [Validation(Required=false)]
             public string ServerHoldStatus { get; set; }
@@ -90,6 +124,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether you can retry the request if it fails. Valid values: <c>true</c> (retry allowed) and <c>false</c> (retry not allowed).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -98,6 +134,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? RecoverableError { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0629502C-6224-5DC9-A8ED-2ED73A2E3931</para>
         /// </summary>
@@ -106,6 +144,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. Valid values: <c>true</c> (succeeded) and <c>false</c> (failed).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribePdnsRequestStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The primary domain name whose statistics you want to query.</para>
+        /// <para>The primary domain name to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -20,21 +20,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>The default value is the day when you query the data.</para>
+        /// <para>The end date of the query. Use the YYYY-MM-DD format.</para>
+        /// <para>The default value is the current date.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-07-14 00:00:00</para>
+        /// <para>2024-07-14</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. The default value is <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 100.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -65,18 +67,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>You can query only records of the last 90 days.</para>
+        /// <para>The start date of the query. Use the YYYY-MM-DD format.</para>
+        /// <para>You can query data from the last 90 days only.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-06-14 00:00:00</para>
+        /// <para>2024-06-14</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The subdomain name whose statistics you want to query.</para>
+        /// <para>The subdomain for which to view statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -86,10 +88,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SubDomain { get; set; }
 
         /// <summary>
-        /// <para>The type of the request statistics that you want to query. Valid values:</para>
+        /// <para>The type of request statistics to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DOMAIN: queries the request statistics by domain name.</description></item>
-        /// <item><description>SUB_DOMAIN: queries the request statistics by subdomain name.</description></item>
+        /// <item><description><para>DOMAIN: queries statistics by domain name.</para>
+        /// </description></item>
+        /// <item><description><para>SUB_DOMAIN: queries statistics by subdomain.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

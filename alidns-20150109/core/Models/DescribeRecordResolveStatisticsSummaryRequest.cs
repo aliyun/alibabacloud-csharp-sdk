@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordResolveStatisticsSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The order in which the returned entries are sorted. Valid values:</para>
+        /// <para>The sorting direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DESC (default): descending order</description></item>
-        /// <item><description>ASC: ascending order</description></item>
+        /// <item><description><para>DESC: descending order (default)</para>
+        /// </description></item>
+        /// <item><description><para>ASC: ascending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The type of the domain name. The parameter value is not case-sensitive. Valid values:</para>
+        /// <para>The type of the domain name. This parameter is not case-sensitive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
-        /// <item><description>CACHE: cache-accelerated domain name</description></item>
+        /// <item><description><para>PUBLIC: an authoritative domain name (default)</para>
+        /// </description></item>
+        /// <item><description><para>CACHE: an authoritative proxy domain name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The end date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-13.</para>
+        /// <para>The end date. Specify the date in the YYYY-MM-DD format. For example: 2023-03-13.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-03-29</para>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The keyword. Keyword is used together with SearchMode.</para>
+        /// <para>The keyword. This parameter is used with SearchMode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 1000.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 1000 and the minimum value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -101,8 +105,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The search mode of the keyword. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LIKE (default): fuzzy search</description></item>
-        /// <item><description>EXACT: exact search</description></item>
+        /// <item><description><para>LIKE: fuzzy search (default)</para>
+        /// </description></item>
+        /// <item><description><para>EXACT: exact match</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>The start date of the time range to be queried. Specify the time in the yyyy-MM-dd format, such as 2023-03-01.</para>
+        /// <para>The start date. Specify the date in the YYYY-MM-DD format. For example: 2023-03-01.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,11 +130,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The threshold for the number of Domain Name System (DNS) requests. You can query the subdomain names at the specified quantity level of DNS requests and query the number of DNS requests for each subdomain name.</para>
-        /// <para>If you do not specify this parameter, the data about the subdomain names that have DNS requests is obtained.</para>
-        /// <para>If you set this parameter to a value less than 0, the data about all subdomain names is obtained.</para>
-        /// <para>If you set this parameter to 0, the data about the subdomain names that do not have DNS requests is obtained.</para>
-        /// <para>If you set this parameter to a value greater than 0, the data about the subdomain names whose number of DNS requests is less than or equal to the value of this parameter is obtained.</para>
+        /// <para>The resolution count threshold. This parameter lets you query subdomains based on their resolution counts.</para>
+        /// <para>If you do not specify this parameter, data for subdomains with a resolution count greater than 0 is returned.</para>
+        /// <para>If you specify a value less than 0, all data is returned.</para>
+        /// <para>If you specify 0, data for subdomains with a resolution count of 0 is returned.</para>
+        /// <para>If you specify a value greater than 0, data for subdomains with a resolution count less than or equal to the specified value is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>

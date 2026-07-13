@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b>: English</description></item>
+        /// <item><description><para><b>zh-CN</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en-US</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests. It can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</para>
+        /// <para>The ID of the instance configuration. For the same access domain name and GTM instance, you can configure both A and AAAA records. This creates two instance configurations. \<c>ConfigId\\</c> uniquely identifies an instance configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Config-000**11</para>

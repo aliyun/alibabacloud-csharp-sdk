@@ -156,8 +156,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
-        /// <item><description>CACHE: cached public domain name</description></item>
+        /// <item><description><para>PUBLIC: authoritative domain name (default)</para>
+        /// </description></item>
+        /// <item><description><para>CACHE: authoritative proxy domain name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,7 +170,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +180,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -191,14 +193,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
+        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38xxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of domain names.</para>
+        /// <para>The total number of instances that match the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the address pool.</para>
+        /// <para>The ID of the address pool. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspools">DescribeDnsGtmInstanceAddressPools</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pool1</para>
+        /// <para>po**</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</para>
+        /// <para>The number of consecutive health checks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The monitored nodes.</para>
+        /// <para>The list of monitoring nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IspCityNode")]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<AddDnsGtmMonitorRequestIspCityNode> IspCityNode { get; set; }
         public class AddDnsGtmMonitorRequestIspCityNode : TeaModel {
             /// <summary>
-            /// <para>The code of the city where the monitored node is deployed.</para>
+            /// <para>The city code of the monitoring node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string CityCode { get; set; }
 
             /// <summary>
-            /// <para>The code of the Internet service provider (ISP) to which the monitored node belongs.</para>
+            /// <para>The carrier code of the monitoring node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -83,69 +83,80 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The extended information. The required parameters vary based on the value of ProtocolType.</para>
+        /// <para>The extended information. The parameters vary based on the protocol type.</para>
         /// <list type="bullet">
         /// <item><description><para>HTTP or HTTPS</para>
         /// <list type="bullet">
-        /// <item><description><para>port: the port that you want to check</para>
+        /// <item><description><para>port: The health check port.</para>
         /// </description></item>
-        /// <item><description><para>host: the host settings</para>
+        /// <item><description><para>host: The Host header.</para>
         /// </description></item>
-        /// <item><description><para>path: the URL path</para>
+        /// <item><description><para>path: The URL path.</para>
         /// </description></item>
-        /// <item><description><para>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</para>
+        /// <item><description><para>code: The health check is considered abnormal if the returned HTTP status code is greater than this value.</para>
         /// </description></item>
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</para>
+        /// <item><description><para>sni: Specifies whether to enable Server Name Indication (SNI). This parameter is used only when the health check protocol is HTTPS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables SNI.</description></item>
-        /// <item><description>false: disables SNI.</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <item><description><para>nodeType: The type of the monitoring node. This parameter is used when the address pool type is DOMAIN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>PING</para>
         /// <list type="bullet">
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>packetNum: the number of ping packets</para>
+        /// <item><description><para>packetNum: The number of ping packets.</para>
         /// </description></item>
-        /// <item><description><para>packetLossRate: the loss rate of ping packets</para>
+        /// <item><description><para>packetLossRate: The packet loss rate.</para>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <item><description><para>nodeType: The type of the monitoring node. This parameter is used when the address pool type is DOMAIN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>TCP</para>
         /// <list type="bullet">
-        /// <item><description><para>port: the port that you want to check</para>
+        /// <item><description><para>port: The health check port.</para>
         /// </description></item>
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <item><description><para>nodeType: The type of the monitoring node. This parameter is used when the address pool type is DOMAIN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// </list>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter must be a JSON string.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</para>
+        /// <para>{&quot;failureRate&quot;:50,&quot;port&quot;:80}</para>
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
@@ -154,15 +165,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The health check protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HTTP</description></item>
-        /// <item><description>HTTPS</description></item>
-        /// <item><description>PING</description></item>
-        /// <item><description>TCP</description></item>
+        /// <item><description><para>HTTP</para>
+        /// </description></item>
+        /// <item><description><para>HTTPS</para>
+        /// </description></item>
+        /// <item><description><para>PING</para>
+        /// </description></item>
+        /// <item><description><para>TCP</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>http</para>
+        /// <para>TCP</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
@@ -173,7 +188,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30000</para>
+        /// <para>3000</para>
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]

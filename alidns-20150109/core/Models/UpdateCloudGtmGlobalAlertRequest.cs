@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
+        /// <item><description><para><c>zh-CN</c>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><c>en-US</c>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,17 +26,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The alert configurations.</para>
+        /// <para>A list of alert configurations.</para>
         /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public List<UpdateCloudGtmGlobalAlertRequestAlertConfig> AlertConfig { get; set; }
         public class UpdateCloudGtmGlobalAlertRequestAlertConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to configure DingTalk notifications. Valid values:</para>
+            /// <para>Whether to send a DingTalk notification when an alert is triggered. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</description></item>
-            /// <item><description>false: does not configure DingTalk notifications.</description></item>
+            /// <item><description><para><c>true</c>: A DingTalk notification is sent.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Do not send a DingTalk notification.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,10 +49,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public bool? DingtalkNotice { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to configure email notifications. Valid values:</para>
+            /// <para>Whether to send an email notification when an alert is triggered. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: configures email notifications. Emails are sent when alerts are triggered.</description></item>
-            /// <item><description>false｜null: does not configure email notifications.</description></item>
+            /// <item><description><para><c>true</c>: An email notification is sent.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c> or <c>null</c>: Do not send an email notification.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,12 +65,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public bool? EmailNotice { get; set; }
 
             /// <summary>
-            /// <para>The type of the alert event. Valid values:</para>
+            /// <para>The alert event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>addr_alert: The address is unavailable.</description></item>
-            /// <item><description>addr_resume: The address becomes available.</description></item>
-            /// <item><description>addr_pool_unavailable: The address pool is unavailable.</description></item>
-            /// <item><description>addr_pool_available: The address pool becomes available.</description></item>
+            /// <item><description><para><c>addr_alert</c>: An address becomes unavailable.</para>
+            /// </description></item>
+            /// <item><description><para><c>addr_resume</c>: An address becomes available.</para>
+            /// </description></item>
+            /// <item><description><para><c>addr_pool_unavailable</c>: An address pool becomes unavailable.</para>
+            /// </description></item>
+            /// <item><description><para><c>addr_pool_available</c>: An address pool becomes available.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,6 +85,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NoticeType { get; set; }
 
             /// <summary>
+            /// <para>The alert threshold for queries per second (QPS).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -83,12 +95,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? QpsThreshold { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to configure text message notifications. Valid values:</para>
+            /// <para>Whether to send a text message notification when an alert is triggered. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: configures text message notifications. Text messages are sent when alerts are triggered.</description></item>
-            /// <item><description>false｜null: does not configure text message notifications.</description></item>
+            /// <item><description><para><c>true</c>: A text message notification is sent.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c> or <c>null</c>: Do not send a text message notification.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Only the China site (aliyun.com) supports text message notifications.</para>
+            /// <para>Text message notifications are available only on the China site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -98,6 +112,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public bool? SmsNotice { get; set; }
 
             /// <summary>
+            /// <para>The alert threshold.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -108,14 +124,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The alert contact groups.</para>
+        /// <para>A list of alert notification groups.</para>
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public List<string> AlertGroup { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token to ensure request idempotence. This token must be unique for each request, contain only ASCII characters, and be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateRecursionRecordWeightEnableStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>

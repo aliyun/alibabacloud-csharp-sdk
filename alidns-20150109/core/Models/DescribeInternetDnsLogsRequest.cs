@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInternetDnsLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The account ID displayed on the Recursive Resolution (Public DNS) page after you activate Alibaba Cloud Public DNS.</para>
+        /// <para>The ID of the Public DNS configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51**4</para>
@@ -23,29 +23,34 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example.com</para>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query (timestamp, unit: milliseconds). &gt;Warning: If the query time span is too large and the amount of resolution logs for the queried domain is excessive, it may lead to a query timeout or inaccurate query results.</para>
+        /// <para>The end of the time range to query. This is a UNIX timestamp in milliseconds.</para>
+        /// <remarks>
+        /// <para>Warning: If you specify a wide time range, many logs may be returned. This can cause a query timeout or inaccurate results.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1709196299999</para>
+        /// <para>1741526400000</para>
         /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public long? EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Return value language, options: </para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese </description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default: en</para>
+        /// <para>Default value: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -55,10 +60,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Module type </para>
+        /// <para>The module type.</para>
         /// <list type="bullet">
-        /// <item><description>AUTHORITY (default): Public Authoritative DNS </description></item>
-        /// <item><description>RECURSION: Public Recursive DNS</description></item>
+        /// <item><description><para>AUTHORITY (default): public authoritative DNS</para>
+        /// </description></item>
+        /// <item><description><para>RECURSION: public recursive DNS</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>Page number, default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -79,7 +86,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size for query.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -93,14 +100,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? PreciseSort { get; set; }
 
         /// <summary>
-        /// <para>Query parameters </para>
+        /// <para>The query parameters.</para>
         /// <list type="bullet">
-        /// <item><description>sourceIp: Source IP address </description></item>
-        /// <item><description>queryNameFuzzy: Domain name (fuzzy value) </description></item>
-        /// <item><description>queryType: Record type </description></item>
-        /// <item><description>value: Resolution result </description></item>
-        /// <item><description>status: Status </description></item>
-        /// <item><description>serverIp: Resolution server IP</description></item>
+        /// <item><description><para>sourceIp: the source IP address</para>
+        /// </description></item>
+        /// <item><description><para>queryNameFuzzy: the domain name (fuzzy match)</para>
+        /// </description></item>
+        /// <item><description><para>queryType: the record type</para>
+        /// </description></item>
+        /// <item><description><para>value: the resolution result</para>
+        /// </description></item>
+        /// <item><description><para>status: the status</para>
+        /// </description></item>
+        /// <item><description><para>serverIp: the IP address of the resolution server</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,10 +128,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecursionProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query (timestamp, unit: milliseconds).</para>
+        /// <para>The start of the time range to query. This is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1709192640000</para>
+        /// <para>1738848000000</para>
         /// </summary>
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]

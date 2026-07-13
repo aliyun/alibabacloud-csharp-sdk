@@ -10,27 +10,31 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeTransferDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the domain name for which you want to view the transfer record.</para>
+        /// <para>The domain name. Use this parameter to query the transfer records of a specific domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alidns.com</para>
+        /// <para>example.top</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The user ID from which the domain name was transferred to the current account.</para>
+        /// <para>The ID of the source account. Use this parameter to query the list of domain names transferred from this account to the current account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>1*******</para>
         /// </summary>
         [NameInMap("FromUserId")]
         [Validation(Required=false)]
         public long? FromUserId { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the response.</para>
+        /// <para>Valid values:</para>
+        /// <para>zh: Chinese</para>
+        /// <para>en: English</para>
+        /// <para>The default value is zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,20 +64,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The user ID to which the domain name was transferred from the current account.</para>
+        /// <para>The ID of the destination account. Use this parameter to query the list of domain names transferred from the current account to this account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>1*******</para>
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]
         public long? TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>The transfer type. Valid values:</para>
+        /// <para>The type of transfer. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IN: The domain name was transferred to the current account.</description></item>
-        /// <item><description>OUT: The domain name was transferred from the current account.</description></item>
+        /// <item><description><para>IN: The list of domain names transferred to the current account.</para>
+        /// </description></item>
+        /// <item><description><para>OUT: The list of domain names transferred from the current account.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

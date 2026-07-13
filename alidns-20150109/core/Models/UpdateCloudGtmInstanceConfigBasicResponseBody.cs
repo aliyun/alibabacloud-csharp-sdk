@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateCloudGtmInstanceConfigBasicResponseBody : TeaModel {
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful: </para>
+        /// <para>Indicates whether the operation was successful:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call succeeded. </description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

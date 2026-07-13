@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the address pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testpool1</para>
+        /// <para>hrbv**</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
@@ -23,17 +23,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the health check configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1</para>
+        /// <para>hra**a</para>
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
+        /// <para>6856BCF6-11D6-4D7E-AC53-FD5799335**B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

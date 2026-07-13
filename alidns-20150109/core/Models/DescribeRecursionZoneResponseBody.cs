@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecursionZoneResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the zone was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-06-06T11:34Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The UNIX timestamp that indicates when the zone was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1533773400000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
+        /// <para>The ID of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SOAR</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Creator { get; set; }
 
         /// <summary>
+        /// <para>The subtype of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUB</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreatorSubType { get; set; }
 
         /// <summary>
+        /// <para>The type of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -76,6 +86,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether recursive proxy for subdomains is enabled. Valid values:</para>
+        /// <para>zone: Disabled. If a non-existent subdomain is requested, an NXDOMAIN response is returned to indicate that the subdomain does not exist.
+        /// record: Enabled. If a non-existent subdomain is requested, the system queries the forwarding and recursion modules in sequence. The final query result is used to respond to the DNS request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>record</para>
         /// </summary>
@@ -84,6 +98,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ProxyPattern { get; set; }
 
         /// <summary>
+        /// <para>The number of DNS records in the zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -92,6 +108,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? RecordCount { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -100,6 +118,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>
@@ -108,6 +128,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The time when the zone was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2018-01-03T08:57Z</para>
         /// </summary>
@@ -116,6 +138,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
+        /// <para>The UNIX timestamp that indicates when the zone was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
         /// </summary>
@@ -124,6 +148,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? UpdateTimestamp { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
         /// </summary>
@@ -132,6 +158,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID. This is the unique identifier of the zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>169438909000011</para>
         /// </summary>
@@ -140,6 +168,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ZoneId { get; set; }
 
         /// <summary>
+        /// <para>The name of the zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cheng.suow.cc</para>
         /// </summary>

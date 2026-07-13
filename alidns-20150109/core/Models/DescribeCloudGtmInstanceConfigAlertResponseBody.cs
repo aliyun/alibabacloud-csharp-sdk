@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The alert configuration mode of the instance. Valid values:</para>
+        /// <para>The alert configuration mode for the instance.</para>
         /// <list type="bullet">
-        /// <item><description>global: global alert configuration</description></item>
-        /// <item><description>instance_config: custom alert configuration</description></item>
+        /// <item><description><para>global: The instance inherits the global alert configuration.</para>
+        /// </description></item>
+        /// <item><description><para>instance_config: The instance uses a custom alert configuration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AlertMode { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</para>
+        /// <para>The ID of the instance configuration. For the same access domain name and GTM instance, you can configure both A and AAAA records. This creates two instance configurations. \<c>ConfigId\\</c> uniquely identifies an instance configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Config-000**11</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0F32959D-417B-4D66-8463-68606605E3E2</para>

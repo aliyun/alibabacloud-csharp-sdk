@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecursionRecordRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the DNS record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

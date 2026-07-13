@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the domain name group for searches in %KeyWord% mode. The value is not case-sensitive.</para>
+        /// <para>The keyword for the group name. The search uses the %KeyWord% pattern and is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Group</para>
@@ -20,7 +20,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: zh</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The start value is <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

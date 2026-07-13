@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class RemoveRspDomainServerHoldStatusForGatewayRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <para>The description of the status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>实名认证通过，解除serverHold状态</para>
+        /// </summary>
         [NameInMap("StatusMsg")]
         [Validation(Required=false)]
         public string StatusMsg { get; set; }

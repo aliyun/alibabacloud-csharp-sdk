@@ -9,11 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmInstanceGlobalConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>The alert configurations.</para>
+        /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public List<UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig> AlertConfig { get; set; }
         public class UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to send alerts through DingTalk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: yes</para>
+            /// </description></item>
+            /// <item><description><para>false: no</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -22,6 +33,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public bool? DingtalkNotice { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to send alerts by email. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: yes</para>
+            /// </description></item>
+            /// <item><description><para>false or null: no</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +49,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public bool? EmailNotice { get; set; }
 
             /// <summary>
+            /// <para>The type of the alert event. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>ADDR_ALERT: An address becomes unavailable.</para>
+            /// </description></item>
+            /// <item><description><para>ADDR_RESUME: An address becomes available.</para>
+            /// </description></item>
+            /// <item><description><para>ADDR_POOL_GROUP_UNAVAILABLE: An address pool group becomes unavailable.</para>
+            /// </description></item>
+            /// <item><description><para>ADDR_POOL_GROUP_AVAILABLE: An address pool group becomes available.</para>
+            /// </description></item>
+            /// <item><description><para>ACCESS_STRATEGY_POOL_GROUP_SWITCH: A switchover occurs between the primary and secondary address pools.</para>
+            /// </description></item>
+            /// <item><description><para>MONITOR_NODE_IP_CHANGE: The IP address of a monitoring node changes.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ADDR_ALERT</para>
             /// </summary>
@@ -38,6 +73,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NoticeType { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to send alerts through text messages. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: yes</para>
+            /// </description></item>
+            /// <item><description><para>false or null: no</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -48,33 +91,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The name of the alert group in the JSON format.</para>
+        /// <para>The alert contact group. The value is a JSON-formatted \<c>List\\&lt;string&gt;\\</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alertGroup1</para>
+        /// <para>[&quot;test1&quot;,&quot;test2&quot;]</para>
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public string AlertGroup { get; set; }
 
         /// <summary>
-        /// <para>The type of the canonical name (CNAME).</para>
+        /// <para>The type of the CNAME record. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to PUBLIC.</description></item>
+        /// <item><description>PUBLIC: The CNAME record is used for Internet access.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>public</para>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("CnameType")]
         [Validation(Required=false)]
         public string CnameType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable force updates. Valid values:</para>
+        /// <para>Specifies whether to forcefully update the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables force update without a conflict alert.</description></item>
-        /// <item><description>false: disables force update. If a conflict occurs, the system displays an alert. null: This valid value of ForceUpdate provides the same information as the false value.</description></item>
+        /// <item><description><para>true: Forcefully updates the instance without checking for conflicts.</para>
+        /// </description></item>
+        /// <item><description><para>false or null: Does not forcefully update the instance. The system checks for conflicts before the update.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,28 +130,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? ForceUpdate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the GTM instance. To obtain the instance ID, call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstances</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-wwo3a3hbz**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. This parameter is required only for the first update.</para>
+        /// <para>The name of the instance. This parameter is required when you update the instance for the first time. It is optional for subsequent updates.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>test-1</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. Valid values: en, zh, and ja. The default value is en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -116,21 +161,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use a custom CNAME domain name or a CNAME domain name assigned by the system to access the instance over the Internet. Valid values:</para>
+        /// <para>The method used to access the instance over the Internet. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SYSTEM_ASSIGN: a CNAME domain name assigned by the system</description></item>
-        /// <item><description>CUSTOM: a custom CNAME domain name</description></item>
+        /// <item><description><para>SYSTEM_ASSIGN: The system assigns a canonical name (CNAME) record. This option is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>CUSTOM: You specify a CNAME record.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>custom</para>
+        /// <para>CUSTOM</para>
         /// </summary>
         [NameInMap("PublicCnameMode")]
         [Validation(Required=false)]
         public string PublicCnameMode { get; set; }
 
         /// <summary>
-        /// <para>The hostname corresponding to the CNAME domain name that is used to access the instance over the Internet.</para>
+        /// <para>The hostname of the CNAME record that is used for Internet access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.rr</para>
@@ -140,7 +187,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string PublicRr { get; set; }
 
         /// <summary>
-        /// <para>The service domain name that is used over the Internet.</para>
+        /// <para>The service domain name that is accessed over the Internet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -150,13 +197,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string PublicUserDomainName { get; set; }
 
         /// <summary>
-        /// <para>The CNAME domain name that is used to access the instance over the Internet, which is the primary domain name. This parameter is required when the PublicCnameMode parameter is set to CUSTOM.</para>
+        /// <para>The primary domain name that is used to access the instance over the Internet using a CNAME record. This parameter is required if you set PublicCnameMode to CUSTOM.</para>
         /// <remarks>
-        /// <para> You must use the primary domain name. Do not include the hostname specified by the PublicRr parameter.</para>
+        /// <para>Enter the primary domain name. Do not include the hostname specified by the PublicRr parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-003.com</para>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("PublicZoneName")]
         [Validation(Required=false)]
@@ -166,7 +213,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The global time to live (TTL).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

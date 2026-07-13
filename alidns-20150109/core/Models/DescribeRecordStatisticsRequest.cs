@@ -10,21 +10,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The primary domain name.</para>
+        /// <para>The primary domain name.
+        /// &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/29751.html">DescribeDomains</a>.
+        /// &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dns-example.com</para>
+        /// <para>exmaple.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The type of the domain name. The parameter value is not case-sensitive. Valid values:</para>
+        /// <para>The type of the domain name. This parameter is not case-sensitive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
-        /// <item><description>CACHE: cache-accelerated domain name</description></item>
+        /// <item><description><para>PUBLIC (default): authoritative domain name</para>
+        /// </description></item>
+        /// <item><description><para>CACHE: authoritative proxy domain name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,8 +39,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query. Specify the end date in the <b>YYYY-MM-DD</b> format.</para>
-        /// <para>The default value is the day when you query the data.</para>
+        /// <para>The end date of the query. The format is <b>YYYY-MM-DD</b>.</para>
+        /// <para>The default value is the current date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -46,7 +50,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the return value. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>zh (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -56,7 +66,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</para>
+        /// <para>The host record. For example, to resolve www\.example.com, set this parameter to www.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,10 +77,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Rr { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query. Specify the start date in the <b>YYYY-MM-DD</b> format.</para>
-        /// <para>You can only query the DNS records within the last 90 days.``</para>
-        /// <para>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</para>
-        /// <para>If the time range is greater than seven days, data is returned on a daily basis.````</para>
+        /// <para>The start date of the query. The format is <b>YYYY-MM-DD</b>.</para>
+        /// <para>The start date must be within the last 90 days.</para>
+        /// <para>If the time range of the query is 7 days or less, data is returned by the hour.</para>
+        /// <para>If the time range of the query is more than 7 days, data is returned by the day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

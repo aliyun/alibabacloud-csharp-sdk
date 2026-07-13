@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of instances within the current account.</para>
+        /// <para>The total number of instances in your account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? MonitorTaskTotalQuota { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</para>

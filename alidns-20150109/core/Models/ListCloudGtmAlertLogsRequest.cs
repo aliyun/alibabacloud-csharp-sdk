@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListCloudGtmAlertLogsRequest : TeaModel {
         /// <summary>
-        /// <para>Alert type:</para>
+        /// <para>The alert type.</para>
         /// <list type="bullet">
-        /// <item><description>ALERT</description></item>
-        /// <item><description>RESUME</description></item>
+        /// <item><description><para>ALERT: An alert is triggered.</para>
+        /// </description></item>
+        /// <item><description><para>RESUME: The service has recovered.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query (timestamp).</para>
+        /// <para>The end of the time range to query. This is a UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,12 +37,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Alarm object types:</para>
+        /// <para>The alert object.</para>
         /// <list type="bullet">
-        /// <item><description>GTM_ADDRESS: Address</description></item>
-        /// <item><description>GTM_ADDRESS_POOL: Address Pool</description></item>
-        /// <item><description>GTM_INSTANCE: Instance</description></item>
-        /// <item><description>GTM_MONITOR_TEMPLATE: Health Check Template</description></item>
+        /// <item><description><para>GTM_ADDRESS: Address</para>
+        /// </description></item>
+        /// <item><description><para>GTM_ADDRESS_POOL: Address pool</para>
+        /// </description></item>
+        /// <item><description><para>GTM_INSTANCE: Instance</para>
+        /// </description></item>
+        /// <item><description><para>GTM_MONITOR_TEMPLATE: Health check template</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>Search keyword, usually an address ID, address pool ID, domain information, etc.</para>
+        /// <para>The keyword for the search. This is usually an address ID, address pool ID, or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pool-895280232254422016</para>
@@ -61,10 +67,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Language type of the returned information:</para>
+        /// <para>The language of the response.</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
+        /// <item><description><para>zh-CN: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +83,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Current page number, starting from <b>1</b>, default is <b>1</b>.</para>
+        /// <para>The current page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +94,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query (timestamp).</para>
+        /// <para>The start of the time range to query. This is a UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the domain name.</para>
+        /// <para>The domain ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>00efd71a-770e-4255-b54e-6fe5659baffe</para>
+        /// <para>00efd71a-7************</para>
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dns-example.top</para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the domain name group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>2****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The DNS resolution line.</para>
+        /// <para>The resolution line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Line { get; set; }
 
         /// <summary>
-        /// <para>The lock state of the DNS record. Valid values: <b>true and false</b>.</para>
+        /// <para>The lock status of the DNS record. Valid values: true and <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? Locked { get; set; }
 
         /// <summary>
-        /// <para>The priority of the mail exchanger (MX) record.</para>
+        /// <para>The priority of the MX record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? Priority { get; set; }
 
         /// <summary>
-        /// <para>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</para>
+        /// <para>The Punycode for the Chinese domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xn--fsq270a.com</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the DNS record.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9999985</para>
+        /// <para>9******</para>
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]
         public string RecordId { get; set; }
 
         /// <summary>
-        /// <para>The description of your DNS record.</para>
+        /// <para>The remarks for the DNS record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -131,8 +131,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>The status of the DNS record. Valid values:</para>
-        /// <para>Enable: enabled</para>
-        /// <para>Disable: disabled</para>
+        /// <para>Enable: The DNS record is enabled.</para>
+        /// <para>Disable: The DNS record is paused.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time for which the DNS record is cached in a local DNS system.</para>
+        /// <para>The time to live (TTL). This specifies the duration for which the DNS record is cached on a local DNS server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>600</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? TTL { get; set; }
 
         /// <summary>
-        /// <para>The type of the DNS record.</para>
+        /// <para>The record type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MX</para>

@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether we recommend that you set the source region to global.</para>
+        /// <para>Indicates whether it is recommended to set a default line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

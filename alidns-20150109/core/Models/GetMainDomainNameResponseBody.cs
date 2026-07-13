@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class GetMainDomainNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The level of the entered domain name.</para>
+        /// <para>The level of the input domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The hostname.</para>
+        /// <para>The host record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RR { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateCloudGtmInstanceConfigLbStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The language in which the returned results are displayed. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b> (default): English</description></item>
+        /// <item><description><para><b>zh-CN</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en-US</b>: English. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +26,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The new policy for load balancing between address pools. Valid values:</para>
+        /// <para>The load balancing policy for the address pools. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>round_robin: All address pools are returned for Domain Name System (DNS) requests from any source. All address pools are sorted in round-robin mode each time they are returned.</description></item>
-        /// <item><description>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</description></item>
-        /// <item><description>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</description></item>
-        /// <item><description>source_nearest: GTM returns different address pools based on the sources of DNS requests. This way, users can access nearby address pools.</description></item>
+        /// <item><description><para>round_robin: Returns all address pools for any DNS request. The address pools are rotated for each request.</para>
+        /// </description></item>
+        /// <item><description><para>sequence: Returns the address pool with the smallest ordinal number. The smaller the ordinal number, the higher the priority. If the primary address pool is unavailable, the next address pool in the sequence is used.</para>
+        /// </description></item>
+        /// <item><description><para>weight: Distributes DNS requests to address pools based on their configured weights.</para>
+        /// </description></item>
+        /// <item><description><para>source_nearest: Returns an address pool based on the proximity of the DNS request source. This implements intelligent DNS resolution and directs users to the nearest access point.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,41 +46,43 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddressPoolLbStrategy { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that is used to ensure the idempotence of the request. The token must be unique among different requests. The token can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</para>
-        /// <para>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the configuration ID of the desired access domain name.</para>
+        /// <para>The ID of the instance configuration. A GTM instance can have multiple configurations for the same domain name, such as one for A records and another for AAAA records. The ConfigId uniquely identifies the configuration that you want to modify.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Config-000**11</para>
+        /// <para>Config-000****</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GTM 3.0 instance for which you want to modify the load balancing policy.</para>
+        /// <para>The ID of the Global Traffic Manager (GTM) 3.0 instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-cn-wwo3a3hbz**</para>
+        /// <para>gtm-cn-wwo3a3h***</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The mode used if the address pool with the smallest sequence number is recovered. This parameter is required when AddressPoolLbStrategy is set to sequence. Valid values:</para>
+        /// <para>The recovery mode for a primary address pool when the load balancing policy is set to sequence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</description></item>
-        /// <item><description>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</description></item>
+        /// <item><description><para>preemptive: The system switches back to the primary address pool as soon as it recovers.</para>
+        /// </description></item>
+        /// <item><description><para>non_preemptive: The system continues to use the current address pool even after the primary address pool recovers.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

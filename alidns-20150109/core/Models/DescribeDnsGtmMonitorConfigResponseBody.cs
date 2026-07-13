@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmMonitorConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the health check configuration was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+        /// <para>The time when the configuration was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-28T13:08Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the health check configuration was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the configuration was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The number of consecutive failures.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
@@ -89,67 +89,75 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the health check configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MonitorConfigId1</para>
+        /// <para>Monit*********</para>
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>The extended information. The required parameters vary based on the value of ProtocolType.</para>
+        /// <para>The extended information. The parameters vary by protocol.</para>
         /// <list type="bullet">
-        /// <item><description><para>HTTP or HTTPS</para>
+        /// <item><description><para>For HTTP and HTTPS:</para>
         /// <list type="bullet">
-        /// <item><description><para>port: the port that you want to check</para>
+        /// <item><description><para>port: The health check port.</para>
         /// </description></item>
-        /// <item><description><para>host: the host settings</para>
+        /// <item><description><para>host: The Host header.</para>
         /// </description></item>
-        /// <item><description><para>path: the URL path</para>
+        /// <item><description><para>path: The URL path.</para>
         /// </description></item>
-        /// <item><description><para>code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value.</para>
+        /// <item><description><para>code: The expected HTTP status code.</para>
         /// </description></item>
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</para>
+        /// <item><description><para>sni: Specifies whether to enable Server Name Indication (SNI). This parameter is valid only when the protocol is set to HTTPS.</para>
         /// <list type="bullet">
-        /// <item><description>true: enables SNI.</description></item>
-        /// <item><description>false: disables SNI.</description></item>
-        /// </list>
+        /// <item><description><para>true: enables SNI.</para>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// </list>
+        /// <item><description><para>false: disables SNI.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>PING:</para>
+        /// <item><description><para>nodeType: The type of the monitoring node for the health check when the address pool type is DOMAIN.</para>
         /// <list type="bullet">
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>IPV4</para>
         /// </description></item>
-        /// <item><description><para>packetNum: the number of ping packets</para>
+        /// <item><description><para>IPV6</para>
         /// </description></item>
-        /// <item><description><para>packetLossRate: the loss rate of ping packets</para>
-        /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>TCP</para>
+        /// <item><description><para>For PING:</para>
         /// <list type="bullet">
-        /// <item><description><para>port: the port that you want to check</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>packetNum: The number of ping packets.</para>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when the address pool type is domain name. Valid values:</para>
+        /// <item><description><para>packetLossRate: The packet loss rate.</para>
+        /// </description></item>
+        /// <item><description><para>nodeType: The type of the monitoring node for the health check when the address pool type is DOMAIN.</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>For TCP:</para>
+        /// <list type="bullet">
+        /// <item><description><para>port: The health check port.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
+        /// <item><description><para>nodeType: The type of the monitoring node for the health check when the address pool type is DOMAIN.</para>
+        /// <list type="bullet">
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -166,21 +174,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The health check protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HTTP</description></item>
-        /// <item><description>HTTPS</description></item>
-        /// <item><description>PING</description></item>
-        /// <item><description>TCP</description></item>
+        /// <item><description><para>HTTP</para>
+        /// </description></item>
+        /// <item><description><para>HTTPS</para>
+        /// </description></item>
+        /// <item><description><para>PING</para>
+        /// </description></item>
+        /// <item><description><para>TCP</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>http</para>
+        /// <para>TCP</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -200,7 +212,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The time when the health check configuration was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+        /// <para>The time when the configuration was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-03T08:57Z</para>
@@ -210,7 +222,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the health check configuration was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the configuration was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

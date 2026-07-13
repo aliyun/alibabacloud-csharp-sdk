@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class CreateCloudGtmAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The address ID. This ID uniquely identifies the address.</para>
+        /// <para>The unique ID of the address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>addr-8951821811436**192</para>
+        /// <para>addr-8951821811436****</para>
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
         public string AddressId { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the address creation operation is successful:</para>
+        /// <para>Indicates whether the address was created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Operation was successful</description></item>
-        /// <item><description>false: Operation was failed</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

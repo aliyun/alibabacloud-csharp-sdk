@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The domain name. Call <a href="https://help.aliyun.com/document_detail/2357286.html">DescribeDomains</a> to obtain the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dns-example.com</para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -31,8 +38,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether detailed attributes are required. Default value: <b>false</b>, which indicates that detailed attributes are not returned.</para>
-        /// <para>If you set this parameter to <b>true</b>, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</para>
+        /// <para>Specifies whether to return detailed attributes of the domain name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The default value is false.</para>
+        /// <para>If you set this parameter to <b>true</b>, the response includes the following parameters: lineType, minTtl, recordLineTreeJson, recordLines, lineCode, lineDisplayName, lineName, regionLines, and slaveDns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

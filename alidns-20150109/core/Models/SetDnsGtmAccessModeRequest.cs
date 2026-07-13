@@ -10,23 +10,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDnsGtmAccessModeRequest : TeaModel {
         /// <summary>
-        /// <para>The switchover policy for primary and secondary address pool sets. Valid values:</para>
+        /// <para>The switchover policy for the address pool collection:</para>
         /// <list type="bullet">
-        /// <item><description>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</description></item>
-        /// <item><description>DEFAULT: the primary address pool set</description></item>
-        /// <item><description>FAILOVER: the secondary address pool set</description></item>
+        /// <item><description><para>AUTO: Automatic switchover</para>
+        /// </description></item>
+        /// <item><description><para>DEFAULT: The primary address pool collection</para>
+        /// </description></item>
+        /// <item><description><para>FAILOVER: The secondary address pool collection</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>auto</para>
+        /// <para>AUTO</para>
         /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
         public string AccessMode { get; set; }
 
         /// <summary>
-        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of certain response parameters. Default: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -36,11 +39,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The ID of the access policy. Call <a href="https://help.aliyun.com/document_detail/2357191.html">DescribeDnsGtmAccessStrategies</a> to obtain the policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>strategyId</para>
+        /// <para>hr**zb</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainStatisticsSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <b>YYYY-MM-DD</b> format.</para>
-        /// <para>The default value is the day when you perform the operation.</para>
+        /// <para>The end date of the query. The format is <b>YYYY-MM-DD</b>.</para>
+        /// <para>The default value is the current date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</para>
+        /// <para>The keyword. The search is performed in \<c>%KeyWord%\\</c> mode and is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The start value is <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. The maximum value is <b>100</b> and the minimum value is <b>1</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,10 +67,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search mode of the keyword. Valid values:</para>
+        /// <para>The search mode for the keyword. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LIKE</b>: fuzzy match (default).</description></item>
-        /// <item><description><b>EXACT</b>: exact match.</description></item>
+        /// <item><description><para><b>LIKE</b> (default): Fuzzy match</para>
+        /// </description></item>
+        /// <item><description><para><b>EXACT</b>: Exact match</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,8 +83,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <b>YYYY-MM-DD</b> format.</para>
-        /// <para>You can only query DNS records of the last 90 days.</para>
+        /// <para>The start date of the query. The format is <b>YYYY-MM-DD</b>.</para>
+        /// <para>You can query data from the last 90 days only. The value of <c>StartDate</c> must be greater than or equal to the current date minus 90 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +95,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The threshold of query volume that can be obtained. You can also obtain data about a domain name with the query volume less than or equal to the threshold. For example, if you set this parameter to 100, you can query domain names with less than 100 queries.</para>
+        /// <para>The threshold for the number of requests. This operation returns domain names whose request count is less than or equal to the specified value. For example, if you set this parameter to 100, domain names with 100 or fewer requests are returned. If you do not specify this parameter, all domain names are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

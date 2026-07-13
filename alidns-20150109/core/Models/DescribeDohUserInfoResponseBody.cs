@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohUserInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of accessed domains.</para>
+        /// <para>The number of added domain names.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("DomainCount")]
         [Validation(Required=false)]
         public int? DomainCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud public DNS user.</para>
+        /// <para>The ID of the Public DNS user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of accessed subdomains.</para>
+        /// <para>The number of added subdomains.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("SubDomainCount")]
         [Validation(Required=false)]

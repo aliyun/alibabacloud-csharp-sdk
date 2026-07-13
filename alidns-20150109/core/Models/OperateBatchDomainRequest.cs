@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class OperateBatchDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The DNS records. You can submit up to 1,000 DNS records.</para>
+        /// <para>The data for the batch operation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainRecordInfo")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <summary>
             /// <para>The domain name.</para>
             /// <remarks>
-            /// <para> You can submit 1 to 1,000 domain names. Due to the limit on the length of HTTP request headers, excessive domain names are ignored. Do not enter more than 1,000 domain names.</para>
+            /// <para>A single request can contain up to 200 entries. Exceeding this limit may cause the request to fail due to the HTTP request header size limit.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The DNS request source. Default value: default.</para>
+            /// <para>The resolution line. Default value: default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Line { get; set; }
 
             /// <summary>
-            /// <para>The new hostname (used only for modification operations, not for external users).</para>
+            /// <para>The new host record. This parameter is used only for modification operations and is for internal use only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mail</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NewRr { get; set; }
 
             /// <summary>
-            /// <para>The new type of the DNS record (used only for modification operations, not for external users).</para>
+            /// <para>The new record type. This parameter is used only for modification operations and is for internal use only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAAA</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NewType { get; set; }
 
             /// <summary>
-            /// <para>The new value of the DNS record (used only for modification operations, not for external users).</para>
+            /// <para>The new record value. This parameter is used only for modification operations and is for internal use only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114.92.XX.XX</para>
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NewValue { get; set; }
 
             /// <summary>
-            /// <para>The priority of the mail exchanger (MX) record.</para>
-            /// <para>This parameter is required if the type of the DNS record is MX. Default value: 10.</para>
+            /// <para>The MX priority.</para>
+            /// <para>This parameter is required if the record type is MX. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The hostname.</para>
+            /// <para>The host record.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
+            /// <para>This parameter is required when <c>Type</c> is <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Rr { get; set; }
 
             /// <summary>
-            /// <para>The time-to-live (TTL) value of the cached DNS record. Unit: seconds. Default value: <em><b>600</b></em>.</para>
+            /// <para>The TTL, in seconds. Default value: <em><b>600</b></em>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600</para>
@@ -106,9 +106,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? Ttl { get; set; }
 
             /// <summary>
-            /// <para>The type of the DNS record. Valid values: A, AAAA, TXT, MX, and CNAME.</para>
+            /// <para>The record type. Examples: A, AAAA, TXT, MX, and CNAME.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
+            /// <para>This parameter is required when <c>Type</c> is <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -119,9 +119,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The value of the DNS record.</para>
+            /// <para>The record value.</para>
             /// <remarks>
-            /// <para> This parameter is required if you set Type to <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
+            /// <para>This parameter is required when <c>Type</c> is <b>RR_ADD</b> or <b>RR_DEL</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -134,10 +134,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The response language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: zh</para>
         /// 
@@ -149,12 +151,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the batch operation. Valid values:</para>
+        /// <para>The batch operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DOMAIN_ADD</b>: adds domain names in batches.</description></item>
-        /// <item><description><b>DOMAIN_DEL</b>: deletes domain names in batches.</description></item>
-        /// <item><description><b>RR_ADD</b>: adds DNS records in batches.</description></item>
-        /// <item><description><b>RR_DEL</b>: deletes DNS records in batches. This operation deletes the DNS records with the specified hostname or record value. If you do not specify the Rr and Value parameters, this operation deletes the DNS records that are added for the specified domain names.</description></item>
+        /// <item><description><para><b>DOMAIN_ADD</b>: adds domain names in batches.</para>
+        /// </description></item>
+        /// <item><description><para><b>DOMAIN_DEL</b>: deletes domain names in batches.</para>
+        /// </description></item>
+        /// <item><description><para><b>RR_ADD</b>: adds DNS records in batches.</para>
+        /// </description></item>
+        /// <item><description><para><b>RR_DEL</b>: deletes DNS records in batches. This operation deletes DNS records that match the conditions specified by <c>Rr</c>, <c>Value</c>, or both. If you do not specify <c>Rr</c> and <c>Value</c>, all DNS records for the specified domain name are deleted.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

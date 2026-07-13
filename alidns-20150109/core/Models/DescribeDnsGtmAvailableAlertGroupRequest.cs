@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAvailableAlertGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetGtmAccessModeRequest : TeaModel {
         /// <summary>
-        /// <para>The desired access policy. Valid values:</para>
+        /// <para>The access mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</b></description></item>
-        /// <item><description><b>DEFAULT: specifies the primary address pool set.</b></description></item>
-        /// <item><description>**FAILOVER: specifies the secondary address pool set.</description></item>
+        /// <item><description><para><b>AUTO</b>: Automatic switchover</para>
+        /// </description></item>
+        /// <item><description><para><b>DEFAULT</b>: The primary address pool collection</para>
+        /// </description></item>
+        /// <item><description><para><b>FAILOVER</b>: The secondary address pool collection</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

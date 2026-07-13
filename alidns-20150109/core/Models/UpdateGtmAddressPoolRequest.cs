@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmAddressPoolRequest : TeaModel {
         /// <summary>
+        /// <para>The list of addresses in the address pool.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Addr")]
@@ -17,7 +18,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<UpdateGtmAddressPoolRequestAddr> Addr { get; set; }
         public class UpdateGtmAddressPoolRequestAddr : TeaModel {
             /// <summary>
-            /// <para>The weight of the address pool that you want to modify.</para>
+            /// <para>The weight of the address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,11 +28,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? LbaWeight { get; set; }
 
             /// <summary>
-            /// <para>The mode of the address pool that you want to modify.</para>
+            /// <para>The mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SMART</b>: Intelligent return</description></item>
-            /// <item><description><b>ONLINE</b>: Always online</description></item>
-            /// <item><description><b>OFFLINE</b>: Always offline</description></item>
+            /// <item><description><para><b>SMART</b>: Intelligent return</para>
+            /// </description></item>
+            /// <item><description><para><b>ONLINE</b>: Always online</para>
+            /// </description></item>
+            /// <item><description><para><b>OFFLINE</b>: Always offline</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,10 +46,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The addresses in the address pool.</para>
+            /// <para>The address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.1.1.1</para>
+            /// <para>1.1.XX.XX</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the address pool that you want to modify.</para>
+        /// <para>The ID of the address pool.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of available addresses in the address pool.</para>
+        /// <para>The minimum number of active addresses in the address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -85,14 +89,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? MinAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The name of the address pool that you want to modify.</para>
+        /// <para>The name of the address pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>名称</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The type of the address pool that you want to modify.</para>
+        /// <para>The type of the address pool. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>IP: IPv4 addresses</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN: Domain names</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

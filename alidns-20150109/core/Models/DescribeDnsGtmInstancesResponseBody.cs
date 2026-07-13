@@ -10,31 +10,33 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Global Traffic Manager (GTM) instances.</para>
+        /// <para>The list of Global Traffic Manager (GTM) instances.</para>
         /// </summary>
         [NameInMap("GtmInstances")]
         [Validation(Required=false)]
         public List<DescribeDnsGtmInstancesResponseBodyGtmInstances> GtmInstances { get; set; }
         public class DescribeDnsGtmInstancesResponseBodyGtmInstances : TeaModel {
             /// <summary>
-            /// <para>The configurations of the instance.</para>
+            /// <para>The configuration of the instance.</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public DescribeDnsGtmInstancesResponseBodyGtmInstancesConfig Config { get; set; }
             public class DescribeDnsGtmInstancesResponseBodyGtmInstancesConfig : TeaModel {
                 /// <summary>
-                /// <para>The alert notification method.</para>
+                /// <para>The alert notification methods.</para>
                 /// </summary>
                 [NameInMap("AlertConfig")]
                 [Validation(Required=false)]
                 public List<DescribeDnsGtmInstancesResponseBodyGtmInstancesConfigAlertConfig> AlertConfig { get; set; }
                 public class DescribeDnsGtmInstancesResponseBodyGtmInstancesConfigAlertConfig : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether DingTalk alert notifications are configured. Valid values:</para>
+                    /// <para>Indicates whether DingTalk notifications are configured. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false | null</description></item>
+                    /// <item><description><para>true: configured</para>
+                    /// </description></item>
+                    /// <item><description><para>false or null: not configured</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -47,8 +49,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     /// <summary>
                     /// <para>Indicates whether email notifications are configured. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false | null</description></item>
+                    /// <item><description><para>true: configured</para>
+                    /// </description></item>
+                    /// <item><description><para>false or null: not configured</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -61,11 +65,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     /// <summary>
                     /// <para>The type of the alert event. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ADDR_ALERT: The address is unavailable.</description></item>
-                    /// <item><description>ADDR_RESUME: The address becomes available.</description></item>
-                    /// <item><description>ADDR_POOL_GROUP_UNAVAILABLE: The address pool set is unavailable.</description></item>
-                    /// <item><description>ADDR_POOL_GROUP_AVAILABLE: The address pool set becomes available.</description></item>
-                    /// <item><description>ACCESS_STRATEGY_POOL_GROUP_SWITCH: Switchover is triggered between the primary and secondary address pools.</description></item>
+                    /// <item><description><para>ADDR_ALERT: The address is unavailable.</para>
+                    /// </description></item>
+                    /// <item><description><para>ADDR_RESUME: The address is restored.</para>
+                    /// </description></item>
+                    /// <item><description><para>ADDR_POOL_GROUP_UNAVAILABLE: The address pool collection is unavailable.</para>
+                    /// </description></item>
+                    /// <item><description><para>ADDR_POOL_GROUP_AVAILABLE: The address pool collection is restored.</para>
+                    /// </description></item>
+                    /// <item><description><para>ACCESS_STRATEGY_POOL_GROUP_SWITCH: A switchover occurs between the primary and secondary address pools.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -76,10 +85,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                     public string NoticeType { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether SMS notifications are configured. Valid values:</para>
+                    /// <para>Indicates whether text message notifications are configured. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false | null</description></item>
+                    /// <item><description><para>true: configured</para>
+                    /// </description></item>
+                    /// <item><description><para>false or null: not configured</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -92,23 +103,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 }
 
                 /// <summary>
-                /// <para>The alert contact groups. The value is in the JSON format.</para>
+                /// <para>The alert contact group. The value is a JSON-formatted list of strings.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>testgroup</para>
+                /// <para>[&quot;test1&quot;,&quot;test2&quot;]</para>
                 /// </summary>
                 [NameInMap("AlertGroup")]
                 [Validation(Required=false)]
                 public string AlertGroup { get; set; }
 
                 /// <summary>
-                /// <para>The type of the CNAME. Valid value:</para>
+                /// <para>The type of the CNAME domain name used for access. Valid value:</para>
                 /// <list type="bullet">
-                /// <item><description>PUBLIC</description></item>
+                /// <item><description>PUBLIC: for Internet access</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>public</para>
+                /// <para>PUBLIC</para>
                 /// </summary>
                 [NameInMap("CnameType")]
                 [Validation(Required=false)]
@@ -125,21 +136,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use a custom CNAME or a system-assigned CNAME to access GTM over the Internet. Valid values:</para>
+                /// <para>The method to access the instance over the Internet using a CNAME record. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CUSTOM: a custom CNAME</description></item>
-                /// <item><description>SYSTEM_ASSIGN: a system-assigned CNAME. You cannot set PublicCnameMode to this value.</description></item>
+                /// <item><description><para>CUSTOM: custom</para>
+                /// </description></item>
+                /// <item><description><para>SYSTEM_ASSIGN: system-assigned (This feature is disabled.)</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>custom</para>
+                /// <para>CUSTOM</para>
                 /// </summary>
                 [NameInMap("PublicCnameMode")]
                 [Validation(Required=false)]
                 public string PublicCnameMode { get; set; }
 
                 /// <summary>
-                /// <para>The hostname of the domain name that is used to access GTM over the Internet.</para>
+                /// <para>The hostname for Internet access.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.rr</para>
@@ -149,44 +162,46 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string PublicRr { get; set; }
 
                 /// <summary>
-                /// <para>The domain name that is used to access GTM over the Internet.</para>
+                /// <para>The user\&quot;s service domain name that is accessible over the Internet.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>example.com</para>
+                /// <para>dns-example.top</para>
                 /// </summary>
                 [NameInMap("PublicUserDomainName")]
                 [Validation(Required=false)]
                 public string PublicUserDomainName { get; set; }
 
                 /// <summary>
-                /// <para>The canonical name (CNAME) that is used to access GTM over the Internet.</para>
+                /// <para>The domain name used for Internet access.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test.rr.gtm-003.com</para>
+                /// <para>gtm-cn-wwo3a3hbz**.dns-example.top</para>
                 /// </summary>
                 [NameInMap("PublicZoneName")]
                 [Validation(Required=false)]
                 public string PublicZoneName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the access policy. Valid values:</para>
+                /// <para>The mode of the access policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>LATENCY: latency-based access policy</description></item>
-                /// <item><description>GEO: geographical location-based access policy</description></item>
+                /// <item><description><para>LATENCY: latency-based</para>
+                /// </description></item>
+                /// <item><description><para>GEO: geography-based</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>geo</para>
+                /// <para>GEO</para>
                 /// </summary>
                 [NameInMap("StrategyMode")]
                 [Validation(Required=false)]
                 public string StrategyMode { get; set; }
 
                 /// <summary>
-                /// <para>The global time to live (TTL).</para>
+                /// <para>The global TTL.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>60</para>
                 /// </summary>
                 [NameInMap("Ttl")]
                 [Validation(Required=false)]
@@ -195,7 +210,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T06:58Z</para>
@@ -205,7 +220,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp that indicates when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1602658709000</para>
@@ -215,7 +230,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-14T06:58Z</para>
@@ -225,7 +240,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp that indicates when the instance expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1602658709000</para>
@@ -235,19 +250,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>instance1</para>
+            /// <para>gtm-cn-wwo3a3hbz**</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the GTM instance. Valid value:</para>
+            /// <para>The billing method. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description>Subscription.</description></item>
+            /// <item><description>Subscription</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -268,7 +283,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The total number of Short Message Service (SMS) notifications.</para>
+            /// <para>The total quota of text message notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -278,7 +293,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? SmsQuota { get; set; }
 
             /// <summary>
-            /// <para>The total number of detection tasks.</para>
+            /// <para>The total number of health check tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -295,7 +310,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public DescribeDnsGtmInstancesResponseBodyGtmInstancesUsedQuota UsedQuota { get; set; }
             public class DescribeDnsGtmInstancesResponseBodyGtmInstancesUsedQuota : TeaModel {
                 /// <summary>
-                /// <para>The total number of sent DingTalk notifications.</para>
+                /// <para>The total number of DingTalk messages that were sent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -305,7 +320,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public int? DingtalkUsedCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of sent email notifications.</para>
+                /// <para>The total number of emails that were sent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -315,7 +330,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public int? EmailUsedCount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of sent SMS notifications.</para>
+                /// <para>The total number of text messages that were sent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -325,7 +340,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public int? SmsUsedCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of created detection tasks.</para>
+                /// <para>The number of health check tasks that were created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -340,7 +355,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <para>The version of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>testVersion1</para>
+            /// <para>standard</para>
             /// </summary>
             [NameInMap("VersionCode")]
             [Validation(Required=false)]
@@ -349,7 +364,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The number of the page returned. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -369,7 +384,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>84314904-D047-4176-A0EC-256D7F68C7F5</para>
@@ -379,7 +394,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -389,7 +404,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

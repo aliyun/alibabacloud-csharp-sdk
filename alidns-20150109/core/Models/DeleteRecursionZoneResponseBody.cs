@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DeleteRecursionZoneResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>
         /// </summary>

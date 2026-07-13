@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListCloudGtmAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>Return language value, options:</para>
+        /// <para>The language of the return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese.</description></item>
-        /// <item><description>en-US: English.</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>IP address or domain name.</para>
+        /// <para>The IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -34,30 +36,32 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The address ID. This ID uniquely identifies the address.</para>
+        /// <para>The unique ID of the address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>addr-89518218114368**92</para>
+        /// <para>addr-89518218114368****</para>
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
         public string AddressId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. The client must generate a unique token for each request. The token can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Indicates the current availability of the address:</para>
+        /// <para>The state of the address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enable: Enabled status</description></item>
-        /// <item><description>disable: Disabled status</description></item>
+        /// <item><description><para>enable: The address is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>disable: The address is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,12 +72,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The health check state of the address. Valid values:</para>
+        /// <para>The health status of the address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok: The address passes all health checks of the referenced health check templates.</description></item>
-        /// <item><description>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</description></item>
-        /// <item><description>ok_no_monitor: The address does not reference a health check template.</description></item>
-        /// <item><description>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</description></item>
+        /// <item><description><para>ok: All health check tasks that are associated with the address are normal.</para>
+        /// </description></item>
+        /// <item><description><para>ok_alert: Some health check tasks that are associated with the address are abnormal, but the address is still considered normal.</para>
+        /// </description></item>
+        /// <item><description><para>ok_no_monitor: No health check template is associated with the address.</para>
+        /// </description></item>
+        /// <item><description><para>exceptional: Some or all health check tasks that are associated with the address are abnormal, and the address is considered abnormal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,17 +92,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the health check template. This ID uniquely identifies the health check template.</para>
+        /// <para>The unique ID of the health check template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mtp-89518052425100**80</para>
+        /// <para>mtp-89518052425100****</para>
         /// </summary>
         [NameInMap("MonitorTemplateId")]
         [Validation(Required=false)]
         public string MonitorTemplateId { get; set; }
 
         /// <summary>
-        /// <para>Address name.</para>
+        /// <para>The name of the address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -104,7 +112,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Current page number, starting from <b>1</b>, default is <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +123,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,11 +134,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Address type:</para>
+        /// <para>The type of the address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
-        /// <item><description>domain</description></item>
+        /// <item><description><para>IPv4</para>
+        /// </description></item>
+        /// <item><description><para>IPv6</para>
+        /// </description></item>
+        /// <item><description><para>domain</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

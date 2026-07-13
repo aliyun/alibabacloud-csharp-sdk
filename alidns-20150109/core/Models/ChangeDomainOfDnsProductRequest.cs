@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainOfDnsProductRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to forcibly bind a domain name to the instance. Valid values:</para>
+        /// <para>Specifies whether to forcefully attach the domain name.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b><b>: no</b></description></item>
-        /// <item><description><b>true</b>: <b>yes</b></description></item>
+        /// <item><description><para><b>false</b>: No</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Yes</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>false</b>.</para>
+        /// <para>The default value is <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,24 +28,27 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud Domain Name System (DNS) instance.</para>
-        /// <para>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances </a>operation to obtain the ID.</para>
+        /// <para>The ID of the Cloud DNS product.
+        /// You can obtain the ID by calling <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-7sb</para>
+        /// <para>i-7XX</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>zh</b>.</para>
+        /// <para>The default value is <b>zh</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -52,20 +58,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The domain name that you want to bind to the instance. If you leave this parameter empty, the domain name that is bound to the instance is unbound from the instance.</para>
+        /// <para>The domain name that you want to attach. If you leave this parameter empty, the currently attached domain name is detached.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>newdomain.com</para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("NewDomain")]
         [Validation(Required=false)]
         public string NewDomain { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client IP address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.1.1.1</para>
+        /// <para>1.1.XX.XX</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]

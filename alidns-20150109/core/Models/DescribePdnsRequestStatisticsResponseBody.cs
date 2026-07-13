@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribePdnsRequestStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics on the DNS requests.</para>
+        /// <para>The list of request statistics.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribePdnsRequestStatisticsResponseBodyData> Data { get; set; }
         public class DescribePdnsRequestStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of DoH requests, including the HTTP and HTTPS requests.</para>
+            /// <para>The total number of DoH requests. This includes the total number of HTTP and HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of HTTPS requests. On the Traffic Analysis tab of the public DNS console, the value of this parameter includes the number of DNS over HTTPs (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</para>
+            /// <para>The number of HTTPS requests. On the Traffic Analysis tab of the Public DNS console, this parameter includes the number of DNS over HTTPS (DoH) requests. Therefore, the number of DoH requests is not separately displayed in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? IpCount { get; set; }
 
             /// <summary>
-            /// <para>The current version does not support this parameter.</para>
+            /// <para>This parameter is not supported in the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string MaxThreatLevel { get; set; }
 
             /// <summary>
-            /// <para>The subdomain name.</para>
+            /// <para>The subdomain.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SubDomain { get; set; }
 
             /// <summary>
-            /// <para>The current version does not support this parameter.</para>
+            /// <para>This parameter is not supported in the current version.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -101,14 +101,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? ThreatCount { get; set; }
 
             /// <summary>
-            /// <para>The current version does not support this parameter.</para>
+            /// <para>This parameter is not supported in the current version.</para>
             /// </summary>
             [NameInMap("ThreatInfo")]
             [Validation(Required=false)]
             public List<DescribePdnsRequestStatisticsResponseBodyDataThreatInfo> ThreatInfo { get; set; }
             public class DescribePdnsRequestStatisticsResponseBodyDataThreatInfo : TeaModel {
                 /// <summary>
-                /// <para>The current version does not support this parameter.</para>
+                /// <para>This parameter is not supported in the current version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 public string ThreatLevel { get; set; }
 
                 /// <summary>
-                /// <para>The current version does not support this parameter.</para>
+                /// <para>This parameter is not supported in the current version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? UdpTotalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based requests.</para>
+            /// <para>The number of IPv4 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4Count { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based HTTP requests.</para>
+            /// <para>The number of IPv4 HTTP requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based HTTPS requests.</para>
+            /// <para>The number of IPv4 HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4HttpsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based requests.</para>
+            /// <para>The number of IPv6 requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V6Count { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based HTTP requests.</para>
+            /// <para>The number of IPv6 HTTP requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V6HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based HTTPS requests.</para>
+            /// <para>The number of IPv6 HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>. Valid values: <b>1 to 100</b>.</para>
+        /// <para>The number of entries returned per page. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49</para>

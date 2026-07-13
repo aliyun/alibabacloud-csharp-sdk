@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAccessStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access policy.</para>
+        /// <para>The switchover policy for the address pool groups:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>AUTO</b>: Automatic switchover</para>
+        /// </description></item>
+        /// <item><description><para><b>DEFAULT</b>: Primary address pool group</para>
+        /// </description></item>
+        /// <item><description><para><b>FAILOVER</b>: Secondary address pool group</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO</para>
@@ -22,8 +30,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The access status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DEFAULT</b>: Indicates normal when the default address pool is accessed.</description></item>
-        /// <item><description><b>FAILOVER</b>: Indicates an exception when a failover address pool is accessed.</description></item>
+        /// <item><description><para><b>DEFAULT</b>: Normal. Access requests are routed to the primary address pool group.</para>
+        /// </description></item>
+        /// <item><description><para><b>FAILOVER</b>: Abnormal. Access requests are routed to the secondary address pool group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +44,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AccessStatus { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether health check is enabled for the default address pool.</para>
+        /// <para>The health check status of the primary address pool group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>OPEN</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOSE</b>: Disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>UNCONFIGURED</b>: Not configured</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OPEN</para>
@@ -44,14 +62,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DefaultAddrPoolMonitorStatus { get; set; }
 
         /// <summary>
-        /// <para>The name of the default address pool.</para>
+        /// <para>The name of the primary address pool group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>地址池1</para>
         /// </summary>
         [NameInMap("DefaultAddrPoolName")]
         [Validation(Required=false)]
         public string DefaultAddrPoolName { get; set; }
 
         /// <summary>
-        /// <para>The availability status of the default address pool.</para>
+        /// <para>The availability status of the primary address pool group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>AVAILABLE</b>: The address pool group is available.</para>
+        /// </description></item>
+        /// <item><description><para><b>NOT_AVAILABLE</b>: The address pool group is unavailable.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>
@@ -61,7 +88,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DefaultAddrPoolStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the default address pool.</para>
+        /// <para>The ID of the primary address pool group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hra0i1</para>
@@ -71,7 +98,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DefultAddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failover address pool.</para>
+        /// <para>The ID of the secondary address pool group. If no secondary address pool group is configured, <b>EMPTY</b> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hra0i2</para>
@@ -81,7 +108,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FailoverAddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether health check is enabled for the failover address pool.</para>
+        /// <para>The health check status of the secondary address pool group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>OPEN</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOSE</b>: Disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>UNCONFIGURED</b>: Not configured</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OPEN</para>
@@ -91,14 +126,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FailoverAddrPoolMonitorStatus { get; set; }
 
         /// <summary>
-        /// <para>The name of the failover address pool.</para>
+        /// <para>The name of the secondary address pool group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>地址池2</para>
         /// </summary>
         [NameInMap("FailoverAddrPoolName")]
         [Validation(Required=false)]
         public string FailoverAddrPoolName { get; set; }
 
         /// <summary>
-        /// <para>The availability status of the failover address pool.</para>
+        /// <para>The availability status of the secondary address pool group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>AVAILABLE</b>: The address pool group is available.</para>
+        /// </description></item>
+        /// <item><description><para><b>NOT_AVAILABLE</b>: The address pool group is unavailable.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>
@@ -108,10 +152,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FailoverAddrPoolStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GTM instance whose access policy details you want to query.</para>
+        /// <para>The ID of the associated Global Traffic Manager (GTM) instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-wwo3a3hbz**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -146,7 +190,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BA1608CA-834C-4E63-8682-8AF0B11ED72D</para>
@@ -156,7 +200,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access policy queried.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hra0hs</para>
@@ -166,7 +210,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The mode of traffic scheduling.</para>
+        /// <para>The policy mode. SELF_DEFINED indicates a custom policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELF_DEFINED</para>
@@ -176,7 +220,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StrategyMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the access policy queried.</para>
+        /// <para>The name of the access policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>全局</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

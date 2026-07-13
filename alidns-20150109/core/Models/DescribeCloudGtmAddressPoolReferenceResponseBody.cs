@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmAddressPoolReferenceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the address pool. This ID uniquely identifies the address pool.</para>
+        /// <para>The unique ID of the address pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pool-89528023225442**16</para>
+        /// <para>pool-89528023225442****</para>
         /// </summary>
         [NameInMap("AddressPoolId")]
         [Validation(Required=false)]
         public string AddressPoolId { get; set; }
 
         /// <summary>
-        /// <para>Address pool name.</para>
+        /// <para>The name of the address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>853805EA-3D47-47D5-9A1A-A45C24313ABD</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsCacheDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain names.</para>
+        /// <para>The list of domain names returned.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<DescribeDnsCacheDomainsResponseBodyDomains> Domains { get; set; }
         public class DescribeDnsCacheDomainsResponseBodyDomains : TeaModel {
             /// <summary>
-            /// <para>The maximum time-to-live (TTL) period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</para>
+            /// <para>The maximum Time to Live (TTL) for cached data retrieved from the origin server. The value ranges from 30 to 86400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86400</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? CacheTtlMax { get; set; }
 
             /// <summary>
-            /// <para>The minimum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</para>
+            /// <para>The minimum TTL for cached data retrieved from the origin server. The value ranges from 30 to 86400.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? CacheTtlMin { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the domain name was added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-17T06:13Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp that indicates when the domain name was added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1660546144000</para>
@@ -57,27 +57,27 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cache-accelerated domain name.</para>
+            /// <para>The ID of the authoritative proxy domain.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>00efd71a-770e-4255-b54e-6fe5659baffe</para>
+            /// <para>00efd71a-770e-*****************</para>
             /// </summary>
             [NameInMap("DomainId")]
             [Validation(Required=false)]
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>The cache-accelerated domain name.</para>
+            /// <para>The name of the authoritative proxy domain.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>dns-example.top</para>
+            /// <para>example.com</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The expiration time of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-02T16:00Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp that indicates when the instance expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1692374400000</para>
@@ -97,17 +97,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the cache-accelerated domain name.</para>
+            /// <para>The ID of the authoritative proxy domain instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i-7bg</para>
+            /// <para>i-7***</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The description of the domain name.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The origin DNS servers.</para>
+            /// <para>The list of origin DNS servers.</para>
             /// </summary>
             [NameInMap("SourceDnsServers")]
             [Validation(Required=false)]
             public List<DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers> SourceDnsServers { get; set; }
             public class DescribeDnsCacheDomainsResponseBodyDomainsSourceDnsServers : TeaModel {
                 /// <summary>
-                /// <para>The domain name or IP address of the origin DNS server.</para>
+                /// <para>The domain name or IP address of the origin server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ns8.alidns.com</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the origin Domain Name System (DNS) server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</para>
+            /// <para>Indicates whether the origin server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUPPORT</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SourceEdns { get; set; }
 
             /// <summary>
-            /// <para>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</para>
+            /// <para>The origin protocol. Valid values: TCP and UDP. The default value is UDP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UDP</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SourceProtocol { get; set; }
 
             /// <summary>
-            /// <para>The time when the configurations of the domain name were updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the domain name was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-22T03:40Z</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the configurations of the domain name were updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp that indicates when the domain name was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671690491000</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? UpdateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The edition code of Alibaba Cloud DNS.</para>
+            /// <para>The version code of Alibaba Cloud DNS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ultimate</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>57121A9C-CDCF-541F-AD39-275D89099420</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateRecursionRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the DNS record.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12*****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
         /// </summary>

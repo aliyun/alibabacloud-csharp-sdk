@@ -10,17 +10,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateGtmRecoveryPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The list of faulty address pools.</para>
+        /// <para>The list of IDs of the fault address pools.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;hra0or&quot;]</para>
+        /// <para>[&quot;hra0**&quot;]</para>
         /// </summary>
         [NameInMap("FaultAddrPool")]
         [Validation(Required=false)]
         public string FaultAddrPool { get; set; }
 
         /// <summary>
-        /// <para>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -40,18 +47,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disaster recovery plan.</para>
+        /// <para>The ID of the disaster recovery plan.&lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describegtmrecoveryplans?spm=a2c4g.11186623.help-menu-29697.d_0_5_1_3_13_5.6dd83618vW4yD7">DescribeGtmRecoveryPlans</a> operation to obtain the ID.
+        /// &lt;props=&quot;intl&quot;&gt;You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describegtmrecoveryplans?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeGtmRecoveryPlans</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>10*******</para>
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]
         public long? RecoveryPlanId { get; set; }
 
         /// <summary>
-        /// <para>The remarks about the disaster recovery plan.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark</para>

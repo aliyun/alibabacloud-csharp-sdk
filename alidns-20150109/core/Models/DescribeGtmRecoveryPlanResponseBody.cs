@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmRecoveryPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the disaster recovery plan was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the disaster recovery plan was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-08-11T05:04Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the disaster recovery plan was created. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1565499867000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The number of faulty address pools.</para>
+        /// <para>The number of abnormal address pools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was last executed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the disaster recovery plan was last executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-08-11T05:04Z</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string LastExecuteTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1565505898000</para>
@@ -108,20 +108,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? LastExecuteTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the disaster recovery plan was last rolled back. The value is a string that represents a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-08-11T06:45Z</para>
+        /// <para>1565505919000</para>
         /// </summary>
         [NameInMap("LastRollbackTime")]
         [Validation(Required=false)]
         public string LastRollbackTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1565505919000</para>
+        /// <para>1565505898000</para>
         /// </summary>
         [NameInMap("LastRollbackTimestamp")]
         [Validation(Required=false)]
@@ -141,14 +141,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the disaster recovery plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>55</para>
+        /// <para>10****</para>
         /// </summary>
         [NameInMap("RecoveryPlanId")]
         [Validation(Required=false)]
         public long? RecoveryPlanId { get; set; }
 
         /// <summary>
-        /// <para>The description of the disaster recovery plan.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark-example</para>
@@ -168,7 +168,15 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the disaster recovery plan.</para>
+        /// <para>The status of the disaster recovery plan:</para>
+        /// <list type="bullet">
+        /// <item><description><para>UNEXECUTED: The disaster recovery plan is not executed.</para>
+        /// </description></item>
+        /// <item><description><para>EXECUTED: The disaster recovery plan is being executed.</para>
+        /// </description></item>
+        /// <item><description><para>ROLLED_BACK: The disaster recovery plan is being rolled back.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>UNEXECUTED</para>
@@ -178,20 +186,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the disaster recovery plan was last updated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-08-11T06:45Z</para>
+        /// <para>2024-03-29T13:20Z</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the disaster recovery plan was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the disaster recovery plan was last updated. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1565499867000</para>
+        /// <para>1565505898000</para>
         /// </summary>
         [NameInMap("UpdateTimestamp")]
         [Validation(Required=false)]

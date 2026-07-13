@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceSystemCnameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The CNAME record assigned by the system.</para>
+        /// <para>The system-assigned CNAME domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-cn-mp91004xxxx.gtm-a2b4.com</para>
+        /// <para>gtm-cn-mp91004xxxx.gtm-a2**.com</para>
         /// </summary>
         [NameInMap("SystemCname")]
         [Validation(Required=false)]

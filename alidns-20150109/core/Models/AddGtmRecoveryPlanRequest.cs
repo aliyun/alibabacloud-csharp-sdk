@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmRecoveryPlanRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of faulty address pools.</para>
+        /// <para>The IDs of the faulty address pools.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FaultAddrPool { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The description of the disaster recovery plan.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark</para>

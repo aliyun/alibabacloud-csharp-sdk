@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test.aliyun.com</para>
+        /// <para>dns-example.top</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The backup cycle.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DAY</para>
+        /// <para>HOUR</para>
         /// </summary>
         [NameInMap("PeriodType")]
         [Validation(Required=false)]
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</para>

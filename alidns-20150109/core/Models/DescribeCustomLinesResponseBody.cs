@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCustomLinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The custom lines.</para>
+        /// <para>The list of custom lines.</para>
         /// </summary>
         [NameInMap("CustomLines")]
         [Validation(Required=false)]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <para>The code of the custom line.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hra0yc-597</para>
+            /// <para>hra0yc-5********</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -30,20 +30,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <para>The unique ID of the custom line.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>597</para>
+            /// <para>5*********</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The list of IP address range. Use a hyphen (-) to separate the start and end IP address ranges. Enter one range per line. You can specify 1 to 50 lines. For a single IP address, enter it as IP1-IP1. IP address ranges cannot overlap.</para>
+            /// </summary>
             [NameInMap("IpSegmentList")]
             [Validation(Required=false)]
             public List<DescribeCustomLinesResponseBodyCustomLinesIpSegmentList> IpSegmentList { get; set; }
             public class DescribeCustomLinesResponseBodyCustomLinesIpSegmentList : TeaModel {
+                /// <summary>
+                /// <para>The end IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.1.XX.XX</para>
+                /// </summary>
                 [NameInMap("EndIp")]
                 [Validation(Required=false)]
                 public string EndIp { get; set; }
 
+                /// <summary>
+                /// <para>The start IP address.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.2.XX.XX</para>
+                /// </summary>
                 [NameInMap("StartIp")]
                 [Validation(Required=false)]
                 public string StartIp { get; set; }
@@ -51,10 +66,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             }
 
             /// <summary>
-            /// <para>The name of the custom line.</para>
+            /// <para>The name of the line.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hra0yd-597</para>
+            /// <para>hra0yd-5********</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -103,7 +118,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

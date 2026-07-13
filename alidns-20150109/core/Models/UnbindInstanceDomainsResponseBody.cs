@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UnbindInstanceDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of domain names that failed to be unbound from the instance.</para>
+        /// <para>The number of domain names that failed to be detached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of domain names that are unbound from the instance.</para>
+        /// <para>The number of domain names that were successfully detached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

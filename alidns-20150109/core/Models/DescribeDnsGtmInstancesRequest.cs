@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword that you use for the query. Fuzzy search by instance ID or instance name is supported.</para>
+        /// <para>The keyword for the query. Fuzzy search by instance ID and instance name is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-testgroupid</para>

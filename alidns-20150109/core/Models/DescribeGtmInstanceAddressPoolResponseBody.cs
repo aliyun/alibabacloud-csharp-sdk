@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceAddressPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of addresses in the address pool queried.</para>
+        /// <para>The number of addresses in the address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -88,6 +88,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the address pool was created. This is a UNIX timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
         /// </summary>
@@ -96,17 +98,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of available addresses in the address pool.</para>
+        /// <para>The minimum number of available addresses.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("MinAvailableAddrNum")]
         [Validation(Required=false)]
         public int? MinAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The health check ID of the address pool.</para>
+        /// <para>The ID of the monitoring configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100abc</para>
@@ -116,11 +118,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether health check was enabled for the address pool. Valid values:</para>
+        /// <para>The monitoring status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OPEN</b>: Enabled</description></item>
-        /// <item><description><b>CLOSE</b>: Disabled</description></item>
-        /// <item><description><b>UNCONFIGURED</b>: Not configured</description></item>
+        /// <item><description><para><b>OPEN</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOSE</b>: Disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>UNCONFIGURED</b>: Not configured</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,13 +137,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>The name of the address pool.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>名称</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -150,8 +158,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The availability status of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AVAILABLE</b>: Available</description></item>
-        /// <item><description><b>NOT_AVAILABLE</b>: Unavailable</description></item>
+        /// <item><description><para><b>AVAILABLE</b>: The address pool is available.</para>
+        /// </description></item>
+        /// <item><description><para><b>NOT_AVAILABLE</b>: The address pool is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,8 +174,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IP</b>: IP address</description></item>
-        /// <item><description><b>DOMAIN</b>: Domain name</description></item>
+        /// <item><description><para><b>IP</b>: IP address</para>
+        /// </description></item>
+        /// <item><description><para><b>DOMAIN</b>: Domain name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,7 +188,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The last time when the address pool was updated.</para>
+        /// <para>The time when the address pool was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-28T13:08Z</para>
@@ -186,7 +198,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>A timestamp that indicates the last time the address pool was updated.</para>
+        /// <para>The time when the address pool was last updated. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

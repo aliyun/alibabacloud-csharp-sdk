@@ -12,13 +12,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the batch operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DOMAIN_ADD</b>: adds domain names in batches.</description></item>
-        /// <item><description><b>DOMAIN_DEL</b>: deletes domain names in batches.</description></item>
-        /// <item><description><b>RR_ADD</b>: adds Domain Name System (DNS) records in batches.</description></item>
-        /// <item><description><b>RR_DEL</b>: deletes DNS records in batches.</description></item>
+        /// <item><description><para><b>DOMAIN_ADD</b>: Batch add domain names.</para>
+        /// </description></item>
+        /// <item><description><para><b>DOMAIN_DEL</b>: Batch delete domain names.</para>
+        /// </description></item>
+        /// <item><description><para><b>RR_ADD</b>: Batch add DNS records.</para>
+        /// </description></item>
+        /// <item><description><para><b>RR_DEL</b>: Batch delete DNS records.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, filtering is not required.</para>
+        /// <para>If you leave this parameter empty, no filter is applied.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,10 +33,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string BatchType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,11 +51,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <remarks>
-        /// <para> If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</para>
+        /// <para>If you specify a task ID, the results of that task are returned. If you leave this parameter empty, the results of the most recent task are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>1****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmSystemLinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The system lines, which are in a tree structure. Only a system line is listed in this example.</para>
+        /// <para>The data of the system lines in a tree structure. The complete data is not listed due to its large size.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;displayName\&quot;:\&quot;Default\&quot;,\&quot;id\&quot;:\&quot;default\&quot;,\&quot;isAvailable\&quot;:true,\&quot;name\&quot;:\&quot;Default\&quot;,\&quot;parentId\&quot;:\&quot;\&quot;}]</para>
+        /// <para>&quot;SystemLinesTree&quot;:&quot;[{\&quot;displayName\&quot;:\&quot;默认\&quot;,\&quot;id\&quot;:\&quot;default\&quot;,\&quot;isAvailable\&quot;:true,\&quot;name\&quot;:\&quot;默认\&quot;,\&quot;parentId\&quot;:\&quot;\&quot;}</para>
         /// </summary>
         [NameInMap("SystemLinesTree")]
         [Validation(Required=false)]

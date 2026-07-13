@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>00efd71a-770e-4255-b54e-6fe5659baffe</para>
+        /// <para>xxxxx6615cf240c697f9f7e207xxxxxx</para>
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dns-example.top</para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the domain name group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>defaultGroup</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</para>
+        /// <para>The Punycode for the Chinese domain name. This parameter is returned only for Chinese domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xn--fsq270a.com</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string PunyCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
+        /// <para>xxx508EF-00FD-xxx9-95A4-1E10BACxxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

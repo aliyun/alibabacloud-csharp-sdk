@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0F32959D-417B-4D66-8463-68606605E3E2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics list.</para>
+        /// <para>The list of statistics.</para>
         /// </summary>
         [NameInMap("Statistics")]
         [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SubDomain { get; set; }
 
             /// <summary>
-            /// <para>Total number of requests.</para>
+            /// <para>The total number of requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14141592653</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based HTTP requests.</para>
+            /// <para>The number of IPv4 HTTP requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3141592653</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv4-based HTTPS requests.</para>
+            /// <para>The number of IPv4 HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3141592653</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V4HttpsCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based HTTP requests.</para>
+            /// <para>The number of IPv6 HTTP requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3141592653</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? V6HttpCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6-based HTTPS requests.</para>
+            /// <para>The number of IPv6 HTTPS requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3141592653</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

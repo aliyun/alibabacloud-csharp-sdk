@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of access policies of the GTM instance.</para>
+        /// <para>The number of access policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? AccessStrategyNum { get; set; }
 
         /// <summary>
-        /// <para>The number of address pools of the GTM instance.</para>
+        /// <para>The number of address pools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,41 +30,43 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? AddressPoolNum { get; set; }
 
         /// <summary>
-        /// <para>The alert group of the GTM instance.</para>
+        /// <para>The alert contact group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\\&quot;Daily test - R\&amp;D group\\&quot;]</para>
+        /// <para>[\&quot;日常测试-研发组\&quot;]</para>
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public string AlertGroup { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the GTM instance to which the service domain name is mapped by using a CNAME record.</para>
+        /// <para>The CNAME access domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1.14.com</para>
+        /// <para>gtm-cn-wwo3a3hbz**.dns-example.top</para>
         /// </summary>
         [NameInMap("Cname")]
         [Validation(Required=false)]
         public string Cname { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the CNAME is a custom domain name or is assigned by the system. Valid values:</para>
+        /// <para>The CNAME access mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SYSTEM_ASSIGN</b></description></item>
-        /// <item><description><b>CUSTOM</b></description></item>
+        /// <item><description><para><b>SYSTEM_ASSIGN</b>: The system assigns a domain name.</para>
+        /// </description></item>
+        /// <item><description><para><b>CUSTOM</b>: You use a custom domain name.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>SYSTEM_ASSIGN</para>
+        /// <para>CUSTOM</para>
         /// </summary>
         [NameInMap("CnameMode")]
         [Validation(Required=false)]
         public string CnameMode { get; set; }
 
         /// <summary>
-        /// <para>The time when the GTM instance was created.</para>
+        /// <para>The time when the instance was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-06-06T11:34Z</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the time when the GTM instance was created.</para>
+        /// <para>The time when the instance was created. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1528284856000</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The time when the GTM instance expires.</para>
+        /// <para>The time when the instance expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-06-06T11:34Z</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the time when the GTM instance expires.</para>
+        /// <para>The expiration time of the instance. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1528284856000</para>
@@ -107,14 +109,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the GTM instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-wwo3a3hbz**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the GTM instance.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -124,10 +126,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy. Valid values:</para>
+        /// <para>The load balancing policy.</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL_RR</b>: round robin</description></item>
-        /// <item><description><b>RATIO</b>: weighted round-robin</description></item>
+        /// <item><description><para><b>ALL_RR</b>: round-robin</para>
+        /// </description></item>
+        /// <item><description><para><b>RATIO</b>: weighted round-robin</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string LbaStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E41AA251-F9BA-48C6-99B2-2B82B26A573A</para>
@@ -158,7 +162,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The global time to live (TTL).</para>
+        /// <para>The global TTL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -168,10 +172,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Ttl { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the application.</para>
+        /// <para>The custom domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://www.example.com">www.example.com</a></para>
+        /// <para>dns-example.top</para>
         /// </summary>
         [NameInMap("UserDomainName")]
         [Validation(Required=false)]

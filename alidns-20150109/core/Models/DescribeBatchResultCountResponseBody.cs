@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The cause of the execution failure.</para>
+        /// <para>The reason why the task failed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>failed_reason</para>
+        /// <para>No match is found for the domain name specified in the file.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
@@ -50,12 +50,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the task. Valid values:</para>
+        /// <para>The status of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: No task for importing domain names or DNS records is submitted.</description></item>
-        /// <item><description><b>0</b>: The task is being processed.</description></item>
-        /// <item><description><b>1</b>: The task is complete.</description></item>
-        /// <item><description><b>2</b>: The task failed.</description></item>
+        /// <item><description><para><b>-1</b>: No task was submitted to import domain names or DNS records.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Processing</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Completed</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The total number of domain names or DNS records that were processed.</para>
+        /// <para>The total number of domain names or DNS records that were successfully processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -79,14 +83,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the last task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>1******</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The total number of DNS records that were processed in batches.</para>
+        /// <para>The total number of records that are processed in batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the target domain name group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>60bb3ef15ace449082cf914ed3ea****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination domain name group.</para>
+        /// <para>The name of the target domain name group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyGroup</para>

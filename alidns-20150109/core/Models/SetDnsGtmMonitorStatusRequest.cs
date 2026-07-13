@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDnsGtmMonitorStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. Valid values: en, zh, and ja. The default value is en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -20,26 +20,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the health check task.</para>
+        /// <para>The ID of the health check configuration. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstanceaddresspool">DescribeDnsGtmInstanceAddressPool</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MonitorConfigId1</para>
+        /// <para>Monito*****</para>
         /// </summary>
         [NameInMap("MonitorConfigId")]
         [Validation(Required=false)]
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the health check feature. Valid values:</para>
+        /// <para>The status to set for the health check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OPEN: enables the health check feature.</description></item>
-        /// <item><description>CLOSE: disables the health check feature.</description></item>
+        /// <item><description><para>OPEN: Enables the health check.</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: Disables the health check.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

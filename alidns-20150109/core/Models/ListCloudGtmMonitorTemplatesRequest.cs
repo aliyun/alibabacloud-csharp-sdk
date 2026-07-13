@@ -12,22 +12,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US (default): English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>en-US</para>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The IP address type of health check nodes. Valid values:</para>
+        /// <para>The IP version of the detection points.</para>
         /// <list type="bullet">
-        /// <item><description>IPv4: applicable when health checks are performed on IPv4 addresses.</description></item>
-        /// <item><description>IPv6: applicable when health checks are performed on IPv6 addresses.</description></item>
+        /// <item><description><para>IPv4: The destination address is an IPv4 address.</para>
+        /// </description></item>
+        /// <item><description><para>IPv6: The destination address is an IPv6 address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the health check probe template, which is recommended to be distinguishable for configuration personnel to differentiate and remember, ideally indicating the health check protocol.</para>
+        /// <para>The name of the health check template. Name the template in a way that helps you distinguish between different health check protocols.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4-Ping</para>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Current page number, starting from <b>1</b>, default is <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,12 +74,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Protocol types for initiating probes to the target IP address:</para>
+        /// <para>The protocol used for the health check.</para>
         /// <list type="bullet">
-        /// <item><description>ping</description></item>
-        /// <item><description>tcp</description></item>
-        /// <item><description>http</description></item>
-        /// <item><description>https</description></item>
+        /// <item><description><para>ping</para>
+        /// </description></item>
+        /// <item><description><para>tcp</para>
+        /// </description></item>
+        /// <item><description><para>http</para>
+        /// </description></item>
+        /// <item><description><para>https</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.</para>
+        /// <para>The ID of the domain name group.</para>
+        /// <para>If you leave this parameter empty or pass an empty string, all domain names are queried.</para>
+        /// <para>If you set this parameter to defaultGroup, domain names in the default group are queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>defaultGroup</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</para>
+        /// <para>The keyword. The search is performed in the %KeyWord% pattern and is not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com</para>
@@ -30,7 +32,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -40,7 +49,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +59,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -63,7 +72,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-resourcegroupid01</para>
+        /// <para>rg-re********</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -72,9 +81,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The search mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LIKE</b>: fuzzy match.</description></item>
-        /// <item><description><b>EXACT</b>: exact match.</description></item>
+        /// <item><description><para><b>LIKE</b>: fuzzy search</para>
+        /// </description></item>
+        /// <item><description><para><b>EXACT</b>: exact search</para>
+        /// </description></item>
         /// </list>
+        /// <para>Default value: LIKE</para>
         /// 
         /// <b>Example:</b>
         /// <para>LIKE</para>
@@ -84,7 +96,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the starmark of the domain name.</para>
+        /// <para>Specifies whether to query starred domain names. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: true</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

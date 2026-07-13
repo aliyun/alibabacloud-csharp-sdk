@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListCloudGtmInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Return language value. Options:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese.</description></item>
-        /// <item><description>en-US: English.</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,10 +34,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. Generate a unique value on the client. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -45,14 +47,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the GTM instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-cn-jmp3qnw**03</para>
+        /// <para>gtm-cn-jmp3qnw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Instance name, used to distinguish the business purpose of the instance.</para>
+        /// <para>The name of the instance. This helps you identify the business purpose of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Current page number, starting from <b>1</b>, default is <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of <b>100</b>, and a default of <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

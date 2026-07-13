@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInstanceDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain names that are bound to the DNS instance.</para>
+        /// <para>A list of domain names attached to the instance.</para>
         /// </summary>
         [NameInMap("InstanceDomains")]
         [Validation(Required=false)]
         public List<DescribeInstanceDomainsResponseBodyInstanceDomains> InstanceDomains { get; set; }
         public class DescribeInstanceDomainsResponseBodyInstanceDomains : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-03-09T02:15Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The UNIX timestamp that indicates when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1583720154000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <para>The domain name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>example.com</para>
+            /// <para>example.top</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. Default: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68386699-8B9E-4D5B-BC4C-75A28F6C2A00</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned on all pages.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmInstanceConfigFullInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policy for load balancing between address pools. Valid values:</para>
+        /// <para>The load balancing policy for the address pools.</para>
         /// <list type="bullet">
-        /// <item><description>round_robin: All address pools are returned for DNS requests from any source. All address pools are sorted in round-robin mode each time they are returned.</description></item>
-        /// <item><description>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</description></item>
-        /// <item><description>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</description></item>
-        /// <item><description>source_nearest: GTM returns different addresses based on the sources of DNS requests. This way, users can access nearby addresses.</description></item>
+        /// <item><description><para>round_robin: Returns all address pools for any DNS request. The address pools are rotated in order for each request.</para>
+        /// </description></item>
+        /// <item><description><para>sequence: Returns the address pool with the smallest ordinal number for any DNS request. The ordinal number indicates the priority of the address pool. A smaller value indicates a higher priority. If the address pool with the smallest ordinal number is unavailable, the address pool with the next smallest ordinal number is returned.</para>
+        /// </description></item>
+        /// <item><description><para>weight: Returns address pools based on the specified weight for each address pool.</para>
+        /// </description></item>
+        /// <item><description><para>source_nearest: Returns different address pools based on the source of the DNS requests. This implements proximity-based access for users.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string AddressPoolLbStrategy { get; set; }
 
+        /// <summary>
+        /// <para>The address pools.</para>
+        /// </summary>
         [NameInMap("AddressPools")]
         [Validation(Required=false)]
         public DescribeCloudGtmInstanceConfigFullInfoResponseBodyAddressPools AddressPools { get; set; }
@@ -210,7 +217,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Alert notification configuration.</para>
+        /// <para>The alert notification configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;NoticeType\&quot;:\&quot;addr_alert\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true},{\&quot;NoticeType\&quot;:\&quot;addr_resume\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true},{\&quot;NoticeType\&quot;:\&quot;addr_pool_unavailable\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true},{\&quot;NoticeType\&quot;:\&quot;addr_pool_available\&quot;,\&quot;SmsNotice\&quot;:true,\&quot;EmailNotice\&quot;:true,\&quot;DingtalkNotice\&quot;:true}]&quot;</para>
@@ -220,20 +227,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AlertConfig { get; set; }
 
         /// <summary>
-        /// <para>Alert notification group.</para>
+        /// <para>The alert group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;Default Contact Group\&quot;]</para>
+        /// <para>[\&quot;云账号报警联系人\&quot;]</para>
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public string AlertGroup { get; set; }
 
         /// <summary>
-        /// <para>The availability state of the access domain name. Valid values:</para>
+        /// <para>The service availability status of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>available: If the access domain name is <b>enabled</b> and the health state of the access domain name is <b>Normal</b>, the access domain name is deemed <b>available</b>.</description></item>
-        /// <item><description>unavailable: If the access domain name is <b>disabled</b> or the health state of the access domain name is <b>Abnormal</b>, the access domain name is deemed <b>unavailable</b>.</description></item>
+        /// <item><description><para><c>available</c>: The instance is enabled and its health status is Normal. The service is available for the access domain name.</para>
+        /// </description></item>
+        /// <item><description><para><c>unavailable</c>: The instance is disabled or its health status is abnormal. The service is unavailable for the access domain name.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -244,10 +253,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AvailableStatus { get; set; }
 
         /// <summary>
-        /// <para>The commodity code. Valid values:</para>
+        /// <para>The commodity code.</para>
         /// <list type="bullet">
-        /// <item><description>dns_gtm_public_cn: the commodity code on the China site (aliyun.com)</description></item>
-        /// <item><description>dns_gtm_public_intl: the commodity code on the international site (alibabacloud.com)</description></item>
+        /// <item><description><para>dns_gtm_public_cn: The commodity code for the China site (aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>dns_gtm_public_intl: The commodity code for the international site (alibabacloud.com).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -258,17 +269,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</para>
+        /// <para>The ID of the instance configuration. You can configure both A and AAAA records for the same access domain name and Global Traffic Manager (GTM) instance. In this case, the GTM instance has two configurations. The ConfigId uniquely identifies an instance configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Config-000**11</para>
+        /// <para>Config-000****</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Instance creation time.</para>
+        /// <para>The time when the instance was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-15T01:46Z</para>
@@ -278,7 +289,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Instance creation time (timestamp).</para>
+        /// <para>The UNIX timestamp that indicates when the instance was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -288,10 +299,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The enabling state of the access domain name. Valid values:</para>
+        /// <para>The enabled status of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</description></item>
-        /// <item><description>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance does not take effect.</description></item>
+        /// <item><description><para>enable: The GTM instance is enabled and its intelligent scheduling policy is active.</para>
+        /// </description></item>
+        /// <item><description><para>disable: The GTM instance is disabled and its intelligent scheduling policy is inactive.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -302,11 +315,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The health state of the access domain name. Valid values:</para>
+        /// <para>The health status of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>ok: The health state of the access domain name is Normal and all address pools that are referenced by the access domain name are available.</description></item>
-        /// <item><description>ok_alert: The health state of the access domain name is Warning and some of the address pools that are referenced by the access domain name are unavailable. In this case, the available address pools are normally used for DNS resolution, but the unavailable address pools cannot be used for DNS resolution.</description></item>
-        /// <item><description>exceptional: The health state of the access domain name is Abnormal and all address pools that are referenced by the access domain name are unavailable. In this case, addresses in the non-empty address pool with the smallest sequence number are preferentially used for fallback resolution. This returns DNS results for clients as much as possible.</description></item>
+        /// <item><description><para>ok: Normal. All address pools referenced by the access domain name are available.</para>
+        /// </description></item>
+        /// <item><description><para>ok_alert: Warning. Some of the address pools referenced by the access domain name are unavailable. In this state, DNS requests are resolved to the available address pools, but not to the unavailable ones.</para>
+        /// </description></item>
+        /// <item><description><para>exceptional: Abnormal. All address pools referenced by the access domain name are unavailable. In this case, DNS requests are resolved to the addresses in the non-empty address pool with the smallest ordinal number as a failover measure. This helps ensure that clients can receive DNS responses.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -317,17 +333,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GTM 3.0 instance.</para>
+        /// <para>The ID of the Global Traffic Manager 3.0 instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-cn-wwo3a3hbz**</para>
+        /// <para>gtm-cn-wwo3a3h****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Schedule instance name.</para>
+        /// <para>The name of the GTM instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -337,7 +353,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>Remarks of the configuration of domain instance.</para>
+        /// <para>The remarks on the instance configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -347,7 +363,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</para>
@@ -357,7 +373,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The GTM access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</para>
+        /// <para>The GTM access domain name. The format is ScheduleHostname + ScheduleZoneName.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -367,7 +383,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleDomainName { get; set; }
 
         /// <summary>
-        /// <para>Host name of the domain accessed by GTM.</para>
+        /// <para>The host record of the GTM access domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -377,11 +393,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleHostname { get; set; }
 
         /// <summary>
-        /// <para>DNS record types for the ScheduleDomainName:</para>
+        /// <para>The DNS record type of the GTM access domain name.</para>
         /// <list type="bullet">
-        /// <item><description>A: IPv4 address</description></item>
-        /// <item><description>AAAA: IPv6 address</description></item>
-        /// <item><description>CNAME: Domain name</description></item>
+        /// <item><description><para>A: IPv4 address</para>
+        /// </description></item>
+        /// <item><description><para>AAAA: IPv6 address</para>
+        /// </description></item>
+        /// <item><description><para>CNAME: canonical name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -392,10 +411,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleRrType { get; set; }
 
         /// <summary>
-        /// <para>The allocation mode of the access domain name. Valid values:</para>
+        /// <para>The assignment mode of the access domain name.</para>
         /// <list type="bullet">
-        /// <item><description>custom: custom allocation. You must specify a custom hostname and associate the hostname with a zone or subzone within the account to which the GTM instance belongs to generate an access domain name.</description></item>
-        /// <item><description>sys_assign: The system assigns an access domain name by default. This mode is no longer supported. Do not choose this mode.</description></item>
+        /// <item><description><para>custom: You can customize the host record and associate it with a primary domain name or a subdomain name under the account to which the GTM instance belongs. This generates the access domain name.</para>
+        /// </description></item>
+        /// <item><description><para>sys_assign: The system assigns a default access domain name. This feature is no longer supported. Do not select this mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -406,7 +427,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleZoneMode { get; set; }
 
         /// <summary>
-        /// <para>The zone (such as example.com) or subzone (such as a.example.com) associated with the GTM access domain name. In most cases, the zone or subzone is hosted in Authoritative DNS Resolution of the Alibaba Cloud DNS console within the account to which the GTM instance belongs.</para>
+        /// <para>The primary domain name (example.com) or subdomain name (a.example.com) of the GTM access domain name. This is typically a domain name hosted in the authoritative zone of the Alibaba Cloud DNS console under the account to which the GTM instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -416,10 +437,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleZoneName { get; set; }
 
         /// <summary>
-        /// <para>The mode used if the address pool with the smallest sequence number is recovered. This parameter is required when AddressPoolLbStrategy is set to sequence. Valid values:</para>
+        /// <para>When the load balancing policy for address pools is sequence, this parameter specifies the service recovery mode for a resource that becomes available again.</para>
         /// <list type="bullet">
-        /// <item><description>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</description></item>
-        /// <item><description>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</description></item>
+        /// <item><description><para>preemptive: The address pool with the smaller ordinal number is preferentially used.</para>
+        /// </description></item>
+        /// <item><description><para>non_preemptive: The current address pool is still used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -430,7 +453,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SequenceLbStrategyMode { get; set; }
 
         /// <summary>
-        /// <para>Global TTL (in seconds), the TTL value for resolving the access domain to addresses in the address pool, which affects the caching time of DNS records in the ISP\&quot;s LocalDNS. Custom TTL values are supported.</para>
+        /// <para>The global time to live (TTL) in seconds. This is the TTL value for the DNS records that map the access domain name to the addresses in the address pool. It affects the cache duration of the DNS records on carrier Local DNS servers. You can customize the TTL value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -440,7 +463,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Ttl { get; set; }
 
         /// <summary>
-        /// <para>Last modified time.</para>
+        /// <para>The time when the instance was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-15T01:46Z</para>
@@ -450,7 +473,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>Last modified time (timestamp).</para>
+        /// <para>The UNIX timestamp that indicates when the instance was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -460,10 +483,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? UpdateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Global Traffic Management version 3.0 instances:</para>
+        /// <para>The edition of the Global Traffic Manager 3.0 instance.</para>
         /// <list type="bullet">
-        /// <item><description>standard: Standard Edition</description></item>
-        /// <item><description>ultimate: Ultimate Edition</description></item>
+        /// <item><description><para>standard: Standard Edition</para>
+        /// </description></item>
+        /// <item><description><para>ultimate: Ultimate Edition</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

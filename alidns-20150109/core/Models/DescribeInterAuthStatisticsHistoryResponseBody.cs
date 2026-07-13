@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInterAuthStatisticsHistoryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>An array of data objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInterAuthStatisticsHistoryResponseBodyData> Data { get; set; }
         public class DescribeInterAuthStatisticsHistoryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The request count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? Count { get; set; }
 
             /// <summary>
+            /// <para>The domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -30,6 +37,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string DomainName { get; set; }
 
             /// <summary>
+            /// <para>The DNS query protocol.</para>
+            /// <list type="bullet">
+            /// <item><description><para>UDP</para>
+            /// </description></item>
+            /// <item><description><para>TCP</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
             /// </summary>
@@ -38,6 +53,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The query type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A</para>
             /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Qtype { get; set; }
 
             /// <summary>
+            /// <para>The success rate or ratio.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -54,6 +73,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? Ratio { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the data point in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1706716800000</para>
             /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
+            /// <para>The zone name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mt2.cn</para>
             /// </summary>
@@ -72,7 +95,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>

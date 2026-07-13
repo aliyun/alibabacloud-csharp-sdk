@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmAddressPoolRequest : TeaModel {
         /// <summary>
-        /// <para>The address pools.</para>
+        /// <para>The list of addresses in the address pool.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Addr")]
@@ -18,40 +18,43 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<AddDnsGtmAddressPoolRequestAddr> Addr { get; set; }
         public class AddDnsGtmAddressPoolRequestAddr : TeaModel {
             /// <summary>
-            /// <para>The address in the address pool.</para>
+            /// <para>The address.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.1.1.1</para>
+            /// <para>223.5.XX.XX</para>
             /// </summary>
             [NameInMap("Addr")]
             [Validation(Required=false)]
             public string Addr { get; set; }
 
             /// <summary>
-            /// <para>The information about the source region of the address. The value of this parameter is a JSON string. Valid values:</para>
+            /// <para>The source region of the address. This parameter is a JSON string.</para>
             /// <list type="bullet">
-            /// <item><description><para>lineCode: the line code of the source region for the address</para>
+            /// <item><description><para>lineCode: The line code of the source region.</para>
             /// </description></item>
-            /// <item><description><para>lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:</para>
+            /// <item><description><para>lineCodeRectifyType: The rectification type for the line code. Default value: AUTO.</para>
             /// <list type="bullet">
-            /// <item><description>NO_NEED: no need for rectification</description></item>
-            /// <item><description>RECTIFIED: rectified</description></item>
-            /// <item><description>AUTO: automatic rectification</description></item>
+            /// <item><description><para>NO_NEED: No rectification is performed.</para>
+            /// </description></item>
+            /// <item><description><para>RECTIFIED: The line code is rectified.</para>
+            /// </description></item>
+            /// <item><description><para>AUTO: The line code is automatically rectified.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>default</para>
+            /// <para>{&quot;lineCodeRectifyType&quot;:&quot;AUTO&quot;, &quot;lineCode&quot;:[]}</para>
             /// </summary>
             [NameInMap("AttributeInfo")]
             [Validation(Required=false)]
             public string AttributeInfo { get; set; }
 
             /// <summary>
-            /// <para>The weight of the address.</para>
+            /// <para>The weight.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -61,23 +64,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? LbaWeight { get; set; }
 
             /// <summary>
-            /// <para>The return mode of the addresses: Valid values:</para>
+            /// <para>The mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SMART: smart return</description></item>
-            /// <item><description>ONLINE: always online</description></item>
-            /// <item><description>OFFLINE: always offline</description></item>
+            /// <item><description><para>SMART: smart return</para>
+            /// </description></item>
+            /// <item><description><para>ONLINE: always online</para>
+            /// </description></item>
+            /// <item><description><para>OFFLINE: always offline</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>online</para>
+            /// <para>SMART</para>
             /// </summary>
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The description of the address pool.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -89,21 +95,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The number of consecutive failures.</para>
+        /// <para>The number of consecutive failed health checks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("EvaluationCount")]
         [Validation(Required=false)]
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance ID.
+        /// &lt;props=&quot;intl&quot;&gt;Call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances">DescribeDnsGtmInstances</a> to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-cs02xyk****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -113,22 +120,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The health check interval. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>60</para>
         /// </summary>
         [NameInMap("Interval")]
         [Validation(Required=false)]
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The nodes for monitoring.</para>
+        /// <para>The list of health check nodes. If MonitorStatus is set to OPEN, you must specify at least one valid health check node.</para>
         /// </summary>
         [NameInMap("IspCityNode")]
         [Validation(Required=false)]
         public List<AddDnsGtmAddressPoolRequestIspCityNode> IspCityNode { get; set; }
         public class AddDnsGtmAddressPoolRequestIspCityNode : TeaModel {
             /// <summary>
-            /// <para>The city code.</para>
-            /// <para>Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.</para>
+            /// <para>The city code. If MonitorStatus is set to OPEN, CityCode is required.</para>
+            /// <para>For information about the valid values, see the response of the DescribeDnsGtmMonitorAvailableConfig operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>503</para>
@@ -138,11 +145,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string CityCode { get; set; }
 
             /// <summary>
-            /// <list type="bullet">
-            /// <item><description>The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.</description></item>
-            /// <item><description>If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</description></item>
-            /// <item><description>If the returned value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</description></item>
-            /// </list>
+            /// <para>If MonitorStatus is set to OPEN, IspCode is required.
+            /// For information about the valid values, see the response of the DescribeDnsGtmMonitorAvailableConfig operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>465</para>
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -164,75 +168,85 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy of the address pool. Valid values:</para>
+        /// <para>The load balancing policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_RR: returns all addresses.</description></item>
-        /// <item><description>RATIO: returns addresses by weight.</description></item>
+        /// <item><description><para>ALL_RR: returns all addresses.</para>
+        /// </description></item>
+        /// <item><description><para>RATIO: returns addresses by weight.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>all_rr</para>
+        /// <para>ALL_RR</para>
         /// </summary>
         [NameInMap("LbaStrategy")]
         [Validation(Required=false)]
         public string LbaStrategy { get; set; }
 
         /// <summary>
-        /// <para>The extended information. The required parameters vary based on the health check protocol.</para>
+        /// <para>The extended information. This parameter is a JSON string. The required parameters vary based on the health check protocol:</para>
         /// <list type="bullet">
-        /// <item><description><para>HTTP or HTTPS:</para>
+        /// <item><description><para>HTTP and HTTPS:</para>
         /// <list type="bullet">
-        /// <item><description><para>port: the port that you want to check</para>
+        /// <item><description><para>port: The health check port.</para>
         /// </description></item>
-        /// <item><description><para>host: the host settings</para>
+        /// <item><description><para>host: The host settings.</para>
         /// </description></item>
-        /// <item><description><para>path: the URL</para>
+        /// <item><description><para>path: The URL path.</para>
         /// </description></item>
-        /// <item><description><para>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</para>
+        /// <item><description><para>code: The return code. A response with a status code greater than this value is considered abnormal. Valid values: 400 and 500.</para>
         /// </description></item>
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>sni: specifies whether to enable Server Name Indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</para>
+        /// <item><description><para>sni: Specifies whether to enable Server Name Indication (SNI). This parameter is available only for the HTTPS protocol.</para>
         /// <list type="bullet">
-        /// <item><description>true: enables SNI.</description></item>
-        /// <item><description>other: disables SNI.</description></item>
-        /// </list>
+        /// <item><description><para>true: Enable SNI.</para>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// </list>
+        /// <item><description><para>Other values: Disable SNI.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>ping:</para>
+        /// <item><description><para>nodeType: The type of the health check node when the address pool type is DOMAIN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>IPV4</para>
         /// </description></item>
-        /// <item><description><para>packetNum: the number of ping packets</para>
+        /// <item><description><para>IPV6</para>
         /// </description></item>
-        /// <item><description><para>packetLossRate: the loss rate of ping packets</para>
+        /// </list>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>PING:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
+        /// <item><description><para>packetNum: The number of ping packets.</para>
+        /// </description></item>
+        /// <item><description><para>packetLossRate: The packet loss rate.</para>
+        /// </description></item>
+        /// <item><description><para>nodeType: The type of the health check node when the address pool type is DOMAIN. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>TCP:</para>
         /// <list type="bullet">
-        /// <item><description><para>port: the port that you want to check</para>
+        /// <item><description><para>port: The health check port.</para>
         /// </description></item>
-        /// <item><description><para>failureRate: the failure rate</para>
+        /// <item><description><para>failureRate: The failure rate.</para>
         /// </description></item>
-        /// <item><description><para>nodeType: the type of the node for monitoring when Type is set to DOMAIN. Valid values:</para>
+        /// <item><description><para>nodeType: The type of the health check node when the address pool type is DOMAIN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -240,21 +254,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;code\&quot;:200,\&quot;path\&quot;:\&quot;\\index.htm\&quot;,\&quot;host\&quot;:\&quot;aliyun.com\&quot;}</para>
+        /// <para>{&quot;failureRate&quot;:50,&quot;port&quot;:80}</para>
         /// </summary>
         [NameInMap("MonitorExtendInfo")]
         [Validation(Required=false)]
         public string MonitorExtendInfo { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the health check feature. If you set this parameter to OPEN, the system verifies the health check configurations. If you set this parameter to CLOSE, the system discards the health check configurations. Default value: CLOSE. Valid values:</para>
+        /// <para>The status of the health check feature. Default value: CLOSE. If you set this parameter to OPEN, the health check configuration is verified. Otherwise, the configuration is ignored.</para>
         /// <list type="bullet">
-        /// <item><description>OPEN: enables the health check feature.</description></item>
-        /// <item><description>CLOSE: disables the health check feature.</description></item>
+        /// <item><description><para>OPEN: enabled</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("MonitorStatus")]
         [Validation(Required=false)]
@@ -274,14 +290,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The health check protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HTTP</description></item>
-        /// <item><description>HTTPS</description></item>
-        /// <item><description>PING</description></item>
-        /// <item><description>TCP</description></item>
+        /// <item><description><para>HTTP</para>
+        /// </description></item>
+        /// <item><description><para>HTTPS</para>
+        /// </description></item>
+        /// <item><description><para>PING</para>
+        /// </description></item>
+        /// <item><description><para>TCP</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>http</para>
+        /// <para>TCP</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
@@ -291,7 +311,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The timeout period. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2000</para>
         /// </summary>
         [NameInMap("Timeout")]
         [Validation(Required=false)]
@@ -300,14 +320,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4: IPv4 address</description></item>
-        /// <item><description>IPV6: IPv6 address</description></item>
-        /// <item><description>DOMAIN: domain name</description></item>
+        /// <item><description><para>IPV4: IPv4 address</para>
+        /// </description></item>
+        /// <item><description><para>IPV6: IPv6 address</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN: domain name</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

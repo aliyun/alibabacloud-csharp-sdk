@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the address pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testpool1</para>
+        /// <para>test*****</para>
         /// </summary>
         [NameInMap("AddrPoolId")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the time when the address pool was created.</para>
+        /// <para>The time when the address pool was created. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -102,14 +102,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy for the address pool. Valid values:</para>
+        /// <para>The load balancing policy.</para>
         /// <list type="bullet">
-        /// <item><description>ALL_RR: returns all addresses.</description></item>
-        /// <item><description>RATIO: returns addresses by weight.</description></item>
+        /// <item><description><para>ALL_RR: Returns all addresses.</para>
+        /// </description></item>
+        /// <item><description><para>RATIO: Returns addresses by weight.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>all_rr</para>
+        /// <para>ALL_RR</para>
         /// </summary>
         [NameInMap("LbaStrategy")]
         [Validation(Required=false)]
@@ -126,15 +128,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>Indicates the status of the health check. Valid values:</para>
+        /// <para>The health check status of the address pool.</para>
         /// <list type="bullet">
-        /// <item><description>OPEN: The health check is enabled.</description></item>
-        /// <item><description>CLOSE: The health check is disabled.</description></item>
-        /// <item><description>UNCONFIGURED: The health check is not configured.</description></item>
+        /// <item><description><para>OPEN: Enabled</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: Disabled</para>
+        /// </description></item>
+        /// <item><description><para>UNCONFIGURED: Not configured</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("MonitorStatus")]
         [Validation(Required=false)]
@@ -151,7 +156,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -161,15 +166,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the address pool. Valid values:</para>
+        /// <para>The type of the address pool.</para>
         /// <list type="bullet">
-        /// <item><description>IPV4: IPv4 address</description></item>
-        /// <item><description>IPV6: IPv6 address</description></item>
-        /// <item><description>DOMAIN: domain name</description></item>
+        /// <item><description><para>IPV4: IPv4 address</para>
+        /// </description></item>
+        /// <item><description><para>IPV6: IPv6 address</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN: Domain name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
@@ -186,7 +194,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates the time when the address pool was last updated.</para>
+        /// <para>The time when the address pool was last updated. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

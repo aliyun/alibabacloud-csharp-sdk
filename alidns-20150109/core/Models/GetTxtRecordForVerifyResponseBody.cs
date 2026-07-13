@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The domain name.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, it is not returned.</para>
+        /// <para>This parameter is not returned if no value is specified for the DomainName parameter in the request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The top-level domain name.</para>
+        /// <para>The top-level domain (TLD).</para>
         /// 
         /// <b>Example:</b>
         /// <para>com</para>
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ParentDomainName { get; set; }
 
         /// <summary>
-        /// <para>The hostname.</para>
+        /// <para>The host record.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliyunRetrieval</para>
+        /// <para>aliyun******</para>
         /// </summary>
         [NameInMap("RR")]
         [Validation(Required=false)]
         public string RR { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9CC0D642-49D4-48DE-A1A5-9F218652E4A7</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The record value.</para>
         /// <remarks>
-        /// <para> The validity period is three days.</para>
+        /// <para>The value is valid for three days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

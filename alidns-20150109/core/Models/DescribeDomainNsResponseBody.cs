@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainNsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether all the name servers are Alibaba Cloud DNS servers.</para>
+        /// <para>Indicates whether all name servers are Alibaba Cloud DNS servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? AllAliDns { get; set; }
 
         /// <summary>
-        /// <para>The cause code of the detection failure.</para>
+        /// <para>The error code returned if the detection fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DnsCheck.Failed</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the name servers include Alibaba Cloud DNS servers.</para>
+        /// <para>Indicates whether the list of name servers includes Alibaba Cloud DNS servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? IncludeAliDns { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16C7DC7A-2FA7-4D14-8B12-88A2BB6373DB</para>

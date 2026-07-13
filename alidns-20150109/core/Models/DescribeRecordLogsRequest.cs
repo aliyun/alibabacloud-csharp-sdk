@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecordLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</para>
+        /// <para>The domain name.&lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/29751.html">DescribeDomains</a> operation to obtain the domain name.&lt;props=&quot;intl&quot;&gt;You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains">DescribeDomains</a> operation to obtain the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</para>
+        /// <para>The keyword. The system searches for the keyword in the &quot;%KeyWord%&quot; pattern. The search is not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query. Specify the start date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>The start of the time range to query. The format is <b>YYYY-MM-DD</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-12</para>
@@ -71,17 +77,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client IP address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.1.1.1</para>
+        /// <para>192.0.2.1</para>
         /// </summary>
         [NameInMap("UserClientIp")]
         [Validation(Required=false)]
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query. Specify the end date in the <b>YYYY-MM-DD</b> format.</para>
+        /// <para>The end of the time range to query. The format is <b>YYYY-MM-DD</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-12</para>

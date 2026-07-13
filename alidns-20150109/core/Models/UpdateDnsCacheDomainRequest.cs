@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsCacheDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</para>
+        /// <para>The maximum TTL for cached data retrieved from the origin server. The value ranges from 30 to 86400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? CacheTtlMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</para>
+        /// <para>The minimum time-to-live (TTL) for cached data retrieved from the origin server. The value ranges from 30 to 86400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -30,32 +30,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? CacheTtlMin { get; set; }
 
         /// <summary>
-        /// <para>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtian the domain name.</para>
+        /// <para>The domain name.&lt;props=&quot;china&quot;&gt; To query the domain name, call <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a>.
+        /// &lt;props=&quot;intl&quot;&gt;To query the domain name, call <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dns.example.com</para>
+        /// <para>example.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the cache-accelerated domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a> operation to obtain the ID.</para>
+        /// <para>The ID of the authoritative proxy domain name instance.&lt;props=&quot;china&quot;&gt; To query the instance ID, call <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c4g.11186623.help-menu-search-29697.d_0">ListCloudGtmInstances</a>.
+        /// &lt;props=&quot;intl&quot;&gt;To query the instance ID, call <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dns-sg-l9u2ux1fw01</para>
+        /// <para>dns-sg-l*******</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English Default: <b>zh</b></description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
+        /// <para><b>zh</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -65,17 +70,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</para>
+        /// <para>A list of origin DNS servers. You can add up to 10 servers.</para>
         /// </summary>
         [NameInMap("SourceDnsServer")]
         [Validation(Required=false)]
         public List<UpdateDnsCacheDomainRequestSourceDnsServer> SourceDnsServer { get; set; }
         public class UpdateDnsCacheDomainRequestSourceDnsServer : TeaModel {
             /// <summary>
-            /// <para>The domain name or IP address of the origin DNS server.</para>
+            /// <para>The domain name or IP address of the origin server.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>223.5.5.5</para>
+            /// <para>192.168.0.1</para>
             /// </summary>
             [NameInMap("Host")]
             [Validation(Required=false)]
@@ -94,7 +99,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</para>
+        /// <para>Specifies whether the origin server supports Extension Mechanisms for DNS (EDNS).
+        /// SUPPORT: The origin server supports EDNS.
+        /// NOT_SUPPORT: The origin server does not support EDNS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUPPORT</para>
@@ -104,7 +111,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SourceEdns { get; set; }
 
         /// <summary>
-        /// <para>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</para>
+        /// <para>The origin protocol. Valid values: TCP and UDP. Default value: UDP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UDP</para>

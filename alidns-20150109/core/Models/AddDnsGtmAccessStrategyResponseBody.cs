@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddDnsGtmAccessStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access policy.</para>
+        /// <para>The access policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testStrategyId1</para>

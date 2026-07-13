@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInterAuthStatisticsSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public int? CurPage { get; set; }
 
+        /// <summary>
+        /// <para>The paginated data.</para>
+        /// </summary>
         [NameInMap("PageData")]
         [Validation(Required=false)]
         public List<DescribeInterAuthStatisticsSummaryResponseBodyPageData> PageData { get; set; }
         public class DescribeInterAuthStatisticsSummaryResponseBodyPageData : TeaModel {
             /// <summary>
+            /// <para>The start time of the current period (the 0th second of the minute).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1776754800000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? AggrTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The number of requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? Count { get; set; }
 
             /// <summary>
+            /// <para>The domain name. Queries the transfer records of the specified domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>nervermsf.com</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string DomainName { get; set; }
 
             /// <summary>
+            /// <para>The fluctuation rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>19</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public int? FluctuationValue { get; set; }
 
             /// <summary>
+            /// <para>The resolution line.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Line { get; set; }
 
             /// <summary>
+            /// <para>The value of the previous period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2227</para>
             /// </summary>
@@ -70,6 +87,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? PreviousCount { get; set; }
 
             /// <summary>
+            /// <para>The protocol type of the DNS resolution query request. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>UDP</para>
+            /// </description></item>
+            /// <item><description><para>TCP.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>TCP%DF\&quot;</para>
             /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The request record type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A</para>
             /// </summary>
@@ -86,6 +113,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Qtype { get; set; }
 
             /// <summary>
+            /// <para>The success rate or proportion.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -94,6 +123,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? Ratio { get; set; }
 
             /// <summary>
+            /// <para>The DNS response code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -102,6 +133,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Rcode { get; set; }
 
             /// <summary>
+            /// <para>The source IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>112.16.17.203</para>
             /// </summary>
@@ -110,6 +143,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SourceIp { get; set; }
 
             /// <summary>
+            /// <para>The ISP of the request source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>telecom</para>
             /// </summary>
@@ -118,6 +153,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SourceIsp { get; set; }
 
             /// <summary>
+            /// <para>The source region for copying the image. If not specified, a random region is selected.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
             /// </summary>
@@ -126,6 +163,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string SourceRegion { get; set; }
 
             /// <summary>
+            /// <para>The zone name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>longzi.xyz</para>
             /// </summary>
@@ -136,6 +175,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -154,6 +195,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -162,6 +205,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalPage { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>48</para>
         /// </summary>

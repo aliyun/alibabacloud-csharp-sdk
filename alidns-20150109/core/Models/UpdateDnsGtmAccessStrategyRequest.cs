@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateDnsGtmAccessStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The primary/secondary switchover policy for address pool sets. Valid values:</para>
+        /// <para>The switchover policy for the address pool collection:</para>
         /// <list type="bullet">
-        /// <item><description>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</description></item>
-        /// <item><description>DEFAULT: the primary address pool set</description></item>
-        /// <item><description>FAILOVER: the secondary address pool set</description></item>
+        /// <item><description><para>AUTO: Automatic switchover</para>
+        /// </description></item>
+        /// <item><description><para>DEFAULT: Primary address pool collection</para>
+        /// </description></item>
+        /// <item><description><para>FAILOVER: Failover address pool collection</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AccessMode { get; set; }
 
         /// <summary>
-        /// <para>The address pools in the primary address pool set.</para>
+        /// <para>The primary address pool collection.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DefaultAddrPool")]
@@ -33,17 +36,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<UpdateDnsGtmAccessStrategyRequestDefaultAddrPool> DefaultAddrPool { get; set; }
         public class UpdateDnsGtmAccessStrategyRequestDefaultAddrPool : TeaModel {
             /// <summary>
-            /// <para>The ID of the address pool in the primary address pool set.</para>
+            /// <para>The ID of the address pool in the primary address pool collection.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pool1</para>
+            /// <para>po***</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The weight of the address pool in the primary address pool set.</para>
+            /// <para>The weight of the address pool in the primary address pool collection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -55,51 +58,58 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The type of the primary address pool. Valid values:</para>
+        /// <para>The type of the primary address pool:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// <item><description>DOMAIN</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("DefaultAddrPoolType")]
         [Validation(Required=false)]
         public string DefaultAddrPoolType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Domain Name System (DNS) resolution with optimal latency for the primary address pool set. Valid values:</para>
+        /// <para>Specifies whether to enable latency-based scheduling for the primary address pool collection:</para>
         /// <list type="bullet">
-        /// <item><description>OPEN</description></item>
-        /// <item><description>CLOSE</description></item>
+        /// <item><description><para>OPEN: Enabled</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("DefaultLatencyOptimization")]
         [Validation(Required=false)]
         public string DefaultLatencyOptimization { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy of the primary address pool set. Valid values:</para>
+        /// <para>The load balancing policy for the primary address pool collection:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_RR: returns all addresses.</description></item>
-        /// <item><description>RATIO: returns addresses by weight.</description></item>
+        /// <item><description><para>ALL_RR: Returns all addresses.</para>
+        /// </description></item>
+        /// <item><description><para>RATIO: Returns addresses by weight.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>all_rr</para>
+        /// <para>ALL_RR</para>
         /// </summary>
         [NameInMap("DefaultLbaStrategy")]
         [Validation(Required=false)]
         public string DefaultLbaStrategy { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of addresses returned from the primary address pool set.</para>
+        /// <para>The maximum number of addresses returned from the primary address pool collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +119,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? DefaultMaxReturnAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of available addresses in the primary address pool set.</para>
+        /// <para>The minimum number of available addresses in the primary address pool collection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,24 +130,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? DefaultMinAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The address pools in the secondary address pool set. If no address pool exists in the secondary address pool set, set this parameter to EMPTY.</para>
+        /// <para>The failover address pool collection. If no failover address pool collection is configured, enter &quot;EMPTY&quot;.</para>
         /// </summary>
         [NameInMap("FailoverAddrPool")]
         [Validation(Required=false)]
         public List<UpdateDnsGtmAccessStrategyRequestFailoverAddrPool> FailoverAddrPool { get; set; }
         public class UpdateDnsGtmAccessStrategyRequestFailoverAddrPool : TeaModel {
             /// <summary>
-            /// <para>The ID of the address pool in the secondary address pool set.</para>
+            /// <para>The ID of the address pool in the failover address pool collection.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pool1</para>
+            /// <para>po**</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The weight of the address pool in the secondary address pool set.</para>
+            /// <para>The weight of the address pool in the failover address pool collection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -149,50 +159,57 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The type of the secondary address pool. Valid values:</para>
+        /// <para>The type of the failover address pool:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// <item><description>DOMAIN</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("FailoverAddrPoolType")]
         [Validation(Required=false)]
         public string FailoverAddrPoolType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable DNS resolution with optimal latency for the secondary address pool set. Valid values:</para>
+        /// <para>Specifies whether to enable latency-based scheduling for the failover address pool collection:</para>
         /// <list type="bullet">
-        /// <item><description>OPEN</description></item>
-        /// <item><description>CLOSE</description></item>
+        /// <item><description><para>OPEN: Enabled</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("FailoverLatencyOptimization")]
         [Validation(Required=false)]
         public string FailoverLatencyOptimization { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy of the secondary address pool set. Valid values:</para>
+        /// <para>The load balancing policy for the failover address pool collection:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_RR: returns all addresses.</description></item>
-        /// <item><description>RATIO: returns addresses by weight.</description></item>
+        /// <item><description><para>ALL_RR: Returns all addresses.</para>
+        /// </description></item>
+        /// <item><description><para>RATIO: Returns addresses by weight.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>all_rr</para>
+        /// <para>ALL_RR</para>
         /// </summary>
         [NameInMap("FailoverLbaStrategy")]
         [Validation(Required=false)]
         public string FailoverLbaStrategy { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of addresses returned from the secondary address pool set.</para>
+        /// <para>The maximum number of addresses returned from the failover address pool collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -202,7 +219,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailoverMaxReturnAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of available addresses in the secondary address pool set.</para>
+        /// <para>The minimum number of available addresses in the failover address pool collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -212,7 +229,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailoverMinAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of the response. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -222,7 +239,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The line codes of the source regions. Example: <c>[&quot;default&quot;, &quot;drpeng&quot;]</c>, which indicates the global line and Dr. Peng Group line.</para>
+        /// <para>The line codes of the access regions. For example, <c>[&quot;default&quot;, &quot;drpeng&quot;]</c> specifies the global line and the Dr. Peng line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;default&quot;, &quot;drpeng&quot;]</para>
@@ -232,22 +249,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lines { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access policy.</para>
+        /// <para>The ID of the policy. To obtain the policy ID, call <a href="https://help.aliyun.com/document_detail/2357191.html">DescribeDnsGtmAccessStrategies</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>StrategyId1</para>
+        /// <para>hrb**</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
         public string StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the access policy.</para>
+        /// <para>The name of the policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>StrategyName1</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

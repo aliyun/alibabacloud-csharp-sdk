@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,30 +26,30 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique token for each request. The token can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration. You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the configuration ID of the access domain name.</para>
+        /// <para>The ID of the instance configuration. A GTM instance can have two configurations, an A record and an AAAA record, for the same access domain name. The ConfigId uniquely identifies one of the configurations. To obtain the ConfigId, call the <a href="https://help.aliyun.com/document_detail/2797349.html">ListCloudGtmInstanceConfigs</a> operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>config-000**1</para>
+        /// <para>config-00****</para>
         /// </summary>
         [NameInMap("ConfigId")]
         [Validation(Required=false)]
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The access domain name that is configured for the desired GTM 3.0 instance. You can delete only one access domain name.</para>
+        /// <para>The ID of the Global Traffic Manager (GTM) 3.0 instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gtm-cn-jmp3qnw**03</para>
+        /// <para>gtm-cn-jmp3qnw****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

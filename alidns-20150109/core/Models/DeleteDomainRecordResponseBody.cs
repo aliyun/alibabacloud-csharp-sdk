@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the DNS record.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9999985</para>
+        /// <para>99******</para>
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]

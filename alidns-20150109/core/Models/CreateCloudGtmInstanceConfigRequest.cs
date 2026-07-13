@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,15 +26,23 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>The billing method for the instance configuration:</para>
+        /// <list type="bullet">
+        /// <item><description><para>prepay: Subscription. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>postpay: Pay-as-you-go.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>postpay/prepay</para>
+        /// <para>postpay</para>
         /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can specify a custom value, but you must make sure that the value is unique among different requests. The token can contain up to 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
@@ -42,10 +52,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The enabling state of the access domain name. Valid values:</para>
+        /// <para>The status of the domain name instance:</para>
         /// <list type="bullet">
-        /// <item><description>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</description></item>
-        /// <item><description>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance is unavailable.</description></item>
+        /// <item><description><para>enable: Enabled. The intelligent scheduling policy of the GTM instance is active.</para>
+        /// </description></item>
+        /// <item><description><para>disable: Disabled. The intelligent scheduling policy of the GTM instance is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +68,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Global Traffic Manager (GTM) 3.0 instance. This ID uniquely identifies a GTM 3.0 instance.</para>
+        /// <para>The unique ID of the GTM 3.0 instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gtm-cn-jmp3qnw**03</para>
@@ -66,7 +78,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the access domain name.</para>
+        /// <para>The remark.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -76,7 +88,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the access domain name.</para>
+        /// <para>The host record of the GTM access domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -86,11 +98,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleHostname { get; set; }
 
         /// <summary>
-        /// <para>The type of the Domain Name System (DNS) record configured for the access domain name. Valid values:</para>
+        /// <para>The DNS record type of the access domain name:</para>
         /// <list type="bullet">
-        /// <item><description>A: IPv4 address</description></item>
-        /// <item><description>AAAA: IPv6 address</description></item>
-        /// <item><description>CNAME: domain name</description></item>
+        /// <item><description><para>A: IPv4 address</para>
+        /// </description></item>
+        /// <item><description><para>AAAA: IPv6 address</para>
+        /// </description></item>
+        /// <item><description><para>CNAME: Canonical name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,10 +116,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleRrType { get; set; }
 
         /// <summary>
-        /// <para>The configuration mode of the access domain name. Valid values:</para>
+        /// <para>The configuration mode for the access domain name:</para>
         /// <list type="bullet">
-        /// <item><description>sys_assign: system allocation. This mode is not supported.</description></item>
-        /// <item><description>custom: custom allocation. You must select a zone within the account to which the instance belongs and enter a hostname to generate an access domain name.</description></item>
+        /// <item><description><para>sys_assign: The system assigns a domain name. This mode is no longer supported.</para>
+        /// </description></item>
+        /// <item><description><para>custom: Custom mode. Select a domain name under the account that owns the instance and enter a host record to generate the access domain name.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +132,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleZoneMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the parent zone for the access domain name configured in GTM. In most cases, the value of this parameter is the name of a zone hosted by Alibaba Cloud DNS. This zone belongs to the account to which the GTM instance belongs. You can specify the name of a zone or subzone.</para>
+        /// <para>The zone name, which is the parent zone of the GTM access domain name. This is typically a domain name hosted in the Alibaba Cloud DNS console under the account that owns the GTM instance. Primary domains and subdomains are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -125,7 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ScheduleZoneName { get; set; }
 
         /// <summary>
-        /// <para>The global time to live (TTL) period. Unit: seconds. The global TTL period affects how long the DNS records that map the access domain name to the addresses in the address pools are cached in the local DNS servers of Internet service providers (ISPs). You can specify a custom value.</para>
+        /// <para>The global Time to Live (TTL) in seconds. This is the TTL for the access domain name that resolves to an address in an address pool. This value affects how long the DNS record is cached on a carrier\&quot;s local DNS server. You can specify a custom TTL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

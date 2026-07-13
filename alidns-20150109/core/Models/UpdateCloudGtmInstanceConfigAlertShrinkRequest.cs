@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
+        /// <item><description><para>zh-CN: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,24 +26,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The alert configurations.</para>
+        /// <para>A list of alert configurations.</para>
         /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public string AlertConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The alert contact groups.</para>
+        /// <para>A list of alert notification groups.</para>
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public string AlertGroupShrink { get; set; }
 
         /// <summary>
-        /// <para>The alert configuration mode of the instance. Valid values:</para>
+        /// <para>The alert configuration mode for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: global alert configuration</description></item>
-        /// <item><description>instance_config: custom alert configuration</description></item>
+        /// <item><description><para>global: The instance inherits the global alert configuration.</para>
+        /// </description></item>
+        /// <item><description><para>instance_config: The instance uses a custom alert configuration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AlertMode { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request. The client must generate a unique value for this parameter. The token can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID of the access domain name. Two configuration IDs exist when an A record and an AAAA record are configured for the access domain name that is bound to the GTM instance. This ID uniquely identifies a configuration.</para>
+        /// <para>The ID of the domain name instance configuration. A GTM instance can have two configurations for the same access domain name if you configure both A and AAAA records. The ConfigId uniquely identifies a configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Config-000**11</para>

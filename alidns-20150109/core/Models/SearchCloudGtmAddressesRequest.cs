@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SearchCloudGtmAddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Query by service address with precise conditions, supporting IP addresses or domain names.</para>
+        /// <para>Performs an exact search by endpoint. IP addresses and domain names are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -34,20 +36,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The address ID. This ID uniquely identifies the address.</para>
+        /// <para>The ID of the address. The address ID is a unique identifier.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>addr-89518218114368**92</para>
+        /// <para>addr-89518218114368****</para>
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
         public string AddressId { get; set; }
 
         /// <summary>
-        /// <para>Search by address availability status with precise conditions:</para>
+        /// <para>Performs an exact search by the availability status of the address.</para>
         /// <list type="bullet">
-        /// <item><description>available</description></item>
-        /// <item><description>unavailable</description></item>
+        /// <item><description><para>available: The address is available.</para>
+        /// </description></item>
+        /// <item><description><para>unavailable: The address is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +62,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AvailableStatus { get; set; }
 
         /// <summary>
-        /// <para>Query by exact address enable status:</para>
+        /// <para>Performs an exact search by the status of the address.</para>
         /// <list type="bullet">
-        /// <item><description>enable: enabled status</description></item>
-        /// <item><description>disable: disabled status</description></item>
+        /// <item><description><para>enable: The address is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>disable: The address is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,12 +78,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The health state of the addresses that you want to query. Valid values:</para>
+        /// <para>Performs an exact search by the health status of the address.</para>
         /// <list type="bullet">
-        /// <item><description>ok: The addresses pass all health checks of the referenced health check templates.</description></item>
-        /// <item><description>ok_alert: The addresses fail some health checks of the referenced health check templates, but the addresses are deemed available.</description></item>
-        /// <item><description>ok_no_monitor: The addresses do not reference any health check template.</description></item>
-        /// <item><description>exceptional: The addresses fail some or all health checks of the referenced health check templates, and the addresses are deemed unavailable.</description></item>
+        /// <item><description><para>ok: All health check tasks for the referenced health check template are normal.</para>
+        /// </description></item>
+        /// <item><description><para>ok_alert: Some health check tasks for the referenced health check template are abnormal, but the address is still considered normal.</para>
+        /// </description></item>
+        /// <item><description><para>ok_no_monitor: The address does not reference any health check templates.</para>
+        /// </description></item>
+        /// <item><description><para>exceptional: Some or all health check tasks for the referenced health check template are abnormal, and the address is considered abnormal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +98,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>Health check template name.</para>
+        /// <para>The name of the health check template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ping-IPv4</para>
@@ -98,10 +108,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorTemplateName { get; set; }
 
         /// <summary>
-        /// <para>The logical condition for querying addresses by name. This parameter is required if you want to query addresses by name. Valid values:</para>
+        /// <para>The search logic for querying by address name. This parameter is required when you query by address name.</para>
         /// <list type="bullet">
-        /// <item><description>and: displays the results that match all search conditions.</description></item>
-        /// <item><description>or: displays the results that match some or all search conditions.</description></item>
+        /// <item><description><para>and: The query returns results that match all the specified keywords.</para>
+        /// </description></item>
+        /// <item><description><para>or: The query returns results that match some or all of the specified keywords.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,14 +124,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NameSearchCondition { get; set; }
 
         /// <summary>
-        /// <para>Address name, usually for users to distinguish between different addresses.</para>
+        /// <para>The name of the address. This name is used for easy identification.</para>
         /// </summary>
         [NameInMap("Names")]
         [Validation(Required=false)]
         public List<string> Names { get; set; }
 
         /// <summary>
-        /// <para>Current page number, starting from 1, default is 1.</para>
+        /// <para>The current page number. The value starts from 1. The default value is 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +142,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,9 +153,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The logical condition for querying addresses by additional description. This parameter is required if you want to query addresses by additional description. Valid values:</para>
-        /// <para>and: displays the results that match all search conditions.</para>
-        /// <para>or: displays the results that match some or all search conditions.</para>
+        /// <para>The search logic for querying by address remarks. This parameter is required when you query by address remarks.</para>
+        /// <para>and: The query returns results that match all the specified keywords.</para>
+        /// <para>or: The query returns results that match some or all of the specified keywords.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -153,18 +165,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RemarkSearchCondition { get; set; }
 
         /// <summary>
-        /// <para>Remarks for the address.</para>
+        /// <para>The remarks for the address.</para>
         /// </summary>
         [NameInMap("Remarks")]
         [Validation(Required=false)]
         public List<string> Remarks { get; set; }
 
         /// <summary>
-        /// <para>Search precisely by address type conditions:</para>
+        /// <para>Performs an exact search by the address type.</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
-        /// <item><description>domain</description></item>
+        /// <item><description><para>IPv4</para>
+        /// </description></item>
+        /// <item><description><para>IPv6</para>
+        /// </description></item>
+        /// <item><description><para>domain</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

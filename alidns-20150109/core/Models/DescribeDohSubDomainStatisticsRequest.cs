@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohSubDomainStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>The default value is the day when you perform the operation.</para>
+        /// <para>The end date of the query in YYYY-MM-DD format.</para>
+        /// <para>The default value is the current date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -21,7 +21,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -31,8 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>You can query only the DNS records of the latest 90 days. <c>The value of StartDate must be greater than or equal to the difference between the current date and 90</c>.</para>
+        /// <para>The start date of the query in YYYY-MM-DD format.</para>
+        /// <para>You can query data from the last 90 days. The <c>StartDate</c> must be greater than or equal to the date 90 days before the current date.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -42,7 +48,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The subdomain whose statistics you want to query.</para>
+        /// <para>The subdomain for which to query statistics.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

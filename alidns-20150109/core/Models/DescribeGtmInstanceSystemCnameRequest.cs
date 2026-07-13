@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstanceSystemCnameRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Global Traffic Manager (GTM) instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-wwo3a3hbz**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The user language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

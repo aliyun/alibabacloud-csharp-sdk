@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword that you use for query. Exact match is supported by instance ID or instance name.</para>
+        /// <para>The keyword for an exact match search by instance ID or instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether additional information is required. Default value: <b>false</b>.</para>
+        /// <para>Specifies whether to return detailed information. The default value is <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? NeedDetailAttributes { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

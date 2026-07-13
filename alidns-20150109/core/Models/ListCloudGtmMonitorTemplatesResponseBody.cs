@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListCloudGtmMonitorTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number, starting from 1, default is 1.</para>
+        /// <para>The number of the returned page. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</para>
+        /// <para>The number of entries returned on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75446CC1-FC9A-4595-8D96-089D73D7A63D</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Total number of health check template entries retrieved.</para>
+        /// <para>The total number of health check templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages after data pagination.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListRecursionRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The status of the DNS record. Valid values: enable and <b>disable</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>enable</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Enable { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records to return for the current request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token used to start the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4698691</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The current page number. The value starts from 1. The default value is 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>
@@ -62,6 +72,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
+        /// <para>The DNS line. The default value is <b>default</b>. For more information, see <a href="https://help.aliyun.com/document_detail/29807.html">DNS lines</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para><a href="https://help.aliyun.com/document_detail/29807.html">DNS line enumeration</a></para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/doc-detail/29807.htm">DNS line enumeration</a></para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -70,6 +86,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestSource { get; set; }
 
         /// <summary>
+        /// <para>The host record.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>www</para>
         /// </summary>
@@ -78,6 +96,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Rr { get; set; }
 
         /// <summary>
+        /// <para>The time-to-live (TTL) in seconds. The default value is 60. Valid values are 5, 30, 60, 3600 (1 hour), 43200 (12 hours), and 86400 (24 hours).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -86,6 +106,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Ttl { get; set; }
 
         /// <summary>
+        /// <para>The type of the DNS record. The following types are supported: A: Maps a domain name to an IPv4 address. AAAA: Maps a domain name to an IPv6 address. CNAME: An alias record that maps a domain name to another domain name. MX: A mail exchanger record that points a domain name to a mail server address. TXT: A text record that contains arbitrary, human-readable text. SRV: A service record that identifies a server for a specific service. This record type is common in directory management for Microsoft systems.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A</para>
         /// </summary>
@@ -94,6 +116,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The weight of the DNS record. The value ranges from 0 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -102,6 +126,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Weight { get; set; }
 
         /// <summary>
+        /// <para>The ID of the zone to which the DNS record belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmInstanceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of available addresses.</para>
+        /// <para>The number of healthy addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? AddrAvailableNum { get; set; }
 
         /// <summary>
-        /// <para>The number of unavailable addresses.</para>
+        /// <para>The number of unhealthy addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? AddrPoolGroupNotAvailableNum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of access policies that are unavailable in the current active address pool group.</para>
+        /// <para>The number of unavailable access policies for the active address pool group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? StrategyNotAvailableNum { get; set; }
 
         /// <summary>
-        /// <para>The number of access policies switched to the secondary address pool group.</para>
+        /// <para>The number of access policies that are switched to the failover address pool group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The delegation signer (DS) record. This parameter is returned if DNSSEC is enabled.</para>
+        /// <para>The Delegation Signer (DS) record. This parameter is returned if DNSSEC is enabled.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example.com. 3600 IN DS 2371 13 2 C1A0424B97A049F1F9B2EA139CC298533219668164E343BD21203ABC4608C02A</para>
+        /// <para>example.com. 3600 IN DS 2371 13 2 C1A0424B97A049F1F9B2EA139CC29853321966816***************</para>
         /// </summary>
         [NameInMap("DsRecord")]
         [Validation(Required=false)]
         public string DsRecord { get; set; }
 
         /// <summary>
-        /// <para>The flag. This parameter is returned if DNSSEC is enabled.</para>
+        /// <para>The flags. This parameter is returned if DNSSEC is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>257 (KSK)</para>
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The public key. This parameter is returned if DNSSEC is enabled.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==</para>
+        /// <para>mdsswUyr3DPW132m******************</para>
         /// </summary>
         [NameInMap("PublicKey")]
         [Validation(Required=false)]
         public string PublicKey { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -100,10 +100,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the DNSSEC. Valid values:</para>
+        /// <para>The status of DNSSEC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ON</description></item>
-        /// <item><description>OFF</description></item>
+        /// <item><description><para>ON: Enabled</para>
+        /// </description></item>
+        /// <item><description><para>OFF: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

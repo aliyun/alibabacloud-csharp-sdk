@@ -10,22 +10,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class TransferDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.</para>
+        /// <para>The domain names to transfer. Separate multiple domain names with commas. Only domain names registered with Alibaba Cloud are supported. &lt;props=&quot;china&quot;&gt;To get your domain names, call <a href="https://help.aliyun.com/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a>.
+        /// &lt;props=&quot;intl&quot;&gt;To get your domain names, call <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1.com,test2.com</para>
+        /// <para>example.com,example.net</para>
         /// </summary>
         [NameInMap("DomainNames")]
         [Validation(Required=false)]
         public string DomainNames { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
+        /// <para>Default value: zh.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The description of the domain name.</para>
+        /// <para>The remarks for the transfer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test domain transfer</para>
@@ -45,11 +49,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.</para>
+        /// <para>The ID of the target user account. The specified domain names and their DNS records are transferred to this account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345678</para>
+        /// <para>12*******</para>
         /// </summary>
         [NameInMap("TargetUserId")]
         [Validation(Required=false)]

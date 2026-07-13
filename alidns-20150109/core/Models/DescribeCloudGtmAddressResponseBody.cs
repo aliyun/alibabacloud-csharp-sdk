@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmAddressResponseBody : TeaModel {
         /// <summary>
-        /// <para>IP address or domain name.</para>
+        /// <para>The IP address or domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.5.XX.XX</para>
@@ -20,30 +20,32 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The address ID. This ID uniquely identifies the address.</para>
+        /// <para>The unique ID of the address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>addr-89518218114368**92</para>
+        /// <para>addr-89518218114368****</para>
         /// </summary>
         [NameInMap("AddressId")]
         [Validation(Required=false)]
         public string AddressId { get; set; }
 
         /// <summary>
-        /// <para>Address ownership information.</para>
+        /// <para>The attribution information of the address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The current version does not support passing this parameter, please do not input the parameter.</para>
+        /// <para>当前版本不支持此参数，不会返回地址归属信息。</para>
         /// </summary>
         [NameInMap("AttributeInfo")]
         [Validation(Required=false)]
         public string AttributeInfo { get; set; }
 
         /// <summary>
-        /// <para>The failover method that is used if the address fails health checks. Valid values:</para>
+        /// <para>The switchover mode for the address when a health check detects an exception:</para>
         /// <list type="bullet">
-        /// <item><description>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</description></item>
-        /// <item><description>manual: the manual mode. If an address is in the unavailable state, the address is not returned for Domain Name System (DNS) requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</description></item>
+        /// <item><description><para>auto: Automatic mode. The system determines whether to stop or resume DNS resolution for the address based on health check results. DNS resolution is stopped if the address is abnormal and is resumed if the address becomes normal.</para>
+        /// </description></item>
+        /// <item><description><para>manual: Manual mode. You manually control the address status. If the address is set to abnormal, DNS resolution is stopped and is not resumed even if the health check result is normal. If the address is set to normal, DNS resolution is performed. An alert is triggered but DNS resolution is not stopped if a health check detects an exception.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +56,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AvailableMode { get; set; }
 
         /// <summary>
-        /// <para>Address availability status:</para>
+        /// <para>The availability status of the address:</para>
         /// <list type="bullet">
-        /// <item><description>available: Available</description></item>
-        /// <item><description>unavailable: Unavailable</description></item>
+        /// <item><description><para>available: The address is available.</para>
+        /// </description></item>
+        /// <item><description><para>unavailable: The address is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AvailableStatus { get; set; }
 
         /// <summary>
-        /// <para>Address creation time.</para>
+        /// <para>The time when the address was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-23T13:09Z</para>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Creation time (timestamp).</para>
+        /// <para>The UNIX timestamp when the address was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -88,9 +92,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Indicates the current enabled status of the address:
-        /// enabled: enabled state
-        /// disabled: disabled state</para>
+        /// <para>The enabled status of the address:</para>
+        /// <para>enable: The address is enabled.</para>
+        /// <para>disable: The address is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enable</para>
@@ -100,13 +104,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The condition for determining the health status of the address. Valid values:</para>
+        /// <para>The health determination condition for the address:</para>
         /// <list type="bullet">
-        /// <item><description>any_ok: The health check results of at least one health check template are normal.</description></item>
-        /// <item><description>p30_ok: The health check results of at least 30% of health check templates are normal.</description></item>
-        /// <item><description>p50_ok: The health check results of at least 50% of health check templates are normal.</description></item>
-        /// <item><description>p70_ok: The health check results of at least 70% of health check templates are normal.</description></item>
-        /// <item><description>all_ok: The health check results of all health check templates are normal.</description></item>
+        /// <item><description><para>any_ok: At least one health check probe is normal.</para>
+        /// </description></item>
+        /// <item><description><para>p30_ok: At least 30% of health check probes are normal.</para>
+        /// </description></item>
+        /// <item><description><para>p50_ok: At least 50% of health check probes are normal.</para>
+        /// </description></item>
+        /// <item><description><para>p70_ok: At least 70% of health check probes are normal.</para>
+        /// </description></item>
+        /// <item><description><para>all_ok: All health check probes are normal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,12 +126,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthJudgement { get; set; }
 
         /// <summary>
-        /// <para>The health check state of the address. Valid values:</para>
+        /// <para>The health check result of the address:</para>
         /// <list type="bullet">
-        /// <item><description>ok: The address passes all health checks of the referenced health check templates.</description></item>
-        /// <item><description>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</description></item>
-        /// <item><description>ok_no_monitor: The address does not reference a health check template.</description></item>
-        /// <item><description>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</description></item>
+        /// <item><description><para>ok: All health check tasks that are associated with the address are normal.</para>
+        /// </description></item>
+        /// <item><description><para>ok_alert: Some health check tasks that are associated with the address are abnormal, but the address is still considered normal.</para>
+        /// </description></item>
+        /// <item><description><para>ok_no_monitor: The address is not associated with any health check tasks.</para>
+        /// </description></item>
+        /// <item><description><para>exceptional: Some or all health check tasks that are associated with the address are abnormal, and the address is considered abnormal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,10 +174,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The availability state of the address when AvailableMode is set to manual. Valid values:</para>
+        /// <para>The availability status of the address that is set when the switchover mode is manual:</para>
         /// <list type="bullet">
-        /// <item><description>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</description></item>
-        /// <item><description>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</description></item>
+        /// <item><description><para>available: The address is available. DNS resolution is performed for the address. If a health check detects an exception, an alert is triggered but DNS resolution is not stopped.</para>
+        /// </description></item>
+        /// <item><description><para>unavailable: The address is unavailable. DNS resolution is stopped for the address and is not resumed even if the health check result is normal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,7 +190,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ManualAvailableStatus { get; set; }
 
         /// <summary>
-        /// <para>Address name.</para>
+        /// <para>The name of the address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -185,7 +200,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Remarks.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1</para>
@@ -195,7 +210,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B57C121B-A45F-44D8-A9B2-13E5A5044195</para>
@@ -205,11 +220,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Address type:</para>
+        /// <para>The type of the address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
-        /// <item><description>domain</description></item>
+        /// <item><description><para>IPv4</para>
+        /// </description></item>
+        /// <item><description><para>IPv6</para>
+        /// </description></item>
+        /// <item><description><para>domain</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,7 +238,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The last modification time of the address configuration.</para>
+        /// <para>The time when the address configuration was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-29T13:20Z</para>
@@ -230,7 +248,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>Modified time (timestamp).</para>
+        /// <para>The UNIX timestamp when the address was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

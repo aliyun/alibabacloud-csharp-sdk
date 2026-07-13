@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The order in which you want to sort returned entries. Valid values:</para>
+        /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DESC: Returned entries are sorted in descending order. If this parameter is left empty, returned entries are sorted in descending order by default.</description></item>
-        /// <item><description>ASC: Returned entries are sorted in ascending order.</description></item>
+        /// <item><description><para>DESC: Descending order. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>ASC: Ascending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The type of the domain name. Valid values:</para>
+        /// <para>The type of the domain name. This parameter is not case-sensitive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC (default): hosted public domain name</description></item>
-        /// <item><description>CACHE: cached public domain name</description></item>
+        /// <item><description><para>PUBLIC: authoritative domain name (default)</para>
+        /// </description></item>
+        /// <item><description><para>CACHE: authoritative proxy domain name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,8 +44,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en</para>
         /// 
@@ -53,10 +59,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to sort returned entries. Valid values:</para>
+        /// <para>The field to sort the results by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>createDate: sorts returned entries by creation time. If this parameter is left empty, returned entries are sorted by creation time by default.</description></item>
-        /// <item><description>expireDate: sorts returned entries by expiration time.</description></item>
+        /// <item><description><para>createDate: Sorts the results by creation time. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>expireDate: Sorts the results by expiration time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +75,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. Pages start from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +95,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client\&quot;s IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.2.0</para>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The version code of the Alibaba Cloud DNS instance.</para>
+        /// <para>The edition code of the Alibaba Cloud DNS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>version1</para>

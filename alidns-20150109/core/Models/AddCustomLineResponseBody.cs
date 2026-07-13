@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The code of the custom line.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hra0yc-597</para>
+        /// <para>hra0yc-5******</para>
         /// </summary>
         [NameInMap("LineCode")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The unique ID of the custom line.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>597</para>
+        /// <para>5*****</para>
         /// </summary>
         [NameInMap("LineId")]
         [Validation(Required=false)]

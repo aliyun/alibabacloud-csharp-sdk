@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The timestamp that specifies the end of the time range to query.</para>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1363453350000</para>
+        /// <para>1363453340000</para>
         /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
         public long? EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GTM instance whose logs you want to query.</para>
+        /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gtm-cn-xxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searching logs, in case-insensitive &quot;%Keyword%&quot; format.</para>
+        /// <para>The keyword for a fuzzy search. The search uses the %Keyword% pattern and is case-insensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The language of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The beginning of the time range to query. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1363453340000</para>

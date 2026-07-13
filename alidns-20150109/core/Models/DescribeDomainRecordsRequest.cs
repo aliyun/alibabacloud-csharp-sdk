@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The order in which you want to sort the returned DNS records. Valid values: DESC and ASC. Default value: DESC.</para>
+        /// <para>The sorting direction. Valid values: DESC, ASC. Default value: DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -20,7 +20,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</para>
+        /// <para>The domain name.&lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a>.
+        /// &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,18 +32,24 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the domain name group.</para>
+        /// <para>The ID of the domain group.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify GroupId, all domain names are queried.</description></item>
-        /// <item><description>If you set GroupId to 0, no value is returned.</description></item>
-        /// <item><description>If you set GroupId to 1, the domain names in the default group are queried.</description></item>
-        /// <item><description>If you set GroupId to -2, all domain names are queried.</description></item>
-        /// <item><description>You can also specify GroupId based on the actual group ID.</description></item>
+        /// <item><description><para>If you do not specify GroupId, the query is performed on all domain names.</para>
+        /// </description></item>
+        /// <item><description><para>If you set GroupId to 0, an empty result is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If you set GroupId to -1, the query is performed on the default group. The default group includes domain names that are not assigned to a group.</para>
+        /// </description></item>
+        /// <item><description><para>If you set GroupId to -2, the query is performed on all domain names.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify another value for GroupId, the query is performed on the specified group.
+        /// &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomainGroups</a>.
+        /// &lt;props=&quot;intl&quot;&gt;For more information, see <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups</a>.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaingroups?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainGroups </a>operation to obtain the ID of the domain name group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>2****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -59,7 +66,13 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -69,9 +82,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The resolution line. Default value: <b>default</b>.</para>
-        /// <para>For more information, see</para>
-        /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS lines</a>.</para>
+        /// <para>The DNS resolution line. Default value: <b>default</b>.</para>
+        /// <para>For more information, see:
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29807.html">Enumeration of DNS resolution lines</a>.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">Enumeration of DNS resolution lines</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>cn_mobile_anhui</para>
@@ -81,7 +96,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Line { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to sort the returned DNS records. By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</para>
+        /// <para>The sorting method. Records are sorted in descending order based on the time they were added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -91,7 +106,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value starts from <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -101,7 +116,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 500</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page for a paged query. Maximum value: <b>500</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -111,7 +126,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The hostname keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</para>
+        /// <para>The keyword for the host record. The search uses a fuzzy match pattern and is not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -121,16 +136,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RRKeyWord { get; set; }
 
         /// <summary>
-        /// <para>The search mode. Valid values: <b>LIKE, EXACT, and ADVANCED</b>.</para>
+        /// <para>The search mode. Valid values: LIKE, EXACT, ADVANCED, and <b>COMBINATION</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.</para>
+        /// <item><description><para>If you set this parameter to LIKE or EXACT, use the KeyWord parameter. The RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters are invalid.</para>
         /// </description></item>
-        /// <item><description><para>If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.</para>
+        /// <item><description><para>If you set this parameter to ADVANCED, use the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters. The RRKeyWord and ValueKeyWord parameters support fuzzy matching.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify SearchMode, the system determines the search mode based on the following rules:</para>
+        /// <item><description><para>If you set this parameter to COMBINATION, use the RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status parameters. All these parameters support only exact matching.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter:</para>
         /// <list type="bullet">
-        /// <item><description>If KeyWord is specified, the system uses the LIKE mode.</description></item>
-        /// <item><description>If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.</description></item>
+        /// <item><description><para>If you specify the keyWord parameter, the search mode is set to LIKE.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify the keyWord parameter, RRKeyWord and ValueKeyWord support fuzzy matching, and TypeKeyWord, Type, Line, and Status support exact matching.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -143,7 +162,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>The status of the DNS records to query. Valid values: <b>Enable and Disable</b>.</para>
+        /// <para>The status of the DNS record. Valid values:</para>
+        /// <para>Enable: The DNS record is enabled.</para>
+        /// <para>Disable: The DNS record is paused.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
@@ -153,8 +174,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of the DNS records to query. For more information, see</para>
-        /// <para><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</para>
+        /// <para>The type of the DNS record. For more information, see:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/29805.html">DNS record types</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>A</para>
@@ -164,7 +186,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The type keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in exact match mode. The value is not case-sensitive.</para>
+        /// <para>The keyword for the record type. The search uses an exact match and is not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MX</para>
@@ -174,7 +196,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string TypeKeyWord { get; set; }
 
         /// <summary>
-        /// <para>The record value keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</para>
+        /// <para>The keyword for the record value. The search uses a fuzzy match pattern and is not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com</para>

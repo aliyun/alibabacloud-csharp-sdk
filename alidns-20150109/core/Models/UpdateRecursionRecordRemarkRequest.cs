@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateRecursionRecordRemarkRequest : TeaModel {
         /// <summary>
+        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The value can contain only ASCII characters and must be no more than 64 characters long.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e432232342423ew423</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>record id</para>
+        /// <para>The ID of the record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RecordId { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

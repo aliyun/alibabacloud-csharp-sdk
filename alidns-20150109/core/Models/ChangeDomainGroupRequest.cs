@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains </a>operation to obtain the domain name.</para>
+        /// <para>The domain name.&lt;props=&quot;china&quot;&gt; Call <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a> to obtain the domain name.
+        /// &lt;props=&quot;intl&quot;&gt;Call <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> to obtain the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,14 +24,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The ID of the target domain name group.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify GroupId, the domain name belongs to the default group.</description></item>
-        /// <item><description>If you specify an empty string &quot;&quot; for GroupId, the domain name belongs to the default group.</description></item>
-        /// <item><description>If you set GroupId to defaultGroup, the domain name belongs to the default group.</description></item>
-        /// <item><description>If you specify GroupId to another value and the value is verified existent, the value of GroupId for the target domain name is updated. If the value is verified inexistent, the value of GroupId for the target domain name is not updated.</description></item>
+        /// <item><description><para>If you do not specify GroupId, the domain name is moved to the default group.</para>
+        /// </description></item>
+        /// <item><description><para>If GroupId is an empty string (&quot;&quot;), the domain name is moved to the default group.</para>
+        /// </description></item>
+        /// <item><description><para>If GroupId is defaultGroup, the domain name is moved to the default group.</para>
+        /// </description></item>
+        /// <item><description><para>If GroupId is a different value, the system checks if the group exists. If the group exists, the domain name\&quot;s group is updated. If the group does not exist, the group is not updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>60bb3ef15ace449082cf914ed3ea****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -39,10 +44,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en</para>
+        /// <para>Default: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

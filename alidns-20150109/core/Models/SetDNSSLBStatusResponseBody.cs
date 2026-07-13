@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDNSSLBStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether weighted round-robin is enabled for the subdomain name.</para>
+        /// <para>The latest status of the weight configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? Open { get; set; }
 
         /// <summary>
-        /// <para>The number of A records that are matched.</para>
+        /// <para>The number of DNS records that match the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

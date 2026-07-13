@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmMonitorAvailableConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the values of specific response parameters.</para>
+        /// <para>The language of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

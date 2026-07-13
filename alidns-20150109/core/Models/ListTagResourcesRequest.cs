@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4698691</para>
@@ -34,14 +36,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource ID.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid value:</para>
         /// <list type="bullet">
         /// <item><description><b>DOMAIN</b>: domain name</description></item>
         /// </list>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>An array of tag key-value pairs.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The key value.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abcd</para>

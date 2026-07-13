@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDohUserInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for the query. Format: YYYY-MM-DD</para>
-        /// <para>If you do not specify this parameter, the default value is the time when you perform the query.</para>
+        /// <para>The end date of the query. Use the \<c>YYYY-MM-DD\\</c> format.</para>
+        /// <para>If you do not specify this parameter, the current date is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The start time for the query. Format: YYYY-MM-DD</para>
-        /// <para>You can query the user information of the last 90 days only. <c>Set the parameter to a value no earlier than 90 days from the current time</c>.</para>
+        /// <para>The start date of the query. Use the \<c>YYYY-MM-DD\\</c> format.</para>
+        /// <para>You can query data from the last 90 days. The date must be within the last 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the domain name group.</para>
+        /// <para>The ID of the domain name group. If you do not specify this parameter, all groups are queried.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>2****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the query in &quot;%KeyWord%&quot; mode. The keyword is not case-sensitive.</para>
+        /// <para>The keyword for the query. A case-insensitive \<c>contains\\</c> search is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</para>
+        /// <para>The language of the request and response.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The default value is <b>zh</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number to return. The page number starts from <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. The value starts from <b>1</b>. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +67,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time for the query. Format: <b>YYYY-MM-DD</b></para>
+        /// <para>The start date. The format is <b>YYYY-MM-DD</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -70,11 +77,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The type of object of which you want to query operation logs. Valid values:</para>
+        /// <para>The type of content to query.</para>
         /// <list type="bullet">
-        /// <item><description>domain: domain name</description></item>
-        /// <item><description>slavedns: secondary Domain Name System (DNS)</description></item>
+        /// <item><description><para>domain: domain name</para>
+        /// </description></item>
+        /// <item><description><para>slavedns: secondary DNS</para>
+        /// </description></item>
         /// </list>
+        /// <para>If you do not specify this parameter, all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>domain</para>
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The end time for the query. Format: <b>YYYY-MM-DD</b></para>
+        /// <para>The end date. The format is <b>YYYY-MM-DD</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>

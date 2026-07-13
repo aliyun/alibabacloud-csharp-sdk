@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive failures.</para>
+        /// <para>The number of consecutive failed health checks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// <para>The health check interval. Unit: seconds. Set the value to 60.</para>
+        /// <para>The health check interval. Unit: seconds. The value must be 60.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The nodes for monitoring.</para>
+        /// <para>The list of monitoring nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IspCityNode")]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public class AddGtmMonitorRequestIspCityNode : TeaModel {
             /// <summary>
             /// <para>The city code.</para>
-            /// <para>Specify the parameter according to the value of CityCode returned by the DescribeGtmMonitorAvailableConfig operation.</para>
+            /// <para>For more information about the valid values, see the response of the DescribeGtmMonitorAvailableConfig operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>503</para>
@@ -62,10 +62,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string CityCode { get; set; }
 
             /// <summary>
-            /// <para>The Internet service provider (ISP) node. Specify the parameter according to the value of IspCode returned by the DescribeGtmMonitorAvailableConfig operation.</para>
+            /// <para>For more information about the valid values, see the response of the DescribeGtmMonitorAvailableConfig operation.</para>
             /// <list type="bullet">
-            /// <item><description>If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is BGP or Overseas, IspCode is not required and is set to 465 by default.</description></item>
-            /// <item><description>If the return value of GroupType for the DescribeGtmMonitorAvailableConfig operation is not BGP or Overseas, IspCode is required. When IspCode is specified, CityCode is required.</description></item>
+            /// <item><description><para>If GroupType is set to Border Gateway Protocol (BGP) or Overseas, you do not need to specify IspCityNode.N.IspCode. The default value is 465.</para>
+            /// </description></item>
+            /// <item><description><para>If GroupType is not set to BGP or Overseas, you must specify IspCityNode.N.IspCode. The value of IspCityNode.N.IspCode must be consistent with the value of IspCityNode.N.CityCode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,25 +90,35 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The extended information. The required parameters vary based on the health check protocol.</para>
-        /// <para>HTTP or HTTPS</para>
+        /// <para>The extended information. You must pass parameters based on the value of ProtocolType:</para>
+        /// <para>For HTTP and HTTPS:</para>
         /// <list type="bullet">
-        /// <item><description>port: the port that you want to check</description></item>
-        /// <item><description>failureRate: the failure rate</description></item>
-        /// <item><description>code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value. Valid values: 400 and 500.</description></item>
-        /// <item><description>host: the host settings</description></item>
-        /// <item><description>path: the URL path</description></item>
+        /// <item><description><para>port: The health check port.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
+        /// <item><description><para>code: The return code. A response with a status code greater than this value is considered abnormal. Valid values: 400 and 500.</para>
+        /// </description></item>
+        /// <item><description><para>host: The host settings.</para>
+        /// </description></item>
+        /// <item><description><para>path: The URL path.</para>
+        /// </description></item>
         /// </list>
-        /// <para>PING</para>
+        /// <para>For PING:</para>
         /// <list type="bullet">
-        /// <item><description>packetNum: the number of ping packets</description></item>
-        /// <item><description>packetLossRate: the packet loss rate</description></item>
-        /// <item><description>failureRate: the failure rate</description></item>
+        /// <item><description><para>packetNum: The number of ping packets.</para>
+        /// </description></item>
+        /// <item><description><para>packetLossRate: The packet loss rate.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
         /// </list>
-        /// <para>TCP</para>
+        /// <para>For TCP:</para>
         /// <list type="bullet">
-        /// <item><description>port: the port that you want to check</description></item>
-        /// <item><description>failureRate: the failure rate</description></item>
+        /// <item><description><para>port: The health check port.</para>
+        /// </description></item>
+        /// <item><description><para>failureRate: The failure rate.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -118,12 +130,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorExtendInfo { get; set; }
 
         /// <summary>
-        /// <para>The protocol used for the health check. Valid values:</para>
+        /// <para>The health check protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HTTP</description></item>
-        /// <item><description>HTTPS</description></item>
-        /// <item><description>PING</description></item>
-        /// <item><description>TCP</description></item>
+        /// <item><description><para>HTTP</para>
+        /// </description></item>
+        /// <item><description><para>HTTPS</para>
+        /// </description></item>
+        /// <item><description><para>PING</para>
+        /// </description></item>
+        /// <item><description><para>TCP</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -135,7 +151,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</para>
+        /// <para>The timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

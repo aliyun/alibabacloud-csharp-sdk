@@ -10,18 +10,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAddrAttributeInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The addresses.</para>
+        /// <para>The list of addresses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;1.1.1.1&quot;]</para>
+        /// <para>[
+        ///       &quot;1.1.XX.XX&quot;
+        /// ]</para>
         /// </summary>
         [NameInMap("Addrs")]
         [Validation(Required=false)]
         public string Addrs { get; set; }
 
         /// <summary>
-        /// <para>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of some returned parameters. Default value: en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -31,16 +33,19 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of addresses. Valid values:</para>
+        /// <para>The address type:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4: IPv4 address</description></item>
-        /// <item><description>IPv6: IPv6 address</description></item>
-        /// <item><description>DOMAIN: domain name</description></item>
+        /// <item><description><para>IPV4: IPv4 address</para>
+        /// </description></item>
+        /// <item><description><para>IPV6: IPv6 address</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN: domain name</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

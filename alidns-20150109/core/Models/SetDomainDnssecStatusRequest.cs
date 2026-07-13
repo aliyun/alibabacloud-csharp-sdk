@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetDomainDnssecStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name for which you want to enable the DNSSEC. Only the users of the paid editions of Alibaba Cloud DNS can enable this feature.</para>
+        /// <para>The domain name for which you want to enable DNSSEC. This feature is available only to users of paid Alibaba Cloud DNS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -36,10 +38,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The DNSSEC status. Valid values:</para>
+        /// <para>The status of DNSSEC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ON: enables DNSSEC for the domain name.</description></item>
-        /// <item><description>OFF: disables DNSSEC for the domain name.</description></item>
+        /// <item><description><para>ON: Enables DNSSEC.</para>
+        /// </description></item>
+        /// <item><description><para>OFF: Disables DNSSEC.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The timestamp that specifies the end of the time range to query.</para>
+        /// <para>The end of the time range to query. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1516779348000</para>
@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID. Call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describednsgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDnsGtmInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-wwo3a3hbz**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</para>
+        /// <para>The keyword. The search is performed in the \<c>%KeyWord%\\</c> pattern and is not case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</para>
+        /// <para>The language of some returned parameters. The default value is en. Valid values: en, zh, and ja.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,17 +61,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that specifies the beginning of the time range to query.</para>
+        /// <para>The start of the time range to query. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1516779348000</para>

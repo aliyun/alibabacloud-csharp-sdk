@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class BindInstanceDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of domain names that failed to be bound to the instance.</para>
+        /// <para>The number of domain names that failed to be bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of domain names that are bound to the instance.</para>
+        /// <para>The number of domain names that were successfully bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

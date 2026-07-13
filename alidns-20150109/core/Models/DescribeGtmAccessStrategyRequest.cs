@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeGtmAccessStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the access policy that you want to query.</para>
+        /// <para>The ID of the access policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

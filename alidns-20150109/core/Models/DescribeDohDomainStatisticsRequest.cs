@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>The default value is the day when you perform the operation.</para>
+        /// <para>The end date of the query. The format is YYYY-MM-DD.</para>
+        /// <para>The default value is the current day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>You can query only the DNS records of the latest 90 days. <c>The value of StartDate must be greater than or equal to the difference between the current date and 90</c>.</para>
+        /// <para>The start date of the query. The format is YYYY-MM-DD.</para>
+        /// <para>You can query data from the last 90 days only. The value of <c>StartDate</c> must be greater than or equal to the current date minus 90 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-07-04</para>

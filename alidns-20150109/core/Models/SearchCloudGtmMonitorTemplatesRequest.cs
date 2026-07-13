@@ -12,22 +12,26 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en-US (default): English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>en-US</para>
+        /// <para>zh-CN</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The IP address type of health check nodes. An exact search is performed based on the IP address type. Valid values:</para>
+        /// <para>The IP version of the detection points. An exact search is performed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4: applicable when the destination address of health checks is an IPv4 address</description></item>
-        /// <item><description>IPv6: applicable when the destination address of health checks is an IPv6 address</description></item>
+        /// <item><description><para>IPv4: This version is applicable when the target address is an IPv4 address.</para>
+        /// </description></item>
+        /// <item><description><para>IPv6: This version is applicable when the target address is an IPv6 address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string IpVersion { get; set; }
 
         /// <summary>
+        /// <para>The name of the health check template. A fuzzy search is performed based on the keyword that you enter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IPv4-Ping</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The current page number. The value starts from 1. The default value is 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +63,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is <b>100</b>. The default value is <b>20</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +74,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The protocol used for detection. An exact search is performed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ping</para>
+        /// </description></item>
+        /// <item><description><para>tcp</para>
+        /// </description></item>
+        /// <item><description><para>http</para>
+        /// </description></item>
+        /// <item><description><para>https</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ping</para>
         /// </summary>

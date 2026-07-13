@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class ChangeDomainOfDnsProductResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain name that is originally bound to the instance. If no value is returned for this parameter, the instance is bound to a domain name for the first time.</para>
+        /// <para>The domain name that was originally attached. If this parameter is empty, it indicates that this is the first time a domain name is attached to the product.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>originaldomain.com</para>
+        /// <para><a href="http://www.example.com">www.example.com</a></para>
         /// </summary>
         [NameInMap("OriginalDomain")]
         [Validation(Required=false)]

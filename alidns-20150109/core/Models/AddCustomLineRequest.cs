@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddCustomLineRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</para>
+        /// <para>The domain name.&lt;props=&quot;china&quot;&gt;Call the <a href="https://help.aliyun.com/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c4g.11186623.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.&lt;props=&quot;intl&quot;&gt;Call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks.</para>
+        /// <para>The list of IP address segments.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpSegment")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<AddCustomLineRequestIpSegment> IpSegment { get; set; }
         public class AddCustomLineRequestIpSegment : TeaModel {
             /// <summary>
-            /// <para>The end IP address of the CIDR block.</para>
+            /// <para>The end IP address of the segment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.2.254</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string EndIp { get; set; }
 
             /// <summary>
-            /// <para>The start IP address of the CIDR block.</para>
+            /// <para>The start IP address of the segment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.2.0</para>
@@ -51,10 +51,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,6 +69,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The name of the custom line.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>北京线路</para>
         /// </summary>
         [NameInMap("LineName")]
         [Validation(Required=false)]

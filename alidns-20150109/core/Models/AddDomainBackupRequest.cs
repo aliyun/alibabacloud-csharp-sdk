@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test.aliyun.com</para>
+        /// <para>dns-example.top</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -23,10 +23,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -38,8 +40,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DAY: backs up data on a daily basis.</description></item>
-        /// <item><description>HOUR: backs up data on an hourly basis.</description></item>
+        /// <item><description><para>DAY: Backs up the domain once a day.</para>
+        /// </description></item>
+        /// <item><description><para>HOUR: Backs up the domain once an hour.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

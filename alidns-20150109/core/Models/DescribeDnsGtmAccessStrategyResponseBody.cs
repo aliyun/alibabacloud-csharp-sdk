@@ -10,15 +10,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsGtmAccessStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The primary/secondary switchover policy for address pool groups. Valid values:</para>
+        /// <para>The switchover policy for the address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.</description></item>
-        /// <item><description>DEFAULT: uses the primary address pool group.</description></item>
-        /// <item><description>FAILOVER: uses the secondary address pool group.</description></item>
+        /// <item><description><para>AUTO: automatic switchover.</para>
+        /// </description></item>
+        /// <item><description><para>DEFAULT: the primary address pool group.</para>
+        /// </description></item>
+        /// <item><description><para>FAILOVER: the secondary address pool group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>auto</para>
+        /// <para>AUTO</para>
         /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that indicates when the access policy was created.</para>
+        /// <para>The time when the access policy was created. This value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1533773400000</para>
@@ -47,8 +50,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The status of the primary address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AVAILABLE: available</description></item>
-        /// <item><description>NOT_AVAILABLE: unavailable</description></item>
+        /// <item><description><para>AVAILABLE</para>
+        /// </description></item>
+        /// <item><description><para>NOT_AVAILABLE</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,13 +66,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the primary address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// <item><description>DOMAIN</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("DefaultAddrPoolType")]
         [Validation(Required=false)]
@@ -112,35 +120,39 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? DefaultAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether scheduling optimization for latency resolution was enabled for the primary address pool group. Valid values:</para>
+        /// <para>Indicates whether latency-based scheduling is enabled for the primary address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OPEN: enabled</description></item>
-        /// <item><description>CLOSE: disabled</description></item>
+        /// <item><description><para>OPEN: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("DefaultLatencyOptimization")]
         [Validation(Required=false)]
         public string DefaultLatencyOptimization { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy of the primary address pool group. Valid values:</para>
+        /// <para>The load balancing policy for the primary address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_RR: returns all addresses.</description></item>
-        /// <item><description>RATIO: returns addresses by weight.</description></item>
+        /// <item><description><para>ALL_RR: returns all addresses.</para>
+        /// </description></item>
+        /// <item><description><para>RATIO: returns addresses by weight.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>all_rr</para>
+        /// <para>ALL_RR</para>
         /// </summary>
         [NameInMap("DefaultLbaStrategy")]
         [Validation(Required=false)]
         public string DefaultLbaStrategy { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of addresses returned from the primary address pool group.</para>
+        /// <para>The maximum number of addresses that can be returned from the primary address pool group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -160,10 +172,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? DefaultMinAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The type of the active address pool group. Valid values:</para>
+        /// <para>The type of the address pool group that is currently in effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEFAULT: the primary address pool group</description></item>
-        /// <item><description>FAILOVER: the secondary address pool group</description></item>
+        /// <item><description><para>DEFAULT: the primary address pool group.</para>
+        /// </description></item>
+        /// <item><description><para>FAILOVER: the secondary address pool group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -176,8 +190,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The status of the secondary address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AVAILABLE: available</description></item>
-        /// <item><description>NOT_AVAILABLE: unavailable</description></item>
+        /// <item><description><para>AVAILABLE</para>
+        /// </description></item>
+        /// <item><description><para>NOT_AVAILABLE</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -190,13 +206,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the secondary address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPV4</description></item>
-        /// <item><description>IPV6</description></item>
-        /// <item><description>DOMAIN</description></item>
+        /// <item><description><para>IPV4</para>
+        /// </description></item>
+        /// <item><description><para>IPV6</para>
+        /// </description></item>
+        /// <item><description><para>DOMAIN</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ipv4</para>
+        /// <para>IPV4</para>
         /// </summary>
         [NameInMap("FailoverAddrPoolType")]
         [Validation(Required=false)]
@@ -241,35 +260,39 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailoverAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether scheduling optimization for latency resolution was enabled for the secondary address pool group. Valid values:</para>
+        /// <para>Indicates whether latency-based scheduling is enabled for the secondary address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OPEN: enabled</description></item>
-        /// <item><description>CLOSE: disabled</description></item>
+        /// <item><description><para>OPEN: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>CLOSE: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>open</para>
+        /// <para>OPEN</para>
         /// </summary>
         [NameInMap("FailoverLatencyOptimization")]
         [Validation(Required=false)]
         public string FailoverLatencyOptimization { get; set; }
 
         /// <summary>
-        /// <para>The load balancing policy of the secondary address pool group. Valid values:</para>
+        /// <para>The load balancing policy for the secondary address pool group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_RR: returns all addresses.</description></item>
-        /// <item><description>RATIO: returns addresses by weight.</description></item>
+        /// <item><description><para>ALL_RR: returns all addresses.</para>
+        /// </description></item>
+        /// <item><description><para>RATIO: returns addresses by weight.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>all_rr</para>
+        /// <para>ALL_RR</para>
         /// </summary>
         [NameInMap("FailoverLbaStrategy")]
         [Validation(Required=false)]
         public string FailoverLbaStrategy { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of addresses returned from the secondary address pool group.</para>
+        /// <para>The maximum number of addresses that can be returned from the secondary address pool group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -289,10 +312,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? FailoverMinAvailableAddrNum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the associated instance.</para>
+        /// <para>The ID of the associated Global Traffic Manager (GTM) instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance1</para>
+        /// <para>gtm-cn-wwo3a3hbz**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -327,7 +350,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BA1608CA-834C-4E63-8682-8AF0B11ED72D</para>
@@ -340,7 +363,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the access policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>strategyId1</para>
+        /// <para>hr***</para>
         /// </summary>
         [NameInMap("StrategyId")]
         [Validation(Required=false)]
@@ -349,12 +372,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the access policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GEO: geographical location-based</description></item>
-        /// <item><description>LATENCY: latency-based</description></item>
+        /// <item><description><para>GEO: a geolocation-based access policy.</para>
+        /// </description></item>
+        /// <item><description><para>LATENCY: a latency-based access policy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>geo</para>
+        /// <para>GEO</para>
         /// </summary>
         [NameInMap("StrategyMode")]
         [Validation(Required=false)]

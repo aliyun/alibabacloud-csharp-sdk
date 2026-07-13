@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInterAuthStatisticsGlobalOverviewResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The statistical data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeInterAuthStatisticsGlobalOverviewResponseBodyData Data { get; set; }
         public class DescribeInterAuthStatisticsGlobalOverviewResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The average success ratio.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>72</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? AvgSuccessRatio { get; set; }
 
             /// <summary>
+            /// <para>The change in the average success ratio compared to the previous statistical period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>75</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? AvgSuccessRatioTrend { get; set; }
 
             /// <summary>
+            /// <para>The total resolve count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>18349</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public long? TotalResolveCount { get; set; }
 
             /// <summary>
+            /// <para>The change in the total resolve count compared to the previous statistical period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2341</para>
             /// </summary>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>

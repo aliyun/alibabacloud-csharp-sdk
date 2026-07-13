@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeCloudGtmAddressPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>Load balancing policy among addresses in the address pool:</para>
+        /// <para>The load balancing policy for the addresses in the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>round_robin: Round-robin, where for any source of DNS resolution requests, all addresses are returned, with a rotation of the order for every request.</description></item>
-        /// <item><description>sequence: Sequential, where for any source of DNS resolution requests, the address with the lower sequence number (indicating a higher priority, the smaller the number, the higher the priority) is returned. If the address with the lower sequence number is unavailable, the next address with a lower sequence number is returned.</description></item>
-        /// <item><description>weight: Weighted, supporting the setting of different weight values for each address to realize returning addresses according to the weight ratio of query resolutions.</description></item>
-        /// <item><description>source_nearest: Source-nearest, also known as intelligent resolution, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing nearby servers.</description></item>
+        /// <item><description><para>round_robin: For a DNS request from any source, all addresses are returned. The addresses are rotated in each response.</para>
+        /// </description></item>
+        /// <item><description><para>sequence: For a DNS request from any source, the address with the highest priority is returned. Priority is determined by the \<c>SerialNumber\\</c>, where a smaller value indicates a higher priority. If the highest-priority address is unavailable, the address with the next highest priority is returned.</para>
+        /// </description></item>
+        /// <item><description><para>weight: A weight can be set for each address. DNS requests are resolved based on the specified weight ratio.</para>
+        /// </description></item>
+        /// <item><description><para>source_nearest: Global Traffic Manager (GTM) returns an address based on the source of the DNS request. This implements proximity-based access for users.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,17 +30,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddressLbStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the address pool. This ID uniquely identifies the address pool.</para>
+        /// <para>The unique ID of the address pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pool-89564674533755**96</para>
+        /// <para>pool-89564674533755****</para>
         /// </summary>
         [NameInMap("AddressPoolId")]
         [Validation(Required=false)]
         public string AddressPoolId { get; set; }
 
         /// <summary>
-        /// <para>Address pool name.</para>
+        /// <para>The name of the address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AddressPool-1</para>
@@ -46,11 +50,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddressPoolName { get; set; }
 
         /// <summary>
-        /// <para>Address pool type:</para>
+        /// <para>The type of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
-        /// <item><description>domain</description></item>
+        /// <item><description><para>IPv4</para>
+        /// </description></item>
+        /// <item><description><para>IPv6</para>
+        /// </description></item>
+        /// <item><description><para>domain</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,10 +190,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Address pool availability status:</para>
+        /// <para>The availability status of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>available: Available</description></item>
-        /// <item><description>unavailable: Unavailable</description></item>
+        /// <item><description><para>available: Available.</para>
+        /// </description></item>
+        /// <item><description><para>unavailable: Unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,7 +206,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AvailableStatus { get; set; }
 
         /// <summary>
-        /// <para>Address pool creation time.</para>
+        /// <para>The time when the address pool was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-15T01:46Z</para>
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Address pool creation time (timestamp).</para>
+        /// <para>The timestamp that indicates when the address pool was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>
@@ -217,10 +226,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Address pool status:</para>
+        /// <para>The status of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enable: Enabled status</description></item>
-        /// <item><description>disable: Disabled status</description></item>
+        /// <item><description><para>enable: Enabled</para>
+        /// </description></item>
+        /// <item><description><para>disable: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,13 +242,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The condition for determining the health status of the address pool. Valid values:</para>
+        /// <para>The condition used to determine the health status of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>any_ok: At least one address in the address pool is available.</description></item>
-        /// <item><description>p30_ok: At least 30% of the addresses in the address pool are available.</description></item>
-        /// <item><description>p50_ok: At least 50% of the addresses in the address pool are available.</description></item>
-        /// <item><description>p70_ok: At least 70% of the addresses in the address pool are available.</description></item>
-        /// <item><description>all_ok: All addresses in the address pool are available.</description></item>
+        /// <item><description><para>any_ok: At least one address is available.</para>
+        /// </description></item>
+        /// <item><description><para>p30_ok: At least 30% of the addresses are available.</para>
+        /// </description></item>
+        /// <item><description><para>p50_ok: At least 50% of the addresses are available.</para>
+        /// </description></item>
+        /// <item><description><para>p70_ok: At least 70% of the addresses are available.</para>
+        /// </description></item>
+        /// <item><description><para>all_ok: All addresses are available.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -248,11 +264,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthJudgement { get; set; }
 
         /// <summary>
-        /// <para>The health state of the address pool. Valid values:</para>
+        /// <para>The health status of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok: The health state of the address pool is normal and all addresses that are referenced by the address pool are available.</description></item>
-        /// <item><description>ok_alert: The health state of the address pool is warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, only the available addresses are returned for Domain Name System (DNS) requests.</description></item>
-        /// <item><description>exceptional: The health state of the address pool is abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</description></item>
+        /// <item><description><para>ok: The address pool is healthy. All addresses in the address pool are available.</para>
+        /// </description></item>
+        /// <item><description><para>ok_alert: The address pool is in an alert state. Some addresses are unavailable, but the address pool is still considered healthy. In this state, DNS resolution is performed for available addresses, but not for unavailable addresses.</para>
+        /// </description></item>
+        /// <item><description><para>exceptional: The address pool is unhealthy. Some or all addresses are unavailable, and the address pool is considered unhealthy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -263,7 +282,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>Remarks for the address.</para>
+        /// <para>The notes on the address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -273,7 +292,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Unique request identification code.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -283,10 +302,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The mode used if the address with the smallest sequence number is recovered. This parameter is returned only when the policy for load balancing between addresses is sequence. Valid values:</para>
+        /// <para>The service recovery mode for a primary address that becomes available again when the load balancing policy is set to \<c>sequence\\</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</description></item>
-        /// <item><description>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</description></item>
+        /// <item><description><para>preemptive: The system preferentially uses the address with a smaller \<c>SerialNumber\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>non_preemptive: The system continues to use the current address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -297,7 +318,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string SequenceLbStrategyMode { get; set; }
 
         /// <summary>
-        /// <para>The last modification time of the address pool.</para>
+        /// <para>The time when the address pool was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-15T01:46Z</para>
@@ -307,7 +328,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>Last modification time of the address pool (timestamp).</para>
+        /// <para>The timestamp that indicates when the address pool was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

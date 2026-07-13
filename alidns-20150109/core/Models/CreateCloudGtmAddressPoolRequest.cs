@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US (default): English</description></item>
+        /// <item><description><para>zh-CN: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>Address pool name, helping users distinguish the purpose of address pools.</para>
+        /// <para>The name of the address pool. The name helps you identify the purpose of the address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Address pool-1</para>
@@ -36,9 +38,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The type of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4: IPv4 addresses are returned for Domain Name System (DNS) resolution.</description></item>
-        /// <item><description>IPv6: IPv6 addresses are returned for DNS resolution.</description></item>
-        /// <item><description>domain: Domain names are returned for DNS resolution.</description></item>
+        /// <item><description><para>IPv4: The endpoint is an IPv4 address.</para>
+        /// </description></item>
+        /// <item><description><para>IPv6: The endpoint is an IPv6 address.</para>
+        /// </description></item>
+        /// <item><description><para>domain: The endpoint is a domain name.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,20 +54,22 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AddressPoolType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique token for each request. The token can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>
+        /// <para>1ae05db4-10e7-11ef-b126-00163e24****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The enabling state of the address pool. Valid values:</para>
+        /// <para>The status of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enable: The address pool is enabled, and the addresses in the address pool are returned for DNS resolution when the health check results are normal.</description></item>
-        /// <item><description>disable: The address pool is disabled, and the addresses in the address pool are not returned for DNS resolution regardless of whether the health check results are normal or not.</description></item>
+        /// <item><description><para>enable: The address pool is enabled and can be used for DNS resolution if it passes health checks.</para>
+        /// </description></item>
+        /// <item><description><para>disable: The address pool is disabled and cannot be used for DNS resolution, regardless of its health check status.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,13 +80,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The condition for determining the health status of the address pool. Valid values:</para>
+        /// <para>The health status condition of the address pool. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>any_ok: At least one address in the address pool is available.</description></item>
-        /// <item><description>p30_ok: At least 30% of the addresses in the address pool are available.</description></item>
-        /// <item><description>p50_ok: At least 50% of the addresses in the address pool are available.</description></item>
-        /// <item><description>p70_ok: At least 70% of the addresses in the address pool are available.</description></item>
-        /// <item><description>all_ok: All addresses in the address pool are available.</description></item>
+        /// <item><description><para>any_ok: At least one address in the address pool is active.</para>
+        /// </description></item>
+        /// <item><description><para>p30_ok: At least 30% of the addresses in the address pool are active.</para>
+        /// </description></item>
+        /// <item><description><para>p50_ok: At least 50% of the addresses in the address pool are active.</para>
+        /// </description></item>
+        /// <item><description><para>p70_ok: At least 70% of the addresses in the address pool are active.</para>
+        /// </description></item>
+        /// <item><description><para>all_ok: All addresses in the address pool are active.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +102,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string HealthJudgement { get; set; }
 
         /// <summary>
-        /// <para>Remarks for the address pool, helping users distinguish the usage scenarios of different address pools.</para>
+        /// <para>Remarks about the address pool. The remarks help you identify the scenario in which the address pool is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app</para>

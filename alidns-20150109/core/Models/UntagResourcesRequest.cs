@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags. Default value: false. This parameter is valid only when TagKey is left empty. Valid values: true and false.</para>
+        /// <para>Specifies whether to remove all tags from the resource. The default value is false. This parameter takes effect only if the TagKey array is empty. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,9 +47,9 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid value: Valid values:</para>
+        /// <para>The resource type. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>DOMAIN</b>: domain name</description></item>
+        /// <item><description><b>DOMAIN</b>: a domain name</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the resource.</para>
+        /// <para>The array of tag keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The domain name.</para>

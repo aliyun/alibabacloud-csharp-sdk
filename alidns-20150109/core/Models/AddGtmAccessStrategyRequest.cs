@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class AddGtmAccessStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The line codes of access regions.</para>
+        /// <para>The source of the DNS requests.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AccessLines { get; set; }
 
         /// <summary>
-        /// <para>The ID of the default address pool.</para>
+        /// <para>The ID of the primary address pool collection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DefaultAddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the failover address pool.</para>
-        /// <para>If the failover address pool is not set, pass the <b>Empty</b> value.</para>
+        /// <para>The ID of the failover address pool collection.</para>
+        /// <para>If a failover address pool collection is not configured, set this parameter to <b>EMPTY</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string FailoverAddrPoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GTM instance for which you want to create an access policy.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -65,8 +65,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the access policy.</para>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>访问策略测试</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

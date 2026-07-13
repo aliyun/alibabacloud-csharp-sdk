@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribePdnsUserInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the user.</para>
+        /// <para>The user information.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public DescribePdnsUserInfoResponseBodyUserInfo UserInfo { get; set; }
         public class DescribePdnsUserInfoResponseBodyUserInfo : TeaModel {
             /// <summary>
-            /// <para>The enabled access security types.</para>
+            /// <para>The enabled secure access type. INSECURE indicates non-encrypted access. SECURE indicates encrypted access.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SECURE</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AvailableAccessSecurityType { get; set; }
 
             /// <summary>
-            /// <para>The enabled public recursive DNS service.</para>
+            /// <para>The public recursive DNS services that are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP,HTTPS</para>
@@ -47,20 +47,20 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AvailableService { get; set; }
 
             /// <summary>
-            /// <para>The configuration ID of the users in public recursive DNS.</para>
+            /// <para>The ID of the dedicated configuration for public recursive DNS.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10001</para>
+            /// <para>1***1</para>
             /// </summary>
             [NameInMap("PdnsId")]
             [Validation(Required=false)]
             public long? PdnsId { get; set; }
 
             /// <summary>
-            /// <para>The SecretKey configured for a UDP-based CIDR block.</para>
+            /// <para>The SecretKey for configuring the UDP access IP address segment.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1c092d715b7a48de</para>
+            /// <para>1c09*******</para>
             /// </summary>
             [NameInMap("SecretKey")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The status of the traffic analysis switch for the user in public recursive DNS service.</para>
+            /// <para>The status of the switch for public recursive DNS traffic analysis.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOSED</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string StatisticSwitchStatus { get; set; }
 
             /// <summary>
-            /// <para>The disabled public recursive DNS service.</para>
+            /// <para>The public recursive DNS services that are shut down.</para>
             /// </summary>
             [NameInMap("StoppedService")]
             [Validation(Required=false)]

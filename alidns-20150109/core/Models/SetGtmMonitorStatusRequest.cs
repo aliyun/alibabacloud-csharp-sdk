@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SetGtmMonitorStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The language used by the user.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The health check ID.</para>
+        /// <para>The health check configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string MonitorConfigId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether health check is enabled for the address pool. Valid values:</para>
+        /// <para>The enabling status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OPEN</b>: Enabled</description></item>
-        /// <item><description><b>CLOSE</b>: Disabled</description></item>
+        /// <item><description><para><b>OPEN</b>: Enable</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOSE</b>: Disable</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

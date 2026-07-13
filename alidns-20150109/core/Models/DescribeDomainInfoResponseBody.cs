@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDomainInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the domain name was registered in Alibaba Cloud.</para>
+        /// <para>Indicates whether the domain name was registered with Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -53,14 +53,18 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the domain name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>00efd71a-770e-4255-b54e-6fe5659baffe</para>
+        /// <para>00efd71a-7************</para>
         /// </summary>
         [NameInMap("DomainId")]
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the DNS traffic analysis feature is enabled. Valid values:</para>
+        /// <para>The status of the logging feature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CLOSE：关闭状态
+        /// OPEN：开启状态</para>
         /// </summary>
         [NameInMap("DomainLoggingSwitchStatus")]
         [Validation(Required=false)]
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the domain name group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2223</para>
+        /// <para>2***</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether blackhole filtering was triggered.</para>
+        /// <para>Indicates whether blackhole filtering is activated for the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? InBlackHole { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether traffic scrubbing was in progress.</para>
+        /// <para>Indicates whether the domain name is being scrubbed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -120,14 +124,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the Alibaba Cloud DNS instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-7bg</para>
+        /// <para>i-7**</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the DNS request line.</para>
+        /// <para>The type of the DNS request source line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>region_province</para>
@@ -137,7 +141,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string LineType { get; set; }
 
         /// <summary>
-        /// <para>The minimum TTL value.</para>
+        /// <para>The minimum TTL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,7 +151,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? MinTtl { get; set; }
 
         /// <summary>
-        /// <para>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</para>
+        /// <para>The Punycode for the Chinese domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string PunyCode { get; set; }
 
         /// <summary>
-        /// <para>The tree-structure DNS request lines.</para>
+        /// <para>The list of DNS request source lines in a tree structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;default&quot;:{},&quot;unicom&quot;:{},&quot;telecom&quot;:{},&quot;mobile&quot;:{},&quot;edu&quot;:{},&quot;oversea&quot;:{},&quot;baidu&quot;:{},&quot;biying&quot;:{},&quot;google&quot;:{}}</para>
@@ -195,7 +199,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the DNS request lines are regional lines.</para>
+        /// <para>Indicates whether the line is a regional line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -205,7 +209,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? RegionLines { get; set; }
 
         /// <summary>
-        /// <para>The description.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark</para>
@@ -215,7 +219,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -228,7 +232,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek3dj3wvclgcxo</para>
+        /// <para>rg-aek3dj3******</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -245,10 +249,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? SlaveDns { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the queried domain name is a hosted subdomain name. Valid values:</para>
+        /// <para>Indicates whether the queried domain is a hosted subdomain. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -259,17 +265,28 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? SubDomain { get; set; }
 
         /// <summary>
-        /// <para>The version ID of Alibaba Cloud DNS.</para>
+        /// <para>The edition ID of Alibaba Cloud DNS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>version_enterprise_advanced: Ultimate Edition</para>
+        /// </description></item>
+        /// <item><description><para>version_personal: Personal Edition</para>
+        /// </description></item>
+        /// <item><description><para>mianfei: Free Edition</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>version1</para>
+        /// <para>mianfei</para>
         /// </summary>
         [NameInMap("VersionCode")]
         [Validation(Required=false)]
         public string VersionCode { get; set; }
 
         /// <summary>
-        /// <para>The edition of Alibaba Cloud DNS.</para>
+        /// <para>The name of the Alibaba Cloud DNS edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>企业旗舰版</para>
         /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]

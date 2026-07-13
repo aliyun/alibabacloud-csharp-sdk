@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? AddrPoolNotAvailableNum { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the instance. Valid values:</para>
+        /// <para>The status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALLOW: The operation on the instance is allowed.</description></item>
-        /// <item><description>DENY: The operation on the instance is not allowed.</description></item>
+        /// <item><description><para>ALLOW: Operations are allowed.</para>
+        /// </description></item>
+        /// <item><description><para>DENY: Operations are denied.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +56,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The reasons why the instance is in the current state. Valid values:</para>
+        /// <para>A list of reasons for the instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INSTANCE_OPERATE_BLACK_LIST: The operation on the instance is not allowed.</description></item>
-        /// <item><description>BETA_INSTANCE: The instance is in public preview.</description></item>
+        /// <item><description><para>INSTANCE_OPERATE_BLACK_LIST: The instance is in a blacklist.</para>
+        /// </description></item>
+        /// <item><description><para>BETA_INSTANCE: The instance is in public preview.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StatusReason { get; set; }
 
         /// <summary>
-        /// <para>The number of unavailable access policies.</para>
+        /// <para>The number of access policies for which the active address pool is unavailable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? StrategyNotAvailableNum { get; set; }
 
         /// <summary>
-        /// <para>The number of access policies switched to the secondary address pool.</para>
+        /// <para>The number of access policies that are switched to the failover address pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

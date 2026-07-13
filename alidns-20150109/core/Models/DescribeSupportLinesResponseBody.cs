@@ -38,6 +38,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CFDA0830-7D6E-4C13-8632-B57C7EDCF079</para>
         /// </summary>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
+        /// <item><description><para><c>zh-CN</c>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><c>en-US</c>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +26,21 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>The alert configurations.</para>
+        /// <para>A list of alert configurations.</para>
         /// </summary>
         [NameInMap("AlertConfig")]
         [Validation(Required=false)]
         public string AlertConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The alert contact groups.</para>
+        /// <para>A list of alert notification groups.</para>
         /// </summary>
         [NameInMap("AlertGroup")]
         [Validation(Required=false)]
         public string AlertGroupShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token to ensure request idempotence. This token must be unique for each request, contain only ASCII characters, and be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ae05db4-10e7-11ef-b126-00163e24**22</para>

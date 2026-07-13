@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeDnsProductInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether auto-renewal was enabled. Valid values:</para>
+        /// <para>Indicates whether auto-renewal is enabled for the instance.</para>
         /// <list type="bullet">
-        /// <item><description>true: Auto-renewal was enabled.</description></item>
-        /// <item><description>false: Auto-renewal was not enabled.</description></item>
+        /// <item><description><para>true: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Auto-renewal is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? AutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The number of times that you can change the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</para>
+        /// <para>The number of times the domain name can be changed for the paid DNS instance. This parameter is available for the Custom Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? BindCount { get; set; }
 
         /// <summary>
-        /// <para>The number of domain names that can be bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of Personal Edition, Enterprise Standard Edition, and Enterprise Ultimate Edition.</para>
+        /// <para>The number of domain names that can be attached to the paid DNS instance. This parameter is available for the Personal and Ultimate editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? BindDomainCount { get; set; }
 
         /// <summary>
-        /// <para>The number of domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of Personal Edition, Enterprise Standard Edition, and Enterprise Ultimate Edition.</para>
+        /// <para>The number of domain names that are attached to the paid DNS instance. This parameter is available for the Personal and Ultimate editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? BindDomainUsedCount { get; set; }
 
         /// <summary>
-        /// <para>The number of times that you have changed the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</para>
+        /// <para>The number of times the domain name has been changed for the paid DNS instance. This parameter is available for the Custom Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? BindUsedCount { get; set; }
 
         /// <summary>
-        /// <para>The DDoS protection traffic. Unit: GB.</para>
+        /// <para>The DDoS protection bandwidth. Unit: Gbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? DDosDefendFlow { get; set; }
 
         /// <summary>
-        /// <para>The DDoS protection frequency. Unit: 10,000 QPS. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</para>
+        /// <para>The DDoS protection capacity in queries per second (QPS). The unit is 10,000 QPS. This parameter is available for the Custom Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? DDosDefendQuery { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of IP addresses that are used for load balancing in a single line of a domain name.</para>
+        /// <para>The Server Load Balancer (SLB) capacity. This is the number of IP addresses that can be configured for a domain name on a single line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -94,11 +96,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? DnsSLBCount { get; set; }
 
         /// <summary>
-        /// <para>The level of DNS protection. Valid values:</para>
+        /// <para>The DNS security level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>no: No DNS protection is provided.</description></item>
-        /// <item><description>basic: Basic DNS protection is provided.</description></item>
-        /// <item><description>advanced: Advanced DNS protection is provided.</description></item>
+        /// <item><description><para>no: Not required</para>
+        /// </description></item>
+        /// <item><description><para>basic: Basic DNS attack protection</para>
+        /// </description></item>
+        /// <item><description><para>advanced: Advanced DNS attack protection</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,8 +124,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The domain name that is bound to the paid instance.</para>
-        /// <para>If no value is returned for this parameter, no domain name is bound to the paid instance.</para>
+        /// <para>The attached domain name.</para>
+        /// <para>If this parameter is empty, no domain name is attached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -130,10 +135,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance. Valid values:</para>
+        /// <para>The type of the instance:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: authoritative domain name</description></item>
-        /// <item><description>CACHE: cache-accelerated domain name</description></item>
+        /// <item><description><para>PUBLIC: An instance for an authoritative domain name.</para>
+        /// </description></item>
+        /// <item><description><para>CACHE: An instance for a recursive DNS proxy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,7 +151,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance expired. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the instance expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-12T09:23Z</para>
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the instance expires. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1474335170000</para>
@@ -164,10 +171,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether global server load balancing (GSLB) is supported. Valid values:</para>
+        /// <para>Indicates whether Global Server Load Balancer (GSLB) is allowed.</para>
         /// <list type="bullet">
-        /// <item><description>true: GSLB is supported.</description></item>
-        /// <item><description>false: GSLB is not supported.</description></item>
+        /// <item><description><para>true: Allowed</para>
+        /// </description></item>
+        /// <item><description><para>false: Not allowed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -178,38 +187,56 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? Gslb { get; set; }
 
         /// <summary>
-        /// <para>The ISP resolution lines. Valid values:</para>
+        /// <para>The carrier line from which the DNS request was initiated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>China Telecom</description></item>
-        /// <item><description>China Mobile</description></item>
-        /// <item><description>China Unicom</description></item>
-        /// <item><description>China Education and Research Network (CERNET)</description></item>
-        /// <item><description>China Broadcasting Network (CBN)</description></item>
-        /// <item><description>Dr Peng Telecom &amp; Media Group</description></item>
+        /// <item><description><para>China Telecom</para>
+        /// </description></item>
+        /// <item><description><para>China Mobile</para>
+        /// </description></item>
+        /// <item><description><para>China Unicom</para>
+        /// </description></item>
+        /// <item><description><para>China Education and Research Network</para>
+        /// </description></item>
+        /// <item><description><para>China Broadcasting Network</para>
+        /// </description></item>
+        /// <item><description><para>Dr. Peng Group</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>中国电信</para>
         /// </summary>
         [NameInMap("ISPLines")]
         [Validation(Required=false)]
         public string ISPLines { get; set; }
 
         /// <summary>
-        /// <para>The regional ISP resolution lines. Valid values:</para>
+        /// <para>The carrier line and province from which the DNS request was initiated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>China Telecom (province)</description></item>
-        /// <item><description>China Mobile (province)</description></item>
-        /// <item><description>China Unicom (province)</description></item>
-        /// <item><description>CERNET (province)</description></item>
+        /// <item><description><para>China Telecom (by province)</para>
+        /// </description></item>
+        /// <item><description><para>China Mobile (by province)</para>
+        /// </description></item>
+        /// <item><description><para>China Unicom (by province)</para>
+        /// </description></item>
+        /// <item><description><para>China Education and Research Network (by province)</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>电信_浙江</para>
         /// </summary>
         [NameInMap("ISPRegionLines")]
         [Validation(Required=false)]
         public string ISPRegionLines { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Domain Name System (DNS) servers stopped responding to all DNS requests. Valid values:</para>
+        /// <para>Indicates whether the domain name is in a blackhole filtering status.</para>
         /// <list type="bullet">
-        /// <item><description>true: The DNS servers stopped responding to all DNS requests.</description></item>
-        /// <item><description>false: The DNS servers did not stop responding to all DNS requests.</description></item>
+        /// <item><description><para>true: The domain name is in a blackhole filtering status.</para>
+        /// </description></item>
+        /// <item><description><para>false: The domain name is not in a blackhole filtering status.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -220,10 +247,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? InBlackHole { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the DNS servers stopped responding to abnormal requests sent to the domain names.</para>
+        /// <para>Indicates whether the domain name is undergoing traffic scrubbing.</para>
         /// <list type="bullet">
-        /// <item><description>true: The DNS servers stopped responding to abnormal requests sent to the domain names.</description></item>
-        /// <item><description>false: The DNS servers did not stop responding to abnormal requests sent to the domain names.</description></item>
+        /// <item><description><para>true: Traffic scrubbing is in progress.</para>
+        /// </description></item>
+        /// <item><description><para>false: Traffic scrubbing is not in progress.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -244,7 +273,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the instance is monitored. Unit: minutes.</para>
+        /// <para>The monitoring frequency. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -264,7 +293,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? MonitorNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The number of monitoring tasks.</para>
+        /// <para>The number of monitoring jobs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -274,7 +303,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? MonitorTaskCount { get; set; }
 
         /// <summary>
-        /// <para>The DDoS protection traffic outside the Chinese mainland. Unit: GB.</para>
+        /// <para>The DDoS protection bandwidth for regions outside China. Unit: Gbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -284,7 +313,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? OverseaDDosDefendFlow { get; set; }
 
         /// <summary>
-        /// <para>The line outside the Chinese mainland.</para>
+        /// <para>The line for regions outside China.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>海外大洲</para>
         /// </summary>
         [NameInMap("OverseaLine")]
         [Validation(Required=false)]
@@ -301,10 +333,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the DNS request lines are regional lines. Valid values:</para>
+        /// <para>Indicates whether regional lines are used.</para>
         /// <list type="bullet">
-        /// <item><description>true: The DNS request lines are regional lines.</description></item>
-        /// <item><description>false: The DNS request lines are not regional lines.</description></item>
+        /// <item><description><para>true: Regional lines are used.</para>
+        /// </description></item>
+        /// <item><description><para>false: Regional lines are not used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -315,30 +349,37 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public bool? RegionLines { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
+        /// <para>536E9CAD-DB30-4647-AC87-xxxxxxx</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The search engine resolution lines. Valid values:</para>
+        /// <para>The search engine line. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Google</description></item>
-        /// <item><description>Baidu</description></item>
-        /// <item><description>Bing</description></item>
-        /// <item><description>Youdao</description></item>
+        /// <item><description><para>Google</para>
+        /// </description></item>
+        /// <item><description><para>Baidu</para>
+        /// </description></item>
+        /// <item><description><para>Bing</para>
+        /// </description></item>
+        /// <item><description><para>Youdao</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>谷歌</para>
         /// </summary>
         [NameInMap("SearchEngineLines")]
         [Validation(Required=false)]
         public string SearchEngineLines { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was purchased. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the instance was purchased.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2015-12-12T09:23Z</para>
@@ -348,7 +389,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was purchased. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the instance was purchased. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1474335170000</para>
@@ -358,7 +399,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? StartTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The number of subdomain name levels.</para>
+        /// <para>The number of subdomain levels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -368,7 +409,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? SubDomainLevel { get; set; }
 
         /// <summary>
-        /// <para>The minimum time-to-live (TTL) period. Unit: seconds.</para>
+        /// <para>The minimum Time to Live (TTL) value. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -378,7 +419,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? TTLMinValue { get; set; }
 
         /// <summary>
-        /// <para>The number of the forwarded URLs.</para>
+        /// <para>The number of URL forwards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -388,7 +429,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? URLForwardCount { get; set; }
 
         /// <summary>
-        /// <para>The version code of Alibaba Cloud DNS.</para>
+        /// <para>The code of the Alibaba Cloud DNS edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>version1</para>
@@ -398,7 +439,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string VersionCode { get; set; }
 
         /// <summary>
-        /// <para>The edition of Alibaba Cloud DNS.</para>
+        /// <para>The name of the Alibaba Cloud DNS edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>企业旗舰版</para>
         /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]
