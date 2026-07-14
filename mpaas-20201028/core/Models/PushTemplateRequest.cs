@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string TransparentMessageUrgency { get; set; }
 
+        [NameInMap("VendorTemplate")]
+        [Validation(Required=false)]
+        public string VendorTemplate { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
