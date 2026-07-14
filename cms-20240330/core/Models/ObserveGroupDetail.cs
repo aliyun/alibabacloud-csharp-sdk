@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// </summary>
         [NameInMap("discoverRules")]
         [Validation(Required=false)]
-        public string DiscoverRules { get; set; }
+        public List<ObserveGroupDiscoverRule> DiscoverRules { get; set; }
 
         /// <summary>
-        /// <para>The statistics of entities in the group, grouped by entity type.</para>
+        /// <para>The statistics of entities in the group, categorized by entity type.</para>
         /// </summary>
         [NameInMap("entitySummaries")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityCategory { get; set; }
 
             /// <summary>
-            /// <para>The entity count.</para>
+            /// <para>The number of entities.</para>
             /// </summary>
             [NameInMap("entityCount")]
             [Validation(Required=false)]
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>The extended information in JSON string format, which carries alert templates, alert contact groups, pause policies, and other configurations.</para>
+        /// <para>The extended information in JSON string format, which carries alert templates, alert contact groups, suspension policies, and other configurations.</para>
         /// </summary>
         [NameInMap("extraInfo")]
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current user has favorited the group.</para>
+        /// <para>Indicates whether the current user has followed the group.</para>
         /// </summary>
         [NameInMap("favorited")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the observability group. The name must be unique within the workspace.</para>
+        /// <para>The name of the observability group. The name must be unique within the same workspace.</para>
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
@@ -114,7 +114,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the version 1.0 application group (product_group.id). This parameter is valid only when sourceOrigin is set to synced_from_1_0.</para>
+        /// <para>Specifies whether to enable the og_entity_info metric output. When enabled, the data plane writes the group ownership information to the target Prometheus instance.</para>
+        /// </summary>
+        [NameInMap("ogEntityInfoEnabled")]
+        [Validation(Required=false)]
+        public bool? OgEntityInfoEnabled { get; set; }
+
+        /// <summary>
+        /// <para>The set of Prometheus instances to which og_entity_info is written. This includes two source types: system (automatically identified by the system) and custom (user-defined).</para>
+        /// </summary>
+        [NameInMap("ogEntityInfoPromInstances")]
+        [Validation(Required=false)]
+        public List<ObserveGroupPromInstance> OgEntityInfoPromInstances { get; set; }
+
+        /// <summary>
+        /// <para>The product_group.id of the version 1.0 application group. This parameter is valid only when sourceOrigin is set to synced_from_1_0.</para>
         /// </summary>
         [NameInMap("originGroupId")]
         [Validation(Required=false)]
@@ -144,6 +158,29 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("sourceOrigin")]
         [Validation(Required=false)]
         public string SourceOrigin { get; set; }
+
+        /// <summary>
+        /// <para>The resource tags (Alibaba Cloud standard tags), represented as an array of key-value pairs.</para>
+        /// </summary>
+        [NameInMap("tags")]
+        [Validation(Required=false)]
+        public List<ObserveGroupDetailTags> Tags { get; set; }
+        public class ObserveGroupDetailTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// </summary>
+            [NameInMap("tagKey")]
+            [Validation(Required=false)]
+            public string TagKey { get; set; }
+
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// </summary>
+            [NameInMap("tagValue")]
+            [Validation(Required=false)]
+            public string TagValue { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The workspace ID to which the group belongs. This value is set at the workspace level and cannot be changed after the group is created.</para>

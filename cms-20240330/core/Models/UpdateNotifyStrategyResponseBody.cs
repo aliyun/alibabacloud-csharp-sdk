@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This is a unique identifier for troubleshooting.</para>
+        /// <para>The unique ID of the request, which is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

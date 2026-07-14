@@ -8,20 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class DirectNotifyChannel : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class DirectNotifyReceiver : TeaModel {
+        [NameInMap("channels")]
+        [Validation(Required=false)]
+        public List<string> Channels { get; set; }
+
         [NameInMap("identifiers")]
         [Validation(Required=false)]
         public List<string> Identifiers { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("type")]
+        [NameInMap("targetType")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string TargetType { get; set; }
 
     }
 

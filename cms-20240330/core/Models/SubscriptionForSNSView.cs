@@ -37,6 +37,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: subscribed. false or null: not subscribed.</para>
+        /// </summary>
+        [NameInMap("subscribeLegacyEvent")]
+        [Validation(Required=false)]
+        public bool? SubscribeLegacyEvent { get; set; }
+
         [NameInMap("subscriptionType")]
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }

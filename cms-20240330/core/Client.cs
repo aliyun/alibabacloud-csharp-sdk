@@ -2651,6 +2651,158 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a notification policy in a specified workspace. The notifyStrategy field in the request body NotifyPolicyConfig is required, while subscription and responsePlan are optional. After the policy is created, the generated policy UUID and complete policy details are returned. If a policy with the same Policy Name already exists in the workspace, a ConflictName error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNotifyPolicyResponse
+        /// </returns>
+        public CreateNotifyPolicyResponse CreateNotifyPolicyWithOptions(CreateNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNotifyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a notification policy in a specified workspace. The notifyStrategy field in the request body NotifyPolicyConfig is required, while subscription and responsePlan are optional. After the policy is created, the generated policy UUID and complete policy details are returned. If a policy with the same Policy Name already exists in the workspace, a ConflictName error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNotifyPolicyResponse
+        /// </returns>
+        public async Task<CreateNotifyPolicyResponse> CreateNotifyPolicyWithOptionsAsync(CreateNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateNotifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a notification policy in a specified workspace. The notifyStrategy field in the request body NotifyPolicyConfig is required, while subscription and responsePlan are optional. After the policy is created, the generated policy UUID and complete policy details are returned. If a policy with the same Policy Name already exists in the workspace, a ConflictName error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNotifyPolicyResponse
+        /// </returns>
+        public CreateNotifyPolicyResponse CreateNotifyPolicy(CreateNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateNotifyPolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a notification policy in a specified workspace. The notifyStrategy field in the request body NotifyPolicyConfig is required, while subscription and responsePlan are optional. After the policy is created, the generated policy UUID and complete policy details are returned. If a policy with the same Policy Name already exists in the workspace, a ConflictName error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateNotifyPolicyResponse
+        /// </returns>
+        public async Task<CreateNotifyPolicyResponse> CreateNotifyPolicyAsync(CreateNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateNotifyPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create a pipeline.</para>
         /// </summary>
         /// 
@@ -6157,6 +6309,164 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a notification policy in a specified workspace. After deletion, the policy no longer sends notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a notification policy by specifying the workspace and uuid. Returns success to indicate the deletion result and the uuid of the deleted policy.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotifyPolicyResponse
+        /// </returns>
+        public DeleteNotifyPolicyResponse DeleteNotifyPolicyWithOptions(DeleteNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["uuid"] = request.Uuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNotifyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy in a specified workspace. After deletion, the policy no longer sends notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a notification policy by specifying the workspace and uuid. Returns success to indicate the deletion result and the uuid of the deleted policy.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotifyPolicyResponse
+        /// </returns>
+        public async Task<DeleteNotifyPolicyResponse> DeleteNotifyPolicyWithOptionsAsync(DeleteNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["uuid"] = request.Uuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNotifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy in a specified workspace. After deletion, the policy no longer sends notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a notification policy by specifying the workspace and uuid. Returns success to indicate the deletion result and the uuid of the deleted policy.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotifyPolicyResponse
+        /// </returns>
+        public DeleteNotifyPolicyResponse DeleteNotifyPolicy(DeleteNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteNotifyPolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a notification policy in a specified workspace. After deletion, the policy no longer sends notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a notification policy by specifying the workspace and uuid. Returns success to indicate the deletion result and the uuid of the deleted policy.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNotifyPolicyResponse
+        /// </returns>
+        public async Task<DeleteNotifyPolicyResponse> DeleteNotifyPolicyAsync(DeleteNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteNotifyPolicyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a pipeline.</para>
         /// </summary>
         /// 
@@ -7825,6 +8135,306 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeRegionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified notification policy. After the policy is disabled, notifications are paused but all configurations are retained. The policy can be re-enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNotifyPolicyResponse
+        /// </returns>
+        public DisableNotifyPolicyResponse DisableNotifyPolicyWithOptions(string uuid, DisableNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uuid) + "/disable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableNotifyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified notification policy. After the policy is disabled, notifications are paused but all configurations are retained. The policy can be re-enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNotifyPolicyResponse
+        /// </returns>
+        public async Task<DisableNotifyPolicyResponse> DisableNotifyPolicyWithOptionsAsync(string uuid, DisableNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uuid) + "/disable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableNotifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified notification policy. After the policy is disabled, notifications are paused but all configurations are retained. The policy can be re-enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNotifyPolicyResponse
+        /// </returns>
+        public DisableNotifyPolicyResponse DisableNotifyPolicy(string uuid, DisableNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DisableNotifyPolicyWithOptions(uuid, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a specified notification policy. After the policy is disabled, notifications are paused but all configurations are retained. The policy can be re-enabled.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DisableNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableNotifyPolicyResponse
+        /// </returns>
+        public async Task<DisableNotifyPolicyResponse> DisableNotifyPolicyAsync(string uuid, DisableNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DisableNotifyPolicyWithOptionsAsync(uuid, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a disabled notification policy in a specified workspace. After the policy is enabled, it resumes sending notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a notification policy by specifying the workspace and uuid path parameters. Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNotifyPolicyResponse
+        /// </returns>
+        public EnableNotifyPolicyResponse EnableNotifyPolicyWithOptions(string uuid, EnableNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uuid) + "/enable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableNotifyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a disabled notification policy in a specified workspace. After the policy is enabled, it resumes sending notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a notification policy by specifying the workspace and uuid path parameters. Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNotifyPolicyResponse
+        /// </returns>
+        public async Task<EnableNotifyPolicyResponse> EnableNotifyPolicyWithOptionsAsync(string uuid, EnableNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(uuid) + "/enable",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableNotifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a disabled notification policy in a specified workspace. After the policy is enabled, it resumes sending notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a notification policy by specifying the workspace and uuid path parameters. Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNotifyPolicyResponse
+        /// </returns>
+        public EnableNotifyPolicyResponse EnableNotifyPolicy(string uuid, EnableNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return EnableNotifyPolicyWithOptions(uuid, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a disabled notification policy in a specified workspace. After the policy is enabled, it resumes sending notifications for subscribed events.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables a notification policy by specifying the workspace and uuid path parameters. Returns success and the policy uuid.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// EnableNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableNotifyPolicyResponse
+        /// </returns>
+        public async Task<EnableNotifyPolicyResponse> EnableNotifyPolicyAsync(string uuid, EnableNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await EnableNotifyPolicyWithOptionsAsync(uuid, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10883,6 +11493,164 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetMemoryStoreWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified notification policy by workspace and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotifyPolicyResponse
+        /// </returns>
+        public GetNotifyPolicyResponse GetNotifyPolicyWithOptions(GetNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["uuid"] = request.Uuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNotifyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified notification policy by workspace and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotifyPolicyResponse
+        /// </returns>
+        public async Task<GetNotifyPolicyResponse> GetNotifyPolicyWithOptionsAsync(GetNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                query["uuid"] = request.Uuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNotifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified notification policy by workspace and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotifyPolicyResponse
+        /// </returns>
+        public GetNotifyPolicyResponse GetNotifyPolicy(GetNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetNotifyPolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a specified notification policy by workspace and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNotifyPolicyResponse
+        /// </returns>
+        public async Task<GetNotifyPolicyResponse> GetNotifyPolicyAsync(GetNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetNotifyPolicyWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16105,6 +16873,196 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Lists notify policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNotifyPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNotifyPoliciesResponse
+        /// </returns>
+        public ListNotifyPoliciesResponse ListNotifyPoliciesWithOptions(ListNotifyPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDesc))
+            {
+                query["orderDesc"] = request.OrderDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNotifyPolicies",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policies",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNotifyPoliciesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists notify policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNotifyPoliciesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNotifyPoliciesResponse
+        /// </returns>
+        public async Task<ListNotifyPoliciesResponse> ListNotifyPoliciesWithOptionsAsync(ListNotifyPoliciesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderDesc))
+            {
+                query["orderDesc"] = request.OrderDesc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNotifyPolicies",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policies",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNotifyPoliciesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists notify policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNotifyPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNotifyPoliciesResponse
+        /// </returns>
+        public ListNotifyPoliciesResponse ListNotifyPolicies(ListNotifyPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListNotifyPoliciesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists notify policies.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNotifyPoliciesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNotifyPoliciesResponse
+        /// </returns>
+        public async Task<ListNotifyPoliciesResponse> ListNotifyPoliciesAsync(ListNotifyPoliciesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListNotifyPoliciesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists pipelines.</para>
         /// </summary>
         /// 
@@ -21055,6 +22013,158 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateMemoryStoreWithOptionsAsync(workspace, memoryStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a notification policy by workspace and body (containing uuid and version). The version field is an optimistic lock version number that must match the current record on the backend. Otherwise, OptimisticLockFailed is returned. After a successful update, the latest policy details are returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyPolicyResponse
+        /// </returns>
+        public UpdateNotifyPolicyResponse UpdateNotifyPolicyWithOptions(UpdateNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNotifyPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a notification policy by workspace and body (containing uuid and version). The version field is an optimistic lock version number that must match the current record on the backend. Otherwise, OptimisticLockFailed is returned. After a successful update, the latest policy details are returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyPolicyResponse
+        /// </returns>
+        public async Task<UpdateNotifyPolicyResponse> UpdateNotifyPolicyWithOptionsAsync(UpdateNotifyPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
+            {
+                query["workspace"] = request.Workspace;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNotifyPolicy",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/eventbase/notify-policy/update",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNotifyPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a notification policy by workspace and body (containing uuid and version). The version field is an optimistic lock version number that must match the current record on the backend. Otherwise, OptimisticLockFailed is returned. After a successful update, the latest policy details are returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyPolicyResponse
+        /// </returns>
+        public UpdateNotifyPolicyResponse UpdateNotifyPolicy(UpdateNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateNotifyPolicyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a notification policy.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a notification policy by workspace and body (containing uuid and version). The version field is an optimistic lock version number that must match the current record on the backend. Otherwise, OptimisticLockFailed is returned. After a successful update, the latest policy details are returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNotifyPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNotifyPolicyResponse
+        /// </returns>
+        public async Task<UpdateNotifyPolicyResponse> UpdateNotifyPolicyAsync(UpdateNotifyPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateNotifyPolicyWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

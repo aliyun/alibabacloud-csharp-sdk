@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public List<string> NotifyStrategies { get; set; }
 
+        [NameInMap("sendRecoverNotification")]
+        [Validation(Required=false)]
+        public bool? SendRecoverNotification { get; set; }
+
+        [NameInMap("severityChannels")]
+        [Validation(Required=false)]
+        public Dictionary<string, SeverityNotifyConfig> SeverityChannels { get; set; }
+
         [NameInMap("silenceTimeSecs")]
         [Validation(Required=false)]
         public int? SilenceTimeSecs { get; set; }

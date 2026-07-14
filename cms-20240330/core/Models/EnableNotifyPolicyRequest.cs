@@ -8,19 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
-    public class UpdateNotifyStrategyRequest : TeaModel {
+    public class EnableNotifyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The request body parameters.</para>
-        /// </summary>
-        [NameInMap("body")]
-        [Validation(Required=false)]
-        public NotifyStrategyForModify Body { get; set; }
-
-        /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The workspace ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>workspace-test</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]
