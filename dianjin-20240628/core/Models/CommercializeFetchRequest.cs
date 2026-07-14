@@ -24,6 +24,18 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>AES</para>
+        /// </summary>
+        [NameInMap("encryptType")]
+        [Validation(Required=false)]
+        public string EncryptType { get; set; }
+
+        [NameInMap("env")]
+        [Validation(Required=false)]
+        public string Env { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("productId")]
@@ -50,6 +62,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [NameInMap("sign")]
         [Validation(Required=false)]
         public string Sign { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RSA</para>
+        /// </summary>
+        [NameInMap("signType")]
+        [Validation(Required=false)]
+        public string SignType { get; set; }
 
     }
 
