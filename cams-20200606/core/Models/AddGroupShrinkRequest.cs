@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddGroupShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>The business extension information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>The contact description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15111111111</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactDetails { get; set; }
 
         /// <summary>
+        /// <para>The contact name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mary</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactName { get; set; }
 
         /// <summary>
+        /// <para>The country.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>China</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Country { get; set; }
 
         /// <summary>
+        /// <para>The email address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
@@ -53,11 +69,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Email { get; set; }
 
+        /// <summary>
+        /// <para>The file path.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>src/main/resources/config/promql_node.yaml</para>
+        /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
         /// <summary>
+        /// <para>The group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +95,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

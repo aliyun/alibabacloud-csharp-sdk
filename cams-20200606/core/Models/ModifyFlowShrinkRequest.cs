@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyFlowShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The folder.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Categories")]
@@ -17,14 +18,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CategoriesShrink { get; set; }
 
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>cams-1sdkjwen2</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The URL of the WA Flow Endpoint</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.***.com">http://www.***.com</a></para>
         /// </summary>
@@ -33,18 +38,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string EndpointUri { get; set; }
 
         /// <summary>
+        /// <para>The ID of the flow.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>21231232312</para>
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]
         public string FlowId { get; set; }
 
         /// <summary>
+        /// <para>The name of the flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Flow-**001</para>
         /// </summary>
         [NameInMap("FlowName")]
         [Validation(Required=false)]

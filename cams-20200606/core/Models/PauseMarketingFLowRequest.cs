@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class PauseMarketingFLowRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>439859845**234</para>
         /// </summary>
         [NameInMap("ActivityCode")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>N/A</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]

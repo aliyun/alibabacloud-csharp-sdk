@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1507486****</para>
         /// </summary>
         [NameInMap("ContactDetails")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>hahaha</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>China</para>
         /// </summary>
         [NameInMap("Country")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>http://****</para>
         /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]

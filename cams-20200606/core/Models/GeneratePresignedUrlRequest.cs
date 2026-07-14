@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GeneratePresignedUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The OSS path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>/aaa/111/aa.png</para>
         /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateChatGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The business number. To view the business numbers, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
-        /// <para>The channel type. Valid value:</para>
+        /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>WHATSAPP</b>.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only the WhatsApp channel is supported.</para>
+        /// <para>Only the WhatsApp channel type is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
+        /// <para>The space ID of the ISV sub-customer, which is also the instance ID. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,14 +51,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The group description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The group ID. To view the group IDs, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,14 +75,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The group profile picture.</para>
         /// <remarks>
-        /// <para>Image requirements</para>
+        /// <para>Image restrictions:</para>
         /// <list type="bullet">
-        /// <item><description><para>Supported MIME type: image/jpeg.</para>
-        /// </description></item>
-        /// <item><description><para>Maximum file size: 5 MB.</para>
-        /// </description></item>
-        /// <item><description><para>The image must be square. Minimum dimensions: 192x192 pixels.</para>
-        /// </description></item>
+        /// <item><description>Supported MIME type: image/jpeg</description></item>
+        /// <item><description>Maximum image size: 5 MB</description></item>
+        /// <item><description>The image must be square with a minimum dimension of 192 × 192 pixels.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -100,10 +96,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The group title.</para>
+        /// <para>The group subject.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a test title.</para>
+        /// <para>test title</para>
         /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]

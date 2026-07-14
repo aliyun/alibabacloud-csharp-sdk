@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeprecateFlowResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The reason why access was denied.</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }

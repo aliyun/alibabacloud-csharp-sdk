@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]
         public ListProductCatalogResponseBodyModel Model { get; set; }
         public class ListProductCatalogResponseBodyModel : TeaModel {
             /// <summary>
-            /// <para>The returned data.</para>
+            /// <para>The returned data object.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public ListProductCatalogResponseBodyModelPaging Paging { get; set; }
             public class ListProductCatalogResponseBodyModelPaging : TeaModel {
                 /// <summary>
-                /// <para>The cursors for pagination.</para>
+                /// <para>The cursor position for pagination.</para>
                 /// </summary>
                 [NameInMap("Cursors")]
                 [Validation(Required=false)]
                 public ListProductCatalogResponseBodyModelPagingCursors Cursors { get; set; }
                 public class ListProductCatalogResponseBodyModelPagingCursors : TeaModel {
                     /// <summary>
-                    /// <para>The cursor that points to the end of the page of the returned data.</para>
+                    /// <para>The position of the next record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sjsuueu83838</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string After { get; set; }
 
                     /// <summary>
-                    /// <para>The cursor that points to the beginning of the page of the returned data.</para>
+                    /// <para>The position of the previous record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sjjsjdjjdjd83883</para>
@@ -110,12 +110,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

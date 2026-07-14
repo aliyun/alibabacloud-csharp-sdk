@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddAddressRecoverSuspendRequest : TeaModel {
+        /// <summary>
+        /// <para>The audit record.</para>
+        /// </summary>
         [NameInMap("AuditRecord")]
         [Validation(Required=false)]
         public AddAddressRecoverSuspendRequestAuditRecord AuditRecord { get; set; }
         public class AddAddressRecoverSuspendRequestAuditRecord : TeaModel {
             /// <summary>
+            /// <para>The reason for the application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>示例值示例值示例值</para>
             /// </summary>
@@ -21,15 +26,23 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string ApplyReason { get; set; }
 
+            /// <summary>
+            /// <para>The list of destination countries for messages.</para>
+            /// </summary>
             [NameInMap("MessageDestinationCountry")]
             [Validation(Required=false)]
             public List<string> MessageDestinationCountry { get; set; }
 
+            /// <summary>
+            /// <para>The list of international destination countries for messages.</para>
+            /// </summary>
             [NameInMap("MessageDestinationInternationalCountry")]
             [Validation(Required=false)]
             public List<string> MessageDestinationInternationalCountry { get; set; }
 
             /// <summary>
+            /// <para>The recovery date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>示例值示例值</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string RecoveryDate { get; set; }
 
             /// <summary>
+            /// <para>The suspension date.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>示例值示例值</para>
             /// </summary>
@@ -48,6 +63,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
+        /// <para>The customer space ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -60,6 +77,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The request type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值</para>
         /// </summary>

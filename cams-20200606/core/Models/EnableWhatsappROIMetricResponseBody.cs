@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class EnableWhatsappROIMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request. Valid values:</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request is successful.</para>
+        /// <item><description><para>OK: The request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 

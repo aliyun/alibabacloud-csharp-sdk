@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappSyncPhoneNumberRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the user under the independent software vendor (ISV) account.</para>
+        /// <para>The SpaceId of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class OnlineFlowVersionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>Business extension information. The default value is an empty object.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>f4912c16943b4dfba44bd6fedacf****</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
+        /// <para>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the orchestration canvas and view the flow version.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FlowVersion")]
         [Validation(Required=false)]
@@ -42,8 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The remarks for the flow. You can view the remarks in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>通过API触发下发验证模板</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

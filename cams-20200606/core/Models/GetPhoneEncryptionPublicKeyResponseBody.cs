@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPhoneEncryptionPublicKeyResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -41,11 +47,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string EncryptionPublicKey { get; set; }
 
             /// <summary>
-            /// <para>The status of the public key. Valid values:</para>
+            /// <para>The validity status of the public key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>MISMATCH: The public key is invalid.</para>
+            /// <item><description><para>MISMATCH: invalid.</para>
             /// </description></item>
-            /// <item><description><para>VALID: The public key is valid.</para>
+            /// <item><description><para>VALID: valid.</para>
             /// </description></item>
             /// </list>
             /// 

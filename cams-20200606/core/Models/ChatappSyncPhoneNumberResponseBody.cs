@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the call is successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
-        /// <item><description><para>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The phone numbers.</para>
+        /// <para>The list of phone numbers.</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
@@ -187,17 +187,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
-            /// <para>The verification state of the phone number.</para>
-            /// <para>Valid values:</para>
+            /// <para>The verification status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>REVOKED: The review application is revoked.</para>
-            /// </description></item>
-            /// <item><description><para>MORE_INFORMATION_REQUESTED: More information needs to be provided.</para>
-            /// </description></item>
-            /// <item><description><para>VERIFIED: The phone number passes the verification.</para>
-            /// </description></item>
-            /// <item><description><para>REJECTED: The phone number fails to pass the verification.</para>
-            /// </description></item>
+            /// <item><description>REVOKED: The verification request is revoked.</description></item>
+            /// <item><description>MORE_INFORMATION_REQUESTED: More information is required.</description></item>
+            /// <item><description>VERIFIED: The verification is passed.</description></item>
+            /// <item><description>REJECTED: The verification is rejected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,6 +203,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the phone number is OBA-certified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>N</para>
             /// </summary>
@@ -216,7 +213,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string IsOfficial { get; set; }
 
             /// <summary>
-            /// <para>The number of phone numbers to which messages can be sent in a day.</para>
+            /// <para>The messaging limit tier of the phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TIER_10K</para>
@@ -226,7 +223,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MessagingLimitTier { get; set; }
 
             /// <summary>
-            /// <para>The review status of the business display name.</para>
+            /// <para>The name review status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Approval</para>
@@ -236,7 +233,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string NameStatus { get; set; }
 
             /// <summary>
-            /// <para>The review status of the new business display name.</para>
+            /// <para>The review status of the new name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Approval</para>
@@ -257,15 +254,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <para>The quality rating of the phone number.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>RED</para>
-            /// </description></item>
-            /// <item><description><para>YELLOW</para>
-            /// </description></item>
-            /// <item><description><para>GREEN</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>GREEN</para>
@@ -275,32 +263,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QualityRating { get; set; }
 
             /// <summary>
-            /// <para>The state of the phone number.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>MIGRATED</para>
-            /// </description></item>
-            /// <item><description><para>FLAGGED</para>
-            /// </description></item>
-            /// <item><description><para>DISCONNECTED</para>
-            /// </description></item>
-            /// <item><description><para>UNVERIFIED</para>
-            /// </description></item>
-            /// <item><description><para>BANNED</para>
-            /// </description></item>
-            /// <item><description><para>RATE_LIMITED</para>
-            /// </description></item>
-            /// <item><description><para>PENDING</para>
-            /// </description></item>
-            /// <item><description><para>CONNECTED</para>
-            /// </description></item>
-            /// <item><description><para>UNKNOWN</para>
-            /// </description></item>
-            /// <item><description><para>DELETED</para>
-            /// </description></item>
-            /// <item><description><para>RESTRICTED</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The status of the phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>
@@ -310,7 +273,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The callback URL to which status reports are sent by using HTTP callbacks.</para>
+            /// <para>The callback URL for status reports.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.alibaba.com/status">https://www.alibaba.com/status</a></para>
@@ -330,7 +293,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string StatusQueue { get; set; }
 
             /// <summary>
-            /// <para>The URL that receives the MO messages.</para>
+            /// <para>The callback URL for upstream messages.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.alibaba.com/inbound">https://www.alibaba.com/inbound</a></para>
@@ -340,7 +303,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string UpCallbackUrl { get; set; }
 
             /// <summary>
-            /// <para>The mobile originated (MO) message queue.</para>
+            /// <para>The upstream MSMQ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alicom-0939****-queue</para>
@@ -350,7 +313,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string UpQueue { get; set; }
 
             /// <summary>
-            /// <para>The display name of the business to which the phone number belongs.</para>
+            /// <para>The verified name of the phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -362,7 +325,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
@@ -372,12 +335,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call is successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

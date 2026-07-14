@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappBindWabaResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The access denied detail.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public ChatappBindWabaResponseBodyData Data { get; set; }
         public class ChatappBindWabaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The customer\&quot;s Space ID.</para>
+            /// <para>The customer space ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C0202939293****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CustSpaceId { get; set; }
 
             /// <summary>
-            /// <para>The WABA ID.</para>
+            /// <para>waba Id。</para>
             /// 
             /// <b>Example:</b>
             /// <para>293982****</para>
@@ -87,10 +87,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

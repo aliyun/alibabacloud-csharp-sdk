@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateFlowVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>The business extension information. The default value is an empty collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
+        /// <para>The code of the flow. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>9ccc41**************************</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
+        /// <para>The version of the flow to copy. To view the historical versions of a flow, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> and click a flow name to open the orchestration canvas.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FlowVersionCopyFrom")]
         [Validation(Required=false)]
@@ -42,8 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The remarks for the version.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>修复发送WhatsApp消息错误</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

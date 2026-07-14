@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatGroupInviteLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business phone number. To obtain this number, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The business phone number. You can view the business phone number by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
-        /// <para>The type. Valid value:</para>
+        /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WHATSAPP</b>.</description></item>
+        /// <item><description><b>WHATSAPP</b></description></item>
         /// </list>
         /// <remarks>
-        /// <para>Currently, only the WhatsApp channel type is supported.</para>
+        /// <para>Only the WhatsApp channel type is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The group ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
+        /// <para>The group ID. You can view the group ID by calling the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

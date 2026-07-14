@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteMarketingFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The activity code. You can use the system-generated code or modify it to use a custom code.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1111</para>
         /// </summary>
         [NameInMap("ActivityCode")]
         [Validation(Required=false)]
         public string ActivityCode { get; set; }
 
         /// <summary>
+        /// <para>The activity ID (deprecated).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>已弃用</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]

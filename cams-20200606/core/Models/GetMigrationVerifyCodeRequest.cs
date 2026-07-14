@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetMigrationVerifyCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Locale { get; set; }
 
         /// <summary>
-        /// <para>The verification method.</para>
+        /// <para>The verification code delivery method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

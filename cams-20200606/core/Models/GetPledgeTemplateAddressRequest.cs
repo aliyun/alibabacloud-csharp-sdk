@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPledgeTemplateAddressRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> interface.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>cams-x***</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The industry type.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>it</para>
         /// </summary>
         [NameInMap("IndustryType")]
         [Validation(Required=false)]

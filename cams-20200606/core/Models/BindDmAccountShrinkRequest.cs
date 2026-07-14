@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BindDmAccountShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The account code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccountCode { get; set; }
 
         /// <summary>
+        /// <para>The SpaceId of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The extended attributes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExtendAttr")]

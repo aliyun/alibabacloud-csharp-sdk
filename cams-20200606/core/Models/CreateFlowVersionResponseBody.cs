@@ -9,41 +9,64 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateFlowVersionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The status code of the request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The content of the returned data.</para>
+        /// </summary>
         [NameInMap("Response")]
         [Validation(Required=false)]
         public Dictionary<string, object> Response { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

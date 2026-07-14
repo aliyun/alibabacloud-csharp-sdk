@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteInstagramPageResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ok</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

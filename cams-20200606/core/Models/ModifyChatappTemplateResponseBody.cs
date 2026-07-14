@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyChatappTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates a successful request.</para>
+        /// <item><description><para>OK indicates the request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>

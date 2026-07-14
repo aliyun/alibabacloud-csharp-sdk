@@ -9,14 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPermissionByCodeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>No</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>

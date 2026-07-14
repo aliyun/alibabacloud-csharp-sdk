@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetGroupExistResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -23,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

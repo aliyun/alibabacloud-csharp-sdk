@@ -10,20 +10,30 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ReadChatFlowShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>The business extension information. The default value is an empty collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>9ccc41**************************</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]

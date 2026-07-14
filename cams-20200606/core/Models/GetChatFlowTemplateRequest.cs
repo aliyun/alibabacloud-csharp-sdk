@@ -10,16 +10,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatFlowTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The code of the business tenant. The default value is ALICOM_OPAAS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the template. You can call the <a href="https://help.aliyun.com/document_detail/2937208.html">ListChatFlowTemplate</a> operation to obtain the template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

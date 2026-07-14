@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CheckDirectSendMessageSampleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>OK</c> indicates that the request was successful.</para>
+        /// <item><description><para>A value of OK indicates that the request is successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</para>
         /// </description></item>
@@ -36,18 +36,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CheckDirectSendMessageSampleResponseBodyData Data { get; set; }
         public class CheckDirectSendMessageSampleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The category of the WhatsApp template. Valid values:</para>
+            /// <para>The WhatsApp template category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UTILITY</b>: A template related to a specific, agreed-upon transaction.</para>
+            /// <item><description><para><b>UTILITY</b>: transaction-related.</para>
             /// </description></item>
-            /// <item><description><para><b>MARKETING</b>: A template for promotional or marketing purposes.</para>
+            /// <item><description><para><b>MARKETING</b>: marketing template.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Whether the validation was successful. Valid values:</para>
+            /// <para>Indicates whether the operation is successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The validation succeeded.</para>
+            /// <item><description><para>true: Successful.</para>
             /// </description></item>
-            /// <item><description><para>false: The validation failed.</para>
+            /// <item><description><para>false: Failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Use this ID to trace logs and troubleshoot issues.</para>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -97,11 +97,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
+        /// <item><description><para>true: Successful.</para>
         /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
+        /// <item><description><para>false: Failed.</para>
         /// </description></item>
         /// </list>
         /// 

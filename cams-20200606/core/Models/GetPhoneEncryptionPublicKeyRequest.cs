@@ -10,8 +10,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetPhoneEncryptionPublicKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>
+        /// page.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>cams-kei****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -22,10 +27,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The phone number. You can view it on the
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>86189********</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

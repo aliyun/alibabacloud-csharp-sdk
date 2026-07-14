@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SendChatappMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates a successful request.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For other status codes, see <a href="https://help.aliyun.com/document_detail/196974.html">error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message.</para>
+        /// <para>The message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61851ccb2f1365b16aee****</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866******</para>

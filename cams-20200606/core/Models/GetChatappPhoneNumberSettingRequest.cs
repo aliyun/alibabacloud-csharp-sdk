@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappPhoneNumberSettingRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C29393993****</para>
         /// </summary>
@@ -22,6 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

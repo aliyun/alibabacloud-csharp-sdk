@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>[{&quot;id&quot;:1}]</para>
         /// </summary>
         [NameInMap("Contacts")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>[{&quot;id&quot;:1}]</para>
         /// </summary>
         [NameInMap("LinkExistGroups")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>[{&quot;groupName&quot;:&quot;aaa&quot;}]</para>
         /// </summary>
         [NameInMap("LinkNewGroups")]
         [Validation(Required=false)]

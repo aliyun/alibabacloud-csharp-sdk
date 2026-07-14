@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetWhatsappConversionApiRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>chatbot-cn-VBe6QXXX</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

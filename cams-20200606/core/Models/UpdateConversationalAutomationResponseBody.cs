@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description><para>The value OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The prompt message. This parameter is returned when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -56,12 +56,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

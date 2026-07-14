@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the user within the ISV account.</para>
+        /// <para>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</para>
+        /// <para>The WabaId of the ISV customer.</para>
         /// <remarks>
-        /// <para>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
+        /// <para>This parameter is deprecated. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.</para>
+        /// <para>The ISV verification code, which is used to verify whether the sub-account is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikdkkdk</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The language of the template. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>The code of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>****4b5c79c9432497a075bdfca36bf5</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>Name of a template.</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -77,13 +77,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The type of the message template. Valid values:</para>
+        /// <para>The templatetype.</para>
         /// <list type="bullet">
         /// <item><description><para><b>WHATSAPP</b></para>
         /// </description></item>
         /// <item><description><para><b>VIBER</b></para>
-        /// </description></item>
-        /// <item><description><para>LINE (developing)</para>
         /// </description></item>
         /// </list>
         /// 

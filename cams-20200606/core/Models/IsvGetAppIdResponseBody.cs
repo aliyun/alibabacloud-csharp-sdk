@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The app ID.</para>
+        /// <para>The App ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23hr3v****</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For information about other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The configuration ID.</para>
+        /// <para>The configuration item ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28972951817****</para>

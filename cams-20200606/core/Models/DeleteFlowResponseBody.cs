@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteFlowResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the permission verification failure.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>A value of OK indicates that the request was successful.</para>
+        /// <para>The result. OK indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>

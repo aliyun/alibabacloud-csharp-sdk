@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class BindInstagramPageRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PageId { get; set; }
 
         /// <summary>
+        /// <para>The region of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The business number.</para>
+        /// <para>The business phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
-        /// <para>The channel type. Valid value: <b>WHATSAPP</b>.</para>
+        /// <para>The channel type. Valid values: <b>WHATSAPP</b>.</para>
         /// <remarks>
-        /// <para>Only the WhatsApp channel is supported.</para>
+        /// <para>Only the WhatsApp channel type is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID (or SpaceId) of an ISV sub-customer, which also serves as the channel ID. You can find it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
+        /// <para>The SpaceId or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,11 +93,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The paging information.</para>
+        /// <para>The pagination information.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
@@ -136,7 +133,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The group title.</para>
+        /// <para>The group subject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

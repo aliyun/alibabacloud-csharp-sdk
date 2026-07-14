@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetWhatsappConversionApiResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class GetWhatsappConversionApiResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>111</para>
             /// </summary>
             [NameInMap("DatasetId")]
             [Validation(Required=false)]
@@ -35,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>7832312</para>
             /// </summary>
             [NameInMap("PageId")]
             [Validation(Required=false)]
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>aaa</para>
             /// </summary>
             [NameInMap("PageName")]
             [Validation(Required=false)]
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

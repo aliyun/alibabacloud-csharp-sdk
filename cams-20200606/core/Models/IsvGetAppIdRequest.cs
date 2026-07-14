@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class IsvGetAppIdRequest : TeaModel {
         /// <summary>
+        /// <para>The version.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("IntlVersion")]
         [Validation(Required=false)]
@@ -22,8 +24,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The permissions.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
@@ -38,10 +42,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The channel type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>whatsapp: WhatsApp.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>whatsapp</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

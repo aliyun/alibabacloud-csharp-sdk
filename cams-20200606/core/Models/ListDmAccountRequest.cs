@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListDmAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The search keyword.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>a</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -22,16 +24,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>83</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
         public long? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>86</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -46,8 +52,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The sending type.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>batch</para>
         /// </summary>
         [NameInMap("SendType")]
         [Validation(Required=false)]

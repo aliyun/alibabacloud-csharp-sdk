@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListPageAdAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>cams-**</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -24,10 +25,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The PageId of Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>230***</para>
         /// </summary>
         [NameInMap("PageId")]
         [Validation(Required=false)]

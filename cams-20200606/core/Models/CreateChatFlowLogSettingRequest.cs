@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatFlowLogSettingRequest : TeaModel {
         /// <summary>
+        /// <para>The code of the flow. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>9ccc41**************************</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]

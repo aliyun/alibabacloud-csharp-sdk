@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SendChatappMassMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The bulk message ID.</para>
+        /// <para>The batch message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>890000010002****</para>

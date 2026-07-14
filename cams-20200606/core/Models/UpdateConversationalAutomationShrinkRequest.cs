@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateConversationalAutomationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The commands.</para>
+        /// <para>The list of commands.</para>
         /// </summary>
         [NameInMap("Commands")]
         [Validation(Required=false)]
         public string CommandsShrink { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account or the instance ID of the customer of Alibaba Cloud.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the welcoming message.</para>
+        /// <para>Specifies whether to enable the welcome message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phone number of the enterprise.</para>
+        /// <para>The business phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>The opening remarks.</para>
+        /// <para>The list of conversation starters.</para>
         /// </summary>
         [NameInMap("Prompts")]
         [Validation(Required=false)]

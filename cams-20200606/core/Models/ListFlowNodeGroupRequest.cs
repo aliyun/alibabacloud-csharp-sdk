@@ -14,20 +14,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>85</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>84</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

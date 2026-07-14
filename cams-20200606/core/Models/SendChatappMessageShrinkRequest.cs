@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The Meta ad account ID.</para>
         /// <remarks>
-        /// <para>This parameter is for internal testing, is not generally available, and can be ignored.</para>
+        /// <para>This parameter is a test parameter that is not fully available. Ignore this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
-        /// <para>The message category for direct WhatsApp sending.</para>
+        /// <para>The message category (for WhatsApp direct send).</para>
         /// <remarks>
-        /// <para>Warning: </para>
+        /// <para>Warning: Do not specify this parameter unless you are a Meta-invited customer. Otherwise, message delivery will fail.</para>
         /// </remarks>
-        /// <para>Specify this parameter only if you are a Meta-invited customer. Otherwise, the message may fail to send.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UTILITY</para>
@@ -37,21 +36,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The channel type. Valid values:</para>
+        /// <para>The channel type. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><para><b>whatsapp</b></para>
+        /// <item><description><para><b>whatsapp</b> </para>
         /// </description></item>
-        /// <item><description><para><b>messenger</b></para>
+        /// <item><description><para><b>messenger</b> </para>
         /// </description></item>
         /// <item><description><para><b>instagram</b></para>
         /// </description></item>
         /// <item><description><para><b>telegram</b></para>
         /// </description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>viber</b></description></item>
-        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- <b>viber</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,78 +58,39 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The message content, in a JSON-formatted string.</para>
-        /// <para><b>Notes for WhatsApp messages:</b></para>
+        /// <para>The message content.</para>
+        /// <para><b>WhatsApp message notes:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>MessageType</c> is <c>text</c>, the <c>text</c> field is required, and the <c>Caption</c> field is not supported.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>image</c>, the <c>Link</c> field is required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>video</c>, the <c>Link</c> field is required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>audio</c>, the <c>Link</c> field is required. The <c>Caption</c> field is not supported.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>document</c>, the <c>Link</c> and <c>FileName</c> fields are required. The <c>Caption</c> field is not supported.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>interactive</c>, the <c>type</c> and <c>action</c> fields are required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>contacts</c>, the <c>name</c> field is required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>location</c>, the <c>longitude</c> and <c>latitude</c> fields are required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>sticker</c>, the <c>Link</c> field is required. The <c>Caption</c> and <c>FileName</c> fields are not supported.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>reaction</c>, the <c>messageId</c> and <c>emoji</c> fields are required.</para>
-        /// </description></item>
+        /// <item><description>If <b>messageType</b> is <b>text</b>, the <b>text</b> field is required and the <b>Caption</b> field must not be specified.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>image</b>, the <b>Link</b> field is required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>video</b>, the <b>Link</b> field is required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>audio</b>, the <b>Link</b> field is required and the <b>Caption</b> field is invalid.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>document</b>, the <b>Link</b> and <b>FileName</b> fields are required and the <b>Caption</b> field is invalid.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>interactive</b>, the <b>type</b> and <b>action</b> fields are required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>contacts</b>, the <b>name</b> field is required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>location</b>, the <b>longitude</b> and <b>latitude</b> fields are required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>sticker</b>, the <b>Link</b> field is required and the <b>Caption</b> and <b>FileName</b> fields are invalid.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>reaction</b>, the <b>messageId</b> and <b>emoji</b> fields are required.</description></item>
         /// </list>
-        /// <para><b>Notes for Messenger messages:</b></para>
+        /// <para><b>Messenger message notes:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>MessageType</c> is <c>text</c>, the <c>text</c> field is required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>image</c>, <c>video</c>, <c>audio</c>, or <c>document</c>, the <c>link</c> field is required.</para>
-        /// </description></item>
+        /// <item><description>If <b>messageType</b> is <b>text</b>, the <b>text</b> field is required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>image</b>, <b>video</b>, <b>audio</b>, or <b>document</b>, the <b>link</b> field is required.</description></item>
         /// </list>
-        /// <para><b>Notes for Instagram messages:</b></para>
+        /// <para><b>Instagram message notes:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>MessageType</c> is <c>text</c>, the <c>text</c> field is required.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>MessageType</c> is <c>image</c>, <c>video</c>, or <c>audio</c>, the <c>link</c> field is required.</para>
-        /// </description></item>
+        /// <item><description>If <b>messageType</b> is <b>text</b>, the <b>text</b> field is required.</description></item>
+        /// <item><description>If <b>messageType</b> is <b>image</b>, <b>video</b>, or <b>audio</b>, the <b>link</b> field is required.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para><b>Notes for Viber messages:</b></para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>text</c>, the <c>text</c> field is required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>image</c>, the <c>link</c> field is required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>video</c>, the <c>link</c>, <c>thumbnail</c>, <c>fileSize</c>, and <c>duration</c> fields are required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>document</c>, the <c>link</c>, <c>fileName</c>, and <c>fileType</c> fields are required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>text_button</c>, the <c>text</c>, <c>caption</c>, and <c>action</c> fields are required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>text_image_button</c>, the <c>text</c>, <c>link</c>, <c>caption</c>, and <c>action</c> fields are required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>text_video</c>, the <c>text</c>, <c>link</c>, <c>thumbnail</c>, <c>fileSize</c>, and <c>duration</c> fields are required.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>MessageType</c> is <c>text_video_button</c>, the <c>text</c>, <c>link</c>, <c>thumbnail</c>, <c>fileSize</c>, <c>duration</c>, and <c>caption</c> fields are required. The <c>action</c> field is not supported.</description></item>
-        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;<b>Viber message notes:</b>
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>text</b>, the <b>text</b> field is required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>image</b>, the <b>link</b> field is required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>video</b>, the <b>link</b>, <b>thumbnail</b>, <b>fileSize</b>, and <b>duration</b> fields are required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>document</b>, the <b>link</b>, <b>fileName</b>, and <b>fileType</b> fields are required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>text_button</b>, the <b>text</b>, <b>caption</b>, and <b>action</b> fields are required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>text_image_button</b>, the <b>text</b>, <b>link</b>, <b>caption</b>, and <b>action</b> fields are required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>text_video</b>, the <b>text</b>, <b>link</b>, <b>thumbnail</b>, <b>fileSize</b>, and <b>duration</b> fields are required.
+        /// &lt;props=&quot;intl&quot;&gt;- If <b>messageType</b> is <b>text_video_button</b>, the <b>text</b>, <b>link</b>, <b>thumbnail</b>, <b>fileSize</b>, <b>duration</b>, and <b>caption</b> fields are required, and the <b>action</b> field must not be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -148,7 +105,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message to which you are replying.</para>
+        /// <para>The ID of the message to reply to. This is the ID of a previously sent or received message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61851ccb2f1365b16aee****</para>
@@ -158,7 +115,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContextMessageId { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the ISV\&quot;s sub-account. For a direct customer, this is the Instance ID. You can find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page.</para>
+        /// <para>The SpaceId of the ISV sub-customer, or the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cams-8c8*********</para>
@@ -170,7 +127,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>Deprecated.</b> Use <c>CustSpaceId</c> instead. The WABA ID of an ISV\&quot;s customer. For a direct customer, this is the Instance ID. You can find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page.</para>
+        /// <para>The ISV customer WABA ID. This parameter is deprecated. Use CustSpaceId instead, which is the direct customer instance ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cams-8c8*********</para>
@@ -181,7 +138,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The custom content of the fallback message. This parameter is available only on the International Site and can be ignored if you are using the China site.</para>
+        /// <para>The custom fallback content. This parameter is for the China site (Chinese mainland). China site users can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Fallback SMS</para>
@@ -191,7 +148,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FallBackContent { get; set; }
 
         /// <summary>
-        /// <para>The duration after which a fallback is triggered. This parameter is available only on the International Site and can be ignored if you are using the China site.&lt;props=&quot;intl&quot;&gt; If a delivery receipt is not returned within the specified period, a fallback is triggered. If this parameter is omitted, a fallback is triggered only if the message fails to send or a failed delivery receipt is returned. Unit: seconds. The value must be between 60 and 43200.</para>
+        /// <para>The fallback trigger time. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;If the message does not return a delivered receipt within the specified time, fallback is triggered. If this parameter is not specified, fallback is not triggered based on time and occurs only when the message fails to send or a failure status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -201,7 +158,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public int? FallBackDuration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the fallback strategy. This parameter is available only on the International Site and can be ignored if you are using the China site.&lt;props=&quot;intl&quot;&gt; You can find the strategy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><b>Fallback Policy</b></a> page.</para>
+        /// <para>The fallback policy ID. This parameter is for the China site (Chinese mainland). China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;You can view the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><b>Fallback Policy</b></a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>S0****</para>
@@ -211,16 +168,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FallBackId { get; set; }
 
         /// <summary>
-        /// <para>The fallback rule. This parameter is available only on the International Site and can be ignored if you are using the China site.
-        /// &lt;props=&quot;intl&quot;&gt;Valid values:</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>undelivered</b>: A fallback is triggered if message delivery fails. The template and parameters must be valid at the time of sending. Blocked templates or phone numbers are not validated. This is the default rule if the parameter is empty.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>sentFailed</b>: A fallback is triggered if the message fails parameter validation, such as for the template or template parameters. Only the existence of <c>channelType</c>, <c>type</c>, <c>messageType</c>, <c>to</c>, and <c>from</c> is strictly validated.</description></item>
-        /// </list>
+        /// <para>The fallback rule. This parameter is for the international site. China site users can ignore this parameter.
+        /// &lt;props=&quot;intl&quot;&gt;Valid values:
+        /// &lt;props=&quot;intl&quot;&gt;- <b>undelivered</b>: fallback is triggered when the message cannot be delivered to the device (template and parameter validation must pass at the sending stage; template bans or number bans are not validated). This rule is used by default if the parameter value is empty.
+        /// &lt;props=&quot;intl&quot;&gt;- <b>sentFailed</b>: fallback is also triggered when template or template variable validation fails. Only the channelType, type, messageType, to, and from (existence check) parameters are strictly validated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>undelivered</para>
@@ -237,18 +188,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowActionShrink { get; set; }
 
         /// <summary>
-        /// <para>The sender\&quot;s number or ID.</para>
+        /// <para>The sender number.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>ChannelType</c> is <b>whatsapp</b>, this is the phone number registered with WhatsApp. You can find the number on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ChannelType</c> is <b>messenger</b>, this is the Facebook Page ID. You can find this ID on your &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Facebook Page</b> page.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ChannelType</c> is <b>instagram</b>, this is the Instagram professional account ID (Account ID). You can find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Professional Account</b> page.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>ChannelType</c> is <b>viber</b>, this is the Viber service ID (Service ID). You can find the ID on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Service Number Management</b> page.</description></item>
+        /// <item><description>If ChannelType is set to <b>whatsapp</b>, this is the phone number registered and bindded with WhatsApp. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
+        /// <item><description>If ChannelType is set to <b>messenger</b>, this is the Page ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Public Page</b> page.</description></item>
+        /// <item><description>If ChannelType is set to <b>instagram</b>, this is the Instagram professional account ID (Account ID). You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Professional Account</b> page.
+        /// &lt;props=&quot;intl&quot;&gt;- If ChannelType is set to <b>viber</b>, this is the Viber Service ID. You can view it on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Service ID Management</b> page.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -262,7 +207,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>Deprecated.</b> A verification code used to authorize an ISV\&quot;s sub-account. You can ignore this parameter.</para>
+        /// <para>The ISV verification code used to verify whether a RAM user is authorized by the ISV. This parameter is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123******</para>
@@ -273,16 +218,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The Viber message type. This parameter is available only on the International Site and can be ignored if you are using the China site.
-        /// &lt;props=&quot;intl&quot;&gt;Valid values:</para>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>promotion</b>: A promotional or marketing message.</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description><b>transaction</b>: A notification message.</description></item>
-        /// </list>
+        /// <para>The Viber message type. This parameter is for the international site. China site users can ignore this parameter.
+        /// &lt;props=&quot;intl&quot;&gt;Valid values:
+        /// &lt;props=&quot;intl&quot;&gt;- <b>pormotion</b>: marketing or promotional messages.
+        /// &lt;props=&quot;intl&quot;&gt;- <b>transaction</b>: notification messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>promotion</para>
@@ -292,7 +231,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The language of the message template. For a list of supported languages and their corresponding codes, see <a href="https://help.aliyun.com/document_detail/463420.html">language code</a>.</para>
+        /// <para>The language. For a list of language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -302,9 +241,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message campaign.</para>
+        /// <para>The campaign message ID.</para>
         /// <remarks>
-        /// <para>This parameter is for internal testing, is not generally available, and can be ignored.</para>
+        /// <para>This parameter is a test parameter that is not fully available. Ignore this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -315,127 +254,105 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string MessageCampaignId { get; set; }
 
         /// <summary>
-        /// <para>The message type to use when <c>Type</c> is set to <c>message</c>. The valid values vary based on the channel type:</para>
+        /// <para>The detailed message type when Type is set to message. Valid values:</para>
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>WHATSAPP</para>
-        /// </summary>
+        /// <summary>WHATSAPP</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><para><c>text</c>: A text message.</para>
+        /// <item><description><para>text: text message.</para>
         /// </description></item>
-        /// <item><description><para><c>image</c>: An image message.</para>
+        /// <item><description><para>image: image message.</para>
         /// </description></item>
-        /// <item><description><para><c>video</c>: A video message.</para>
+        /// <item><description><para>video: video message.</para>
         /// </description></item>
-        /// <item><description><para><c>audio</c>: An audio message.</para>
+        /// <item><description><para>audio: audio message.</para>
         /// </description></item>
-        /// <item><description><para><c>document</c>: A document message.</para>
+        /// <item><description><para>document: document message.</para>
         /// </description></item>
-        /// <item><description><para><c>interactive</c>: An interactive message.</para>
+        /// <item><description><para>interactive: interactive message.</para>
         /// </description></item>
-        /// <item><description><para><c>location</c>: A location message.</para>
+        /// <item><description><para>location: location message.</para>
         /// </description></item>
-        /// <item><description><para><c>contacts</c>: A contacts message.</para>
+        /// <item><description><para>contacts: contacts message.</para>
         /// </description></item>
-        /// <item><description><para><c>reaction</c>: A reaction message.</para>
+        /// <item><description><para>reaction: reaction message.</para>
         /// </description></item>
-        /// <item><description><para><c>sticker</c>: A sticker message.</para>
+        /// <item><description><para>sticker: sticker message.</para>
         /// </description></item>
-        /// <item><description><para><c>typing_indicator</c>: A typing indicator message.</para>
+        /// <item><description><para>typing_indicator: typing indicator message.</para>
         /// </description></item>
-        /// <item><description><para><c>pin</c>: A message to pin or unpin. This type is available only for group messages.</para>
+        /// <item><description><para>pin: pin or unpin message (available only for group messages).</para>
         /// </description></item>
-        /// <item><description><para><c>carousel</c>: A carousel message.</para>
-        /// </description></item>
+        /// <item><description><para>carousel: carousel message.</para>
+        /// </details></description></item>
         /// </list>
-        /// </details>
-        /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>VIBER</para>
-        /// </summary>
+        /// <summary>VIBER</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><para><c>text</c>: A text message.</para>
+        /// <item><description><para>text: text message.</para>
         /// </description></item>
-        /// <item><description><para><c>image</c>: An image message.</para>
+        /// <item><description><para>image: image message.</para>
         /// </description></item>
-        /// <item><description><para><c>text_image_button</c>: A message with text, an image, and a button.</para>
+        /// <item><description><para>text_image_button: text + image + button message.</para>
         /// </description></item>
-        /// <item><description><para><c>text_button</c>: A message with text and a button.</para>
+        /// <item><description><para>text_button: text + button message.</para>
         /// </description></item>
-        /// <item><description><para><c>document</c>: A document message.</para>
+        /// <item><description><para>document: document message.</para>
         /// </description></item>
-        /// <item><description><para><c>video</c>: A video message.</para>
+        /// <item><description><para>video: video message.</para>
         /// </description></item>
-        /// <item><description><para><c>text_video</c>: A message with text and a video.</para>
+        /// <item><description><para>text_video: text + video message.</para>
         /// </description></item>
-        /// <item><description><para><c>text_video_button</c>: A message with text, a video, and a button.</para>
+        /// <item><description><para>text_video_button: text + video + button message.</para>
         /// </description></item>
-        /// <item><description><para><c>text_image</c>: A message with text and an image.</para>
-        /// </description></item>
+        /// <item><description><para>text_image: text + image message.</para>
+        /// </details></description></item>
         /// </list>
-        /// </details>
-        /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>MESSENGER / INSTAGRAM</para>
-        /// </summary>
+        /// <summary>MESSENGER / INSTAGRAM</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><para><c>text</c>: A text message.</para>
+        /// <item><description><para>text: text message.</para>
         /// </description></item>
-        /// <item><description><para><c>image</c>: An image message.</para>
+        /// <item><description><para>image: image message.</para>
         /// </description></item>
-        /// <item><description><para><c>video</c>: A video message.</para>
+        /// <item><description><para>video: video message.</para>
         /// </description></item>
-        /// <item><description><para><c>document</c>: A document message.</para>
+        /// <item><description><para>document: document message.</para>
         /// </description></item>
-        /// <item><description><para><c>audio</c>: An audio message.</para>
+        /// <item><description><para>audio: audio message.</para>
         /// </description></item>
-        /// <item><description><para><c>interactive</c>: An interactive message.</para>
+        /// <item><description><para>interactive: interactive message.</para>
         /// </description></item>
-        /// <item><description><para><c>couponTemplate</c>: A coupon template message.</para>
+        /// <item><description><para>couponTemplate: coupon template message.</para>
         /// </description></item>
-        /// <item><description><para><c>regularTemplate</c>: A regular template message.</para>
+        /// <item><description><para>regularTemplate: regular template message.</para>
         /// </description></item>
-        /// <item><description><para><c>quickReply</c>: A quick reply message.</para>
+        /// <item><description><para>quickReply: quick reply message.</para>
         /// </description></item>
-        /// <item><description><para><c>buttonTemplate</c>: A button template message.</para>
-        /// </description></item>
+        /// <item><description><para>buttonTemplate: button template message.</para>
+        /// </details></description></item>
         /// </list>
-        /// </details>
-        /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>TELEGRAM</para>
-        /// </summary>
+        /// <summary>TELEGRAM</summary>
         /// 
         /// <list type="bullet">
-        /// <item><description><para><c>text</c>: A text message.</para>
+        /// <item><description><para>text: text message.</para>
         /// </description></item>
-        /// <item><description><para><c>image</c>: An image message.</para>
+        /// <item><description><para>image: image message.</para>
         /// </description></item>
-        /// <item><description><para><c>video</c>: A video message.</para>
+        /// <item><description><para>video: video message.</para>
         /// </description></item>
-        /// <item><description><para><c>audio</c>: An audio message.</para>
+        /// <item><description><para>audio: audio message.</para>
         /// </description></item>
-        /// <item><description><para><c>document</c>: A document message.</para>
+        /// <item><description><para>document: document message.</para>
         /// </description></item>
-        /// <item><description><para><c>location</c>: A location message.</para>
+        /// <item><description><para>location: location message.</para>
         /// </description></item>
-        /// <item><description><para><c>gif</c>: An animated GIF message.</para>
+        /// <item><description><para>gif: animated GIF message.</para>
         /// </description></item>
-        /// <item><description><para><c>sticker</c>: A sticker message.</para>
+        /// <item><description><para>sticker: sticker message.</para>
         /// </description></item>
         /// </list>
         /// </details>
@@ -452,7 +369,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>An array of custom data strings that are sent to your webhook when a user clicks a corresponding button.</para>
+        /// <para>The collection of button trigger messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>payloadtext1,payloadtext2,payloadtext3</para>
@@ -462,7 +379,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PayloadShrink { get; set; }
 
         /// <summary>
-        /// <para>Product information that you have uploaded to Meta. This parameter applies to WhatsApp channels only.</para>
+        /// <para>The product information. This parameter applies only to the WhatsApp channel type and refers to the product information you uploaded on Meta.</para>
         /// </summary>
         [NameInMap("ProductAction")]
         [Validation(Required=false)]
@@ -471,9 +388,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The recipient type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>individual</c>: A single recipient.</para>
+        /// <item><description><para>individual: an individual.</para>
         /// </description></item>
-        /// <item><description><para><c>group</c>: A group.</para>
+        /// <item><description><para>group: a group.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -493,7 +410,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>A custom tag for the Viber message.</para>
+        /// <para>The tag information. Custom tag information for Viber message delivery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tag</para>
@@ -503,7 +420,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>A custom task ID.</para>
+        /// <para>The custom task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000****</para>
@@ -513,7 +430,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The message template code. You can find the code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
+        /// <para>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Template Design</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1119***************</para>
@@ -523,7 +440,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The template name. You can find the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
+        /// <para>The template name. You can view the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Management</b> &gt; <b>Template Design</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -533,25 +450,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the message template.</para>
+        /// <para>The collection of template parameters.</para>
         /// </summary>
         [NameInMap("TemplateParams")]
         [Validation(Required=false)]
         public string TemplateParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The recipient\&quot;s number or ID.</para>
+        /// <para>The recipient number.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>ChannelType</c> is <b>whatsapp</b>, this is the recipient\&quot;s phone number.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ChannelType</c> is <b>messenger</b>, this is a Page-Scoped User ID (PSID) generated when a user interacts with your Facebook Page.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ChannelType</c> is <b>instagram</b>, this is an Instagram-Scoped User ID (IGSID) generated when a user interacts with your Instagram business or creator account.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>If <c>ChannelType</c> is <b>viber</b>, this is the recipient\&quot;s phone number.</description></item>
+        /// <item><description>If ChannelType is set to <b>whatsapp</b>, this is the phone number of the message recipient.</description></item>
+        /// <item><description>If ChannelType is set to <b>messenger</b>, this is the Page-Scoped User ID generated when the user interacts with the Facebook page.</description></item>
+        /// <item><description>If ChannelType is set to <b>instagram</b>, this is the Instagram User ID generated when the user interacts with the Instagram business or creator account.
+        /// &lt;props=&quot;intl&quot;&gt;- If ChannelType is set to <b>viber</b>, this is the phone number of the message recipient.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -565,7 +476,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The token type.</para>
         /// <remarks>
-        /// <para>This parameter is for internal testing, is not generally available, and can be ignored.</para>
+        /// <para>This parameter is a test parameter that is not fully available. Ignore this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -576,7 +487,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TokenType { get; set; }
 
         /// <summary>
-        /// <para>Custom tracking data for a Viber message. This parameter is available only on the International Site and can be ignored if you are using the China site.</para>
+        /// <para>The custom tracking data passed in for Viber message types. This parameter is for the international site. China site users can ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tracking Data</para>
@@ -586,7 +497,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TrackingData { get; set; }
 
         /// <summary>
-        /// <para>The time-to-live (TTL) for a Viber message. This parameter is available only on the International Site and can be ignored if you are using the China site.&lt;props=&quot;intl&quot;&gt; Unit: seconds. The value must be between 30 and 1209600.</para>
+        /// <para>The timeout period for Viber message delivery. This parameter is for the international site. China site users can ignore this parameter. &lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -598,15 +509,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The message type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>template</c>: A message template approved in the console. You can send this type of message at any time.</para>
+        /// <item><description><para>template: a message template that has been approved in the console. This type of message can be sent at any time.</para>
         /// </description></item>
-        /// <item><description><para><c>message</c>: A message of any format. You can send this type of message only within 24 hours of receiving the last message from a user.</para>
+        /// <item><description><para>message: a message in any format. This type of message can be sent only within 24 hours after the last message is received from the user.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: If Type is set to template, you must specify TemplateCode. If Type is set to message, you must specify MessageType.</para>
         /// </remarks>
-        /// <para>If you set <c>Type</c> to <c>template</c>, you must set the <c>TemplateCode</c> parameter. If you set <c>Type</c> to <c>message</c>, you must set the <c>MessageType</c> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

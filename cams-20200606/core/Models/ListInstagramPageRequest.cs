@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListInstagramPageRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. Only non-Alibaba Cloud hosts are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>inst-8t47hh***5pyj0ps</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

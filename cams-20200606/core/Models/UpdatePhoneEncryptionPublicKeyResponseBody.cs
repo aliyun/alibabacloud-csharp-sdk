@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdatePhoneEncryptionPublicKeyResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <para>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>

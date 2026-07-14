@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Cc { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The pre-verified phone number.</para>
+        /// <para>The pre-validated phone number.</para>
         /// <remarks>
         /// <para>This parameter is deprecated.</para>
         /// </remarks>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the phone number.</para>
+        /// <para>The display name of the phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SyncBusinessAppHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-client.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The business number.</para>
+        /// <para>The phone number of the business.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

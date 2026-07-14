@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListPhoneMessageQrdlRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer, or the instance ID of the direct customer.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>cams-8filvjc8snw</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -22,10 +24,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>86163********</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]

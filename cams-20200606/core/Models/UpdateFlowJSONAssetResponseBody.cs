@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateFlowJSONAssetResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code. A value of OK indicates a successful request.</para>
+        /// <para>The response code. OK indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public UpdateFlowJSONAssetResponseBodyData Data { get; set; }
         public class UpdateFlowJSONAssetResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>Flow ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>

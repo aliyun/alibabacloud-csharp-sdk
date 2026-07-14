@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyFlowResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>A value of OK indicates that the request was successful.</para>
+        /// <para>The response code. OK indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -31,13 +37,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public ModifyFlowResponseBodyData Data { get; set; }
         public class ModifyFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The flow categories.</para>
+            /// <para>The flow folder.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
+            /// <para>The URL of the WA Flow Endpoint</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.abc.com">http://www.abc.com</a></para>
             /// </summary>
@@ -46,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string EndpointUri { get; set; }
 
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>Flow ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>
@@ -56,7 +64,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The flow name.</para>
+            /// <para>The name of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flow_001</para>

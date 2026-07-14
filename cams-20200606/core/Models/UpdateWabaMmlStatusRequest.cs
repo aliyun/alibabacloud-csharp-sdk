@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateWabaMmlStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The Meta embedded authorization code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The space ID or instance ID of the ISV sub-customer, which is the channel ID. You can view it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +44,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>waba Id。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,20 +10,42 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatFlowShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>Business extension information. The default value is an empty collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>The trigger type for the flow. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>TriggeredManually</para>
+        /// </description></item>
+        /// <item><description><para>TriggeredByWhatsApp</para>
+        /// </description></item>
+        /// <item><description><para>TriggeredByMessenger</para>
+        /// </description></item>
+        /// <item><description><para>TriggeredByInstagram</para>
+        /// </description></item>
+        /// <item><description><para>TriggeredByViber</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>TriggeredByWhatsApp</para>
         /// </summary>
         [NameInMap("FlowTriggerType")]
         [Validation(Required=false)]
@@ -34,8 +56,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The remarks for the flow.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>通过API触发下发验证模板</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -50,8 +74,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The title of the flow.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>WhatsApp自动回复</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

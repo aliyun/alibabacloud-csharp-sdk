@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreatePhoneMessageQrdlResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PrefilledMessage { get; set; }
 
             /// <summary>
-            /// <para>The URL of the QR code.</para>
+            /// <para>The URL of the QR code image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://img.png">http://img.png</a></para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QrImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The code.</para>
+            /// <para>The QR code identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>D9II3***</para>

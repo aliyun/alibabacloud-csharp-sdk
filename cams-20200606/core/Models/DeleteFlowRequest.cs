@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The SpaceId of the ISV sub-customer.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>cams-awlkj23a09jd</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>346699123</para>
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]

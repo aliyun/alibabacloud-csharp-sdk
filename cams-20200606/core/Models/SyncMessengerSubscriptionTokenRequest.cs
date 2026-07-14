@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SyncMessengerSubscriptionTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customer.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Page ID.</para>
+        /// <para>The PageId of Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

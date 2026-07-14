@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CopyTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The language.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -38,16 +42,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The template code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>12456</para>
         /// </summary>
         [NameInMap("SceneTemplateCode")]
         [Validation(Required=false)]
         public string SceneTemplateCode { get; set; }
 
         /// <summary>
+        /// <para>The template name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

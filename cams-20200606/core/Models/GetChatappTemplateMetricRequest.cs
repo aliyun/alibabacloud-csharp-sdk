@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The Space ID or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer, which is also the channel ID. You can view it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cams-************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time of the query. This value is a timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,10 +33,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The metric granularity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DAILY: Metrics are collected by day.</para>
-        /// </description></item>
-        /// <item><description><para>HALF_HOUR: Metrics are collected every half an hour.</para>
-        /// </description></item>
+        /// <item><description>DAILY: collects metrics on a daily basis.</description></item>
+        /// <item><description>HALF_HOUR: collects metrics every half hour.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV.</para>
+        /// <para>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikd****</para>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The language of the template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The template language. For more languages, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -79,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time of the query. This value is a timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? Start { get; set; }
 
         /// <summary>
-        /// <para>The template code. View the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
+        /// <para>The template code. You can view the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,12 +99,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The template type. Valid value:</para>
+        /// <para>The templatetype. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>WHATSAPP</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not pass this parameter, the default value WHATSAPP is used.</para>
+        /// <para>If this parameter is not specified, the default value is WHATSAPP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

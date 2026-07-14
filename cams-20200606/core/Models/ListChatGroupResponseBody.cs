@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denied error.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code. Valid values:</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>OK</c>: The request succeeded.</para>
+        /// <item><description><para>OK: The request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<ListChatGroupResponseBodyDataList> List { get; set; }
             public class ListChatGroupResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The business number.</para>
+                /// <para>The business phone number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8613800**</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string BusinessRole { get; set; }
 
                 /// <summary>
-                /// <para>The group description.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time the group was last updated.</para>
+                /// <para>The update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>94</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string GroupType { get; set; }
 
                 /// <summary>
-                /// <para>The group invitation link.</para>
+                /// <para>The invite link.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://chat.whatsapp.com/">https://chat.whatsapp.com/</a>***</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string InviteLink { get; set; }
 
                 /// <summary>
-                /// <para>The group\&quot;s profile picture.</para>
+                /// <para>The group profile picture.</para>
                 /// </summary>
                 [NameInMap("ProfilePictureFile")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string Subject { get; set; }
 
                 /// <summary>
-                /// <para>The total number of group participants.</para>
+                /// <para>The number of group members.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>35</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>51</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The response message. This parameter is returned only when an error occurs.</para>
+        /// <para>The prompt message. This parameter has a value when an exception is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -201,12 +201,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

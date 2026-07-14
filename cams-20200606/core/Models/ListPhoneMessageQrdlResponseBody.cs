@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListPhoneMessageQrdlResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The access denied details.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>A value of OK indicates that the request was successful.</para>
+        /// <para>The response code. OK indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>The message content.</para>
+            /// <para>The prefilled message content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hello</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PrefilledMessage { get; set; }
 
             /// <summary>
-            /// <para>The URL of the QR code.</para>
+            /// <para>The URL of the QR code image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://img.png">https://img.png</a></para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QrImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The code.</para>
+            /// <para>The QR code identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IUIED999</para>

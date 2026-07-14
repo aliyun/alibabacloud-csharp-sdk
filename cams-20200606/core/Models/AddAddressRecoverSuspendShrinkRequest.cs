@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddAddressRecoverSuspendShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The audit record.</para>
+        /// </summary>
         [NameInMap("AuditRecord")]
         [Validation(Required=false)]
         public string AuditRecordShrink { get; set; }
 
         /// <summary>
+        /// <para>The customer space ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The request type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>示例值</para>
         /// </summary>

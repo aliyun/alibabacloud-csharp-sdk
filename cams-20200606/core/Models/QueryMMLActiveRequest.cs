@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class QueryMMLActiveRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>erer-retreerew**</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

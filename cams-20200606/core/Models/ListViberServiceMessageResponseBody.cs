@@ -9,13 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListViberServiceMessageResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class ListViberServiceMessageResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值示例值</para>
+            /// <para>测试</para>
             /// </summary>
             [NameInMap("BusinessAccountName")]
             [Validation(Required=false)]
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值</para>
+            /// <para>医疗服务</para>
             /// </summary>
             [NameInMap("IndustryInvolved")]
             [Validation(Required=false)]
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>25644</para>
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>示例值示例值示例值</para>
+            /// <para>stop</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>ddhjdn-dnjdnkdjknd**</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

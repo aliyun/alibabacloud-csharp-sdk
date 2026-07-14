@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ModifyChatappTemplatePropertiesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether sending is allowed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? AllowSend { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to block sending after the Utility template category is changed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,20 +30,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? CategoryChangePaused { get; set; }
 
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>cams-idk***</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The template language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>zh_CN</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -58,20 +64,25 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The template code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>929938***</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
+        /// <para>The templatetype.</para>
+        /// <list type="bullet">
+        /// <item><description><b>WHATSAPP</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>WHATSAPP</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

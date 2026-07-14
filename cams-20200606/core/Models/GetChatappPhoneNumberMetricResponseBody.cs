@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappPhoneNumberMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request. Valid values:</para>
+        /// <para>The request status code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>OK: The request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? DeliveredCount { get; set; }
 
             /// <summary>
-            /// <para>The end time of metric collection. This is a UNIX timestamp in milliseconds.</para>
+            /// <para>The end time of the metric collection period. This value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1667196043904</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? End { get; set; }
 
             /// <summary>
-            /// <para>The granularity of the metrics.</para>
+            /// <para>The metric granularity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DAILY</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? SentCount { get; set; }
 
             /// <summary>
-            /// <para>The start time of metric collection. This is a UNIX timestamp in milliseconds.</para>
+            /// <para>The start time of the metric collection period. This value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669619491000</para>

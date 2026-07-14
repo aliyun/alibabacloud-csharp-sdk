@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryMMLActiveResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdatePhoneWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>SpaceId for ISV sub clients.</para>
+        /// <para>The SpaceId of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>Whether to use HTTP to receive receipts. Value:</para>
+        /// <para>Specifies whether to use HTTP to receive receipts. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Y: Yes.</para>
         /// </description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>phone number.</para>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>Whether to use queue method to receive receipts. Value:</para>
+        /// <para>Specifies whether to use a queue to receive receipts. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Y: Yes.</para>
         /// </description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>HTTP status report interface callback address.</para>
+        /// <para>The callback URL for the HTTP-based status report.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string StatusCallbackUrl { get; set; }
 
         /// <summary>
-        /// <para>HTTP upstream message interface callback address.</para>
+        /// <para>The callback URL for the HTTP-based upstream message.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://aliyun.com">http://aliyun.com</a></para>

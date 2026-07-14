@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdatePhoneWebhookResponseBody : TeaModel {
         /// <summary>
-        /// <para>Access denied for detailed information.</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>无</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the call is successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Prompt message, there is a value when an exception is returned.</para>
+        /// <para>The prompt message. This parameter is returned when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappMigrationRegisterRequest : TeaModel {
         /// <summary>
-        /// <para>None</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>phone number.</para>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteChatGroupInviteLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -66,12 +66,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

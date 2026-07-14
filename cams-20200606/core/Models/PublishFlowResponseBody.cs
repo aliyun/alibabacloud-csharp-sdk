@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class PublishFlowResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</para>

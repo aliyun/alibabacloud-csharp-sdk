@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateContactByIdResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }

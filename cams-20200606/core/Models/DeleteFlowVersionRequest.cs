@@ -10,28 +10,40 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteFlowVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
+        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>9ccc41**************************</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
+        /// <para>The flow version. Click a flow name in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> to go to the canvas page and view the flow version.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FlowVersion")]
         [Validation(Required=false)]
