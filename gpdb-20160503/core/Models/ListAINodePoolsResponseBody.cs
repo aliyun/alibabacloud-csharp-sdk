@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListAINodePoolsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the AINode resource pools.</para>
+        /// <para>The details of the AI node resource pools.</para>
         /// </summary>
         [NameInMap("AINodePoolInfos")]
         [Validation(Required=false)]
         public List<ListAINodePoolsResponseBodyAINodePoolInfos> AINodePoolInfos { get; set; }
         public class ListAINodePoolsResponseBodyAINodePoolInfos : TeaModel {
             /// <summary>
-            /// <para>The details of AINodes.</para>
+            /// <para>The detailed information about the AI nodes.</para>
             /// </summary>
             [NameInMap("AINodeInfos")]
             [Validation(Required=false)]
             public List<ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos> AINodeInfos { get; set; }
             public class ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos : TeaModel {
                 /// <summary>
-                /// <para>The type of the bound object.</para>
+                /// <para>The type of the object to which the AI node is bound.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>model_serving</para>
@@ -34,12 +34,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string BindObject { get; set; }
 
                 /// <summary>
-                /// <para>The binding status.</para>
+                /// <para>The status of the AI node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>unbound</c>: The node is not bound.</para>
-                /// </description></item>
-                /// <item><description><para><c>bound</c>: The node is bound.</para>
-                /// </description></item>
+                /// <item><description>unbound: The AI node is not bound.</description></item>
+                /// <item><description>bound: The AI node is bound.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string BindStatus { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the AI node was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-09T02:07:15Z</para>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The name of the AINode.</para>
+                /// <para>The name of the AI node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ai-xxxxxxxxx</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The AINode specification. The following specifications are supported:</para>
+                /// <para>The node specifications of the AI node. The following specifications are supported:</para>
                 /// <pre><c>ADB.AIMedium.1
                 /// ADB.AILarge.1
                 /// ADB.AIStandard.2
@@ -118,7 +116,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string NodeSpec { get; set; }
 
                 /// <summary>
-                /// <para>The update time.</para>
+                /// <para>The time when the AI node was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-16T02:04:42Z</para>
@@ -140,7 +138,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The ID of the AINode resource pool.</para>
+            /// <para>The ID of the resource pool to which the AI node belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aipool-xxxxxxxxx</para>

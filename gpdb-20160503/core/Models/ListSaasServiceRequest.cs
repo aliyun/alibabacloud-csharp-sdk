@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListSaasServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return in this request. Default value: 10.</para>
+        /// <para>The maximum number of entries to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query to begin with during a paginated query.</para>
+        /// <para>The token for the next query when paging. Use this token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

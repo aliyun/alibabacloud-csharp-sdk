@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListSupabaseProjectTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token for the next page of results. This parameter is not returned if no more results are available.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of tagged resources.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]

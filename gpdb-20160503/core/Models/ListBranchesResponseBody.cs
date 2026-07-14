@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this query.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. It is not required for the first query. For subsequent queries, use the NextToken returned from the previous query.</para>
+        /// <para>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of branches that match the query conditions.</para>
+        /// <para>The total number of branches that match the query criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySupabaseProjectResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The modification type.</para>
+        /// <para>The specification change type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// <para>The Supabase project ID.</para>
+        /// <para>The Supabase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The new project specifications.</para>
+        /// <para>The specifications of the Supabase instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C4G</para>

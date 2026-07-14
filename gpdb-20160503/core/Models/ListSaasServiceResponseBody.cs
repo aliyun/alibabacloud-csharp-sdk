@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListSaasServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of service details.</para>
+        /// <para>The list of instance details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The computing resources.</para>
+            /// <para>The compute resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <summary>
             /// <para>The billing type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
-            /// <item><description><b>PREPAY</b>: subscription.</description></item>
+            /// <item><description><b>POSTPAY</b>: Pay-as-you-go.</description></item>
+            /// <item><description><b>PREPAY</b>: Subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The service type:</para>
+            /// <para>The service type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>memory</b></description></item>
             /// <item><description><b>drama</b></description></item>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The service status:</para>
+            /// <para>The service status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: Running</description></item>
-            /// <item><description>creating: Being created</description></item>
+            /// <item><description>active: Running.</description></item>
+            /// <item><description>creating: Being created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned in this request. Default value: 10.</para>
+        /// <para>The maximum number of entries to return. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query to begin with.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

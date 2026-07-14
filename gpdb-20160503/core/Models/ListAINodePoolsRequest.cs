@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Region ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

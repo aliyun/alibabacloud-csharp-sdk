@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The branch description.</para>
+        /// <para>The description of the branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test branch</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time at which the branch automatically expires and is deleted. The value is in ISO 8601 UTC format.</para>
+        /// <para>The time when the branch automatically expires and is deleted. The value is in the ISO 8601 UTC format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-10-08T09:11:12Z</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InitSource { get; set; }
 
         /// <summary>
-        /// <para>The parent branch ID. This parameter specifies the parent branch for the new branch or query condition.</para>
+        /// <para>The ID of the parent branch. This parameter specifies the parent branch for the new branch or query condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ParentBranchId { get; set; }
 
         /// <summary>
-        /// <para>The log sequence number (LSN) from the parent branch at which the branch is created.</para>
+        /// <para>The log sequence number (LSN) selected when creating a branch from the parent branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/3522648</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ParentLsn { get; set; }
 
         /// <summary>
-        /// <para>The point in time for data synchronization from the parent branch when creating the branch. The value is in ISO 8601 UTC format.</para>
+        /// <para>The point in time for data synchronization when creating a branch from the parent branch. The value is in the ISO 8601 UTC format.</para>
         /// <para>Default value: the current time.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ParentTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The Supabase project ID that corresponds to the primary branch.</para>
+        /// <para>The ID of the Supabase project that corresponds to the primary branch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

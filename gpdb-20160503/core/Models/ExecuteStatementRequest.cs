@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,16 +38,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters.</para>
+        /// <para>The list of configuration parameters.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the vector dataset.  </para>
+        /// <para>The vector dataset parameters.</para>
         /// <remarks>
-        /// <para>When WorkspaceId is not empty, you must also pass this parameter.</para>
+        /// <para>If WorkspaceId is not empty, this parameter is required.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RagWorkspaceCollection")]
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public ExecuteStatementRequestRagWorkspaceCollection RagWorkspaceCollection { get; set; }
         public class ExecuteStatementRequestRagWorkspaceCollection : TeaModel {
             /// <summary>
-            /// <para>Collection name.  </para>
+            /// <para>The collection name.</para>
             /// <remarks>
-            /// <para>You can view the list by using the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Collection { get; set; }
 
             /// <summary>
-            /// <para>Namespace.  </para>
+            /// <para>The namespace.</para>
             /// <remarks>
-            /// <para>You can view the list by using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The execution type. Valid values:</para>
+        /// <para>The run type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>synchronous</description></item>
-        /// <item><description>asynchronous (not supported)</description></item>
+        /// <item><description>synchronous: synchronous execution.</description></item>
+        /// <item><description>asynchronous: asynchronous execution. Currently not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,9 +108,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RunType { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</para>
+        /// <para>The access credential. Created by calling the CreateSecret operation.</para>
         /// <remarks>
-        /// <para> To call the ExecuteStatement operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</para>
+        /// <para>When you access this operation by using a RAM user, you must have the UseSecret or GetSecretValue permission on this SecretArn.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The SQL statements that you want to execute.</para>
+        /// <para>The SQL statement to execute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>select * from table1</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Sql { get; set; }
 
         /// <summary>
-        /// <para>The SQL statements.</para>
+        /// <para>The list of multiple SQL statements.</para>
         /// </summary>
         [NameInMap("Sqls")]
         [Validation(Required=false)]
         public List<string> Sqls { get; set; }
 
         /// <summary>
-        /// <para>The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.</para>
+        /// <para>The name of the execution statement. This parameter takes effect only when RunType is set to asynchronous.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StatementName { get; set; }
 
         /// <summary>
-        /// <para>The ID of a workspace composed of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both are specified, this parameter takes precedence.</para>
+        /// <para>The ID of the workspace that consists of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both this parameter and DBInstanceId are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-ws-*****</para>

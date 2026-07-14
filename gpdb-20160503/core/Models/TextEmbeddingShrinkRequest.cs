@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class TextEmbeddingShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of embedding dimensions. The default value is the number of dimensions supported by the embedding algorithm.</para>
+        /// <para>The vector dimensions. Default value: the dimensions supported by the embedding model.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The text-embedding-v3 supports 1024, 768, and 512 dimensions. Default value: 1024.</description></item>
+        /// <item><description>text-embedding-v3 supports 1024, 768, and 512 dimensions. Default value: 1024.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Dimension { get; set; }
 
         /// <summary>
-        /// <para>A list of text content to be embedded. The list length must not exceed 100.</para>
+        /// <para>The list of text content to vectorize. The list can contain up to 100 entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What is ADBPG?</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The text embedding model. Valid values:</para>
+        /// <para>The embedding model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>text-embedding-v1:1536 dimensions</description></item>
-        /// <item><description>text-embedding-v2:1536 dimensions</description></item>
-        /// <item><description>text-embedding-v3 (default):1024, 768, and 512 dimensions</description></item>
-        /// <item><description>text2vec: 1024 dimensions</description></item>
-        /// <item><description>m3e-base: 768 dimensions</description></item>
-        /// <item><description>m3e-small: 512 dimensions</description></item>
+        /// <item><description>text-embedding-v1: 1536 dimensions</description></item>
+        /// <item><description>text-embedding-v2: 1536 dimensions</description></item>
+        /// <item><description>text-embedding-v3 (default): 1024, 768, or 512 dimensions</description></item>
+        /// <item><description>text2vec (not recommended): 1024 dimensions</description></item>
+        /// <item><description>m3e-base (not recommended): 768 dimensions</description></item>
+        /// <item><description>m3e-small (not recommended): 512 dimensions</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

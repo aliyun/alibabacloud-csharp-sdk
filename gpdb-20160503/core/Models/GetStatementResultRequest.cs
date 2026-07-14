@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetStatementResultRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID. Can be obtained by calling DescribeDBInstances.</para>
+        /// <para>The instance ID. You can call DescribeDBInstances to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Database name.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>Task ID for asynchronous SQL execution.</para>
+        /// <para>The task ID of the asynchronous SQL execution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID where the instance is located.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Access credential. Created through the CreateSecret interface.</para>
+        /// <para>The access credential. Created by calling the CreateSecret operation.</para>
         /// <remarks>
-        /// <para>When accessing this interface with a sub-account, the sub-account must have the UseSecret or GetSecretValue permission for this SecretArn.</para>
+        /// <para>When you access this operation by using a RAM user, you must have the UseSecret or GetSecretValue permission on this SecretArn.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

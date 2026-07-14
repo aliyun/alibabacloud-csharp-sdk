@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeAIServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the service was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-03-01T00:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the service.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dramatest</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateApiDevUrl { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the Workbench.</para>
+        /// <para>The internal endpoint of the workbench.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PublicApiDevUrl { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint of the Workbench.</para>
+        /// <para>The public endpoint of the workbench.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.8.8.8</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PublicWorkbenchUrl { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of IP addresses in the IP address whitelist group.</para>
+        /// <para>The IP addresses in the IP address whitelist group, separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceAccount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service.</para>
+        /// <para>The service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>drama-123456</para>
@@ -110,12 +110,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the service. Valid values:</para>
+        /// <para>The service status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>deploying: The service is being deployed.</para>
-        /// </description></item>
-        /// <item><description><para>active: The service is running.</para>
-        /// </description></item>
+        /// <item><description>deploying: being deployed.</description></item>
+        /// <item><description>active: running.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

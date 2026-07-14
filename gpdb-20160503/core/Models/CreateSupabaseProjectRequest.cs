@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value is false.</para>
+        /// <para>Specifies whether to enable auto start/stop. If this parameter is not specified, the default value false is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? AutoScale { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. This token ensures that duplicate requests do not trigger the same operation more than once.</para>
+        /// <para>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <item><description>PL0</description></item>
         /// <item><description>PL1</description></item>
         /// <item><description>PL2</description></item>
-        /// <item><description>PL3.</description></item>
+        /// <item><description>PL3</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The DPI engine version. If this parameter is not specified, the default value PG15 is used.</para>
+        /// <para>The DPI engine version. If this parameter is not specified, the default value PG15 is used. PG17 and later versions support the data sandbox (branch) feature.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PG15: PostgreSQL 15.</description></item>
-        /// <item><description>PG17: PostgreSQL 17.</description></item>
+        /// <item><description>PG17: PostgreSQL 17, which supports the data sandbox feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available on the console.</para>
+        /// <para>The specifications of the Supabase project. The Free billing type uses free-tier specifications. For paid billing types, the specifications must match those available in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the resource. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</para>
+        /// <para>The subscription duration. This parameter takes effect only when PayType is set to PrePay. If this parameter is not specified, the default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as the value of this parameter.</para>
+        /// <para>The zone ID. The zone of the vSwitch specified by VSwitchId must be the same as this parameter value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

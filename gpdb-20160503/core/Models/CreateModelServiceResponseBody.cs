@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateModelServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the model service.</para>
+        /// <para>The model service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ms-xxxxxxxxx</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListAIServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AnalyticDB for PostgreSQL instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>To view details of all AnalyticDB for PostgreSQL instances in a region, including their instance IDs, call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,14 +34,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>20</para>
-        /// </description></item>
-        /// <item><description><para>50</para>
-        /// </description></item>
-        /// <item><description><para>100</para>
-        /// </description></item>
+        /// <item><description>20</description></item>
+        /// <item><description>50</description></item>
+        /// <item><description>100</description></item>
         /// </list>
         /// <para>Default value: 20.</para>
         /// 
@@ -53,7 +50,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the AI service. Valid value: drama.</para>
+        /// <para>The service type. Currently, only drama is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

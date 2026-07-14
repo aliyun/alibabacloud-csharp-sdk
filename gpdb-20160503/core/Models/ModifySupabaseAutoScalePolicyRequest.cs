@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySupabaseAutoScalePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable auto-scaling. Valid values:</para>
+        /// <para>Specifies whether to enable <b>automatic start and stop</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Enables auto-scaling. The Supabase instance automatically pauses and resumes based on traffic.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Disables auto-scaling.</para>
-        /// </description></item>
+        /// <item><description>true: Enabled. After this feature is enabled, Supabase automatically pauses and resumes based on traffic conditions.</description></item>
+        /// <item><description>false: Disabled. After this feature is disabled, the automatic start and stop feature of Supabase is turned off.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? AutoScale { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Supabase project. To obtain the workspace ID, log in to the console and go to the Supabase page.</para>
+        /// <para>The ID of the Supabase project. You can obtain the workspace ID from the Supabase page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

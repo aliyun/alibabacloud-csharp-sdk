@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateBranchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The branch ID. This ID uniquely identifies a Supabase branch.</para>
+        /// <para>The branch ID, which uniquely identifies a Supabase branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The Supabase project ID that corresponds to the primary branch.</para>
+        /// <para>The ID of the Supabase project that corresponds to the primary branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>

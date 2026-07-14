@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The actual point in time that corresponds to the created snapshot.</para>
+        /// <para>The actual point in time corresponding to the created snapshot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-08T09:11:12Z</para>

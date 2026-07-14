@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class RestoreSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token. Ensures that repeated requests do not execute the same operation more than once.</para>
+        /// <para>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>

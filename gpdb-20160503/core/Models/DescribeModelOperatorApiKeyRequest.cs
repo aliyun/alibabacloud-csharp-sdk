@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModelOperatorApiKeyRequest : TeaModel {
         /// <summary>
+        /// <para>API KEY ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

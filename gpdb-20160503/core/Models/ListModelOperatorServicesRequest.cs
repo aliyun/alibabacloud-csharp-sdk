@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListModelOperatorServicesRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>20</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
+        /// </list>
+        /// <para>Default value: <b>20</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

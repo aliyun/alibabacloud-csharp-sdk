@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeBranchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The branch list. Each element represents a Supabase branch.</para>
+        /// <para>The branch information. Each element represents a Supabase branch.</para>
         /// </summary>
         [NameInMap("Branch")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the branch expires and is automatically deleted, in ISO 8601 UTC format.</para>
+            /// <para>The time when the branch automatically expires and is deleted, in ISO 8601 UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-10-08T09:11:12Z</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string InitSource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether this is the default branch.</para>
+            /// <para>Indicates whether the branch is the default branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The parent branch ID, which specifies the parent branch of a new branch or a query condition.</para>
+            /// <para>The parent branch ID, which specifies the parent branch for a new branch or a query condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>br-main</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentBranchName { get; set; }
 
             /// <summary>
-            /// <para>The Log Sequence Number (LSN) of the parent branch at the time this branch was created.</para>
+            /// <para>The LSN of the parent branch at the time this branch was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0/3522648</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ParentTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The Supabase project ID that corresponds to the primary branch.</para>
+            /// <para>The Supabase project ID associated with the primary branch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spb-xxxx</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of branch tags.</para>
+            /// <para>The branch tag list.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]

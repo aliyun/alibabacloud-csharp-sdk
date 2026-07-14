@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>Model parameters.</para>
+        /// <para>The model parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Not yet available.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModelServiceId { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint.</para>
+        /// <para>The internal network connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://ms-xxxxxxx.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx.xxxx.rds.aliyuncs.com</a></para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateConnectUrl { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint.</para>
+        /// <para>The public network connection string.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com">http://ms-xxxxxxx-o.xxxx.rds.aliyuncs.com</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PublicConnectUrl { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of IP addresses and CIDR blocks allowed to connect.</para>
+        /// <para>The list of IP addresses in the IP whitelist, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIpList { get; set; }
 
         /// <summary>
-        /// <para>The status of the model service.</para>
+        /// <para>The model service status.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID. It can be used to query the job status or cancel the job.</para>
+        /// <para>The task ID, which is used to query the task status or cancel the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>231460f8-75dc-405e-a669-0c5204887e91</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successfully create job</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The operation was successful.</description></item>
+        /// <item><description><b>fail</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

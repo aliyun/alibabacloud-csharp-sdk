@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> API to view the instance IDs of all AnalyticDB for PostgreSQL instances in the destination region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and does not need to be specified.</para>
+        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

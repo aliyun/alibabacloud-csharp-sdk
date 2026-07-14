@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E6EDEB8-D73E-5F2D-B948-86C8AEB05A68</para>

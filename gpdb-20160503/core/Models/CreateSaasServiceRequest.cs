@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, a Free service is created by default.</description></item>
+        /// <item><description>If you leave this parameter empty, a Free type is created by default.</description></item>
         /// <item><description>The subscription billing method offers discounts for purchases of one year or longer. Select a billing method as needed.</description></item>
         /// </list>
         /// </remarks>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>memroy</b></description></item>
-        /// <item><description><b>drama</b>.</description></item>
+        /// <item><description><b>drama</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

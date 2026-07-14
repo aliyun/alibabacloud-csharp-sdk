@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// <para>The service type. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>memory</description></item>
-                    /// <item><description>drama.</description></item>
+                    /// <item><description>drama</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string PayType { get; set; }
 
                 /// <summary>
-                /// <para>[Deprecated].</para>
+                /// <para>[Deprecated]</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deprecated</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <para>The service type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>memory</description></item>
-                /// <item><description>drama.</description></item>
+                /// <item><description>drama</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

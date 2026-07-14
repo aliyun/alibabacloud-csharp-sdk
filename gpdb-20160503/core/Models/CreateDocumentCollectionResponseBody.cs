@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The API execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>success</b>: The operation succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>fail</b>: The operation failed.</para>
-        /// </description></item>
+        /// <item><description><b>success</b>: The operation was successful.</description></item>
+        /// <item><description><b>fail</b>: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

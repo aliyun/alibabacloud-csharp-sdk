@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The name of the document collection.</para>
         /// <remarks>
-        /// <para>A document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query the created document collections.</para>
+        /// <para>The document collection is created by calling the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation. You can call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query existing document collections.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including the instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the file.</para>
+        /// <para>The file name.</para>
         /// <remarks>
-        /// <para>The name of an uploaded file. You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query the file list.</para>
+        /// <para>The name of a previously uploaded file. You can call the <a href="https://help.aliyun.com/document_detail/2618453.html">ListDocuments</a> operation to query the file list.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for the data to be queried. The format is the same as the WHERE clause in SQL. It is an expression that returns a Boolean value. The conditions can be simple comparison operators, such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). They can also be more complex expressions that are combined with logical operators (AND, OR, and NOT), and conditions that use keywords such as IN, BETWEEN, and LIKE.</para>
+        /// <para>The filter condition for the data to query, in SQL WHERE clause format. The filter is an expression that returns a Boolean value (true or false). Conditions can be simple comparison operators such as equal to (=), not equal to (&lt;&gt; or !=), greater than (&gt;), less than (&lt;), greater than or equal to (&gt;=), and less than or equal to (&lt;=). You can also use logical operators (AND, OR, NOT) to combine more complex expressions, as well as conditions with the IN, BETWEEN, and LIKE keywords.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For more information about the syntax, see <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">PostgreSQL WHERE</a>.</description></item>
+        /// <item><description>For detailed syntax, refer to: <a href="https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/">https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/</a></description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -69,10 +69,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Specifies whether to return vectors. Default value: false.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>false</b>: Vectors are not returned.</para>
-        /// </description></item>
-        /// <item><description><para><b>true</b>: Vectors are returned.</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: Does not return vectors.</description></item>
+        /// <item><description><b>true</b>: Returns vectors.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -84,9 +82,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeVector { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace. Default value: public.</para>
+        /// <para>The namespace. Default value: public.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace or call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
+        /// <para>You can create a namespace by calling the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation and query the list of namespaces by calling the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +97,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The password of the namespace.</para>
         /// <remarks>
-        /// <para>This parameter is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
+        /// <para>This value is specified by the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -121,14 +119,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of records per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>20</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b></para>
-        /// </description></item>
+        /// <item><description><b>20</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
         /// <para>Default value: <b>20</b>.</para>
         /// 

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyDBInstanceDeploymentModeRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The deployment mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>multiple: Multi-zone development.</description></item>
-        /// <item><description>single: Single-zone deployment.</description></item>
+        /// <item><description>multiple: multi-zone deployment.</description></item>
+        /// <item><description>single: single-zone deployment.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,15 +39,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the secondary zone.</para>
+        /// <para>The vSwitch ID in the secondary zone.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter must be specified only when DeployMode is set to multiple.</para>
-        /// </description></item>
-        /// <item><description><para>The vSwitch must be deployed in the zone that is specified by the StandbyZoneId parameter.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required only for multi-zone deployment.</description></item>
+        /// <item><description>The zone of the vSwitch specified by this parameter must be the same as the zone specified by StandbyZoneId.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1cpq8mr64paltkb****</para>
@@ -57,17 +55,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the secondary zone.</para>
+        /// <para>The secondary zone ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter must be specified only when DeployMode is set to multiple.</para>
-        /// </description></item>
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available zone list.</para>
-        /// </description></item>
-        /// <item><description><para>The ID of the secondary zone must be different from the ID of the primary zone.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required only for multi-zone deployment.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available zone IDs.</description></item>
+        /// <item><description>The secondary zone ID must be different from the primary zone ID.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-j</para>

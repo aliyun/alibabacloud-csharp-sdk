@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB PostgreSQL instances in the destination region, including the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a region, including the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The service type. Only drama is supported.</para>
+        /// <para>The service type. Currently, only drama is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

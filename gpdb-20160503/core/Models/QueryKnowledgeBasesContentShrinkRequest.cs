@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The method used to merge results from multiple knowledge bases. Default value: RRF. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RRF</description></item>
-        /// <item><description>Weight.</description></item>
+        /// <item><description>Weight</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

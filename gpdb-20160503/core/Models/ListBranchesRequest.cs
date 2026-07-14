@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListBranchesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to return in this query.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. It is not required for the first query. For subsequent queries, use the NextToken returned from the previous query.</para>
+        /// <para>The cursor for the paged query. You do not need to specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The parent branch ID, used to specify the parent branch for a new branch or as a query filter condition.</para>
+        /// <para>The parent branch ID. This parameter specifies the parent branch for a new branch or a query filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>br-main</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ParentBranchId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Must be specified when creating a primary branch. When creating a sub-branch, it inherits the region of the primary branch by default.</para>
+        /// <para>The region ID. This parameter is required when you create a primary branch. When you create a sub-branch, the region is inherited from the primary branch by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Supports fuzzy search by branch ID or branch name.</para>
+        /// <para>The search keyword. Fuzzy search by branch ID or branch name is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -88,12 +88,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Search { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
+        /// <para>The field by which to sort the results.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BranchName: Sort by branch name.</description></item>
-        /// <item><description>CreateTime: Sort by creation time.</description></item>
-        /// <item><description>LastRunTime: Sort by last run time.</description></item>
+        /// <item><description>BranchName: sorts by branch name.</description></item>
+        /// <item><description>CreateTime: sorts by creation time.</description></item>
+        /// <item><description>LastRunTime: sorts by last run time.</description></item>
         /// </list>
         /// <para>Default value: CreateTime.</para>
         /// 
@@ -105,11 +105,11 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The sort direction.</para>
+        /// <para>The sort order.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: Ascending order.</description></item>
-        /// <item><description>Desc: Descending order.</description></item>
+        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description>Desc: descending order.</description></item>
         /// </list>
         /// <para>Default value: Desc.</para>
         /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Supabase project.</para>
+        /// <para>The instance ID of the Supabase instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>

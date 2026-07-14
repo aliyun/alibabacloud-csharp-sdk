@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeModelOperatorApiKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API key content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>QEDGOTAJOG</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>API KEY ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-06-01T00:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-apikey</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxx">https://xxxx</a></para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>

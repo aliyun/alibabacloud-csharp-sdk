@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. You can specify up to 50 instance IDs.</para>
+        /// <para>The Nth instance. Valid values of N: 1 to 50.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set this parameter to <c>instance</c>.</para>
+        /// <para>The resource type. Set the value to <c>instance</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to add. You can specify up to 20 tags.</para>
+        /// <para>The Nth tag. Valid values of N: 1 to 20.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagSupabaseProjectRequestTag> Tag { get; set; }
         public class TagSupabaseProjectRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The key cannot be empty and can be up to 64 characters long. It cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. This parameter cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The value can be empty or up to 128 characters long. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. This parameter can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>

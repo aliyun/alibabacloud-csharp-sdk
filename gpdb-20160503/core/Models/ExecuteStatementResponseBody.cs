@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ExecuteStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the SQL statements were created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-04T10:08:47+0800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The returned results of the synchronous call.</para>
+        /// <para>The result returned for synchronous calls.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adbtest</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The ID of the job for asynchronously executing the SQL statements.</para>
+        /// <para>The task ID for asynchronous SQL execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the access credential for the created Data API account.</para>
+        /// <para>The access credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</para>
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecretArn { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The execution status of the API operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b></description></item>
-        /// <item><description><b>fail</b></description></item>
+        /// <item><description><b>success</b>: The execution is successful.</description></item>
+        /// <item><description><b>fail</b>: The execution failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

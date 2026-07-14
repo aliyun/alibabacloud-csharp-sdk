@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateIndexRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the collection.</para>
+        /// <para>The collection name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of collections.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query the list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Collection { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,15 +37,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The index parameter. If you do not specify this parameter, a B-tree index is created.</para>
+        /// <para>The index parameters. If this parameter is not specified, a B-tree index is created by default.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>b-tree: To create a B-tree index, set the fillFactor parameter to a value between 10 and 100. Default value: 90.</para>
-        /// </description></item>
-        /// <item><description><para>gin: To create a GIN index, set the fastUpdate parameter to true or false. Default value: true.</para>
-        /// </description></item>
+        /// <item><description>b-tree: The fillFactor parameter. Valid values: 10 to 100. Default value: 90.</description></item>
+        /// <item><description>gin: The fastUpdate parameter. Valid values: true and false. Default value: true.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} or {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</para>
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IndexConfig { get; set; }
 
         /// <summary>
-        /// <para>The index field. Only a single field is supported, and it must be a key defined in metadata.</para>
+        /// <para>The index field. Only a single field is supported, and the field must be a key defined in Metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>title</para>
@@ -65,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IndexField { get; set; }
 
         /// <summary>
-        /// <para>The name of the index.</para>
+        /// <para>The index name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testindex</para>
@@ -75,9 +73,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string IndexName { get; set; }
 
         /// <summary>
-        /// <para>The namespace name.</para>
+        /// <para>The namespace.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query the list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The password of the namespace.</para>
         /// <remarks>
-        /// <para>The value of this parameter is specified by the CreateNamespace operation.</para>
+        /// <para>This value is specified by the CreateNamespace operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -118,13 +116,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. This parameter and DBInstanceId cannot both be empty. If both parameters are specified, this value takes precedence.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ip</description></item>
-        /// <item><description>l2</description></item>
-        /// <item><description>cosine</description></item>
-        /// </list>
+        /// <para>The ID of the workspace that consists of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both this parameter and DBInstanceId are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-ws-*****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateModelServiceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of AINodes on which to deploy the model.</para>
+        /// <para>The list of AI nodes used for model deployment.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AiNodes")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AiNodesShrink { get; set; }
 
         /// <summary>
-        /// <para>A token to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</para>
+        /// <para>The idempotency check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88**********</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</para>
         /// </remarks>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the model service.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable a public network connection.</para>
+        /// <para>Specifies whether to enable public network access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InferenceEngine { get; set; }
 
         /// <summary>
-        /// <para>The name of the model.</para>
+        /// <para>The model name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model parameters. This parameter is not yet supported.</para>
+        /// <para>The model parameters. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Not yet available.</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? Replicas { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the instance belongs. For information about how to obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>The IP whitelist.</para>
-        /// <para>Set this parameter to <c>127.0.0.1</c> to deny access from all external IP addresses. After the model service is created, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP whitelist.</para>
+        /// <para>The value 127.0.0.1 indicates that no external IP addresses are allowed to access the instance. After the instance is created, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
