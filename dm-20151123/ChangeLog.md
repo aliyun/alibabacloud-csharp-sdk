@@ -1,3 +1,6 @@
+2026-07-14 Version: 1.11.1
+- Generated csharp 2015-11-23 for Dm.
+
 2026-06-25 Version: 1.11.0
 - Support API DeleteTemplate.
 - Support API ModifyTemplate.

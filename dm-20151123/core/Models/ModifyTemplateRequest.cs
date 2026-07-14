@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ModifyTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The source channel through which the user accesses the service. Default value: 1. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: Direct access through Alibaba Cloud.</description></item>
-        /// <item><description>2: Access through a partner channel.</description></item>
-        /// </list>
+        /// <para>The source channel through which the user connects. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,11 +52,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string SmsContent { get; set; }
 
         /// <summary>
-        /// <para>The business type of the SMS template. This parameter is required only when the templatetype is SMS. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: verification code</description></item>
-        /// <item><description>2: notification or promotion.</description></item>
-        /// </list>
+        /// <para>The business type of the SMS template. This parameter is required only when the templatetype is SMS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

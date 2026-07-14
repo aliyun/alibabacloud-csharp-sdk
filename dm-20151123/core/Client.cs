@@ -541,7 +541,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends emails in batch.</para>
+        /// <para>Sends emails in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -663,7 +663,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends emails in batch.</para>
+        /// <para>Sends emails in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -785,7 +785,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends emails in batch.</para>
+        /// <para>Sends emails in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -803,7 +803,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends emails in batch.</para>
+        /// <para>Sends emails in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12943,7 +12943,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate an email address.</para>
+        /// <para>Validates an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12997,7 +12997,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate an email address.</para>
+        /// <para>Validates an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13051,7 +13051,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate an email address.</para>
+        /// <para>Validates an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13069,7 +13069,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate an email address.</para>
+        /// <para>Validates an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
