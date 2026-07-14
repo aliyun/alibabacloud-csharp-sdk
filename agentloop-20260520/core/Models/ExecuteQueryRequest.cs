@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
+        [NameInMap("version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
+
     }
 
 }

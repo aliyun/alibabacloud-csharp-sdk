@@ -1577,6 +1577,188 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a pipeline.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelineResponse
+        /// </returns>
+        public CreatePipelineResponse CreatePipelineWithOptions(string agentSpace, CreatePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutePolicy))
+            {
+                body["executePolicy"] = request.ExecutePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pipeline))
+            {
+                body["pipeline"] = request.Pipeline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sink))
+            {
+                body["sink"] = request.Sink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePipeline",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/pipeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pipeline.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelineResponse
+        /// </returns>
+        public async Task<CreatePipelineResponse> CreatePipelineWithOptionsAsync(string agentSpace, CreatePipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutePolicy))
+            {
+                body["executePolicy"] = request.ExecutePolicy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pipeline))
+            {
+                body["pipeline"] = request.Pipeline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PipelineName))
+            {
+                body["pipelineName"] = request.PipelineName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sink))
+            {
+                body["sink"] = request.Sink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePipeline",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/pipeline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pipeline.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelineResponse
+        /// </returns>
+        public CreatePipelineResponse CreatePipeline(string agentSpace, CreatePipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePipelineWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a pipeline.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreatePipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePipelineResponse
+        /// </returns>
+        public async Task<CreatePipelineResponse> CreatePipelineAsync(string agentSpace, CreatePipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePipelineWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an AgentSpace.</para>
         /// </summary>
         /// 
@@ -2885,6 +3067,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             {
                 body["type"] = request.Type;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2954,6 +3140,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6079,6 +6269,208 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PausePipelineWithOptionsAsync(agentSpace, pipelineName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be less than <b>toTime</b>.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewPipelineResponse
+        /// </returns>
+        public PreviewPipelineResponse PreviewPipelineWithOptions(string agentSpace, PreviewPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTime))
+            {
+                body["fromTime"] = request.FromTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pipeline))
+            {
+                body["pipeline"] = request.Pipeline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToTime))
+            {
+                body["toTime"] = request.ToTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewPipeline",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/pipeline/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be less than <b>toTime</b>.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewPipelineResponse
+        /// </returns>
+        public async Task<PreviewPipelineResponse> PreviewPipelineWithOptionsAsync(string agentSpace, PreviewPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromTime))
+            {
+                body["fromTime"] = request.FromTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pipeline))
+            {
+                body["pipeline"] = request.Pipeline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToTime))
+            {
+                body["toTime"] = request.ToTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PreviewPipeline",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/agentspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/pipeline/preview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PreviewPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be less than <b>toTime</b>.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewPipelineResponse
+        /// </returns>
+        public PreviewPipelineResponse PreviewPipeline(string agentSpace, PreviewPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PreviewPipelineWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Previews a pipeline. Without creating pipeline resources, performs a trial query based on the specified data source, node orchestration, and time range, and returns a small number of sample data records for authenticating parameter settings and previewing processing results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><b>agentSpace</b> must be an AgentSpace instance that has been created under the current account.</description></item>
+        /// <item><description><b>source.type</b> currently supports only the <c>logstore</c> type. The <c>logstore.project</c> and <c>logstore.logstore</c> must be authorized within the AgentSpace and located in the same region.</description></item>
+        /// <item><description><b>pipeline.nodes</b> must contain at least one node of the <c>Source</c> type and cannot be empty.</description></item>
+        /// <item><description><b>fromTime</b> and <b>toTime</b> are UNIX timestamps in seconds. <b>fromTime</b> must be less than <b>toTime</b>.</description></item>
+        /// <item><description>A maximum of 5 records are returned, and internal system fields of the data source are automatically filtered out.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PreviewPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PreviewPipelineResponse
+        /// </returns>
+        public async Task<PreviewPipelineResponse> PreviewPipelineAsync(string agentSpace, PreviewPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PreviewPipelineWithOptionsAsync(agentSpace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
