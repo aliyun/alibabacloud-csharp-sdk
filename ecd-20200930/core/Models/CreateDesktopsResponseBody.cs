@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of cloud desktop IDs. An ID is returned for each cloud desktop created in the call.</para>
+        /// <para>The list of cloud desktop IDs. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The order ID.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the <c>ChargeType</c> request parameter is set to <c>PrePaid</c>.</para>
+        /// <para>This parameter is returned only when the request parameter ChargeType is set to PrePaid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

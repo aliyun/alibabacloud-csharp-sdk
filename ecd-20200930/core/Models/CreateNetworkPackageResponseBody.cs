@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNetworkPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created network package.</para>
+        /// <para>The premium bandwidth plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np-amtp8e8q1o9e4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234526262716724</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>269BDB16-2CD8-4865-84BD-11C40BC21DB0</para>

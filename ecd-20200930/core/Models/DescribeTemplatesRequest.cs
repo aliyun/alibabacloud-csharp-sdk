@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>Region filter for template queries.</para>
+        /// <para>The region filter condition for the template query. </para>
         /// <remarks>
-        /// <para>If you set this parameter, results exclude configurations for other regions.</para>
+        /// <para>If this parameter is specified, region-specific configurations that do not match are excluded from the query results.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Cloud Desktop image ID. You can find this ID on the Image Management page. Supported image types include OS images and custom images.</para>
+        /// <para>The cloud computer image ID. You can obtain the ID from the image management page. System images, custom images, and other image types are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-dnz9xjgbm8*****</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Keyword for fuzzy search. Searches template IDs and template names.</para>
+        /// <para>The keyword. Fuzzy match is supported for the template ID and template name fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Page number for paged queries.</para>
+        /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of entries per page for paged queries.</para>
+        /// <para>The maximum number of rows per page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Product type. Set this parameter to <c>CloudDesktop</c>.</para>
+        /// <para>The product type. Set this parameter to <c>CloudDesktop</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -85,14 +85,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>List of template IDs to query.</para>
+        /// <para>The list of template IDs to query.</para>
         /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]
         public List<string> TemplateIds { get; set; }
 
         /// <summary>
-        /// <para>Query by template name.</para>
+        /// <para>The template name used for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My cloud desktop template 001</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>Template type to query. If you omit this parameter, the system returns all template types.</para>
+        /// <para>The templatetype to query. If this parameter is not specified, templates of all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER_TEMPLATE</para>

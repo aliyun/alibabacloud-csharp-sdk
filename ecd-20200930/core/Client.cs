@@ -19,6 +19,33 @@ namespace AlibabaCloud.SDK.Ecd20200930
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "ecd.us-west-1.aliyuncs.com"},
+                {"us-east-1", "ecd.us-east-1.aliyuncs.com"},
+                {"me-east-1", "ecd.me-east-1.aliyuncs.com"},
+                {"me-central-1", "ecd.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "ecd.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "ecd.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"},
+                {"cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"},
+                {"cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "ecd.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -5151,7 +5178,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system and associate it with the office network of the shared cloud computer.</para>
+        /// <para>Creates a NAS file system and binds it to the office network of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5221,7 +5248,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system and associate it with the office network of the shared cloud computer.</para>
+        /// <para>Creates a NAS file system and binds it to the office network of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5291,7 +5318,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system and associate it with the office network of the shared cloud computer.</para>
+        /// <para>Creates a NAS file system and binds it to the office network of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5309,7 +5336,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a NAS file system and associate it with the office network of the shared cloud computer.</para>
+        /// <para>Creates a NAS file system and binds it to the office network of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9095,29 +9122,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a cloud desktop, meet the following requirements:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office site (formerly a workspace) and users:<list type="bullet">
-        /// <item><description>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
-        /// <b>Request examples</b><details>
-        /// <summary>
-        /// Example: Create a cloud desktop from a bundle
-        /// </summary></description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+        /// <b>Call examples:</b><details>
+        /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9125,15 +9150,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with custom settings
-        /// </summary>
+        /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9147,15 +9170,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with a monthly usage package
-        /// </summary>
+        /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9174,16 +9195,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create an agent resource
-        /// </summary>
+        /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9196,7 +9215,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
+        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9303,6 +9322,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["OfficeSiteId"] = request.OfficeSiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuPath))
+            {
+                query["OuPath"] = request.OuPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -9346,6 +9369,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                query["SubPayType"] = request.SubPayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubnetId))
             {
@@ -9404,29 +9431,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a cloud desktop, meet the following requirements:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office site (formerly a workspace) and users:<list type="bullet">
-        /// <item><description>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
-        /// <b>Request examples</b><details>
-        /// <summary>
-        /// Example: Create a cloud desktop from a bundle
-        /// </summary></description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+        /// <b>Call examples:</b><details>
+        /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9434,15 +9459,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with custom settings
-        /// </summary>
+        /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9456,15 +9479,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with a monthly usage package
-        /// </summary>
+        /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9483,16 +9504,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create an agent resource
-        /// </summary>
+        /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9505,7 +9524,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
+        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9612,6 +9631,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["OfficeSiteId"] = request.OfficeSiteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OuPath))
+            {
+                query["OuPath"] = request.OuPath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -9655,6 +9678,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SnapshotPolicyId))
             {
                 query["SnapshotPolicyId"] = request.SnapshotPolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubPayType))
+            {
+                query["SubPayType"] = request.SubPayType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubnetId))
             {
@@ -9713,29 +9740,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a cloud desktop, meet the following requirements:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office site (formerly a workspace) and users:<list type="bullet">
-        /// <item><description>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
-        /// <b>Request examples</b><details>
-        /// <summary>
-        /// Example: Create a cloud desktop from a bundle
-        /// </summary></description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+        /// <b>Call examples:</b><details>
+        /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9743,15 +9768,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with custom settings
-        /// </summary>
+        /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9765,15 +9788,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with a monthly usage package
-        /// </summary>
+        /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9792,16 +9813,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create an agent resource
-        /// </summary>
+        /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9814,7 +9833,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
+        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -9832,29 +9851,27 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates one or more Elastic Desktop Service (EDS) desktops. If you provide user information, the desktops are automatically assigned to the specified users.</para>
+        /// <para>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a cloud desktop, meet the following requirements:</para>
+        /// <para>Before creating cloud desktops, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Create an office site (formerly a workspace) and users:<list type="bullet">
-        /// <item><description>Simple office site: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
-        /// <item><description>AD connector office site: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
+        /// <item><description>Create an office network (formerly workspace) and users. For more information, see the following API operations or documentation:<list type="bullet">
+        /// <item><description>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</description></item>
+        /// <item><description>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or use an existing policy.
-        /// <b>Request examples</b><details>
-        /// <summary>
-        /// Example: Create a cloud desktop from a bundle
-        /// </summary></description></item>
+        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+        /// <b>Call examples:</b><details>
+        /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// You must create an office site in advance.
+        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9862,15 +9879,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// </c></pre>
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with custom settings
-        /// </summary>
+        /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9884,15 +9899,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create a cloud desktop with a monthly usage package
-        /// </summary>
+        /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9911,16 +9924,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// ```
         /// </details>
         /// <details>
-        /// <summary>
-        /// Example: Create an agent resource
-        /// </summary>
+        /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "cn-hangzhou",
+        ///   "RegionId": "ap-southeast-1",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// You must create an office site in advance.
+        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9933,7 +9944,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To automatically run user commands on a cloud desktop, configure the `UserCommands` parameter.
+        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -11151,7 +11162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network package for an office network.</para>
+        /// <para>Creates a premium bandwidth plan for an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11216,6 +11227,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11237,7 +11252,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network package for an office network.</para>
+        /// <para>Creates a premium bandwidth plan for an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11302,6 +11317,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ResellerOwnerUid"] = request.ResellerOwnerUid;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -11323,7 +11342,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network package for an office network.</para>
+        /// <para>Creates a premium bandwidth plan for an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11341,7 +11360,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network package for an office network.</para>
+        /// <para>Creates a premium bandwidth plan for an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18939,7 +18958,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query details of policies that are not region-specific.</para>
+        /// <para>Queries the details of region-free policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19013,7 +19032,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query details of policies that are not region-specific.</para>
+        /// <para>Queries the details of region-free policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19087,7 +19106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query details of policies that are not region-specific.</para>
+        /// <para>Queries the details of region-free policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19105,7 +19124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query details of policies that are not region-specific.</para>
+        /// <para>Queries the details of region-free policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23827,194 +23846,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cloud computer-level traffic statistics of a single office network.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can query only the traffic data in the last 90 days.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeFlowStatisticRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeFlowStatisticResponse
-        /// </returns>
-        public DescribeFlowStatisticResponse DescribeFlowStatisticWithOptions(DescribeFlowStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
-            {
-                query["Period"] = request.Period;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeFlowStatistic",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeFlowStatisticResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries cloud computer-level traffic statistics of a single office network.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can query only the traffic data in the last 90 days.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeFlowStatisticRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeFlowStatisticResponse
-        /// </returns>
-        public async Task<DescribeFlowStatisticResponse> DescribeFlowStatisticWithOptionsAsync(DescribeFlowStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
-            {
-                query["DesktopId"] = request.DesktopId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfficeSiteId))
-            {
-                query["OfficeSiteId"] = request.OfficeSiteId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
-            {
-                query["PageNumber"] = request.PageNumber;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
-            {
-                query["Period"] = request.Period;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
-            {
-                query["RegionId"] = request.RegionId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "DescribeFlowStatistic",
-                Version = "2020-09-30",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<DescribeFlowStatisticResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries cloud computer-level traffic statistics of a single office network.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can query only the traffic data in the last 90 days.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeFlowStatisticRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeFlowStatisticResponse
-        /// </returns>
-        public DescribeFlowStatisticResponse DescribeFlowStatistic(DescribeFlowStatisticRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return DescribeFlowStatisticWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries cloud computer-level traffic statistics of a single office network.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <remarks>
-        /// <para>You can query only the traffic data in the last 90 days.</para>
-        /// </remarks>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// DescribeFlowStatisticRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// DescribeFlowStatisticResponse
-        /// </returns>
-        public async Task<DescribeFlowStatisticResponse> DescribeFlowStatisticAsync(DescribeFlowStatisticRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await DescribeFlowStatisticWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
         /// <para>查询DNAT条目</para>
         /// </summary>
         /// 
@@ -26927,7 +26758,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more premium bandwidth plans.</para>
+        /// <para>Queries the details of one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26964,6 +26795,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -26985,7 +26820,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more premium bandwidth plans.</para>
+        /// <para>Queries the details of one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27022,6 +26857,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -27043,7 +26882,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more premium bandwidth plans.</para>
+        /// <para>Queries the details of one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27061,7 +26900,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of one or more premium bandwidth plans.</para>
+        /// <para>Queries the details of one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30627,7 +30466,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of Cloud Desktop templates.</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30705,7 +30544,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of Cloud Desktop templates.</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30783,7 +30622,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of Cloud Desktop templates.</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30801,7 +30640,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of Cloud Desktop templates.</para>
+        /// <para>Queries the details of cloud computer templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35807,12 +35646,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of cloud computers.</para>
+        /// <para>Queries the list of tags that are added to cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use at least one of the following parameters in the request to determine the object that you want to query: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, and <c>Tag.N.Value</c>.</para>
+        /// <para>You must specify at least one of the following parameters in the request to specify the query object: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, or <c>Tag.N.Value</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35874,12 +35713,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of cloud computers.</para>
+        /// <para>Queries the list of tags that are added to cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use at least one of the following parameters in the request to determine the object that you want to query: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, and <c>Tag.N.Value</c>.</para>
+        /// <para>You must specify at least one of the following parameters in the request to specify the query object: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, or <c>Tag.N.Value</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35941,12 +35780,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of cloud computers.</para>
+        /// <para>Queries the list of tags that are added to cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use at least one of the following parameters in the request to determine the object that you want to query: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, and <c>Tag.N.Value</c>.</para>
+        /// <para>You must specify at least one of the following parameters in the request to specify the query object: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, or <c>Tag.N.Value</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -35964,12 +35803,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of cloud computers.</para>
+        /// <para>Queries the list of tags that are added to cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must use at least one of the following parameters in the request to determine the object that you want to query: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, and <c>Tag.N.Value</c>.</para>
+        /// <para>You must specify at least one of the following parameters in the request to specify the query object: <c>ResourceId.N</c>, <c>Tag.N.Key</c>, or <c>Tag.N.Value</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37475,7 +37314,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and snapshot retention period of an automatic snapshot policy.</para>
+        /// <para>Modifies the configuration items of an automatic snapshot policy, including the policy name and snapshot retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37537,7 +37376,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and snapshot retention period of an automatic snapshot policy.</para>
+        /// <para>Modifies the configuration items of an automatic snapshot policy, including the policy name and snapshot retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37599,7 +37438,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and snapshot retention period of an automatic snapshot policy.</para>
+        /// <para>Modifies the configuration items of an automatic snapshot policy, including the policy name and snapshot retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37617,7 +37456,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and snapshot retention period of an automatic snapshot policy.</para>
+        /// <para>Modifies the configuration items of an automatic snapshot policy, including the policy name and snapshot retention period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50575,12 +50414,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</para>
+        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for AD directories, not for RAM directories.</para>
+        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50630,12 +50469,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</para>
+        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for AD directories, not for RAM directories.</para>
+        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50685,12 +50524,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</para>
+        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for AD directories, not for RAM directories.</para>
+        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50708,12 +50547,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an Active Directory (AD) account-based office network.</para>
+        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is supported only for AD directories, not for RAM directories.</para>
+        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51671,12 +51510,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.</para>
+        /// <para>Adds tags to specified cloud desktops. This makes it easier to filter and manage cloud desktops by tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If TagKey is specified, the new TagValue value overrides the original TagValue value.</para>
+        /// <para>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51730,12 +51569,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.</para>
+        /// <para>Adds tags to specified cloud desktops. This makes it easier to filter and manage cloud desktops by tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If TagKey is specified, the new TagValue value overrides the original TagValue value.</para>
+        /// <para>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51789,12 +51628,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.</para>
+        /// <para>Adds tags to specified cloud desktops. This makes it easier to filter and manage cloud desktops by tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If TagKey is specified, the new TagValue value overrides the original TagValue value.</para>
+        /// <para>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51812,12 +51651,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to cloud computers. This allows you to filter and manage cloud computers by tag.</para>
+        /// <para>Adds tags to specified cloud desktops. This makes it easier to filter and manage cloud desktops by tag.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If TagKey is specified, the new TagValue value overrides the original TagValue value.</para>
+        /// <para>If the specified TagKey already exists, the new TagValue overwrites the original TagValue.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52403,7 +52242,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52461,7 +52300,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52519,7 +52358,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52537,7 +52376,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from cloud computers. After you remove a tag, if the tag is not added to a cloud computer, the tag is automatically deleted.</para>
+        /// <para>Removes tags from cloud desktops. After a tag is removed, if the tag is not added to any cloud desktop, the tag is automatically deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">

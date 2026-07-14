@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that determines the start point of the next query. If this parameter is empty, no next query is to be sent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource ID, which is the cloud computer ID.</para>
+            /// <para>The ID of the resource, that is, the ID of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-ia2zw38bi6cm7****</para>
@@ -47,11 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ALIYUN::GWS::INSTANCE: cloud computer.</description></item>
-            /// </list>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::GWS::INSTANCE</para>
@@ -61,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tag keys.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>department</para>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag values.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>design</para>

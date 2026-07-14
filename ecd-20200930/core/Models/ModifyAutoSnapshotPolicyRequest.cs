@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CronExpression { get; set; }
 
+        /// <summary>
+        /// <para>The type of cloud disk for which the automatic snapshot policy creates snapshots.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALL</para>
+        /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
         public string DiskType { get; set; }
@@ -35,17 +41,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters long, start with a letter or a Chinese character, and must not start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-). The default is an empty string.</para>
+        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SystemAutoSnapshot</para>
+        /// <para>系统自动快照</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The number of days to retain automatic snapshots. The value must be an integer from 1 to 180.</para>
+        /// <para>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

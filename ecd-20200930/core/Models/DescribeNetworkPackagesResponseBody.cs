@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNetworkPackagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The premium bandwidth plans.</para>
+        /// <para>The list of premium Internet bandwidth plans.</para>
         /// </summary>
         [NameInMap("NetworkPackages")]
         [Validation(Required=false)]
         public List<DescribeNetworkPackagesResponseBodyNetworkPackages> NetworkPackages { get; set; }
         public class DescribeNetworkPackagesResponseBodyNetworkPackages : TeaModel {
             /// <summary>
-            /// <para>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</para>
+            /// <para>The bandwidth of the premium Internet bandwidth plan. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -28,22 +28,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The business status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Expired</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Normal</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -53,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the premium bandwidth plan was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-10T02:35:26Z</para>
@@ -63,19 +47,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The public egress IP address of the premium bandwidth plan.</para>
+            /// <para>The public egress IP address of the premium Internet bandwidth plan.</para>
             /// </summary>
             [NameInMap("EipAddresses")]
             [Validation(Required=false)]
             public List<string> EipAddresses { get; set; }
 
             /// <summary>
-            /// <para>The time when the premium bandwidth plan expires.</para>
+            /// <para>The expiration time of the premium Internet bandwidth plan.</para>
             /// <list type="bullet">
-            /// <item><description><para>If the plan is a subscription one, the time when the plan expires is returned.</para>
-            /// </description></item>
-            /// <item><description><para>If the plan is a pay-as-you-go one, <c>2099-12-31T15:59:59Z</c> is returned.</para>
-            /// </description></item>
+            /// <item><description>If the plan uses the subscription billing method, the actual expiration time is returned.</description></item>
+            /// <item><description>If the plan uses the pay-as-you-go billing method, <c>2099-12-31T15:59:59Z</c> is returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,19 +68,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The charge type of the premium bandwidth plan.</para>
+            /// <para>The billing method of the premium Internet bandwidth plan.</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid value when the <c>PayType</c> parameter is set to <c>PrePaid</c>:</para>
-            /// <list type="bullet">
-            /// <item><description>PayByBandwidth: charges by fixed bandwidth.</description></item>
+            /// <item><description>If the parameter <c>PayType</c> is set to <c>PrePaid</c>, valid values:<list type="bullet">
+            /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Valid values when the <c>PayType</c> parameter is set to <c>PostPaid</c>:</para>
-            /// <list type="bullet">
-            /// <item><description><para>PayByTraffic: charges by data transfer.</para>
-            /// </description></item>
-            /// <item><description><para>PayByBandwidth: charges by fixed bandwidth.</para>
-            /// </description></item>
+            /// <item><description>If the parameter <c>PayType</c> is set to <c>PostPaid</c>, valid values:<list type="bullet">
+            /// <item><description>PayByTraffic: pay-by-data-transfer.</description></item>
+            /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -111,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the premium bandwidth plan.</para>
+            /// <para>The ID of the premium Internet bandwidth plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>np-amtp8e8q1o9e4****</para>
@@ -121,37 +99,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkPackageId { get; set; }
 
             /// <summary>
-            /// <para>The status of the premium bandwidth plan.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Creating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Released</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>InUse</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Releasing</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The status of the premium Internet bandwidth plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InUse</para>
@@ -181,16 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The type of the office network.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>standard: advanced office network</para>
-            /// </description></item>
-            /// <item><description><para>customized: custom office network</para>
-            /// </description></item>
-            /// <item><description><para>basic: basic office network</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The office network type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -200,14 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteVpcType { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the premium bandwidth plan.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>PostPaid: pay-as-you-go</para>
-            /// </description></item>
-            /// <item><description><para>PrePaid: subscription</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The billing method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -217,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The time when the reserved network bandwidth took effect.</para>
+            /// <para>The effective period of the reserved network bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-10T00:00:00Z</para>
@@ -227,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ReservationActiveTime { get; set; }
 
             /// <summary>
-            /// <para>The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.</para>
+            /// <para>The peak reserved network bandwidth. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -238,13 +170,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The billing method of the reserved network bandwidth.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>PayByTraffic: charges by data transfer.</para>
-            /// </description></item>
-            /// <item><description><para>PayByBandwidth: charges by fixed bandwidth.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PayByBandwidth</para>
@@ -253,10 +178,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ReservationInternetChargeType { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeNetworkPackagesResponseBodyNetworkPackagesTags> Tags { get; set; }
+            public class DescribeNetworkPackagesResponseBodyNetworkPackagesTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -266,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

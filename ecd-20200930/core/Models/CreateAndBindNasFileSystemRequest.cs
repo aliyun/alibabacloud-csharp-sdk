@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the desktop group.</para>
+        /// <para>The ID of the shared cloud computer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,16 +31,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to encrypt data in the NAS file system. You can use keys that are hosted by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>0: does not encrypt data in the NAS file system.</para>
-        /// </description></item>
-        /// <item><description><para>1: encrypts data in the NAS file system by using a NAS-managed key. <c>If you set </c>FileSystemType<c> to </c>standard<c> or </c>extreme<c>, you can use a NAS-managed key to encrypt data in a NAS file system.</c></para>
-        /// </description></item>
-        /// <item><description><para>2: encrypts data in the NAS file system by using a KMS-managed key. <c>If</c> you set FileSystemType<c> to </c>extreme<c>, you can use a KMS-managed key to encrypt data in a NAS file system.</c></para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: 0.</para>
+        /// <para>Specifies whether the file system uses a KMS-managed key to encrypt data at rest. Encrypted data does not need to be decrypted during read and write operations.</para>
+        /// <remarks>
+        /// <para>NAS-managed keys are supported when <c>FileSystemType</c> is set to <c>standard</c> or <c>extreme</c>. User-managed keys are supported when <c>FileSystemType</c> is set to <c>extreme</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? EncryptType { get; set; }
 
         /// <summary>
-        /// <para>The list of users.</para>
+        /// <para>The list of user IDs.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
@@ -68,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileSystemName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The ID of the office network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,14 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the NAS file system. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Capacity</para>
-        /// </description></item>
-        /// <item><description><para>Performance</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: Capacity.</para>
+        /// <para>The storage specification type of the NAS file system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDirectorySsoStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The AD directory ID.</para>
+        /// <para>The ID of the AD office network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable SSO. Valid values:</para>
+        /// <para>Specifies whether to enable or disable single sign-on (SSO). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: enables SSO.</para>
-        /// </description></item>
-        /// <item><description><para>false: disables SSO.</para>
-        /// </description></item>
+        /// <item><description>true: enables SSO</description></item>
+        /// <item><description>false: disables SSO.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableSso { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

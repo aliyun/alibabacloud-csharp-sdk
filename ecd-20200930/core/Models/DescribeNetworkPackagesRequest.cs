@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The charge type of the pay-as-you-go premium bandwidth plan.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>PayByTraffic: charges by data transfer.</para>
-        /// </description></item>
-        /// <item><description><para>PayByBandwidth: charges by fixed bandwidth.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The billing method of the pay-as-you-go premium Internet bandwidth plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByBandwidth</para>
@@ -27,12 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query.    </para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum value: 100</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100.    </description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of the premium Internet bandwidth plans. You can specify 1 to 100 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np-amtp8e8q1o9e4****</para>
@@ -53,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -63,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +63,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("Tag")]
+        [Validation(Required=false)]
+        public List<DescribeNetworkPackagesRequestTag> Tag { get; set; }
+        public class DescribeNetworkPackagesRequestTag : TeaModel {
+            [NameInMap("Key")]
+            [Validation(Required=false)]
+            public string Key { get; set; }
+
+            [NameInMap("Value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
+
+        }
 
     }
 

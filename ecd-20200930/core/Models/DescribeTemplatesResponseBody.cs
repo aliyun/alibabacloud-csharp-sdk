@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Operation result. Returns <c>success</c> if successful. Otherwise, returns an error message.</para>
+        /// <para>The operation result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>List of template information.</para>
+        /// <para>The list of queried template information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>Data disk size and specification configuration.</para>
+            /// <para>The size and specification configurations of data cloud disks.</para>
             /// </summary>
             [NameInMap("DataDiskList")]
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataDataDiskList> DataDiskList { get; set; }
             public class DescribeTemplatesResponseBodyDataDataDiskList : TeaModel {
                 /// <summary>
-                /// <para>Data disk performance level.</para>
+                /// <para>The performance level of the data cloud disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AutoPL</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string PerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>Data disk size in GiB.</para>
+                /// <para>The data cloud disk size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Default startup language for the template.</para>
+            /// <para>The default startup language configured in the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DefaultLanguage { get; set; }
 
             /// <summary>
-            /// <para>Template description.</para>
+            /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My template</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Template creation time in UTC.</para>
+            /// <para>The creation time of the template (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T05:18:46.000+00:00</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Template modification time in UTC.</para>
+            /// <para>The last modification time of the template (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T05:18:46.000+00:00</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Image ID.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-5q8ehbihx*****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>Image type.</para>
+            /// <para>The image type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>Policy ID.</para>
+            /// <para>The policy group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-0caoeogkhz*****</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? PostPaidAfterUsedUp { get; set; }
 
             /// <summary>
-            /// <para>Product type.</para>
+            /// <para>The product type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLOUD_DESKTOP</para>
@@ -160,14 +160,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>Region-specific configuration parameters.</para>
+            /// <para>The region-specific configuration parameters.</para>
             /// </summary>
             [NameInMap("RegionConfigList")]
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataRegionConfigList> RegionConfigList { get; set; }
             public class DescribeTemplatesResponseBodyDataRegionConfigList : TeaModel {
                 /// <summary>
-                /// <para>Number of vCPUs in the Cloud Desktop instance type.</para>
+                /// <para>The number of vCPUs included in the cloud computer instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? CpuCount { get; set; }
 
                 /// <summary>
-                /// <para>GPU memory size. This field appears only for graphics instance types.</para>
+                /// <para>The GPU memory information. This field is displayed only when the instance type is a graphics-accelerated type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4GiB</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string GpuSpec { get; set; }
 
                 /// <summary>
-                /// <para>Memory size in MiB.</para>
+                /// <para>The memory size. Unit: MiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8192</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? MemorySize { get; set; }
 
                 /// <summary>
-                /// <para>Office site ID.</para>
+                /// <para>The office network ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing+dir-3040*****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string OfficeSiteId { get; set; }
 
                 /// <summary>
-                /// <para>Region ID.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Cloud Desktop instance type ID.</para>
+                /// <para>The cloud computer instance type ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eds.enterprise_office.4c8g</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ResourceInstanceType { get; set; }
 
                 /// <summary>
-                /// <para>Snapshot policy ID.</para>
+                /// <para>The snapshot policy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sp-b9fasjuu0*****</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string SnapshotPolicyId { get; set; }
 
                 /// <summary>
-                /// <para>Subnet ID.</para>
+                /// <para>The subnet ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-dgea1*****</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string SubnetId { get; set; }
 
                 /// <summary>
-                /// <para>Whether disk encryption is enabled.</para>
+                /// <para>Indicates whether disk encryption is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public bool? VolumeEncryptionEnable { get; set; }
 
                 /// <summary>
-                /// <para>KMS key ID used when disk encryption is enabled.</para>
+                /// <para>The KMS key ID used when disk encryption is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3bc77be0-cbce-4a29-b07b-13f16394****</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Request ID.</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1871984F-51F6-5588-BAF6-******</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>Resource group ID.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-a5fqjjqaejt***</para>
@@ -289,14 +289,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Cloud Desktop tags in key-value format.</para>
+            /// <para>The cloud computer tags in key-value format.</para>
             /// </summary>
             [NameInMap("ResourceTagList")]
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataResourceTagList> ResourceTagList { get; set; }
             public class DescribeTemplatesResponseBodyDataResourceTagList : TeaModel {
                 /// <summary>
-                /// <para>Tag key.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Tag value.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -318,14 +318,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Site configuration management.</para>
+            /// <para>The site configuration management.</para>
             /// </summary>
             [NameInMap("SiteConfigList")]
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataSiteConfigList> SiteConfigList { get; set; }
             public class DescribeTemplatesResponseBodyDataSiteConfigList : TeaModel {
                 /// <summary>
-                /// <para>Application control policy ID.</para>
+                /// <para>The application control policy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bwr-5a5371e0*******</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string AppRuleId { get; set; }
 
                 /// <summary>
-                /// <para>Site name.</para>
+                /// <para>The site name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mainland</para>
@@ -347,7 +347,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>System disk type.</para>
+            /// <para>The system cloud disk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AutoPL</para>
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>System disk size in GiB.</para>
+            /// <para>The system cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>Template ID.</para>
+            /// <para>The template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b-0caoeogs88y*****</para>
@@ -377,7 +377,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TemplateId { get; set; }
 
             /// <summary>
-            /// <para>Template name.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My template 001</para>
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>Template type.</para>
+            /// <para>The templatetype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER_TEMPLATE</para>
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// <para>Scheduled task group ID.</para>
+            /// <para>The scheduled task group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bcc-dweha*****</para>
@@ -413,7 +413,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -423,7 +423,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message. This parameter is not returned when Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned when Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Entries per page.</para>
+        /// <para>The number of rows per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1871984F-51F6-5588-BAF6-*******</para>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -473,7 +473,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94</para>

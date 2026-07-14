@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Wuying Cloud Desktop.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</para>
+        /// <para>The list of resource IDs, that is, the list of cloud desktop IDs. You can specify 1 to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ALIYUN::GWS::INSTANCE: cloud computer.</description></item>
-        /// </list>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the cloud computers. You can specify 1 to 20 tags.</para>
+        /// <para>The list of tags. You can specify 1 to 20 tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>acs:</c> or <c>aliyun</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. If you specify this parameter, the value cannot be an empty string. The value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>department</para>
@@ -65,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The value can be an empty string. The value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>design</para>
