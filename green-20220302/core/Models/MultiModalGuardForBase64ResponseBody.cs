@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class MultiModalGuardForBase64ResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public MultiModalGuardForBase64ResponseBodyData Data { get; set; }
         public class MultiModalGuardForBase64ResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The data ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             [Validation(Required=false)]
             public string DataId { get; set; }
 
+            /// <summary>
+            /// <para>The details.</para>
+            /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public List<MultiModalGuardForBase64ResponseBodyDataDetail> Detail { get; set; }
             public class MultiModalGuardForBase64ResponseBodyDataDetail : TeaModel {
                 /// <summary>
+                /// <para>The risk level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>low</para>
                 /// </summary>
@@ -41,11 +53,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
+                /// <summary>
+                /// <para>The result.</para>
+                /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public List<MultiModalGuardForBase64ResponseBodyDataDetailResult> Result { get; set; }
                 public class MultiModalGuardForBase64ResponseBodyDataDetailResult : TeaModel {
                     /// <summary>
+                    /// <para>The confidence level.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public float? Confidence { get; set; }
 
                     /// <summary>
+                    /// <para>The description.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>未检测出风险</para>
                     /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Description { get; set; }
 
                     /// <summary>
+                    /// <para>The extension information.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>json格式数据</para>
                     /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public object Ext { get; set; }
 
                     /// <summary>
+                    /// <para>The label.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>nonLable</para>
                     /// </summary>
@@ -78,6 +101,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                     public string Label { get; set; }
 
                     /// <summary>
+                    /// <para>The risk level.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>low</para>
                     /// </summary>
@@ -88,6 +113,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 }
 
                 /// <summary>
+                /// <para>The suggested action.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pass</para>
                 /// </summary>
@@ -96,6 +123,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 public string Suggestion { get; set; }
 
                 /// <summary>
+                /// <para>The category.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>contentModeration</para>
                 /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             }
 
             /// <summary>
+            /// <para>The suggested action.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pass</para>
             /// </summary>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -124,6 +157,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXXX</para>
         /// </summary>

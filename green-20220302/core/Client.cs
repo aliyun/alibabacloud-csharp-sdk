@@ -2165,6 +2165,162 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The content moderation Agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MultiModalAgentSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalAgentSSEResponse
+        /// </returns>
+        public MultiModalAgentSSEResponse MultiModalAgentSSEWithOptions(MultiModalAgentSSERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppID))
+            {
+                body["AppID"] = request.AppID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultiModalAgentSSE",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultiModalAgentSSEResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The content moderation Agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MultiModalAgentSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalAgentSSEResponse
+        /// </returns>
+        public async Task<MultiModalAgentSSEResponse> MultiModalAgentSSEWithOptionsAsync(MultiModalAgentSSERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppID))
+            {
+                body["AppID"] = request.AppID;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                body["ServiceParameters"] = request.ServiceParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MultiModalAgentSSE",
+                Version = "2022-03-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MultiModalAgentSSEResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The content moderation Agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MultiModalAgentSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalAgentSSEResponse
+        /// </returns>
+        public MultiModalAgentSSEResponse MultiModalAgentSSE(MultiModalAgentSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MultiModalAgentSSEWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronously detects multimodal content by using the Agent API.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The content moderation Agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MultiModalAgentSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MultiModalAgentSSEResponse
+        /// </returns>
+        public async Task<MultiModalAgentSSEResponse> MultiModalAgentSSEAsync(MultiModalAgentSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MultiModalAgentSSEWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>API for synchronous detection</para>
         /// </summary>
         /// 
@@ -2589,7 +2745,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2641,7 +2797,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2693,7 +2849,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2711,7 +2867,7 @@ namespace AlibabaCloud.SDK.Green20220302
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>多模态同步检测接口，支持图片base64字符串</para>
+        /// <para>Performs synchronous multimodal content moderation. Supports base64-encoded image strings.</para>
         /// </summary>
         /// 
         /// <param name="request">

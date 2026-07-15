@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class ManualModerationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The set of parameters required by the service, in JSON string format.</para>
+        /// <para>The parameter set required by the service, in JSON string format.</para>
         /// <list type="bullet">
         /// <item><description>TaskId: The task ID returned when the task was submitted.</description></item>
         /// </list>

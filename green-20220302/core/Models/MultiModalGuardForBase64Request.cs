@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 {
     public class MultiModalGuardForBase64Request : TeaModel {
         /// <summary>
+        /// <para>The base64-encoded string of the image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{base64}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string ImageBase64Str { get; set; }
 
         /// <summary>
+        /// <para>Service</para>
+        /// 
         /// <b>Example:</b>
         /// <para>query_security_check</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220302.Models
         public string Service { get; set; }
 
         /// <summary>
+        /// <para>The service parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;content&quot;:&quot;test&quot;}</para>
         /// </summary>

@@ -65,6 +65,12 @@ namespace AlibabaCloud.SDK.Green20220302.Models
 
             }
 
+            /// <summary>
+            /// <para>The number of reviews.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("ReviewCount")]
             [Validation(Required=false)]
             public string ReviewCount { get; set; }
@@ -72,11 +78,11 @@ namespace AlibabaCloud.SDK.Green20220302.Models
             /// <summary>
             /// <para>The risk level, returned based on the configured high and low risk scores. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>high: high risk</para>
+            /// <item><description><para>high: High risk.</para>
             /// </description></item>
-            /// <item><description><para>low: low risk</para>
+            /// <item><description><para>low: Low risk.</para>
             /// </description></item>
-            /// <item><description><para>none: no risk detected</para>
+            /// <item><description><para>none: No risk detected.</para>
             /// </description></item>
             /// </list>
             /// 
