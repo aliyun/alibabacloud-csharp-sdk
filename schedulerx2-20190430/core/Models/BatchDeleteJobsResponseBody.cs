@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchDeleteJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information returned.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>message</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether multiple jobs were deleted at a time. Valid values:</para>
+        /// <para>Indicates if the operation succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Multiple jobs were deleted at a time.</description></item>
-        /// <item><description><b>false</b>: Multiple jobs were not deleted at a time.</description></item>
+        /// <item><description><para><b>true</b>: The operation succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

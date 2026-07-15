@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ExecuteWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>If the request is successful, the ID of the workflow instance is returned.</para>
+        /// <para>The data returned for a successful request. It contains the workflow instance ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ExecuteWorkflowResponseBodyData Data { get; set; }
         public class ExecuteWorkflowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The workflow instance ID.</para>
+            /// <para>The ID of the workflow instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111111</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// <para>The error message that is returned only if the corresponding error occurs.</para>
+        /// <para>The error message. This parameter is returned only if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cannot find product according to your domain.</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>

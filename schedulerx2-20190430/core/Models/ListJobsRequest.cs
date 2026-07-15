@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ListJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can obtain the application ID on the <b>Application Management</b> page in the SchedulerX console.</para>
+        /// <para>The application ID. You can obtain the ID on the <b>Application Management</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The node name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>helloword</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string JobName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace. You can obtain the namespace ID on the <b>Namespace</b> page in the SchedulerX console.</para>
+        /// <para>The namespace. You can obtain the namespace on the <b>Namespace</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>Required only for special third-party users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
@@ -51,16 +51,22 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string NamespaceSource { get; set; }
 
+        /// <summary>
+        /// <para>The page number.</para>
+        /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
+        /// <summary>
+        /// <para>The number of records per page.</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,10 +77,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the job. Valid values:</para>
+        /// <para>The node status.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disables the job.</description></item>
-        /// <item><description><b>1</b>: enables the job.</description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

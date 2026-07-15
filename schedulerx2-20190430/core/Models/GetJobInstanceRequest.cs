@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>11111111</para>
+        /// <para>1685883418</para>
         /// </summary>
         [NameInMap("JobInstanceId")]
         [Validation(Required=false)]
@@ -64,6 +64,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
+        /// <para>Region ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

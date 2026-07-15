@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error codes</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data of the workflow.</para>
+        /// <para>The workflow data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetWorkFlowResponseBodyData Data { get; set; }
         public class GetWorkFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The basic information of the workflow.</para>
+            /// <para>The basic information about the workflow.</para>
             /// </summary>
             [NameInMap("WorkFlowInfo")]
             [Validation(Required=false)]
@@ -43,16 +43,28 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the application group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>hxm.test</para>
+                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
+                /// <summary>
+                /// <para>The maximum number of concurrent instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("MaxConcurrency")]
                 [Validation(Required=false)]
                 public string MaxConcurrency { get; set; }
 
                 /// <summary>
-                /// <para>The name of the workflow.</para>
+                /// <para>The workflow name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>workflow_111</para>
@@ -61,22 +73,28 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the namespace.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>8150f906-2a40-4420-8cc1-68d2fe4dd69c</para>
+                /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The status of the workflow.</para>
+                /// <para>The workflow status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Successful</para>
+                /// <para>enable</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The time expression of the workflow.</para>
+                /// <para>The time expression for the workflow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 2 * * ?</para>
@@ -96,7 +114,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string TimeType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workflow.</para>
+                /// <para>The workflow ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234xxx</para>
@@ -108,21 +126,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             }
 
             /// <summary>
-            /// <para>The node information of the workflow.</para>
+            /// <para>The workflow node information.</para>
             /// </summary>
             [NameInMap("WorkFlowNodeInfo")]
             [Validation(Required=false)]
             public GetWorkFlowResponseBodyDataWorkFlowNodeInfo WorkFlowNodeInfo { get; set; }
             public class GetWorkFlowResponseBodyDataWorkFlowNodeInfo : TeaModel {
                 /// <summary>
-                /// <para>The workflow edges.</para>
+                /// <para>The list of workflow edges.</para>
                 /// </summary>
                 [NameInMap("Edges")]
                 [Validation(Required=false)]
                 public List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges> Edges { get; set; }
                 public class GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the source job.</para>
+                    /// <para>The source job ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -132,7 +150,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public long? Source { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the object job.</para>
+                    /// <para>The target job ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -151,7 +169,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public List<GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes> Nodes { get; set; }
                 public class GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the job.</para>
+                    /// <para>The job ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123456xxx</para>
@@ -161,7 +179,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the job.</para>
+                    /// <para>The job name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>job_111</para>
@@ -171,7 +189,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The status of the job.</para>
+                    /// <para>The job status.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -187,7 +205,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workflow is not existed</para>
@@ -197,7 +215,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45678xxx</para>
@@ -207,7 +225,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the API call.</para>
+        /// <para>Indicates whether the request succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

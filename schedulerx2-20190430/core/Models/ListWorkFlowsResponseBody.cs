@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <para>The workflow name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test3</para>
+                /// <para>Test3</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

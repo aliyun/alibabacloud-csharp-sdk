@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetAppGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can obtain the application ID on the <b>Application Management</b> page in the SchedulerX console.</para>
+        /// <para>The App Group ID. You can obtain this ID on the <b>Application Management</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace. You can obtain the ID of the namespace on the <b>Namespace</b> page in the SchedulerX console.</para>
+        /// <para>The namespace ID. You can obtain this ID on the <b>Namespaces</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

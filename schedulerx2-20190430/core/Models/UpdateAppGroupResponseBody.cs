@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class DeleteWorkflowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned only if the corresponding error occurs.</para>
+        /// <para>The error message. This parameter is returned only if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Your request is denied as lack of ssl protect.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the workflow was deleted. Valid values:</para>
+        /// <para>Indicates whether the workflow was deleted successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The workflow was deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The workflow was not deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

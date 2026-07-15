@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class DeleteWorkflowRequest : TeaModel {
         /// <summary>
-        /// <para>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>The ID of the application group. You can find this ID on the <b>Application Management</b> page in the Console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSchedulerx.defaultGroup</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>The ID of the namespace. You can find this ID on the <b>Namespace</b> page in the Console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>Required only for specific third-party scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>

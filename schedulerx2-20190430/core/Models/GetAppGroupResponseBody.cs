@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetAppGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the application group.</para>
+        /// <para>The details of the App Group.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAppGroupResponseBodyData Data { get; set; }
         public class GetAppGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AppKey of the application.</para>
+            /// <para>The application\&quot;s AppKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>QI4lWMZ+xk1rNB67jFUhaw==</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DocTest</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The application version. 1: Basic version, 2: Professional version.</para>
+            /// <para>The application version. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string AppVersion { get; set; }
 
             /// <summary>
-            /// <para>The number of jobs that are configured for the application group.</para>
+            /// <para>The number of jobs currently configured for the App Group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public int? CurJobs { get; set; }
 
             /// <summary>
-            /// <para>The description of the application.</para>
+            /// <para>The application description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test</para>
@@ -76,12 +76,15 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable log collection. The default value is false.</para>
+            /// </summary>
             [NameInMap("EnableLog")]
             [Validation(Required=false)]
             public bool? EnableLog { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The App Group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testSchedulerx.defaultGroup</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of jobs that can be configured for the application group.</para>
+            /// <para>The maximum number of jobs that can be configured for the App Group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -101,33 +104,40 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public int? MaxJobs { get; set; }
 
             /// <summary>
-            /// <para>The alert notification configurations.</para>
+            /// <para>The alarm notification configuration.</para>
             /// <remarks>
-            /// <para> For more information about this parameter, see the following <b>additional information about request parameters</b>.</para>
+            /// <para>For more information, see the <b>MonitorConfigJson</b> section below.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</para>
+            /// <para>{
+            ///     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+            ///     &quot;alarmType&quot;: &quot;Contacts&quot;,
+            ///     &quot;webhookIsAtAll&quot;: false
+            /// }</para>
             /// </summary>
             [NameInMap("MonitorConfigJson")]
             [Validation(Required=false)]
             public string MonitorConfigJson { get; set; }
 
             /// <summary>
-            /// <para>The alert contact configurations.</para>
+            /// <para>The alarm contact configuration.</para>
             /// <remarks>
-            /// <para> For more information about this parameter, see the following <b>additional information about request parameters</b>.</para>
+            /// <para>For more information, see the <b>MonitorContactsJson</b> section below.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>[ {&quot;name&quot;: &quot;Peter&quot;}, {&quot;name&quot;: &quot;Paul&quot;} ]</para>
+            /// <para>[
+            ///     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+            ///     {&quot;name&quot;: &quot;Lee Smith&quot;}
+            /// ]</para>
             /// </summary>
             [NameInMap("MonitorContactsJson")]
             [Validation(Required=false)]
             public string MonitorContactsJson { get; set; }
 
             /// <summary>
-            /// <para>The ID of the namespace.</para>
+            /// <para>The namespace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
@@ -137,6 +147,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public string Namespace { get; set; }
 
             /// <summary>
+            /// <para>The name of the notification policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-workday-notification</para>
             /// </summary>
@@ -147,7 +159,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app is not existed, groupId=xxxx, namesapce=xxxx</para>
@@ -157,7 +169,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39090022-1F3B-4797-8518-6B61095F1AF0</para>
@@ -169,8 +181,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

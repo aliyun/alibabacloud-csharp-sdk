@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class UpdateJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information returned only if an error occurs.</para>
+        /// <para>The additional information. The error message is returned only when a fault occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job type is java className can not be blank</para>

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</para>
+        /// <para>71BCC0E3-64B2-4B63-A870-AFB64EBC***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

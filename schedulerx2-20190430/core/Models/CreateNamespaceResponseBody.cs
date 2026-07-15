@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the namespace.</para>
+        /// <para>The namespace information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateNamespaceResponseBodyData Data { get; set; }
         public class CreateNamespaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The UID of the namespace.</para>
+            /// <para>The namespace UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// <para>The error message that is returned only if the corresponding error occurs.</para>
+        /// <para>The error message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namespace=test3 is existed, noting update</para>
@@ -59,10 +59,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application was created. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The namespace was successfully created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The namespace failed to be created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

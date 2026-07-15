@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchDisableJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You can obtain the application ID on the <b>Application Management</b> page in the SchedulerX console.</para>
+        /// <para>The ID of the application group. You can find this ID on the <b>Application Management</b> page in the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testSchedulerx.defaultGroup</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The job IDs. Separate multiple job IDs with commas (,).</para>
+        /// <para>The IDs of the jobs to disable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public List<long?> JobIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the <b>Namespace</b> page in the SchedulerX console.</para>
+        /// <para>The ID of the namespace that contains the jobs. You can find this ID on the <b>Namespaces</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>This parameter is used only by specific third-party services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the job belongs.</para>
+        /// <para>The ID of the region where the jobs are located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

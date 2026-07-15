@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateAppGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the job group.</para>
+        /// <para>Information about the created Application Group.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAppGroupResponseBodyData Data { get; set; }
         public class CreateAppGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The job group ID.</para>
+            /// <para>The Application Group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6607</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
             public long? AppGroupId { get; set; }
 
             /// <summary>
-            /// <para>The AppKey for the application.</para>
+            /// <para>The Application Key (AppKey).</para>
             /// 
             /// <b>Example:</b>
             /// <para>adcExHZviL******</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         }
 
         /// <summary>
-        /// <para>The error message that is returned only if the corresponding error occurs.</para>
+        /// <para>The error message. Returned only when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Your request is denied as lack of ssl protect.</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>883AFE93-FB03-4FA9-A958-E750C6DE120C</para>
@@ -69,10 +69,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application was created. Valid values:</para>
+        /// <para>Indicates whether the Application Group was successfully created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The Application Group was successfully created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The Application Group failed to be created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

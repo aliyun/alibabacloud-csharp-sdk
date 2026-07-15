@@ -75,8 +75,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>The job status.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disables the job.</description></item>
-        /// <item><description><b>1</b>: enables the routing policy.</description></item>
+        /// <item><description><para><b>0</b>: disables the job.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: enables the routing policy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The workflow name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test3</para>
+        /// <para>Test3</para>
         /// </summary>
         [NameInMap("WorkflowName")]
         [Validation(Required=false)]

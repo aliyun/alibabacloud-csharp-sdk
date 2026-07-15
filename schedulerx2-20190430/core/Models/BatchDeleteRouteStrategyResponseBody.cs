@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class BatchDeleteRouteStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The additional information that is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job is not existed, jobId=162837</para>
@@ -40,9 +40,13 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true: The request was successful.
-        /// false: The request failed.</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

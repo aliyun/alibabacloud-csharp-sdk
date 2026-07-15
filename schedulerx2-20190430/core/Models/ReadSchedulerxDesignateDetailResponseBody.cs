@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     /// <para>The used disk space in MB.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>0.14865875</para>
+                    /// <para>148</para>
                     /// </summary>
                     [NameInMap("DiskUsed")]
                     [Validation(Required=false)]

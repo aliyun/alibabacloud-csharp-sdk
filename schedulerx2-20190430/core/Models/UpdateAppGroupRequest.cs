@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Enable logging</para>
+        /// </summary>
         [NameInMap("EnableLog")]
         [Validation(Required=false)]
         public bool? EnableLog { get; set; }
@@ -72,7 +75,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The configuration of alert contacts. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></para>
+        /// <para>[
+        ///     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+        ///     {&quot;name&quot;: &quot;Lee Smith&quot;}
+        /// ]</para>
         /// </summary>
         [NameInMap("MonitorContactsJson")]
         [Validation(Required=false)]
@@ -90,6 +96,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
+        /// <para>Notification policy name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-workday-notification</para>
         /// </summary>

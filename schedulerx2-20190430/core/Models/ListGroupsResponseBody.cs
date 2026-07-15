@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The applications.</para>
+        /// <para>The list of applications.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListGroupsResponseBodyData Data { get; set; }
         public class ListGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The applications and their details.</para>
+            /// <para>The list of applications and their details.</para>
             /// </summary>
             [NameInMap("AppGroups")]
             [Validation(Required=false)]
             public List<ListGroupsResponseBodyDataAppGroups> AppGroups { get; set; }
             public class ListGroupsResponseBodyDataAppGroups : TeaModel {
                 /// <summary>
-                /// <para>The application group ID.</para>
+                /// <para>The ID of the application group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public long? AppGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The AppKey for the application.</para>
+                /// <para>The application key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a3G77O6NZxq/lyo1NC****==</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The application version. 1: Basic version, 2: Professional version.</para>
+                /// <para>The application version. Valid values: 1 (Basic Edition) and 2 (Professional Edition).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -83,12 +83,24 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether logging is enabled.</para>
+                /// <list type="bullet">
+                /// <item><description><para>true: Logging is enabled.</para>
+                /// </description></item>
+                /// <item><description><para>false: Logging is disabled.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("EnableLog")]
                 [Validation(Required=false)]
                 public bool? EnableLog { get; set; }
 
                 /// <summary>
-                /// <para>The application ID.</para>
+                /// <para>The ID of the application.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DocTest.Group</para>
@@ -132,10 +144,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

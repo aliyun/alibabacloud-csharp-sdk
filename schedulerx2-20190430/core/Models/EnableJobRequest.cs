@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>92583</para>
+        /// <para>92555</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

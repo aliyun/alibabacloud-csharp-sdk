@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class ExecuteWorkflowRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>The ID of the application group. You can find this ID on the <b>Application Management</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The dynamic parameter of the workflow instance. The value of the parameter can be up to 1,000 bytes in length.</para>
+        /// <para>The dynamic parameters for the workflow instance. The value cannot exceed 1,000 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string InstanceParameters { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>The ID of the namespace. You can find this ID on the <b>Namespace</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>This parameter is required only for specific third-party integrations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The region information.</para>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class UpdateWorkflowDagRequest : TeaModel {
         /// <summary>
-        /// <para>The directed acyclic graph (DAG) of the workflow, including the information about the nodes and the edges. Specify the value of this parameter in the JSON format.</para>
+        /// <para>The definition of the workflow\&quot;s directed acyclic graph (DAG), including nodes and edges, as a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string DagJson { get; set; }
 
         /// <summary>
-        /// <para>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>The Application Group ID. You can find this ID on the <b>Application Management</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>The Namespace ID. You can obtain the ID on the <b>Namespaces</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>This parameter is required only for specific third-party integrations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The Region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The workflow ID.</para>
+        /// <para>The Workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

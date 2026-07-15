@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <para>The job instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>11111111</para>
+                /// <para>1042499986</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4F68ABED-AC31-4412-9297-D9A8F0401108</para>
+        /// <para>704A2A61-3681-5568-92F7-2DFCC53F33D1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

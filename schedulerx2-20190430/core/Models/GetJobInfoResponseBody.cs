@@ -76,11 +76,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <summary>
                 /// <para>The execution mode of the job. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Stand-alone operation</b>: standalone</description></item>
-                /// <item><description><b>Broadcast run</b>: broadcast</description></item>
-                /// <item><description><b>Visual MapReduce</b>: parallel</description></item>
-                /// <item><description><b>MapReduce</b>: batch</description></item>
-                /// <item><description><b>Shard run</b>: sharding</description></item>
+                /// <item><description><para><b>Stand-alone operation</b>: standalone</para>
+                /// </description></item>
+                /// <item><description><para><b>Broadcast run</b>: broadcast</para>
+                /// </description></item>
+                /// <item><description><para><b>Visual MapReduce</b>: parallel</para>
+                /// </description></item>
+                /// <item><description><para><b>MapReduce</b>: batch</para>
+                /// </description></item>
+                /// <item><description><para><b>Shard run</b>: sharding</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -177,8 +182,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         /// <summary>
                         /// <para>Indicates whether the Failure alarm switch was turned on. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>true</b></description></item>
-                        /// <item><description><b>false</b></description></item>
+                        /// <item><description><para><b>true</b></para>
+                        /// </description></item>
+                        /// <item><description><para><b>false</b></para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -221,8 +228,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                         /// <summary>
                         /// <para>Indicates whether the Timeout alarm switch was turned on. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>true</b></description></item>
-                        /// <item><description><b>false</b></description></item>
+                        /// <item><description><para><b>true</b></para>
+                        /// </description></item>
+                        /// <item><description><para><b>false</b></para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -368,8 +377,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <summary>
                 /// <para>Indicates whether the job was enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: The job was enabled and could be triggered.</description></item>
-                /// <item><description><b>0</b>: The job was disabled and could not be triggered.</description></item>
+                /// <item><description><para><b>1</b>: The job was enabled and could be triggered.</para>
+                /// </description></item>
+                /// <item><description><para><b>0</b>: The job was disabled and could not be triggered.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -390,7 +401,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     /// <para>Custom calendar days specified if TimeType is set to <b>1</b> (cron).</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Business days</para>
+                    /// <para>workday</para>
                     /// </summary>
                     [NameInMap("Calendar")]
                     [Validation(Required=false)]
@@ -409,10 +420,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     /// <summary>
                     /// <para>The time expression specified based on the value of TimeType:</para>
                     /// <list type="bullet">
-                    /// <item><description>If TimeType is set to <b>100</b> (api), no time expression is required.</description></item>
-                    /// <item><description>If TimeType is set to <b>3</b> (fix_rate), this parameter value indicates the specific and fixed frequency. For example, if the value is 30, the system triggers a job every 30 seconds.</description></item>
-                    /// <item><description>If TimeType is set to <b>1</b> (cron), this parameter value indicates the standard CRON expression used to specify the time when to schedule the job.</description></item>
-                    /// <item><description>If TimeType is set to <b>4</b> (second_delay), this parameter value indicates the fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</description></item>
+                    /// <item><description><para>If TimeType is set to <b>100</b> (api), no time expression is required.</para>
+                    /// </description></item>
+                    /// <item><description><para>If TimeType is set to <b>3</b> (fix_rate), this parameter value indicates the specific and fixed frequency. For example, if the value is 30, the system triggers a job every 30 seconds.</para>
+                    /// </description></item>
+                    /// <item><description><para>If TimeType is set to <b>1</b> (cron), this parameter value indicates the standard CRON expression used to specify the time when to schedule the job.</para>
+                    /// </description></item>
+                    /// <item><description><para>If TimeType is set to <b>4</b> (second_delay), this parameter value indicates the fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -425,11 +440,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                     /// <summary>
                     /// <para>The time type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>1</b>: cron</description></item>
-                    /// <item><description><b>3</b>: fix_rate</description></item>
-                    /// <item><description><b>4</b>: second_delay</description></item>
-                    /// <item><description><b>5</b>: one_time</description></item>
-                    /// <item><description><b>100</b>: api</description></item>
+                    /// <item><description><para><b>1</b>: cron</para>
+                    /// </description></item>
+                    /// <item><description><para><b>3</b>: fix_rate</para>
+                    /// </description></item>
+                    /// <item><description><para><b>4</b>: second_delay</para>
+                    /// </description></item>
+                    /// <item><description><para><b>5</b>: one_time</para>
+                    /// </description></item>
+                    /// <item><description><para><b>100</b>: api</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -478,8 +498,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Indicates whether the job details were obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

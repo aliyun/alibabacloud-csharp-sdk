@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <para>The user who executes the job.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>A</para>
+                /// <para>John Smith</para>
                 /// </summary>
                 [NameInMap("Executor")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <para>The job instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>11111111</para>
+                /// <para>1189853849</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <para>The progress of the job instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>complete</para>
+                /// <para>{&quot;taskProgress&quot;:[{&quot;name&quot;:&quot;MAP_TASK_ROOT&quot;,&quot;total&quot;:1,&quot;pulled&quot;:1,&quot;running&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0}],&quot;workerProgress&quot;:[{&quot;workerAddr&quot;:&quot;11.122.241.245:34865&quot;,&quot;total&quot;:1,&quot;pulled&quot;:1,&quot;running&quot;:0,&quot;success&quot;:0,&quot;failed&quot;:0}]}</para>
                 /// </summary>
                 [NameInMap("Progress")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <para>The execution results of the job instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>success</para>
+                /// <para>{\&quot;TotalSize\&quot;: 31, \&quot;CurrentPage\&quot;: 5, \&quot;PageSize\&quot;: 10}</para>
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
@@ -146,11 +146,16 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <summary>
                 /// <para>The state of the job instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: The job instance is waiting for execution.</description></item>
-                /// <item><description><b>3</b>: The job instance is running.</description></item>
-                /// <item><description><b>4</b>: The job instance is successful.</description></item>
-                /// <item><description><b>5</b>: The job instance failed.</description></item>
-                /// <item><description><b>9</b>: The job instance is rejected.</description></item>
+                /// <item><description><para><b>1</b>: The job instance is waiting for execution.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: The job instance is running.</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: The job instance is successful.</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: The job instance failed.</para>
+                /// </description></item>
+                /// <item><description><para><b>9</b>: The job instance is rejected.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus</para>
                 /// 
@@ -164,10 +169,14 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <summary>
                 /// <para>The method that is used to specify the time when to schedule the job instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: cron</description></item>
-                /// <item><description><b>3</b>: fix_rate</description></item>
-                /// <item><description><b>4</b>: second_delay</description></item>
-                /// <item><description><b>100</b>: api</description></item>
+                /// <item><description><para><b>1</b>: cron</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: fix_rate</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: second_delay</para>
+                /// </description></item>
+                /// <item><description><para><b>100</b>: api</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Enumeration class: com.alibaba.schedulerx.common.domain.TimeType</para>
                 /// 
@@ -191,16 +200,21 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
                 /// <summary>
                 /// <para>The trigger type of the job instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: The job instance was triggered at the scheduled time.</description></item>
-                /// <item><description><b>2</b>: The job instance was triggered due to data update.</description></item>
-                /// <item><description><b>3</b>: The job instance was triggered by an API call.</description></item>
-                /// <item><description><b>4</b>: The job instance was triggered because it is manually rerun.</description></item>
-                /// <item><description><b>5</b>: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</description></item>
+                /// <item><description><para><b>1</b>: The job instance was triggered at the scheduled time.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: The job instance was triggered due to data update.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: The job instance was triggered by an API call.</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: The job instance was triggered because it is manually rerun.</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>3</para>
+                /// <para>1</para>
                 /// </summary>
                 [NameInMap("TriggerType")]
                 [Validation(Required=false)]
@@ -224,7 +238,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The error message that is returned only if the corresponding error occurs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>jobid: 92583 not match groupId: testSchedulerx.defaultGroup</para>
+        /// <para>jobId=xxx is not existed</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -243,8 +257,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class SetJobInstanceSuccessRequest : TeaModel {
         /// <summary>
-        /// <para>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>The application group ID. You can obtain the application group ID on the Application Management page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public long? JobInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>This parameter is required only for special third-party users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>

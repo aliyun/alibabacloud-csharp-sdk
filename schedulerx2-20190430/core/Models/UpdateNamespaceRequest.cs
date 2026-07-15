@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The description of the namespace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test</para>
+        /// <para>Namespace reserved for testing</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <para>The name of the namespace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Test Namespace</para>
         /// </summary>
         [NameInMap("NamespaceName")]
         [Validation(Required=false)]

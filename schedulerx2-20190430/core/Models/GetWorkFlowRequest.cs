@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetWorkFlowRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application group.</para>
+        /// <para>The application group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The namespace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace.</para>
+        /// <para>The namespace source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The region information.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow.</para>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

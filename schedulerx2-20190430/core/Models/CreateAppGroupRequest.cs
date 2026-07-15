@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class CreateAppGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The AppKey for the application.</para>
+        /// <para>The AppKey of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adcExHZviLcl****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string AppKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The type of application. Valid values:</para>
+        /// <para>The application type.</para>
         /// <list type="bullet">
-        /// <item><description><c>TRACE</c>: Application Monitoring</description></item>
-        /// <item><description><c>EBPF</c>: Application Monitoring eBPF Edition</description></item>
+        /// <item><description><para><c>1</c>: Standard application.</para>
+        /// </description></item>
+        /// <item><description><para><c>2</c>: Kubernetes (K8s) application.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? AppType { get; set; }
 
         /// <summary>
-        /// <para>The application version. 1: Basic version, 2: Professional version.</para>
+        /// <para>The application version. Valid values: <c>1</c> (Basic Edition) and <c>2</c> (Professional Edition).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? AppVersion { get; set; }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>
@@ -65,10 +67,12 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable logging. Valid values:</para>
+        /// <para>Specifies whether to enable logging.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enabled</description></item>
-        /// <item><description><c>false</c>: disabled</description></item>
+        /// <item><description><para><c>true</c>: Enable logging.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable logging.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public bool? EnableLog { get; set; }
 
         /// <summary>
-        /// <para>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</para>
+        /// <para>The ID of the application group. You can find this ID on the <b>Application Management</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,27 +104,40 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? MaxJobs { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <b>Additional information about request parameters</b>.</para>
+        /// <para>Specifies the alert notification configuration as a JSON string. The string can contain the following properties: <c>sendChannel</c>, <c>alarmType</c>, and <c>webhookIsAtAll</c>.</para>
+        /// <remarks>
+        /// <para>For more information, see the <b>Additional information about request parameters</b> section.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;sendChannel&quot;:&quot;sms,ding&quot;}</para>
+        /// <para>{
+        ///     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+        ///     &quot;alarmType&quot;: &quot;Contacts&quot;,
+        ///     &quot;webhookIsAtAll&quot;: false
+        /// }</para>
         /// </summary>
         [NameInMap("MonitorConfigJson")]
         [Validation(Required=false)]
         public string MonitorConfigJson { get; set; }
 
         /// <summary>
-        /// <para>The configuration of alert contacts. The value is a JSON string.</para>
+        /// <para>The alert contacts. This can include individual contacts and contact groups.</para>
+        /// <remarks>
+        /// <para>For more information, see the <b>Additional information about request parameters</b> section.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></para>
+        /// <para>[
+        ///     {&quot;name&quot;: &quot;Alice Johnson&quot;},
+        ///     {&quot;name&quot;: &quot;Lee Smith&quot;}
+        /// ]</para>
         /// </summary>
         [NameInMap("MonitorContactsJson")]
         [Validation(Required=false)]
         public string MonitorContactsJson { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</para>
+        /// <para>The ID of the namespace. You can find this ID on the <b>Namespace</b> page in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -141,7 +158,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not supported. You do not need to specify this parameter.</para>
+        /// <para>This parameter is currently unsupported and can be left unspecified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
@@ -151,6 +168,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
+        /// <para>The notification policy name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-workday-notification</para>
         /// </summary>
@@ -159,7 +178,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NotificationPolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -169,7 +188,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to schedule a busy worker.</para>
+        /// <para>Specifies whether to schedule jobs on a busy worker.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

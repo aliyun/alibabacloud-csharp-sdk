@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
 {
     public class GetOverviewRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value must be a UNIX timestamp (in seconds). If left empty, the current time is used.</para>
+        /// <para>The end timestamp of the data, in seconds. Example: 1684166400. If this parameter is not specified, the current time is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1684166400</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         /// <summary>
         /// <para>The metric type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the basic job data.</description></item>
-        /// <item><description>1: the job running data.</description></item>
+        /// <item><description>0: basic task information.</description></item>
+        /// <item><description>1: task execution information.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public int? MetricType { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier (UID) of the namespace.</para>
+        /// <para>The namespace UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The source of the namespace. This parameter is required only for a special third party.</para>
+        /// <para>The source of the namespace. This parameter is required only for special third-party integrations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>schedulerx</para>
@@ -65,10 +65,10 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string NamespaceSource { get; set; }
 
         /// <summary>
-        /// <para>The query type. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>query: queries data in a time range.</description></item>
-        /// <item><description>query_range: queries time series data in a time range.</description></item>
+        /// <item><description>query: queries interval data.</description></item>
+        /// <item><description>query_range: queries interval time series data.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Schedulerx220190430.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value must be a UNIX timestamp (in seconds).</para>
+        /// <para>The start timestamp of the data, in seconds. Example: 1684166400.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
