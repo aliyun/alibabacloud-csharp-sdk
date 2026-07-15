@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the file system.</para>
+        /// <para>The file system type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all: all types of file systems</description></item>
-        /// <item><description>standard (default): General-purpose NAS file system</description></item>
-        /// <item><description>extreme: Extreme NAS file system</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) file system</description></item>
+        /// <item><description>all: all types.</description></item>
+        /// <item><description>standard (default): General-purpose NAS.</description></item>
+        /// <item><description>extreme: Extreme NAS.</description></item>
+        /// <item><description>cpfs: CPFS.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>CPFS file systems are available only on the China site (aliyun.com).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -30,8 +27,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the list.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +38,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of regions on each page during a paged query.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 

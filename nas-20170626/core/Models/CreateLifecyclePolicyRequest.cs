@@ -11,9 +11,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CreateLifecyclePolicyRequest : TeaModel {
         /// <summary>
         /// <para>The description of the lifecycle policy.</para>
-        /// <para>Format: The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>Format:
+        /// The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
-        /// <para> Only CPFS for Lingjun supports this parameter.</para>
+        /// <para>Only CPFS for Lingjun is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +25,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,9 +36,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lifecycle policy. The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The Policy Name of the lifecycle management policy. The name must be 3 to 64 characters in length, start with an uppercase letter or lowercase letter, and can contain letters, digits, underscores (_), or hyphens (-).</para>
         /// <remarks>
-        /// <para> Required for General-purpose NAS.</para>
+        /// <para>This parameter is required for General-purpose NAS but not required for CPFS for Lingjun.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,8 +51,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The policy type.</para>
         /// <list type="bullet">
-        /// <item><description>Auto (default): The job is automatically triggered.</description></item>
-        /// <item><description>OnDemand: On-demand execution.</description></item>
+        /// <item><description>Auto (default): automatic execution.</description></item>
+        /// <item><description>OnDemand: on-demand execution.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,21 +63,19 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyType { get; set; }
 
         /// <summary>
-        /// <para>The management rule associated with the lifecycle policy. Only General-purpose NAS supports this parameter.</para>
+        /// <para>The management rule associated with the lifecycle management policy. Only General-purpose NAS is supported.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEFAULT_ATIME_14: Files not accessed for 14 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_30: Files not accessed for 30 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_60: Files not accessed for 60 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_90: Files not accessed for 90 days.</description></item>
-        /// <item><description>DEFAULT_ATIME_180: Files not accessed for 180 days. DEFAULT_ATIME_180 is supported only when the StorageType parameter is set to Archive.</description></item>
-        /// </list>
-        /// <remarks>
-        /// </remarks>
+        /// <item><description>DEFAULT_ATIME_14: files that have not been accessed for 14 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_30: files that have not been accessed for 30 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_60: files that have not been accessed for 60 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_90: files that have not been accessed for 90 days.</description></item>
+        /// <item><description>DEFAULT_ATIME_180: files that have not been accessed for 180 days. DEFAULT_ATIME_180 is supported only when StorageType is set to Archive.<remarks>
         /// <list type="bullet">
-        /// <item><description><para>If an IA policy already exists for the directory, the new archive policy must have a longer transition period.</para>
-        /// </description></item>
-        /// <item><description><para>Only General-purpose NAS supports this parameter.</para>
+        /// <item><description>If an IA storage class policy has already been configured for the directory, the archive policy duration must be longer than the IA storage class policy duration.</description></item>
+        /// <item><description>Only General-purpose NAS supports this parameter.</description></item>
+        /// </list>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// 
@@ -88,16 +87,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecycleRuleName { get; set; }
 
         /// <summary>
-        /// <para>The absolute path of the directory associated with the lifecycle policy. Only General-purpose NAS supports this parameter.</para>
+        /// <para>The absolute path of the directory associated with the lifecycle management policy. Only General-purpose NAS is supported.</para>
         /// <list type="bullet">
-        /// <item><description>Single value only. The path must start with a forward slash (/) and must be a path that exists in the mount target.</description></item>
+        /// <item><description>General-purpose NAS supports associating only a single directory. The path must start with a forward slash (/) and must be an existing path in the mount target.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> We recommend configuring the Paths.N parameter so that you can associate the policy with multiple directories at a time.</para>
-        /// </remarks>
+        /// <para>Only General-purpose NAS is supported. For General-purpose NAS, use Paths.N to associate multiple directories at the same time.</para>
         /// <list type="bullet">
-        /// <item><description>Path and Paths are mutually exclusive. You must specify one.</description></item>
+        /// <item><description>Only one of Path and Paths can be specified.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>/pathway/to/folder</para>
@@ -107,7 +106,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The absolute paths of the directories associated with the lifecycle policy.</para>
+        /// <para>The absolute paths of directories associated with the lifecycle management policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;/path1&quot;, &quot;/path2&quot;</para>
@@ -117,9 +116,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<string> Paths { get; set; }
 
         /// <summary>
-        /// <para>The file data retrieval rule. Only one rule can be configured.</para>
+        /// <para>The file data retrieval rules. A maximum of one rule can be configured.</para>
         /// <remarks>
-        /// <para> Only CPFS for Lingjun supports this parameter.</para>
+        /// <para>Only CPFS for Lingjun file systems are supported.</para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>When LifecyclePolicyType is set to OnDemand, at least one of TransitRules or RetrieveRules must be specified.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RetrieveRules")]
@@ -127,7 +129,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<CreateLifecyclePolicyRequestRetrieveRules> RetrieveRules { get; set; }
         public class CreateLifecyclePolicyRequestRetrieveRules : TeaModel {
             /// <summary>
-            /// <para>The attribute of the rule. Valid value:</para>
+            /// <para>The rule attribute. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RetrieveType: the retrieval method.</description></item>
             /// </list>
@@ -140,12 +142,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The threshold of the rule. Valid values:</para>
+            /// <para>The rule threshold. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>RetrieveType</para>
-            /// <list type="bullet">
-            /// <item><description>AfterVisit: Supported when LifecyclePolicyType is Auto. Represents a best-effort recall on access.</description></item>
-            /// <item><description>All: Supported when LifecyclePolicyType is OnDemand. Represents retrieving all data.</description></item>
+            /// <item><description>RetrieveType<list type="bullet">
+            /// <item><description>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</description></item>
+            /// <item><description>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -160,13 +161,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// <list type="bullet">
-        /// <item><description>InfrequentAccess: the Infrequent Access (IA) storage class.</description></item>
-        /// <item><description>Archive: the Archive storage class.</description></item>
+        /// <item><description>InfrequentAccess: IA storage class.</description></item>
+        /// <item><description>Archive: Archive storage.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun only supports InfrequentAccess.</para>
+        /// <para>General-purpose NAS supports InfrequentAccess and Archive. CPFS for Lingjun supports only InfrequentAccess.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -178,9 +179,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The data transition rule. Only one rule can be configured.</para>
+        /// <para>The file data transit rules. A maximum of one rule can be configured.</para>
         /// <remarks>
-        /// <para> Supported only for CPFS for Lingjun file systems with LifecyclePolicyType set to Auto.</para>
+        /// <para>Supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransitRules")]
@@ -188,7 +189,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public List<CreateLifecyclePolicyRequestTransitRules> TransitRules { get; set; }
         public class CreateLifecyclePolicyRequestTransitRules : TeaModel {
             /// <summary>
-            /// <para>Attribute of the rule.</para>
+            /// <para>The rule attribute.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Atime: the access time of the file.</description></item>
@@ -202,10 +203,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>Threshold for the rule.</para>
+            /// <para>The rule threshold.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If Attribute is set to Atime, this value represents the number of days since the file was last accessed. Valid values: [1, 365].</description></item>
+            /// <item><description>When Attribute is set to Atime, the value indicates the number of days since the file was last accessed. Valid values: 0 to 365.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

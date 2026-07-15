@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeProtocolMountTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The marker used to retrieve the remaining export directories in subsequent queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aBcdeg==</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The export directories of the protocol service.</para>
+        /// <para>The collection of protocol service export directories.</para>
         /// </summary>
         [NameInMap("ProtocolMountTargets")]
         [Validation(Required=false)]
         public List<DescribeProtocolMountTargetResponseBodyProtocolMountTargets> ProtocolMountTargets { get; set; }
         public class DescribeProtocolMountTargetResponseBodyProtocolMountTargets : TeaModel {
             /// <summary>
-            /// <para>The permission group that is associated with the export directory of the protocol service.</para>
+            /// <para>The permission group associated with the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_VPC_GROUP_NAME</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string AccessGroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the export directory of the protocol service was created.</para>
+            /// <para>The time when the protocol service export directory was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-12-12T07:28:38Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the export directory for the protocol service.</para>
+            /// <para>The description of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>此协议服务导出目录的描述。</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the export directory for the protocol service.</para>
+            /// <para>The ID of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exp-19abf5beab8d****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ExportId { get; set; }
 
             /// <summary>
-            /// <para>The fileset ID of the export directory for the protocol service.</para>
+            /// <para>The fileset ID of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fset-1902718ea0ae****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FsetId { get; set; }
 
             /// <summary>
-            /// <para>The export directory of the protocol service.</para>
+            /// <para>The exported directory of the protocol service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/path/</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the export directory for the protocol service.</para>
+            /// <para>The domain name of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpfs-123****.cn-hangzhou.cpfs.aliyuncs.com</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ProtocolMountTargetDomain { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protocol service.</para>
+            /// <para>The protocol service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ptc-123****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The status of the mount target.</para>
+            /// <para>The mount target status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATING</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID of the export directory for the protocol service.</para>
+            /// <para>The vSwitch ID of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2vc3c2lybvdllxyq4****</para>
@@ -137,14 +137,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>A list of IDs for the zone-redundant vSwitches.</para>
+            /// <para>The list of zone-redundant vSwitch IDs.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID of the export directory for the protocol service.</para>
+            /// <para>The VPC ID of the protocol service export directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2vct297b8157bth9z****</para>

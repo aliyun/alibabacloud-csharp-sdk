@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The type of the file system.</para>
-        /// <para>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</para>
+        /// <para>The file system type.</para>
+        /// <para>Valid values: extreme (Extreme NAS file system)</para>
         /// 
         /// <b>Example:</b>
         /// <para>extreme</para>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the snapshot list.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query. Settings for the number of rows per page in paging.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The snapshot IDs.</para>
-        /// <para>You can specify a maximum of 100 snapshot IDs. You must separate snapshot IDs with commas (,).</para>
+        /// <para>You can specify multiple snapshot IDs separated by commas (,). A maximum of 100 IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-extreme-67pxwk9aevrkr****,s-extreme-snapsho****,s-extreme-6tmsbas6ljhwh****</para>
@@ -75,11 +75,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// <para>The type of the snapshot.</para>
+        /// <para>The snapshot type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>auto: auto snapshot</description></item>
-        /// <item><description>user: manual snapshot</description></item>
+        /// <item><description>auto: automatic snapshot</description></item>
+        /// <item><description>user: manually created snapshot</description></item>
         /// <item><description>all (default): all snapshot types</description></item>
         /// </list>
         /// 
@@ -91,13 +91,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SnapshotType { get; set; }
 
         /// <summary>
-        /// <para>The status of the snapshot.</para>
+        /// <para>The snapshot status.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>progressing: The snapshot is being created.</description></item>
         /// <item><description>accomplished: The snapshot is created.</description></item>
-        /// <item><description>failed: The snapshot fails to be created.</description></item>
-        /// <item><description>all (default): all snapshot states.</description></item>
+        /// <item><description>failed: The snapshot failed to be created.</description></item>
+        /// <item><description>all (default): all snapshot statuses</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

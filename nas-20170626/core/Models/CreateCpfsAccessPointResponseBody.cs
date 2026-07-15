@@ -8,22 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
-    public class CreateDataFlowResponseBody : TeaModel {
+    public class CreateCpfsAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data flow ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>df-194433a5be31****</para>
+        /// <para>ap-ie15yd****</para>
         /// </summary>
-        [NameInMap("DataFlowId")]
+        [NameInMap("AccessPointId")]
         [Validation(Required=false)]
-        public string DataFlowId { get; set; }
+        public string AccessPointId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0D****3E</para>
+        /// <para>98696EF0-1607-4E9D-B01D-F20930B6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

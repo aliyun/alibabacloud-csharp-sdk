@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</para>
+        /// <para>The ID information of file systems and Virtual Storage Channels. A maximum of 10 entries can be specified per batch.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The virtual storage channel ID.</para>
+            /// <para>The Virtual Storage Channel ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-8vb864o3ppwfvh****</para>
@@ -53,18 +53,42 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         }
 
+        /// <summary>
+        /// <para>The role chain.</para>
+        /// <remarks>
+        /// <para>This parameter is required only for cross-account scenarios.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("RoleChain")]
         [Validation(Required=false)]
         public List<AttachVscToFilesystemsRequestRoleChain> RoleChain { get; set; }
         public class AttachVscToFilesystemsRequestRoleChain : TeaModel {
+            /// <summary>
+            /// <para>The UID of the Alibaba Cloud account on whose behalf the service assumes the role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>176498472570****</para>
+            /// </summary>
             [NameInMap("AssumeRoleFor")]
             [Validation(Required=false)]
             public string AssumeRoleFor { get; set; }
 
+            /// <summary>
+            /// <para>The resource descriptor of the specified role. Format: acs:ram::$accountID:role/$roleName.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ram::123472233814****:role/aliyunnasclientvsc****</para>
+            /// </summary>
             [NameInMap("RoleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            /// <summary>
+            /// <para>The role type. Valid values: service and user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>service</para>
+            /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
             public string RoleType { get; set; }

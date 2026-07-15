@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsRequest : TeaModel {
         /// <summary>
-        /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
+        /// <para>The IPv4 and IPv6 dual-stack mount target.</para>
         /// <remarks>
-        /// <para>Currently, only Extreme NAS file systems in Chinese mainland regions support IPv6.</para>
+        /// <para>Currently, only Extreme NAS in regions in the Chinese mainland supports IPv6.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,13 +23,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DualStackMountTargetDomain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>general-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>. Example: extreme-0015\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>Extreme NAS: must start with <c>extreme-</c>, for example, extreme-0015\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
-        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</para>
+        /// <item><description><para>CPFS: must start with <c>cpfs-</c>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the mount target.</para>
+        /// <para>The mount target address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string MountTargetDomain { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
-        /// <para>The value must be 1 or greater. Default value: 1.</para>
+        /// <para>The page number of the list.</para>
+        /// <para>Start value (default value): 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of mount targets to return per page.</para>
+        /// <para>The number of mount targets on each page.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 

@@ -61,18 +61,42 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         }
 
+        /// <summary>
+        /// <para>The role chain.</para>
+        /// <remarks>
+        /// <para>Required only for cross-account scenarios.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("RoleChain")]
         [Validation(Required=false)]
         public List<DescribeFilesystemsVscAttachInfoRequestRoleChain> RoleChain { get; set; }
         public class DescribeFilesystemsVscAttachInfoRequestRoleChain : TeaModel {
+            /// <summary>
+            /// <para>The UID of the Alibaba Cloud account, which specifies the account on whose behalf the service assumes the role.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>101522855006****</para>
+            /// </summary>
             [NameInMap("AssumeRoleFor")]
             [Validation(Required=false)]
             public string AssumeRoleFor { get; set; }
 
+            /// <summary>
+            /// <para>The resource descriptor of the specified role. Format: acs:ram::$accountID:role/$roleName.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>acs:ram::123472233814****:role/aliyunnasclientvsc****</para>
+            /// </summary>
             [NameInMap("RoleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            /// <summary>
+            /// <para>The role type. Valid values: service and user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>service</para>
+            /// </summary>
             [NameInMap("RoleType")]
             [Validation(Required=false)]
             public string RoleType { get; set; }

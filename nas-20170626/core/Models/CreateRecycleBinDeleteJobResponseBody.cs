@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateRecycleBinDeleteJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C****C54</para>

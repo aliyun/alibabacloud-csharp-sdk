@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateRecycleBinDeleteJobRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>Ensures the idempotence of the request.</para>
+        /// <para>Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify ClientToken, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,19 +24,19 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file or directory that you want to permanently delete.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of the deleted data.</para>
+        /// <para>The FileId of the file or directory that you want to permanently delete.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2412174.html">ListRecycledDirectoriesAndFiles</a> operation to query the FileId of deleted data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>04***08</para>
+        /// <para>104</para>
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

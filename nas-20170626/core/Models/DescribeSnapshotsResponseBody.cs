@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the snapshot list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The total number of snapshots returned.</para>
+        /// <para>The total number of snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36</para>

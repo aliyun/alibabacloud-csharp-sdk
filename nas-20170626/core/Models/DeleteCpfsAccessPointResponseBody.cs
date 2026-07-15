@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
-    public class SetAgenticSpaceQuotaResponseBody : TeaModel {
+    public class DeleteCpfsAccessPointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
+        /// <para>BC7C825C-5F65-4B56-BEF6-98C56C7C****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

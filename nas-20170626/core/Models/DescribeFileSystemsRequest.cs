@@ -13,9 +13,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The file system ID.</para>
         /// <list type="bullet">
         /// <item><description>General-purpose NAS: 31a8e4****.</description></item>
-        /// <item><description>Extreme NAS: Must start with extreme-, such as extreme-0015****.</description></item>
-        /// <item><description>CPFS (locally redundant): Must start with cpfs-, such as cpfs-125487****.</description></item>
-        /// <item><description>CPFS SE (zone-redundant): Must start with cpfsse-, such as cpfsse-022c71b134****.</description></item>
+        /// <item><description>Extreme NAS: must start with extreme-, such as extreme-0015****.</description></item>
+        /// <item><description>Cloud Parallel File Storage (CPFS) (locally redundant): must start with cpfs-, such as cpfs-125487****.</description></item>
+        /// <item><description>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems on each page in a paging query.</para>
+        /// <para>The number of file systems on each page during a paged query.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("StorageType")]
+        [Validation(Required=false)]
+        public string StorageType { get; set; }
 
         /// <summary>
         /// <para>The tag information.</para>

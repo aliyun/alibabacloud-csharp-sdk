@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class GetRecycleBinAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the recycle bin.</para>
+        /// <para>The recycle bin description.</para>
         /// </summary>
         [NameInMap("RecycleBinAttribute")]
         [Validation(Required=false)]
         public GetRecycleBinAttributeResponseBodyRecycleBinAttribute RecycleBinAttribute { get; set; }
         public class GetRecycleBinAttributeResponseBodyRecycleBinAttribute : TeaModel {
             /// <summary>
-            /// <para>The size of the archived data that is dumped to the recycle bin. Unit: bytes.</para>
+            /// <para>The storage usage of archived data in the recycle bin. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1611661312</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? ArchiveSize { get; set; }
 
             /// <summary>
-            /// <para>The time at which the recycle bin was enabled.</para>
+            /// <para>The time when the recycle bin was enabled. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-30T10:08:08Z</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string EnableTime { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the files in the recycle bin. Unit: days.</para>
-            /// <para>If the recycle bin is disabled, 0 is returned for this parameter.</para>
+            /// <para>The retention period of files in the recycle bin. Unit: days.</para>
+            /// <para>If the recycle bin is disabled, this parameter returns 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? ReservedDays { get; set; }
 
             /// <summary>
-            /// <para>The size of the Infrequent Access (IA) data that is dumped to the recycle bin. Unit: bytes.</para>
+            /// <para>The storage usage of Infrequent Access (IA) data in the recycle bin. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? SecondarySize { get; set; }
 
             /// <summary>
-            /// <para>The size of the files that are dumped to the recycle bin. Unit: bytes.</para>
+            /// <para>The storage usage of files in the recycle bin. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The status of the recycle bin.</para>
+            /// <para>The recycle bin status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Enable: The recycle bin is enabled.</description></item>

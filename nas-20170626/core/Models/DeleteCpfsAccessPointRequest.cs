@@ -8,28 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
-    public class GetAgenticSpaceRequest : TeaModel {
+    public class DeleteCpfsAccessPointRequest : TeaModel {
         /// <summary>
-        /// <para>AgenticSpace Id。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>agentic-229oypxjgpau2****</para>
+        /// <para>ap-ie15yd****</para>
         /// </summary>
-        [NameInMap("AgenticSpaceId")]
+        [NameInMap("AccessPointId")]
         [Validation(Required=false)]
-        public string AgenticSpaceId { get; set; }
+        public string AccessPointId { get; set; }
 
         /// <summary>
-        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06229oypxjgox0u****</para>
+        /// <para>bmcpfs-099394bd928c****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
         public string FileSystemId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

@@ -76,6 +76,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
+        /// <para>The query token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTc2NTg1MTUyMzA1OTczNTc1OCM0NjQxMzQ****=</para>
         /// </summary>
@@ -84,6 +86,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BC7C825C-5F65-4B56-BEF6-98C56C7C****</para>
         /// </summary>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeProtocolMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client to ensure that the value is unique among different requests.</para>
+        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,21 +35,27 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter that is used to query the export directories of the protocol service.</para>
+        /// <para>The filter keys for querying protocol service export directories.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeProtocolMountTargetRequestFilters> Filters { get; set; }
         public class DescribeProtocolMountTargetRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter name.</para>
+            /// <para>The name of the filter key.</para>
             /// <list type="bullet">
-            /// <item><description>ProtocolServiceIds: Filters export directories by protocol service ID.</description></item>
-            /// <item><description>ExportIds: Filters export directories by export directory ID.</description></item>
-            /// <item><description>VpcIds: Filters export directories by VPC ID.</description></item>
-            /// <item><description>FsetIds: Filters export directories by fileset ID.</description></item>
-            /// <item><description>Paths: Filters export directories based on the path of the file system corresponding to the mount target.</description></item>
-            /// <item><description>AccessGroupNames: Filters export directories by permission group name.</description></item>
+            /// <item><description><para>ProtocolServiceIds: filters by protocol service ID.</para>
+            /// </description></item>
+            /// <item><description><para>ExportIds: filters by export directory ID.</para>
+            /// </description></item>
+            /// <item><description><para>VpcIds: filters by VPC ID.</para>
+            /// </description></item>
+            /// <item><description><para>FsetIds: filters by fileset ID.</para>
+            /// </description></item>
+            /// <item><description><para>Paths: filters by the file system path that corresponds to the mount target.</para>
+            /// </description></item>
+            /// <item><description><para>AccessGroupNames: filters by permission group name.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,14 +66,20 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value. This parameter does not support wildcards.</para>
+            /// <para>The value of the filter key. Wildcards are not supported.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to ProtocolServiceIds, set Value to a protocol service ID. You can specify a maximum of 10 protocol service IDs. Example: <c>ptc-12345678</c> or <c>ptc-12345678,ptc-12345679</c>.</description></item>
-            /// <item><description>If Key is set to ExportIds, set Value to an export directory ID. You can specify a maximum of 10 export directory IDs. Example: <c>exp-12345678</c> or <c>exp-12345678,exp-12345679</c>.</description></item>
-            /// <item><description>If Key is set to VpcIds, set Value to a VPC ID of the protocol service. You can specify a maximum of 10 VPC IDs. Example: <c>vpc-12345678</c> or <c>vpc-12345678,vpc-12345679</c>.</description></item>
-            /// <item><description>If Key is set to FsetIds, set Value to a fileset ID. You can specify a maximum of 10 fileset IDs. Example: <c>fset-12345678</c> or <c>fset-12345678,fset-12345679</c>.</description></item>
-            /// <item><description>If Key is set to Paths, set Value to a path of the file system corresponding to the mount target. You can specify a maximum of 10 paths. Example: <c>/cpfs/mnt_1/</c> or <c>/cpfs/mnt_1/,/cpfs/mnt_2/</c>.</description></item>
-            /// <item><description>If Key is set to AccessGroupNames, set Value to a permission group name for the protocol service. You can specify a maximum of 10 permission group names. Example: <c>ag-12345678</c> or <c>ag-12345678,ag-12345679</c>.</description></item>
+            /// <item><description><para>If Key is set to ProtocolServiceIds, set Value to a protocol service ID. You can specify up to 10 protocol service IDs. Example: <c>ptc-12345678</c> or <c>ptc-12345678,ptc-12345679</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to ExportIds, set Value to an export directory ID. You can specify up to 10 export directory IDs. Example: <c>exp-12345678</c> or <c>exp-12345678,exp-12345679</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to VpcIds, set Value to the VPC ID of the protocol service. You can specify up to 10 VPC IDs. Example: <c>vpc-12345678</c> or <c>vpc-12345678,vpc-12345679</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to FsetIds, set Value to a fileset ID. You can specify up to 10 fileset IDs. Example: <c>fset-12345678</c> or <c>fset-12345678,fset-12345679</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to Paths, set Value to the file system directory that corresponds to the mount target. You can specify up to 10 paths. Example: <c>/cpfs/mnt_1/</c> or <c>/cpfs/mnt_1/,/cpfs/mnt_2/</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If Key is set to AccessGroupNames, set Value to the permission group name of the protocol service. You can specify up to 10 permission group names. Example: <c>ag-12345678</c> or <c>ag-12345678,ag-12345679</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,10 +92,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The number of results for each query.</para>
+        /// <para>The maximum number of results to return per query.</para>
         /// <list type="bullet">
-        /// <item><description>Value values: 10 to 100.</description></item>
-        /// <item><description>Default value: 20.</description></item>
+        /// <item><description><para>Valid values: 10 to 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 20.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +108,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token used to initiate the next request when the response is truncated. You can use this token to retrieve the remaining results from where the truncation occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aBcdg==</para>
@@ -104,7 +118,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Protocol service ID list</para>
+        /// <para>The list of protocol service IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ptc-123xxx</para>
