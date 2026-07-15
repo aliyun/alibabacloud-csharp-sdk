@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string Audience { get; set; }
 
+        [NameInMap("GrantType")]
+        [Validation(Required=false)]
+        public string GrantType { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
@@ -42,6 +46,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("RequestedTokenType")]
+        [Validation(Required=false)]
+        public string RequestedTokenType { get; set; }
+
         /// <summary>
         /// <para>The permission scopes.</para>
         /// <para>This parameter is required.</para>
@@ -49,6 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("ScopeValues")]
         [Validation(Required=false)]
         public List<string> ScopeValues { get; set; }
+
+        [NameInMap("SubjectToken")]
+        [Validation(Required=false)]
+        public string SubjectToken { get; set; }
+
+        [NameInMap("SubjectTokenType")]
+        [Validation(Required=false)]
+        public string SubjectTokenType { get; set; }
 
     }
 

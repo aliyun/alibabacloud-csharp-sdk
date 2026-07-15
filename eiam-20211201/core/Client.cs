@@ -19317,13 +19317,29 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["Audience"] = request.Audience;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrantType))
+            {
+                query["GrantType"] = request.GrantType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestedTokenType))
+            {
+                query["RequestedTokenType"] = request.RequestedTokenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeValues))
             {
                 query["ScopeValues"] = request.ScopeValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectToken))
+            {
+                query["SubjectToken"] = request.SubjectToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectTokenType))
+            {
+                query["SubjectTokenType"] = request.SubjectTokenType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -19371,13 +19387,29 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["Audience"] = request.Audience;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrantType))
+            {
+                query["GrantType"] = request.GrantType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestedTokenType))
+            {
+                query["RequestedTokenType"] = request.RequestedTokenType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeValues))
             {
                 query["ScopeValues"] = request.ScopeValues;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectToken))
+            {
+                query["SubjectToken"] = request.SubjectToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectTokenType))
+            {
+                query["SubjectTokenType"] = request.SubjectTokenType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
