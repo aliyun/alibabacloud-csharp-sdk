@@ -1,0 +1,30 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Yike20260707.Models
+{
+    public class DeleteMediasResponseBody : TeaModel {
+        [NameInMap("ForbiddenList")]
+        [Validation(Required=false)]
+        public List<string> ForbiddenList { get; set; }
+
+        [NameInMap("IgnoredList")]
+        [Validation(Required=false)]
+        public List<string> IgnoredList { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><b><b><b>11-DB8D-4A9A-875B-275798</b></b></b></para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
