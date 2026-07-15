@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListManagedRulesGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of managed rule group information.</para>
+        /// <para>The list of managed rule groups.</para>
         /// </summary>
         [NameInMap("ManagedRulesGroups")]
         [Validation(Required=false)]
         public List<ListManagedRulesGroupsResponseBodyManagedRulesGroups> ManagedRulesGroups { get; set; }
         public class ListManagedRulesGroupsResponseBodyManagedRulesGroups : TeaModel {
             /// <summary>
-            /// <para>Name of the managed rule group.</para>
+            /// <para>The name of the managed rule group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Number of rules within the managed rule group.</para>
+            /// <para>The number of rules in the managed rule group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records after filtering.</para>
+        /// <para>The total number of records after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

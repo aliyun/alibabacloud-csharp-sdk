@@ -10,28 +10,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafManagedRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The attack type to filter the results by. Valid values:</para>
+        /// <para>The attack type of the vulnerability prevention event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SQL injection</para>
-        /// </description></item>
-        /// <item><description><para>cross-site scripting</para>
-        /// </description></item>
-        /// <item><description><para>code execution</para>
-        /// </description></item>
-        /// <item><description><para>CRLF</para>
-        /// </description></item>
-        /// <item><description><para>local file inclusion</para>
-        /// </description></item>
-        /// <item><description><para>remote file inclusion</para>
-        /// </description></item>
-        /// <item><description><para>webshell</para>
-        /// </description></item>
-        /// <item><description><para>cross-site request forgery</para>
-        /// </description></item>
-        /// <item><description><para>Other</para>
-        /// </description></item>
-        /// <item><description><para>SEMA</para>
-        /// </description></item>
+        /// <item><description>SQL injection</description></item>
+        /// <item><description>cross-site scripting (XSS)</description></item>
+        /// <item><description>code execute</description></item>
+        /// <item><description>CRLF</description></item>
+        /// <item><description>local file inclusion (LFI)</description></item>
+        /// <item><description>remote file inclusion (RFI)</description></item>
+        /// <item><description>webshell</description></item>
+        /// <item><description>cross-site request forgery</description></item>
+        /// <item><description>Others</description></item>
+        /// <item><description>SEMA</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,17 +42,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The WAF instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>esa-site-awmmx25y2igw</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The response language. Valid values:</para>
+        /// <para>The language type. The response is returned in the specified language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>en</b>: English.</para>
-        /// </description></item>
-        /// <item><description><para><b>zh</b>: Chinese.</para>
-        /// </description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,12 +66,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// <para>The managed ruleset configuration in JSON string format.</para>
+        /// <para>Contains the AttackType, ProtectionLevel, Action, and ManagedRules subfields. When ProtectionLevel is set to -1 (custom mode), specify the status and action for each rule through the ManagedRules array.</para>
+        /// </summary>
         [NameInMap("ManagedRuleset")]
         [Validation(Required=false)]
         public string ManagedRulesetShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -96,19 +94,30 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The currently saved protection level, which represents the existing configuration state in the database.</para>
+        /// <para>Valid values: -1 (custom mode), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</para>
+        /// <para>Difference from ManagedRuleset.ProtectionLevel: this parameter indicates the currently effective configuration, while ManagedRuleset.ProtectionLevel indicates the target value being passed in.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ProtectionLevel")]
         [Validation(Required=false)]
         public int? ProtectionLevel { get; set; }
 
         /// <summary>
         /// <para>The query conditions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;Status\&quot;:\&quot;\&quot;,\&quot;ProtectionLevels\&quot;:[2,1],\&quot;Action\&quot;:\&quot;\&quot;,\&quot;IdNameLike\&quot;:\&quot;\&quot;}</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public string QueryArgsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

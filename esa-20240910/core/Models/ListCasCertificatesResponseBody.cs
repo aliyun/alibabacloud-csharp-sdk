@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCasCertificatesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The certificate list.</para>
+        /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
         public List<ListCasCertificatesResponseBodyCertificates> Certificates { get; set; }
         public class ListCasCertificatesResponseBodyCertificates : TeaModel {
             /// <summary>
+            /// <para>The common name of the certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommonName { get; set; }
 
             /// <summary>
+            /// <para>The certificate fingerprint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0151xxxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Fingerprint { get; set; }
 
             /// <summary>
+            /// <para>The certificate ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30000145</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The certificate issuer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DigiCert</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Issuer { get; set; }
 
             /// <summary>
+            /// <para>The certificate name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>demo</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1708423200000</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
+            /// <para>The region where the certificate resides. Supported values: <b>cn-hangzhou</b> and <b>ap-southeast-1</b>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ap-southeast-1</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

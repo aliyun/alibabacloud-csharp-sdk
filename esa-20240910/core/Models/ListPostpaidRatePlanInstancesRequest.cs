@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Use this parameter to query a specific instance.</para>
+        /// <para>The instance ID. Specify this parameter to query a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-dps-xxxxxx</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number for paging. The value must be greater than or equal to 1.</para>
+        /// <para>The page number for paging queries. The value must be greater than or equal to 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page for paging queries. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: sorts by creation time.</description></item>
+        /// <item><description>CreateTime: sorted by creation time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <list type="bullet">
         /// <item><description><para>asc: ascending order</para>
         /// </description></item>
-        /// <item><description><para>desc: descending order.</para>
+        /// <item><description><para>desc: descending order</para>
         /// </description></item>
         /// </list>
         /// 

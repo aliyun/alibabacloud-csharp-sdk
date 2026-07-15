@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The billing mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>container_95</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BillingMode { get; set; }
 
         /// <summary>
+        /// <para>The plan instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>esa-cn-jea67jfbs0x</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9BEB8659-9CDE-5F2C-83E9-50F55277E844</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The plan instance status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>

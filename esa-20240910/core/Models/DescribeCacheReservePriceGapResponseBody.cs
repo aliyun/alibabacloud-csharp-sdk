@@ -9,11 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeCacheReservePriceGapResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pricing information.</para>
+        /// </summary>
         [NameInMap("PriceModel")]
         [Validation(Required=false)]
         public DescribeCacheReservePriceGapResponseBodyPriceModel PriceModel { get; set; }
         public class DescribeCacheReservePriceGapResponseBodyPriceModel : TeaModel {
             /// <summary>
+            /// <para>The currency. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>JPY: Japanese Yen.</description></item>
+            /// <item><description>USD: US Dollar.</description></item>
+            /// <item><description>CNY: Chinese Yuan.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
             /// </summary>
@@ -22,6 +32,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Currency { get; set; }
 
             /// <summary>
+            /// <para>The discount amount of the order.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +42,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public float? DiscountPrice { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>esa-cr-9tuv*********</para>
             /// </summary>
@@ -38,6 +52,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The final order price, which is the actual transaction price.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -66,6 +82,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
+            /// <para>The original order price. Original order price = actual transaction price + discount amount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40423A7F-A83D-1E24-B80E-86DD25790759</para>
         /// </summary>

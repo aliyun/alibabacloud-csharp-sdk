@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteRoutineRelatedRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The routine name.</para>
+        /// <para>The name of the Edge Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

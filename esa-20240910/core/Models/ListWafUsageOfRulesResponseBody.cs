@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafUsageOfRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The number of rules or rule sets for the specified phase under instance-level batch configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("BatchConfigUsage")]
         [Validation(Required=false)]
         public long? BatchConfigUsage { get; set; }
 
+        /// <summary>
+        /// <para>The total number of rules or rule sets for the instance under the specified phase, including both site-level and instance-level rules.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("InstanceUsage")]
         [Validation(Required=false)]
         public long? InstanceUsage { get; set; }
@@ -28,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of sites and their respective WAF rule usage.</para>
+        /// <para>The list of site usage.</para>
         /// </summary>
         [NameInMap("Sites")]
         [Validation(Required=false)]
@@ -55,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of WAF rules or rule sets used by the site.</para>
+            /// <para>The number of WAF rules or WAF rule sets that have been used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

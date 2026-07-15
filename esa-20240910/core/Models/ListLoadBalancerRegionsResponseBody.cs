@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListLoadBalancerRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>List of region information</para>
+        /// <para>The list of region information.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<ListLoadBalancerRegionsResponseBodyRegions> Regions { get; set; }
         public class ListLoadBalancerRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>Primary region Chinese full name</para>
+            /// <para>The full name of the primary region in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>东南亚</para>
+            /// <para>South East Asia</para>
             /// </summary>
             [NameInMap("RegionCnName")]
             [Validation(Required=false)]
             public string RegionCnName { get; set; }
 
             /// <summary>
-            /// <para>Primary region code</para>
+            /// <para>The primary region code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SEAS</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RegionCode { get; set; }
 
             /// <summary>
-            /// <para>Primary region English full name</para>
+            /// <para>The full name of the primary region in English.</para>
             /// 
             /// <b>Example:</b>
             /// <para>South East Asia</para>
@@ -67,24 +67,24 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RegionEnName { get; set; }
 
             /// <summary>
-            /// <para>List of secondary region information</para>
+            /// <para>The list of secondary region information.</para>
             /// </summary>
             [NameInMap("SubRegions")]
             [Validation(Required=false)]
             public List<ListLoadBalancerRegionsResponseBodyRegionsSubRegions> SubRegions { get; set; }
             public class ListLoadBalancerRegionsResponseBodyRegionsSubRegions : TeaModel {
                 /// <summary>
-                /// <para>Secondary region Chinese full name</para>
+                /// <para>The full name of the primary region in Chinese.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>印度尼西亚</para>
+                /// <para>Indonesia</para>
                 /// </summary>
                 [NameInMap("SubRegionCnName")]
                 [Validation(Required=false)]
                 public string SubRegionCnName { get; set; }
 
                 /// <summary>
-                /// <para>Secondary region code</para>
+                /// <para>The secondary region code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ID</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SubRegionCode { get; set; }
 
                 /// <summary>
-                /// <para>Secondary region English full name</para>
+                /// <para>The full name of the secondary region in English.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Indonesia</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81A5E222-24BF-17EF-9E80-A68D9B8F363D</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

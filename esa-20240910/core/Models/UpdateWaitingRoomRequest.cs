@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The description of the waiting room.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>特别活动排队页面</para>
+        /// <para>Special event queue page</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The name of the waiting room.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>节假日促销等候室</para>
+        /// <para>holiday-promotion-waiting-room</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueuingMethod { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned by the waiting room. Valid values:</para>
+        /// <para>The status code returned by the waiting room. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>200</b></description></item>
         /// <item><description><b>202</b></description></item>

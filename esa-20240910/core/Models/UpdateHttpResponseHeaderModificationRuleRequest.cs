@@ -83,8 +83,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true.</description></item>
-        /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
+        /// <item><description>Match all incoming requests: set the value to true.</description></item>
+        /// <item><description>Match specified requests: set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</para>
+        /// <para>The rule switch. This parameter is not required when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>on: enabled.</description></item>
         /// <item><description>off: disabled.</description></item>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchGetExpressionFieldsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of objects, each containing the match fields for a corresponding expression.</para>
+        /// <para>The list of matching fields.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<BatchGetExpressionFieldsResponseBodyFields> Fields { get; set; }
         public class BatchGetExpressionFieldsResponseBodyFields : TeaModel {
             /// <summary>
-            /// <para>A list of match fields for the expression.</para>
+            /// <para>The list of matching fields for a single expression.</para>
             /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public List<string> Fields { get; set; }
 
             /// <summary>
-            /// <para>The ID of the expression. This value corresponds to the <c>Id</c> of an expression in the request.</para>
+            /// <para>The ID of the expression, which corresponds to the ID in the request parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

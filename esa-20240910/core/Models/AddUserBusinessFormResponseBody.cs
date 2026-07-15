@@ -8,22 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class CreateHttpResponseHeaderModificationRuleResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The configuration ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>35281609698****</para>
-        /// </summary>
-        [NameInMap("ConfigId")]
-        [Validation(Required=false)]
-        public long? ConfigId { get; set; }
-
+    public class AddUserBusinessFormResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
+        /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

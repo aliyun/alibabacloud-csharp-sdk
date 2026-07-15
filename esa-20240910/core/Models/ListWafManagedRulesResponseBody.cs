@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafManagedRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of managed rules.</para>
+        /// <para>The list of managed rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListWafManagedRulesResponseBodyRules> Rules { get; set; }
         public class ListWafManagedRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The managed rule\&quot;s action.</para>
+            /// <para>The protection action of the managed rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The managed rule\&quot;s protection level.</para>
+            /// <para>The protection level of the managed rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ProtectionLevel { get; set; }
 
             /// <summary>
-            /// <para>The managed rule\&quot;s status.</para>
+            /// <para>The protection status of the managed rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>

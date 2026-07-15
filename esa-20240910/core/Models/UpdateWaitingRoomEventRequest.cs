@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The name of the waiting room event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试事件2</para>
+        /// <para>test event</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The queuing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>random</b>: random.</description></item>
-        /// <item><description><b>fifo</b>: first-in, first-out.</description></item>
+        /// <item><description><b>fifo</b>: first-in-first-out.</description></item>
         /// <item><description><b>passthrough</b>: passthrough.</description></item>
         /// <item><description><b>reject-all</b>: reject all.</description></item>
         /// </list>

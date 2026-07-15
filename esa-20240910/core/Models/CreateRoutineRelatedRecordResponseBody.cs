@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. A value of <c>OK</c> indicates that the operation was successful.</para>
+        /// <para>The operation status, which indicates success or failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

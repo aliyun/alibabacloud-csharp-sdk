@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCasCertificatesRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size. Valid values: any integer from 1 to 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The certificate name for fuzzy match.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliyun</para>
         /// </summary>

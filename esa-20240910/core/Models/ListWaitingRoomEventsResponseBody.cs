@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The custom event name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test event</para>
+            /// <para>test event</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeCacheReservePriceGapRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>esa-cr-9tuv*********</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The requested cache size. Unit: GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpRequestHeaderModificationRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>An array of objects that define Request Header modifications. Supported operations include add, del, and modify.</para>
+        /// <para>The request header modifications. Three operation types are supported: add, delete, and modify.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RequestHeaderModification")]
@@ -18,12 +18,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestHeaderModificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The content of the Rule, which uses a Conditional Expression to match user requests. This parameter is not required when you add a global configuration. Supports two Use Cases:</para>
+        /// <para>The rule content, which uses conditional expressions to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>To match all incoming requests, set the value to true.</para>
-        /// </description></item>
-        /// <item><description><para>To match specific requests, set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;).</para>
-        /// </description></item>
+        /// <item><description>Match all incoming requests: Set the value to true.</description></item>
+        /// <item><description>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,12 +32,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Rule. This parameter is not required when you add a global configuration. Valid values are:</para>
+        /// <para>The rule switch. This parameter is not required when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>on: Enables the Rule.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disables the Rule.</para>
-        /// </description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The name of the Rule. This parameter is not required when you add a global configuration.</para>
+        /// <para>The rule name. This parameter is not required when you add a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The execution order of the Rule. A smaller value indicates a higher priority.</para>
+        /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Site. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The Version of the Site configuration. For a Site with configuration versioning enabled, this parameter specifies the configuration\&quot;s target Version. The default value is 0.</para>
+        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

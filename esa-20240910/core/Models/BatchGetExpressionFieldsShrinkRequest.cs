@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchGetExpressionFieldsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of expression objects to process.</para>
+        /// <para>The list of expressions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -19,10 +19,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string ExpressionsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The plan instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>esa-site-bitkull7uubk</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The type of the expression.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>wireshark</para>
+        /// </summary>
         [NameInMap("Kind")]
         [Validation(Required=false)]
         public string Kind { get; set; }
@@ -37,12 +49,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Phase { get; set; }
 
+        /// <summary>
+        /// <para>The plan name (in English).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>entranceplan</para>
+        /// </summary>
         [NameInMap("PlanNameEn")]
         [Validation(Required=false)]
         public string PlanNameEn { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

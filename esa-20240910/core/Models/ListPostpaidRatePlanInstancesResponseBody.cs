@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<ListPostpaidRatePlanInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListPostpaidRatePlanInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The billable methods. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dps_month95: monthly 95th percentile billing.</description></item>
+            /// <item><description>dps_month95: Monthly 95th Percentile.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BillingMode { get; set; }
 
             /// <summary>
-            /// <para>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions to which sites can be associated with this instance. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
             /// <item><description>domestic: the Chinese mainland.</description></item>
             /// <item><description>overseas: global (excluding the Chinese mainland).</description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The value is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled specification change time. The value is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The scheduled specification change time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <para>The plan name in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试套餐</para>
+            /// <para>test-plan</para>
             /// </summary>
             [NameInMap("PlanNameCn")]
             [Validation(Required=false)]
@@ -110,8 +110,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The plan type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normal: Fixed plan.</description></item>
-            /// <item><description>enterprise: Enterprise plan.</description></item>
+            /// <item><description>normal: Fixed edition plan.</description></item>
+            /// <item><description>enterprise: Enterprise edition plan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

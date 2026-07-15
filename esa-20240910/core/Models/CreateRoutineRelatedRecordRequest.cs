@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRelatedRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the edge function Routine.</para>
+        /// <para>The name of the Edge Routine function.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
