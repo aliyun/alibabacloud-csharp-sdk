@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class EvaluateResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the resources are sufficient in the region. Valid values:</para>
+        /// <para>Indicates whether resources are available in the current region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The resources are sufficient.</description></item>
-        /// <item><description><b>0</b>: The resources are insufficient.</description></item>
+        /// <item><description><para><b>1</b>: Resources are sufficient.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Resources are insufficient.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceAvailable { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Only MongoDB is returned.</para>
+        /// <para>The database engine. The value is fixed to MongoDB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MongoDB</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4.0</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE2DE465-E45F-481F-ABD8-37D64173****</para>

@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The name of the zone.</para>
             /// <para>The return value of the ZoneName parameter is in the language that is specified by the <b>AcceptLanguage</b> parameter. For example, if the value of the ZoneId parameter in the response is <b>cn-hangzhou-h</b>, the following values are returned for the ZoneName parameter:</para>
             /// <list type="bullet">
-            /// <item><description>If the value of the <b>AcceptLanguage</b> parameter is <b>zh</b>, <b>H</b> is returned for the ZoneName parameter.</description></item>
-            /// <item><description>If the value of the <b>AcceptLanguage</b> parameter is <b>en</b>, <b>Hangzhou Zone H</b> is returned for the ZoneName parameter.</description></item>
+            /// <item><description><para>If the value of the <b>AcceptLanguage</b> parameter is <b>zh</b>, <b>H</b> is returned for the ZoneName parameter.</para>
+            /// </description></item>
+            /// <item><description><para>If the value of the <b>AcceptLanguage</b> parameter is <b>en</b>, <b>Hangzhou Zone H</b> is returned for the ZoneName parameter.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

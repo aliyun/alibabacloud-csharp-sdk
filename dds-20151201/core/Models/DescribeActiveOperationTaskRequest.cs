@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the historical tasks. </para>
+        /// <para>Specifies whether to return the historical tasks.</para>
         /// <para>Default value: 0. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: returns the current task.</description></item>
-        /// <item><description>1: returns the historical tasks.</description></item>
+        /// <item><description><para>0: returns the current task.</para>
+        /// </description></item>
+        /// <item><description><para>1: returns the historical tasks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para> If you set the Region parameter to <b>all</b>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <b>taskType</b> parameter to <b>all</b>.</para>
+        /// <para>If you set the Region parameter to <b>all</b>, all tasks created within your Alibaba Cloud account are queried. In this case, you must set the <b>taskType</b> parameter to <b>all</b>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,9 +89,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>rds_apsaradb_ha: master-replica switchover</description></item>
-        /// <item><description>rds_apsaradb_transfer: instance migration</description></item>
-        /// <item><description>rds_apsaradb_upgrade: minor version update</description></item>
+        /// <item><description><para>rds_apsaradb_ha: master-replica switchover</para>
+        /// </description></item>
+        /// <item><description><para>rds_apsaradb_transfer: instance migration</para>
+        /// </description></item>
+        /// <item><description><para>rds_apsaradb_upgrade: minor version update</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

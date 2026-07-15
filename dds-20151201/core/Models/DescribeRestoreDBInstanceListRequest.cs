@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRestoreDBInstanceListRequest : TeaModel {
         /// <summary>
-        /// <para>Find instances created after the specified time, formatted as <i>yyyy-MM-dd</i>T<i>HH:00:00</i>Z (UTC time).</para>
+        /// <para>Find instances created after the specified time, formatted as <em>yyyy-MM-dd</em>T<em>HH:00:00</em>Z (UTC time).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The time must be on the hour.</description></item>
-        /// <item><description>The time cannot be earlier than 7 days before the current time.</description></item>
+        /// <item><description><para>The time must be on the hour.</para>
+        /// </description></item>
+        /// <item><description><para>The time cannot be earlier than 7 days before the current time.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

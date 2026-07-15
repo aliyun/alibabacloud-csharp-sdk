@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBinlogFilesRequest : TeaModel {
+        /// <summary>
+        /// <para>The binlog ID. This parameter is not currently supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("BinlogId")]
         [Validation(Required=false)]
         public string BinlogId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance. If the instance is a sharded cluster, you must also specify the <b>NodeId</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,11 +30,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The region where the cross-region backup is stored.</para>
+        /// <remarks>
+        /// <para>This parameter is required when you query cross-region backups.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("DestRegion")]
         [Validation(Required=false)]
         public string DestRegion { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query. The time must be later than the start time. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss.xxx</em>Z format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +55,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the mongos node or shard node in the sharded cluster instance.</para>
+        /// <remarks>
+        /// <para>This parameter is applicable only to sharded cluster instances.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>d-uf696817a1b5d9f4</para>
         /// </summary>
@@ -54,6 +76,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +86,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +96,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>
         /// </summary>
@@ -78,6 +106,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-xxxx</para>
         /// </summary>
@@ -93,11 +123,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region of the source instance for a cross-region backup.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required when you query cross-region backups.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ap-southeast-1</para>
+        /// </summary>
         [NameInMap("SrcRegion")]
         [Validation(Required=false)]
         public string SrcRegion { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss.xxx</em>Z format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

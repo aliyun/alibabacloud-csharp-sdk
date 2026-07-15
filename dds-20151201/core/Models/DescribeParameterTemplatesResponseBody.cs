@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The database engine of the instance.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mongodb</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance.</para>
+        /// <para>The database version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of parameters that are supported by the instance.</para>
+        /// <para>The number of parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BDA54203-9D61-54A3-A568-D281F785****</para>

@@ -55,8 +55,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The logical relationship among multiple keywords.</para>
         /// <list type="bullet">
-        /// <item><description><b>or</b></description></item>
-        /// <item><description><b>and</b> (default value)</description></item>
+        /// <item><description><para><b>or</b></para>
+        /// </description></item>
+        /// <item><description><para><b>and</b> (default value)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,8 +84,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The order of time in which the log entries to return are sorted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: The log entries are sorted by time in ascending order.</description></item>
-        /// <item><description>desc: The log entries are sorted by time in descending order.</description></item>
+        /// <item><description><para>asc: The log entries are sorted by time in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc: The log entries are sorted by time in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

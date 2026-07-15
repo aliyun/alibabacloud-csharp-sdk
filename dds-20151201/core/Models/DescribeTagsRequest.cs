@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The token used to start the next query to retrieve more results.</para>
         /// <remarks>
-        /// <para> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</para>
+        /// <para>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the NextToken value returned in the previous query to perform the query again.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

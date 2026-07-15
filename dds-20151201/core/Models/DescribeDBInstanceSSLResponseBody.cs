@@ -19,6 +19,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string CertCommonName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether connections must be encrypted using SSL. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: Connections must be encrypted using SSL.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Connections do not need to be encrypted using SSL.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("ForceEncryption")]
         [Validation(Required=false)]
         public string ForceEncryption { get; set; }
@@ -34,7 +46,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</para>
+        /// <para>The expiration time of the SSL certificate. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-03-11T02:28:25Z</para>
@@ -44,10 +56,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SSLExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the SSL feature. Valid values:</para>
+        /// <para>The status of the SSL feature.</para>
         /// <list type="bullet">
-        /// <item><description><b>Open</b>: The SSL feature is enabled.</description></item>
-        /// <item><description><b>Closed</b>: The SSL feature is disabled.</description></item>
+        /// <item><description><para><b>Open</b>: The SSL feature is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Closed</b>: The SSL feature is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

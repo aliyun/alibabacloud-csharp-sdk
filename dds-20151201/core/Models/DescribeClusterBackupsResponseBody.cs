@@ -10,23 +10,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeClusterBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster backup sets. A cluster backup file contains the backup sets of each node.</para>
+        /// <para>The details of the cluster backup sets. A cluster backup contains the backup sets of all nodes.</para>
         /// </summary>
         [NameInMap("ClusterBackups")]
         [Validation(Required=false)]
         public List<DescribeClusterBackupsResponseBodyClusterBackups> ClusterBackups { get; set; }
         public class DescribeClusterBackupsResponseBodyClusterBackups : TeaModel {
             /// <summary>
-            /// <para>The backup status. Valid values:</para>
+            /// <para>The status of the attached log backup. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>init</b>: The backup is being initialized.</description></item>
-            /// <item><description><b>No_Need</b>: Log backup is not performed.</description></item>
-            /// <item><description><b>Running</b>: Log backup is being performed.</description></item>
-            /// <item><description><b>Ready</b>: Log backup is complete.</description></item>
-            /// <item><description><b>Failed</b>: Log backup failed.</description></item>
+            /// <item><description><para><b>Init</b>: initialization.</para>
+            /// </description></item>
+            /// <item><description><para><b>No_Need</b>: No attached log backup is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Running</b>: The attached log backup is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Ready</b>: The attached log backup is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>Failed</b>: The attached log backup failed.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If the <b>ClusterBackupStatus</b> parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.</para>
+            /// <para>If the value of the <b>ClusterBackupStatus</b> parameter is OK, it only indicates that the full backup was successful. For a cluster instance for which log backup is enabled, the attached log backup must be complete before you can perform a point-in-time restore or ensure data consistency.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -36,19 +41,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public string AttachLogStatus { get; set; }
 
+            /// <summary>
+            /// <para>The time when the backup expires. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</para>
+            /// <remarks>
+            /// <para>Notice: </para>
+            /// </remarks>
+            /// <para>A value of &quot;9999-01-01T00:00:00Z&quot; indicates that the backup is permanently retained.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-03-29T03:47:12Z</para>
+            /// </summary>
             [NameInMap("BackupExpireTime")]
             [Validation(Required=false)]
             public string BackupExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The collection of the backup sets of each child node in a cluster backup set.</para>
+            /// <para>The backup sets of each child node in the cluster backup.</para>
             /// </summary>
             [NameInMap("Backups")]
             [Validation(Required=false)]
             public List<DescribeClusterBackupsResponseBodyClusterBackupsBackups> Backups { get; set; }
             public class DescribeClusterBackupsResponseBodyClusterBackupsBackups : TeaModel {
                 /// <summary>
-                /// <para>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</para>
+                /// <para>The public URL from which you can download the backup file. If the backup file is unavailable for download, an empty string is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://oss.com/xxx">http://oss.com/xxx</a></para>
@@ -58,7 +73,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupDownloadURL { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The time when the backup finished. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-16T19:33:20Z</para>
@@ -68,7 +83,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupEndTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the backup set.</para>
+                /// <para>The ID of the backup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>738025367</para>
@@ -78,7 +93,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupId { get; set; }
 
                 /// <summary>
-                /// <para>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</para>
+                /// <para>The internal URL from which you can download the backup file. If the backup file is unavailable for download, an empty string is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://oss.com/xxx">http://oss.com/xxx</a></para>
@@ -88,7 +103,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupIntranetDownloadURL { get; set; }
 
                 /// <summary>
-                /// <para>The backup name.</para>
+                /// <para>The name of the backup.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345678.tar.gz</para>
@@ -98,7 +113,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupName { get; set; }
 
                 /// <summary>
-                /// <para>The size of the backup file. Unit: bytes.</para>
+                /// <para>The size of the backup file, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>77544597650</para>
@@ -108,7 +123,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupSize { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+                /// <para>The time when the backup started. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-16T19:33:20Z</para>
@@ -118,10 +133,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The status of the backup task. Valid values:</para>
+                /// <para>The backup status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Success</b>: The backup task is successful.</description></item>
-                /// <item><description><b>Failed</b>: The backup task failed.</description></item>
+                /// <item><description><para><b>Success</b>: The backup is successful.</para>
+                /// </description></item>
+                /// <item><description><para><b>Failed</b>: The backup failed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -132,14 +149,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string BackupStatus { get; set; }
 
                 /// <summary>
-                /// <para>The information of the node associated with the backup.</para>
+                /// <para>The information about the instance node that is associated with the backup.</para>
                 /// </summary>
                 [NameInMap("ExtraInfo")]
                 [Validation(Required=false)]
                 public DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo ExtraInfo { get; set; }
                 public class DescribeClusterBackupsResponseBodyClusterBackupsBackupsExtraInfo : TeaModel {
                     /// <summary>
-                    /// <para>The instance type of the node.</para>
+                    /// <para>The specifications of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mdb.shard.4x.large.d</para>
@@ -149,7 +166,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public string InstanceClass { get; set; }
 
                     /// <summary>
-                    /// <para>The node ID.</para>
+                    /// <para>The ID of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>d-2ze75ab1fa5d****</para>
@@ -159,7 +176,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public string NodeId { get; set; }
 
                     /// <summary>
-                    /// <para>The node type.</para>
+                    /// <para>The type of the node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>db</para>
@@ -169,7 +186,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     public string NodeType { get; set; }
 
                     /// <summary>
-                    /// <para>The storage capacity of the node. Unit: MB.</para>
+                    /// <para>The storage space of the node, in MB.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20480</para>
@@ -181,7 +198,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 }
 
                 /// <summary>
-                /// <para>The shard name.</para>
+                /// <para>The name of the shard in the MongoDB cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>d-bp16cb162771****</para>
@@ -193,8 +210,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 /// <summary>
                 /// <para>Indicates whether the backup set is available. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: unavailable</description></item>
-                /// <item><description><b>1</b>: available</description></item>
+                /// <item><description><para><b>0</b>: unavailable.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: available.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -207,7 +226,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>The end of the time range within which the cluster backup is performed.</para>
+            /// <para>The time when the cluster backup finished.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T19:33:20Z</para>
@@ -217,7 +236,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupEndTime { get; set; }
 
             /// <summary>
-            /// <para>The backup set ID.</para>
+            /// <para>The ID of the cluster backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cb-o8c2ugnxo26kx***</para>
@@ -227,7 +246,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupId { get; set; }
 
             /// <summary>
-            /// <para>The cluster backup mode.</para>
+            /// <para>The mode of the cluster backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Automated</para>
@@ -237,7 +256,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupMode { get; set; }
 
             /// <summary>
-            /// <para>The size of the cluster backup set. Unit: bytes.</para>
+            /// <para>The size of the cluster backup set, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>107374182400</para>
@@ -247,7 +266,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupSize { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range within which the cluster backup is performed.</para>
+            /// <para>The time when the cluster backup started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T19:33:20Z</para>
@@ -257,7 +276,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupStartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster backup set.</para>
+            /// <para>The status of the cluster backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -267,14 +286,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string ClusterBackupStatus { get; set; }
 
             /// <summary>
-            /// <para>Version of the backuped instance.</para>
+            /// <para>The database engine version of the instance when the backup was created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>6.0</b></description></item>
-            /// <item><description><b>5.0</b></description></item>
-            /// <item><description><b>4.4</b></description></item>
-            /// <item><description><b>4.2</b></description></item>
-            /// <item><description><b>4.0</b></description></item>
-            /// <item><description><b>3.4</b></description></item>
+            /// <item><description><para><b>7.0</b></para>
+            /// </description></item>
+            /// <item><description><para><b>6.0</b></para>
+            /// </description></item>
+            /// <item><description><para><b>5.0</b></para>
+            /// </description></item>
+            /// <item><description><para><b>4.4</b></para>
+            /// </description></item>
+            /// <item><description><para><b>4.2</b></para>
+            /// </description></item>
+            /// <item><description><para><b>4.0</b></para>
+            /// </description></item>
+            /// <item><description><para><b>3.4</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -285,14 +312,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The additional information in the JSON format.</para>
+            /// <para>The supplementary information. The value is a JSON-formatted string.</para>
             /// </summary>
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo ExtraInfo { get; set; }
             public class DescribeClusterBackupsResponseBodyClusterBackupsExtraInfo : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is <b>1</b>, the cluster backups are migrated from the historical backup sets.</para>
+                /// <para>Indicates whether the backup set was migrated from a historical backup. A value of <b>1</b> indicates that the backup was migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -304,10 +331,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the cluster backup sets take effect. Valid values:</para>
+            /// <para>Indicates whether the cluster backup set is valid. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The cluster backup sets take effect.</description></item>
-            /// <item><description><b>0</b>: The backup sets of child nodes are incomplete or fail.</description></item>
+            /// <item><description><para><b>1</b>: The cluster backup set is valid.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The backup sets of child nodes are not complete or have failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -318,7 +347,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? IsAvail { get; set; }
 
             /// <summary>
-            /// <para>The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.</para>
+            /// <para>The backup progress in percentage.
+            /// This parameter is returned only for backups that are in progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -330,7 +360,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -340,7 +370,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page returned.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -350,7 +380,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -360,7 +390,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F42BB4E-461F-5B55-A37C-53B1141C****</para>

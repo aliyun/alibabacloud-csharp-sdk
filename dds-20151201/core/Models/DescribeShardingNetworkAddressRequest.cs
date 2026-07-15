@@ -20,14 +20,28 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The network type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>Classic</b>: classic network.</para>
+        /// </description></item>
+        /// <item><description><para><b>Public</b>: public network.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VPC</para>
+        /// </summary>
         [NameInMap("NetworkType")]
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</para>
+        /// <para>The ID of a mongos, shard, or ConfigServer node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the IDs of mongos, shard, and ConfigServer nodes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

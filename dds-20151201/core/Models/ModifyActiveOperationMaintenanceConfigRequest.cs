@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyActiveOperationMaintenanceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The day of the cycle.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If CycleType is set to Month, enter a number from 1 to 28 to specify the day of the month. Use a comma (,) to separate multiple days.</para>
+        /// </description></item>
+        /// <item><description><para>If CycleType is set to Week, enter a number from 1 to 7 to specify the day of the week. Use a comma (,) to separate multiple days.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
         /// </summary>
@@ -18,6 +26,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CycleTime { get; set; }
 
         /// <summary>
+        /// <para>The cycle type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Month: monthly</para>
+        /// </description></item>
+        /// <item><description><para>Week: weekly</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Week</para>
         /// </summary>
@@ -26,6 +42,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CycleType { get; set; }
 
         /// <summary>
+        /// <para>The end time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22:00Z</para>
         /// </summary>
@@ -34,6 +52,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the O\&amp;M window for the instance. The time is in the HH:mmZ format and is in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21:00Z</para>
         /// </summary>
@@ -58,6 +78,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the configuration is enabled.</para>
+        /// <list type="bullet">
+        /// <item><description><para>1: enabled</para>
+        /// </description></item>
+        /// <item><description><para>2: disabled</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

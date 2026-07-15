@@ -20,17 +20,26 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The code of the instance. Valid values:</para>
+        /// <para>The commodity code of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dds</b>: a replica set instance that uses the pay-as-you-go billing method</description></item>
-        /// <item><description><b>badds</b>: a replica set instance that uses the subscription billing method</description></item>
-        /// <item><description><b>dds_sharding</b>: a sharded cluster instance that uses the pay-as-you-go billing method</description></item>
-        /// <item><description><b>badds_sharding</b>: a sharded cluster instance that uses the subscription billing method</description></item>
-        /// <item><description><b>badds_sharding_intl</b>: a sharded cluster instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</description></item>
-        /// <item><description><b>dds_sharding_intl</b>: a sharded cluster instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</description></item>
-        /// <item><description><b>badds_sharding_jp</b>: a sharded cluster instance that uses the subscription billing method and is available on the Japan site (jp.alibabacloud.com)</description></item>
-        /// <item><description><b>badds_intl</b>: a replica set instance that uses the subscription billing method and is available on the International site (alibabacloud.com)</description></item>
-        /// <item><description><b>dds_intl</b>: a replica set instance that uses the pay-as-you-go billing method and is available on the International site (alibabacloud.com)</description></item>
+        /// <item><description><para><b>dds</b>: pay-as-you-go ReplicaSet instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>badds</b>: subscription ReplicaSet instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>dds_sharding</b>: pay-as-you-go sharded cluster instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>badds_sharding</b>: subscription sharded cluster instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>badds_sharding_intl</b>: subscription sharded cluster instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
+        /// </description></item>
+        /// <item><description><para><b>dds_sharding_intl</b>: pay-as-you-go sharded cluster instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
+        /// </description></item>
+        /// <item><description><para><b>badds_sharding_jp</b>: subscription sharded cluster instance on the Alibaba Cloud Japan Website.</para>
+        /// </description></item>
+        /// <item><description><para><b>badds_intl</b>: subscription ReplicaSet instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
+        /// </description></item>
+        /// <item><description><para><b>dds_intl</b>: pay-as-you-go ReplicaSet instance on the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,21 +50,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use coupons. Default value: null. Valid values:</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b> or <b>null</b>: uses coupons.</description></item>
-        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use coupons.</description></item>
+        /// <item><description><para><b>default</b> or <b>null</b> (default): A coupon is used.</para>
+        /// </description></item>
+        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: A coupon is not used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that contains the details of the instance. For more information about the parameter and sample JSON formats, see <a href="https://help.aliyun.com/document_detail/197291.html">DescribePrice</a>.</para>
+        /// <para>A JSON string that contains information about the instance. For more information about the parameters and JSON examples, see <a href="https://help.aliyun.com/document_detail/197291.html">DBInstances parameter of the DescribePrice operation</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,10 +77,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the OrderParams parameter. Valid values:</para>
+        /// <para>Specifies whether to return the order parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): The order parameters are not returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: The order parameters are returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,9 +95,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BUY</b></description></item>
-        /// <item><description><b>UPGRADE</b></description></item>
-        /// <item><description><b>RENEW</b></description></item>
+        /// <item><description><para><b>BUY</b>: Creates an instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>UPGRADE</b>: Changes the configuration of an instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>RENEW</b>: Renews an instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -104,7 +120,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The code of the service. Default value: <b>dds</b>.</para>
+        /// <para>The product code. The default value is <b>dds</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dds</para>
@@ -114,7 +130,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -124,7 +140,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyiu4ekp****</para>

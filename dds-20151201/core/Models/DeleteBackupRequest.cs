@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DeleteBackupRequest : TeaModel {
         /// <summary>
+        /// <para>The backup ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRenewalPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The business information. This is an additional parameter.</para>
+        /// <para>Additional business information, provided as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{“ActivityId&quot;:&quot;000000000&quot;}</para>
@@ -20,17 +20,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The coupon code. Default value: <b>youhuiquan_promotion_option_id_for_blank</b>.</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>default</b> or <b>null</b> (default): Use a coupon.</para>
+        /// </description></item>
+        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: Do not use a coupon.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("RegionList")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTaskRegionResponseBodyRegionList> RegionList { get; set; }
         public class DescribeActiveOperationTaskRegionResponseBodyRegionList : TeaModel {
             /// <summary>
-            /// <para>The total number of tasks.</para>
+            /// <para>The number of tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>

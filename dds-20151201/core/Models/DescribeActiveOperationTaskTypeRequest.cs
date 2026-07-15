@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to return historical O\&amp;M tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): The system returns only pending O\&amp;M tasks.</description></item>
-        /// <item><description><b>1</b>: The system returns historical O\&amp;M tasks.</description></item>
+        /// <item><description><para><b>0</b> (default): The system returns only pending O\&amp;M tasks.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The system returns historical O\&amp;M tasks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

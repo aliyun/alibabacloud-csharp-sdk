@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The role of the instance. Valid values:</para>
+        /// <para>The type of the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>db</b>: a shard node.</description></item>
-        /// <item><description><b>cs</b>: a Configserver node.</description></item>
-        /// <item><description><b>mongos</b>: a mongos node.</description></item>
+        /// <item><description><para><b>db</b>: shard node.</para>
+        /// </description></item>
+        /// <item><description><para><b>cs</b>: Configserver node.</para>
+        /// </description></item>
+        /// <item><description><para><b>mongos</b>: mongos node.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the NodeId parameter.</para>
+        /// <para>If this parameter is a sharded cluster instance ID, you must also specify the NodeId parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,9 +42,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos or shard node in the specified sharded cluster instance.</para>
+        /// <para>The ID of the mongos or shard node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para> This parameter is valid only when DBInstanceId is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is active only when the DBInstanceId parameter is set to a sharded cluster instance ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,9 +63,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The instance parameters that you want to modify and their values. Specify this parameter in a JSON string. Sample format: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</para>
+        /// <para>The parameters and their new values. The value must be a JSON string. Example: {&quot;ParameterName1&quot;:&quot;ParameterValue1&quot;,&quot;ParameterName2&quot;:&quot;ParameterValue2&quot;}.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query a list of default parameter templates.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/67618.html">DescribeParameterTemplates</a> operation to query the list of default parameter templates.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. To query the latest region list, call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -91,6 +94,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The time to apply the parameter modifications. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: Immediately.</para>
+        /// </description></item>
+        /// <item><description><para>1: During the maintenance window.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]
         public string SwitchMode { get; set; }

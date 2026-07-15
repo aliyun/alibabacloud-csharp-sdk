@@ -74,6 +74,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -82,6 +84,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? MaxRecordsPerPage { get; set; }
 
         /// <summary>
+        /// <para>The page number of the returned results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -90,6 +94,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F8CA8312-530A-413A-9129-F2BB32A8D404</para>
         /// </summary>
@@ -98,6 +104,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of binlog files found.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>240</para>
         /// </summary>

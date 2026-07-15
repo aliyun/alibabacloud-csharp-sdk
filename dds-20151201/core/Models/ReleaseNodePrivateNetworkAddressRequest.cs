@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ReleaseNodePrivateNetworkAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The public endpoint type. Valid values:</para>
+        /// <para>The type of the public endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SRV</b></description></item>
-        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><para><b>SRV</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Normal</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is valid only when you want to release an SRV endpoint.</para>
+        /// <para>This parameter is available only when the endpoint to be released is an SRV endpoint.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,13 +40,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the internal endpoint. Valid values:</para>
+        /// <para>The network type of the internal endpoint for the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
-        /// <item><description><b>Classic</b>: classic network.</description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>Classic</b>: classic network.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> operation to query the network type of the internal endpoint.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/62135.html">DescribeShardingNetworkAddress</a> API to query the network type of the internal endpoint for the node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +61,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the shard or Configserver node.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the ID of the shard or Configserver node.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> API to query the ID of the shard or Configserver node.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>When you release an SRV address, enter the instance ID for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

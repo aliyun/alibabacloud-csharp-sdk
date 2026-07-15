@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceAttributeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6826DEE3-B374-5DB7-909D-C8978827C534</para>
         /// </summary>

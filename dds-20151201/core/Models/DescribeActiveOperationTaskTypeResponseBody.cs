@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The type of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>rds_apsaradb_transfer</b>: data migration</description></item>
-            /// <item><description><b>rds_apsaradb_upgrade</b>: minor version update</description></item>
+            /// <item><description><para><b>rds_apsaradb_transfer</b>: data migration</para>
+            /// </description></item>
+            /// <item><description><para><b>rds_apsaradb_upgrade</b>: minor version update</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The task type in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rds_apsaradb_upgrade</para>
+            /// <para>小版本升级</para>
             /// </summary>
             [NameInMap("TaskTypeInfoZh")]
             [Validation(Required=false)]

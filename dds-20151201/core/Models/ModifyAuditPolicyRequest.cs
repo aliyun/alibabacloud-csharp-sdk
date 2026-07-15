@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyAuditPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The request source for the audit log feature. Set the value to <b>Console</b>.</para>
+        /// <para>The source of the request. Set this parameter to <b>Console</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Console</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AuditLogSwitchSource { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the audit log feature. Valid values:</para>
+        /// <para>The status of the audit log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b></description></item>
-        /// <item><description><b>disabled</b></description></item>
+        /// <item><description><para><b>enable</b>: Enables the audit log feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>disabled</b>: Disables the audit log feature.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,6 +47,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is effective only for the <b>V2_Standard</b> (DAS Enterprise Edition (NoSQL Compatible) audit log) edition. It specifies the hot storage duration for the audit log. Valid values: 0 to 7. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("HotStoragePeriod")]
         [Validation(Required=false)]
         public int? HotStoragePeriod { get; set; }
@@ -66,13 +74,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the audit log feature. Valid values:</para>
+        /// <para>The edition of the audit log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Trail</b>: free trial edition.</description></item>
-        /// <item><description><b>Standard</b>: official edition.</description></item>
+        /// <item><description><para><b>Trial</b>: Trial Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>Standard</b>: Standard Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>V2_Standard</b>: DAS Enterprise Edition (NoSQL Compatible) audit log.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The default value is <b>Trail</b>. Starting from January 6, 2022, the official edition of the audit log feature has been launched in all regions, and the free trial edition of the feature can no longer be applied for. We recommend that you set this parameter to <b>Standard</b>.</para>
+        /// <list type="bullet">
+        /// <item><description><para>The default value of this parameter is <b>Trial</b>. Starting from January 6, 2022, the Standard edition is being rolled out across regions, and new applications for the Trial edition are no longer accepted.</para>
+        /// </description></item>
+        /// <item><description><para>Starting from February 2026, the DAS Enterprise Edition (NoSQL Compatible) audit log will be rolled out across regions, and new applications for the Standard edition will no longer be accepted.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +100,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The log retention period. Valid values: 1 to 365 days. Default value: 30 days.</para>
+        /// <list type="bullet">
+        /// <item><description><para>For the <b>Standard</b> edition, this parameter specifies the retention period for the audit log. Valid values: 1 to 365. The default value is 30. Unit: days.</para>
+        /// </description></item>
+        /// <item><description><para>For the <b>V2_Standard</b> (DAS Enterprise Edition (NoSQL Compatible) audit log) edition, this parameter specifies the cold storage duration for the audit log. Valid values: 30, 180, 365, 1095, and 1825. Unit: days.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

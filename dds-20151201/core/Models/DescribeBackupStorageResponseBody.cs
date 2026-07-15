@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The free quota for the storage capacity used for backup. Unit: bytes.</para>
+        /// <para>The free backup quota for the instance. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42949672960</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? FreeSize { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity used for the full backup. Unit: bytes.</para>
+        /// <para>The storage space used by full backups. Unit: bytes.</para>
         /// <remarks>
-        /// <para> Instances that use cloud disks support snapshot backup. The size of the storage used for the current full backup is the size of the snapshot chain.</para>
+        /// <para>Instances that use cloud disks are backed up using snapshots. The size of a full backup is the total size of the snapshot chain.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? FullStorageSize { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity used for the log backup. Unit: bytes.</para>
+        /// <para>The storage space used by log backups. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7892216</para>

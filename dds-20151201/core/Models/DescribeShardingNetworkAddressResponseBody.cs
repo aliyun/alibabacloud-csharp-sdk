@@ -49,6 +49,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
+        /// <summary>
+        /// <para>The suffix of the connection string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>.mongodb.rds.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("ConnectionStringSuffix")]
         [Validation(Required=false)]
         public string ConnectionStringSuffix { get; set; }

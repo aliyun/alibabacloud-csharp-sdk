@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Indicates whether any O\&amp;M tasks need pop-up windows to notify users actions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No O\&amp;M tasks need pop-up windows to notify users actions.</description></item>
-        /// <item><description><b>1</b>: Some O\&amp;M tasks need pop-up windows to notify users actions.</description></item>
+        /// <item><description><para><b>0</b>: No O\&amp;M tasks need pop-up windows to notify users actions.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Some O\&amp;M tasks need pop-up windows to notify users actions.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

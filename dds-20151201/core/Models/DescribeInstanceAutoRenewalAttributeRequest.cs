@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The category of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>replicate</b>: the standalone or replica set instance</description></item>
-        /// <item><description><b>sharding</b>: the sharded cluster instance</description></item>
+        /// <item><description><para><b>replicate</b>: the standalone or replica set instance</para>
+        /// </description></item>
+        /// <item><description><para><b>sharding</b>: the sharded cluster instance</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>replicate</b>.</para>
         /// 
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <remarks>
-        /// <para> Default value: <b>30</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

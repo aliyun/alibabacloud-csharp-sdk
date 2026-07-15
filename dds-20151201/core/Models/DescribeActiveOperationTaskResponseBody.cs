@@ -119,12 +119,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The state of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>2: The task is waiting for users to specify a switchover time.</description></item>
-            /// <item><description>3: The task is waiting to be performed.</description></item>
-            /// <item><description>4: The task is being performed. If the task is in this state, the ModifyActiveOperationTask operation cannot be called to modify the scheduled switchover time.</description></item>
-            /// <item><description>5: The task is performed.</description></item>
-            /// <item><description>6: The task fails.</description></item>
-            /// <item><description>7: The task is canceled.</description></item>
+            /// <item><description><para>2: The task is waiting for users to specify a switchover time.</para>
+            /// </description></item>
+            /// <item><description><para>3: The task is waiting to be performed.</para>
+            /// </description></item>
+            /// <item><description><para>4: The task is being performed. If the task is in this state, the ModifyActiveOperationTask operation cannot be called to modify the scheduled switchover time.</para>
+            /// </description></item>
+            /// <item><description><para>5: The task is performed.</para>
+            /// </description></item>
+            /// <item><description><para>6: The task fails.</para>
+            /// </description></item>
+            /// <item><description><para>7: The task is canceled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,10 +163,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The type of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>rds_apsaradb_ha: master-replica switchover</description></item>
-            /// <item><description>rds_apsaradb_transfer: instance migration</description></item>
-            /// <item><description>rds_apsaradb_upgrade: minor version update</description></item>
-            /// <item><description>all: all types</description></item>
+            /// <item><description><para>rds_apsaradb_ha: master-replica switchover</para>
+            /// </description></item>
+            /// <item><description><para>rds_apsaradb_transfer: instance migration</para>
+            /// </description></item>
+            /// <item><description><para>rds_apsaradb_upgrade: minor version update</para>
+            /// </description></item>
+            /// <item><description><para>all: all types</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

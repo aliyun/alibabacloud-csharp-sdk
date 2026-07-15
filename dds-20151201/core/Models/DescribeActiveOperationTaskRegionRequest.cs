@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTaskRegionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the historical tasks. Default value: 0. Valid values:</para>
+        /// <para>Specifies whether to return historical tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: returns the current task.</description></item>
-        /// <item><description>1: returns the historical tasks.</description></item>
+        /// <item><description><para>0: The default value. Returns current tasks.</para>
+        /// </description></item>
+        /// <item><description><para>1: Returns historical tasks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,12 +42,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>rds_apsaradb_ha: master-replica switchover</description></item>
-        /// <item><description>rds_apsaradb_transfer: instance migration</description></item>
-        /// <item><description>rds_apsaradb_upgrade: minor version update</description></item>
-        /// <item><description>all: all types</description></item>
+        /// <item><description><para>rds_apsaradb_ha: a primary/secondary node switchover.</para>
+        /// </description></item>
+        /// <item><description><para>rds_apsaradb_transfer: an instance migration.</para>
+        /// </description></item>
+        /// <item><description><para>rds_apsaradb_upgrade: a minor version upgrade.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

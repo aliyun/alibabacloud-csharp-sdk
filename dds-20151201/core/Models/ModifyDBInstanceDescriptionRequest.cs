@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>To modify the name of a shard or mongos node in a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the shard or mongos node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para> This parameter is valid only if you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is valid only if you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

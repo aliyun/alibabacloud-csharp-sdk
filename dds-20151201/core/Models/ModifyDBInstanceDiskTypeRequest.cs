@@ -12,8 +12,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <b>Expenses</b> and select <b>User Center</b> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <b>Order Management</b> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</description></item>
+        /// <item><description><b>true</b>: Enables automatic payment. Make sure that your account has a sufficient balance.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: Disables automatic payment. To pay for the order, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b>. In the navigation pane on the left, choose <b>Subscription Orders</b> &gt; <b>My Orders</b>. On the <b>Product Orders</b> tab, find the order and complete the payment.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b>: Disables automatic payment. To pay for the order, log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose <b>Expenses</b> &gt; <b>Expenses and Costs</b>. In the navigation pane on the left, click <b>Order Management</b>. On the <b>Product Orders</b> page, find the order and complete the payment.</description></item>
         /// </list>
         /// <para>Default value: <b>true</b>.</para>
         /// 
@@ -25,12 +32,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enables auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disables auto-renewal.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>false</b>.</para>
+        /// <para>Default value: <b>false</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +59,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// <para>The coupon code. The default value is <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -71,12 +80,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new disk type. Valid values:</para>
+        /// <para>The disk type after the modification. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk</description></item>
-        /// <item><description><b>cloud_essd1</b>: PL1 ESSD</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSD</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSD</description></item>
+        /// <item><description><b>cloud_auto</b>: ESSD AutoPL disk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,13 +103,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ExtraParam { get; set; }
 
         /// <summary>
-        /// <para>The type of configuration changes. Valid values:</para>
+        /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UPGRADE</b></description></item>
-        /// <item><description><b>DOWNGRADE</b></description></item>
+        /// <item><description><para><b>UPGRADE</b>: Upgrades the instance configuration.</para>
+        /// </description></item>
+        /// <item><description><para><b>DOWNGRADE</b>: Downgrades the instance configuration.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is valid only when the billing method of the instance is subscription.</para>
+        /// <para>This parameter is available only when the instance uses the subscription billing method.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

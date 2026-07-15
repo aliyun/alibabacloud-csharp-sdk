@@ -23,9 +23,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The method that is used to modify the IP address whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cover</b>: overwrites the original IP address whitelist.</description></item>
-        /// <item><description><b>Append</b>: appends data to the IP address whitelist.</description></item>
-        /// <item><description><b>Delete</b>: deletes the IP address whitelist.</description></item>
+        /// <item><description><para><b>Cover</b>: overwrites the original IP address whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>Append</b>: appends data to the IP address whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>Delete</b>: deletes the IP address whitelist.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>Cover</b>.</para>
         /// 
@@ -76,8 +79,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The IP addresses in the IP address whitelist. Separate multiple IP addresses with commas (,). You can add a maximum of 1,000 different IP addresses to the IP address whitelist. The entries in the IP address whitelist must be in one of the following formats:</para>
         /// <list type="bullet">
-        /// <item><description>IP addresses, such as 127.0.0.1.</description></item>
-        /// <item><description>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</description></item>
+        /// <item><description><para>IP addresses, such as 127.0.0.1.</para>
+        /// </description></item>
+        /// <item><description><para>CIDR blocks, such as 127.0.0.1/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

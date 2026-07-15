@@ -10,88 +10,102 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The O\&amp;M tasks.</para>
+        /// <para>The list of O\&amp;M tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeActiveOperationTasksResponseBodyItems> Items { get; set; }
         public class DescribeActiveOperationTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>Indicates whether the task can be canceled.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: The task can be canceled.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The task cannot be canceled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AllowCancel")]
             [Validation(Required=false)]
             public string AllowCancel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the modification operation is allowed.</para>
+            /// <para>Indicates whether the time can be changed.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The modification operation is not allowed.</description></item>
-            /// <item><description><b>1</b>: The modification operation is allowed.</description></item>
+            /// <item><description><para><b>1</b>: The time can be changed.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The time cannot be changed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>0</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("AllowChange")]
             [Validation(Required=false)]
             public string AllowChange { get; set; }
 
             /// <summary>
-            /// <para>The change level of the O\&amp;M task.</para>
+            /// <para>The code of the event level.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>S1</b>: system O\&amp;M.</para>
+            /// </description></item>
+            /// <item><description><para><b>S0</b>: threat fixing.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>S1</para>
             /// </summary>
             [NameInMap("ChangeLevel")]
             [Validation(Required=false)]
             public string ChangeLevel { get; set; }
 
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>The event level in English.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>System maintenance</para>
             /// </summary>
             [NameInMap("ChangeLevelEn")]
             [Validation(Required=false)]
             public string ChangeLevelEn { get; set; }
 
             /// <summary>
-            /// <para>The task type in English.</para>
+            /// <para>The event level in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>系统运维</para>
             /// </summary>
             [NameInMap("ChangeLevelZh")]
             [Validation(Required=false)]
             public string ChangeLevelZh { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The time when the task was created. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-07-14 10:48:43</para>
+            /// <para>2023-05-30T14:30:00Z</para>
             /// </summary>
             [NameInMap("CreatedTime")]
             [Validation(Required=false)]
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>The current zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>cn-beijing-h</para>
             /// </summary>
             [NameInMap("CurrentAVZ")]
             [Validation(Required=false)]
             public string CurrentAVZ { get; set; }
 
             /// <summary>
-            /// <para>The type of the database engine.</para>
+            /// <para>The database engine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mongoDb</para>
@@ -101,7 +115,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DbType { get; set; }
 
             /// <summary>
-            /// <para>The version of the database engine.</para>
+            /// <para>The database engine version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.6</para>
@@ -111,10 +125,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string DbVersion { get; set; }
 
             /// <summary>
-            /// <para>The end time of the O\&amp;M task.</para>
+            /// <para>The latest time to which the task execution time can be postponed. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1646014421633</para>
+            /// <para>2023-05-30T23:59:59Z</para>
             /// </summary>
             [NameInMap("Deadline")]
             [Validation(Required=false)]
@@ -124,158 +138,188 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>11111</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>The impact of the event in English.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>Transient instance disconnection</para>
             /// </summary>
             [NameInMap("ImpactEn")]
             [Validation(Required=false)]
             public string ImpactEn { get; set; }
 
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>The impact of the event in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>实例闪断</para>
             /// </summary>
             [NameInMap("ImpactZh")]
             [Validation(Required=false)]
             public string ImpactZh { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The alias or description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>test</para>
             /// </summary>
             [NameInMap("InsComment")]
             [Validation(Required=false)]
             public string InsComment { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>dds-bp16aaccfe10****</para>
             /// </summary>
             [NameInMap("InsName")]
             [Validation(Required=false)]
             public string InsName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task is modified. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the task was modified. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-12-24T09:48:01Z</para>
+            /// <para>2023-05-30T14:30:00Z</para>
             /// </summary>
             [NameInMap("ModifiedTime")]
             [Validation(Required=false)]
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The required preparation period between the task start time and the switchover time. The time is displayed in the <em>HH:mm:ss</em> format.</para>
+            /// <para>The preparation time required between the start time of the O\&amp;M task and the switchover time. The time is in the <em>HH:mm:ss</em> format.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>04:00:00</para>
             /// </summary>
             [NameInMap("PrepareInterval")]
             [Validation(Required=false)]
             public string PrepareInterval { get; set; }
 
             /// <summary>
-            /// <para>The region of the instance.</para>
+            /// <para>The ID of the region where the pending event is located.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-hangzhou</para>
+            /// <para>cn-beijing</para>
             /// </summary>
             [NameInMap("Region")]
             [Validation(Required=false)]
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The result information. The value of this parameter can be ignored.</para>
+            /// <para>The information about the execution result.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>userCancel</para>
             /// </summary>
             [NameInMap("ResultInfo")]
             [Validation(Required=false)]
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em> T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the task was executed. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-12-24T06:01:05Z</para>
+            /// <para>2023-05-30T00:00:00Z</para>
             /// </summary>
             [NameInMap("StartTime")]
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>The task status.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>3</b>: pending.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: running.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: canceled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>3</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The subinstances.</para>
+            /// <para>The list of child instances.</para>
             /// </summary>
             [NameInMap("SubInsNames")]
             [Validation(Required=false)]
             public List<string> SubInsNames { get; set; }
 
             /// <summary>
-            /// <para>The switchover point in time in which disconnection may occur. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
+            /// <para>The time when the switchover was initiated. The time is in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-11-24T11:20:00Z</para>
+            /// <para>2023-05-30T14:30:00Z</para>
             /// </summary>
             [NameInMap("SwitchTime")]
             [Validation(Required=false)]
             public string SwitchTime { get; set; }
 
+            /// <summary>
+            /// <para>The task parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
+            /// </summary>
             [NameInMap("TaskParams")]
             [Validation(Required=false)]
             public string TaskParams { get; set; }
 
             /// <summary>
-            /// <para>The task type.</para>
+            /// <para>The task type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>rds_apsaradb_ha</b>: primary-secondary node switchover.</para>
+            /// </description></item>
+            /// <item><description><para><b>rds_apsaradb_transfer</b>: instance migration.</para>
+            /// </description></item>
+            /// <item><description><para><b>rds_apsaradb_upgrade</b>: minor version upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><b>rds_apsaradb_maxscale</b>: proxy minor version upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><b>all</b>: all task types.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>rds_apsaradb_upgrade</para>
             /// </summary>
             [NameInMap("TaskType")]
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>N/A</para>
+            /// <para>The reason for the task in English.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>Minor version update</para>
             /// </summary>
             [NameInMap("TaskTypeEn")]
             [Validation(Required=false)]
             public string TaskTypeEn { get; set; }
 
             /// <summary>
-            /// <para>The task type in Chinese.</para>
+            /// <para>The reason for the task in Chinese.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>小版本升级</para>
             /// </summary>
             [NameInMap("TaskTypeZh")]
             [Validation(Required=false)]
@@ -284,7 +328,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -294,7 +338,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -307,17 +351,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111E7B16-0A87-4CBA-B271-F34AD61E099F</para>
+        /// <para>111E7B16-0A87-4CBA-B271-F34AD61E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The number of returned task records.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>727</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]

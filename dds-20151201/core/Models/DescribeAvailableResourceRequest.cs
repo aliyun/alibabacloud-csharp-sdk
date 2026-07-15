@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The architecture of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: replica set instance</description></item>
-        /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
+        /// <item><description><para><b>normal</b>: replica set instance</para>
+        /// </description></item>
+        /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b> (default): subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><para><b>PrePaid</b> (default): subscription</para>
+        /// </description></item>
+        /// <item><description><para><b>PostPaid</b>: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,11 +111,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The storage type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>local_ssd: local SSD</description></item>
-        /// <item><description>cloud_essd1: PL1 enhanced SSD (ESSD)</description></item>
-        /// <item><description>cloud_essd2: PL2 ESSD</description></item>
-        /// <item><description>cloud_essd3: PL3 ESSD</description></item>
-        /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+        /// <item><description><para>local_ssd: local SSD</para>
+        /// </description></item>
+        /// <item><description><para>cloud_essd1: PL1 enhanced SSD (ESSD)</para>
+        /// </description></item>
+        /// <item><description><para>cloud_essd2: PL2 ESSD</para>
+        /// </description></item>
+        /// <item><description><para>cloud_essd3: PL3 ESSD</para>
+        /// </description></item>
+        /// <item><description><para>cloud_auto: ESSD AutoPL disk</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates all types of storage resources are queried.</para>
         /// 

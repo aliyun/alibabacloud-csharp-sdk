@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeVpcsForMongoDBResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>53924AF0-1628-5AA2-9C95-D4**********</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>The list of VPCs.</para>
+        /// </summary>
         [NameInMap("Vpcs")]
         [Validation(Required=false)]
         public List<DescribeVpcsForMongoDBResponseBodyVpcs> Vpcs { get; set; }
         public class DescribeVpcsForMongoDBResponseBodyVpcs : TeaModel {
             /// <summary>
+            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string AliUid { get; set; }
 
             /// <summary>
+            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -61,11 +76,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public string Bid { get; set; }
 
+            /// <summary>
+            /// <para>The CIDR block of the VPC.</para>
+            /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
+            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>This parameter is deprecated. No value is returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -82,6 +104,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the VPC is the default one. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: The VPC is the default one.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The VPC is not the default one.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -90,6 +120,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -98,6 +130,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string RegionNo { get; set; }
 
             /// <summary>
+            /// <para>The status of the VPC. A value of <b>Available</b> indicates that the VPC is active.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Available</para>
             /// </summary>
@@ -105,15 +139,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The list of vSwitches.</para>
+            /// </summary>
             [NameInMap("VSwitchs")]
             [Validation(Required=false)]
             public List<DescribeVpcsForMongoDBResponseBodyVpcsVSwitchs> VSwitchs { get; set; }
             public class DescribeVpcsForMongoDBResponseBodyVpcsVSwitchs : TeaModel {
+                /// <summary>
+                /// <para>The CIDR block of the vSwitch.</para>
+                /// </summary>
                 [NameInMap("CidrBlock")]
                 [Validation(Required=false)]
                 public string CidrBlock { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is deprecated. No value is returned.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
                 /// </summary>
@@ -122,6 +164,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>This parameter is deprecated. No value is returned.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
                 /// </summary>
@@ -130,6 +174,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>true</b>: The vSwitch is the default vSwitch.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The vSwitch is not the default vSwitch.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -138,6 +190,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
+                /// <para>The zone to which the vSwitch belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-i</para>
                 /// </summary>
@@ -146,6 +200,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string IzNo { get; set; }
 
                 /// <summary>
+                /// <para>The status of the vSwitch. A value of <b>Available</b> indicates that the vSwitch is active.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Available</para>
                 /// </summary>
@@ -154,7 +210,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>VSwitch ID。</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp*******************</para>
@@ -164,6 +220,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-name</para>
                 /// </summary>
@@ -174,7 +232,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zep2pepkthg5ueal****</para>
@@ -184,6 +242,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The name of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-name</para>
             /// </summary>

@@ -23,13 +23,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The type of logs collected by the audit log feature of the instance. Separate multiple types with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>admin</b>: O\&amp;M and management operations</description></item>
-        /// <item><description><b>slow</b>: slow query logs</description></item>
-        /// <item><description><b>query</b>: query operations</description></item>
-        /// <item><description><b>insert</b>: insert operations</description></item>
-        /// <item><description><b>update</b>: update operations</description></item>
-        /// <item><description><b>delete</b>: delete operations</description></item>
-        /// <item><description><b>command</b>: protocol commands such as the aggregate method</description></item>
+        /// <item><description><para><b>admin</b>: O\&amp;M and management operations</para>
+        /// </description></item>
+        /// <item><description><para><b>slow</b>: slow query logs</para>
+        /// </description></item>
+        /// <item><description><para><b>query</b>: query operations</para>
+        /// </description></item>
+        /// <item><description><para><b>insert</b>: insert operations</para>
+        /// </description></item>
+        /// <item><description><para><b>update</b>: update operations</para>
+        /// </description></item>
+        /// <item><description><para><b>delete</b>: delete operations</para>
+        /// </description></item>
+        /// <item><description><para><b>command</b>: protocol commands such as the aggregate method</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,8 +66,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role of the node in the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>primary</b></description></item>
-        /// <item><description><b>secondary</b></description></item>
+        /// <item><description><para><b>primary</b></para>
+        /// </description></item>
+        /// <item><description><para><b>secondary</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

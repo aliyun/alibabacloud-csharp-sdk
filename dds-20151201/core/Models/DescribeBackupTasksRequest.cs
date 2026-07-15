@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup task.</para>
+        /// <para>The backup job ID.</para>
         /// <remarks>
-        /// <para> If you call the <a href="https://help.aliyun.com/document_detail/468439.html">CreateBackup</a> operation to perform a manual backup task, you can set this parameter to the returned backup ID to query the backup progress of the task.</para>
+        /// <para>If you call <a href="https://help.aliyun.com/document_detail/468439.html">CreateBackup</a> to perform a manual backup, you can pass the returned backup ID to query the backup progress.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

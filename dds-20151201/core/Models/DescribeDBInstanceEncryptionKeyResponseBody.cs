@@ -52,8 +52,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Indicates whether the key for the instance is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enabled</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><para><b>Enabled</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Disabled</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shard or mongos node in the sharded cluster instance.</para>
+        /// <para>The ID of a shard or Mongos node in a sharded cluster instance.</para>
         /// <remarks>
-        /// <para>The sharded cluster instance is restarted if you do not specify this parameter.</para>
+        /// <para>If you do not specify this parameter for a sharded cluster instance, the entire instance is restarted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("NodeId")]
         [Validation(Required=false)]
         public string NodeId { get; set; }
+
+        [NameInMap("NodeType")]
+        [Validation(Required=false)]
+        public string NodeType { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -49,6 +53,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The time to restart the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: The instance is restarted immediately.</para>
+        /// </description></item>
+        /// <item><description><para>1: The instance is restarted within the maintenance window.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]
         public string SwitchMode { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeParameterTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The database engine of the instance. Set the value to <b>MongoDB</b>.</para>
+        /// <para>The database engine. Set the value to <b>mongodb</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,13 +21,22 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values:</para>
+        /// <para>The database version number. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.0</b></description></item>
-        /// <item><description><b>4.4</b></description></item>
-        /// <item><description><b>4.2</b></description></item>
-        /// <item><description><b>4.0</b></description></item>
-        /// <item><description><b>3.4</b></description></item>
+        /// <item><description><para><b>7.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>6.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4.4</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4.2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>3.4</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +56,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -66,19 +75,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// <para>The role of the instance. Valid values:</para>
-        /// <ol>
-        /// <item><description><para>db:  a shard node.</para>
+        /// <list type="bullet">
+        /// <item><description><para>db: the shard role of a sharded cluster instance.</para>
         /// </description></item>
-        /// <item><description><para>cs:  a Configserver node.</para>
+        /// <item><description><para>cs: the config server role of a sharded cluster instance.</para>
         /// </description></item>
-        /// <item><description><para>mongos:  a mongos node.</para>
+        /// <item><description><para>mongos: the mongos role of a sharded cluster instance.</para>
         /// </description></item>
-        /// <item><description><para>normal: a replica set node.</para>
+        /// <item><description><para>normal: the role of a replica set instance.</para>
         /// </description></item>
-        /// <item><description><para>physical: a standalone node.</para>
+        /// <item><description><para>physical: the role of a single node instance.</para>
         /// </description></item>
-        /// </ol>
-        /// <para>default: normal</para>
+        /// </list>
+        /// <para>The default value is normal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>

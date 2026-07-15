@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the shard node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para> This parameter is required only when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is required if the <b>DBInstanceId</b> parameter specifies the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the instance is located. Call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-bejing</para>

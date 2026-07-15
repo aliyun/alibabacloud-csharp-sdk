@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The description of the account.</para>
         /// <list type="bullet">
-        /// <item><description>The description must start with a letter and cannot start with http:// or https://.</description></item>
-        /// <item><description>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</description></item>
+        /// <item><description><para>The description must start with a letter and cannot start with http\:// or https\://.</para>
+        /// </description></item>
+        /// <item><description><para>The description must be 2 to 256 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,12 +40,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The type of the account whose description you can modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>db</b>: shard account</description></item>
-        /// <item><description><b>cs</b>: ConfigServer account</description></item>
-        /// <item><description><b>normal</b> (default): replica set account (available)</description></item>
+        /// <item><description><para><b>db</b>: shard account</para>
+        /// </description></item>
+        /// <item><description><para><b>cs</b>: ConfigServer account</para>
+        /// </description></item>
+        /// <item><description><para><b>normal</b> (default): replica set account (available)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can set this parameter only to <b>normal</b>.</para>
+        /// <para>You can set this parameter only to <b>normal</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

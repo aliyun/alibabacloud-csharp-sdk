@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>db: a shard node.</description></item>
-        /// <item><description>cs: a Configserver node.</description></item>
-        /// <item><description>mongos: a mongos node.</description></item>
+        /// <item><description><para>db: a shard node.</para>
+        /// </description></item>
+        /// <item><description><para>cs: a Configserver node.</para>
+        /// </description></item>
+        /// <item><description><para>mongos: a mongos node.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the mongos or shard node in the specified sharded cluster instance.</para>
         /// <remarks>
-        /// <para> This parameter is valid when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is valid when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

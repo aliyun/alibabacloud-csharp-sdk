@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceNetworkTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The retention period of the original classic network address when you change the network type to VPC. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>. Unit: days.</para>
+        /// <para>The retention period of the original classic network address when you switch the network type to VPC. Settings. Valid values: <b>14</b>, <b>30</b>, <b>60</b>, and <b>120</b>. Unit: days.</para>
         /// <remarks>
-        /// <para>This parameter is required when the <b>NetworkType</b> parameter is set to <b>VPC</b> and the <b>RetainClassic</b> parameter is set to <b>True</b>.</para>
+        /// <para>This parameter is required when the <b>NetworkType</b> parameter settings is set to <b>VPC</b> and the <b>RetainClassic</b> parameter settings is set to <b>True</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The network type to switch to. Valid value:</para>
+        /// <para>The target network type to which you want to switch the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
+        /// <item><description><b>VPC</b>: switches the network type to VPC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,19 +64,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain the original classic network address when you change the network type to VPC. Valid values:</para>
+        /// <para>Specifies whether to retain the original classic network address when you switch the network type to VPC. Settings. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>True</b>: retains the original classic network address.</description></item>
         /// <item><description><b>False</b>: does not retain the original classic network address.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required when the <b>NetworkType</b> parameter is set to <b>VPC</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If you set this parameter to <b>True</b>, you must also specify the <b>ClassicExpiredDays</b> parameter.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required when the <b>NetworkType</b> parameter settings is set to <b>VPC</b>.</description></item>
+        /// <item><description>If this parameter settings is set to <b>True</b>, you must also specify the <b>ClassicExpiredDays</b> parameter.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -86,9 +84,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RetainClassic { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch in the VPC.</para>
+        /// <para>The vSwitch ID in the VPC.</para>
         /// <remarks>
-        /// <para>This parameter is required when the <b>NetworkType</b> parameter is set to <b>VPC</b>.</para>
+        /// <para>This parameter is required when the <b>NetworkType</b> parameter settings is set to <b>VPC</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,9 +97,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC ID.</para>
         /// <remarks>
-        /// <para>This parameter is required when the <b>NetworkType</b> parameter is set to <b>VPC</b>.</para>
+        /// <para>This parameter is required when the <b>NetworkType</b> parameter settings is set to <b>VPC</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>可用区ID，您可以通过调用<a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a>接口查询可用区ID。</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

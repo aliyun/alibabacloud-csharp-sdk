@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the mongos node in the sharded cluster instance.</para>
         /// <remarks>
-        /// <para> This parameter can be used only when the instance type is sharded cluster.</para>
+        /// <para>This parameter can be used only when the instance type is sharded cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>Specify whether to disable password-free access over VPC. Set the value to <b>Close</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Open</para>
+        /// <para>Close</para>
         /// </summary>
         [NameInMap("VpcAuthMode")]
         [Validation(Required=false)]

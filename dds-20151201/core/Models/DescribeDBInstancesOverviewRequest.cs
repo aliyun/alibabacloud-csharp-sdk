@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
-        /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
+        /// <item><description><para><b>PrePaid</b>: subscription</para>
+        /// </description></item>
+        /// <item><description><para><b>PostPaid</b>: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,12 +36,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance type. The instance type varies based on the instance architecture. For more information about instance types supported by different instance architectures, see the following references:</para>
+        /// <para>The instance type. For more information about the instance types available for different instance architectures, see:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/311407.html">Standalone instance types</a></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/311410.html">Replica set instance types</a></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a></para>
+        /// </description></item>
         /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>This parameter is not required for Serverless instances.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dds.mongo.2xlarge</para>
@@ -49,15 +58,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to query the overview information.</para>
+        /// <para>The ID of the instance whose overview you want to query.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, the overview information of all instances within this account is queried.</para>
+        /// <item><description><para>If you do not specify this parameter, an overview of all instances in your Alibaba Cloud account is returned.</para>
         /// </description></item>
-        /// <item><description><para>Separate the instance IDs with commas (,).</para>
+        /// <item><description><para>You can specify multiple instance IDs. Separate the IDs with commas (,).</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>dds-bp12c5b040dc****</para>
@@ -67,7 +76,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The state of the instance. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</para>
+        /// <para>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -77,19 +86,25 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The architecture of the instance. Valid values:</para>
+        /// <para>The instance architecture. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
-        /// <item><description><b>replicate</b>: replica set or standalone instance</description></item>
+        /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
+        /// </description></item>
+        /// <item><description><para><b>replicate</b>: replica set or standalone instance</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>serverless</b>: Serverless instance</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>To query the overview information of a sharded cluster instance, you must set the parameter to <b>sharding</b>.</para>
+        /// <item><description><para>Set this parameter as needed. For example, to query the overview of a sharded cluster instance, set this parameter to <b>sharding</b>.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, the overview information of all instances within this account is queried.</para>
+        /// <item><description><para>If you do not specify this parameter, an overview of all instances is returned.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>replicate</para>
@@ -101,8 +116,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Classic</b>: classic network</description></item>
-        /// <item><description><b>VPC</b>: Virtual Private Cloud (VPC)</description></item>
+        /// <item><description><para><b>Classic</b>: classic network</para>
+        /// </description></item>
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +138,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the latest region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,7 +149,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmyiu4ekp****</para>
@@ -150,7 +167,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display instance tags. Default value: False.</para>
+        /// <para>Specifies whether to return instance tags. The default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -160,7 +177,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? ShowTags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to which the instance is connected.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1e7clcw529l773d****</para>
@@ -170,7 +187,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which the instance is deployed.</para>
+        /// <para>The ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1nme44gek34slfc****</para>
@@ -180,7 +197,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance.</para>
+        /// <para>The ID of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

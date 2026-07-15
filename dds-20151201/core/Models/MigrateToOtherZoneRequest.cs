@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The time when the instance is migrated to the destination zone. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b> (default): The instance is migrated immediately.</description></item>
-        /// <item><description><b>MaintainTime</b>: The instance is migrated during its maintenance window.</description></item>
+        /// <item><description><para><b>Immediately</b> (default): The instance is migrated immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>MaintainTime</b>: The instance is migrated during its maintenance window.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para> If the network type of the instance is VPC, you must specify the <b>Vswitch</b> parameter .</para>
+        /// <para>If the network type of the instance is VPC, you must specify the <b>Vswitch</b> parameter .</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the vSwitch in the destination zone.</para>
         /// <remarks>
-        /// <para> This parameter is valid and required only when the network type of the instance is VPC.</para>
+        /// <para>This parameter is valid and required only when the network type of the instance is VPC.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,8 +72,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The ID of the destination zone to which you want to migrate the ApsaraDB for MongoDB instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The destination and source zones must be in one region.</description></item>
-        /// <item><description>You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the zone IDs.</description></item>
+        /// <item><description><para>The destination and source zones must be in one region.</para>
+        /// </description></item>
+        /// <item><description><para>You can call <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> to query the zone IDs.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

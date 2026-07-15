@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The ID of the ECS security group.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</description></item>
+        /// <item><description><para>You can bind up to 10 ECS security groups to an ApsaraDB for MongoDB instance.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroup</a> operation of ECS to query the security groups in the specified region.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

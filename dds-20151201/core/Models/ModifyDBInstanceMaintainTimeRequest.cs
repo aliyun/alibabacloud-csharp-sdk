@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The end time of the maintenance window. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time of the maintenance window.</para>
+        /// <para>The end time must be later than the start time of the maintenance window.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

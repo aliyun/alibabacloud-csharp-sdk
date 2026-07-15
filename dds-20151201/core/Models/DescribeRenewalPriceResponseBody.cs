@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of orders.</para>
+        /// <para>The order details.</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyOrder Order { get; set; }
         public class DescribeRenewalPriceResponseBodyOrder : TeaModel {
+            /// <summary>
+            /// <para>The coupon details.</para>
+            /// </summary>
             [NameInMap("Coupons")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyOrderCoupons Coupons { get; set; }
@@ -53,11 +56,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>The type of the currency. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>USD: United States dollar</description></item>
-            /// <item><description>JPY: Japanese Yen</description></item>
-            /// </list>
+            /// <para>The currency of the transaction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USD</para>
@@ -67,7 +66,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount amount of the order.</para>
+            /// <para>The total discount amount for the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1144.8</para>
@@ -77,7 +76,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public float? DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>The original price of the order.</para>
+            /// <para>The original amount for the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1144.8</para>
@@ -86,6 +85,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public float? OriginalAmount { get; set; }
 
+            /// <summary>
+            /// <para>The matched rule IDs.</para>
+            /// </summary>
             [NameInMap("RuleIds")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyOrderRuleIds RuleIds { get; set; }
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             }
 
             /// <summary>
-            /// <para>The actual price of the order.</para>
+            /// <para>The final trade amount for the order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFD65226-08CC-4C4D-B6A4-CB3C382F67B0</para>
@@ -118,6 +120,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Details of the available promotion rules.</para>
+        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyRules Rules { get; set; }
@@ -142,6 +147,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
+        /// <summary>
+        /// <para>The sub-order details.</para>
+        /// </summary>
         [NameInMap("SubOrders")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodySubOrders SubOrders { get; set; }

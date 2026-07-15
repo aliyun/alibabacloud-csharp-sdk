@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeMongoDBLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to enable the audit log feature.</para>
+        /// <para>Indicates whether the audit log feature is enabled for the ApsaraDB for MongoDB instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The audit log feature is enabled.</description></item>
-        /// <item><description><b>false</b>: The audit log feature is disabled.</description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,15 +25,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public bool? EnableAudit { get; set; }
 
+        /// <summary>
+        /// <para>The retention period of hot storage for the V2_Standard (DAS Enterprise Edition (NoSQL-compatible)) version of audit logs. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("HotTtlForV2Standard")]
         [Validation(Required=false)]
         public long? HotTtlForV2Standard { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a rule to distribute logs to Logtail is created. For more information, see <a href="https://help.aliyun.com/document_detail/28979.html">Logtail overview</a>. Valid values:</para>
+        /// <para>Indicates whether a rule is created to ship audit logs to Logtail. For more information about Logtail, see <a href="https://help.aliyun.com/document_detail/28979.html">What is Logtail?</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: A rule to distribute logs to Logtail is created.</description></item>
-        /// <item><description><b>0</b> or <b>null</b>: A rule to distribute logs to Logtail is not created.</description></item>
+        /// <item><description><para><b>1</b>: A rule is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b> or <b>null</b>: No rule is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,10 +52,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? IsEtlMetaExist { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a project exists in the current region. Valid values:</para>
+        /// <para>Indicates whether a Simple Log Service project for audit logs exists in the current region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: A logging project exists in the current region.</description></item>
-        /// <item><description><b>0</b> or <b>null</b>: A logging project does not exist in the current region.</description></item>
+        /// <item><description><para><b>1</b>: The project exists.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b> or <b>null</b>: The project does not exist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +68,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? IsUserProjectLogstoreExist { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity for the formal edition of the audit log feature. If the value is -1, no maximum storage capacity is set.</para>
+        /// <para>The maximum storage capacity for the official version of audit logs. A value of -1 indicates that no upper limit is set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -66,7 +78,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? PreserveStorageForStandard { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity for the free trial edition of the audit log feature. Unit: bytes. You can set the maximum storage capacity to 107,374,182,400 bytes.</para>
+        /// <para>The maximum storage capacity for the free trial version of audit logs. Unit: bytes. The maximum value is 107374182400 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>107374182400</para>
@@ -86,10 +98,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the audit log feature. Valid values:</para>
+        /// <para>The version of the audit log feature.</para>
         /// <list type="bullet">
-        /// <item><description><b>Trail</b>: the free trial edition</description></item>
-        /// <item><description><b>Standard</b>: the official edition</description></item>
+        /// <item><description><para><b>Trial</b>: Free trial version.</para>
+        /// </description></item>
+        /// <item><description><para><b>Standard</b>: Official version.</para>
+        /// </description></item>
+        /// <item><description><para><b>V2_Standard</b>: DAS Enterprise Edition (NoSQL-compatible) version.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +116,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The retention period for the official edition of the audit log feature. Valid values: 1 to 365. Unit: day.</para>
+        /// <para>The retention period of audit logs for the official version. The value ranges from 1 to 365. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -110,7 +126,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? TtlForStandard { get; set; }
 
         /// <summary>
-        /// <para>The retention period for the free trial edition of the audit log feature.</para>
+        /// <para>The retention period of audit logs for the free trial version. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,12 +135,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public long? TtlForTrail { get; set; }
 
+        /// <summary>
+        /// <para>The retention period of cold storage for the V2_Standard (DAS Enterprise Edition (NoSQL-compatible)) version of audit logs. Unit: days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("TtlForV2Standard")]
         [Validation(Required=false)]
         public long? TtlForV2Standard { get; set; }
 
         /// <summary>
-        /// <para>The used storage capacity for the formal edition of the audit log feature. Unit: bytes.</para>
+        /// <para>The storage capacity that is used by audit logs for the official version. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20163</para>
@@ -134,7 +156,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? UsedStorageForStandard { get; set; }
 
         /// <summary>
-        /// <para>The used storage capacity for the free trial edition of the audit log feature. Unit: bytes.</para>
+        /// <para>The storage capacity that is used by audit logs for the free trial version. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12548178759</para>
@@ -144,7 +166,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? UsedStorageForTrail { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The name of the Simple Log Service project for the audit logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nosql-176498472570****-cn-hangzhou</para>

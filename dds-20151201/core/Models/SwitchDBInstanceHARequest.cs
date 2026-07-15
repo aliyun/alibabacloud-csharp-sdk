@@ -70,8 +70,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The time when the primary and secondary nodes are switched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The primary and secondary nodes are immediately switched.</description></item>
-        /// <item><description>1: The primary and secondary nodes are switched during the O\&amp;M time period.</description></item>
+        /// <item><description><para>0: The primary and secondary nodes are immediately switched.</para>
+        /// </description></item>
+        /// <item><description><para>1: The primary and secondary nodes are switched during the O\&amp;M time period.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

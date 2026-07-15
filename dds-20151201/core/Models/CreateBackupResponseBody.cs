@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set.</para>
+        /// <para>The backup ID.</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. To obtain the backup ID, call the <a href="https://help.aliyun.com/document_detail/468441.html">DescribeBackups</a> operation.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5664****</para>
@@ -20,6 +23,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupId { get; set; }
 
         /// <summary>
+        /// <para>The backup job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>775051</para>
         /// </summary>

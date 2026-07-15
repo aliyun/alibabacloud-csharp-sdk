@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The global IP whitelist templates associated with the instance.</para>
+        /// <para>The mapping of the global IP address whitelist template.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroupRel")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The IP addresses in the whitelist template.</para>
             /// <remarks>
-            /// <para> Separate multiple IP addresses with commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</para>
+            /// <para>Separate multiple IP addresses with commas. A maximum of 1,000 IP addresses or CIDR blocks can be added across all IP address whitelists.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GIpList { get; set; }
 
             /// <summary>
-            /// <para>The name of the IP whitelist template.</para>
+            /// <para>The name of the IP address whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_baoxian_k8s_bj</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GlobalIgName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IP whitelist template.</para>
+            /// <para>The ID of the IP address whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-gfurfpsh4ycbrm2avst7</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hongkong</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</para>
+        /// <para>The ID of the request. If you encounter a problem, provide this ID to our support staff for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8CA8312-530A-413A-9129-F2BB32A8D404</para>

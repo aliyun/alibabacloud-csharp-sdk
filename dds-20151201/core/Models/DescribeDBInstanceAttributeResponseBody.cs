@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance> DBInstance { get; set; }
             public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance : TeaModel {
+                [NameInMap("AIGatewayEnabled")]
+                [Validation(Required=false)]
+                public bool? AIGatewayEnabled { get; set; }
+
                 [NameInMap("BurstingEnabled")]
                 [Validation(Required=false)]
                 public bool? BurstingEnabled { get; set; }
@@ -433,6 +437,38 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
                 }
 
+                [NameInMap("ShardSearchNodes")]
+                [Validation(Required=false)]
+                public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes ShardSearchNodes { get; set; }
+                public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodes : TeaModel {
+                    [NameInMap("ShardSearchNodes")]
+                    [Validation(Required=false)]
+                    public List<DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes> ShardSearchNodes { get; set; }
+                    public class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardSearchNodesShardSearchNodes : TeaModel {
+                        [NameInMap("NodeId")]
+                        [Validation(Required=false)]
+                        public string NodeId { get; set; }
+
+                        [NameInMap("SearchNodeClass")]
+                        [Validation(Required=false)]
+                        public string SearchNodeClass { get; set; }
+
+                        [NameInMap("SearchNodeCount")]
+                        [Validation(Required=false)]
+                        public string SearchNodeCount { get; set; }
+
+                        [NameInMap("SearchNodeId")]
+                        [Validation(Required=false)]
+                        public string SearchNodeId { get; set; }
+
+                        [NameInMap("SearchNodeStorage")]
+                        [Validation(Required=false)]
+                        public string SearchNodeStorage { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("StorageEngine")]
                 [Validation(Required=false)]
                 public string StorageEngine { get; set; }
@@ -494,7 +530,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A935A8EE-A6CC-53DE-98BA-20ABAA7E632B</para>

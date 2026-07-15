@@ -12,12 +12,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The password of the root account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =.</description></item>
-        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// </description></item>
+        /// <item><description><para>Special characters include !@#$%^&amp;\*()_+-=</para>
+        /// </description></item>
+        /// <item><description><para>It must be 8 to 32 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information about how to resolve failed database connections due to special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if my instance is not connected due to special characters in the password in the connection string of the instance?</a></para>
+        /// <para>For information about how to resolve connection failures caused by special characters in passwords, see <a href="https://help.aliyun.com/document_detail/471568.html">How do I fix connection failures caused by special characters in a password?</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,11 +33,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Auto-renewal is disabled. You must manually renew the instance. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available and optional if you set the value of <b>ChargeType</b> to <b>PrePaid</b>.</para>
+        /// <para>This parameter is optional and takes effect only when you set the <b>ChargeType</b> parameter to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,9 +50,11 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup set. </para>
+        /// <para>The cluster backup ID.</para>
         /// <remarks>
-        /// <para>When you call this operation to clone an instance based on the backup set, this parameter is required. The <b>SrcDBInstanceId</b> parameter is also required.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is required only when RestoreType is set to 2 or 3.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,11 +67,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PostPaid</b> (default): pay-as-you-go</description></item>
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
+        /// <item><description><para><b>PostPaid</b>: pay-as-you-go. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>PrePaid</b>: subscription.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set this parameter to <b>PrePaid</b>, you must also configure the <b>Period</b> parameter.</para>
+        /// <para>If you set this parameter to <b>PrePaid</b>, you must also specify the <b>Period</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +84,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -85,7 +94,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ConfigServer nodes of the instance.</para>
+        /// <para>The information of Configserver nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ConfigServer")]
@@ -93,10 +102,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<CreateShardingDBInstanceRequestConfigServer> ConfigServer { get; set; }
         public class CreateShardingDBInstanceRequestConfigServer : TeaModel {
             /// <summary>
-            /// <para>The instance type of the ConfigServer node. Valid values:</para>
+            /// <para>The instance type of the Configserver node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mdb.shard.2x.xlarge.d</b>: 4 cores, 8 GB (dedicated). Only instances that run MongoDB 4.4 and later support this instance type.</description></item>
-            /// <item><description><b>dds.cs.mid</b> :1 core, 2 GB (general-purpose). Only instances that run MongoDB 4.2 and earlier support this instance type.</description></item>
+            /// <item><description><para><b>mdb.shard.2x.xlarge.d</b>: 4-core 8 GB (dedicated). This instance type is available only for instances that run MongoDB 4.4 or later.</para>
+            /// </description></item>
+            /// <item><description><para><b>dds.cs.mid</b>: 1-core 2 GB (general-purpose). This instance type is available only for instances that run MongoDB 4.2 or earlier.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -108,9 +119,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Class { get; set; }
 
             /// <summary>
-            /// <para>The storage space of the ConfigServer node. Unit: GB.</para>
+            /// <para>The storage space of the Configserver node. Unit: GB.</para>
             /// <remarks>
-            /// <para>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+            /// <para>The value of this parameter is constrained by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -124,11 +135,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The name of the instance. The name of the instance must meet the following requirements:</para>
+        /// <para>The name of the instance. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must start with a letter.</description></item>
-        /// <item><description>It can contain digits, letters, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>It must be 2 to 256 characters in length.</description></item>
+        /// <item><description><para>It must start with a Chinese character or a letter.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain digits, Chinese characters, letters, underscores (_), periods (.), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 256 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,10 +153,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The region of the backup set used for the cross-region backup and restoration.</para>
-        /// <remarks>
-        /// <para> This parameter is required when you set the RestoreType parameter to 3.</para>
-        /// </remarks>
+        /// <para>The region where the geo-redundant backup is stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -162,7 +173,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The custom key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2axxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>
@@ -172,7 +183,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the instance. Set the value to <b>MongoDB</b>.</para>
+        /// <para>The database engine. Set the value to <b>MongoDB</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -183,23 +194,31 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The database engine version of the instance. Valid values:</para>
+        /// <para>The database version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>7.0</b></description></item>
-        /// <item><description><b>6.0</b></description></item>
-        /// <item><description><b>5.0</b></description></item>
-        /// <item><description><b>4.4</b></description></item>
-        /// <item><description><b>4.2</b></description></item>
-        /// <item><description><b>4.0</b></description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>7.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>6.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4.4</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4.2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4.0</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</para>
+        /// <item><description><para>For more information about the constraints on storage engines and database versions, see <a href="https://help.aliyun.com/document_detail/61906.html">Versions and storage engines</a>.</para>
         /// </description></item>
-        /// <item><description><para>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</para>
+        /// <item><description><para>When you clone an instance by calling this operation, the value of this parameter must be the same as that of the source instance.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -210,42 +229,63 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The global IP address whitelist template of the instance. Separate multiple templates with commas (,). The template name must be globally unique.</para>
+        /// <para>The global IP address whitelist templates of the instance. Separate multiple templates with commas (,). Each template must be unique.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>g-qxieqf40xjst1ngp****</para>
+        /// <para>g-qxieqf40xjst1ngpr3jz</para>
         /// </summary>
         [NameInMap("GlobalSecurityGroupIds")]
         [Validation(Required=false)]
         public string GlobalSecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of secondary zone 2 for multi-zone deployment. Valid values:</para>
+        /// <para>The secondary zone 2 for multi-zone deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou-g</b>: Hangzhou Zone G</description></item>
-        /// <item><description><b>cn-hangzhou-h</b>: Hangzhou Zone H</description></item>
-        /// <item><description><b>cn-hangzhou-i</b>: Hangzhou Zone I</description></item>
-        /// <item><description><b>cn-hongkong-b</b>: Hong Kong Zone B</description></item>
-        /// <item><description><b>cn-hongkong-c</b>: Hong Kong Zone C</description></item>
-        /// <item><description><b>cn-hongkong-d</b>: Hong Kong Zone D</description></item>
-        /// <item><description><b>cn-wulanchabu-a</b>: Ulanqab Zone A</description></item>
-        /// <item><description><b>cn-wulanchabu-b</b>: Ulanqab Zone B</description></item>
-        /// <item><description><b>cn-wulanchabu-c</b>: Ulanqab Zone C</description></item>
-        /// <item><description><b>ap-southeast-1a</b>: Singapore Zone A</description></item>
-        /// <item><description><b>ap-southeast-1b</b>: Singapore Zone B</description></item>
-        /// <item><description><b>ap-southeast-1c</b>: Singapore Zone C</description></item>
-        /// <item><description><b>ap-southeast-5a</b>: Jakarta Zone A</description></item>
-        /// <item><description><b>ap-southeast-5b</b>: Jakarta Zone B</description></item>
-        /// <item><description><b>ap-southeast-5c</b>: Jakarta Zone C</description></item>
-        /// <item><description><b>eu-central-1a</b>: Frankfurt Zone A</description></item>
-        /// <item><description><b>eu-central-1b</b>: Frankfurt Zone B</description></item>
-        /// <item><description><b>eu-central-1c</b>: Frankfurt Zone C</description></item>
+        /// <item><description><para><b>cn-hangzhou-g</b>: Hangzhou Zone G.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-h</b>: Hangzhou Zone H.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-i</b>: Hangzhou Zone I.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong-b</b>: Hong Kong (China) Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong-c</b>: Hong Kong (China) Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong-d</b>: Hong Kong (China) Zone D.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-wulanchabu-a</b>: Ulanqab Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-wulanchabu-b</b>: Ulanqab Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-wulanchabu-c</b>: Ulanqab Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1a</b>: Singapore Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1b</b>: Singapore Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1c</b>: Singapore Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5a</b>: Jakarta Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5b</b>: Jakarta Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5c</b>: Jakarta Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>eu-central-1a</b>: Frankfurt Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>eu-central-1b</b>: Frankfurt Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>eu-central-1c</b>: Frankfurt Zone C.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available and required if you set the value of <b>EngineVersion</b> to <b>4.4</b> or <b>5.0</b>.</description></item>
-        /// <item><description>The value of this parameter cannot be the same as the value of <b>ZoneId</b> or <b>SecondaryZoneId</b>.</description></item>
-        /// <item><description>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</description></item>
+        /// <item><description><para>This parameter is available for disk-based instances.</para>
+        /// </description></item>
+        /// <item><description><para>The value of this parameter cannot be the same as the value of <b>ZoneId</b> or <b>SecondaryZoneId</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -257,7 +297,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string HiddenZoneId { get; set; }
 
         /// <summary>
-        /// <para>The mongos nodes of the instance.</para>
+        /// <para>The information of Mongos nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Mongos")]
@@ -265,11 +305,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<CreateShardingDBInstanceRequestMongos> Mongos { get; set; }
         public class CreateShardingDBInstanceRequestMongos : TeaModel {
             /// <summary>
-            /// <para>The instance type of the mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+            /// <para>The instance type of the Mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description><b>N</b> specifies the serial number of the mongos node for which the instance type is specified. For example, <b>Mongos.2.Class</b> specifies the instance type of the second mongos node.</description></item>
-            /// <item><description>Valid values for <b>N</b>: <b>2</b> to <b>32</b>.</description></item>
+            /// <item><description><para><b>N</b> in the parameter name specifies the serial number of the Mongos node. For example, <b>Mongos.2.Class</b> specifies the instance type of the second Mongos node.</para>
+            /// </description></item>
+            /// <item><description><para>The value of <b>N</b> ranges from <b>2</b> to <b>32</b>.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -284,8 +326,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The network type of the instance. Set the value to VPC.</para>
-        /// <hr>
+        /// <para>The network type of the instance. Valid values:</para>
+        /// <para><b>VPC</b>: virtual private cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -303,10 +345,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription period of the instance. Unit: months.</para>
-        /// <para>Valid values: <b>1</b> to <b>9</b>, <b>12</b>, <b>24</b>, <b>36</b>, and <b>60</b>.</para>
+        /// <para>The subscription duration of the instance. Unit: month.</para>
+        /// <para>Valid values: <b>1</b> to <b>9</b> (integer), <b>12</b>, <b>24</b>, <b>36</b>, and <b>60</b>.</para>
         /// <remarks>
-        /// <para>When you set the <b>ChargeType</b> parameter to <b>PrePaid</b>, this parameter is valid and required.</para>
+        /// <para>This parameter is required and takes effect only when you set the <b>ChargeType</b> parameter to <b>PrePaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -317,10 +359,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The access protocol type of the instance. Valid values:</para>
+        /// <para>The protocol type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>mongodb</b></description></item>
-        /// <item><description><b>dynamodb</b></description></item>
+        /// <item><description><para><b>mongodb</b>: MongoDB protocol.</para>
+        /// </description></item>
+        /// <item><description><para><b>dynamodb</b>: DynamoDB protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -331,7 +375,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The provisioned IOPS of the instance:</para>
+        /// <para>The provisioned IOPS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1960</para>
@@ -341,7 +385,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ProvisionedIops { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -352,7 +396,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information of the shard component.</para>
+        /// <para>The information of shard nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ReplicaSet")]
@@ -360,15 +404,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public List<CreateShardingDBInstanceRequestReplicaSet> ReplicaSet { get; set; }
         public class CreateShardingDBInstanceRequestReplicaSet : TeaModel {
             /// <summary>
-            /// <para>The instance type of the shard component. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+            /// <para>The instance type of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para><b>N</b> specifies the serial number of the shard component for which the instance type is specified. For example, <b>ReplicaSet.2.Class</b> specifies the instance type of the second shard component.</para>
+            /// <item><description><para><b>N</b> in the parameter name specifies the serial number of the shard node. For example, <b>ReplicaSet.2.Class</b> specifies the instance type of the second shard node.</para>
             /// </description></item>
-            /// <item><description><para>Valid values of <b>N</b>: <b>2</b> to <b>32</b>.</para>
+            /// <item><description><para>The value of <b>N</b> ranges from <b>2</b> to <b>32</b>.</para>
             /// </description></item>
             /// </list>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -379,10 +423,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Class { get; set; }
 
             /// <summary>
-            /// <para>The number of read-only nodes in the shard component.</para>
-            /// <para>Valid values: <b>0</b>, <b>1, 2, 3, 4, and 5</b>. Default value: <b>0</b>.</para>
+            /// <para>The number of read-only nodes in the shard node.</para>
+            /// <para>Valid values: <b>0</b> to <b>5</b>. The default value is <b>0</b>.</para>
             /// <remarks>
-            /// <para> <b>N</b> specifies the serial number of the shard component for which you want to set the number of read-only nodes. <b>ReplicaSet.2.ReadonlyReplicas</b> specifies the number of read-only nodes in the second shard component.</para>
+            /// <para><b>N</b> in the parameter name specifies the serial number of the shard node. For example, <b>ReplicaSet.2.ReadonlyReplicas</b> specifies the number of read-only nodes in the second shard node.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -393,15 +437,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public int? ReadonlyReplicas { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the shard component. Unit: GB.</para>
+            /// <para>The storage space of the shard node. Unit: GB.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
+            /// <item><description><para>The value of this parameter is constrained by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</para>
             /// </description></item>
-            /// <item><description><para><b>N</b> specifies the serial number of the shard component for which the storage capacity is specified. For example, <b>ReplicaSet.2.Storage</b> specifies the storage capacity of the second shard component.</para>
+            /// <item><description><para><b>N</b> in the parameter name specifies the serial number of the shard node. For example, <b>ReplicaSet.2.Storage</b> specifies the storage space of the second shard node.</para>
             /// </description></item>
             /// </list>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -413,12 +457,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         }
 
-        /// <summary>
-        /// <para>The resource group ID. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmyiu4ekp****</para>
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -432,9 +470,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The point in time to restore the instance, which must be within seven days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in Coordinated Universal Time (UTC).</para>
+        /// <para>The point in time to which you want to restore data. You can specify any point in time within the last seven days. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is in Coordinated Universal Time (UTC).</para>
         /// <remarks>
-        /// <para>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <b>SrcDBInstanceId</b>.</para>
+        /// <para>This parameter is required only when you clone an instance by calling this operation. You must also specify the <b>SrcDBInstanceId</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -445,11 +483,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RestoreTime { get; set; }
 
         /// <summary>
-        /// <para>The restoration type of the instance. Valid values:</para>
+        /// <para>The backup-based instance restoration method.</para>
         /// <list type="bullet">
-        /// <item><description>1: restores the instance data to the specified point in time.</description></item>
-        /// <item><description>2: restores the data of the released instance to the specified backup set.</description></item>
-        /// <item><description>3: restores the instance data to the specified cross-region backup set.</description></item>
+        /// <item><description><para>1: Restore the instance to a specific point in time.</para>
+        /// </description></item>
+        /// <item><description><para>2: Restore a released instance from a specific backup set.</para>
+        /// </description></item>
+        /// <item><description><para>3: Restore the instance from a specific geo-redundant backup set.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -460,32 +501,53 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RestoreType { get; set; }
 
         /// <summary>
-        /// <para>The ID of secondary zone 1 for multi-zone deployment. Valid values:</para>
+        /// <para>The secondary zone 1 for multi-zone deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou-g</b>: Hangzhou Zone G</description></item>
-        /// <item><description><b>cn-hangzhou-h</b>: Hangzhou Zone H</description></item>
-        /// <item><description><b>cn-hangzhou-i</b>: Hangzhou Zone I</description></item>
-        /// <item><description><b>cn-hongkong-b</b>: Hong Kong Zone B</description></item>
-        /// <item><description><b>cn-hongkong-c</b>: Hong Kong Zone C</description></item>
-        /// <item><description><b>cn-hongkong-d</b>: Hong Kong Zone D</description></item>
-        /// <item><description><b>cn-wulanchabu-a</b>: Ulanqab Zone A</description></item>
-        /// <item><description><b>cn-wulanchabu-b</b>: Ulanqab Zone B</description></item>
-        /// <item><description><b>cn-wulanchabu-c</b>: Ulanqab Zone C</description></item>
-        /// <item><description><b>ap-southeast-1a</b>: Singapore Zone A</description></item>
-        /// <item><description><b>ap-southeast-1b</b>: Singapore Zone B</description></item>
-        /// <item><description><b>ap-southeast-1c</b>: Singapore Zone C</description></item>
-        /// <item><description><b>ap-southeast-5a</b>: Jakarta Zone A</description></item>
-        /// <item><description><b>ap-southeast-5b</b>: Jakarta Zone B</description></item>
-        /// <item><description><b>ap-southeast-5c</b>: Jakarta Zone C</description></item>
-        /// <item><description><b>eu-central-1a</b>: Frankfurt Zone A</description></item>
-        /// <item><description><b>eu-central-1b</b>: Frankfurt Zone B</description></item>
-        /// <item><description><b>eu-central-1c</b>: Frankfurt Zone C</description></item>
+        /// <item><description><para><b>cn-hangzhou-g</b>: Hangzhou Zone G.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-h</b>: Hangzhou Zone H.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou-i</b>: Hangzhou Zone I.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong-b</b>: Hong Kong (China) Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong-c</b>: Hong Kong (China) Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong-d</b>: Hong Kong (China) Zone D.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-wulanchabu-a</b>: Ulanqab Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-wulanchabu-b</b>: Ulanqab Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-wulanchabu-c</b>: Ulanqab Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1a</b>: Singapore Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1b</b>: Singapore Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-1c</b>: Singapore Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5a</b>: Jakarta Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5b</b>: Jakarta Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>ap-southeast-5c</b>: Jakarta Zone C.</para>
+        /// </description></item>
+        /// <item><description><para><b>eu-central-1a</b>: Frankfurt Zone A.</para>
+        /// </description></item>
+        /// <item><description><para><b>eu-central-1b</b>: Frankfurt Zone B.</para>
+        /// </description></item>
+        /// <item><description><para><b>eu-central-1c</b>: Frankfurt Zone C.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is available and required if you set the value of <b>EngineVersion</b> to <b>4.4</b> or <b>5.0</b>.</description></item>
-        /// <item><description>The value of this parameter cannot be the same as the value of <b>ZoneId</b> or <b>HiddenZoneId</b>.</description></item>
-        /// <item><description>For more information about the multi-zone deployment policy of a sharded cluster instance, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</description></item>
+        /// <item><description><para>This parameter is available for disk-based instances.</para>
+        /// </description></item>
+        /// <item><description><para>The value of this parameter cannot be the same as the value of <b>ZoneId</b> or <b>HiddenZoneId</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For more information about the multi-zone deployment policy for sharded cluster instances, see <a href="https://help.aliyun.com/document_detail/117865.html">Create a multi-zone sharded cluster instance</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -497,16 +559,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SecondaryZoneId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in an IP address whitelist of the instance. Multiple IP addresses are separated by commas (,), and each IP address in the IP address whitelist must be unique. The following types of values are supported:</para>
+        /// <para>The IP address whitelist of the instance. Separate multiple IP addresses with commas (,). Each IP address in the whitelist must be unique. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>0.0.0.0/0</description></item>
-        /// <item><description>IP addresses, such as 10.23.12.24.</description></item>
-        /// <item><description>CIDR blocks, such as 10.23.12.0/24. In this case, 24 indicates that the prefix of each IP address is 24-bit long. You can replace 24 with a value within the range of 1 to 32.</description></item>
+        /// <item><description><para>0.0.0.0/0</para>
+        /// </description></item>
+        /// <item><description><para>IP addresses, such as 10.23.12.24.</para>
+        /// </description></item>
+        /// <item><description><para>CIDR blocks, such as 10.23.12.0/24. The /24 part indicates the prefix length of the CIDR block. The prefix length ranges from 1 to 32.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>A maximum of 1,000 IP addresses and CIDR blocks can be configured for each instance.</description></item>
-        /// <item><description>If you enter 0.0.0.0/0, all IP addresses can access the instance. This may introduce security risks to the instance. Proceed with caution.</description></item>
+        /// <item><description><para>You can add a maximum of 1,000 IP addresses or CIDR blocks to all IP address whitelists.</para>
+        /// </description></item>
+        /// <item><description><para>The 0.0.0.0/0 entry allows access from all IP addresses. This is a high-risk setting. Configure it with caution.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -520,7 +587,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The source instance ID.</para>
         /// <remarks>
-        /// <para>This parameter is required only if you call this operation to clone an instance. If you specify this parameter, you must also specify <b>RestoreTime</b>.</para>
+        /// <para>This parameter is required only when you clone an instance by calling this operation. You must also specify the <b>RestoreTime</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -531,9 +598,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string SrcDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region of the source instance.</para>
         /// <remarks>
-        /// <para>This parameter is required when restore type is set to 2 or 3.</para>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required when you recreate a released instance from a backup.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is required when you clone an instance from a geo-redundant backup.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -546,13 +618,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The storage engine of the instance. Set the value to <b>WiredTiger</b>.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</para>
+        /// <item><description><para>When you clone an instance by calling this operation, the value of this parameter must be the same as that of the source instance.</para>
         /// </description></item>
-        /// <item><description><para>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</para>
+        /// <item><description><para>For more information about the constraints on storage engines and database versions, see <a href="https://help.aliyun.com/document_detail/61906.html">Versions and storage engines</a>.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>WiredTiger</para>
@@ -562,17 +634,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageEngine { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the instance. Valid values:</para>
+        /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_essd1</b>: ESSD PL1</description></item>
-        /// <item><description><b>cloud_essd2</b>: ESSD PL2</description></item>
-        /// <item><description><b>cloud_essd3</b>: ESSD PL3</description></item>
-        /// <item><description><b>local_ssd</b>: local SSD</description></item>
+        /// <item><description><para><b>cloud_essd1</b>: enhanced SSD (ESSD) PL1.</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd2</b>: ESSD PL2.</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd3</b>: ESSD PL3.</para>
+        /// </description></item>
+        /// <item><description><para><b>local_ssd</b>: local SSD.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Instances of MongoDB 4.4 and later support only cloud disks. <b>cloud_essd1</b> is selected if you leave this parameter empty.</description></item>
-        /// <item><description>Instances of MongoDB 4.2 and earlier support only local disks. <b>local_ssd</b> is selected if you leave this parameter empty.</description></item>
+        /// <item><description><para>Instances that run MongoDB 4.4 or later support only disks. If you do not specify this parameter, <b>cloud_essd1</b> is used.</para>
+        /// </description></item>
+        /// <item><description><para>Instances that run MongoDB 4.2 or earlier support only local disks. If you do not specify this parameter, <b>local_ssd</b> is used.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -584,16 +662,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The custom tags that you want to add to the instance.</para>
+        /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateShardingDBInstanceRequestTag> Tag { get; set; }
         public class CreateShardingDBInstanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
-            /// <para> <b>N</b> specifies the serial number of the tag. For example, <b>Tag.1.Key</b> specifies the key of the first tag and <b>Tag.2.Key</b> specifies the key of the second tag.</para>
+            /// <list type="bullet">
+            /// <item><description><b>N</b> specifies the serial number of the tag. For example, <b>Tag.1.Key</b> specifies the key of the first tag, and <b>Tag.2.Key</b> specifies the key of the second tag.</description></item>
+            /// </list>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -604,9 +684,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
-            /// <para> <b>N</b> specifies the serial number of the tag. For example, <b>Tag.1.Value</b> specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</para>
+            /// <para><b>N</b> specifies the serial number of the tag. For example, <b>Tag.1.Value</b> specifies the value of the first tag, and <b>Tag.2.Value</b> specifies the value of the second tag.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -619,7 +699,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The vSwitch ID of the instance.</para>
+        /// <para>The virtual switch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1vj604nj5a9zz74****</para>
@@ -629,7 +709,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1n3i15v90el48nx****</para>
@@ -639,7 +719,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

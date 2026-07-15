@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The public endpoint type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SRV</b></description></item>
-        /// <item><description><b>Normal</b></description></item>
+        /// <item><description><para><b>SRV</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Normal</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is valid only when you want to release an SRV endpoint.</para>
+        /// <para>This parameter is valid only when you want to release an SRV endpoint.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,8 +46,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The ID of the mongos, shard, or Configserver node in the sharded cluster instance.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is valid only if you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</description></item>
+        /// <item><description><para>This parameter is valid only if you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to view the ID of the mongos, shard, or Configserver node.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

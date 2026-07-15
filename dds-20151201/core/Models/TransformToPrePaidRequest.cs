@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Renew an ApsaraDB for MongoDB subscription instance</a>.</description></item>
+        /// <item><description><para><b>true</b>: enables automatic payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables automatic payment. For more information, see <a href="https://help.aliyun.com/document_detail/85052.html">Renew an ApsaraDB for MongoDB subscription instance</a>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>true</b>.</para>
+        /// <para>Default value: <b>true</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,11 +31,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Default value: <b>false</b>.</para>
+        /// <para>Default value: <b>false</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]

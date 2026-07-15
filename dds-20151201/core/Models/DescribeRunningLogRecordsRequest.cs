@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeRunningLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If this parameter is set to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time and within 24 hours from the start time. Otherwise, the query fails.</para>
+        /// <para>The end time can be up to 24 hours later than the start time. Otherwise, the call fails.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,11 +48,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship among multiple keywords.</para>
-        /// <list type="bullet">
-        /// <item><description><b>or</b></description></item>
-        /// <item><description><b>and</b> (default value)</description></item>
-        /// </list>
+        /// <para>The logical operator for the keyword-based query. Default value: <c>and</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>
@@ -62,9 +58,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string LogicalOperator { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos node or shard node whose operational logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</para>
+        /// <para>The ID of a mongos node or shard node in a sharded cluster instance.</para>
         /// <remarks>
-        /// <para> This parameter is valid only when <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is available only when the <b>DBInstanceId</b> parameter is set to the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,10 +71,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The order of time in which the operational log entries to return are sorted. Valid values:</para>
+        /// <para>The sort order of the running logs to return. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: The log entries are sorted by time in ascending order.</description></item>
-        /// <item><description>desc: The log entries are sorted by time in descending order.</description></item>
+        /// <item><description><para>asc: ascending order</para>
+        /// </description></item>
+        /// <item><description><para>desc: descending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +95,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -117,7 +115,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keywords used for query. You can enter up to 10 keywords at a time. If you enter multiple keywords, separate the keywords with spaces.</para>
+        /// <para>The keywords for the query. You can specify up to 10 keywords. Separate multiple keywords with spaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test test2</para>
@@ -155,13 +153,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleId { get; set; }
 
         /// <summary>
-        /// <para>The role of the node whose error logs you want to query in the instance. Valid values:</para>
+        /// <para>The role of the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>primary</b></description></item>
-        /// <item><description><b>secondary</b></description></item>
+        /// <item><description><para><b>primary</b>: The primary node.</para>
+        /// </description></item>
+        /// <item><description><para><b>secondary</b>: A secondary node.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the <b>NodeId</b> parameter to the ID of a mongos node, the <b>RoleType</b> parameter must be set to <b>primary</b>.</para>
+        /// <para>If the <b>NodeId</b> parameter is set to the ID of a mongos node, the <b>RoleType</b> parameter can only be set to <b>primary</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

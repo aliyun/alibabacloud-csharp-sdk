@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The ID of the replica set instance or the ID of the node on which a primary/secondary switchover is performed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>dds-uf68f1b5a57exxxx</para>
+            /// <para>NodeId-example-id-****</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
@@ -39,12 +39,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The code that indicates the reason of a primary/secondary switchover. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>USER_CONSOLE_OPERATION: The switchover is manually performed.</description></item>
-            /// <item><description>OPERATION_AND_MAINTENANCE: Potential risks exist.</description></item>
-            /// <item><description>MACHINE_DOWNTIME: The host is offline.</description></item>
-            /// <item><description>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</description></item>
-            /// <item><description>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</description></item>
-            /// <item><description>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</description></item>
+            /// <item><description><para>USER_CONSOLE_OPERATION: The switchover is manually performed.</para>
+            /// </description></item>
+            /// <item><description><para>OPERATION_AND_MAINTENANCE: Potential risks exist.</para>
+            /// </description></item>
+            /// <item><description><para>MACHINE_DOWNTIME: The host is offline.</para>
+            /// </description></item>
+            /// <item><description><para>PRIMARY_UNHEALTHY: An exception occurs on the primary node of the instance.</para>
+            /// </description></item>
+            /// <item><description><para>SECONDARY_UNHEALTHY: An exception occurs on the secondary node of the instance.</para>
+            /// </description></item>
+            /// <item><description><para>MULTIPLE_NODE_FAILURES: An exception occurs on multiple nodes of the instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

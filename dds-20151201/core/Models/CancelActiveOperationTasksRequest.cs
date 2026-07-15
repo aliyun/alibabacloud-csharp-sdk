@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CancelActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the O\&amp;M events to cancel. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-xxxx</para>
         /// </summary>

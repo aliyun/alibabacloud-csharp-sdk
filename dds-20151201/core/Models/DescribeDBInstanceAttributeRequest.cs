@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database engine. Set the value to <b>MongoDB</b>.</para>
+        /// <para>The database engine. Valid value: <b>MongoDB</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MongoDB</para>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query instances that are deleted. Valid values:</para>
+        /// <para>Indicates whether the instance has been deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: queries instances that are running.</description></item>
-        /// <item><description><b>true</b>: queries instance that are deleted.</description></item>
+        /// <item><description><para><b>false</b>: The instance is running normally. Query information about a running instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: The instance has been deleted. Query information about a deleted instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,9 +55,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</para>
         /// <remarks>
-        /// <para>This parameter is available only if you use the China site (aliyun.com).</para>
+        /// <para>This parameter is supported only on Alibaba Cloud China Website (www\.aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The language of the values of the returned <b>RegionName</b> and <b>ZoneName</b> parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, all supported regions are queried.</para>
+        /// <para>If you do not specify this parameter, all supported regions are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

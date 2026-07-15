@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <b>Expenses</b> and select <b>User Center</b> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <b>Order Management</b> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</description></item>
+        /// <item><description><para><b>true</b>: enables automatic payment. Make sure that you have sufficient balance within your account.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click <b>Expenses</b> and select <b>User Center</b> from the drop-down list. The User Center page appears. In the left-side navigation pane, choose <b>Order Management</b> &gt; Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>true</b>.</para>
         /// 
@@ -27,8 +29,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// 
@@ -62,12 +66,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to use coupons. Default value: null. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b> or <b>null</b>: uses coupons.</description></item>
-        /// <item><description><b>youhuiquan_promotion_option_id_for_blank</b>: does not use coupons.</description></item>
+        /// <item><description><para><b>default</b> or <b>null</b>: uses coupons.</para>
+        /// </description></item>
+        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: does not use coupons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1111111111111111</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]

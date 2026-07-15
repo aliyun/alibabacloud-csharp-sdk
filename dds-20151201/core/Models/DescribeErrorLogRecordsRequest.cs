@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,8 +47,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The logical relationship between multiple keywords. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>or</b></description></item>
-        /// <item><description><b>and</b> (default value)</description></item>
+        /// <item><description><para><b>or</b></para>
+        /// </description></item>
+        /// <item><description><para><b>and</b> (default value)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The ID of the mongos node or shard node whose error logs you want to query in the instance. If the instance is a sharded cluster instance, you must specify this parameter.</para>
         /// <remarks>
-        /// <para> This parameter is valid only when <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is valid only when <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,11 +132,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role of the node whose error logs you want to query in the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>primary</b></description></item>
-        /// <item><description><b>secondary</b></description></item>
+        /// <item><description><para><b>primary</b></para>
+        /// </description></item>
+        /// <item><description><para><b>secondary</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the <b>NodeId</b> parameter to the ID of a mongos node, the RoleType parameter must be set to <b>primary</b>.</para>
+        /// <para>If you set the <b>NodeId</b> parameter to the ID of a mongos node, the RoleType parameter must be set to <b>primary</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

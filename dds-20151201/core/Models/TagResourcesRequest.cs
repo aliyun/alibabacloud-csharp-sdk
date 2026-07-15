@@ -80,13 +80,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The key of tag.</para>
             /// <para>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</para>
             /// <list type="bullet">
-            /// <item><description><b>Tag.1.Key</b> specifies the key of the first tag.</description></item>
-            /// <item><description><b>Tag.2.Key</b> specifies the key of the second tag.</description></item>
+            /// <item><description><para><b>Tag.1.Key</b> specifies the key of the first tag.</para>
+            /// </description></item>
+            /// <item><description><para><b>Tag.2.Key</b> specifies the key of the second tag.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Development team</para>
+            /// <para>Development group</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -96,13 +98,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The value of tag.</para>
             /// <para>N specifies the serial number of the tag. The following example shows how to calculate consumption intervals:</para>
             /// <list type="bullet">
-            /// <item><description><b>Tag.1.Value</b> specifies the value of the first tag.</description></item>
-            /// <item><description><b>Tag.2.Value</b> specifies the value of the second tag.</description></item>
+            /// <item><description><para><b>Tag.1.Value</b> specifies the value of the first tag.</para>
+            /// </description></item>
+            /// <item><description><para><b>Tag.2.Value</b> specifies the value of the second tag.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MongoDB 4.0 environment</para>
+            /// <para>4.0 environment</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

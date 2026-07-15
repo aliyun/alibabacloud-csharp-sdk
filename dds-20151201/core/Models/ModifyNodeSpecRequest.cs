@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default): enables automatic payment. Make sure that you have sufficient balance within your account.</description></item>
-        /// <item><description><b>false</b>: disables automatic payment. In this case, you must manually pay for the instance.</description></item>
+        /// <item><description><para><b>true</b> (default): Enables automatic payment. Make sure that your account has a sufficient balance.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disables automatic payment. You must manually pay for the order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BusinessInfo { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -44,17 +46,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
+        /// <para>Specifies whether to use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>default</b> or <b>null</b> (default): A coupon is used.</para>
+        /// </description></item>
+        /// <item><description><para><b>youhuiquan_promotion_option_id_for_blank</b>: A coupon is not used.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,10 +73,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The time when the changed configurations take effect. Valid values:</para>
+        /// <para>The effective time of the configuration change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b> (default): The new configurations immediately take effect</description></item>
-        /// <item><description><b>MaintainTime</b>: The new configurations take effect during the maintenance window of the instance.</description></item>
+        /// <item><description><para><b>Immediately</b> (default): The change takes effect immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>MaintainTime</b>: The change takes effect during the O\&amp;M window of the instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +91,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The source of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OpenApi</b>: the ApsaraDB for MongoDB API</description></item>
-        /// <item><description><b>mongo_buy</b>: the ApsaraDB for MongoDB console</description></item>
+        /// <item><description><para><b>OpenApi</b>: The request is from OpenAPI.</para>
+        /// </description></item>
+        /// <item><description><para><b>mongo_buy</b>: The request is from the console.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +105,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string FromApp { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the shard or mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
+        /// <para>The instance type of the shard or Mongos node. For more information, see <a href="https://help.aliyun.com/document_detail/57141.html">Instance types</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dds.mongos.standard</para>
@@ -103,9 +115,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodeClass { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shard or mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</para>
+        /// <para>The ID of the shard or Mongos node in the sharded cluster instance. You can call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</para>
         /// <remarks>
-        /// <para>If you set this parameter to the ID of the shard node, you must also specify the <b>NodeStorage</b> parameter.</para>
+        /// <para>If you set this parameter to the ID of a shard node, you must also specify the <b>NodeStorage</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -117,14 +129,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the shard node. Unit: GB.</para>
+        /// <para>The storage space of the shard node. The step size is 10. Unit: GB.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values are <b>10</b> to <b>2000</b> if the instance uses local SSDs.</description></item>
-        /// <item><description>Valid values are <b>20</b> to <b>16000</b> if the instance uses enhanced SSDs (ESSDs) at PL1.</description></item>
+        /// <item><description><para>SSD local disk: <b>10</b> to <b>2000</b>.</para>
+        /// </description></item>
+        /// <item><description><para>ESSD PL1 disk: <b>20</b> to <b>16000</b>.</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>The value must be a multiple of 10.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -136,8 +147,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>UPGRADE</b></description></item>
-        /// <item><description><b>DOWNGRADE</b></description></item>
+        /// <item><description><para><b>UPGRADE</b>: upgrades the instance configuration.</para>
+        /// </description></item>
+        /// <item><description><para><b>DOWNGRADE</b>: downgrades the instance configuration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,7 +170,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// <para>The number of read-only nodes in the shard node.</para>
-        /// <para>Valid values: <b>0</b> to <b>5</b>. The value must be an integer. Default value: <b>0</b>.</para>
+        /// <para>Valid values: <b>0</b> to <b>5</b>. The value must be an integer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -175,7 +188,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The execution time. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The time when the configuration change takes effect. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Use the EffectiveTime parameter instead.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-05T03:18:53Z</para>
@@ -184,18 +200,58 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string SwitchTime { get; set; }
 
+        /// <summary>
+        /// <para>The hidden zone to which you want to migrate the instance.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is applicable only to instances that use disks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-j</para>
+        /// </summary>
         [NameInMap("TargetHiddenZoneId")]
         [Validation(Required=false)]
         public string TargetHiddenZoneId { get; set; }
 
+        /// <summary>
+        /// <para>The secondary zone to which you want to migrate the instance.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is applicable only to instances that use disks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-e</para>
+        /// </summary>
         [NameInMap("TargetSecondaryZoneId")]
         [Validation(Required=false)]
         public string TargetSecondaryZoneId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the vSwitch in the destination zone.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is applicable only to instances that use disks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-xxxxxxxx</para>
+        /// </summary>
         [NameInMap("TargetVswitchId")]
         [Validation(Required=false)]
         public string TargetVswitchId { get; set; }
 
+        /// <summary>
+        /// <para>The primary zone to which you want to migrate the instance.</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is applicable only to instances that use disks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
+        /// </summary>
         [NameInMap("TargetZoneId")]
         [Validation(Required=false)]
         public string TargetZoneId { get; set; }

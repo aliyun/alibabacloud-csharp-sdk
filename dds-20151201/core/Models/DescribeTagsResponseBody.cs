@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The token used to start the next query.</para>
         /// <remarks>
-        /// <para> If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</para>
+        /// <para>If not all results are returned in the first query, this parameter is returned. You can pass in the value of this parameter in the next query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>newKey</para>
+            /// <para>Test group</para>
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
             /// <summary>
             /// <para>The values of the tags.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3.4 environment</para>
             /// </summary>
             [NameInMap("TagValues")]
             [Validation(Required=false)]

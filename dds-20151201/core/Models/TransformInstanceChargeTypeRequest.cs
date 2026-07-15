@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>true</b>.</para>
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Default value: <b>false</b>.</para>
@@ -56,8 +60,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid:</b> subscription.</description></item>
-        /// <item><description><b>PostPaid:</b> pay-as-you-go.</description></item>
+        /// <item><description><para><b>PrePaid:</b> subscription.</para>
+        /// </description></item>
+        /// <item><description><para><b>PostPaid:</b> pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The coupon code. Default value: <c>youhuiquan_promotion_option_id_for_blank</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("CouponNo")]
         [Validation(Required=false)]
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the instance. Unit: months. Valid values: <b>1, 2, 3, 4, 5, 6, 7, 8, 9</b>****, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
+        /// <para>The subscription duration of the instance. Unit: months. Valid values: <b>1, 2, 3, 4, 5, 6, 7, 8, 9</b>\<em>\</em>\<em>\</em>, <b>12</b>, <b>24</b>, and <b>36</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,13 +114,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// <para>实例付费时长单位
-        /// 取值说明：</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month：</b> 月</description></item>
-        /// <item><description><b>Year：</b> 年</description></item>
+        /// <item><description><para><b>Month</b>: month.</para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b>: year.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：Month</para>
+        /// <para>Default value: Month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>

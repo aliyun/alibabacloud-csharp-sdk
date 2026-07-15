@@ -41,9 +41,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// </c></pre>
             /// <para>The system may support the following actions:</para>
             /// <list type="bullet">
-            /// <item><description>retry: makes another attempt.</description></item>
-            /// <item><description>cancel: makes a cancellation.</description></item>
-            /// <item><description>modifySwitchTime: changes the switching or restoration time.</description></item>
+            /// <item><description><para>retry: makes another attempt.</para>
+            /// </description></item>
+            /// <item><description><para>cancel: makes a cancellation.</para>
+            /// </description></item>
+            /// <item><description><para>modifySwitchTime: changes the switching or restoration time.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +160,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The reason why the current task was initiated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Minor version upgrade</para>
             /// </summary>
             [NameInMap("ReasonCode")]
             [Validation(Required=false)]
@@ -196,13 +199,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduled: The task is waiting to be executed.</description></item>
-            /// <item><description>Running: The task is running.</description></item>
-            /// <item><description>Succeed: The task is successful.</description></item>
-            /// <item><description>Failed: The task failed.</description></item>
-            /// <item><description>Cancelling: The task is being terminated.</description></item>
-            /// <item><description>Canceled: The task has been terminated.</description></item>
-            /// <item><description>Waiting: The task is waiting for scheduled time.</description></item>
+            /// <item><description><para>Scheduled: The task is waiting to be executed.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para>Succeed: The task is successful.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The task failed.</para>
+            /// </description></item>
+            /// <item><description><para>Cancelling: The task is being terminated.</para>
+            /// </description></item>
+            /// <item><description><para>Canceled: The task has been terminated.</para>
+            /// </description></item>
+            /// <item><description><para>Waiting: The task is waiting for scheduled time.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -235,29 +245,52 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <summary>
             /// <para>The task type.</para>
             /// <list type="bullet">
-            /// <item><description>CreateIns: Create an instance.</description></item>
-            /// <item><description>DeleteIns: Delete an instance.</description></item>
-            /// <item><description>ChangeVariable: Modify parameter settings for an instance.</description></item>
-            /// <item><description>ModifyInsConfig: Change the configurations of an instance.</description></item>
-            /// <item><description>RestartIns: Restart an instance.</description></item>
-            /// <item><description>HaSwitch: Perform a primary/secondary switchover on an instance.</description></item>
-            /// <item><description>CloneIns: Clone an instance.</description></item>
-            /// <item><description>KernelVersionUpgrade: Update the minor version of an instance.</description></item>
-            /// <item><description>ProxyVersionUpgrade: Upgrade the agent version of an instance.</description></item>
-            /// <item><description>ModifyAccount: Change the account of an instance.</description></item>
-            /// <item><description>ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</description></item>
-            /// <item><description>CreateReadIns: Create a read-only instance.</description></item>
-            /// <item><description>StartIns: Start an instance.</description></item>
-            /// <item><description>StopIns: Stop an instance.</description></item>
-            /// <item><description>ModifyNetwork: Modify the network type for an instance.</description></item>
-            /// <item><description>LockIns: Lock an instance.</description></item>
-            /// <item><description>UnlockIns: Unlock an instance.</description></item>
-            /// <item><description>DiskOnlineExpansion: Scale out the disks of an instance online.</description></item>
-            /// <item><description>StorageOnlineExpansion: Expend the storage capacity of an instance online.</description></item>
-            /// <item><description>AddInsNode: Add a node to an instance.</description></item>
-            /// <item><description>DeleteInsNode: Delete a node from an instance.</description></item>
-            /// <item><description>ManualBackupIns: Manually back up an instance.</description></item>
-            /// <item><description>ModifyInsStorageType: Modify the storage type for an instance.</description></item>
+            /// <item><description><para>CreateIns: Create an instance.</para>
+            /// </description></item>
+            /// <item><description><para>DeleteIns: Delete an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ChangeVariable: Modify parameter settings for an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ModifyInsConfig: Change the configurations of an instance.</para>
+            /// </description></item>
+            /// <item><description><para>RestartIns: Restart an instance.</para>
+            /// </description></item>
+            /// <item><description><para>HaSwitch: Perform a primary/secondary switchover on an instance.</para>
+            /// </description></item>
+            /// <item><description><para>CloneIns: Clone an instance.</para>
+            /// </description></item>
+            /// <item><description><para>KernelVersionUpgrade: Update the minor version of an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ProxyVersionUpgrade: Upgrade the agent version of an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ModifyAccount: Change the account of an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ModifyInsSpec: Change the specifications of an instance or perform a data migration on the instance.</para>
+            /// </description></item>
+            /// <item><description><para>CreateReadIns: Create a read-only instance.</para>
+            /// </description></item>
+            /// <item><description><para>StartIns: Start an instance.</para>
+            /// </description></item>
+            /// <item><description><para>StopIns: Stop an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ModifyNetwork: Modify the network type for an instance.</para>
+            /// </description></item>
+            /// <item><description><para>LockIns: Lock an instance.</para>
+            /// </description></item>
+            /// <item><description><para>UnlockIns: Unlock an instance.</para>
+            /// </description></item>
+            /// <item><description><para>DiskOnlineExpansion: Scale out the disks of an instance online.</para>
+            /// </description></item>
+            /// <item><description><para>StorageOnlineExpansion: Expend the storage capacity of an instance online.</para>
+            /// </description></item>
+            /// <item><description><para>AddInsNode: Add a node to an instance.</para>
+            /// </description></item>
+            /// <item><description><para>DeleteInsNode: Delete a node from an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ManualBackupIns: Manually back up an instance.</para>
+            /// </description></item>
+            /// <item><description><para>ModifyInsStorageType: Modify the storage type for an instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

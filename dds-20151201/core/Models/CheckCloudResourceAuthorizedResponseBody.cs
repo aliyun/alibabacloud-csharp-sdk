@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Indicates whether KMS keys are authorized to ApsaraDB for MongoDB instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: KMS keys are not authorized.</description></item>
-        /// <item><description><b>1</b>: KMS keys are authorized.</description></item>
-        /// <item><description><b>2</b>: KMS is not enabled.</description></item>
+        /// <item><description><para><b>0</b>: KMS keys are not authorized.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: KMS keys are authorized.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: KMS is not enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role information of the authorized Alibaba Resource Name (ARN).</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the value of the <b>AuthorizationState</b> parameter is <b>1</b>.</para>
+        /// <para>This parameter is returned only when the value of the <b>AuthorizationState</b> parameter is <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

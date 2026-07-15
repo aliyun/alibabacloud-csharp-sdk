@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAuditPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the log audit feature is enabled. Valid values:</para>
+        /// <para>The status of the audit log.</para>
         /// <list type="bullet">
-        /// <item><description>Enable</description></item>
-        /// <item><description>Disabled</description></item>
+        /// <item><description><para>Enable: The audit log is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Disabled: The audit log is disabled.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: Disabled.</para>
+        /// <para>The default value is Disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enable</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class CreateNodeRoleTagRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +37,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the shard node.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter applies only to sharded cluster instances.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>d-l5xf98b78b9fxxxx,d-l5xf98b7sf9fxxxx</para>
         /// </summary>

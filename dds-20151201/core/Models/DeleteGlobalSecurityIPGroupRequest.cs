@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DeleteGlobalSecurityIPGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
+        /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It can contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>It must start with a letter and end with a letter or digit.</description></item>
-        /// <item><description>It must be 2 to 120 characters in length.</description></item>
+        /// <item><description><para>It must consist of lowercase letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 120 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string GlobalIgName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP whitelist template.</para>
+        /// <para>The ID of the IP address whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/61933.html">DescribeRegions</a> operation to query the latest list of regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

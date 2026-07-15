@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The token used to start the next query to retrieve more results.</para>
         /// <remarks>
-        /// <para> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <b>NextToken</b> value returned in the previous query to perform the query again.</para>
+        /// <para>This parameter is not required in the first query. If not all results are returned in one query, you can pass in the <b>NextToken</b> value returned in the previous query to perform the query again.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The resource IDs. You must specify this parameter or the Tag parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dds-bpxxxxxxxx</para>
+        /// <para>Development group</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The key of tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>env</para>
+            /// <para>Development group</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             /// <para>The value of tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>dev</para>
+            /// <para>4.0 environment</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

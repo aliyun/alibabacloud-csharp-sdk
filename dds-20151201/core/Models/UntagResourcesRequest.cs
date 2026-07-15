@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>Specifies whether to remove all tags from the instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: removes all tags from the instances.</description></item>
-        /// <item><description><b>false</b>: does not remove all tags from the instances.</description></item>
+        /// <item><description><para><b>true</b>: removes all tags from the instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not remove all tags from the instances.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
@@ -92,6 +94,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
         /// <summary>
         /// <para>The tag keys of the resource.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Development group</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

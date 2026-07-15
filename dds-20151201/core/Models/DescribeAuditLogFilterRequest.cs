@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role of the node in the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>mongos</b>: mongos node.</description></item>
-        /// <item><description><b>db</b> : shard node.</description></item>
-        /// <item><description><b>logic</b> : logical instance.</description></item>
+        /// <item><description><para><b>mongos</b>: mongos node.</para>
+        /// </description></item>
+        /// <item><description><para><b>db</b> : shard node.</para>
+        /// </description></item>
+        /// <item><description><para><b>logic</b> : logical instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

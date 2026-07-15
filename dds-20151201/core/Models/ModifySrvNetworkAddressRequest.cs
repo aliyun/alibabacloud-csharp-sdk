@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifySrvNetworkAddressRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the SRV connection address to modify. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>VPC</b>: virtual private cloud (VPC)</para>
+        /// </description></item>
+        /// <item><description><para><b>Public</b>: Internet connection</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ConnectionType { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,20 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The new connection address. The address must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Starts with a lowercase letter.</para>
+        /// </description></item>
+        /// <item><description><para>Ends with a lowercase letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>Contains only lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Is 8 to 63 characters in length.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You only need to specify the prefix of the connection address. The rest of the address cannot be modified.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

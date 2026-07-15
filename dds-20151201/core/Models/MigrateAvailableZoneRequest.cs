@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The time when the instance is migrated to the destination zone. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Immediately</b>: The instance is immediately migrated to the destination zone.</description></item>
-        /// <item><description><b>MaintainTime</b>: The instance is migrated to the destination zone during the maintenance window of the instance.</description></item>
+        /// <item><description><para><b>Immediately</b>: The instance is immediately migrated to the destination zone.</para>
+        /// </description></item>
+        /// <item><description><para><b>MaintainTime</b>: The instance is migrated to the destination zone during the maintenance window of the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>Immediately</b>.</para>
         /// 

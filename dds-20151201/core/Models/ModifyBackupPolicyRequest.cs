@@ -10,26 +10,35 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The frequency at which high-frequency backups are generated. Valid values:</para>
+        /// <para>The frequency of high-frequency backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: High-frequency backup is disabled.</description></item>
-        /// <item><description><b>30</b>: High-frequency backups are generated every 30 minutes.</description></item>
-        /// <item><description><b>60</b>: High-frequency backups are generated every 1 hour.</description></item>
-        /// <item><description><b>120</b>: High-frequency backups are generated every 2 hours.</description></item>
-        /// <item><description><b>180</b>: High-frequency backups are generated every 3 hours.</description></item>
-        /// <item><description><b>240</b>: High-frequency backups are generated every 4 hours.</description></item>
-        /// <item><description><b>360</b>: High-frequency backups are generated every 6 hours.</description></item>
-        /// <item><description><b>480</b>: High-frequency backups are generated every 8 hours.</description></item>
-        /// <item><description><b>720</b>: High-frequency backups are generated every 12 hours.</description></item>
+        /// <item><description><para><b>-1</b>: High-frequency backup is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>30</b>: every 30 minutes.</para>
+        /// </description></item>
+        /// <item><description><para><b>60</b>: every 1 hour.</para>
+        /// </description></item>
+        /// <item><description><para><b>120</b>: every 2 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>180</b>: every 3 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>240</b>: every 4 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>360</b>: every 6 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>480</b>: every 8 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>720</b>: every 12 hours.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you set the <b>SnapshotBackupType</b> parameter to <b>Standard</b>, you must fix the value of this parameter to -1.</para>
+        /// <item><description><para>If you set <b>SnapshotBackupType</b> to <b>Standard</b>, the value of this parameter is -1.</para>
         /// </description></item>
-        /// <item><description><para>High-frequency backup takes effect only when you set the <b>SnapshotBackupType</b> parameter to <b>Flash</b> and this parameter to a value greater than 0.</para>
+        /// <item><description><para>High-frequency backup takes effect only if you set <b>SnapshotBackupType</b> to <b>Flash</b> and set this parameter to a value greater than 0.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -39,15 +48,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string BackupInterval { get; set; }
 
         /// <summary>
-        /// <para>The retention period of full backups.</para>
+        /// <para>The number of days to retain full backups.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If your instance is created before September 10, 2021, backups are retained for seven days by default.</para>
+        /// <item><description><para>For instances that were created before September 10, 2021, the default retention period is 7 days.</para>
         /// </description></item>
-        /// <item><description><para>If your instance is created after September 10, 2021, backups are retained for 30 days by default.</para>
+        /// <item><description><para>For instances that are created after September 10, 2021, the default retention period is 30 days.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -57,13 +66,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup retention policy configured for the instance. Valid values:</para>
+        /// <para>The policy to retain backups when you release the instance.</para>
         /// <list type="bullet">
-        /// <item><description>0: All backup sets are immediately deleted when the instance is released.</description></item>
-        /// <item><description>1: Automatic backup is performed when the instance is released and the backup set is retained for a long period of time.</description></item>
-        /// <item><description>2: Automatic backup is performed when the instance is released and all backup sets are retained for a long period of time.</description></item>
+        /// <item><description><para>0: All backup sets of the instance are deleted when the instance is released.</para>
+        /// </description></item>
+        /// <item><description><para>1: An automatic backup is performed when the instance is released, and this backup is retained for a long time.</para>
+        /// </description></item>
+        /// <item><description><para>2: An automatic backup is performed when the instance is released, and all backup sets of the instance are retained for a long time.</para>
+        /// </description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Retain the backup files of an ApsaraDB for MongoDB instance for a long period of time</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2779111.html">Long-term backup retention</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -73,25 +85,32 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? BackupRetentionPolicyOnClusterDeletion { get; set; }
 
         /// <summary>
-        /// <para>The day of the week on which the cross-region backup files are retained. Valid values:</para>
+        /// <para>The days of the week to perform geo-redundant backups. Valid values:</para>
         /// <ol>
-        /// <item><description>Monday</description></item>
-        /// <item><description>Tuesday</description></item>
-        /// <item><description>Wednesday</description></item>
-        /// <item><description>Thursday</description></item>
-        /// <item><description>Friday</description></item>
-        /// <item><description>Saturday</description></item>
-        /// <item><description>Sunday</description></item>
+        /// <item><description><para>Monday</para>
+        /// </description></item>
+        /// <item><description><para>Tuesday</para>
+        /// </description></item>
+        /// <item><description><para>Wednesday</para>
+        /// </description></item>
+        /// <item><description><para>Thursday</para>
+        /// </description></item>
+        /// <item><description><para>Friday</para>
+        /// </description></item>
+        /// <item><description><para>Saturday</para>
+        /// </description></item>
+        /// <item><description><para>Sunday</para>
+        /// </description></item>
         /// </ol>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
-        /// </remarks>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// <list type="bullet">
-        /// <item><description><para>Separate multiple values with commas (,).</para>
+        /// <item><description><para>To specify multiple days, separate them with commas (,).</para>
         /// </description></item>
-        /// <item><description><para>If you set the SnapshotBackupType parameter to Standard, the parameter value must fall within the value of the PreferredBackupPeriod parameter that specifies the standard backup period.</para>
+        /// <item><description><para>If you set the backup method to conventional backup, the days of the week specified by this parameter must be a subset of the days of the week specified by PreferredBackupPeriod.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday</para>
@@ -101,13 +120,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CrossBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The action performed for the cross-region backup policy. Valid values:</para>
+        /// <para>The policy for geo-redundant backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>update: modifies the cross-region backup policy.</description></item>
-        /// <item><description>delete: deletes the cross-region backup policy.</description></item>
+        /// <item><description><para>update: Modify the geo-redundancy policy.</para>
+        /// </description></item>
+        /// <item><description><para>delete: Delete the geo-redundancy policy.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,13 +139,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CrossBackupType { get; set; }
 
         /// <summary>
-        /// <para>The retention type of the cross-region log backup files. Valid values:</para>
+        /// <para>The retention policy for cross-region log backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>delay: retains the cross-region backup files for a period of time.</description></item>
-        /// <item><description>never: permanently retains the cross-region backup files.</description></item>
+        /// <item><description><para>delay: Retain the backup for a specified period.</para>
+        /// </description></item>
+        /// <item><description><para>never: Retain the backup permanently.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,9 +158,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CrossLogRetentionType { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the cross-region log backup files. Valid values: 3 to 1825. Unit: day. The parameter value must be less than or equal to the value of the CrossRetentionValue parameter.</para>
+        /// <para>The number of days to retain cross-region log backups. Valid values: 3 to 1825. The value must be less than or equal to the value of CrossRetentionValue.</para>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,13 +171,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? CrossLogRetentionValue { get; set; }
 
         /// <summary>
-        /// <para>The retention type of the cross-region backup files. Valid values:</para>
+        /// <para>The retention policy for geo-redundant backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>delay: retains the cross-region backup files for a period of time.</description></item>
-        /// <item><description>never: permanently retains the cross-region backup files.</description></item>
+        /// <item><description><para>delay: Retain the backup for a specified period.</para>
+        /// </description></item>
+        /// <item><description><para>never: Retain the backup permanently.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -165,15 +190,15 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CrossRetentionType { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the cross-region backup files. Valid values: 3 to 1825. Unit: day.</para>
+        /// <para>The number of days to retain geo-redundant backups. Valid values: 3 to 1825.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required for a cross-region backup operation.</para>
+        /// <item><description><para>This parameter is required if you enable geo-redundancy.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is required when you set the CrossRetentionType parameter to delay.</para>
+        /// <item><description><para>This parameter is required if you set CrossRetentionType to delay.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -194,9 +219,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the backup files are retained.</para>
+        /// <para>The region ID of the geo-redundant backup.</para>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -207,11 +232,17 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DestRegion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the log backup feature. Valid values:</para>
+        /// <para>Specifies whether to enable log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): The log backup feature is disabled.</description></item>
-        /// <item><description><b>1</b>: The log backup feature is enabled.</description></item>
+        /// <item><description><para><b>0</b>: Disable log backup. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Enable log backup.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>You cannot disable log backup for sharded cluster instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -221,16 +252,16 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the cross-region log backup feature.</para>
+        /// <para>Specifies whether to enable cross-region log backup. Valid values:</para>
         /// <remarks>
-        /// <para> This parameter is required for a cross-region backup operation.</para>
-        /// </remarks>
+        /// <para>This parameter is required if you enable geo-redundancy.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values:1: enables the feature. The parameter value must be 1 for sharded cluster instances.</para>
+        /// <item><description><para>1: Enable cross-region log backup. This value is required for sharded cluster instances. This value is also required for replica set instances if you want to enable geo-redundant point-in-time recovery.</para>
         /// </description></item>
-        /// <item><description><para>0: disables the feature. The parameter value must be 0 for replica set instances.</para>
+        /// <item><description><para>0: Disable cross-region log backup.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -240,7 +271,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? EnableCrossLogBackup { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which high-frequency backup files are retained. Before you use this parameter, make sure that you specify the BackupInterval parameter. By default, high-frequency backup files are retained for one day.</para>
+        /// <para>The number of days to retain high-frequency backups. Before you specify this parameter, you must set the BackupInterval parameter. The default retention period is 1 day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -250,19 +281,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? HighFrequencyBackupRetention { get; set; }
 
         /// <summary>
-        /// <para>The instance architecture. Valid values:</para>
+        /// <para>The instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>replicate</description></item>
-        /// <item><description>sharding</description></item>
+        /// <item><description><para>replicate</para>
+        /// </description></item>
+        /// <item><description><para>sharding</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required when you set the RestoreType parameter to 2.</para>
+        /// <item><description><para>This parameter is required when you restore a deleted instance.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is required when you set the RestoreType parameter to 3.</para>
+        /// <item><description><para>This parameter is required when you clone an instance from a geo-redundant backup.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>replicate</para>
@@ -272,7 +305,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of days for which log backups are retained. Default value: 7.</para>
+        /// <para>The number of days to retain log backups. Default value: 7.</para>
         /// <para>Valid values: 7 to 730.</para>
         /// 
         /// <b>Example:</b>
@@ -291,20 +324,29 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The day of a week when the system regularly backs up data. Valid values:</para>
+        /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>**</para>
-        /// <para><b>Notice</b>: To ensure data security, make sure that the system backs up data at least twice a week.</para>
         /// <remarks>
-        /// <para> Separate multiple values with commas (,).</para>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>To ensure data security, back up the MongoDB instance at least twice a week.</para>
+        /// <remarks>
+        /// <para>To specify multiple backup cycles, separate them with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -315,9 +357,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The start time of the backup. Specify the time in the ISO 8601 standard in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The time range to perform a backup. Specify the time in the <em>HH:mm</em>Z-<em>HH:mm</em>Z format. The time is displayed in Coordinated Universal Time (UTC).</para>
         /// <remarks>
-        /// <para> The time range is 1 hour.</para>
+        /// <para>The time range must be 1 hour.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -327,6 +369,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string PreferredBackupTime { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable hourly sparse backup. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: If the backup frequency is in minutes, all snapshots that are generated within the last hour are retained. For snapshots that were generated more than 1 hour ago but less than 24 hours ago, only the first snapshot that is generated after each full hour is retained.</para>
+        /// </description></item>
+        /// <item><description><para>false: All snapshots are retained within the high-frequency backup retention period.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("PreserveOneEachHour")]
         [Validation(Required=false)]
         public bool? PreserveOneEachHour { get; set; }
@@ -342,8 +396,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The snapshot backup type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Flash</b>: single-digit second backup</description></item>
-        /// <item><description><b>Standard</b> (default): standard backup</description></item>
+        /// <item><description><para><b>Flash</b>: second-level backup.</para>
+        /// </description></item>
+        /// <item><description><para><b>Standard</b>: conventional backup. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -356,13 +412,13 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required for the data restoration of a deleted instance.</para>
+        /// <item><description><para>This parameter is required if you restore a deleted instance.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is required for a cross-region backup operation.</para>
+        /// <item><description><para>This parameter is required if you enable geo-redundancy.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

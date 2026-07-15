@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeDBInstanceTDEInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>实例的自定义密钥。</para>
-        /// <para>目前仅以下地域支持BYOK（Bring Your Own Key，用户可以自行管理和拥有加密密钥）：</para>
+        /// <para>The custom key of the instance.</para>
+        /// <para>Currently, only the following regions support Bring Your Own Key (BYOK), which allows you to manage and own encryption keys:</para>
         /// <list type="bullet">
-        /// <item><description>华东1（杭州）</description></item>
-        /// <item><description>华东2（上海）</description></item>
-        /// <item><description>华北2（北京）</description></item>
-        /// <item><description>华南1（深圳）</description></item>
-        /// <item><description>中国（香港）</description></item>
-        /// <item><description>新加坡</description></item>
-        /// <item><description>马来西亚（吉隆坡）</description></item>
+        /// <item><description>China (Hangzhou)</description></item>
+        /// <item><description>China (Shanghai)</description></item>
+        /// <item><description>China (Beijing)</description></item>
+        /// <item><description>China (Shenzhen)</description></item>
+        /// <item><description>Hong Kong (China)</description></item>
+        /// <item><description>Singapore</description></item>
+        /// <item><description>Malaysia (Kuala Lumpur)</description></item>
         /// </list>
         /// <remarks>
-        /// <para>支持BYOK，用户可以管理且拥有密钥，系统将返回用户的自定义密钥；不支持BYOK，用户不可管理密钥，系统将返回字符串<c>NoActiveBYOK</c>。</para>
+        /// <para>If BYOK is supported, you can manage and own the key, and the system returns your custom key. If BYOK is not supported, you cannot manage the key, and the system returns the string <c>NoActiveBYOK</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>加密算法。</para>
+        /// <para>The encryption algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aes-256-cbc</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>指定待授权角色的全局资源描述符ARN（Alibaba Cloud Resource Name）信息。</para>
+        /// <para>The global resource descriptor ARN (Alibaba Cloud Resource Name) of the role pending authorization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::123456789012****:role/aliyunrdsinstanceencryptiondefaultrole</para>
@@ -63,11 +63,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string RoleARN { get; set; }
 
         /// <summary>
-        /// <para>The TDE status. Valid values:</para>
+        /// <para>The TDE enabling status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b></description></item>
-        /// <item><description><b>disabled</b></description></item>
+        /// <item><description><b>enabled</b>: TDE is enabled.</description></item>
+        /// <item><description><b>disabled</b>: TDE is disabled.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>If the TDE status is disabled, the <b>RoleARN</b>, <b>EncryptionKey</b>, and <b>EncryptorName</b> parameters are not returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>

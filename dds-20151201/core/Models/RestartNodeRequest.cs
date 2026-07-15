@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If the instance is a sharded cluster instance, also set the <c>NodeId</c> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shard, mongos, or ConfigServer node in a child instance of the sharded cluster instance.</para>
+        /// <para>The ID of the Mongos, shard, or Configserver node in the sharded cluster instance. Call the <a href="https://help.aliyun.com/document_detail/62010.html">DescribeDBInstanceAttribute</a> operation to query the node ID.</para>
         /// <remarks>
-        /// <para> If you set the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance, you must specify this parameter.</para>
+        /// <para>This parameter is required if <b>DBInstanceId</b> is set to the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,8 +55,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The role ID of the node.</para>
         /// <ol>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the role ID of a node in a replica set instance.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the role ID of a node in a sharded cluster instance.</description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/468469.html">DescribeReplicaSetRole</a> operation to query the role ID of a node in a replica set instance.</para>
+        /// </description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/468472.html">DescribeRoleZoneInfo</a> operation to query the role ID of a node in a sharded cluster instance.</para>
+        /// </description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 
@@ -67,6 +69,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
+        /// <summary>
+        /// <para>The time to execute the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: The task is executed immediately. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The task is executed during the maintenance window.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of the instance.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("SwitchMode")]
         [Validation(Required=false)]
         public string SwitchMode { get; set; }

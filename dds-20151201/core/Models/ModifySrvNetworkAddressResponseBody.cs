@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifySrvNetworkAddressResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>45D2B592-DEBA-4347-BBF3-xxxxxC97DBBC</para>
         /// </summary>

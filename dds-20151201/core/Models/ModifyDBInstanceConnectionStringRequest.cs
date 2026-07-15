@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
-        /// <para>The current endpoint that is to be modified.</para>
+        /// <para>The current connection address—the address to modify.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string CurrentConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para>If you set this parameter to the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
+        /// <para>If you specify the ID of a sharded cluster instance, you must also specify the <b>NodeId</b> parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,9 +46,19 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</para>
+        /// <para>The new connection address. It must meet these requirements:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Start with a lowercase letter.</para>
+        /// </description></item>
+        /// <item><description><para>End with a lowercase letter or digit.</para>
+        /// </description></item>
+        /// <item><description><para>Contain only lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Be 8 to 63 characters long.</para>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</para>
+        /// <para>Specify only the prefix of the connection address. You cannot change any part beyond the prefix.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,9 +69,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string NewConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The new port number of the instance. The port number must be within the range from 1000 to 65535.</para>
+        /// <para>The new port number. Valid values are from 1000 to 65535.</para>
         /// <remarks>
-        /// <para> This parameter is available only when you set the <b>DBInstanceId</b> parameter to the ID of an instance that uses cloud disks.</para>
+        /// <para>This parameter is valid only when <b>DBInstanceId</b> specifies the ID of a cloud disk instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,9 +82,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public int? NewPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the mongos in the specified sharded cluster instance. Only one mongos ID can be specified in each call.</para>
+        /// <para>The ID of a Mongos node in a sharded cluster instance. You can specify only one Mongos node ID per call.</para>
         /// <remarks>
-        /// <para>This parameter is valid only when you specify the <b>DBInstanceId</b> parameter to the ID of a sharded cluster instance.</para>
+        /// <para>This parameter is valid only when <b>DBInstanceId</b> specifies the ID of a sharded cluster instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

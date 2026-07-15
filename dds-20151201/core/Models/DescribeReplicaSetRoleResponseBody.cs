@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeReplicaSetRoleResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The domain name suffix for the connection string.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>.mongodb.rds.aliyuncs.com</para>
+        /// </summary>
         [NameInMap("ConnectionStringSuffix")]
         [Validation(Required=false)]
         public string ConnectionStringSuffix { get; set; }
@@ -23,6 +29,9 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Details of the replica set.</para>
+        /// </summary>
         [NameInMap("ReplicaSets")]
         [Validation(Required=false)]
         public DescribeReplicaSetRoleResponseBodyReplicaSets ReplicaSets { get; set; }

@@ -12,12 +12,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The language of the returned <b>RegionName</b> and <b>ZoneName</b> parameter values. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("AcceptLanguage")]
         [Validation(Required=false)]
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The architecture of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: replica set instance</description></item>
-        /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
+        /// <item><description><para><b>normal</b>: replica set instance</para>
+        /// </description></item>
+        /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,8 +84,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The billing method of the product. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PrePaid</b>: subscription</description></item>
-        /// <item><description><b>PostPaid:</b> pay-as-you-go</description></item>
+        /// <item><description><para><b>PrePaid</b>: subscription</para>
+        /// </description></item>
+        /// <item><description><para><b>PostPaid:</b> pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,8 +100,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The architecture of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sharding</b>: sharded cluster instance</description></item>
-        /// <item><description><b>replicate</b>: replica set or standalone instance</description></item>
+        /// <item><description><para><b>sharding</b>: sharded cluster instance</para>
+        /// </description></item>
+        /// <item><description><para><b>replicate</b>: replica set or standalone instance</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,14 +145,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of nodes in the instance.</para>
         /// <remarks>
-        /// <para> This parameter is available only for replica set instances.</para>
+        /// <para>This parameter is available only for replica set instances.</para>
         /// </remarks>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1</description></item>
-        /// <item><description>3</description></item>
-        /// <item><description>5</description></item>
-        /// <item><description>7</description></item>
+        /// <item><description><para>1</para>
+        /// </description></item>
+        /// <item><description><para>3</para>
+        /// </description></item>
+        /// <item><description><para>5</para>
+        /// </description></item>
+        /// <item><description><para>7</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,9 +187,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud</b>: displays only zones available for instances that use cloud disks.</description></item>
-        /// <item><description><b>local</b>: only displays zones available for instances that use local disks instances.</description></item>
-        /// <item><description><b>default</b> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</description></item>
+        /// <item><description><para><b>cloud</b>: displays only zones available for instances that use cloud disks.</para>
+        /// </description></item>
+        /// <item><description><para><b>local</b>: only displays zones available for instances that use local disks instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>default</b> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -190,15 +205,21 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The storage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cloud_essd1</b>: PL1 Enterprise SSDs (ESSDs)</description></item>
-        /// <item><description><b>cloud_essd2</b>: PL2 ESSDs</description></item>
-        /// <item><description><b>cloud_essd3</b>: PL3 ESSDs</description></item>
-        /// <item><description><b>local_ssd</b>: local SSDs</description></item>
+        /// <item><description><para><b>cloud_essd1</b>: PL1 Enterprise SSDs (ESSDs)</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd2</b>: PL2 ESSDs</para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd3</b>: PL3 ESSDs</para>
+        /// </description></item>
+        /// <item><description><para><b>local_ssd</b>: local SSDs</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <b>cloud_essd1</b> is used by default.</description></item>
-        /// <item><description>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <b>local_ssd</b> is used by default.</description></item>
+        /// <item><description><para>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <b>cloud_essd1</b> is used by default.</para>
+        /// </description></item>
+        /// <item><description><para>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <b>local_ssd</b> is used by default.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

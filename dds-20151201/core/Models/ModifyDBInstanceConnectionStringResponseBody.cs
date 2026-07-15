@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         public string ModifiedConnectionString { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FF36A84C-0694-42D0-861D-C383E8E4FAAF</para>

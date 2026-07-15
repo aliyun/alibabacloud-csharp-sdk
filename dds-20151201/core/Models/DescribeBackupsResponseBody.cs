@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -102,9 +102,12 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <summary>
         /// <para>The number of entries returned per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (Default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,14 +121,14 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>275D43C3-F12F-5224-B375-0C6BF453BD56</para>
+        /// <para>275D43C3-F12F-5224-B375-************</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of backup sets.</para>
+        /// <para>The total number of backups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
