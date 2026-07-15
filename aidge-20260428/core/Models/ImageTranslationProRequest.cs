@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationProRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to call the operation asynchronously.</para>
+        /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// <para>Glossary ID, optional. You need to create a glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results will not be modified.</para>
+        /// <para>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>Original image URL, required. Image requirements: width and height must not exceed 4000×4000; size must not exceed 10MB; supported formats include png, jpeg, jpg, bmp, and webp.</para>
+        /// <para>The URL of the original image. Required. Image requirements: width and height must not exceed 4000 × 4000. Size must not exceed 10 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Choose whether to translate text on the image subject, optional, default false. This helps you protect information by avoiding translation of embedded content such as product names.</para>
+        /// <para>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>Source language code, required. See the supported language pairs list for available translation directions.</para>
+        /// <para>The source language code. Required. For supported language directions, see the supported language direction list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>Target language code, required. See the supported language pairs list for available translation directions.</para>
+        /// <para>The target language code. Required. For supported language directions, see the supported language direction list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Choose whether to translate brand names on the image, optional, default false. This helps you protect brand name information from being translated.</para>
+        /// <para>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information from being translated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? TranslatingBrandInTheProduct { get; set; }
 
         /// <summary>
-        /// <para>Whether to return layout information such as text position, font, and color, optional, default false. This can be used for secondary editing when integrating with an image editor.</para>
+        /// <para>Specifies whether to return layout information such as text position, font, and color. Optional. Default value: false. This can be used for secondary editing when integrated with an image editor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

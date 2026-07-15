@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextTranslateRequest : TeaModel {
         /// <summary>
-        /// <para>The format type of the source text. Optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</para>
+        /// <b>Example:</b>
+        /// <para>MyCompany-Chat</para>
+        /// </summary>
+        [NameInMap("BizName")]
+        [Validation(Required=false)]
+        public string BizName { get; set; }
+
+        /// <summary>
+        /// <para>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -20,7 +28,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string FormatType { get; set; }
 
         /// <summary>
-        /// <para>The intervention glossary ID. Optional. Create the glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
+        /// <para>The intervention glossary ID. This parameter is optional. The glossary must be created separately in the console and its ID provided here. If the glossary ID is empty, the translation result is not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -30,7 +38,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The source language code. Optional. If not specified, the language is automatically detected. Set to auto for automatic language detection.</para>
+        /// <para>The source language code. This parameter is optional. If not specified, the language is automatically detected. You can pass auto for language detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The list of texts to translate. Required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</para>
+        /// <para>The list of texts to translate. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public List<string> SourceTextList { get; set; }
 
         /// <summary>
-        /// <para>The target language code. Required. More than 100 language directions are supported. For details, refer to the supported language directions list.</para>
+        /// <para>The target language code. This parameter is required. More than 100 language directions are supported. For details, refer to the supported language directions list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +68,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("TargetLanguage")]
         [Validation(Required=false)]
         public string TargetLanguage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>e-commerce-title</para>
+        /// </summary>
+        [NameInMap("TranslateScene")]
+        [Validation(Required=false)]
+        public string TranslateScene { get; set; }
 
     }
 

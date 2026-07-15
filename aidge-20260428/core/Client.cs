@@ -2183,32 +2183,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+        /// Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
         /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.
         /// 3. Features</para>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed list of supported languages, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents containing multiple languages. Refer to section 4.5 for the detailed language list.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as other complex translation scenarios such as charts and special symbols.</description></item>
         /// <item><description>Supports high-fidelity layout preservation after translation.</description></item>
-        /// <item><description>A single PDF supports up to 100 pages, and a single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection. Pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2263,32 +2262,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+        /// Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
         /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.
         /// 3. Features</para>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed list of supported languages, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents containing multiple languages. Refer to section 4.5 for the detailed language list.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as other complex translation scenarios such as charts and special symbols.</description></item>
         /// <item><description>Supports high-fidelity layout preservation after translation.</description></item>
-        /// <item><description>A single PDF supports up to 100 pages, and a single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection. Pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2343,32 +2341,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+        /// Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
         /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.
         /// 3. Features</para>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed list of supported languages, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents containing multiple languages. Refer to section 4.5 for the detailed language list.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as other complex translation scenarios such as charts and special symbols.</description></item>
         /// <item><description>Supports high-fidelity layout preservation after translation.</description></item>
-        /// <item><description>A single PDF supports up to 100 pages, and a single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection. Pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2387,32 +2384,31 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Translates documents between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported. Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), handling multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
-        /// The service excels in the following areas:</para>
+        /// <para>Designed specifically for document translation, this service supports translation between more than 100 language pairs (including bridged pairs), supporting multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
+        /// Excels in the following areas:</para>
         /// <list type="bullet">
-        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy.</description></item>
-        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation.</description></item>
+        /// <item><description>Content accuracy: translation accuracy, parameter and unit accuracy</description></item>
+        /// <item><description>Structural integrity: overall layout continuity, page margin and layout preservation</description></item>
         /// </list>
         /// <h2>Common scenarios</h2>
         /// <para>Cross-border e-commerce product manuals, contracts, agreements, business proposals, qualification documents, textbooks, courseware, and other scenarios.
         /// 3. Features</para>
         /// <list type="bullet">
-        /// <item><description>Supports PDF and Word formats. Supports source documents that contain multiple languages. For a detailed list of supported languages, see section 4.5.</description></item>
-        /// <item><description>Supports translation of text within images in documents, as well as complex translation scenarios such as charts and special symbols.</description></item>
+        /// <item><description>Supports PDF and Word formats. Supports source documents containing multiple languages. Refer to section 4.5 for the detailed language list.</description></item>
+        /// <item><description>Supports translation of text within images in documents, as well as other complex translation scenarios such as charts and special symbols.</description></item>
         /// <item><description>Supports high-fidelity layout preservation after translation.</description></item>
-        /// <item><description>A single PDF supports up to 100 pages, and a single Word document supports up to 100 pages.</description></item>
-        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection. Pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description>A single PDF supports up to 100 pages. A single Word document supports up to 100 pages.</description></item>
+        /// <item><description>Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 glossary entries. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2747,13 +2743,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>Automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>The intelligent image matting product automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Secondary editing of materials</b>: After separating the image subject from the background, you can further edit the image.</para>
@@ -2764,20 +2760,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <h2>Features.</h2>
         /// <h4>1. One-click precise subject recognition</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, the feature intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
+        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
         /// </description></item>
         /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair strands, transparent objects, and fur edges) with an accuracy rate exceeding 95%.</para>
         /// </description></item>
         /// </list>
         /// <h4>2. Intelligent edge optimization</h4>
         /// <list type="bullet">
-        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization of edge aliasing and semi-transparent areas (such as smoke and glass) while preserving natural transition effects.</description></item>
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge aliasing and semi-transparent areas (such as smoke and glass) to preserve natural transition effects.</description></item>
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
         /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, suitable for e-commerce, design, and other scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Custom background color support</b>.</para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h2>Effect comparison</h2>
@@ -2858,13 +2854,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>Automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>The intelligent image matting product automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Secondary editing of materials</b>: After separating the image subject from the background, you can further edit the image.</para>
@@ -2875,20 +2871,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <h2>Features.</h2>
         /// <h4>1. One-click precise subject recognition</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, the feature intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
+        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
         /// </description></item>
         /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair strands, transparent objects, and fur edges) with an accuracy rate exceeding 95%.</para>
         /// </description></item>
         /// </list>
         /// <h4>2. Intelligent edge optimization</h4>
         /// <list type="bullet">
-        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization of edge aliasing and semi-transparent areas (such as smoke and glass) while preserving natural transition effects.</description></item>
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge aliasing and semi-transparent areas (such as smoke and glass) to preserve natural transition effects.</description></item>
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
         /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, suitable for e-commerce, design, and other scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Custom background color support</b>.</para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h2>Effect comparison</h2>
@@ -2969,13 +2965,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>Automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>The intelligent image matting product automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Secondary editing of materials</b>: After separating the image subject from the background, you can further edit the image.</para>
@@ -2986,20 +2982,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <h2>Features.</h2>
         /// <h4>1. One-click precise subject recognition</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, the feature intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
+        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
         /// </description></item>
         /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair strands, transparent objects, and fur edges) with an accuracy rate exceeding 95%.</para>
         /// </description></item>
         /// </list>
         /// <h4>2. Intelligent edge optimization</h4>
         /// <list type="bullet">
-        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization of edge aliasing and semi-transparent areas (such as smoke and glass) while preserving natural transition effects.</description></item>
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge aliasing and semi-transparent areas (such as smoke and glass) to preserve natural transition effects.</description></item>
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
         /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, suitable for e-commerce, design, and other scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Custom background color support</b>.</para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h2>Effect comparison</h2>
@@ -3040,13 +3036,13 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>Automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Intelligent image matting automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. The product also provides multiple background options and custom size selections to optimize product display. (Synchronous).</para>
+        /// <para>The intelligent image matting product automatically identifies salient subjects in images, separates subjects from backgrounds, and returns subject images with backgrounds removed. This product also provides multiple background options and custom size selections to optimize product display. (Synchronous)</para>
         /// <h2>Scenarios</h2>
         /// <list type="bullet">
         /// <item><description><para><b>Secondary editing of materials</b>: After separating the image subject from the background, you can further edit the image.</para>
@@ -3057,20 +3053,20 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <h2>Features.</h2>
         /// <h4>1. One-click precise subject recognition</h4>
         /// <list type="bullet">
-        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, the feature intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
+        /// <item><description><para><b>AI automatic recognition</b>: Based on deep learning models, intelligently distinguishes foreground subjects (portraits, products, objects, etc.) from backgrounds without manual tracing.</para>
         /// </description></item>
         /// <item><description><para><b>Multi-scenario adaptation</b>: Supports precise segmentation in complex scenarios (such as hair strands, transparent objects, and fur edges) with an accuracy rate exceeding 95%.</para>
         /// </description></item>
         /// </list>
         /// <h4>2. Intelligent edge optimization</h4>
         /// <list type="bullet">
-        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization of edge aliasing and semi-transparent areas (such as smoke and glass) while preserving natural transition effects.</description></item>
+        /// <item><description><b>Detail-level processing</b>: Performs automatic optimization on edge aliasing and semi-transparent areas (such as smoke and glass) to preserve natural transition effects.</description></item>
         /// </list>
         /// <h4>3. Multi-format output and background operations</h4>
         /// <list type="bullet">
         /// <item><description><para><b>Transparent background export</b>: Directly generates PNG images with transparent backgrounds and white backgrounds, suitable for e-commerce, design, and other scenarios.</para>
         /// </description></item>
-        /// <item><description><para><b>Custom background color support</b>.</para>
+        /// <item><description><para><b>Custom background color support</b></para>
         /// </description></item>
         /// </list>
         /// <h2>Effect comparison</h2>
@@ -3687,102 +3683,410 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
+        /// <para>Intelligently identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images, supports specifying objects to remove as needed, enables efficient and precise batch processing of images, and simplifies image editing workflows (synchronous/asynchronous).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Overview</h2>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
-        /// <h2>Use Cases</h2>
+        /// <h2>Product introduction</h2>
+        /// <para>The intelligent image removal product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images. You can specify objects to remove as needed, enabling efficient and precise batch processing of images and simplifying image editing workflows. (Synchronous/Asynchronous)</para>
+        /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Efficient E-commerce Image Processing:</b></description></item>
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
         /// </list>
-        /// <para>Remove irrelevant visual elements to provide a cleaner, more focused product display and enhance the customer shopping experience.</para>
+        /// <para>Remove irrelevant visual elements to provide clearer, more focused product displays and enhance the shopping experience.</para>
         /// <list type="bullet">
-        /// <item><description><b>Multi-platform Product Information Synchronization:</b></description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
         /// </list>
-        /// <para>When merchants simultaneously list products across different e-commerce platforms, they can quickly remove specific text and blemishes to comply with different platform image specifications.</para>
-        /// <list type="bullet">
-        /// <item><description><b>Marketing Material Preparation:</b></description></item>
-        /// </list>
-        /// <para>Merchants can easily remove existing promotional information and quickly update it with the latest campaign details.</para>
-        /// <remarks>
-        /// <para>Note: Merchants or platforms can batch remove impurities from images to optimize image quality. We recommend using this in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and blemishes, then use the &quot;Intelligent Removal API&quot; to batch remove them. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Removal API focuses on &quot;removal.&quot; By calling them in sequence, you can maximize removal effectiveness and reduce &quot;false removals&quot; and &quot;false recognitions.&quot;</para>
-        /// </remarks>
-        /// <h2>Feature Introduction</h2>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with image specifications of different platforms.</para>
+        /// <h2>Features</h2>
         /// <ol>
-        /// <item><description><para>First, clarify the definitions of image subject and image background. In actual use, when specifying removal targets, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <item><description><para>First, clarify the definitions of image subject and image background. When specifying objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor access methods are supported to meet different types of requirements.</para>
         /// <ol>
-        /// <item><description><para>Image subject: The core product area in the image</para>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
         /// </description></item>
-        /// <item><description><para>Image background: The remaining portion of the image apart from the product subject</para>
+        /// <item><description><para>Image background: the remaining part of the image other than the product subject.</para>
         /// </description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><para>Second, the removal targets support the following four types: text, specific names, transparent text blocks, and blemishes. You can use the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// <item><description><para>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
         /// </description></item>
         /// </ol>
-        /// <h2>Effect Comparison</h2>
+        /// <h2>Effect comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>Removable Objects in Images</b></th>
-        /// <th><b>Original Image</b></th>
-        /// <th><b>Image After Removal</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after removal</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProResponse
+        /// </returns>
+        public ImageRemovalProResponse ImageRemovalProWithOptions(ImageRemovalProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            {
+                query["Async"] = request.Async;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRemovalPro",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRemovalProResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Intelligently identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images, supports specifying objects to remove as needed, enables efficient and precise batch processing of images, and simplifies image editing workflows (synchronous/asynchronous).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product introduction</h2>
+        /// <para>The intelligent image removal product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images. You can specify objects to remove as needed, enabling efficient and precise batch processing of images and simplifying image editing workflows. (Synchronous/Asynchronous)</para>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
+        /// </list>
+        /// <para>Remove irrelevant visual elements to provide clearer, more focused product displays and enhance the shopping experience.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
+        /// </list>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with image specifications of different platforms.</para>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of image subject and image background. When specifying objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor access methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the remaining part of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after removal</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProResponse
+        /// </returns>
+        public async Task<ImageRemovalProResponse> ImageRemovalProWithOptionsAsync(ImageRemovalProRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            {
+                query["Async"] = request.Async;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImageRemovalPro",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImageRemovalProResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Intelligently identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images, supports specifying objects to remove as needed, enables efficient and precise batch processing of images, and simplifies image editing workflows (synchronous/asynchronous).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product introduction</h2>
+        /// <para>The intelligent image removal product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images. You can specify objects to remove as needed, enabling efficient and precise batch processing of images and simplifying image editing workflows. (Synchronous/Asynchronous)</para>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
+        /// </list>
+        /// <para>Remove irrelevant visual elements to provide clearer, more focused product displays and enhance the shopping experience.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
+        /// </list>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with image specifications of different platforms.</para>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of image subject and image background. When specifying objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor access methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the remaining part of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after removal</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProResponse
+        /// </returns>
+        public ImageRemovalProResponse ImageRemovalPro(ImageRemovalProRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImageRemovalProWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Intelligently identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images, supports specifying objects to remove as needed, enables efficient and precise batch processing of images, and simplifies image editing workflows (synchronous/asynchronous).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product introduction</h2>
+        /// <para>The intelligent image removal product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and watermarks from e-commerce images. You can specify objects to remove as needed, enabling efficient and precise batch processing of images and simplifying image editing workflows. (Synchronous/Asynchronous)</para>
+        /// <h2>Common scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
+        /// </list>
+        /// <para>Remove irrelevant visual elements to provide clearer, more focused product displays and enhance the shopping experience.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
+        /// </list>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly remove specific text and watermarks to comply with image specifications of different platforms.</para>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, clarify the definitions of image subject and image background. When specifying objects to remove, you can choose whether the removal scope is the image subject or the image background area. Both API and editor access methods are supported to meet different types of requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: the core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: the remaining part of the image other than the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>Second, the following four types of objects can be removed: text, specific names, transparent text blocks, and watermarks. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after removal</b></th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/AJdl65AyryVZyOke/img/4bd2c812-ed3c-45da-8a86-ebd29102f4b1.jpeg" alt="Main image 1 - Leopard print large capacity millennium crossbody canvas bag.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/eff0eb1b-36df-431d-a010-3bb3b7348ff9.png" alt="image.png"></td>
+        /// </tr>
+        /// <tr>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/c44ac17b-3fa4-4a6f-b411-90f1062b183b.jpeg" alt="Main image 1 - Short round-tip French false nails with handle.jpeg"></td>
+        /// <td><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/5VLqXLbGJZd3VqX1/img/af779684-4aa5-49b0-8668-34ab8bd4bcc1.png" alt="image.png"></td>
+        /// </tr>
+        /// </tbody></table>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImageRemovalProRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImageRemovalProResponse
+        /// </returns>
+        public async Task<ImageRemovalProResponse> ImageRemovalProAsync(ImageRemovalProRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImageRemovalProWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and image blemishes, with support for specifying objects to erase as needed for efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Product Introduction</h2>
+        /// <para>The intelligent image erasure product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and image blemishes from e-commerce images. You can specify objects to erase as needed, enabling efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
+        /// <h2>Scenarios</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
+        /// </list>
+        /// <para>Removes irrelevant visual elements to provide clearer, more focused product displays that enhance the shopping experience.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
+        /// </list>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly erase specific text and image blemishes to comply with different platform image requirements.</para>
+        /// <list type="bullet">
+        /// <item><description><b>Marketing material preparation:</b></description></item>
+        /// </list>
+        /// <para>Merchants can easily remove existing promotional information and quickly update images with the latest campaign details.</para>
+        /// <remarks>
+        /// <para>Note: Merchants or platforms can batch-remove impurities from images to optimize image quality. Use this API in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and image blemishes, then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Erasure API focuses on &quot;erasure.&quot; By calling them sequentially, you can maximize erasure effectiveness and reduce false removals and false identifications.</para>
+        /// </remarks>
+        /// <h2>Features</h2>
+        /// <ol>
+        /// <item><description><para>First, understand the definitions of image subject and image background. When specifying erasure objects, you can choose whether the erasure scope covers the image subject or the image background area. Both API and editor access methods are supported to meet different requirements.</para>
+        /// <ol>
+        /// <item><description><para>Image subject: The core product area in the image.</para>
+        /// </description></item>
+        /// <item><description><para>Image background: The remaining portion of the image outside the product subject.</para>
+        /// </description></item>
+        /// </ol>
+        /// </description></item>
+        /// <item><description><para>The following four types of objects can be erased: text, specific names, transparent text blocks, and image blemishes. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
+        /// </description></item>
+        /// </ol>
+        /// <h2>Effect comparison</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th><b>Erasable objects in images</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>Text</td>
-        /// <td>*   Involving the image subject area</td>
+        /// <td>*   Involves the image subject area</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
-        /// | Specific Names | *   Involving the image subject area</para>
+        /// | Specific names | *   Involves the image subject area</para>
         /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
-        /// | Transparent Text Blocks | *   Involving the image subject area</para>
+        /// | Transparent text blocks | *   Involves the image subject area</para>
         /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-        /// | Blemishes | *   Involving the image subject area</para>
+        /// | Image blemishes | *   Involves the image subject area</para>
         /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |</para>
         /// </description>
@@ -3848,102 +4152,102 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
+        /// <para>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and image blemishes, with support for specifying objects to erase as needed for efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Overview</h2>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
-        /// <h2>Use Cases</h2>
+        /// <h2>Product Introduction</h2>
+        /// <para>The intelligent image erasure product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and image blemishes from e-commerce images. You can specify objects to erase as needed, enabling efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Efficient E-commerce Image Processing:</b></description></item>
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
         /// </list>
-        /// <para>Remove irrelevant visual elements to provide a cleaner, more focused product display and enhance the customer shopping experience.</para>
+        /// <para>Removes irrelevant visual elements to provide clearer, more focused product displays that enhance the shopping experience.</para>
         /// <list type="bullet">
-        /// <item><description><b>Multi-platform Product Information Synchronization:</b></description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
         /// </list>
-        /// <para>When merchants simultaneously list products across different e-commerce platforms, they can quickly remove specific text and blemishes to comply with different platform image specifications.</para>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly erase specific text and image blemishes to comply with different platform image requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Marketing Material Preparation:</b></description></item>
+        /// <item><description><b>Marketing material preparation:</b></description></item>
         /// </list>
-        /// <para>Merchants can easily remove existing promotional information and quickly update it with the latest campaign details.</para>
+        /// <para>Merchants can easily remove existing promotional information and quickly update images with the latest campaign details.</para>
         /// <remarks>
-        /// <para>Note: Merchants or platforms can batch remove impurities from images to optimize image quality. We recommend using this in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and blemishes, then use the &quot;Intelligent Removal API&quot; to batch remove them. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Removal API focuses on &quot;removal.&quot; By calling them in sequence, you can maximize removal effectiveness and reduce &quot;false removals&quot; and &quot;false recognitions.&quot;</para>
+        /// <para>Note: Merchants or platforms can batch-remove impurities from images to optimize image quality. Use this API in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and image blemishes, then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Erasure API focuses on &quot;erasure.&quot; By calling them sequentially, you can maximize erasure effectiveness and reduce false removals and false identifications.</para>
         /// </remarks>
-        /// <h2>Feature Introduction</h2>
+        /// <h2>Features</h2>
         /// <ol>
-        /// <item><description><para>First, clarify the definitions of image subject and image background. In actual use, when specifying removal targets, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <item><description><para>First, understand the definitions of image subject and image background. When specifying erasure objects, you can choose whether the erasure scope covers the image subject or the image background area. Both API and editor access methods are supported to meet different requirements.</para>
         /// <ol>
-        /// <item><description><para>Image subject: The core product area in the image</para>
+        /// <item><description><para>Image subject: The core product area in the image.</para>
         /// </description></item>
-        /// <item><description><para>Image background: The remaining portion of the image apart from the product subject</para>
+        /// <item><description><para>Image background: The remaining portion of the image outside the product subject.</para>
         /// </description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><para>Second, the removal targets support the following four types: text, specific names, transparent text blocks, and blemishes. You can use the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// <item><description><para>The following four types of objects can be erased: text, specific names, transparent text blocks, and image blemishes. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
         /// </description></item>
         /// </ol>
-        /// <h2>Effect Comparison</h2>
+        /// <h2>Effect comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>Removable Objects in Images</b></th>
-        /// <th><b>Original Image</b></th>
-        /// <th><b>Image After Removal</b></th>
+        /// <th><b>Erasable objects in images</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>Text</td>
-        /// <td>*   Involving the image subject area</td>
+        /// <td>*   Involves the image subject area</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
-        /// | Specific Names | *   Involving the image subject area</para>
+        /// | Specific names | *   Involves the image subject area</para>
         /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
-        /// | Transparent Text Blocks | *   Involving the image subject area</para>
+        /// | Transparent text blocks | *   Involves the image subject area</para>
         /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-        /// | Blemishes | *   Involving the image subject area</para>
+        /// | Image blemishes | *   Involves the image subject area</para>
         /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |</para>
         /// </description>
@@ -4009,102 +4313,102 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
+        /// <para>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and image blemishes, with support for specifying objects to erase as needed for efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Overview</h2>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
-        /// <h2>Use Cases</h2>
+        /// <h2>Product Introduction</h2>
+        /// <para>The intelligent image erasure product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and image blemishes from e-commerce images. You can specify objects to erase as needed, enabling efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Efficient E-commerce Image Processing:</b></description></item>
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
         /// </list>
-        /// <para>Remove irrelevant visual elements to provide a cleaner, more focused product display and enhance the customer shopping experience.</para>
+        /// <para>Removes irrelevant visual elements to provide clearer, more focused product displays that enhance the shopping experience.</para>
         /// <list type="bullet">
-        /// <item><description><b>Multi-platform Product Information Synchronization:</b></description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
         /// </list>
-        /// <para>When merchants simultaneously list products across different e-commerce platforms, they can quickly remove specific text and blemishes to comply with different platform image specifications.</para>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly erase specific text and image blemishes to comply with different platform image requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Marketing Material Preparation:</b></description></item>
+        /// <item><description><b>Marketing material preparation:</b></description></item>
         /// </list>
-        /// <para>Merchants can easily remove existing promotional information and quickly update it with the latest campaign details.</para>
+        /// <para>Merchants can easily remove existing promotional information and quickly update images with the latest campaign details.</para>
         /// <remarks>
-        /// <para>Note: Merchants or platforms can batch remove impurities from images to optimize image quality. We recommend using this in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and blemishes, then use the &quot;Intelligent Removal API&quot; to batch remove them. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Removal API focuses on &quot;removal.&quot; By calling them in sequence, you can maximize removal effectiveness and reduce &quot;false removals&quot; and &quot;false recognitions.&quot;</para>
+        /// <para>Note: Merchants or platforms can batch-remove impurities from images to optimize image quality. Use this API in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and image blemishes, then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Erasure API focuses on &quot;erasure.&quot; By calling them sequentially, you can maximize erasure effectiveness and reduce false removals and false identifications.</para>
         /// </remarks>
-        /// <h2>Feature Introduction</h2>
+        /// <h2>Features</h2>
         /// <ol>
-        /// <item><description><para>First, clarify the definitions of image subject and image background. In actual use, when specifying removal targets, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <item><description><para>First, understand the definitions of image subject and image background. When specifying erasure objects, you can choose whether the erasure scope covers the image subject or the image background area. Both API and editor access methods are supported to meet different requirements.</para>
         /// <ol>
-        /// <item><description><para>Image subject: The core product area in the image</para>
+        /// <item><description><para>Image subject: The core product area in the image.</para>
         /// </description></item>
-        /// <item><description><para>Image background: The remaining portion of the image apart from the product subject</para>
+        /// <item><description><para>Image background: The remaining portion of the image outside the product subject.</para>
         /// </description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><para>Second, the removal targets support the following four types: text, specific names, transparent text blocks, and blemishes. You can use the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// <item><description><para>The following four types of objects can be erased: text, specific names, transparent text blocks, and image blemishes. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
         /// </description></item>
         /// </ol>
-        /// <h2>Effect Comparison</h2>
+        /// <h2>Effect comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>Removable Objects in Images</b></th>
-        /// <th><b>Original Image</b></th>
-        /// <th><b>Image After Removal</b></th>
+        /// <th><b>Erasable objects in images</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>Text</td>
-        /// <td>*   Involving the image subject area</td>
+        /// <td>*   Involves the image subject area</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
-        /// | Specific Names | *   Involving the image subject area</para>
+        /// | Specific names | *   Involves the image subject area</para>
         /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
-        /// | Transparent Text Blocks | *   Involving the image subject area</para>
+        /// | Transparent text blocks | *   Involves the image subject area</para>
         /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-        /// | Blemishes | *   Involving the image subject area</para>
+        /// | Image blemishes | *   Involves the image subject area</para>
         /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |</para>
         /// </description>
@@ -4124,102 +4428,102 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
+        /// <para>Intelligently erases unwanted elements from e-commerce images, automatically identifying and removing text, specific names, transparent text blocks, and image blemishes, with support for specifying objects to erase as needed for efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Overview</h2>
-        /// <para>The Intelligent Image Removal product is specially designed for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and blemishes from e-commerce images. You can specify objects to remove from images as needed, enabling efficient and accurate batch processing of large volumes of images and simplifying the image editing workflow. (Synchronous)</para>
-        /// <h2>Use Cases</h2>
+        /// <h2>Product Introduction</h2>
+        /// <para>The intelligent image erasure product is designed specifically for e-commerce images. It automatically identifies and removes text, specific names, transparent text blocks, and image blemishes from e-commerce images. You can specify objects to erase as needed, enabling efficient and precise batch processing that simplifies image editing workflows. (Synchronous)</para>
+        /// <h2>Scenarios</h2>
         /// <list type="bullet">
-        /// <item><description><b>Efficient E-commerce Image Processing:</b></description></item>
+        /// <item><description><b>Efficient e-commerce image processing:</b></description></item>
         /// </list>
-        /// <para>Remove irrelevant visual elements to provide a cleaner, more focused product display and enhance the customer shopping experience.</para>
+        /// <para>Removes irrelevant visual elements to provide clearer, more focused product displays that enhance the shopping experience.</para>
         /// <list type="bullet">
-        /// <item><description><b>Multi-platform Product Information Synchronization:</b></description></item>
+        /// <item><description><b>Multi-platform product information synchronization:</b></description></item>
         /// </list>
-        /// <para>When merchants simultaneously list products across different e-commerce platforms, they can quickly remove specific text and blemishes to comply with different platform image specifications.</para>
+        /// <para>When merchants list products across different e-commerce platforms, they can quickly erase specific text and image blemishes to comply with different platform image requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Marketing Material Preparation:</b></description></item>
+        /// <item><description><b>Marketing material preparation:</b></description></item>
         /// </list>
-        /// <para>Merchants can easily remove existing promotional information and quickly update it with the latest campaign details.</para>
+        /// <para>Merchants can easily remove existing promotional information and quickly update images with the latest campaign details.</para>
         /// <remarks>
-        /// <para>Note: Merchants or platforms can batch remove impurities from images to optimize image quality. We recommend using this in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and blemishes, then use the &quot;Intelligent Removal API&quot; to batch remove them. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Removal API focuses on &quot;removal.&quot; By calling them in sequence, you can maximize removal effectiveness and reduce &quot;false removals&quot; and &quot;false recognitions.&quot;</para>
+        /// <para>Note: Merchants or platforms can batch-remove impurities from images to optimize image quality. Use this API in combination with the &quot;Intelligent Recognition API&quot; (coming soon). First, filter out images containing text, specific names, transparent text blocks, and image blemishes, then use the &quot;Intelligent Erasure API&quot; for batch removal. The Intelligent Recognition API focuses on &quot;recognition,&quot; while the Intelligent Erasure API focuses on &quot;erasure.&quot; By calling them sequentially, you can maximize erasure effectiveness and reduce false removals and false identifications.</para>
         /// </remarks>
-        /// <h2>Feature Introduction</h2>
+        /// <h2>Features</h2>
         /// <ol>
-        /// <item><description><para>First, clarify the definitions of image subject and image background. In actual use, when specifying removal targets, you can choose whether the removal scope is the image subject or the image background area. Both API and editor integration methods are supported to meet different types of requirements.</para>
+        /// <item><description><para>First, understand the definitions of image subject and image background. When specifying erasure objects, you can choose whether the erasure scope covers the image subject or the image background area. Both API and editor access methods are supported to meet different requirements.</para>
         /// <ol>
-        /// <item><description><para>Image subject: The core product area in the image</para>
+        /// <item><description><para>Image subject: The core product area in the image.</para>
         /// </description></item>
-        /// <item><description><para>Image background: The remaining portion of the image apart from the product subject</para>
+        /// <item><description><para>Image background: The remaining portion of the image outside the product subject.</para>
         /// </description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><para>Second, the removal targets support the following four types: text, specific names, transparent text blocks, and blemishes. You can use the following examples to clarify your usage requirements and perform targeted operations:</para>
+        /// <item><description><para>The following four types of objects can be erased: text, specific names, transparent text blocks, and image blemishes. Refer to the following examples to clarify your requirements and perform targeted operations:</para>
         /// </description></item>
         /// </ol>
-        /// <h2>Effect Comparison</h2>
+        /// <h2>Effect comparison</h2>
         /// <table>
         /// <thead>
         /// <tr>
-        /// <th><b>Removable Objects in Images</b></th>
-        /// <th><b>Original Image</b></th>
-        /// <th><b>Image After Removal</b></th>
+        /// <th><b>Erasable objects in images</b></th>
+        /// <th><b>Original image</b></th>
+        /// <th><b>Image after erasure</b></th>
         /// </tr>
         /// </thead>
         /// <tbody><tr>
         /// <td>Text</td>
-        /// <td>*   Involving the image subject area</td>
+        /// <td>*   Involves the image subject area</td>
         /// <td></td>
         /// </tr>
         /// </tbody></table>
         /// <pre><c>![done-image-4a2a96c2-9ac6-4b35-b76b-a6eac303740f (1).png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d72a7982-e761-4b45-af1e-f8f90b3f1fc3.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/47428227-7523-432e-89ce-eba263e5ebda.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/d69e38e4-5657-471d-aff6-1e6a4c269455.png" alt="359ddfcf-a2b1-4e59-ae54-5e76705d0adf.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/365024b4-4863-46d4-9013-bdd9408ea6b9.png" alt="c35611f8-dab4-4df2-8942-36d7375ed55f.png"> |
-        /// | Specific Names | *   Involving the image subject area</para>
+        /// | Specific names | *   Involves the image subject area</para>
         /// <pre><c>![done-image-aca80515-aca6-4f4e-9429-47c5dd6b811f.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/ac35f8bc-d527-49de-8fba-cdeb71e3b058.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/2db445c8-6bdd-424e-b6a7-2ddb46e6786d.png" alt="done-image-29a89f03-964a-455e-968c-7c8d5282ebbb.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/36ace8aa-3b3b-4b1c-81e6-b691104262f0.png" alt="fd2db0ab-1b89-4085-b91d-99f40a1aea77.png"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/a7653a0c-d14e-4f97-9c2f-83327b43203f.png" alt="8726b148-ab74-4409-a6c1-4c50fcac3887.png"> |
-        /// | Transparent Text Blocks | *   Involving the image subject area</para>
+        /// | Transparent text blocks | *   Involves the image subject area</para>
         /// <pre><c>![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0f6068f0-168a-47bd-9fcd-c38b9e520506.png)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/c9ac2a4c-0aa3-40ee-8855-62a262364dbe.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/06ac537f-875a-48e2-8934-a84a79dfd8ff.jpeg" alt="8e84a5d6-da8c-4e3e-a705-71a66d0c78a2.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/05759aef-1720-41cd-8800-f7d0801e4d95.jpeg" alt="b05173e7-2ae5-494e-99d2-7111fc966fd5.jpeg"> |
-        /// | Blemishes | *   Involving the image subject area</para>
+        /// | Image blemishes | *   Involves the image subject area</para>
         /// <pre><c>![2.jpeg](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/bf1442f8-a9fa-40d3-bcb0-7a8a41b49b5d.jpeg)
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
-        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involving the image subject area</para>
+        /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/0d68612e-845d-466f-8a4a-b85facea095b.png" alt="image.png"> | *   Involves the image subject area</para>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/621daadc-454f-41b4-9ac4-752d457034b6.jpeg" alt="b6ef803f-743f-4e61-b901-d1f68167186f.jpeg"></para>
         /// <list type="bullet">
-        /// <item><description>Not involving the image subject area</description></item>
+        /// <item><description>Does not involve the image subject area</description></item>
         /// </list>
         /// <para><img src="https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/Mp7ld7bZAb2VAOBQ/img/caa6994b-2f97-484d-a807-671a0dc75947.jpeg" alt="dee0c7cf-8b0d-4d6d-9677-d5f2e6099834.jpeg"> |</para>
         /// </description>
@@ -4239,669 +4543,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
+        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
-        /// Supported language pairs:</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>No.</b></th>
-        /// <th><b>Source Language</b></th>
-        /// <th></th>
-        /// <th><b>Target Language</b></th>
-        /// <th></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td></td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// </tr>
-        /// <tr>
-        /// <td>1</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ar</td>
-        /// <td>Arabic</td>
-        /// </tr>
-        /// <tr>
-        /// <td>2</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>id</td>
-        /// <td>Indonesian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>3</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>th</td>
-        /// <td>Thai</td>
-        /// </tr>
-        /// <tr>
-        /// <td>4</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ko</td>
-        /// <td>Korean</td>
-        /// </tr>
-        /// <tr>
-        /// <td>5</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ja</td>
-        /// <td>Japanese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>6</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>vi</td>
-        /// <td>Vietnamese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>7</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ru</td>
-        /// <td>Russian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>8</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>tl</td>
-        /// <td>Filipino</td>
-        /// </tr>
-        /// <tr>
-        /// <td>9</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>es</td>
-        /// <td>Spanish</td>
-        /// </tr>
-        /// <tr>
-        /// <td>10</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>fr</td>
-        /// <td>French</td>
-        /// </tr>
-        /// <tr>
-        /// <td>11</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>de</td>
-        /// <td>German</td>
-        /// </tr>
-        /// <tr>
-        /// <td>12</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>pl</td>
-        /// <td>Polish</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <h2>Common scenarios</h2>
-        /// <para>Main product images and detail images for cross-border e-commerce.</para>
-        /// <h2>Functions and features</h2>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// ImageTranslationPlusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ImageTranslationPlusResponse
-        /// </returns>
-        public ImageTranslationPlusResponse ImageTranslationPlusWithOptions(ImageTranslationPlusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
-            {
-                body["Glossary"] = request.Glossary;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
-            {
-                body["ImageUrl"] = request.ImageUrl;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
-            {
-                body["IncludingProductArea"] = request.IncludingProductArea;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
-            {
-                body["SourceLanguage"] = request.SourceLanguage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
-            {
-                body["TargetLanguage"] = request.TargetLanguage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
-            {
-                body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
-            {
-                body["UseImageEditor"] = request.UseImageEditor;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageTranslationPlus",
-                Version = "2026-04-28",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageTranslationPlusResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
-        /// Supported language pairs:</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>No.</b></th>
-        /// <th><b>Source Language</b></th>
-        /// <th></th>
-        /// <th><b>Target Language</b></th>
-        /// <th></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td></td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// </tr>
-        /// <tr>
-        /// <td>1</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ar</td>
-        /// <td>Arabic</td>
-        /// </tr>
-        /// <tr>
-        /// <td>2</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>id</td>
-        /// <td>Indonesian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>3</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>th</td>
-        /// <td>Thai</td>
-        /// </tr>
-        /// <tr>
-        /// <td>4</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ko</td>
-        /// <td>Korean</td>
-        /// </tr>
-        /// <tr>
-        /// <td>5</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ja</td>
-        /// <td>Japanese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>6</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>vi</td>
-        /// <td>Vietnamese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>7</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ru</td>
-        /// <td>Russian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>8</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>tl</td>
-        /// <td>Filipino</td>
-        /// </tr>
-        /// <tr>
-        /// <td>9</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>es</td>
-        /// <td>Spanish</td>
-        /// </tr>
-        /// <tr>
-        /// <td>10</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>fr</td>
-        /// <td>French</td>
-        /// </tr>
-        /// <tr>
-        /// <td>11</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>de</td>
-        /// <td>German</td>
-        /// </tr>
-        /// <tr>
-        /// <td>12</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>pl</td>
-        /// <td>Polish</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <h2>Common scenarios</h2>
-        /// <para>Main product images and detail images for cross-border e-commerce.</para>
-        /// <h2>Functions and features</h2>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// ImageTranslationPlusRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// ImageTranslationPlusResponse
-        /// </returns>
-        public async Task<ImageTranslationPlusResponse> ImageTranslationPlusWithOptionsAsync(ImageTranslationPlusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Glossary))
-            {
-                body["Glossary"] = request.Glossary;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
-            {
-                body["ImageUrl"] = request.ImageUrl;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludingProductArea))
-            {
-                body["IncludingProductArea"] = request.IncludingProductArea;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
-            {
-                body["SourceLanguage"] = request.SourceLanguage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
-            {
-                body["TargetLanguage"] = request.TargetLanguage;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslatingBrandInTheProduct))
-            {
-                body["TranslatingBrandInTheProduct"] = request.TranslatingBrandInTheProduct;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseImageEditor))
-            {
-                body["UseImageEditor"] = request.UseImageEditor;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "ImageTranslationPlus",
-                Version = "2026-04-28",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<ImageTranslationPlusResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
-        /// Supported language pairs:</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>No.</b></th>
-        /// <th><b>Source Language</b></th>
-        /// <th></th>
-        /// <th><b>Target Language</b></th>
-        /// <th></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td></td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// </tr>
-        /// <tr>
-        /// <td>1</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ar</td>
-        /// <td>Arabic</td>
-        /// </tr>
-        /// <tr>
-        /// <td>2</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>id</td>
-        /// <td>Indonesian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>3</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>th</td>
-        /// <td>Thai</td>
-        /// </tr>
-        /// <tr>
-        /// <td>4</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ko</td>
-        /// <td>Korean</td>
-        /// </tr>
-        /// <tr>
-        /// <td>5</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ja</td>
-        /// <td>Japanese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>6</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>vi</td>
-        /// <td>Vietnamese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>7</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ru</td>
-        /// <td>Russian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>8</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>tl</td>
-        /// <td>Filipino</td>
-        /// </tr>
-        /// <tr>
-        /// <td>9</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>es</td>
-        /// <td>Spanish</td>
-        /// </tr>
-        /// <tr>
-        /// <td>10</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>fr</td>
-        /// <td>French</td>
-        /// </tr>
-        /// <tr>
-        /// <td>11</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>de</td>
-        /// <td>German</td>
-        /// </tr>
-        /// <tr>
-        /// <td>12</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>pl</td>
-        /// <td>Polish</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <h2>Common scenarios</h2>
-        /// <para>Main product images and detail images for cross-border e-commerce.</para>
-        /// <h2>Functions and features</h2>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// ImageTranslationPlusRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ImageTranslationPlusResponse
-        /// </returns>
-        public ImageTranslationPlusResponse ImageTranslationPlus(ImageTranslationPlusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return ImageTranslationPlusWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following 8 language pairs, with more to be supported in the future.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and outperforms Image Translation Lite and Pro in translation accuracy for multiple minor languages. We recommend using it for the following language pairs, with more to be supported in the future.
-        /// Supported language pairs:</para>
-        /// <table>
-        /// <thead>
-        /// <tr>
-        /// <th><b>No.</b></th>
-        /// <th><b>Source Language</b></th>
-        /// <th></th>
-        /// <th><b>Target Language</b></th>
-        /// <th></th>
-        /// </tr>
-        /// </thead>
-        /// <tbody><tr>
-        /// <td></td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// <td>Language Code</td>
-        /// <td>Language Name</td>
-        /// </tr>
-        /// <tr>
-        /// <td>1</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ar</td>
-        /// <td>Arabic</td>
-        /// </tr>
-        /// <tr>
-        /// <td>2</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>id</td>
-        /// <td>Indonesian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>3</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>th</td>
-        /// <td>Thai</td>
-        /// </tr>
-        /// <tr>
-        /// <td>4</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ko</td>
-        /// <td>Korean</td>
-        /// </tr>
-        /// <tr>
-        /// <td>5</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ja</td>
-        /// <td>Japanese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>6</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>vi</td>
-        /// <td>Vietnamese</td>
-        /// </tr>
-        /// <tr>
-        /// <td>7</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>ru</td>
-        /// <td>Russian</td>
-        /// </tr>
-        /// <tr>
-        /// <td>8</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>tl</td>
-        /// <td>Filipino</td>
-        /// </tr>
-        /// <tr>
-        /// <td>9</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>es</td>
-        /// <td>Spanish</td>
-        /// </tr>
-        /// <tr>
-        /// <td>10</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>fr</td>
-        /// <td>French</td>
-        /// </tr>
-        /// <tr>
-        /// <td>11</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>de</td>
-        /// <td>German</td>
-        /// </tr>
-        /// <tr>
-        /// <td>12</td>
-        /// <td>en</td>
-        /// <td>English</td>
-        /// <td>pl</td>
-        /// <td>Polish</td>
-        /// </tr>
-        /// </tbody></table>
-        /// <h2>Common scenarios</h2>
-        /// <para>Main product images and detail images for cross-border e-commerce.</para>
-        /// <h2>Functions and features</h2>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product body information protection</b>: Supports custom selection of whether to translate text on the product body. This helps protect body information such as embedded product names from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// ImageTranslationPlusRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// ImageTranslationPlusResponse
-        /// </returns>
-        public async Task<ImageTranslationPlusResponse> ImageTranslationPlusAsync(ImageTranslationPlusRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await ImageTranslationPlusWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
-        /// <h2>Applicable Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios</para>
+        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product Subject Information Protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded product names.</description></item>
-        /// <item><description><b>Post-translation Secondary Editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrating with an image editor. The editor SDK package is not yet publicly available; please follow platform notifications.</description></item>
-        /// <item><description><b>Brand Name Protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation Intervention Support</b>: Allows customization of translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to achieve this, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. For additional needs, please contact the platform for assistance.</description></item>
+        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
+        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4972,21 +4628,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
+        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
-        /// <h2>Applicable Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios</para>
+        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product Subject Information Protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded product names.</description></item>
-        /// <item><description><b>Post-translation Secondary Editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrating with an image editor. The editor SDK package is not yet publicly available; please follow platform notifications.</description></item>
-        /// <item><description><b>Brand Name Protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation Intervention Support</b>: Allows customization of translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to achieve this, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. For additional needs, please contact the platform for assistance.</description></item>
+        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
+        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5057,21 +4713,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
+        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
-        /// <h2>Applicable Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios</para>
+        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product Subject Information Protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded product names.</description></item>
-        /// <item><description><b>Post-translation Secondary Editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrating with an image editor. The editor SDK package is not yet publicly available; please follow platform notifications.</description></item>
-        /// <item><description><b>Brand Name Protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation Intervention Support</b>: Allows customization of translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to achieve this, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. For additional needs, please contact the platform for assistance.</description></item>
+        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
+        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5090,21 +4746,21 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
+        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro version is specifically designed for e-commerce images, integrating multimodal large model technology to achieve more accurate understanding of images, significantly improving translation quality, and continuously expanding and optimizing multilingual translation capabilities. It supports over 100 language pairs (including bridged translations).</para>
-        /// <h2>Applicable Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios</para>
+        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <h2>Scenarios</h2>
+        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Product Subject Information Protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded product names.</description></item>
-        /// <item><description><b>Post-translation Secondary Editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrating with an image editor. The editor SDK package is not yet publicly available; please follow platform notifications.</description></item>
-        /// <item><description><b>Brand Name Protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation Intervention Support</b>: Allows customization of translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). Commonly used for brand name protection scenarios. Simply pass the corresponding glossary ID when calling the API to achieve this, meeting your translation needs in different scenarios. Generally, you can upload up to 100,000 intervention terms. For additional needs, please contact the platform for assistance.</description></item>
+        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
+        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
+        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
+        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5483,38 +5139,38 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物料陈列检测</para>
+        /// <para>Material display detection is an intelligent compliance detection capability for in-store marketing materials built on multimodal large language models (MLLMs). It is designed for marketing material inspection scenarios in offline retail and channel stores. For standard materials such as function card stands, posters, and door-shaped display stands, as well as long-tail materials such as light box fabrics, KT boards, floor stickers, and light boxes captured in store photos, the service performs natural-language-level compliance checks based on inspection rules and outputs structured conclusions and Chinese evidence descriptions that can be directly integrated with business systems. This is a <b>synchronous</b> call that returns results in a single request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>适用场景</b></h2>
+        /// <h2><b>Common scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>门店营销物料合规巡检</b>：自动判定门店内是否按总部下发的标准陈列指引摆放 / 张贴指定营销物料（功能台卡、海报、门型展架等），识别「未摆放、摆放错误、内容不符」等典型问题。</para>
+        /// <item><description><para><b>In-store marketing material compliance inspection</b>: Automatically determines whether a store has placed or posted specified marketing materials (function card stands, posters, door-shaped display stands, etc.) according to the standard display guidelines issued by headquarters. Identifies typical issues such as &quot;not placed,&quot; &quot;placement fault,&quot; or &quot;content mismatch.&quot;</para>
         /// </description></item>
-        /// <item><description><para><b>新品 / 活动期素材落地核验</b>：新品发布或大促活动期间，对门店实拍图中的活动物料是否已按要求上架进行批量自动核验，替代人工抽检。</para>
+        /// <item><description><para><b>New product or campaign material deployment verification</b>: During new product launches or sales promotions, automatically verifies in batch whether campaign materials in store photos have been listed as required for publishing, overriding manual spot checks.</para>
         /// </description></item>
-        /// <item><description><para><b>双图比对与单图检测自适应</b>：同一接口同时支持「参考图 + 目标图」双图比对（模式 A）与「仅目标图」单图检测（模式 B），根据是否传入 <c>ImageRefer</c> 自动切换，调用方无需区分调用方式。</para>
+        /// <item><description><para><b>Adaptive dual-image comparison and single-image detection</b>: A single API supports both &quot;reference image + target image&quot; dual-image comparison (Mode A) and &quot;target image only&quot; single-image detection (Mode B). The mode uses automatic switchover based on whether <c>ImageRefer</c> is provided. The caller does not need to differentiate between invocation methods.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>功能介绍</b></h2>
+        /// <h2><b>Features</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>多模式智能路由</b>：内置物料类型解析能力，基于 <c>Rules</c> 自然语言文本自动识别目标物料类型，路由至对应的素材检测链路；调用方仅需传入图像 URL 与规则文本。目前已支持「功能台卡」「海报」「门型展架」「其他素材」4 套检测项路由，后续将持续增加细分营销物料类型的检测链路。</para>
+        /// <item><description><para><b>Multi-mode intelligent routing</b>: The service has built-in material type parsing capabilities. It automatically identifies the target material type from the <c>Rules</c> natural language text and routes the request to the corresponding detection pipeline. The caller only needs to provide image URLs and rule text. Four detection routing pipelines are currently supported: &quot;function card stand,&quot; &quot;poster,&quot; &quot;door-shaped display stand,&quot; and &quot;other materials.&quot; More detection pipelines for specific marketing material types will be added over time.</para>
         /// </description></item>
-        /// <item><description><para><b>MLLM 语义级理解 + 规则结构化协同</b>：采用多模态大模型完成物料识别、内容比对、文字 OCR 等语义级理解，配合规则清洗与结构化模型将自然语言规则拆解为可逐条判定的步骤（S1 / S2…），在保证准确率的同时兼顾规则灵活性与可追溯性。</para>
+        /// <item><description><para><b>MLLM semantic-level understanding + structured rule coordination</b>: A multimodal large language model performs semantic-level understanding tasks such as material recognition, content comparison, and text OCR. Combined with rule cleaning and a structuring model, natural language rules are broken down into individually evaluable steps (S1, S2, ...), ensuring both accuracy and rule flexibility with full traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>结构化审核结论输出</b>：输出统一为 <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c> 的结构，整体结论由各步骤逻辑 AND 得出，每条步骤独立可见，便于直接驱动下游业务系统并支持 case 级人审追溯。</para>
+        /// <item><description><para><b>Structured inspection conclusion output</b>: The output follows a unified structure of <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c>. The overall conclusion is derived by logically ANDing all step results. Each step is independently visible, making it easy to drive downstream business systems and support case-level manual review traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>支持的输入格式</b>：当前支持公网可访问的图像 URL；支持单图（模式 B）与双图（模式 A）两种调用形态，输出结构完全一致。</para>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports publicly accessible image URLs. Both single-image (Mode B) and dual-image (Mode A) call modes are supported, with an identical output structure.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>调用方式</b></h2>
+        /// <h2><b>How to invoke</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>同步调用</b>：单次请求即返回检测结果，无需轮询。响应为 <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c> 统一信封。</para>
+        /// <item><description><para><b>Synchronous call</b>: Returns detection results in a single request without polling. The response uses a unified envelope of <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c>.</para>
         /// </description></item>
-        /// <item><description><para><b>鉴权与签名</b>：经 Aidge 网关调用，鉴权、签名与公共参数遵循平台统一接入方式。具体请求路径以正式发布的接口文档为准。</para>
+        /// <item><description><para><b>Authentication and signing</b>: Invoked through the Aidge gateway. Authentication, signing, and common parameters follow the platform\&quot;s unified access method. Refer to the officially published API reference for the exact request path.</para>
         /// </description></item>
-        /// <item><description><para><b>超时设置</b>：建议将请求超时设置为不低于接口的最长响应时间（具体值以正式发布为准）。</para>
+        /// <item><description><para><b>Timeout settings</b>: Set the request timeout to no less than the maximum response time of the API (refer to the official release for the specific value).</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -5574,38 +5230,38 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物料陈列检测</para>
+        /// <para>Material display detection is an intelligent compliance detection capability for in-store marketing materials built on multimodal large language models (MLLMs). It is designed for marketing material inspection scenarios in offline retail and channel stores. For standard materials such as function card stands, posters, and door-shaped display stands, as well as long-tail materials such as light box fabrics, KT boards, floor stickers, and light boxes captured in store photos, the service performs natural-language-level compliance checks based on inspection rules and outputs structured conclusions and Chinese evidence descriptions that can be directly integrated with business systems. This is a <b>synchronous</b> call that returns results in a single request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>适用场景</b></h2>
+        /// <h2><b>Common scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>门店营销物料合规巡检</b>：自动判定门店内是否按总部下发的标准陈列指引摆放 / 张贴指定营销物料（功能台卡、海报、门型展架等），识别「未摆放、摆放错误、内容不符」等典型问题。</para>
+        /// <item><description><para><b>In-store marketing material compliance inspection</b>: Automatically determines whether a store has placed or posted specified marketing materials (function card stands, posters, door-shaped display stands, etc.) according to the standard display guidelines issued by headquarters. Identifies typical issues such as &quot;not placed,&quot; &quot;placement fault,&quot; or &quot;content mismatch.&quot;</para>
         /// </description></item>
-        /// <item><description><para><b>新品 / 活动期素材落地核验</b>：新品发布或大促活动期间，对门店实拍图中的活动物料是否已按要求上架进行批量自动核验，替代人工抽检。</para>
+        /// <item><description><para><b>New product or campaign material deployment verification</b>: During new product launches or sales promotions, automatically verifies in batch whether campaign materials in store photos have been listed as required for publishing, overriding manual spot checks.</para>
         /// </description></item>
-        /// <item><description><para><b>双图比对与单图检测自适应</b>：同一接口同时支持「参考图 + 目标图」双图比对（模式 A）与「仅目标图」单图检测（模式 B），根据是否传入 <c>ImageRefer</c> 自动切换，调用方无需区分调用方式。</para>
+        /// <item><description><para><b>Adaptive dual-image comparison and single-image detection</b>: A single API supports both &quot;reference image + target image&quot; dual-image comparison (Mode A) and &quot;target image only&quot; single-image detection (Mode B). The mode uses automatic switchover based on whether <c>ImageRefer</c> is provided. The caller does not need to differentiate between invocation methods.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>功能介绍</b></h2>
+        /// <h2><b>Features</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>多模式智能路由</b>：内置物料类型解析能力，基于 <c>Rules</c> 自然语言文本自动识别目标物料类型，路由至对应的素材检测链路；调用方仅需传入图像 URL 与规则文本。目前已支持「功能台卡」「海报」「门型展架」「其他素材」4 套检测项路由，后续将持续增加细分营销物料类型的检测链路。</para>
+        /// <item><description><para><b>Multi-mode intelligent routing</b>: The service has built-in material type parsing capabilities. It automatically identifies the target material type from the <c>Rules</c> natural language text and routes the request to the corresponding detection pipeline. The caller only needs to provide image URLs and rule text. Four detection routing pipelines are currently supported: &quot;function card stand,&quot; &quot;poster,&quot; &quot;door-shaped display stand,&quot; and &quot;other materials.&quot; More detection pipelines for specific marketing material types will be added over time.</para>
         /// </description></item>
-        /// <item><description><para><b>MLLM 语义级理解 + 规则结构化协同</b>：采用多模态大模型完成物料识别、内容比对、文字 OCR 等语义级理解，配合规则清洗与结构化模型将自然语言规则拆解为可逐条判定的步骤（S1 / S2…），在保证准确率的同时兼顾规则灵活性与可追溯性。</para>
+        /// <item><description><para><b>MLLM semantic-level understanding + structured rule coordination</b>: A multimodal large language model performs semantic-level understanding tasks such as material recognition, content comparison, and text OCR. Combined with rule cleaning and a structuring model, natural language rules are broken down into individually evaluable steps (S1, S2, ...), ensuring both accuracy and rule flexibility with full traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>结构化审核结论输出</b>：输出统一为 <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c> 的结构，整体结论由各步骤逻辑 AND 得出，每条步骤独立可见，便于直接驱动下游业务系统并支持 case 级人审追溯。</para>
+        /// <item><description><para><b>Structured inspection conclusion output</b>: The output follows a unified structure of <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c>. The overall conclusion is derived by logically ANDing all step results. Each step is independently visible, making it easy to drive downstream business systems and support case-level manual review traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>支持的输入格式</b>：当前支持公网可访问的图像 URL；支持单图（模式 B）与双图（模式 A）两种调用形态，输出结构完全一致。</para>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports publicly accessible image URLs. Both single-image (Mode B) and dual-image (Mode A) call modes are supported, with an identical output structure.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>调用方式</b></h2>
+        /// <h2><b>How to invoke</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>同步调用</b>：单次请求即返回检测结果，无需轮询。响应为 <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c> 统一信封。</para>
+        /// <item><description><para><b>Synchronous call</b>: Returns detection results in a single request without polling. The response uses a unified envelope of <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c>.</para>
         /// </description></item>
-        /// <item><description><para><b>鉴权与签名</b>：经 Aidge 网关调用，鉴权、签名与公共参数遵循平台统一接入方式。具体请求路径以正式发布的接口文档为准。</para>
+        /// <item><description><para><b>Authentication and signing</b>: Invoked through the Aidge gateway. Authentication, signing, and common parameters follow the platform\&quot;s unified access method. Refer to the officially published API reference for the exact request path.</para>
         /// </description></item>
-        /// <item><description><para><b>超时设置</b>：建议将请求超时设置为不低于接口的最长响应时间（具体值以正式发布为准）。</para>
+        /// <item><description><para><b>Timeout settings</b>: Set the request timeout to no less than the maximum response time of the API (refer to the official release for the specific value).</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -5665,38 +5321,38 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物料陈列检测</para>
+        /// <para>Material display detection is an intelligent compliance detection capability for in-store marketing materials built on multimodal large language models (MLLMs). It is designed for marketing material inspection scenarios in offline retail and channel stores. For standard materials such as function card stands, posters, and door-shaped display stands, as well as long-tail materials such as light box fabrics, KT boards, floor stickers, and light boxes captured in store photos, the service performs natural-language-level compliance checks based on inspection rules and outputs structured conclusions and Chinese evidence descriptions that can be directly integrated with business systems. This is a <b>synchronous</b> call that returns results in a single request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>适用场景</b></h2>
+        /// <h2><b>Common scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>门店营销物料合规巡检</b>：自动判定门店内是否按总部下发的标准陈列指引摆放 / 张贴指定营销物料（功能台卡、海报、门型展架等），识别「未摆放、摆放错误、内容不符」等典型问题。</para>
+        /// <item><description><para><b>In-store marketing material compliance inspection</b>: Automatically determines whether a store has placed or posted specified marketing materials (function card stands, posters, door-shaped display stands, etc.) according to the standard display guidelines issued by headquarters. Identifies typical issues such as &quot;not placed,&quot; &quot;placement fault,&quot; or &quot;content mismatch.&quot;</para>
         /// </description></item>
-        /// <item><description><para><b>新品 / 活动期素材落地核验</b>：新品发布或大促活动期间，对门店实拍图中的活动物料是否已按要求上架进行批量自动核验，替代人工抽检。</para>
+        /// <item><description><para><b>New product or campaign material deployment verification</b>: During new product launches or sales promotions, automatically verifies in batch whether campaign materials in store photos have been listed as required for publishing, overriding manual spot checks.</para>
         /// </description></item>
-        /// <item><description><para><b>双图比对与单图检测自适应</b>：同一接口同时支持「参考图 + 目标图」双图比对（模式 A）与「仅目标图」单图检测（模式 B），根据是否传入 <c>ImageRefer</c> 自动切换，调用方无需区分调用方式。</para>
+        /// <item><description><para><b>Adaptive dual-image comparison and single-image detection</b>: A single API supports both &quot;reference image + target image&quot; dual-image comparison (Mode A) and &quot;target image only&quot; single-image detection (Mode B). The mode uses automatic switchover based on whether <c>ImageRefer</c> is provided. The caller does not need to differentiate between invocation methods.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>功能介绍</b></h2>
+        /// <h2><b>Features</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>多模式智能路由</b>：内置物料类型解析能力，基于 <c>Rules</c> 自然语言文本自动识别目标物料类型，路由至对应的素材检测链路；调用方仅需传入图像 URL 与规则文本。目前已支持「功能台卡」「海报」「门型展架」「其他素材」4 套检测项路由，后续将持续增加细分营销物料类型的检测链路。</para>
+        /// <item><description><para><b>Multi-mode intelligent routing</b>: The service has built-in material type parsing capabilities. It automatically identifies the target material type from the <c>Rules</c> natural language text and routes the request to the corresponding detection pipeline. The caller only needs to provide image URLs and rule text. Four detection routing pipelines are currently supported: &quot;function card stand,&quot; &quot;poster,&quot; &quot;door-shaped display stand,&quot; and &quot;other materials.&quot; More detection pipelines for specific marketing material types will be added over time.</para>
         /// </description></item>
-        /// <item><description><para><b>MLLM 语义级理解 + 规则结构化协同</b>：采用多模态大模型完成物料识别、内容比对、文字 OCR 等语义级理解，配合规则清洗与结构化模型将自然语言规则拆解为可逐条判定的步骤（S1 / S2…），在保证准确率的同时兼顾规则灵活性与可追溯性。</para>
+        /// <item><description><para><b>MLLM semantic-level understanding + structured rule coordination</b>: A multimodal large language model performs semantic-level understanding tasks such as material recognition, content comparison, and text OCR. Combined with rule cleaning and a structuring model, natural language rules are broken down into individually evaluable steps (S1, S2, ...), ensuring both accuracy and rule flexibility with full traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>结构化审核结论输出</b>：输出统一为 <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c> 的结构，整体结论由各步骤逻辑 AND 得出，每条步骤独立可见，便于直接驱动下游业务系统并支持 case 级人审追溯。</para>
+        /// <item><description><para><b>Structured inspection conclusion output</b>: The output follows a unified structure of <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c>. The overall conclusion is derived by logically ANDing all step results. Each step is independently visible, making it easy to drive downstream business systems and support case-level manual review traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>支持的输入格式</b>：当前支持公网可访问的图像 URL；支持单图（模式 B）与双图（模式 A）两种调用形态，输出结构完全一致。</para>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports publicly accessible image URLs. Both single-image (Mode B) and dual-image (Mode A) call modes are supported, with an identical output structure.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>调用方式</b></h2>
+        /// <h2><b>How to invoke</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>同步调用</b>：单次请求即返回检测结果，无需轮询。响应为 <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c> 统一信封。</para>
+        /// <item><description><para><b>Synchronous call</b>: Returns detection results in a single request without polling. The response uses a unified envelope of <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c>.</para>
         /// </description></item>
-        /// <item><description><para><b>鉴权与签名</b>：经 Aidge 网关调用，鉴权、签名与公共参数遵循平台统一接入方式。具体请求路径以正式发布的接口文档为准。</para>
+        /// <item><description><para><b>Authentication and signing</b>: Invoked through the Aidge gateway. Authentication, signing, and common parameters follow the platform\&quot;s unified access method. Refer to the officially published API reference for the exact request path.</para>
         /// </description></item>
-        /// <item><description><para><b>超时设置</b>：建议将请求超时设置为不低于接口的最长响应时间（具体值以正式发布为准）。</para>
+        /// <item><description><para><b>Timeout settings</b>: Set the request timeout to no less than the maximum response time of the API (refer to the official release for the specific value).</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -5716,38 +5372,38 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>物料陈列检测</para>
+        /// <para>Material display detection is an intelligent compliance detection capability for in-store marketing materials built on multimodal large language models (MLLMs). It is designed for marketing material inspection scenarios in offline retail and channel stores. For standard materials such as function card stands, posters, and door-shaped display stands, as well as long-tail materials such as light box fabrics, KT boards, floor stickers, and light boxes captured in store photos, the service performs natural-language-level compliance checks based on inspection rules and outputs structured conclusions and Chinese evidence descriptions that can be directly integrated with business systems. This is a <b>synchronous</b> call that returns results in a single request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><b>适用场景</b></h2>
+        /// <h2><b>Common scenarios</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>门店营销物料合规巡检</b>：自动判定门店内是否按总部下发的标准陈列指引摆放 / 张贴指定营销物料（功能台卡、海报、门型展架等），识别「未摆放、摆放错误、内容不符」等典型问题。</para>
+        /// <item><description><para><b>In-store marketing material compliance inspection</b>: Automatically determines whether a store has placed or posted specified marketing materials (function card stands, posters, door-shaped display stands, etc.) according to the standard display guidelines issued by headquarters. Identifies typical issues such as &quot;not placed,&quot; &quot;placement fault,&quot; or &quot;content mismatch.&quot;</para>
         /// </description></item>
-        /// <item><description><para><b>新品 / 活动期素材落地核验</b>：新品发布或大促活动期间，对门店实拍图中的活动物料是否已按要求上架进行批量自动核验，替代人工抽检。</para>
+        /// <item><description><para><b>New product or campaign material deployment verification</b>: During new product launches or sales promotions, automatically verifies in batch whether campaign materials in store photos have been listed as required for publishing, overriding manual spot checks.</para>
         /// </description></item>
-        /// <item><description><para><b>双图比对与单图检测自适应</b>：同一接口同时支持「参考图 + 目标图」双图比对（模式 A）与「仅目标图」单图检测（模式 B），根据是否传入 <c>ImageRefer</c> 自动切换，调用方无需区分调用方式。</para>
+        /// <item><description><para><b>Adaptive dual-image comparison and single-image detection</b>: A single API supports both &quot;reference image + target image&quot; dual-image comparison (Mode A) and &quot;target image only&quot; single-image detection (Mode B). The mode uses automatic switchover based on whether <c>ImageRefer</c> is provided. The caller does not need to differentiate between invocation methods.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>功能介绍</b></h2>
+        /// <h2><b>Features</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>多模式智能路由</b>：内置物料类型解析能力，基于 <c>Rules</c> 自然语言文本自动识别目标物料类型，路由至对应的素材检测链路；调用方仅需传入图像 URL 与规则文本。目前已支持「功能台卡」「海报」「门型展架」「其他素材」4 套检测项路由，后续将持续增加细分营销物料类型的检测链路。</para>
+        /// <item><description><para><b>Multi-mode intelligent routing</b>: The service has built-in material type parsing capabilities. It automatically identifies the target material type from the <c>Rules</c> natural language text and routes the request to the corresponding detection pipeline. The caller only needs to provide image URLs and rule text. Four detection routing pipelines are currently supported: &quot;function card stand,&quot; &quot;poster,&quot; &quot;door-shaped display stand,&quot; and &quot;other materials.&quot; More detection pipelines for specific marketing material types will be added over time.</para>
         /// </description></item>
-        /// <item><description><para><b>MLLM 语义级理解 + 规则结构化协同</b>：采用多模态大模型完成物料识别、内容比对、文字 OCR 等语义级理解，配合规则清洗与结构化模型将自然语言规则拆解为可逐条判定的步骤（S1 / S2…），在保证准确率的同时兼顾规则灵活性与可追溯性。</para>
+        /// <item><description><para><b>MLLM semantic-level understanding + structured rule coordination</b>: A multimodal large language model performs semantic-level understanding tasks such as material recognition, content comparison, and text OCR. Combined with rule cleaning and a structuring model, natural language rules are broken down into individually evaluable steps (S1, S2, ...), ensuring both accuracy and rule flexibility with full traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>结构化审核结论输出</b>：输出统一为 <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c> 的结构，整体结论由各步骤逻辑 AND 得出，每条步骤独立可见，便于直接驱动下游业务系统并支持 case 级人审追溯。</para>
+        /// <item><description><para><b>Structured inspection conclusion output</b>: The output follows a unified structure of <c>Result.OverallResult</c> + <c>Result.Steps[]</c> + <c>Result.Evidence</c>. The overall conclusion is derived by logically ANDing all step results. Each step is independently visible, making it easy to drive downstream business systems and support case-level manual review traceability.</para>
         /// </description></item>
-        /// <item><description><para><b>支持的输入格式</b>：当前支持公网可访问的图像 URL；支持单图（模式 B）与双图（模式 A）两种调用形态，输出结构完全一致。</para>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports publicly accessible image URLs. Both single-image (Mode B) and dual-image (Mode A) call modes are supported, with an identical output structure.</para>
         /// </description></item>
         /// </list>
-        /// <h2><b>调用方式</b></h2>
+        /// <h2><b>How to invoke</b></h2>
         /// <list type="bullet">
-        /// <item><description><para><b>同步调用</b>：单次请求即返回检测结果，无需轮询。响应为 <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c> 统一信封。</para>
+        /// <item><description><para><b>Synchronous call</b>: Returns detection results in a single request without polling. The response uses a unified envelope of <c>Code</c> / <c>Message</c> / <c>RequestId</c> / <c>Success</c> / <c>Data</c>.</para>
         /// </description></item>
-        /// <item><description><para><b>鉴权与签名</b>：经 Aidge 网关调用，鉴权、签名与公共参数遵循平台统一接入方式。具体请求路径以正式发布的接口文档为准。</para>
+        /// <item><description><para><b>Authentication and signing</b>: Invoked through the Aidge gateway. Authentication, signing, and common parameters follow the platform\&quot;s unified access method. Refer to the officially published API reference for the exact request path.</para>
         /// </description></item>
-        /// <item><description><para><b>超时设置</b>：建议将请求超时设置为不低于接口的最长响应时间（具体值以正式发布为准）。</para>
+        /// <item><description><para><b>Timeout settings</b>: Set the request timeout to no less than the maximum response time of the API (refer to the official release for the specific value).</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -7587,27 +7243,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention</b> Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7639,7 +7295,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject description. The product is a &quot;key bag&quot; rather than a &quot;keychain.&quot; Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -7664,6 +7320,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
             {
                 body["FormatType"] = request.FormatType;
@@ -7683,6 +7343,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
             {
                 body["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            {
+                body["TranslateScene"] = request.TranslateScene;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7705,27 +7369,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention</b> Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7757,7 +7421,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject description. The product is a &quot;key bag&quot; rather than a &quot;keychain.&quot; Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -7782,6 +7446,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
                 request.SourceTextListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceTextList, "SourceTextList", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizName))
+            {
+                body["BizName"] = request.BizName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatType))
             {
                 body["FormatType"] = request.FormatType;
@@ -7801,6 +7469,10 @@ namespace AlibabaCloud.SDK.Aidge20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
             {
                 body["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranslateScene))
+            {
+                body["TranslateScene"] = request.TranslateScene;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7823,27 +7495,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention</b> Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7875,7 +7547,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject description. The product is a &quot;key bag&quot; rather than a &quot;keychain.&quot; Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -7895,27 +7567,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs. The model is continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
-        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
-        /// <item><description>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
+        /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
         /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
-        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
+        /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention</b> Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. Contact the platform for additional capacity.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7947,7 +7619,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more accurate product subject description. The product is a &quot;key bag&quot; rather than a &quot;keychain.&quot; Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
         /// </tr>
         /// </tbody></table>
         /// </description>

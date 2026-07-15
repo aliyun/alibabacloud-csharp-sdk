@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRemoveResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Intelligent removal result</para>
+        /// <para>The intelligent erasure result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemoveResponseBodyData Data { get; set; }
         public class ImageRemoveResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Height of the result image (pixels)</para>
+            /// <para>The height of the result image, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>URL of the removal result image</para>
+            /// <para>The URL of the result image after erasure.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Usage information</para>
+            /// <para>The usage information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public Dictionary<string, long?> UsageMap { get; set; }
 
             /// <summary>
-            /// <para>Width of the result image (pixels)</para>
+            /// <para>The width of the result image, in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

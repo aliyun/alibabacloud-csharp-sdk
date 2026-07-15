@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class ImageTranslationPlusResponse : TeaModel {
+    public class ImageRemovalProResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public ImageTranslationPlusResponseBody Body { get; set; }
+        public ImageRemovalProResponseBody Body { get; set; }
 
     }
 

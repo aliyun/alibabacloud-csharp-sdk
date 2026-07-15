@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRemoveShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>URL of the image to be processed (mutually exclusive with ImageBase64)</para>
+        /// <para>The URL of the image to process. This parameter is mutually exclusive with ImageBase64. You must specify one of them.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specific removal area in RLE format. If provided, this takes priority and the remove parameters are ignored</para>
+        /// <para>The specific erasure region in RLE format. If this parameter is specified, it takes priority and the remove parameters are ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -31,7 +31,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Mask { get; set; }
 
         /// <summary>
-        /// <para>Elements to remove from the non-subject area of the image (1=transparent text blocks; 2=specific names; 3=text; 4=blemishes). Multiple selections allowed</para>
+        /// <para>The elements to remove from the non-subject area of the image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: transparent text block</description></item>
+        /// <item><description>2: specific name</description></item>
+        /// <item><description>3: text</description></item>
+        /// <item><description>4: image blemish</description></item>
+        /// </list>
+        /// <para>You can specify multiple values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2]</para>
@@ -41,8 +48,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string NonObjectRemoveElementsShrink { get; set; }
 
         /// <summary>
-        /// <para>Elements to remove from the image subject (1=transparent text blocks; 2=specific names; 3=text; 4=blemishes). Multiple selections allowed</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The elements to remove from the image subject area. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: transparent text block</description></item>
+        /// <item><description>2: specific name</description></item>
+        /// <item><description>3: text</description></item>
+        /// <item><description>4: image blemish</description></item>
+        /// </list>
+        /// <para>You can specify multiple values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[1,2]</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public DocumentTranslateResponseBodyData Data { get; set; }
         public class DocumentTranslateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the asynchronous task. Use this ID to query the task status and result.</para>
+            /// <para>The unique identifier of the asynchronous task, used to query the task status and result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6071a030-5c92-9df1-96d0-44952343439a</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. Not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -59,11 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class DocumentTranslateRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the document. Valid values: PDF and Word. Size limits: Word 200 MB/300 pages, PDF 200 MB/300 pages. The maximum size of a single file is 200 MB.</para>
+        /// <para>The supported document types: PDF or Word. Size limits: Word 200 MB/300 pages, PDF 200 MB/300 pages, maximum 200 MB per file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The glossary ID to use when the glossary feature is required. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand name protection.</para>
+        /// <para>The glossary ID to use when the glossary feature is required. Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). Commonly used for brand name protection scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The OSS URL of the document to be translated.</para>
+        /// <para>The OSS URL path of the document to be translated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
