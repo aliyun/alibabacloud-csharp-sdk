@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiVersionConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable versioning.</para>
+        /// <para>Indicates whether versioning control is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The key in the specified header when the header versioning solution is used.</para>
+        /// <para>The key in the specified header parameter when the header-based versioning scheme is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-version</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string HeaderName { get; set; }
 
         /// <summary>
-        /// <para>The key in the specified query parameter when the query versioning solution is used.</para>
+        /// <para>The key in the specified query parameter when the query parameter-based versioning scheme is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myVersion</para>
@@ -40,13 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string QueryName { get; set; }
 
         /// <summary>
-        /// <para>The versioning solution.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Path</description></item>
-        /// <item><description>Query</description></item>
-        /// <item><description>Header</description></item>
-        /// </list>
+        /// <para>The versioning scheme.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Query</para>

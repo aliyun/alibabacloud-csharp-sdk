@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for fuzzy match by API name.</para>
+        /// <para>The API name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imah</para>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The service source type used to filter results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: the service originates from MSE Nacos.</description></item>
-        /// <item><description>K8S: the service originates from a Kubernetes cluster in Container Service.</description></item>
-        /// <item><description>FC3: the service originates from Function Compute.</description></item>
-        /// <item><description>VIP: the service originates from a fixed address.</description></item>
-        /// <item><description>DNS: the service originates from a domain name.</description></item>
+        /// <item><description>MSE_NACOS: services from MSE Nacos.</description></item>
+        /// <item><description>K8S: services from a Kubernetes cluster in Container Service.</description></item>
+        /// <item><description>FC3: services from Function Compute.</description></item>
+        /// <item><description>VIP: services from a fixed address.</description></item>
+        /// <item><description>DNS: services from a domain name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

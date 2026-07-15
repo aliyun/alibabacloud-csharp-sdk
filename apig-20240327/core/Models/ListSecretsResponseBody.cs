@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The resource count of resources that reference the current key.</para>
+                /// <para>The resource count that references the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>

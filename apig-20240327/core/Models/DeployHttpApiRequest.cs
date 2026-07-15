@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed.</para>
+                /// <para>The existing service configurations. In the single-service scenario, only one entry is allowed. In scenarios such as by-ratio or by-content, multiple entries are allowed.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in the ratio-based scenario.</para>
+                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in the by-ratio scenario.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>49</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<DeployHttpApiRequestRestApiConfigOperationDeployments> OperationDeployments { get; set; }
             public class DeployHttpApiRequestRestApiConfigOperationDeployments : TeaModel {
                 /// <summary>
-                /// <para>The operation type.</para>
+                /// <para>The action type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Publish</para>

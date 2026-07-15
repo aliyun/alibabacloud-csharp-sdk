@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of attachment point supported by the policy.</para>
+        /// <para>The type of the attachment point supported by the policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>HttpApi: HTTP API.</description></item>

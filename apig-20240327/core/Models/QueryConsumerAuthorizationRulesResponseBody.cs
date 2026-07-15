@@ -51,6 +51,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerAuthorizationRuleId { get; set; }
 
                 /// <summary>
+                /// <para>The consumer group ID. This field is returned for consumer group authorization rules.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>csg-8c13d2b4f8a1</para>
                 /// </summary>
@@ -58,6 +60,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public string ConsumerGroupId { get; set; }
 
+                /// <summary>
+                /// <para>The consumer group information. This field is returned for consumer group authorization rules.</para>
+                /// </summary>
                 [NameInMap("consumerGroupInfo")]
                 [Validation(Required=false)]
                 public ConsumerGroupInfo ConsumerGroupInfo { get; set; }
@@ -148,6 +153,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
+                /// <para>The principal type. Valid values: Consumer or ConsumerGroup.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ConsumerGroup</para>
                 /// </summary>
@@ -173,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo ResourceInfo { get; set; }
                 public class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The operation information.</para>
+                    /// <para>The API operation information.</para>
                     /// </summary>
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]

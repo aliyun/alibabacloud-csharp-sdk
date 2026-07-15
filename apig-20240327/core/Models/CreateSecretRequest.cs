@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The KMS key configuration information.</para>
+        /// <para>The KMS key configuration.</para>
         /// </summary>
         [NameInMap("kmsConfig")]
         [Validation(Required=false)]
         public KMSConfig KmsConfig { get; set; }
 
         /// <summary>
-        /// <para>The key name. The name can contain letters, digits, and underscores (_), and cannot exceed 64 characters in length.</para>
+        /// <para>The key name. The name can contain letters, digits, and underscores (_) and can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_secret</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SecretData { get; set; }
 
         /// <summary>
-        /// <para>The key source.</para>
+        /// <para>The source of the key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KMS</para>

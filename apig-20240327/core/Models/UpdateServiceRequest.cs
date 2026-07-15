@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The list of expected HTTP status codes that indicate a healthy response. This parameter is required when the protocol is HTTP.</para>
+            /// <para>The list of expected normal status codes returned by requests. This parameter is required when the protocol is HTTP.</para>
             /// </summary>
             [NameInMap("expectedStatuses")]
             [Validation(Required=false)]
@@ -143,6 +143,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public float? HealthyPanicThreshold { get; set; }
 
+        /// <summary>
+        /// <para>The model provider ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mp-xxx****</para>
+        /// </summary>
         [NameInMap("modelProviderId")]
         [Validation(Required=false)]
         public string ModelProviderId { get; set; }
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateServiceRequestOutlierDetectionConfig OutlierDetectionConfig { get; set; }
         public class UpdateServiceRequestOutlierDetectionConfig : TeaModel {
             /// <summary>
-            /// <para>The base ejection time, which is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation time is calculated by using the following formula: k × base_ejection_time (the initial value of k is 1). Each ejection increases the isolation time (k is incremented by 1). If consecutive checks are healthy, the isolation time is gradually reduced (k is decremented by 1).</para>
+            /// <para>The initial ejection duration. This is the initial isolation duration after a node is ejected (for example, 30 seconds). The isolation duration is calculated by using the formula: k × base_ejection_time (k starts at 1). Each ejection increases the isolation duration (k is incremented by 1). If consecutive checks are normal, the isolation duration is gradually reduced (k is decremented by 1).</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -176,7 +182,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The panic threshold.</para>
-            /// <para>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally. Requests are sent only to healthy nodes and not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled. Requests are sent to all nodes, including ejected nodes.</para>
+            /// <para>When the proportion of healthy nodes in the service is greater than the panic threshold, health checks function normally and requests are sent only to healthy nodes, not to ejected nodes. When the proportion of healthy nodes in the service is less than or equal to the panic threshold, health checks are effectively disabled and requests are sent to all nodes, including ejected nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -225,7 +231,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The port number.</para>
+            /// <para>The port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>

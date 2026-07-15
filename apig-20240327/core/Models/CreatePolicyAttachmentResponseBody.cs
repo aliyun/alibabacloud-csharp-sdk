@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreatePolicyAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreatePolicyAttachmentResponseBodyData Data { get; set; }
         public class CreatePolicyAttachmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Policy Mount ID</para>
+            /// <para>The policy attachment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pr-cqooju5lhtgquuj6***</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>585657D2-1C20-5B8A-AF17-D727C64***</para>

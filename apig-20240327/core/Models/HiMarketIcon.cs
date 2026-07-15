@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketIcon : TeaModel {
         /// <summary>
-        /// <para>Specifies the icon type. Example: <c>URL</c>.</para>
+        /// <para>The icon type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>url</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The value of the icon, based on the specified <c>type</c>. For example, if <c>type</c> is <c>URL</c>, this is the URL of the icon.</para>
+        /// <para>The icon value.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://example.com/icon.png">https://example.com/icon.png</a></para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

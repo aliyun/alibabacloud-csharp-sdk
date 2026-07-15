@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketAgentConfig : TeaModel {
         /// <summary>
-        /// <para>Contains the API configuration for the agent.</para>
+        /// <para>The agent API configuration list.</para>
         /// </summary>
         [NameInMap("agentAPIConfig")]
         [Validation(Required=false)]
         public HiMarketAgentConfigAgentAPIConfig AgentAPIConfig { get; set; }
         public class HiMarketAgentConfigAgentAPIConfig : TeaModel {
             /// <summary>
-            /// <para>The communication protocols supported by the agent.</para>
+            /// <para>The list of agent protocols.</para>
             /// </summary>
             [NameInMap("agentProtocols")]
             [Validation(Required=false)]
             public List<string> AgentProtocols { get; set; }
 
             /// <summary>
-            /// <para>The routing rules for incoming requests.</para>
+            /// <para>The list of agent API routing configurations.</para>
             /// </summary>
             [NameInMap("routes")]
             [Validation(Required=false)]

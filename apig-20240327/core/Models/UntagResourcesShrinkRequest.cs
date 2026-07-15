@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all tags. This parameter takes effect only when tags are empty. Valid values:</para>
+        /// <para>Specifies whether to delete all tags. This parameter is valid only when tags are empty. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>

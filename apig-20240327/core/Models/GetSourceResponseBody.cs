@@ -27,6 +27,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetSourceResponseBodyData Data { get; set; }
         public class GetSourceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The reason for the association status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Association completed</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string AssociationReason { get; set; }
 
             /// <summary>
+            /// <para>The association status of the source</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ASSOCIATED</para>
             /// </summary>

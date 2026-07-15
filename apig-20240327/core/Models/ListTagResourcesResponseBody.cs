@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start point of the next query. An empty value of NextToken indicates that no more results exist.</para>
+        /// <para>The token for the next query. An empty NextToken indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeb235b-xxx</para>

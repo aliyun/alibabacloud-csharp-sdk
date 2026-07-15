@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListGatewayQuotaRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The rule name keyword, used for fuzzy match.</para>
+        /// <para>The rule name keyword for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>daily</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request. This parameter is not supported.</para>
+        /// <para>The maximum number of records to retrieve at a time. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

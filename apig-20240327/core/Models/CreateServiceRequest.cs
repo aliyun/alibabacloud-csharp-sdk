@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The Agent service configuration. This parameter is required when <c>sourceType</c> is set to <c>AGENT</c>.</para>
+            /// <para>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</para>
             /// </summary>
             [NameInMap("agentServiceConfig")]
             [Validation(Required=false)]
@@ -84,6 +84,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// <para>The model provider ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mp-xxx****</para>
+            /// </summary>
             [NameInMap("modelProviderId")]
             [Validation(Required=false)]
             public string ModelProviderId { get; set; }
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the service:</para>
+            /// <para>The namespace of the service.</para>
             /// <list type="bullet">
             /// <item><description>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</description></item>
             /// <item><description>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</description></item>

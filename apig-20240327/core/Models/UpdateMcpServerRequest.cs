@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <item><description>HTTP: HTTP protocol.</description></item>
         /// <item><description>HTTPS: HTTPS protocol.</description></item>
         /// <item><description>SSE: Server-Sent Events protocol.</description></item>
-        /// <item><description>StreamableHTTP: Streamable HTTP protocol.</description></item>
+        /// <item><description>StreamableHTTP: streamable HTTP protocol.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

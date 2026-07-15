@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketProductPublicationConifg : TeaModel {
         /// <summary>
-        /// <para>The unique identifier for the publication.</para>
+        /// <para>The publication ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pub-xxx</para>
         /// </summary>
         [NameInMap("publicationId")]
         [Validation(Required=false)]

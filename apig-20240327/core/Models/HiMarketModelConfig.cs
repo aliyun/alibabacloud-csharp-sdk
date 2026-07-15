@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketModelConfig : TeaModel {
         /// <summary>
-        /// <para>Configuration for the model API.</para>
+        /// <para>The Model API configuration wrapper.</para>
         /// </summary>
         [NameInMap("modelAPIConfig")]
         [Validation(Required=false)]
         public HiMarketModelConfigModelAPIConfig ModelAPIConfig { get; set; }
         public class HiMarketModelConfigModelAPIConfig : TeaModel {
             /// <summary>
-            /// <para>The AI protocols supported by the model.</para>
+            /// <para>The list of AI protocols.</para>
             /// </summary>
             [NameInMap("aiProtocols")]
             [Validation(Required=false)]
             public List<string> AiProtocols { get; set; }
 
             /// <summary>
-            /// <para>The model category.</para>
+            /// <para>The model categorization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Text</para>
             /// </summary>
             [NameInMap("modelCategory")]
             [Validation(Required=false)]
             public string ModelCategory { get; set; }
 
             /// <summary>
-            /// <para>Route configurations for the model API.</para>
+            /// <para>The list of routing configurations.</para>
             /// </summary>
             [NameInMap("routes")]
             [Validation(Required=false)]

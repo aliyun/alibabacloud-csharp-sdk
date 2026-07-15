@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Service : TeaModel {
         /// <summary>
-        /// <para>The address information, including IP addresses or domain name lists.</para>
+        /// <para>The address information, including IP addresses or domain names.</para>
         /// </summary>
         [NameInMap("addresses")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiServiceConfig AiServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the service was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725617840096</para>
@@ -78,7 +78,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ServiceHealthCheck HealthCheck { get; set; }
 
         /// <summary>
-        /// <para>The health check status. Valid values: Healthy and Unhealthy.</para>
+        /// <para>The health check status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Healthy</description></item>
+        /// <item><description>Unhealthy</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Healthy</para>
@@ -179,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The function qualifier.</para>
+        /// <para>The qualifier of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>
@@ -189,7 +193,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-xxx</para>
@@ -197,6 +201,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>RuntimeEndpointTimeout</para>
+        /// </summary>
+        [NameInMap("runtimeDetailErrorCode")]
+        [Validation(Required=false)]
+        public string RuntimeDetailErrorCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Available</para>
+        /// </summary>
+        [NameInMap("runtimeDetailStatus")]
+        [Validation(Required=false)]
+        public string RuntimeDetailStatus { get; set; }
 
         /// <summary>
         /// <para>The unique ID of the service.</para>
@@ -226,7 +246,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> UnhealthyEndpoints { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The time when the service was updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725868548440</para>

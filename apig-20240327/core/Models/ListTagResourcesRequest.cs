@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start point of the next query.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeb235b-xxx</para>

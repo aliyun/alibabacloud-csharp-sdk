@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The CA certificate identifier.</para>
+        /// <para>The CA certificate identifier. This parameter is required for Dedicated+HTTPS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainScope { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS.</para>
+        /// <para>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless and for Dedicated+HTTPS. This parameter is not validated for Dedicated+HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -102,11 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type supported by the domain name. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HTTP: Only HTTP is supported.</description></item>
-        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
-        /// </list>
+        /// <para>The protocol type supported by the domain name. This parameter is required for Dedicated and only allows HTTP or HTTPS. This parameter is not allowed for Serverless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The page size of the consumer list.</para>
+        /// <para>The number of consumers per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerPageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the consumer list.</para>
+        /// <para>Specifies whether to include the consumer list in the response.</para>
         /// </summary>
         [NameInMap("withConsumers")]
         [Validation(Required=false)]

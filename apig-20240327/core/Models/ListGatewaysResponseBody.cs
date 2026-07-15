@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The billing type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
-                /// <item><description>PREPAY: Subscription.</description></item>
+                /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+                /// <item><description>PREPAY: subscription.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The source from which the gateway was created. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Console: The gateway was created from the console.</description></item>
+                /// <item><description>Console: the console.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string CreateFrom { get; set; }
 
                 /// <summary>
-                /// <para>The creation timestamp, in milliseconds.</para>
+                /// <para>The creation timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The subscription expiration timestamp, in milliseconds.</para>
+                /// <para>The subscription expiration timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The gateway instance edition. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Professional: Standard instance.</para>
+                /// <item><description><para>Professional: standard instance.</para>
                 /// </description></item>
                 /// <item><description><para>Serverless: Serverless instance.</para>
                 /// </description></item>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the gateway instance was created before the AI gateway feature was launched.</para>
+                /// <para>Indicates whether the gateway instance was created before the AI gateway feature was released.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The load balancing provisioning pattern of the gateway. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Managed: Managed by Cloud-native API Gateway.</description></item>
+                    /// <item><description>Managed: managed by the cloud-native API gateway.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -238,8 +238,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         /// <summary>
                         /// <para>The protocol. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>TCP</description></item>
-                        /// <item><description>UDP</description></item>
+                        /// <item><description>TCP.</description></item>
+                        /// <item><description>UDP.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -254,8 +254,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The load balancing status. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Ready: Active.</description></item>
-                    /// <item><description>NotCreate: No associated instance.</description></item>
+                    /// <item><description>Ready: active.</description></item>
+                    /// <item><description>NotCreate: no associated instance.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -268,8 +268,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The load balancing type of the gateway. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>NLB: Network load balancing.</description></item>
-                    /// <item><description>CLB: Classic load balancing.</description></item>
+                    /// <item><description>NLB: Network Load Balancer (NLB).</description></item>
+                    /// <item><description>CLB: Classic Load Balancer (CLB).</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string TargetVersion { get; set; }
 
                 /// <summary>
-                /// <para>The update timestamp, in milliseconds.</para>
+                /// <para>The update timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>

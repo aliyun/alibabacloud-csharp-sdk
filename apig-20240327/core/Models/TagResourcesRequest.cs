@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 subkeys.</para>
+        /// <para>The resource IDs. A maximum of 50 subkeys are supported.</para>
         /// </summary>
         [NameInMap("resourceId")]
         [Validation(Required=false)]

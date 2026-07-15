@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateHttpApiRequest : TeaModel {
         /// <summary>
-        /// <para>The list of Agent protocols.</para>
+        /// <para>The list of agent protocols.</para>
         /// </summary>
         [NameInMap("agentProtocols")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> AiProtocols { get; set; }
 
         /// <summary>
-        /// <para>The permission authentication configuration.</para>
+        /// <para>The authentication configuration.</para>
         /// </summary>
         [NameInMap("authConfig")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API description.</para>
+        /// <para>The description of the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>更新API描述</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable permission authentication.</para>
+        /// <para>Specifies whether to enable authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? EnableAuth { get; set; }
 
         /// <summary>
-        /// <para>The first byte timeout period.</para>
+        /// <para>The first byte timeout period. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30s</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("firstByteTimeout")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The Ingress Class to listen on.</para>
+            /// <para>The Ingress class to listen on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mse</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IngressClass { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to update the address in the Ingress Status.</para>
+            /// <para>Specifies whether to update the address in the Ingress status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to only modify the configuration. A value of true indicates that only the configuration is modified without triggering redeployment.</para>
+        /// <para>Specifies whether to only update the configuration without triggering a redeployment. Set this parameter to true to update the configuration only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> Protocols { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to remove the base path during forwarding.</para>
+        /// <para>Specifies whether to remove the base path when forwarding requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

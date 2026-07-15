@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Backend : TeaModel {
         /// <summary>
-        /// <para>The backend service scenario. Valid values: Single, MultiServiceByRatio, MultiServiceByTag, Mock, and Redirect.</para>
+        /// <para>The backend service scenario. Valid values: Single, MultiServiceByRatio, MultiServiceByTag, Mock, Redirect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Single</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>The backend services.</para>
+        /// <para>The backend service.</para>
         /// </summary>
         [NameInMap("services")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The service port. If you want to use a dynamic port, do not pass this parameter.</para>
+            /// <para>The service port. Do not specify this parameter for dynamic ports.</para>
             /// 
             /// <b>Example:</b>
             /// <para>port</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The service protocol. Valid values: HTTP, TCP, and DUBBO.</para>
+            /// <para>The service protocol. Valid values: [HTTP, TCP, DUBBO].</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The percentage value of traffic.</para>
+            /// <para>The traffic percentage value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49</para>

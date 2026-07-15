@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiDeployConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically deploy.</para>
+        /// <para>Indicates whether auto-deploy is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> CustomDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The list of custom domain name details.</para>
+        /// <para>The list of custom domain name information.</para>
         /// </summary>
         [NameInMap("customDomainInfos")]
         [Validation(Required=false)]
@@ -83,14 +83,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of environment domain name IDs. If this parameter is not specified, all environment domain names are associated. An empty array indicates that no environment domain names are associated.</para>
+        /// <para>The list of environment domain name IDs. If this parameter is not specified, all environment domain names are bound. An empty array indicates that no environment domain names are bound.</para>
         /// </summary>
         [NameInMap("envDomainIds")]
         [Validation(Required=false)]
         public List<string> EnvDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The list of environment domain name details.</para>
+        /// <para>The list of environment domain name information.</para>
         /// </summary>
         [NameInMap("envDomainInfos")]
         [Validation(Required=false)]
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The observability metric routing configuration.</para>
+            /// <para>The observability-based routing configuration.</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The list of subdomain details.</para>
+        /// <para>The list of subdomain information.</para>
         /// </summary>
         [NameInMap("subDomains")]
         [Validation(Required=false)]

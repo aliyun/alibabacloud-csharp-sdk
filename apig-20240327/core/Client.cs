@@ -72,32 +72,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds a consumer-based quota rule to an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -196,32 +190,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds a consumer-based quota rule to an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -320,32 +308,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds a consumer-based quota rule to an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -373,32 +355,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds a consumer-based quota rule to an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -421,7 +397,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group that allows a gateway to access services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -475,7 +451,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group that allows a gateway to access services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -529,7 +505,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group that allows a gateway to access services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -548,7 +524,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group to allow gateway access to services.</para>
+        /// <para>Authorizes a security group that allows a gateway to access services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -697,7 +673,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -755,7 +731,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -813,7 +789,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -832,7 +808,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transfers a resource to a different resource group.</para>
+        /// <para>Moves a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3657,7 +3633,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3719,7 +3695,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3781,7 +3757,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3800,7 +3776,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy attachment.</para>
+        /// <para>Creates a policy attachment to a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5014,7 +4990,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation applies only to AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5059,7 +5035,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation applies only to AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5104,7 +5080,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation applies only to AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5128,7 +5104,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation applies only to AI gateways of version 2.1.19 or later.</para>
+        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5147,7 +5123,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a gateway security group rule.</para>
+        /// <para>Deletes a security group rule from a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5193,7 +5169,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a gateway security group rule.</para>
+        /// <para>Deletes a security group rule from a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5239,7 +5215,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a gateway security group rule.</para>
+        /// <para>Deletes a security group rule from a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5258,7 +5234,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a gateway security group rule.</para>
+        /// <para>Deletes a security group rule from a gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5783,6 +5759,124 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeletePluginAttachmentWithOptionsAsync(pluginAttachmentId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeletePluginClass</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePluginClassRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePluginClassResponse
+        /// </returns>
+        public DeletePluginClassResponse DeletePluginClassWithOptions(string pluginClassId, DeletePluginClassRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePluginClass",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-classes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pluginClassId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePluginClassResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeletePluginClass</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePluginClassRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePluginClassResponse
+        /// </returns>
+        public async Task<DeletePluginClassResponse> DeletePluginClassWithOptionsAsync(string pluginClassId, DeletePluginClassRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePluginClass",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-classes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pluginClassId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePluginClassResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeletePluginClass</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePluginClassRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePluginClassResponse
+        /// </returns>
+        public DeletePluginClassResponse DeletePluginClass(string pluginClassId, DeletePluginClassRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeletePluginClassWithOptions(pluginClassId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeletePluginClass</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePluginClassRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePluginClassResponse
+        /// </returns>
+        public async Task<DeletePluginClassResponse> DeletePluginClassAsync(string pluginClassId, DeletePluginClassRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeletePluginClassWithOptionsAsync(pluginClassId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7645,7 +7739,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7681,7 +7775,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7717,7 +7811,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7732,7 +7826,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</para>
+        /// <para>Retrieves basic information about a gateway, including the associated VPC, vSwitch, and gateway ingress.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7752,7 +7846,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a specific consumer quota rule on an AI gateway.</para>
+        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7811,7 +7905,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a specific consumer quota rule on an AI gateway.</para>
+        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7870,7 +7964,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a specific consumer quota rule on an AI gateway.</para>
+        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7894,7 +7988,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a specific consumer quota rule on an AI gateway.</para>
+        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7913,7 +8007,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota rate-limiting rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7968,7 +8062,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota rate-limiting rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8023,7 +8117,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota rate-limiting rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8047,7 +8141,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the usage details of a subject under a gateway quota rate-limiting rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
+        /// <para>Queries the usage details of a subject under a gateway quota throttling rule, including used quota, total quota, whether the limit is exceeded, usage details, and consumption records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8601,7 +8695,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom plugin class.</para>
+        /// <para>Retrieves a custom plug-in class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8641,7 +8735,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom plugin class.</para>
+        /// <para>Retrieves a custom plug-in class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8681,7 +8775,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom plugin class.</para>
+        /// <para>Retrieves a custom plug-in class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8700,7 +8794,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a custom plugin class.</para>
+        /// <para>Retrieves a custom plug-in class.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9631,7 +9725,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9729,7 +9823,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9827,7 +9921,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9846,7 +9940,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
+        /// <para>Imports an HTTP API. This operation supports importing OpenAPI 2.0 and OpenAPI 3.0.x definition files as REST-type APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11129,12 +11223,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11196,12 +11290,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11263,12 +11357,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11287,12 +11381,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of API consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14245,9 +14339,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListZonesRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -14258,11 +14355,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ListZonesResponse
         /// </returns>
-        public ListZonesResponse ListZonesWithOptions(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListZonesResponse ListZonesWithOptions(ListZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayEdition))
+            {
+                query["gatewayEdition"] = request.GatewayEdition;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14281,9 +14385,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListZonesRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -14294,11 +14401,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ListZonesResponse
         /// </returns>
-        public async Task<ListZonesResponse> ListZonesWithOptionsAsync(Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListZonesResponse> ListZonesWithOptionsAsync(ListZonesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayEdition))
+            {
+                query["gatewayEdition"] = request.GatewayEdition;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -14317,37 +14431,45 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListZonesRequest
+        /// </param>
         /// 
         /// <returns>
         /// ListZonesResponse
         /// </returns>
-        public ListZonesResponse ListZones()
+        public ListZonesResponse ListZones(ListZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListZonesWithOptions(headers, runtime);
+            return ListZonesWithOptions(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the zones available for a cloud-native API gateway in a specified region.</para>
+        /// <para>Retrieves the zones available for a cloud-native API gateway in a specific region.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListZonesRequest
+        /// </param>
         /// 
         /// <returns>
         /// ListZonesResponse
         /// </returns>
-        public async Task<ListZonesResponse> ListZonesAsync()
+        public async Task<ListZonesResponse> ListZonesAsync(ListZonesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListZonesWithOptionsAsync(headers, runtime);
+            return await ListZonesWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authorization rules.</para>
+        /// <para>Queries the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14441,7 +14563,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authorization rules.</para>
+        /// <para>Queries the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14535,7 +14657,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authorization rules.</para>
+        /// <para>Queries the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14554,7 +14676,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authorization rules.</para>
+        /// <para>Queries the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14675,21 +14797,21 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a quota rate limiting rule on a gateway.</para>
+        /// <para>Resets a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota rate limiting rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. The reset clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -14701,11 +14823,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14783,21 +14905,21 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a quota rate limiting rule on a gateway.</para>
+        /// <para>Resets a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota rate limiting rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. The reset clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -14809,11 +14931,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14891,21 +15013,21 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a quota rate limiting rule on a gateway.</para>
+        /// <para>Resets a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota rate limiting rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. The reset clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -14917,11 +15039,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -14944,21 +15066,21 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets a quota rate limiting rule on a gateway.</para>
+        /// <para>Resets a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota rate limiting rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. The reset clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -14970,11 +15092,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18096,7 +18218,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18191,7 +18313,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18286,7 +18408,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18310,7 +18432,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the listener Ingress configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiNameLike { get; set; }
 
         /// <summary>
+        /// <para>The consumer group ID. If specified, the authorization rules of the consumer group are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>csg-8c13d2b4f8a1</para>
         /// </summary>
@@ -98,6 +100,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ParentResourceId { get; set; }
 
         /// <summary>
+        /// <para>The principal type. Valid values: Consumer or ConsumerGroup.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ConsumerGroup</para>
         /// </summary>

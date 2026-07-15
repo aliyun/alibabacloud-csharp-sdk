@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The container service source configuration.</para>
+        /// <para>The Container Service source configuration.</para>
         /// </summary>
         [NameInMap("k8sSourceConfig")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The container service cluster ID.</para>
+            /// <para>The Container Service cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c3fbe6caaaece4062b*****</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The configuration of the MSE Nacos source.</para>
+        /// <para>The MSE Nacos source configuration.</para>
         /// </summary>
         [NameInMap("nacosSourceConfig")]
         [Validation(Required=false)]
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MSE_NACOS: MSE Nacos.</description></item>
-        /// <item><description>K8S: Container Service for Kubernetes (ACK).</description></item>
+        /// <item><description>MSE_NACOS: Microservices Engine (MSE) Nacos.</description></item>
+        /// <item><description>K8S: Container Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

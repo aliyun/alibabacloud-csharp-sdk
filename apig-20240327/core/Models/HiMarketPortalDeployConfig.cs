@@ -10,77 +10,107 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketPortalDeployConfig : TeaModel {
         /// <summary>
-        /// <para>Additional information about the deployment status, such as error details.</para>
+        /// <para>The deployment status message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>message</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The target deployment platform. For example, set this to <c>SAE</c> to deploy on Serverless App Engine.</para>
+        /// <para>The deployment platform type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SAE</para>
         /// </summary>
         [NameInMap("platform")]
         [Validation(Required=false)]
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>Configuration settings for deploying to Serverless App Engine (SAE). This object is required when the <c>platform</c> is <c>SAE</c>.</para>
+        /// <para>The SAE (Serverless App Engine) deployment configuration.</para>
         /// </summary>
         [NameInMap("saeConfig")]
         [Validation(Required=false)]
         public HiMarketPortalDeployConfigSaeConfig SaeConfig { get; set; }
         public class HiMarketPortalDeployConfigSaeConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the application in Serverless App Engine.</para>
+            /// <para>The SAE application ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>app-xxx</para>
             /// </summary>
             [NameInMap("appId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the namespace that logically isolates the application.</para>
+            /// <para>The SAE namespace ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou:default</para>
             /// </summary>
             [NameInMap("namespaceId")]
             [Validation(Required=false)]
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the OIDC role that grants permissions to the application.</para>
+            /// <para>The OIDC role name used for SAE to access other cloud resources.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>apig-portal-oidc-role</para>
             /// </summary>
             [NameInMap("oidcRoleName")]
             [Validation(Required=false)]
             public string OidcRoleName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which to deploy the application.</para>
+            /// <para>The region ID of SAE.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("regionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The desired number of application replicas.</para>
+            /// <para>The number of instance replicas.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("replicas")]
             [Validation(Required=false)]
             public string Replicas { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group to apply to the application instances. A security group acts as a virtual firewall.</para>
+            /// <para>The security group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-xxx</para>
             /// </summary>
             [NameInMap("securityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch within the specified VPC. Serverless App Engine launches application instances in the vSwitch\&quot;s zone.</para>
+            /// <para>The vSwitch ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-xxx</para>
             /// </summary>
             [NameInMap("vSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to connect the application to.</para>
+            /// <para>VPC ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vpc-xxx</para>
             /// </summary>
             [NameInMap("vpcId")]
             [Validation(Required=false)]
@@ -89,7 +119,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The current status of the deployment. Possible values include <c>succeeded</c>, <c>failed</c>, and <c>in_progress</c>.</para>
+        /// <para>The deployment status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

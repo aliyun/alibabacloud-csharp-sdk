@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AddGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class AddGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public AddGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class AddGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The conflict hash.</para>
+                /// <para>The hash of the conflict snapshot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -57,19 +57,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConflictHash { get; set; }
 
                 /// <summary>
-                /// <para>The list of conflicting principals (consumers).</para>
+                /// <para>The list of conflicting entities (consumers).</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>day: The period of the existing conflicting rule is day.</description></item>
-                    /// <item><description>week: The period of the existing conflicting rule is week.</description></item>
-                    /// <item><description>month: The period of the existing conflicting rule is month.</description></item>
-                    /// </list>
+                    /// <para>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates that the conflicting rule uses a daily, weekly, or monthly period respectively.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -79,11 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>calendar: The existing conflicting rule uses a calendar period.</description></item>
-                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
-                    /// </list>
+                    /// <para>The type of the existing conflicting rule on the consumer. A value of calendar indicates that the conflicting rule uses a calendar period. A value of epoch indicates that the conflicting rule uses a custom period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -152,7 +143,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The message content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好，世界！</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

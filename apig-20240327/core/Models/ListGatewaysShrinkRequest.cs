@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzq6bzz5uyg2q</para>

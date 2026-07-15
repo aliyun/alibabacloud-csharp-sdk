@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<CreateConsumerAuthorizationRulesRequestAuthorizationRules> AuthorizationRules { get; set; }
         public class CreateConsumerAuthorizationRulesRequestAuthorizationRules : TeaModel {
             /// <summary>
+            /// <para>The consumer group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>csg-8c13d2b4f8a1</para>
             /// </summary>
@@ -45,16 +47,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ExpireMode { get; set; }
 
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>The expiration timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>174116222x</para>
+            /// <para>1741162221</para>
             /// </summary>
             [NameInMap("expireTimestamp")]
             [Validation(Required=false)]
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The type of the authorization principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ConsumerGroup</para>
             /// </summary>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The resource identifier, which serves as a unique identifier for non-standard code sources for space reuse.</para>
+            /// <para>The resource identifier, which serves as a unique identifier for space reuse by non-standard code sources.</para>
             /// </summary>
             [NameInMap("resourceIdentifier")]
             [Validation(Required=false)]

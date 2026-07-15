@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateMcpServerRequest : TeaModel {
         /// <summary>
-        /// <para>The list of assembled sources. This parameter is required when type is set to AssemblyMCP.</para>
+        /// <para>The list of assembly sources. This parameter is required when type is set to AssemblyMCP.</para>
         /// </summary>
         [NameInMap("assembledSources")]
         [Validation(Required=false)]
@@ -82,8 +82,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP.</description></item>
-                /// <item><description>HTTPS.</description></item>
+                /// <item><description>HTTP</description></item>
+                /// <item><description>HTTPS</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -130,11 +130,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy.</description></item>
-        /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
-        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
-        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy.</description></item>
+        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy</description></item>
+        /// <item><description>ApiGatewayAssembly: gateway MCP assembly</description></item>
+        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion</description></item>
+        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RealMCP: standard MCP service.</description></item>
+        /// <item><description>RealMCP: standard MCP service</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

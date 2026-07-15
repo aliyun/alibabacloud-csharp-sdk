@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketProductFeature : TeaModel {
         /// <summary>
-        /// <para>Specifies the product\&quot;s model feature. For more information, see HiMarketModelFeature.</para>
+        /// <para>The model feature.</para>
         /// </summary>
         [NameInMap("modelFeature")]
         [Validation(Required=false)]

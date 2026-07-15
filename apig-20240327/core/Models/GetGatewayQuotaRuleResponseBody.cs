@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<GetGatewayQuotaRuleResponseBodyDataConsumers> Consumers { get; set; }
             public class GetGatewayQuotaRuleResponseBodyDataConsumers : TeaModel {
                 /// <summary>
-                /// <para>The principal (consumer) ID.</para>
+                /// <para>The ID of the principal (consumer).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-aaa</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The principal (consumer) name.</para>
+                /// <para>The name of the principal (consumer).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer-a</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The time zone corresponding to the calendar period, in UTC+x format.</para>
+            /// <para>The time zone for the calendar period, in UTC+x format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GMT+8</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Timezone { get; set; }
 
             /// <summary>
-            /// <para>The reset period type. Currently, only calendar period is supported, which means windowAlignment=&quot;calendar&quot;.</para>
+            /// <para>The reset period type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>calendar</para>

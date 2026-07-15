@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? OutputAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The consumption (request) time.</para>
+                    /// <para>The consumption (request) time in the format of YYYY-MM-DD.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>2026-06-05 13:16:31</para>
+                    /// <para>2026-06-05</para>
                     /// </summary>
                     [NameInMap("startTime")]
                     [Validation(Required=false)]

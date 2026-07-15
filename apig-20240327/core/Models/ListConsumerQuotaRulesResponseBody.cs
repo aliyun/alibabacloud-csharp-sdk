@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time zone corresponding to the natural cycle, in UTC+x format.</para>
+                /// <para>The time zone corresponding to the calendar cycle, in UTC+x format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UTC+8</para>
@@ -142,8 +142,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The cycle type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>calendar: Natural cycle.</description></item>
-                /// <item><description>epoch: Custom cycle.</description></item>
+                /// <item><description>calendar: calendar cycle.</description></item>
+                /// <item><description>epoch: custom cycle.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

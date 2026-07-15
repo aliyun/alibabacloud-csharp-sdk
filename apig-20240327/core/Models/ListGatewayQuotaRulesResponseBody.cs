@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time zone for the calendar period, in UTC+x format.</para>
+                /// <para>The time zone for the natural period, in UTC+x format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GMT+8</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Timezone { get; set; }
 
                 /// <summary>
-                /// <para>The reset period type. Only calendar periods are supported, which means windowAlignment=&quot;calendar&quot;.</para>
+                /// <para>The reset period type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>calendar</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve in a single request. This parameter is not supported.</para>
+        /// <para>The maximum number of records to retrieve at a time. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ResetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class ResetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request semantics are accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ResetGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class ResetGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The conflict hash.</para>
+                /// <para>The hash of the conflict snapshot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -64,7 +64,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer. Valid values: day (daily period), week (weekly period), or month (monthly period).</para>
+                    /// <para>The period type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>day: daily period.</description></item>
+                    /// <item><description>week: weekly period.</description></item>
+                    /// <item><description>month: monthly period.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -74,7 +79,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer. Valid values: calendar (the conflicting rule uses a calendar period) and epoch (the conflicting rule uses a custom period).</para>
+                    /// <para>The type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>calendar: The existing conflicting rule uses a calendar period.</description></item>
+                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -128,7 +137,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? DryRun { get; set; }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The ID of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qr-d8j7fpmm1hks65xxxx</para>

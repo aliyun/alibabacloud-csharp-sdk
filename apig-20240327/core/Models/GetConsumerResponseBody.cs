@@ -27,24 +27,29 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetConsumerResponseBodyData Data { get; set; }
         public class GetConsumerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey pair authentication configuration.</para>
+            /// <para>The AccessKey identity authentication configurations.</para>
             /// </summary>
             [NameInMap("akSkIdentityConfigs")]
             [Validation(Required=false)]
             public List<AkSkIdentityConfig> AkSkIdentityConfigs { get; set; }
 
             /// <summary>
-            /// <para>The API key authentication configuration.</para>
+            /// <para>The API key identity authentication configuration.</para>
             /// </summary>
             [NameInMap("apiKeyIdentityConfig")]
             [Validation(Required=false)]
             public ApiKeyIdentityConfig ApiKeyIdentityConfig { get; set; }
 
+            /// <summary>
+            /// <para>The list of consumer groups to which the API consumer belongs.</para>
+            /// </summary>
             [NameInMap("consumerGroups")]
             [Validation(Required=false)]
             public List<GetConsumerResponseBodyDataConsumerGroups> ConsumerGroups { get; set; }
             public class GetConsumerResponseBodyDataConsumerGroups : TeaModel {
                 /// <summary>
+                /// <para>The consumer group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>csg-8c13d2b4f8a1</para>
                 /// </summary>
@@ -53,6 +58,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The consumer group description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>用于线上 API 调用方分组</para>
                 /// </summary>
@@ -61,6 +68,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The time when the API consumer joined the consumer group. The value is a UNIX timestamp in milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1715769600000</para>
                 /// </summary>
@@ -69,6 +78,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? JoinTimestamp { get; set; }
 
                 /// <summary>
+                /// <para>The consumer group name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>api-consumer-group</para>
                 /// </summary>
@@ -99,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The publish status of the API in the current environment.</para>
+            /// <para>The deployment status of the API in the current environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -129,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The JWT authentication configuration.</para>
+            /// <para>The JWT identity authentication configuration.</para>
             /// </summary>
             [NameInMap("jwtIdentityConfig")]
             [Validation(Required=false)]

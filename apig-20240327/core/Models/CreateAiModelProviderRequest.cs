@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
     public class CreateAiModelProviderRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OpenAI</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-ucbx3s2m****</para>
         /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>openai</para>
         /// </summary>
         [NameInMap("provider")]
         [Validation(Required=false)]

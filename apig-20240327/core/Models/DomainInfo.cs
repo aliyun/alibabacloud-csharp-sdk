@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>The source from which the domain name is created.</para>
+        /// <para>The source from which the domain name was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Console</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether MTLS mutual authentication is enabled.</para>
+        /// <para>Specifies whether to enable mTLS mutual authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The protocol type supported by the domain name.</para>
         /// <list type="bullet">
-        /// <item><description>HTTP: Only the HTTP protocol is supported.</description></item>
-        /// <item><description>HTTP: Only the HTTPS protocol is supported.</description></item>
+        /// <item><description>HTTP: Only HTTP is supported.</description></item>
+        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,6 +136,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("tlsMax")]
+        [Validation(Required=false)]
+        public string TlsMax { get; set; }
+
+        [NameInMap("tlsMin")]
+        [Validation(Required=false)]
+        public string TlsMin { get; set; }
 
         /// <summary>
         /// <para>The update timestamp.</para>

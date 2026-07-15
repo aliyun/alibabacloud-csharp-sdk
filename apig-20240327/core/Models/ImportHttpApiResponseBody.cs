@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public ImportHttpApiResponseBodyDataDryRunInfo DryRunInfo { get; set; }
             public class ImportHttpApiResponseBodyDataDryRunInfo : TeaModel {
                 /// <summary>
-                /// <para>The error messages. If error messages are not empty, the API cannot be imported successfully.</para>
+                /// <para>The error messages. If error messages are not empty, the API cannot be successfully imported.</para>
                 /// </summary>
                 [NameInMap("errorMessages")]
                 [Validation(Required=false)]
                 public List<string> ErrorMessages { get; set; }
 
                 /// <summary>
-                /// <para>The information about the existing API. If this field is not empty, the import updates this API.</para>
+                /// <para>The information about the existing API. If this field is not empty, the import action updates this API.</para>
                 /// </summary>
                 [NameInMap("existHttpApiInfo")]
                 [Validation(Required=false)]
@@ -115,20 +115,41 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 }
 
+                /// <summary>
+                /// <para>The list of routes that failed.</para>
+                /// </summary>
                 [NameInMap("failureRoutes")]
                 [Validation(Required=false)]
                 public List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> FailureRoutes { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes : TeaModel {
+                    /// <summary>
+                    /// <para>The error message.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>conflict</para>
+                    /// </summary>
                     [NameInMap("errorMessage")]
                     [Validation(Required=false)]
                     public string ErrorMessage { get; set; }
 
+                    /// <summary>
+                    /// <para>The parameter name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>admin-route</para>
+                    /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The MCP tool definition information.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>...</para>
+                /// </summary>
                 [NameInMap("mcpToolsDefinition")]
                 [Validation(Required=false)]
                 public string McpToolsDefinition { get; set; }
@@ -143,8 +164,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The action to be performed after the dry run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Create: create.</description></item>
-                    /// <item><description>Update: update.</description></item>
+                    /// <item><description>Create: Create.</description></item>
+                    /// <item><description>Update: Update.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -176,8 +197,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The action to be performed after the dry run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Create: create.</description></item>
-                    /// <item><description>Update: update.</description></item>
+                    /// <item><description>Create: Create.</description></item>
+                    /// <item><description>Update: Update.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -219,14 +240,29 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 }
 
+                /// <summary>
+                /// <para>The list of routes that were successfully imported.</para>
+                /// </summary>
                 [NameInMap("successRoutes")]
                 [Validation(Required=false)]
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> SuccessRoutes { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes : TeaModel {
+                    /// <summary>
+                    /// <para>The action type.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Create</para>
+                    /// </summary>
                     [NameInMap("action")]
                     [Validation(Required=false)]
                     public string Action { get; set; }
 
+                    /// <summary>
+                    /// <para>The name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>user-route</para>
+                    /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

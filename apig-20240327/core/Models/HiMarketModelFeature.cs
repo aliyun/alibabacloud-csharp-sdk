@@ -10,49 +10,70 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketModelFeature : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to enable multi-modal capabilities. If set to <c>true</c>, the model can process requests that include multiple data types, such as text and images.</para>
+        /// <para>Indicates whether multimodal input is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("enableMultiModal")]
         [Validation(Required=false)]
         public bool? EnableMultiModal { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to include the model\&quot;s reasoning process in the response. If set to <c>true</c>, the output may contain intermediate steps that show how the model arrived at a conclusion.</para>
+        /// <para>Indicates whether chain-of-thought (Thinking) is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("enableThinking")]
         [Validation(Required=false)]
         public bool? EnableThinking { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of tokens to generate in the response. A token is a unit of text processed by the model.</para>
+        /// <para>The maximum number of tokens supported by the model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8192</para>
         /// </summary>
         [NameInMap("maxTokens")]
         [Validation(Required=false)]
         public int? MaxTokens { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the model to use for inference.</para>
+        /// <para>The model name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qwen-max</para>
         /// </summary>
         [NameInMap("model")]
         [Validation(Required=false)]
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to deliver the response as a continuous stream. If set to <c>true</c>, results are sent incrementally.</para>
+        /// <para>Indicates whether streaming output is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("streaming")]
         [Validation(Required=false)]
         public bool? Streaming { get; set; }
 
         /// <summary>
-        /// <para>Controls the randomness of the output. Valid values range from 0 to 1. Higher values, such as 0.8, make the output more random. Lower values, such as 0.2, make the output more deterministic.</para>
+        /// <para>The temperature parameter that controls the randomness of generation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.7</para>
         /// </summary>
         [NameInMap("temperature")]
         [Validation(Required=false)]
         public float? Temperature { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the model can search the web to provide more up-to-date responses.</para>
+        /// <para>Indicates whether web search is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("webSearch")]
         [Validation(Required=false)]

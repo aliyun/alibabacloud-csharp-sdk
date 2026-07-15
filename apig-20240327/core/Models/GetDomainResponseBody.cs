@@ -47,6 +47,42 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string CaCertIdentifier { get; set; }
 
             /// <summary>
+            /// <para>The certificate detail error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("certDetailErrorCode")]
+            [Validation(Required=false)]
+            public string CertDetailErrorCode { get; set; }
+
+            /// <summary>
+            /// <para>The certificate detail error message.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("certDetailErrorMessage")]
+            [Validation(Required=false)]
+            public string CertDetailErrorMessage { get; set; }
+
+            /// <summary>
+            /// <para>The certificate detail status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <list type="bullet">
+            /// <item><description></description></item>
+            /// </list>
+            /// </summary>
+            [NameInMap("certDetailStatus")]
+            [Validation(Required=false)]
+            public string CertDetailStatus { get; set; }
+
+            /// <summary>
             /// <para>The certificate identifier.</para>
             /// 
             /// <b>Example:</b>
@@ -124,6 +160,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string DomainId { get; set; }
 
             /// <summary>
+            /// <para>The domain name scope.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Serverless</para>
             /// </summary>
@@ -132,7 +170,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string DomainScope { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</para>
+            /// <para>Specifies whether to enable forced HTTPS redirect when the protocol type is set to HTTPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -152,7 +190,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Http2Option { get; set; }
 
             /// <summary>
-            /// <para>The certification authority.</para>
+            /// <para>The certificate issue authority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -202,10 +240,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? NotBeforeTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The protocol type supported by the domain name.</para>
+            /// <para>The protocol type supported by the domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>HTTP: supports only the HTTP protocol.</description></item>
-            /// <item><description>HTTPS: supports only the HTTPS protocol.</description></item>
+            /// <item><description>HTTP: only HTTP is supported.</description></item>
+            /// <item><description>HTTPS: only HTTPS is supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
