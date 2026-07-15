@@ -4724,8 +4724,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
-        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
+        /// <item><description>To use this operation, you must enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, you must include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -4866,8 +4866,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
-        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
+        /// <item><description>To use this operation, you must enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, you must include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -5008,8 +5008,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
-        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
+        /// <item><description>To use this operation, you must enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, you must include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -5036,8 +5036,8 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <description>
         /// <para>Synchronizes an intra-city car service approval form for a specified enterprise.</para>
         /// <ol>
-        /// <item><description>To use this operation, enable the permission for synchronizing intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
-        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
+        /// <item><description>To use this operation, you must enable the permission to synchronize intra-city car service approvals in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.                                                                                       </description></item>
+        /// <item><description>To use this operation, you must include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise Access Credential</a>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -11027,6 +11027,194 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             EstimatedPriceQueryHeaders headers = new EstimatedPriceQueryHeaders();
             return await EstimatedPriceQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预估价格查询v2.0</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedPriceQueryV2Request
+        /// </param>
+        /// <param name="headers">
+        /// EstimatedPriceQueryV2Headers
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedPriceQueryV2Response
+        /// </returns>
+        public EstimatedPriceQueryV2Response EstimatedPriceQueryV2WithOptions(EstimatedPriceQueryV2Request request, EstimatedPriceQueryV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["biz_type"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepartDate))
+            {
+                query["depart_date"] = request.DepartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromCity))
+            {
+                query["from_city"] = request.FromCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaveDate))
+            {
+                query["leave_date"] = request.LeaveDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToCity))
+            {
+                query["to_city"] = request.ToCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EstimatedPriceQueryV2",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/costcenter/v3/estimated-price",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EstimatedPriceQueryV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预估价格查询v2.0</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedPriceQueryV2Request
+        /// </param>
+        /// <param name="headers">
+        /// EstimatedPriceQueryV2Headers
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedPriceQueryV2Response
+        /// </returns>
+        public async Task<EstimatedPriceQueryV2Response> EstimatedPriceQueryV2WithOptionsAsync(EstimatedPriceQueryV2Request request, EstimatedPriceQueryV2Headers headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["biz_type"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DepartDate))
+            {
+                query["depart_date"] = request.DepartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromCity))
+            {
+                query["from_city"] = request.FromCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeaveDate))
+            {
+                query["leave_date"] = request.LeaveDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToCity))
+            {
+                query["to_city"] = request.ToCity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["user_id"] = request.UserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripSoCorpToken))
+            {
+                realHeaders["x-acs-btrip-so-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripSoCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EstimatedPriceQueryV2",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/costcenter/v3/estimated-price",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EstimatedPriceQueryV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预估价格查询v2.0</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedPriceQueryV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedPriceQueryV2Response
+        /// </returns>
+        public EstimatedPriceQueryV2Response EstimatedPriceQueryV2(EstimatedPriceQueryV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            EstimatedPriceQueryV2Headers headers = new EstimatedPriceQueryV2Headers();
+            return EstimatedPriceQueryV2WithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预估价格查询v2.0</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EstimatedPriceQueryV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// EstimatedPriceQueryV2Response
+        /// </returns>
+        public async Task<EstimatedPriceQueryV2Response> EstimatedPriceQueryV2Async(EstimatedPriceQueryV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            EstimatedPriceQueryV2Headers headers = new EstimatedPriceQueryV2Headers();
+            return await EstimatedPriceQueryV2WithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
