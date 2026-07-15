@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>【该字段已废弃】</para>
-            /// <para>EIP带宽峰值。单位：Mbps。</para>
+            /// <para>[This field is deprecated]</para>
+            /// <para>The peak bandwidth of the EIP. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>【该字段已废弃】</para>
-            /// <para>EIP计费类型，取值：</para>
+            /// <para>[This field is deprecated]</para>
+            /// <para>The billing method of the EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PayByBandwidth</c>：按固定带宽计费。</description></item>
-            /// <item><description><c>PayByTraffic</c>：按使用流量计费。</description></item>
+            /// <item><description><c>PayByBandwidth</c>: pay-by-fixed-bandwidth.</description></item>
+            /// <item><description><c>PayByTraffic</c>: pay-by-data-transfer.</description></item>
             /// </list>
-            /// <para>默认值：PayByBandwidth。</para>
+            /// <para>Default value: PayByBandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PayByBandwidth</para>
@@ -50,12 +50,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EipInternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>是否启用自动伸缩。</para>
+            /// <para>Specifies whether to enable auto scaling.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：开启节点池自动伸缩功能。</description></item>
-            /// <item><description><c>false</c>：不开启自动伸缩，当取值为false时，<c>auto_scaling</c>内的其他配置参数将不生效。</description></item>
+            /// <item><description><c>true</c>: Enables the auto scaling feature for the node pool.</description></item>
+            /// <item><description><c>false</c>: Disables auto scaling. When set to false, other configuration parameters in <c>auto_scaling</c> do not take effect.</description></item>
             /// </list>
-            /// <para>默认值：<c>false</c>。</para>
+            /// <para>Default value: <c>false</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -68,13 +68,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>【该字段已废弃】</para>
-            /// <para>是否绑定EIP，取值：</para>
+            /// <para>[This field is deprecated]</para>
+            /// <para>Specifies whether to associate an EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：绑定EIP。</description></item>
-            /// <item><description><c>false</c>：不绑定EIP。</description></item>
+            /// <item><description><c>true</c>: Associates an EIP.</description></item>
+            /// <item><description><c>false</c>: Does not associate an EIP.</description></item>
             /// </list>
-            /// <para>默认值：<c>false</c>。</para>
+            /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsBondEip { get; set; }
 
             /// <summary>
-            /// <para>自动伸缩组最大实例数。</para>
+            /// <para>The maximum number of instances in the auto scaling group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxInstances { get; set; }
 
             /// <summary>
-            /// <para>自动伸缩组最小实例数。</para>
+            /// <para>The minimum number of instances in the auto scaling group.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MinInstances { get; set; }
 
             /// <summary>
-            /// <para>自动伸缩类型，按照自动伸缩实例类型划分。取值：</para>
+            /// <para>The auto scaling type, classified by instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cpu</c>：普通实例型。</description></item>
-            /// <item><description><c>gpu</c>：GPU实例型。</description></item>
-            /// <item><description><c>gpushare</c>：GPU共享型。</description></item>
-            /// <item><description><c>spot</c>：抢占式实例型。</description></item>
+            /// <item><description><c>cpu</c>: regular instance type.</description></item>
+            /// <item><description><c>gpu</c>: GPU instance type.</description></item>
+            /// <item><description><c>gpushare</c>: GPU shared type.</description></item>
+            /// <item><description><c>spot</c>: spot instance type.</description></item>
             /// </list>
-            /// <para>默认值：<c>cpu</c>。</para>
+            /// <para>Default value: <c>cpu</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use desired_size instead.</para>
+        /// <para>[This field is deprecated. Use desired_size instead.]</para>
         /// <para>The number of nodes in the node pool.</para>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>[This field is deprecated.]</para>
         /// <para>The edge node pool configuration.</para>
         /// </summary>
         [NameInMap("interconnect_config")]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The network type of the edge node pool. This parameter is valid only for node pools whose <c>type</c> is <c>edge</c>. Valid values:</para>
+        /// <para>The network type of the edge node pool. This value is valid only for node pools whose <c>type</c> is <c>edge</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>basic</c>: basic.</description></item>
         /// <item><description><c>private</c>: dedicated. Supported in version 1.22 and later.</description></item>
@@ -244,12 +244,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public NodepoolKubernetesConfig KubernetesConfig { get; set; }
         public class NodepoolKubernetesConfig : TeaModel {
             /// <summary>
-            /// <para>是否在ECS节点上安装云监控，安装后可以在云监控控制台查看所创建ECS实例的监控信息，推荐开启。取值：</para>
+            /// <para>Specifies whether to install the CloudMonitor agent on ECS nodes. After installation, you can view monitoring information of the created ECS instances in the CloudMonitor console. We recommend that you enable this feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：在ECS节点上安装云监控。</description></item>
-            /// <item><description><c>false</c>：不在ECS节点上安装云监控。</description></item>
+            /// <item><description><c>true</c>: Installs the CloudMonitor agent on ECS nodes.</description></item>
+            /// <item><description><c>false</c>: Does not install the CloudMonitor agent on ECS nodes.</description></item>
             /// </list>
-            /// <para>默认值：<c>false</c>。</para>
+            /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -259,12 +259,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CmsEnabled { get; set; }
 
             /// <summary>
-            /// <para>节点CPU管理策略。当集群版本在1.12.6及以上时支持以下两种策略：</para>
+            /// <para>The CPU management policy for nodes. The following two policies are supported for clusters of version 1.12.6 or later:</para>
             /// <list type="bullet">
-            /// <item><description><c>static</c>：允许为节点上具有某些资源特征Pod增强其CPU亲和性和独占性。</description></item>
-            /// <item><description><c>none</c>：表示启用现有的默认CPU亲和性方案。</description></item>
+            /// <item><description><c>static</c>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</description></item>
+            /// <item><description><c>none</c>: Enables the existing default CPU affinity scheme.</description></item>
             /// </list>
-            /// <para>默认值：<c>none</c>。</para>
+            /// <para>Default value: <c>none</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -274,19 +274,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CpuPolicy { get; set; }
 
             /// <summary>
-            /// <para>节点标签，为Kubernetes集群节点添加标签。</para>
+            /// <para>The node labels. Adds labels to Kubernetes cluster nodes.</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public List<Tag> Labels { get; set; }
 
             /// <summary>
-            /// <para>节点名称由三部分组成：前缀 + 节点 IP + 后缀：</para>
+            /// <para>The node name consists of three parts: prefix + node IP + suffix:</para>
             /// <list type="bullet">
-            /// <item><description>前缀和后缀均可由“.”分隔的一个或多个部分构成，每个部分可以使用小写字母、数字和“-”，节点名称首尾必须为小写字母和数字；</description></item>
-            /// <item><description>节点 IP为完整的节点私网 IP 地址；</description></item>
+            /// <item><description>Both the prefix and suffix can consist of one or more parts separated by &quot;.&quot;. Each part can contain lowercase letters, digits, and hyphens (-). The node name must start and end with a lowercase letter or digit.</description></item>
+            /// <item><description>The node IP is the complete private IP address of the node.</description></item>
             /// </list>
-            /// <para>传参包含四个部分，由逗号分隔，例如：参数传入&quot;customized,aliyun,ip,com&quot;字符串（其中“customized”和&quot;ip&quot;为固定的字符串，aliyun为前缀，com为后缀），则节点的名称为：aliyun.192.168.xxx.xxx.com。</para>
+            /// <para>The parameter contains four parts separated by commas. For example, if you pass in the string &quot;customized,aliyun,ip,com&quot; (where &quot;customized&quot; and &quot;ip&quot; are fixed strings, &quot;aliyun&quot; is the prefix, and &quot;com&quot; is the suffix), the node name is: aliyun.192.168.xxx.xxx.com.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customized,aliyun,ip,com</para>
@@ -296,13 +296,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeNameMode { get; set; }
 
             /// <summary>
-            /// <para>容器运行时。取值：</para>
+            /// <para>The container runtime. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>containerd</c>：推荐使用，支持所有集群版本。</description></item>
-            /// <item><description><c>Sandboxed-Container.runv</c>：安全沙箱容器，提供更高的隔离性，支持1.24版本及以下集群。</description></item>
-            /// <item><description><c>docker</c>：支持1.22版本及以下集群。</description></item>
+            /// <item><description><c>containerd</c>: Recommended. Supports all cluster versions.</description></item>
+            /// <item><description><c>Sandboxed-Container.runv</c>: Sandboxed container that provides higher isolation. Supports clusters of version 1.24 or earlier.</description></item>
+            /// <item><description><c>docker</c>: Supports clusters of version 1.22 or earlier.</description></item>
             /// </list>
-            /// <para>默认值：<c>containerd</c></para>
+            /// <para>Default value: <c>containerd</c></para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>容器运行时版本。</para>
+            /// <para>The container runtime version.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -324,14 +324,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RuntimeVersion { get; set; }
 
             /// <summary>
-            /// <para>污点配置。</para>
+            /// <para>The taint configuration.</para>
             /// </summary>
             [NameInMap("taints")]
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
 
             /// <summary>
-            /// <para>节点自定义数据。</para>
+            /// <para>The node custom data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MXM=</para>
@@ -354,10 +354,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoFaultDiagnosis { get; set; }
 
             /// <summary>
-            /// <para>自动修复，仅当<c>enable=true</c>时生效。</para>
+            /// <para>Specifies whether to enable auto repair. This parameter takes effect only when <c>enable=true</c>.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：自动修复。</description></item>
-            /// <item><description><c>false</c>：不自动修复。</description></item>
+            /// <item><description><c>true</c>: Enables auto repair.</description></item>
+            /// <item><description><c>false</c>: Disables auto repair.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -368,14 +368,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRepair { get; set; }
 
             /// <summary>
-            /// <para>自动修复节点策略。</para>
+            /// <para>The auto repair node policy.</para>
             /// </summary>
             [NameInMap("auto_repair_policy")]
             [Validation(Required=false)]
             public NodepoolManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class NodepoolManagementAutoRepairPolicy : TeaModel {
                 /// <summary>
-                /// <para>是否允许重启节点。</para>
+                /// <para>Specifies whether to allow node restart.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -416,7 +416,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>是否自动修复CVE。</para>
+            /// <para>Specifies whether to automatically fix CVEs.
+            /// [properties.management.properties.auto_v</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -433,7 +434,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public NodepoolManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
             public class NodepoolManagementAutoVulFixPolicy : TeaModel {
                 /// <summary>
-                /// <para>是否允许重启节点。</para>
+                /// <para>Specifies whether to allow node restart.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -454,11 +455,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             }
 
+            [NameInMap("drift_enabled")]
+            [Validation(Required=false)]
+            public bool? DriftEnabled { get; set; }
+
             /// <summary>
-            /// <para>是否开启托管版节点池，取值：</para>
+            /// <para>Specifies whether to enable the managed node pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：开启托管节点池。</description></item>
-            /// <item><description><c>false</c>：不开启托管节点池，只有当<c>enable=true</c>时，其他相关配置才生效。</description></item>
+            /// <item><description><c>true</c>: Enables the managed node pool.</description></item>
+            /// <item><description><c>false</c>: Disables the managed node pool. Other related configurations take effect only when <c>enable=true</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -471,7 +476,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>自动升级配置，仅当<c>enable=true</c>时生效。</para>
+            /// <para>The auto upgrade configuration. This parameter takes effect only when <c>enable=true</c>.</para>
             /// </summary>
             [NameInMap("upgrade_config")]
             [Validation(Required=false)]
@@ -479,10 +484,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public NodepoolManagementUpgradeConfig UpgradeConfig { get; set; }
             public class NodepoolManagementUpgradeConfig : TeaModel {
                 /// <summary>
-                /// <para>是否启用自动升级，取值：</para>
+                /// <para>Specifies whether to enable auto upgrade. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>：启用自动升级。</description></item>
-                /// <item><description><c>false</c>：不启用自动升级。</description></item>
+                /// <item><description><c>true</c>: Enables auto upgrade.</description></item>
+                /// <item><description><c>false</c>: Disables auto upgrade.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -493,8 +498,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? AutoUpgrade { get; set; }
 
                 /// <summary>
-                /// <para>最大不可用节点数量，取值范围：[1,1000\]。</para>
-                /// <para>默认值：1。</para>
+                /// <para>The maximum number of unavailable nodes. Valid values: [1,1000\].</para>
+                /// <para>Default value: 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -504,7 +509,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? MaxUnavailable { get; set; }
 
                 /// <summary>
-                /// <para>额外节点数量。</para>
+                /// <para>The number of extra nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -514,7 +519,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? Surge { get; set; }
 
                 /// <summary>
-                /// <para>额外节点比例，和<c>surge</c>二选一。</para>
+                /// <para>The extra node percentage. Specify either this parameter or <c>surge</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -528,7 +533,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of nodes allowed in the edge node pool. This parameter must be greater than or equal to 0. A value of 0 indicates no additional limit. The node pool is limited only by the maximum number of nodes that the cluster can contain. Edge node pools typically have a value greater than 0. ESS-type node pools and default edge-type node pools have a value of 0.</para>
+        /// <para>The maximum number of nodes allowed in the edge node pool. This parameter must be greater than or equal to 0. A value of 0 indicates no additional limit (the node pool is limited only by the maximum number of nodes that the cluster can accommodate). For edge node pools, this value is typically greater than 0. For ESS-type node pools and default edge-type node pools, this value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -609,7 +614,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public NodepoolNodepoolInfo NodepoolInfo { get; set; }
         public class NodepoolNodepoolInfo : TeaModel {
             /// <summary>
-            /// <para>节点池名称。</para>
+            /// <para>The node pool name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -620,7 +625,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>节点池所在资源ID。</para>
+            /// <para>The resource group ID of the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmyvw3wjm****</para>
@@ -630,10 +635,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>节点池类型，取值范围：</para>
+            /// <para>The node pool type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ess</c>：节点池。</description></item>
-            /// <item><description><c>edge</c>：边缘节点池。</description></item>
+            /// <item><description><c>ess</c>: node pool.</description></item>
+            /// <item><description><c>edge</c>: edge node pool.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -653,12 +658,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public NodepoolScalingGroup ScalingGroup { get; set; }
         public class NodepoolScalingGroup : TeaModel {
             /// <summary>
-            /// <para>节点池是否开启自动续费，当<c>instance_charge_type</c>取值为<c>PrePaid</c>时才生效，取值：</para>
+            /// <para>Specifies whether to enable auto-renewal for the node pool. This parameter takes effect only when <c>instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：自动续费。</description></item>
-            /// <item><description><c>false</c>：不自动续费。</description></item>
+            /// <item><description><c>true</c>: Enables auto-renewal.</description></item>
+            /// <item><description><c>false</c>: Disables auto-renewal.</description></item>
             /// </list>
-            /// <para>默认值：<c>true</c>。</para>
+            /// <para>Default value: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -668,9 +673,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>节点池自动续费周期。当<c>instance_charge_type</c>取值为<c>PrePaid</c>时才生效，且为必选值。</para>
-            /// <para>当<c>PeriodUnit=Month</c>时，取值范围：{1, 2, 3, 6, 12}。</para>
-            /// <para>默认值：1。</para>
+            /// <para>The auto-renewal period of the node pool. This parameter takes effect and is required only when <c>instance_charge_type</c> is set to <c>PrePaid</c>.</para>
+            /// <para>When <c>PeriodUnit=Month</c>, valid values: {1, 2, 3, 6, 12}.</para>
+            /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -680,10 +685,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>当<c>multi_az_policy</c>取值为<c>COST_OPTIMIZED</c>时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值：</para>
+            /// <para>When <c>multi_az_policy</c> is set to <c>COST_OPTIMIZED</c>, specifies whether to allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements when spot instances cannot be created due to price or inventory reasons. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：允许自动尝试创建按量实例满足ECS实例数量要求。</description></item>
-            /// <item><description><c>false</c>：不允许自动尝试创建按量实例满足ECS实例数量要求。</description></item>
+            /// <item><description><c>true</c>: Allows automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements.</description></item>
+            /// <item><description><c>false</c>: Does not allow automatic creation of pay-as-you-go instances to meet ECS instance quantity requirements.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -694,14 +699,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CompensateWithOnDemand { get; set; }
 
             /// <summary>
-            /// <para>节点池节点数据盘配置。</para>
+            /// <para>The data cloud disk configuration for nodes in the node pool.</para>
             /// </summary>
             [NameInMap("data_disks")]
             [Validation(Required=false)]
             public List<DataDisk> DataDisks { get; set; }
 
             /// <summary>
-            /// <para>部署集ID。</para>
+            /// <para>The deployment set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-bp1d19mmbsv3jf6xxxxx</para>
@@ -711,7 +716,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DeploymentsetId { get; set; }
 
             /// <summary>
-            /// <para>节点池期望节点数量。</para>
+            /// <para>The desired number of nodes in the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -721,14 +726,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? DesiredSize { get; set; }
 
             /// <summary>
-            /// <para>块设备初始化配置。</para>
+            /// <para>The block device initialization configuration.</para>
             /// </summary>
             [NameInMap("disk_init")]
             [Validation(Required=false)]
             public List<DiskInit> DiskInit { get; set; }
 
             /// <summary>
-            /// <para>自定义镜像ID，默认使用系统提供的镜像。</para>
+            /// <para>The custom image ID. The system-provided image is used by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_2_1903_x64_20G_alibase_20200904.vhd</para>
@@ -738,16 +743,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>操作系统镜像类型，和platform参数二选一，取值范围：</para>
+            /// <para>The operating system image type. Specify either this parameter or the platform parameter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>AliyunLinux</c>：Alinux2镜像。</description></item>
-            /// <item><description><c>AliyunLinux3</c>：Alinux3镜像。</description></item>
-            /// <item><description><c>AliyunLinux3Arm64</c>：Alinux3镜像ARM版。</description></item>
-            /// <item><description><c>AliyunLinuxUEFI</c>：Alinux2镜像UEFI版。</description></item>
-            /// <item><description><c>CentOS</c>：CentOS镜像。</description></item>
-            /// <item><description><c>Windows</c>：Windows镜像。</description></item>
-            /// <item><description><c>WindowsCore</c>：WindowsCore镜像。</description></item>
-            /// <item><description><c>ContainerOS</c>：容器优化镜像。</description></item>
+            /// <item><description><c>AliyunLinux</c>: Alinux2 image.</description></item>
+            /// <item><description><c>AliyunLinux3</c>: Alinux3 image.</description></item>
+            /// <item><description><c>AliyunLinux3Arm64</c>: Alinux3 image for ARM.</description></item>
+            /// <item><description><c>AliyunLinuxUEFI</c>: Alinux2 UEFI image.</description></item>
+            /// <item><description><c>CentOS</c>: CentOS image.</description></item>
+            /// <item><description><c>Windows</c>: Windows image.</description></item>
+            /// <item><description><c>WindowsCore</c>: WindowsCore image.</description></item>
+            /// <item><description><c>ContainerOS</c>: container-optimized image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -758,12 +763,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>节点池节点付费类型，取值：</para>
+            /// <para>The billing method for nodes in the node pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PrePaid</c>：预付费。</description></item>
-            /// <item><description><c>PostPaid</c>：按量付费。</description></item>
+            /// <item><description><c>PrePaid</c>: subscription.</description></item>
+            /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
             /// </list>
-            /// <para>默认值：<c>PostPaid</c>。</para>
+            /// <para>Default value: <c>PostPaid</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -774,15 +779,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// <para>ECS 实例的元数据访问配置。
-            /// 目前仅白名单开放，需提交工单申请。</para>
+            /// <para>The ECS instance metadata access configuration.
+            /// This parameter is currently available only to accounts on the whitelist. Submit a ticket to apply.</para>
             /// </summary>
             [NameInMap("instance_metadata_options")]
             [Validation(Required=false)]
             public InstanceMetadataOptions InstanceMetadataOptions { get; set; }
 
             /// <summary>
-            /// <para>实例规格。</para>
+            /// <para>The instance types.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("instance_types")]
@@ -790,10 +795,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>公网IP收费类型。取值：</para>
+            /// <para>The billing method for public IP addresses. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PayByBandwidth</c>：按固定带宽计费。</description></item>
-            /// <item><description><c>PayByTraffic</c>：按使用流量计费。</description></item>
+            /// <item><description><c>PayByBandwidth</c>: pay-by-fixed-bandwidth.</description></item>
+            /// <item><description><c>PayByTraffic</c>: pay-by-data-transfer.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -804,7 +809,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：[1,100]</para>
+            /// <para>The maximum outbound bandwidth for node public IP addresses. Unit: Mbit/s. Valid values: [1,100].</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -814,9 +819,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? InternetMaxBandwidthOut { get; set; }
 
             /// <summary>
-            /// <para>密钥对名称，和<c>login_password</c>二选一。</para>
+            /// <para>The key pair name. Specify either this parameter or <c>login_password</c>.</para>
             /// <remarks>
-            /// <para>如果创建托管节点池，则只支持<c>key_pair</c>。</para>
+            /// <para>If you create a managed node pool, only <c>key_pair</c> is supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -827,14 +832,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string KeyPair { get; set; }
 
             /// <summary>
-            /// <para>弹出的ECS实例是否使用以非root用户登录。</para>
+            /// <para>Specifies whether to use a non-root user to log on to scaled-out ECS instances.</para>
             /// </summary>
             [NameInMap("login_as_non_root")]
             [Validation(Required=false)]
             public bool? LoginAsNonRoot { get; set; }
 
             /// <summary>
-            /// <para>SSH登录密码，和<c>key_pair</c>二选一。密码规则为8~30个字符，且至少同时包含三项（大小写字母、数字和特殊符号）。</para>
+            /// <para>The SSH logon password. Specify either this parameter or <c>key_pair</c>. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hello1234</para>
@@ -844,19 +849,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>多可用区伸缩组ECS实例扩缩容策略。取值：</para>
+            /// <para>The multi-zone scaling policy for ECS instances in the scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PRIORITY</c>：根据您定义的虚拟交换机（VSwitchIds.N）扩缩容。当优先级较高的虚拟交换机所在可用区无法创建ECS实例时，自动使用下一优先级的虚拟交换机创建ECS实例。</para>
+            /// <item><description><para><c>PRIORITY</c>: Scales based on the vSwitches (VSwitchIds.N) that you define. When ECS instances cannot be created in the zone of a higher-priority vSwitch, the system automatically uses the next-priority vSwitch to create ECS instances.</para>
             /// </description></item>
-            /// <item><description><para><c>COST_OPTIMIZED</c>：按vCPU单价从低到高进行尝试创建。当伸缩配置设置了抢占式计费方式的多实例规格时，优先创建对应抢占式实例。您可以继续通过<c>CompensateWithOnDemand</c>参数指定当抢占式实例由于库存等原因无法创建时，是否自动尝试以按量付费的方式创建。</para>
+            /// <item><description><para><c>COST_OPTIMIZED</c>: Attempts to create instances in order of vCPU unit price from lowest to highest. When the scaling configuration specifies multiple instance types with spot billing method, spot instances are created first. You can use the <c>CompensateWithOnDemand</c> parameter to specify whether to automatically attempt to create pay-as-you-go instances when spot instances cannot be created due to insufficient inventory or other reasons.</para>
             /// <remarks>
-            /// <para><c>COST_OPTIMIZED</c>仅在伸缩配置设置了多实例规格或者选用了抢占式实例的情况下生效。</para>
+            /// <para><c>COST_OPTIMIZED</c> takes effect only when the scaling configuration specifies multiple instance types or uses spot instances.</para>
             /// </remarks>
             /// </description></item>
-            /// <item><description><para><c>BALANCE</c>：在伸缩组指定的多可用区之间均匀分配ECS实例。如果由于库存不足等原因可用区之间变得不平衡，您可以通过API RebalanceInstances平衡资源。更多信息，请参见<a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>。</para>
+            /// <item><description><para><c>BALANCE</c>: Evenly allocates ECS instances across the multiple zones specified in the scaling group. If zones become unbalanced due to insufficient inventory or other reasons, you can use the API RebalanceInstances to rebalance resources. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</para>
             /// </description></item>
             /// </list>
-            /// <para>默认值：<c>PRIORITY</c>。</para>
+            /// <para>Default value: <c>PRIORITY</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COST_OPTIMIZED</para>
@@ -866,7 +871,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MultiAzPolicy { get; set; }
 
             /// <summary>
-            /// <para>伸缩组所需要按量实例个数的最小值，取值范围：[0,1000]。当按量实例个数少于该值时，将优先创建按量实例。</para>
+            /// <para>The minimum number of pay-as-you-go instances required in the scaling group. Valid values: [0,1000]. When the number of pay-as-you-go instances is less than this value, pay-as-you-go instances are created first.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -876,7 +881,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? OnDemandBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>伸缩组满足最小按量实例数（<c>on_demand_base_capacity</c>）要求后，超出的实例中按量实例应占的比例。取值范围：[0,100]。</para>
+            /// <para>The percentage of pay-as-you-go instances among the instances that exceed the minimum number of pay-as-you-go instances (<c>on_demand_base_capacity</c>). Valid values: [0,100].</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -886,8 +891,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? OnDemandPercentageAboveBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>节点池节点包年包月时长，当<c>instance_charge_type</c>取值为<c>PrePaid</c>时才生效且为必选值，取值范围：<c>period_unit</c>取值为Month时，<c>period</c>取值范围：{ 1, 2, 3, 6, 12}。</para>
-            /// <para>默认值：1。</para>
+            /// <para>The subscription duration for nodes in the node pool. This parameter takes effect and is required only when <c>instance_charge_type</c> is set to <c>PrePaid</c>. When <c>period_unit</c> is set to Month, valid values for <c>period</c>: {1, 2, 3, 6, 12}.</para>
+            /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -897,8 +902,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Period { get; set; }
 
             /// <summary>
-            /// <para>节点池节点付费周期，当<c>instance_charge_type</c>取值为<c>PrePaid</c>时需要指定周期。</para>
-            /// <para><c>Month</c>：目前只支持以月为单位。</para>
+            /// <para>The subscription period unit for nodes in the node pool. This parameter must be specified when <c>instance_charge_type</c> is set to <c>PrePaid</c>.</para>
+            /// <para><c>Month</c>: Currently only month is supported as the unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -910,14 +915,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>操作系统发行版。取值：</para>
+            /// <para>The operating system distribution. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>CentOS</c></description></item>
             /// <item><description><c>AliyunLinux</c></description></item>
             /// <item><description><c>Windows</c></description></item>
             /// <item><description><c>WindowsCore</c></description></item>
             /// </list>
-            /// <para>默认值：<c>AliyunLinux</c>。</para>
+            /// <para>Default value: <c>AliyunLinux</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunLinux</para>
@@ -928,14 +933,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>私有节点池配置。</para>
+            /// <para>The private pool configuration.</para>
             /// </summary>
             [NameInMap("private_pool_options")]
             [Validation(Required=false)]
             public NodepoolScalingGroupPrivatePoolOptions PrivatePoolOptions { get; set; }
             public class NodepoolScalingGroupPrivatePoolOptions : TeaModel {
                 /// <summary>
-                /// <para>私有节点池ID。</para>
+                /// <para>The private pool ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eap-bp67acfmxazb4****</para>
@@ -945,13 +950,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>私有节点池类型，实例启动的私有池容量选项。弹性保障服务或容量预定服务在生效后会生成私有池容量，供实例启动时选择。取值：</para>
+                /// <para>The private pool type. The private pool capacity option for instance launch. After an elasticity assurance or capacity reservation takes effect, a private pool is generated for instances to select during launch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>Open</c>：开放模式。将自动匹配开放类型的私有池容量。如果没有符合条件的私有池容量，则使用公共池资源启动。</para>
+                /// <item><description><para><c>Open</c>: Open mode. Automatically matches open-type private pool capacity. If no matching private pool capacity is available, public pool resources are used for launch.</para>
                 /// </description></item>
-                /// <item><description><para><c>Target</c>：指定模式。使用指定的私有池容量启动实例，如果该私有池容量不可用，则实例会启动失败。</para>
+                /// <item><description><para><c>Target</c>: Targeted mode. Uses the specified private pool capacity to launch instances. If the specified private pool capacity is unavailable, the instance fails to launch.</para>
                 /// </description></item>
-                /// <item><description><para><c>None</c>：不使用模式。实例启动将不使用私有池容量。</para>
+                /// <item><description><para><c>None</c>: None mode. The instance launch does not use private pool capacity.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -965,9 +970,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>Worker RAM角色名称。</para>
+            /// <para>The Worker RAM role name.</para>
             /// <remarks>
-            /// <para>Notice: 仅1.22及以上版本的ACK托管集群支持在创建节点池时配置该参数</para>
+            /// <para>Notice: Only ACK managed clusters of version 1.22 or later support configuring this parameter when creating a node pool.</notice></para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -978,34 +983,34 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RamRoleName { get; set; }
 
             /// <summary>
-            /// <para>RDS实例列表。</para>
+            /// <para>The list of RDS instances.</para>
             /// </summary>
             [NameInMap("rds_instances")]
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }
 
             /// <summary>
-            /// <para>创建实例时使用的资源池及资源池策略。当您设置该参数后，需要注意：
-            /// 该参数只在创建按量付费实例时生效。
-            /// 该参数不能与private_pool_options.match_criteria、private_pool_options.id同时设置。</para>
+            /// <para>The resource pool and resource pool policy used when creating instances. Note the following when you set this parameter:
+            /// This parameter takes effect only when creating pay-as-you-go instances.
+            /// This parameter cannot be set together with private_pool_options.match_criteria or private_pool_options.id.</para>
             /// </summary>
             [NameInMap("resource_pool_options")]
             [Validation(Required=false)]
             public NodepoolScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
             public class NodepoolScalingGroupResourcePoolOptions : TeaModel {
                 /// <summary>
-                /// <para>私有池 ID列表。即弹性保障服务 ID 或容量预定服务 ID。该参数只能传入 Target 模式私有池 ID。N 的取值范围：1~20。</para>
+                /// <para>The list of private pool IDs, which are elasticity assurance IDs or capacity reservation IDs. Only Target mode private pool IDs can be passed in. Valid values of N: 1 to 20.</para>
                 /// </summary>
                 [NameInMap("private_pool_ids")]
                 [Validation(Required=false)]
                 public List<string> PrivatePoolIds { get; set; }
 
                 /// <summary>
-                /// <para>创建实例时使用的资源池策略。资源池包括弹性保障服务或容量预定服务生效后生成的私有池以及公共池，供实例启动时选择。取值范围：
-                /// PrivatePoolFirst：私有池优先。选择此种策略时， 当指定了 resource_pool_options.private_pool_ids，优先使用指定的私有池。如果未指定私有池或指定的私有池容量不足，将自动匹配开放类型的私有池。如果没有符合条件的私有池，则使用公共池创建实例。
-                /// PrivatePoolOnly：仅限私有池。选择此种策略时，必须指定 resource_pool_options.private_pool_ids。如果指定的私有池容量不足，则实例会启动失败。
-                /// None：不使用资源池策略。
-                /// 默认值：None。</para>
+                /// <para>The resource pool policy used when creating instances. Resource pools include private pools generated after elasticity assurance or capacity reservation takes effect, and public pools, for instances to select during launch. Valid values:
+                /// PrivatePoolFirst: Private pool first. When this policy is selected and resource_pool_options.private_pool_ids is specified, the specified private pools are used first. If no private pool is specified or the specified private pool capacity is insufficient, open-type private pools are automatically matched. If no matching private pool is available, public pool resources are used to create instances.
+                /// PrivatePoolOnly: Private pool only. When this policy is selected, resource_pool_options.private_pool_ids must be specified. If the specified private pool capacity is insufficient, the instance fails to launch.
+                /// None: No resource pool policy is used.
+                /// Default value: None.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PrivatePoolFirst</para>
@@ -1017,12 +1022,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>伸缩组模式，取值：</para>
+            /// <para>The scaling group mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>release</c>：标准模式，根据申请资源值的使用量，通过创建、释放ECS的方式进行伸缩。</description></item>
-            /// <item><description><c>recycle</c>：极速模式，通过创建、停机、启动的方式进行伸缩，提高再次伸缩的速度（停机时计算资源不收费，只收取存储费用，本地盘机型除外）。</description></item>
+            /// <item><description><c>release</c>: standard mode. Scales by creating and releasing ECS instances based on resource usage.</description></item>
+            /// <item><description><c>recycle</c>: rapid mode. Scales by creating, stopping, and starting instances to improve the speed of subsequent scaling operations (compute resources are not charged during stop, only storage fees are charged, except for local disk instance types).</description></item>
             /// </list>
-            /// <para>默认值：<c>release</c>。</para>
+            /// <para>Default value: <c>release</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release</para>
@@ -1032,7 +1037,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ScalingPolicy { get; set; }
 
             /// <summary>
-            /// <para>节点池安全组ID，与<c>security_group_ids</c>二选一，推荐使用<c>security_group_ids</c>。</para>
+            /// <para>The security group ID of the node pool. Specify either this parameter or <c>security_group_ids</c>. We recommend that you use <c>security_group_ids</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2zeihch86ooz9io4****</para>
@@ -1042,14 +1047,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>安全组ID列表，与<c>security_group_id</c>二选一，推荐使用<c>security_group_ids</c>，当同时指定<c>security_group_id</c>和<c>security_group_ids</c>将优先使用<c>security_group_ids</c>。</para>
+            /// <para>The list of security group IDs. Specify either this parameter or <c>security_group_id</c>. We recommend that you use <c>security_group_ids</c>. When both <c>security_group_id</c> and <c>security_group_ids</c> are specified, <c>security_group_ids</c> takes precedence.</para>
             /// </summary>
             [NameInMap("security_group_ids")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：[1,10]。</para>
+            /// <para>The number of available instance types. The scaling group creates spot instances across the lowest-cost instance types in a balanced manner. Valid values: [1,10].</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -1059,10 +1064,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SpotInstancePools { get; set; }
 
             /// <summary>
-            /// <para>是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值：</para>
+            /// <para>Specifies whether to enable supplementing spot instances. When enabled, the scaling group attempts to create new instances to replace spot instances that are about to be reclaimed upon receiving a system notification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>：开启补齐抢占式实例。</description></item>
-            /// <item><description><c>false</c>：不开启补齐抢占式实例。</description></item>
+            /// <item><description><c>true</c>: Enables supplementing spot instances.</description></item>
+            /// <item><description><c>false</c>: Disables supplementing spot instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1073,14 +1078,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SpotInstanceRemedy { get; set; }
 
             /// <summary>
-            /// <para>当前单台抢占式实例规格市场价格区间配置。</para>
+            /// <para>The market price range configuration for a single spot instance type.</para>
             /// </summary>
             [NameInMap("spot_price_limit")]
             [Validation(Required=false)]
             public List<NodepoolScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
             public class NodepoolScalingGroupSpotPriceLimit : TeaModel {
                 /// <summary>
-                /// <para>抢占式实例规格。</para>
+                /// <para>The spot instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.c6.large</para>
@@ -1090,7 +1095,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>单台实例上限价格。</para>
+                /// <para>The maximum price for a single instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.39</para>
@@ -1102,13 +1107,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>抢占式实例类型，取值：</para>
+            /// <para>The type of spot instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoSpot：非抢占式实例。</description></item>
-            /// <item><description>SpotWithPriceLimit：设置抢占实例价格上限。</description></item>
-            /// <item><description>SpotAsPriceGo：系统自动出价，跟随当前市场实际价格。</description></item>
+            /// <item><description>NoSpot: non-spot instance.</description></item>
+            /// <item><description>SpotWithPriceLimit: spot instance with a price limit.</description></item>
+            /// <item><description>SpotAsPriceGo: system automatically bids at the current market price.</description></item>
             /// </list>
-            /// <para>更多信息，请参见<a href="https://help.aliyun.com/document_detail/157759.html">抢占式实例</a>。</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/157759.html">Spot instances</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NoSpot</para>
@@ -1118,12 +1123,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘是否开启Burst（性能突发）。 取值：</para>
+            /// <para>Specifies whether to enable burst (performance burst) for the node system cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true：是。</description></item>
-            /// <item><description>false：否。</description></item>
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
             /// </list>
-            /// <para>当<c>SystemDiskCategory</c>取值为<c>cloud_auto</c>时才支持设置该参数。更多信息，请参见<a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL云盘</a>。</para>
+            /// <para>This parameter is supported only when <c>SystemDiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1133,12 +1138,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值范围：</para>
+            /// <para>Multiple cloud disk types for the system cloud disk. When a higher-priority cloud disk type is unavailable, the system automatically attempts the next-priority cloud disk type to create the system cloud disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud：普通云盘。</description></item>
-            /// <item><description>cloud_efficiency：高效云盘。</description></item>
-            /// <item><description>cloud_ssd：SSD云盘。</description></item>
-            /// <item><description>cloud_essd：ESSD云盘。</description></item>
+            /// <item><description>cloud: basic cloud disk.</description></item>
+            /// <item><description>cloud_efficiency: ultra cloud disk.</description></item>
+            /// <item><description>cloud_ssd: standard SSD.</description></item>
+            /// <item><description>cloud_essd: ESSD.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("system_disk_categories")]
@@ -1146,15 +1151,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> SystemDiskCategories { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘类型，取值：</para>
+            /// <para>The system cloud disk type for nodes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cloud_efficiency</c>：高效云盘。</description></item>
-            /// <item><description><c>cloud_ssd</c>：SSD云盘。</description></item>
-            /// <item><description><c>cloud_essd</c>：ESSD云盘。</description></item>
-            /// <item><description><c>cloud_auto</c>：ESSD AutoPL云盘。</description></item>
-            /// <item><description><c>cloud_essd_entry</c>：ESSD Entry云盘。</description></item>
+            /// <item><description><c>cloud_efficiency</c>: ultra cloud disk.</description></item>
+            /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
+            /// <item><description><c>cloud_essd</c>: ESSD.</description></item>
+            /// <item><description><c>cloud_auto</c>: ESSD AutoPL cloud disk.</description></item>
+            /// <item><description><c>cloud_essd_entry</c>: ESSD Entry disk.</description></item>
             /// </list>
-            /// <para>默认值：<c>cloud_efficiency</c>。</para>
+            /// <para>Default value: <c>cloud_efficiency</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -1164,7 +1169,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘采用的加密算法。取值范围：aes-256。</para>
+            /// <para>The encryption algorithm for the node system cloud disk. Valid values: aes-256.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aes-256</para>
@@ -1174,14 +1179,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskEncryptAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>是否加密系统盘。取值范围：true：加密。false：不加密。</para>
+            /// <para>Specifies whether to encrypt the system cloud disk. Valid values: true: encrypted. false: not encrypted.</para>
             /// </summary>
             [NameInMap("system_disk_encrypted")]
             [Validation(Required=false)]
             public bool? SystemDiskEncrypted { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘使用的KMS密钥ID。</para>
+            /// <para>The KMS key ID used for the node system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -1191,12 +1196,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskKmsKeyId { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘磁盘性能，只对ESSD磁盘生效。</para>
+            /// <para>The performance level of the node system cloud disk. This parameter takes effect only for ESSD cloud disks.</para>
             /// <list type="bullet">
-            /// <item><description>PL0：并发极限I/O性能中等，读写时延较为稳定。</description></item>
-            /// <item><description>PL1：并发极限I/O性能中等，读写时延较为稳定。</description></item>
-            /// <item><description>PL2：并发极限I/O性能较高，读写时延稳定。</description></item>
-            /// <item><description>PL3：并发极限I/O性能极高，读写时延极稳定。</description></item>
+            /// <item><description>PL0: moderate maximum concurrent I/O performance with relatively stable read/write latency.</description></item>
+            /// <item><description>PL1: moderate maximum concurrent I/O performance with relatively stable read/write latency.</description></item>
+            /// <item><description>PL2: high maximum concurrent I/O performance with stable read/write latency.</description></item>
+            /// <item><description>PL3: ultra-high maximum concurrent I/O performance with extremely stable read/write latency.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1207,8 +1212,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘预配置的读写IOPS。可能值：0~min{50,000, 1000\*容量-基准性能}。 基准性能=min{1,800+50\*容量, 50000}。</para>
-            /// <para>当<c>SystemDiskCategory</c>为<c>cloud_auto</c>时才支持设置该参数。更多信息，请参见<a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL云盘</a>。</para>
+            /// <para>The provisioned read/write IOPS for the node system cloud disk. Valid values: 0~min{50,000, 1000\*capacity-baseline performance}. Baseline performance=min{1,800+50\*capacity, 50000}.</para>
+            /// <para>This parameter is supported only when <c>SystemDiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -1218,8 +1223,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
-            /// <para>节点系统盘大小，单位：GiB。</para>
-            /// <para>取值范围：[40,500]。</para>
+            /// <para>The node system cloud disk size. Unit: GiB.</para>
+            /// <para>Valid values: [40,500].</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -1229,15 +1234,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>仅为ECS实例添加标签。</para>
-            /// <para>标签键不可以重复，最大长度为128个字符；标签键和标签值都不能以“aliyun”、“acs:”开头，或包含“https://”、“http://”。</para>
+            /// <para>Adds tags only to ECS instances.</para>
+            /// <para>Tag keys cannot be duplicated and can be up to 128 characters in length. Tag keys and tag values cannot start with &quot;aliyun&quot; or &quot;acs:&quot;, or contain &quot;https://&quot; or &quot;http://&quot;.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<NodepoolScalingGroupTags> Tags { get; set; }
             public class NodepoolScalingGroupTags : TeaModel {
                 /// <summary>
-                /// <para>标签的名称。</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key</para>
@@ -1247,7 +1252,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>标签值。</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
@@ -1259,7 +1264,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>虚拟交换机ID。</para>
+            /// <para>The vSwitch IDs.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("vswitch_ids")]
@@ -1269,14 +1274,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The confidential computing configuration of the node pool.</para>
+        /// <para>The confidential computing node pool configuration.</para>
         /// </summary>
         [NameInMap("tee_config")]
         [Validation(Required=false)]
         public NodepoolTeeConfig TeeConfig { get; set; }
         public class NodepoolTeeConfig : TeaModel {
             /// <summary>
-            /// <para>是否为加密计算节点池。</para>
+            /// <para>Specifies whether this is a confidential computing node pool.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
