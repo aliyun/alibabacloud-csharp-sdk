@@ -64,6 +64,24 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
                 {"eu-west-1-oxs", "pai-dlc.aliyuncs.com"},
                 {"me-east-1", "pai-dlc.aliyuncs.com"},
                 {"rus-west-1-pop", "pai-dlc.aliyuncs.com"},
+                {"us-west-1", "pai-dlc.us-west-1.aliyuncs.com"},
+                {"us-southeast-1", "pai-dlc.us-southeast-1.aliyuncs.com"},
+                {"us-east-1", "pai-dlc.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "pai-dlc.eu-central-1.aliyuncs.com"},
+                {"cn-wulanchabu", "pai-dlc.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "pai-dlc.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "pai-dlc.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "pai-dlc.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "pai-dlc.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "pai-dlc.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "pai-dlc.cn-guangzhou.aliyuncs.com"},
+                {"cn-beijing", "pai-dlc.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-8", "pai-dlc.ap-southeast-8.aliyuncs.com"},
+                {"ap-southeast-7", "pai-dlc.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-5", "pai-dlc.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "pai-dlc.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "pai-dlc.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "pai-dlc.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("pai-dlc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -85,12 +103,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -236,12 +257,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -387,12 +411,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -411,12 +438,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job that runs in a cluster. You can configure the data source, code source, startup command, and computing resources of each node on which a job runs.</para>
+        /// <para>Creates a job and runs it in a cluster. You can specify the datasource config, code source configuration, startup command, and compute resource configuration for each node on which the job runs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you call this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -435,7 +465,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>Creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -501,7 +531,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>Creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -567,7 +597,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>Creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -586,7 +616,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>Creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -605,8 +635,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create RayHistoryServer</para>
+        /// <para>Creates a RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRayHistoryServerRequest
@@ -675,8 +713,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create RayHistoryServer</para>
+        /// <para>Creates a RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRayHistoryServerRequest
@@ -745,8 +791,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create RayHistoryServer</para>
+        /// <para>Creates a RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRayHistoryServerRequest
@@ -764,8 +818,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create RayHistoryServer</para>
+        /// <para>Creates a RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing of PAI-DLC and the <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
+        /// <remarks>
+        /// <para>Notice: The total length of CreateJob request parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRayHistoryServerRequest
@@ -1167,7 +1229,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
+        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1207,7 +1269,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
+        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1247,7 +1309,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
+        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1266,7 +1328,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
+        /// <para>Deletes a job template. You cannot delete a job template that is in use by a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1285,8 +1347,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete RayHistoryServer</para>
+        /// <para>Deletes a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRayHistoryServerRequest
@@ -1325,8 +1392,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete RayHistoryServer</para>
+        /// <para>Deletes a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRayHistoryServerRequest
@@ -1365,8 +1437,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete RayHistoryServer</para>
+        /// <para>Deletes a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRayHistoryServerRequest
@@ -1384,8 +1461,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete RayHistoryServer</para>
+        /// <para>Deletes a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this API, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">Pricing</a> of PAI-DLC.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRayHistoryServerRequest
@@ -1533,12 +1615,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
+        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1588,12 +1670,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
+        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1643,12 +1725,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
+        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1667,12 +1749,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the DLC task\&quot;s Dashboard URL, if one exists.</para>
+        /// <para>Retrieves the Dashboard URL for a DLC job, if available.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before using this API, review the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1691,7 +1773,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1737,7 +1819,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1783,7 +1865,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1802,7 +1884,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the configuration and runtime information of a job.</para>
+        /// <para>Retrieves the detailed configuration and runtime information of a DLC job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2275,7 +2357,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job template.</para>
+        /// <para>Retrieves the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2321,7 +2403,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job template.</para>
+        /// <para>Retrieves the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2367,7 +2449,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job template.</para>
+        /// <para>Retrieves the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2386,7 +2468,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a job template.</para>
+        /// <para>Retrieves the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2405,8 +2487,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics data.</para>
+        /// <para>Retrieve metrics data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
+        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
+        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
+        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
+        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetricsRequest
@@ -2487,8 +2582,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics data.</para>
+        /// <para>Retrieve metrics data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
+        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
+        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
+        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
+        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetricsRequest
@@ -2569,8 +2677,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics data.</para>
+        /// <para>Retrieve metrics data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
+        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
+        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
+        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
+        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetricsRequest
@@ -2588,8 +2709,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries metrics data.</para>
+        /// <para>Retrieve metrics data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves monitoring metrics for a specific job (JobId) or dimensions under a given namespace.</description></item>
+        /// <item><description>It supports custom time ranges. By default, it returns data from the last hour.</description></item>
+        /// <item><description>Select different time intervals (Period) to obtain data points with finer or coarser granularity.</description></item>
+        /// <item><description>To paginate through large datasets, use the <c>NextToken</c> parameter.</description></item>
+        /// <item><description>The <c>MetricName</c> parameter is required and specifies the monitoring metric to query.</description></item>
+        /// <item><description>For advanced features or specific metric types, see the related documentation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetMetricsRequest
@@ -2923,12 +3057,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Ray Dashboard URL.</para>
+        /// <para>Retrieve the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2978,12 +3112,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Ray Dashboard URL.</para>
+        /// <para>Retrieve the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3033,12 +3167,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Ray Dashboard URL.</para>
+        /// <para>Retrieve the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3057,12 +3191,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a Ray Dashboard URL.</para>
+        /// <para>Retrieve the Ray Dashboard URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</para>
+        /// <para>Before you use this operation, review the PAI-DLC billing model and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3081,8 +3215,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query RayHistoryServer</para>
+        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayHistoryServerRequest
@@ -3121,8 +3260,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query RayHistoryServer</para>
+        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayHistoryServerRequest
@@ -3161,8 +3305,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query RayHistoryServer</para>
+        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayHistoryServerRequest
@@ -3180,8 +3329,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query RayHistoryServer</para>
+        /// <para>Retrieves the details of a specific RayHistoryServer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this API operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob API, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRayHistoryServerRequest
@@ -3199,7 +3353,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a TensorBoard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3253,7 +3407,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a TensorBoard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3307,7 +3461,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a TensorBoard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3326,7 +3480,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a TensorBoard instance.</para>
+        /// <para>Retrieves the details of a Tensorboard instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4221,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
+        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4141,7 +4295,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
+        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4215,7 +4369,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
+        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4234,7 +4388,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
+        /// <para>Lists job templates in a specified workspace. You can paginate, sort, and filter the results by creator, <c>TemplateId</c>, or <c>TemplateName</c>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4253,7 +4407,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
+        /// <para>Retrieves a list of jobs with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4445,7 +4599,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
+        /// <para>Retrieves a list of jobs with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4637,7 +4791,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
+        /// <para>Retrieves a list of jobs with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4656,7 +4810,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
+        /// <para>Retrieves a list of jobs with support for pagination, sorting, and conditional filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4675,8 +4829,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List resource RayHistoryServer</para>
+        /// <para>Lists RayHistoryServer resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRayHistoryServersRequest
@@ -4747,6 +4909,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePath))
+            {
+                query["StoragePath"] = request.StoragePath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
             {
                 query["UserIdForFilter"] = request.UserIdForFilter;
@@ -4781,8 +4947,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List resource RayHistoryServer</para>
+        /// <para>Lists RayHistoryServer resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRayHistoryServersRequest
@@ -4853,6 +5027,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePath))
+            {
+                query["StoragePath"] = request.StoragePath;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
             {
                 query["UserIdForFilter"] = request.UserIdForFilter;
@@ -4887,8 +5065,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List resource RayHistoryServer</para>
+        /// <para>Lists RayHistoryServer resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRayHistoryServersRequest
@@ -4906,8 +5092,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List resource RayHistoryServer</para>
+        /// <para>Lists RayHistoryServer resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you use this operation, make sure that you are familiar with the billing and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Platform for AI - Deep Learning Containers (PAI-DLC).</para>
+        /// <remarks>
+        /// <para>Notice: The total length of the CreateJob operation parameters, including system-generated parameters, cannot exceed 65,536 bytes..</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRayHistoryServersRequest
@@ -4925,7 +5119,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of TensorBoard instances.</para>
+        /// <para>Queries a list of created Tensorboard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5047,7 +5241,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of TensorBoard instances.</para>
+        /// <para>Queries a list of created Tensorboard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5169,7 +5363,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of TensorBoard instances.</para>
+        /// <para>Queries a list of created Tensorboard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5188,7 +5382,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of TensorBoard instances.</para>
+        /// <para>Queries a list of created Tensorboard instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5207,7 +5401,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of the template.</para>
+        /// <para>Sets the default version of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5253,7 +5447,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of the template.</para>
+        /// <para>Sets the default version of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5299,7 +5493,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of the template.</para>
+        /// <para>Sets the default version of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5318,7 +5512,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the default version of the template.</para>
+        /// <para>Sets the default version of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5337,8 +5531,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Ray History Server</para>
+        /// <para>Starts a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRayHistoryServerRequest
@@ -5377,8 +5576,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Ray History Server</para>
+        /// <para>Starts a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRayHistoryServerRequest
@@ -5417,8 +5621,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Ray History Server</para>
+        /// <para>Starts a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRayHistoryServerRequest
@@ -5436,8 +5645,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Ray History Server</para>
+        /// <para>Starts a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, familiarize yourself with the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of PAI-DLC.&gt;Notice: The total length of the API parameters for the CreateJob operation, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartRayHistoryServerRequest
@@ -5687,8 +5901,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Ray History Server</para>
+        /// <para>Stops a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopRayHistoryServerRequest
@@ -5727,8 +5946,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Ray History Server</para>
+        /// <para>Stops a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopRayHistoryServerRequest
@@ -5767,8 +5991,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Ray History Server</para>
+        /// <para>Stops a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopRayHistoryServerRequest
@@ -5786,8 +6015,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Ray History Server</para>
+        /// <para>Stops a Ray History Server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> for PAI-DLC.&gt;Notice: The total length of the parameters for the CreateJob interface, including system-generated parameters, cannot exceed 65,536 bytes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopRayHistoryServerRequest
@@ -5935,7 +6169,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
+        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5993,7 +6227,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
+        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6051,7 +6285,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
+        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6070,7 +6304,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration information of a job. For example, you can modify the priority of a job in a queue.</para>
+        /// <para>Updates a job\&quot;s configuration, such as its priority.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6267,7 +6501,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a TensorBoard instance.</para>
+        /// <para>Update a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6325,7 +6559,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a TensorBoard instance.</para>
+        /// <para>Update a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6383,7 +6617,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a TensorBoard instance.</para>
+        /// <para>Update a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6402,7 +6636,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a TensorBoard instance.</para>
+        /// <para>Update a Tensorboard.</para>
         /// </summary>
         /// 
         /// <param name="request">

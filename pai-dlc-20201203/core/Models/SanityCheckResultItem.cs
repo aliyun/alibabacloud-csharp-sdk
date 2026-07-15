@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class SanityCheckResultItem : TeaModel {
         /// <summary>
-        /// <para>The nth time the check is performed.</para>
+        /// <para>The sequence number of the check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? CheckNumber { get; set; }
 
         /// <summary>
-        /// <para>The time when the check ends.</para>
+        /// <para>The end time of the check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-11-30T16:47:30.378817+08:00</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string FinishedAt { get; set; }
 
         /// <summary>
-        /// <para>The detailed information about the check results.</para>
+        /// <para>The details of the check result.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The check phase.</para>
+        /// <para>The phase of the check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CheckInit</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The time when the check starts.</para>
+        /// <para>The start time of the check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-11-30T16:47:30.343005+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StartedAt { get; set; }
 
         /// <summary>
-        /// <para>The check status.</para>
+        /// <para>The status of the check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>

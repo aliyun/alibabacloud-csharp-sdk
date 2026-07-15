@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetRayDashboardResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the dashboard has been integrated with CloudMonitor and supports ray metrics</para>
+        /// <para>Indicates whether Cloud Monitor is enabled for this dashboard to display Ray metrics</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

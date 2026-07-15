@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListJobTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The sort order. Valid values: <c>asc</c> for ascending and <c>desc</c> for descending. Default value: <c>desc</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The page number to retrieve.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The field to sort the results by. Default value: <c>GmtCreateTime</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>按模板 ID 精确筛选。</para>
+        /// <para>The job template ID. Use this parameter to filter for an exact match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tpl1****6jcq2q</para>
@@ -52,7 +60,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>按模板名称模糊筛选。</para>
+        /// <para>The job template name. Use this parameter to filter for a partial match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-template-example-1778047****</para>
@@ -62,7 +70,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>按创建者用户 ID 筛选。</para>
+        /// <para>The ID of the creator. Use this parameter to filter results by a specific creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20**************02</para>
@@ -72,7 +80,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>工作空间 ID。如何获取工作空间 ID，请参见 ListWorkspaces。</para>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

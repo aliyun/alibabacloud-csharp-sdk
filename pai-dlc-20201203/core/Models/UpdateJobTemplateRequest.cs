@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class UpdateJobTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>字段约束规则。Key 为 JSONPath 表达式，Value 为约束类型：locked（锁定不可覆盖）、overridable（可覆盖）、required（必填）。需与 Content 同时提供，不允许单独更新。</para>
+        /// <para>The field constraints. The key is a JSONPath expression and the value is the constraint type. Valid values are <c>locked</c>, <c>overridable</c>, and <c>required</c>. This parameter must be specified with <c>Content</c> and cannot be updated on its own.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Constraints { get; set; }
 
         /// <summary>
-        /// <para>任务模板的配置内容，支持 CreateJob 接口的所有参数字段，以 JSON 格式传入。提供时会创建新版本。</para>
+        /// <para>The configuration content of the job template. This parameter supports all fields from the <c>CreateJob</c> operation and must be in JSON format. Specifying this parameter creates a new version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;WorkspaceId\&quot;:\&quot;15****05\&quot;,\&quot;JobType\&quot;:\&quot;PyTorchJob\&quot;,\&quot;UserCommand\&quot;:\&quot;echo hello\&quot;,\&quot;JobSpecs\&quot;:[{\&quot;Type\&quot;:\&quot;Worker\&quot;,\&quot;PodCount\&quot;:1,\&quot;Image\&quot;:\&quot;dsw-registry-vpc.cn-hangzhou.cr.aliyuncs.com/pai/pytorch:2.8.0-gpu-py313-cu129-ubuntu22.04-3995b779-1764361782\&quot;,\&quot;EcsSpec\&quot;:\&quot;ecs.gn7i-c8g1.2xlarge\&quot;}],\&quot;ResourceType\&quot;:\&quot;ECS\&quot;,\&quot;_ResourcePaymentType\&quot;:\&quot;PostPaid\&quot;,\&quot;CredentialConfig\&quot;:{\&quot;EnableCredentialInject\&quot;:false},\&quot;Accessibility\&quot;:\&quot;PRIVATE\&quot;,\&quot;Settings\&quot;:{\&quot;JobReservedMinutes\&quot;:0,\&quot;Tags\&quot;:{}}}</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The description of the job template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Template description</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>用户自定义的键值对元数据，用于存储模板的附加信息。</para>
+        /// <para>User-defined key-value pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>当创建了新版本时，是否将新版本设为默认版本。</para>
+        /// <para>If <c>true</c>, the new version becomes the default version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? SetAsDefault { get; set; }
 
         /// <summary>
+        /// <para>The name of the job template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>job-template-example-1778047****</para>
         /// </summary>
@@ -65,6 +69,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
+        /// <summary>
+        /// <para>This field is not supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无效字段</para>
+        /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public int? Version { get; set; }

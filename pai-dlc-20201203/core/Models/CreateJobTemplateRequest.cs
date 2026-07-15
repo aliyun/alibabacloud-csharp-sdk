@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateJobTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>字段约束规则。Key 为 JSONPath 表达式，Value 为约束类型：locked（锁定不可覆盖）、overridable（可覆盖）、required（必填）。</para>
+        /// <para>The field constraint rules. The key is a JSONPath expression, and the value is a constraint type: <c>locked</c> (cannot be overridden), <c>overridable</c> (can be overridden), or <c>required</c> (must be specified).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Constraints { get; set; }
 
         /// <summary>
-        /// <para>任务模板的配置内容，包含作业配置参数，以 JSON 格式传入。</para>
+        /// <para>The configuration of the job template, which must be a JSON string containing the job configuration parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The description of the job template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Template description</para>
         /// </summary>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>用户自定义的键值对元数据，用于存储模板的附加信息。</para>
+        /// <para>User-defined key-value metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -49,6 +51,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
+        /// <para>The name of the job template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>工作空间 ID。如何获取工作空间 ID，请参见 ListWorkspaces。</para>
+        /// <para>The ID of the workspace that contains the job template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

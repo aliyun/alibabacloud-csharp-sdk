@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class DeleteJobTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>本次请求的 ID，用于诊断和答疑。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78F6FCE2-278F-4C4A-A6B7-DD8ECEA****</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tplwk80096dw****</para>
         /// </summary>

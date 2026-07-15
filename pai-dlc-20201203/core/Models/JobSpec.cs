@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class JobSpec : TeaModel {
         /// <summary>
-        /// <para>The scheduling node configurations.</para>
+        /// <para>The scheduling node assignment configuration.</para>
         /// </summary>
         [NameInMap("AssignNodeSpec")]
         [Validation(Required=false)]
         public AssignNodeSpec AssignNodeSpec { get; set; }
 
         /// <summary>
-        /// <para>The auto scaling configurations.</para>
+        /// <para>The auto scaling configuration.</para>
         /// </summary>
         [NameInMap("AutoScalingSpec")]
         [Validation(Required=false)]
         public AutoScalingSpec AutoScalingSpec { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to consider this role when determining job success. This parameter takes effect only when the success policy is set to Partial.</para>
+        /// </summary>
         [NameInMap("ConsiderInSuccessPolicy")]
         [Validation(Required=false)]
         public bool? ConsiderInSuccessPolicy { get; set; }
 
         /// <summary>
-        /// <para>The hardware specifications of the worker. For more information, see <a href="https://help.aliyun.com/document_detail/171758.html">Billing of DLC</a> of PAI.</para>
-        /// <remarks>
-        /// <para> The price varies based on instance types.</para>
-        /// </remarks>
+        /// <para>The hardware specifications of the worker. Visit <a href="https://help.aliyun.com/document_detail/171758.html">PAI-DLC billing</a> for the detailed list of specifications.&gt;Notice: Prices vary depending on the specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c6.large</para>
@@ -45,14 +45,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<ElasticSpotSpec> ElasticSpotSpecs { get; set; }
 
         /// <summary>
-        /// <para>The additional pod configurations.</para>
+        /// <para>The additional pod configuration.</para>
         /// </summary>
         [NameInMap("ExtraPodSpec")]
         [Validation(Required=false)]
         public ExtraPodSpec ExtraPodSpec { get; set; }
 
+        [NameInMap("HyperNodeSchedulingConfig")]
+        [Validation(Required=false)]
+        public HyperNodeSchedulingConfig HyperNodeSchedulingConfig { get; set; }
+
         /// <summary>
-        /// <para>The address of the image that is run by the worker node. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image provided by PAI. You can also specify a third-party public image.</para>
+        /// <para>The runtime image address for this type of worker. Call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain images provided by the PAI platform. You can also specify a third-party public image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/cloud-dsw/tensorflow:1.12PAI-gpu-py36-cu101-ubuntu18.04</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the private image.</para>
+        /// <para>The private image configuration.</para>
         /// </summary>
         [NameInMap("ImageConfig")]
         [Validation(Required=false)]
@@ -71,7 +75,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Deprecated.</para>
+        /// <para>Deprecated due to a spelling error.</para>
         /// </summary>
         [NameInMap("IsCheif")]
         [Validation(Required=false)]
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? IsCheif { get; set; }
 
         /// <summary>
-        /// <para>Whether the role is a Chief role. Chief role must be unique.</para>
+        /// <para>Indicates whether this role is the Chief role. Only one Chief role is allowed.</para>
         /// </summary>
         [NameInMap("IsChief")]
         [Validation(Required=false)]
@@ -91,6 +95,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [NameInMap("LocalMountSpecs")]
         [Validation(Required=false)]
         public List<LocalMountSpec> LocalMountSpecs { get; set; }
+
+        [NameInMap("OversoldType")]
+        [Validation(Required=false)]
+        public string OversoldType { get; set; }
 
         /// <summary>
         /// <para>The number of replicas.</para>
@@ -107,7 +115,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string QuotaId { get; set; }
 
         /// <summary>
-        /// <para>The resource configurations.</para>
+        /// <para>The resource configuration.</para>
         /// </summary>
         [NameInMap("ResourceConfig")]
         [Validation(Required=false)]
@@ -124,19 +132,22 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RestartPolicy { get; set; }
 
         /// <summary>
-        /// <para>The service configurations.</para>
+        /// <para>The service configuration.</para>
         /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]
         public ServiceSpec ServiceSpec { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the preemptible instance.</para>
+        /// <para>The spot instance configuration.</para>
         /// </summary>
         [NameInMap("SpotSpec")]
         [Validation(Required=false)]
         public SpotSpec SpotSpec { get; set; }
 
+        /// <summary>
+        /// <para>The dependencies required before this role starts.</para>
+        /// </summary>
         [NameInMap("StartupDependencies")]
         [Validation(Required=false)]
         public List<StartupDependency> StartupDependencies { get; set; }
@@ -146,15 +157,22 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public SystemDisk SystemDisk { get; set; }
 
         /// <summary>
-        /// <para>The worker type, which is related to JobType. The valid values of this parameter vary based on the value of JobType.</para>
+        /// <para>Type is closely related to Job Type. Different Job Types support different Worker Types.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when JobType is set to <b>TFJob</b>: Chief, PS, Worker, Evaluator, and GraphLearn.</description></item>
-        /// <item><description>Valid values when JobType is set to <b>PyTorchJob</b>: Worker and Master.</description></item>
-        /// <item><description>Valid values when JobType is set to <b>XGBoostJob</b>: Worker and Master.</description></item>
-        /// <item><description>Valid values when JobType is set to <b>OneFlowJob</b>: Worker and Master.</description></item>
-        /// <item><description>Valid values when JobType is set to <b>ElasticBatch</b>: Worker and Master.</description></item>
+        /// <item><description><para><b>TFJob</b>: Supports Chief, PS, Worker, Evaluator, and GraphLearn.</para>
+        /// </description></item>
+        /// <item><description><para><b>PyTorchJob</b>: Supports Worker and Master.</para>
+        /// </description></item>
+        /// <item><description><para><b>XGBoostJob</b>: Supports Worker and Master.</para>
+        /// </description></item>
+        /// <item><description><para><b>OneFlowJob</b>: Supports Worker and Master.</para>
+        /// </description></item>
+        /// <item><description><para><b>ElasticBatch</b>: Supports Worker and Master.</para>
+        /// </description></item>
+        /// <item><description><para><b>RayJob</b>: Supports Head, Worker, and Worker[-xxx].</para>
+        /// </description></item>
         /// </list>
-        /// <para>The Master node in jobs of the PyTorchJob, XGBoostJob, OneFlowJob, or ElasticBatch type is optional. If you do not specify the Master node, the system automatically uses the first Worker node as the Master node.</para>
+        /// <para>Master is optional in PyTorchJob, XGBoostJob, OneFlowJob, and ElasticBatch. If Master is not specified, the system automatically designates the first Worker node as Master.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Worker</para>
@@ -166,7 +184,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Whether to use preemptible instances.</para>
+        /// <para>Specifies whether to use spot instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateJobRequest : TeaModel {
         /// <summary>
-        /// <para>The job visibility. Valid values:</para>
+        /// <para>The visibility of the job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: The job is visible to all members in the workspace.</description></item>
-        /// <item><description>PRIVATE: The job is visible only to you and the administrator of the workspace.</description></item>
+        /// <item><description>PUBLIC: visible to all members in the workspace.</description></item>
+        /// <item><description>PRIVATE: visible only to you and administrators in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The code source of the job. Before the node of the job runs, DLC automatically downloads the configured code from the code source and mounts the code to the local path of the container.</para>
+        /// <para>The code source used by this job. Before the job nodes start, DLC automatically downloads the code configured in the code source and mounts it to a local directory of the container.</para>
         /// </summary>
         [NameInMap("CodeSource")]
         [Validation(Required=false)]
         public CreateJobRequestCodeSource CodeSource { get; set; }
         public class CreateJobRequestCodeSource : TeaModel {
             /// <summary>
-            /// <para>The branch of the referenced code repository. By default, the branch configured in the code source is used. This parameter is optional.</para>
+            /// <para>The branch of the code repository referenced at runtime. This parameter is optional. By default, the branch configured in the code source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>master</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Branch { get; set; }
 
             /// <summary>
-            /// <para>The ID of the code source.</para>
+            /// <para>The code source ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the code source ID, see <a href="https://help.aliyun.com/document_detail/459922.html">ListCodeSources</a>..</para>
             /// 
             /// <b>Example:</b>
             /// <para>code-20210111103721-xxxxxxx</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string CodeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The commit ID of the code to be downloaded. By default, the commit ID configured in the code source is used. This parameter is optional.</para>
+            /// <para>The commit ID of the code to download for this job. This parameter is optional. By default, the commit ID configured in the code source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>44da109b5******</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Commit { get; set; }
 
             /// <summary>
-            /// <para>The path to which the job is mounted. By default, the mount path configured in the data source is used. This parameter is optional.</para>
+            /// <para>The mount path for this job. This parameter is optional. By default, the mount path configured in the code source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/data</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The data sources for job running.</para>
+        /// <para>The list of data sources used by the job.</para>
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string AccessPointId { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
+            /// <para>The ID of the data source. &lt;props=&quot;china&quot;&gt;For information about how to obtain the data source ID, see <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a>..</para>
             /// 
             /// <b>Example:</b>
             /// <para>d-cn9dl*******</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string MountAccess { get; set; }
 
             /// <summary>
-            /// <para>The path to which the job is mounted. By default, the mount path in the data source configuration is used. This parameter is optional.</para>
+            /// <para>The mount path for this job. This parameter is optional. By default, the mount path configured in the data source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/data</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string MountPath { get; set; }
 
             /// <summary>
-            /// <para>The mount attribute of the custom dataset. Set the value to OSS.</para>
+            /// <para>The custom dataset mount properties. Only OSS is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>This parameter is not supported.</para>
+        /// <para>This parameter is not supported. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“”</para>
@@ -185,9 +185,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The job name. The name must be in the following format:</para>
+        /// <para>The name of the job. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 1 to 256 characters in length.</description></item>
+        /// <item><description>The name cannot exceed 256 characters in length.</description></item>
         /// <item><description>The name can contain digits, letters, underscores (_), periods (.), and hyphens (-).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -200,21 +200,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not supported.</para>
+        /// <para>This parameter is not supported. Ignore this parameter.</para>
         /// </summary>
         [NameInMap("ElasticSpec")]
         [Validation(Required=false)]
         public JobElasticSpec ElasticSpec { get; set; }
 
         /// <summary>
-        /// <para>The environment variables.</para>
+        /// <para>The environment variable configuration.</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
         public Dictionary<string, string> Envs { get; set; }
 
         /// <summary>
-        /// <para>The maximum running duration of the job. Unit: minutes.</para>
+        /// <para>The maximum running duration of the job, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -224,8 +224,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public long? JobMaxRunningTimeMinutes { get; set; }
 
         /// <summary>
-        /// <para><b>JobSpecs</b> describes the configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.</para>
-        /// <para>A DLC job consists of different types of nodes. If nodes of the same type have exactly the same configuration, the configuration is called JobSpec. <b>JobSpecs</b> specifies the configurations of all types of nodes. The value is of the array type.</para>
+        /// <para>The various runtime configurations of the job, such as the image address, startup command, node resource declarations, and number of replicas.</para>
+        /// <para>A DLC job consists of different types of nodes. Nodes of the same type share identical configurations, which is called a JobSpec. <b>JobSpecs</b> describes the configurations of all node types and is an array of JobSpec objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JobSpecs")]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public List<JobSpec> JobSpecs { get; set; }
 
         /// <summary>
-        /// <para>The job type. The value is case-sensitive. The following job types are supported:</para>
+        /// <para>The job type. This parameter is case-sensitive. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>TFJob</description></item>
         /// <item><description>PyTorchJob</description></item>
@@ -243,17 +243,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <item><description>ElasticBatchJob</description></item>
         /// <item><description>SlurmJob</description></item>
         /// <item><description>RayJob</description></item>
-        /// </list>
-        /// <para>Valid values and corresponding frameworks:</para>
-        /// <list type="bullet">
-        /// <item><description>OneFlowJob: OneFlow.</description></item>
-        /// <item><description>PyTorchJob: PyTorch.</description></item>
-        /// <item><description>SlurmJob: Slurm.</description></item>
-        /// <item><description>XGBoostJob: XGBoost.</description></item>
-        /// <item><description>ElasticBatchJob: ElasticBatch.</description></item>
-        /// <item><description>MPIJob: MPIJob.</description></item>
-        /// <item><description>TFJob: Tensorflow.</description></item>
-        /// <item><description>RayJob: Ray.</description></item>
+        /// <item><description>DataJuicerJob.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -265,7 +255,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>The additional configuration of the job. You can use this parameter to adjust the behavior of the attached data source. For example, if the attached data source of the job is of the OSS type, you can use this parameter to add the following configurations to override the default parameters of JindoFS: <c>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</c>.</para>
+        /// <para>The additional configuration for this node. You can use this parameter to adjust the behavior of mounted data sources. For example, if the node has an OSS data source mounted, you can set this parameter to <c>fs.oss.download.thread.concurrency=4,fs.oss.download.queue.size=16</c> to overwrite the default JindoFS parameter settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1=value1,key2=value2</para>
@@ -275,9 +265,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>The priority of the job. Default value: 1. Valid values: 1 to 9.</para>
+        /// <para>The priority of the job. This parameter is optional. Default value: 1. Valid values: 1 to 9.</para>
         /// <list type="bullet">
-        /// <item><description>1 is the lowest priority.</description></item>
+        /// <item><description>1: the lowest priority.</description></item>
         /// <item><description>9: the highest priority.</description></item>
         /// </list>
         /// 
@@ -289,10 +279,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. This parameter is optional.</para>
+        /// <para>The resource group ID. This parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description>If you leave this parameter empty, the job is submitted to a public resource group.</description></item>
-        /// <item><description>If a resource quota is bound to the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
+        /// <item><description>If this parameter is left empty, the job is submitted to the public resource group.</description></item>
+        /// <item><description>If the current workspace has an attached resource quota, you can specify the corresponding resource quota ID. For details about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -311,17 +301,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SchedulingStrategy { get; set; }
 
         /// <summary>
-        /// <para>The additional parameter configurations of the job.</para>
+        /// <para>The additional parameter settings for the job.</para>
         /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]
         public JobSettings Settings { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used to check whether a distributed multi-node job is successful. Only TensorFlow distributed multi-node jobs are supported.</para>
+        /// <para>The success policy for distributed multi-node jobs. Only TensorFlow multi-node jobs support this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ChiefWorker: If you use this policy, the job is considered successful when the pod on the chief node completes operations.</description></item>
-        /// <item><description>AllWorkers (default): If you use this policy, the job is considered successful when all worker nodes complete operations.</description></item>
+        /// <item><description>ChiefWorker: the entire job is considered successful when the Chief pod finishes successfully.</description></item>
+        /// <item><description>AllWorkers (default): the entire job is considered successful only when all Worker pods finish successfully.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -332,17 +322,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SuccessPolicy { get; set; }
 
         /// <summary>
-        /// <para>任务模板的 ID。指定后将基于模板创建作业，作业参数需符合模板约束规则。</para>
+        /// <para>The job template ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tplxxxxxxxxxxxxxxxx</para>
+        /// <para>tplabc1234567</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>指定使用的模板版本号，不传则使用模板默认版本。</para>
+        /// <para>The job template version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -352,7 +342,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? TemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The folder in which the third-party Python library file requirements.txt is stored. Before the startup command specified by the UserCommand parameter is run on each node, DLC fetches the requirements.txt file from the folder and runs <c>pip install -r</c> to install the required package and library.</para>
+        /// <para>The name of the folder that contains the third-party Python library file (requirements.txt). Before running the specified UserCommand on each node, PAI-DLC retrieves the requirements.txt file from the specified folder and runs <c>pip install -r</c> to install the libraries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/code/</para>
@@ -362,7 +352,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ThirdpartyLibDir { get; set; }
 
         /// <summary>
-        /// <para>The third-party Python libraries to be installed.</para>
+        /// <para>The list of third-party Python libraries to install.</para>
         /// </summary>
         [NameInMap("ThirdpartyLibs")]
         [Validation(Required=false)]
@@ -380,17 +370,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserCommand { get; set; }
 
         /// <summary>
-        /// <para>The VPC settings.</para>
+        /// <para>The user VPC configuration.</para>
         /// </summary>
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
         public CreateJobRequestUserVpc UserVpc { get; set; }
         public class CreateJobRequestUserVpc : TeaModel {
             /// <summary>
-            /// <para>The default route. Default value: false. Valid values:</para>
+            /// <para>The default routing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>eth0: The default network interface is used to access the Internet through the public gateway.</description></item>
-            /// <item><description>eth1: The user\&quot;s elastic network interface (ENI) is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</description></item>
+            /// <item><description>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.</description></item>
+            /// <item><description>eth1: uses the user elastic network interfaces (ENIs) to access external networks through the private gateway. For the specific configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Configure a DSW instance to access the Internet through a dedicated public gateway</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -401,10 +391,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DefaultRoute { get; set; }
 
             /// <summary>
-            /// <para>The extended CIDR block.</para>
+            /// <para>The extended CIDR blocks.</para>
             /// <list type="bullet">
-            /// <item><description>If you leave the SwitchId and ExtendedCIDRs parameters empty, the system automatically obtains all CIDR blocks in a VPC.</description></item>
-            /// <item><description>If you configure the SwitchId and ExtendedCIDRs parameters, we recommend that you specify all CIDR blocks in a VPC.</description></item>
+            /// <item><description>If the vSwitch ID is empty, this parameter is not required. The system automatically obtains all CIDR blocks under the VPC.</description></item>
+            /// <item><description>If the vSwitch ID is specified, this parameter is required. Specify all CIDR blocks under the VPC.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("ExtendedCIDRs")]
@@ -412,7 +402,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public List<string> ExtendedCIDRs { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The ID of the user security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-abcdef****</para>
@@ -422,9 +412,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID. This parameter is optional.</para>
+            /// <para>The ID of the user vSwitch. This parameter is optional.</para>
             /// <list type="bullet">
-            /// <item><description>If you leave this parameter empty, the system automatically selects a vSwitch based on the inventory status.</description></item>
+            /// <item><description>If this parameter is left empty, the system automatically selects an appropriate vSwitch based on inventory.</description></item>
             /// <item><description>You can also specify a vSwitch ID.</description></item>
             /// </list>
             /// 
@@ -436,7 +426,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The ID of the user VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-abcdef****</para>
@@ -448,7 +438,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The workspace ID. &lt;props=&quot;china&quot;&gt;For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>..</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-20210126170216-xxxxxxx</para>

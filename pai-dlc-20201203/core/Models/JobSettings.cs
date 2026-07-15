@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class JobSettings : TeaModel {
         /// <summary>
-        /// <para>The additional advanced parameter configurations.</para>
+        /// <para>The extra advanced parameter settings.</para>
         /// </summary>
         [NameInMap("AdvancedSettings")]
         [Validation(Required=false)]
         public Dictionary<string, object> AdvancedSettings { get; set; }
 
         /// <summary>
-        /// <para>Whether to mount all RDMA network interface controllers</para>
+        /// <para>Specifies whether to mount all RDMA network interfaces.</para>
         /// </summary>
         [NameInMap("AllocateAllRDMADevices")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? AllowUnschedulableNodes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user associated with the job.</para>
+        /// <para>The user ID associated with the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16****</para>
@@ -47,12 +47,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Caller { get; set; }
 
+        /// <summary>
+        /// <para>The DataJuicer task configuration.</para>
+        /// </summary>
         [NameInMap("DataJuicerConfig")]
         [Validation(Required=false)]
         public DataJuicerConfig DataJuicerConfig { get; set; }
 
         /// <summary>
-        /// <para>Whether inventory check is skipped. Valid values:</para>
+        /// <para>Specifies whether to skip the inventory check. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? DisableEcsStockCheck { get; set; }
 
         /// <summary>
-        /// <para>The NVIDIA driver configurations.</para>
+        /// <para>The NVIDIA driver configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>535.54.03</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Driver { get; set; }
 
         /// <summary>
-        /// <para>Whether the CPU affinity is enabled. This parameter takes effect only when you use subscription general computing resources.</para>
+        /// <para>The CPU affinity setting. This setting takes effect only when general-purpose subscription computing resources are used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +93,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableDSWDev { get; set; }
 
         /// <summary>
-        /// <para>Whether fault tolerance monitoring is enabled for the job. Valid values:</para>
+        /// <para>Specifies whether to enable fault tolerance monitoring for the job. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableErrorMonitoringInAIMaster { get; set; }
 
         /// <summary>
-        /// <para>Whether data is written to Object Storage Service (OSS) in append mode. Valid values:</para>
+        /// <para>Specifies whether OSS append writes are allowed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableOssAppend { get; set; }
 
         /// <summary>
-        /// <para>Whether RDMA is enabled for the job. Valid values:</para>
+        /// <para>Specifies whether the job is allowed to use RDMA. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableRDMA { get; set; }
 
         /// <summary>
-        /// <para>Whether sanity check is enabled for the job. Valid values:</para>
+        /// <para>Specifies whether to enable computing power health check for the job. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -146,7 +149,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableSanityCheck { get; set; }
 
         /// <summary>
-        /// <para>Whether tidal resources are allowed for the job. Valid values:</para>
+        /// <para>Specifies whether the job is allowed to use tidal resources. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnableTideResource { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters after you enable fault tolerance monitoring. For example, you can specify whether to enable log hang-based detection.</para>
+        /// <para>The configuration parameters for fault tolerance monitoring after it is enabled. For example, you can specify whether to enable log hang-based detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--enable-log-hang-detection true</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ErrorMonitoringArgs { get; set; }
 
         /// <summary>
-        /// <para>The retention period after the job ends. Unit: minutes.</para>
+        /// <para>The duration (in minutes) for which the job is retained after it ends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -189,12 +192,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobReservedPolicy { get; set; }
 
+        /// <summary>
+        /// <para>The output model configuration. This parameter currently takes effect only in federated training scenarios.</para>
+        /// </summary>
         [NameInMap("ModelConfig")]
         [Validation(Required=false)]
         public ModelConfig ModelConfig { get; set; }
 
         /// <summary>
-        /// <para>Whether the job accepts oversold resources. Valid values: ForbiddenQuotaOverSold, AcceptQuotaOverSold, and ForceQuotaOverSold.</para>
+        /// <para>The oversold resource usage mode for the job (not accepted, acceptable, or only accepted).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AcceptQuotaOverSold</para>
@@ -204,17 +210,17 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string OversoldType { get; set; }
 
         /// <summary>
-        /// <para>The pipeline ID.</para>
+        /// <para>The workflow ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pid-123456</para>
+        /// <para>pid-12****</para>
         /// </summary>
         [NameInMap("PipelineId")]
         [Validation(Required=false)]
         public string PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The configuration parameters for sanity check.</para>
+        /// <para>The configuration parameters for computing power health check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</para>
@@ -224,11 +230,23 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SanityCheckArgs { get; set; }
 
         /// <summary>
-        /// <para>The custom tag.</para>
+        /// <b>Example:</b>
+        /// <para>/bin/bash</para>
+        /// </summary>
+        [NameInMap("Shell")]
+        [Validation(Required=false)]
+        public string Shell { get; set; }
+
+        /// <summary>
+        /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
+
+        [NameInMap("TerminationGracePeriodSeconds")]
+        [Validation(Required=false)]
+        public long? TerminationGracePeriodSeconds { get; set; }
 
     }
 

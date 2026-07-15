@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ImageConfig : TeaModel {
         /// <summary>
-        /// <para>The authentication information of the image repository.</para>
+        /// <para>Image repository authentication information</para>
         /// </summary>
         [NameInMap("Auth")]
         [Validation(Required=false)]
         public string Auth { get; set; }
 
         /// <summary>
-        /// <para>The address of the image repository.</para>
+        /// <para>Image repository address</para>
         /// 
         /// <b>Example:</b>
         /// <para>docker****registry.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DockerRegistry { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to log on to the image repository.</para>
+        /// <para>Image repository password</para>
         /// 
         /// <b>Example:</b>
         /// <para>password</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to log on to the image repository.</para>
+        /// <para>Image repository username</para>
         /// 
         /// <b>Example:</b>
         /// <para>username</para>

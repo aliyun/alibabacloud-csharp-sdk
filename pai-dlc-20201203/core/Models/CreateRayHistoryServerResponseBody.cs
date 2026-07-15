@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class CreateRayHistoryServerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the created Ray History Server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rhsxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RayHistoryServerId { get; set; }
 
         /// <summary>
+        /// <para>The request ID of this call, used for diagnostics and troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>
         /// </summary>

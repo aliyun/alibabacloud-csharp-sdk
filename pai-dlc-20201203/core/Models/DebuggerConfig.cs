@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
     public class DebuggerConfig : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{&quot;description&quot;:&quot;这是一个新的pytorchjob模板&quot;}</para>
+        /// <para>{\&quot;description\&quot;:\&quot;这是一个新的pytorchjob模板\&quot;}</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

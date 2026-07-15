@@ -10,14 +10,13 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class UpdateJobRequest : TeaModel {
         /// <summary>
-        /// <para>The job visibility. Valid values:</para>
+        /// <para>The job\&quot;s visibility. You can only increase, not decrease, the visibility. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: The job is visible to all members in the workspace.</description></item>
-        /// <item><description>PRIVATE: The job is visible only to you and the administrator of the workspace.</description></item>
+        /// <item><description><c>PUBLIC</c>: The job is visible to all users in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>PRIVATE</para>
+        /// <para>PUBLIC</para>
         /// </summary>
         [NameInMap("Accessibility")]
         [Validation(Required=false)]
@@ -27,15 +26,20 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The job specifications.</para>
+        /// </summary>
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
         public List<JobSpec> JobSpecs { get; set; }
 
         /// <summary>
-        /// <para>The job priority. Valid values: 1 to 9.</para>
+        /// <para>The priority of the job. Valid values range from 1 to 9:</para>
         /// <list type="bullet">
-        /// <item><description>1: the lowest priority.</description></item>
-        /// <item><description>9: the highest priority.</description></item>
+        /// <item><description><para>1 indicates the lowest priority.</para>
+        /// </description></item>
+        /// <item><description><para>9 indicates the highest priority.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

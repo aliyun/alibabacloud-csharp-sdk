@@ -10,19 +10,22 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ExtraPodSpec : TeaModel {
         /// <summary>
-        /// <para>The containers to be initialized.</para>
+        /// <para>A list of init containers that run to completion before the main container starts.</para>
         /// </summary>
         [NameInMap("InitContainers")]
         [Validation(Required=false)]
         public List<ContainerSpec> InitContainers { get; set; }
 
         /// <summary>
-        /// <para>The lifecycle object.</para>
+        /// <para>Defines lifecycle hooks for the main container.</para>
         /// </summary>
         [NameInMap("Lifecycle")]
         [Validation(Required=false)]
         public Lifecycle Lifecycle { get; set; }
 
+        /// <summary>
+        /// <para>Defines the security context for the main container.</para>
+        /// </summary>
         [NameInMap("MainContainerSecurityContext")]
         [Validation(Required=false)]
         public SecurityContext MainContainerSecurityContext { get; set; }
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The pod annotations.</para>
+        /// <para>Key-value pairs to apply to the pod as annotations. Use annotations to attach arbitrary, non-identifying metadata.</para>
         /// </summary>
         [NameInMap("PodAnnotations")]
         [Validation(Required=false)]
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The pod labels.</para>
+        /// <para>Key-value pairs to apply to the pod as labels. Use labels to organize and select pods.</para>
         /// </summary>
         [NameInMap("PodLabels")]
         [Validation(Required=false)]
@@ -48,14 +51,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, string> PodLabels { get; set; }
 
         /// <summary>
-        /// <para>The local paths shared between containers.</para>
+        /// <para>A list of local directory paths to mount and share among all containers in the pod.</para>
         /// </summary>
         [NameInMap("SharedVolumeMountPaths")]
         [Validation(Required=false)]
         public List<string> SharedVolumeMountPaths { get; set; }
 
         /// <summary>
-        /// <para>The sidecar containers.</para>
+        /// <para>A list of sidecar containers.</para>
         /// </summary>
         [NameInMap("SideCarContainers")]
         [Validation(Required=false)]

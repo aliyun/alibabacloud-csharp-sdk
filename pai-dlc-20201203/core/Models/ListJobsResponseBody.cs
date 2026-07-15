@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class ListJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The jobs.</para>
+        /// <para>The job list.</para>
         /// </summary>
         [NameInMap("Jobs")]
         [Validation(Required=false)]
         public List<JobItem> Jobs { get; set; }
 
         /// <summary>
-        /// <para>The request ID used to troubleshoot issues.</para>
+        /// <para>The request ID, used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of jobs that meet the filter conditions.</para>
+        /// <para>The total number of jobs that match the filter conditions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

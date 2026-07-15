@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Gpu</para>
+        /// <para>GPU</para>
         /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]

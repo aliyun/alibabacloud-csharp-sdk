@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <para>The file system URI in the dataset configurations.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://.oss-cn-shanghai-finance-1.aliyuncs.com/</para>
+        /// <para>oss://examplebucket.oss-cn-shanghai-internal.aliyuncs.com/</para>
         /// </summary>
         [NameInMap("Uri")]
         [Validation(Required=false)]

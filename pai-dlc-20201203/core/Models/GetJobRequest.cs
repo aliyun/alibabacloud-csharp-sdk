@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class GetJobRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the job details. Default value: true.</para>
+        /// <para>Specifies whether to return job details. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

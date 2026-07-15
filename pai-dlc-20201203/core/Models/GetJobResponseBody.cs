@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         /// <summary>
         /// <para>The visibility of the job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: The code is public in the workspace.</description></item>
-        /// <item><description>PRIVATE: The workspace is visible only to you and the administrator of the workspace. This is the default value.</description></item>
+        /// <item><description>PUBLIC: Visible to all members in the workspace.</description></item>
+        /// <item><description>PRIVATE (default): Visible only to you and administrators in the workspace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string CodeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The code commit ID</para>
+            /// <para>The code commit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>44da109b59f8596152987eaa8f3b2487xxxxxx</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The access credential configurations.</para>
+        /// <para>The access credential configuration.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The data sources.</para>
+        /// <para>The list of data sources.</para>
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The local mount path. This parameter is optional. The default value is empty, which specifies that the mount path in the data source is used.</para>
+            /// <para>The local mount path. This is an optional parameter. If left empty, the mount path specified in the data source is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/mnt/data/</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string MountPath { get; set; }
 
             /// <summary>
-            /// <para>The data source URL.</para>
+            /// <para>The data source path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The duration of the job (seconds).</para>
+        /// <para>The job running duration, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3602</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public JobElasticSpec ElasticSpec { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the debugger job.</para>
+        /// <para>Indicates whether the debugger job is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public bool? EnabledDebugger { get; set; }
 
         /// <summary>
-        /// <para>The configurations of environment variables.</para>
+        /// <para>The environment variable configuration.</para>
         /// </summary>
         [NameInMap("Envs")]
         [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time of the job failed (UTC).</para>
+        /// <para>The time when the job failed (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T15:36:08Z</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtFailedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the job ended (UTC).</para>
+        /// <para>The time when the job finished (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T15:36:08Z</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtFinishTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the job (UTC).</para>
+        /// <para>The time when the job started running (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T14:36:21Z</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtRunningTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the job stopped (UTC).</para>
+        /// <para>The time when the job was stopped (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T15:36:08Z</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtSubmittedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the job succeeded (UTC).</para>
+        /// <para>The time when the job completed successfully (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T15:36:08Z</para>
@@ -274,19 +274,22 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string JobId { get; set; }
 
+        /// <summary>
+        /// <para>The job replica statuses.</para>
+        /// </summary>
         [NameInMap("JobReplicaStatuses")]
         [Validation(Required=false)]
         public List<JobReplicaStatus> JobReplicaStatuses { get; set; }
 
         /// <summary>
-        /// <para>The node configuration of the job, which is <b>JobSpecs</b> in the CreateJob operation.</para>
+        /// <para>The node configurations in the job. For more information, see the <b>JobSpecs</b> parameter in the CreateJob API.</para>
         /// </summary>
         [NameInMap("JobSpecs")]
         [Validation(Required=false)]
         public List<JobSpec> JobSpecs { get; set; }
 
         /// <summary>
-        /// <para>The job type. Specified by the JobType parameter of the <a href="https://help.aliyun.com/document_detail/459672.html">CreateJob</a> operation.</para>
+        /// <para>The job type. Specified by the JobType parameter in the <a href="https://help.aliyun.com/document_detail/459672.html">CreateJob</a> API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TFJob</para>
@@ -296,18 +299,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string JobType { get; set; }
 
         /// <summary>
-        /// <para>All running nodes of the job.</para>
+        /// <para>All nodes running in the job.</para>
         /// </summary>
         [NameInMap("Pods")]
         [Validation(Required=false)]
         public List<GetJobResponseBodyPods> Pods { get; set; }
         public class GetJobResponseBodyPods : TeaModel {
+            /// <summary>
+            /// <para>The pod running duration.</para>
+            /// </summary>
             [NameInMap("Duration")]
             [Validation(Required=false)]
             public double? Duration { get; set; }
 
             /// <summary>
-            /// <para>The time when the node was created (UTC).</para>
+            /// <para>The pod creation time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-12T14:36:01Z</para>
@@ -317,7 +323,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the node (UTC).</para>
+            /// <para>The node finish time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-12T15:36:05Z</para>
@@ -327,7 +333,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtFinishTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the node (UTC).</para>
+            /// <para>The node start time (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-12T14:36:01Z</para>
@@ -337,18 +343,21 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string GmtStartTime { get; set; }
 
             /// <summary>
-            /// <para>The historical nodes.</para>
+            /// <para>The historical pods.</para>
             /// </summary>
             [NameInMap("HistoryPods")]
             [Validation(Required=false)]
             public List<GetJobResponseBodyPodsHistoryPods> HistoryPods { get; set; }
             public class GetJobResponseBodyPodsHistoryPods : TeaModel {
+                /// <summary>
+                /// <para>The pod running duration.</para>
+                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public double? Duration { get; set; }
 
                 /// <summary>
-                /// <para>The time when the node was created (UTC).</para>
+                /// <para>The pod creation time (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-12T14:36:01Z</para>
@@ -358,7 +367,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string GmtCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the node (UTC).</para>
+                /// <para>The pod finish time (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-12T14:36:01Z</para>
@@ -368,7 +377,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string GmtFinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the node (UTC).</para>
+                /// <para>The pod start time (UTC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-12T14:36:01Z</para>
@@ -378,7 +387,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string GmtStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the node.</para>
+                /// <para>Pod IP。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.0.1.3</para>
@@ -387,12 +396,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
+                /// <summary>
+                /// <para>The node name.</para>
+                /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node.</para>
+                /// <para>Pod ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Worker</para>
@@ -401,12 +413,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 [Validation(Required=false)]
                 public string PodId { get; set; }
 
+                /// <summary>
+                /// <para>The IP addresses of the pod.</para>
+                /// </summary>
                 [NameInMap("PodIps")]
                 [Validation(Required=false)]
                 public List<PodNetworkInterface> PodIps { get; set; }
 
                 /// <summary>
-                /// <para>The UID of the node.</para>
+                /// <para>Pod UID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fe846462-af2c-4521-bd6f-96787a57591d</para>
@@ -416,7 +431,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string PodUid { get; set; }
 
                 /// <summary>
-                /// <para>The resource type of the node.</para>
+                /// <para>The pod resource usage type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -426,7 +441,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the node.</para>
+                /// <para>The pod status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Failed</para>
@@ -436,7 +451,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The sub-status of the node, such as its preemption status. Valid values:</para>
+                /// <para>The pod sub-status, such as preemption status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Normal</description></item>
                 /// <item><description>Evicted</description></item>
@@ -450,7 +465,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
                 public string SubStatus { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node.</para>
+                /// <para>The pod type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Worker</para>
@@ -462,7 +477,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             }
 
             /// <summary>
-            /// <para>The IP address of the node.</para>
+            /// <para>The network IP address of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0.1.2</para>
@@ -471,12 +486,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            /// <summary>
+            /// <para>The node name.</para>
+            /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The node ID. It can be used in the GetPodLogs and GetPodEvents operations to obtain the detailed logs and events of the node.</para>
+            /// <para>The node ID. You can use this ID with the GetPodLogs and GetPodEvents APIs to retrieve detailed logs and events for the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Worker</para>
@@ -485,12 +503,15 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string PodId { get; set; }
 
+            /// <summary>
+            /// <para>The IP addresses of the pod.</para>
+            /// </summary>
             [NameInMap("PodIps")]
             [Validation(Required=false)]
             public List<PodNetworkInterface> PodIps { get; set; }
 
             /// <summary>
-            /// <para>The UID of the node.</para>
+            /// <para>Pod UID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>fe846462-af2c-4521-bd6f-96787a57591d</para>
@@ -500,7 +521,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string PodUid { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the node.</para>
+            /// <para>The pod resource usage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -510,7 +531,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The status of the node. Valid values:</para>
+            /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Pending</description></item>
             /// <item><description>Running</description></item>
@@ -527,7 +548,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The sub-status of the node, such as its preemption status. Valid values:</para>
+            /// <para>The pod sub-status, such as preemption status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Normal</description></item>
             /// <item><description>Evicted</description></item>
@@ -541,7 +562,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SubStatus { get; set; }
 
             /// <summary>
-            /// <para>The node type, which corresponds to a specific JobSpec in JobSpecs of the CreateJob operation.</para>
+            /// <para>The node type, which corresponds to a JobSpec in the JobSpecs parameter of the CreateJob API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Worker</para>
@@ -563,7 +584,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The status detail code, which is a sub-status under the current status.</para>
+        /// <para>The status detail code, which categorizes the sub-status under the current status (Status).</para>
         /// 
         /// <b>Example:</b>
         /// <para>JobStoppedByUser</para>
@@ -573,7 +594,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ReasonCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the status detail code.</para>
+        /// <para>The detailed description of the status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Job is stopped by user.</para>
@@ -583,7 +604,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ReasonMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which can be used for troubleshooting.</para>
+        /// <para>The request ID, used for diagnostics and troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</para>
@@ -593,7 +614,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the job belongs.</para>
+        /// <para>The ID of the resource group in which the job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r******</para>
@@ -603,7 +624,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource level that the job uses.</para>
+        /// <para>The resource level used by the job at runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>L0</para>
@@ -613,7 +634,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ResourceLevel { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values: ECS, Lingjun, and ACS.</para>
+        /// <para>The resource type. Valid values: ECS, Lingjun, ACS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -622,72 +643,123 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The job restart records.</para>
+        /// </summary>
         [NameInMap("RestartRecord")]
         [Validation(Required=false)]
         public List<GetJobResponseBodyRestartRecord> RestartRecord { get; set; }
         public class GetJobResponseBodyRestartRecord : TeaModel {
+            /// <summary>
+            /// <para>The error message list.</para>
+            /// </summary>
             [NameInMap("DetailErrorInfoList")]
             [Validation(Required=false)]
             public List<GetJobResponseBodyRestartRecordDetailErrorInfoList> DetailErrorInfoList { get; set; }
             public class GetJobResponseBodyRestartRecordDetailErrorInfoList : TeaModel {
+                /// <summary>
+                /// <para>The job blacklist.</para>
+                /// </summary>
                 [NameInMap("AddJobLevelBlacklist")]
                 [Validation(Required=false)]
                 public bool? AddJobLevelBlacklist { get; set; }
 
+                /// <summary>
+                /// <para>The node blacklist.</para>
+                /// </summary>
                 [NameInMap("AddNodeToBlacklist")]
                 [Validation(Required=false)]
                 public bool? AddNodeToBlacklist { get; set; }
 
+                /// <summary>
+                /// <para>The detailed error message.</para>
+                /// </summary>
                 [NameInMap("DetailErrorMsg")]
                 [Validation(Required=false)]
                 public string DetailErrorMsg { get; set; }
 
+                /// <summary>
+                /// <para>The error code.</para>
+                /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
+                /// <summary>
+                /// <para>The error message.</para>
+                /// </summary>
                 [NameInMap("ErrorMsg")]
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
+                /// <summary>
+                /// <para>The error source.</para>
+                /// </summary>
                 [NameInMap("ErrorSource")]
                 [Validation(Required=false)]
                 public string ErrorSource { get; set; }
 
+                /// <summary>
+                /// <para>The node.</para>
+                /// </summary>
                 [NameInMap("Node")]
                 [Validation(Required=false)]
                 public string Node { get; set; }
 
+                /// <summary>
+                /// <para>The instance.</para>
+                /// </summary>
                 [NameInMap("Pod")]
                 [Validation(Required=false)]
                 public string Pod { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether a restart is triggered.</para>
+                /// </summary>
                 [NameInMap("TriggerRestart")]
                 [Validation(Required=false)]
                 public bool? TriggerRestart { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The job restart count.</para>
+            /// </summary>
             [NameInMap("JobRestartCount")]
             [Validation(Required=false)]
             public long? JobRestartCount { get; set; }
 
+            /// <summary>
+            /// <para>The phase in which the event occurred.</para>
+            /// </summary>
             [NameInMap("OccurPhase")]
             [Validation(Required=false)]
             public string OccurPhase { get; set; }
 
+            /// <summary>
+            /// <para>The time when the event occurred.</para>
+            /// </summary>
             [NameInMap("OccurTime")]
             [Validation(Required=false)]
             public string OccurTime { get; set; }
 
+            /// <summary>
+            /// <para>The reason.</para>
+            /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
+            /// <summary>
+            /// <para>The restart duration, in seconds.</para>
+            /// </summary>
             [NameInMap("RestartDurationInSec")]
             [Validation(Required=false)]
             public long? RestartDurationInSec { get; set; }
 
+            /// <summary>
+            /// <para>The reason for the restart failure.</para>
+            /// </summary>
             [NameInMap("RestartFailReason")]
             [Validation(Required=false)]
             public string RestartFailReason { get; set; }
@@ -696,10 +768,16 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string RestartLevelType { get; set; }
 
+            /// <summary>
+            /// <para>The restart status.</para>
+            /// </summary>
             [NameInMap("RestartStatus")]
             [Validation(Required=false)]
             public string RestartStatus { get; set; }
 
+            /// <summary>
+            /// <para>TriggerID</para>
+            /// </summary>
             [NameInMap("TriggerID")]
             [Validation(Required=false)]
             public string TriggerID { get; set; }
@@ -707,7 +785,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         }
 
         /// <summary>
-        /// <para>The number of retries and the maximum number of retries used by the job.</para>
+        /// <para>The number of retries used and the maximum number of retries for the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0/10</para>
@@ -729,18 +807,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string SchedulingStrategy { get; set; }
 
         /// <summary>
-        /// <para>The additional parameter configurations of the job.</para>
+        /// <para>The additional parameter settings of the job.</para>
         /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]
         public JobSettings Settings { get; set; }
 
         /// <summary>
-        /// <para>The status of the job. Valid values:</para>
+        /// <para>The job running status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Creating</description></item>
         /// <item><description>Queuing</description></item>
-        /// <item><description>Bidding (Only for Lingjun preemptible jobs)</description></item>
+        /// <item><description>Bidding (currently only for Lingjun spot jobs)</description></item>
         /// <item><description>EnvPreparing</description></item>
         /// <item><description>SanityChecking</description></item>
         /// <item><description>Running</description></item>
@@ -761,14 +839,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The status history.</para>
+        /// <para>The historical statuses.</para>
         /// </summary>
         [NameInMap("StatusHistory")]
         [Validation(Required=false)]
         public List<StatusTransitionItem> StatusHistory { get; set; }
 
         /// <summary>
-        /// <para>The sub-status of the job, such as its preemption status.</para>
+        /// <para>The job sub-status, such as preemption retry status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Restarting</para>
@@ -788,7 +866,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>The directory that contains requirements.txt.</para>
+        /// <para>The folder that contains the third-party library (requirements.txt) file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/code/</para>
@@ -798,14 +876,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string ThirdpartyLibDir { get; set; }
 
         /// <summary>
-        /// <para>The third-party Python libraries to be installed.</para>
+        /// <para>The list of third-party Python libraries to install.</para>
         /// </summary>
         [NameInMap("ThirdpartyLibs")]
         [Validation(Required=false)]
         public List<string> ThirdpartyLibs { get; set; }
 
         /// <summary>
-        /// <para>The command that is run to start each node.</para>
+        /// <para>The startup command for each node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python /root/code/mnist.py</para>
@@ -815,7 +893,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserCommand { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account who submitted the job.</para>
+        /// <para>The Alibaba Cloud UID of the job submitter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12*********</para>
@@ -825,29 +903,30 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The VPC of the user.</para>
+        /// <para>The user VPC.</para>
         /// </summary>
         [NameInMap("UserVpc")]
         [Validation(Required=false)]
         public GetJobResponseBodyUserVpc UserVpc { get; set; }
         public class GetJobResponseBodyUserVpc : TeaModel {
             /// <summary>
-            /// <para>The default router. This parameter is valid only for general-purpose computing resources. Valid values:</para>
-            /// <para>eth0: The default network interface is used to access the Internet through the public gateway. eth1: The user\&quot;s Elastic Network Interface is used to access the Internet through the private gateway.</para>
+            /// <para>The default routing. This parameter is valid only for general computing resources. Valid values:</para>
+            /// <para>eth0: uses the default network interface controller (NIC) to access external networks through the public gateway.
+            /// eth1: uses the user elastic network interfaces (ENIs) to access external networks through the private gateway.</para>
             /// </summary>
             [NameInMap("DefaultRoute")]
             [Validation(Required=false)]
             public string DefaultRoute { get; set; }
 
             /// <summary>
-            /// <para>The extended CIDR block. Example: 192.168.0.1/24.</para>
+            /// <para>The extended CIDR blocks, for example, 192.168.0.1/24.</para>
             /// </summary>
             [NameInMap("ExtendedCidrs")]
             [Validation(Required=false)]
             public List<string> ExtendedCidrs { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the user security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-abcdef****</para>
@@ -857,7 +936,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the user vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vs-abcdef****</para>
@@ -867,7 +946,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The ID of the user VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-abcdef****</para>

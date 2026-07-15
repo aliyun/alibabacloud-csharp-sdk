@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class SetJobTemplateDefaultVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>设置后的默认版本号</para>
+        /// <para>The current default version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public int? DefaultVersion { get; set; }
 
         /// <summary>
+        /// <para>The time the template was last modified.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +31,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>本次请求的 ID，用于诊断和答疑。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-xxxxxxx</para>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 {
     public class UpdateTensorboardRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the jobs. Valid values:</para>
+        /// <para>Visibility of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: The jobs are public in the workspace.</description></item>
-        /// <item><description>PRIVATE: The jobs are visible only to you and the administrator of the workspace.</description></item>
+        /// <item><description><para>PUBLIC: Visible to all users in this workspace.</para>
+        /// </description></item>
+        /// <item><description><para>PRIVATE: Visible only to you and administrators in this workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The maximum running time. Unit: minutes.</para>
+        /// <para>Maximum runtime. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>Workspace ID. For more information about how to get a workspace ID, see <a href="">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>380</para>
