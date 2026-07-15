@@ -59,6 +59,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string Hostname { get; set; }
 
+                [NameInMap("InsName")]
+                [Validation(Required=false)]
+                public string InsName { get; set; }
+
                 [NameInMap("LogLevelId")]
                 [Validation(Required=false)]
                 public long? LogLevelId { get; set; }
@@ -86,6 +90,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [NameInMap("Time")]
                 [Validation(Required=false)]
                 public string Time { get; set; }
+
+                [NameInMap("Timestamp")]
+                [Validation(Required=false)]
+                public long? Timestamp { get; set; }
 
             }
 

@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ConsumerGroup { get; set; }
 
+        [NameInMap("Downsample")]
+        [Validation(Required=false)]
+        public string Downsample { get; set; }
+
+        [NameInMap("EndStep")]
+        [Validation(Required=false)]
+        public long? EndStep { get; set; }
+
         /// <summary>
         /// <para>The end time for the query. Specify the time in UTC in the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>
         /// <para>This parameter is required.</para>
@@ -88,6 +96,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Key { get; set; }
 
+        [NameInMap("MaxPoints")]
+        [Validation(Required=false)]
+        public int? MaxPoints { get; set; }
+
         /// <summary>
         /// <para>The ID of the model service.</para>
         /// 
@@ -97,6 +109,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ModelService")]
         [Validation(Required=false)]
         public string ModelService { get; set; }
+
+        [NameInMap("StartStep")]
+        [Validation(Required=false)]
+        public long? StartStep { get; set; }
 
         /// <summary>
         /// <para>The start time for the query. Specify the time in UTC in the <c>yyyy-MM-ddTHH:mmZ</c> format.</para>

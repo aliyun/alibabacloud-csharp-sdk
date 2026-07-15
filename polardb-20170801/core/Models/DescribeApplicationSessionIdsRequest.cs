@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeApplicationLogsRequest : TeaModel {
+    public class DescribeApplicationSessionIdsRequest : TeaModel {
         /// <summary>
         /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
@@ -21,55 +21,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the subcomponent.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>pac-xxx</para>
-        /// </summary>
-        [NameInMap("ComponentName")]
-        [Validation(Required=false)]
-        public string ComponentName { get; set; }
-
-        /// <summary>
-        /// <para>The container name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>analytics</para>
-        /// </summary>
-        [NameInMap("ContainerName")]
-        [Validation(Required=false)]
-        public string ContainerName { get; set; }
-
-        /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format (UTC).</para>
+        /// <para>The end of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2026-03-25T02:11Z</para>
+        /// <para>2020-02-01T18:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
-
-        /// <summary>
-        /// <para>The search keyword. This parameter is used for PolarClaw instances.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Config</para>
-        /// </summary>
-        [NameInMap("Keyword")]
-        [Validation(Required=false)]
-        public string Keyword { get; set; }
-
-        /// <summary>
-        /// <para>The log level. This parameter is used for PolarClaw instances.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>WARN</para>
-        /// </summary>
-        [NameInMap("Level")]
-        [Validation(Required=false)]
-        public string Level { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -80,20 +40,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>30</b>. Valid values: 30 to 100.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -119,21 +79,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2026-03-25T01:57Z</para>
+        /// <para>2022-11-15T16:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        /// <summary>
-        /// <para>The log type. This parameter is used for PolarClaw instances. Currently, only gateway is supported.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>gateway</para>
-        /// </summary>
-        [NameInMap("Type")]
-        [Validation(Required=false)]
-        public string Type { get; set; }
 
     }
 

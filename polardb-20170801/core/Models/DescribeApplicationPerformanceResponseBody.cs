@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Interval")]
+        [Validation(Required=false)]
+        public string Interval { get; set; }
+
         /// <summary>
         /// <para>The performance metrics.</para>
         /// </summary>
@@ -74,6 +78,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     [Validation(Required=false)]
                     public List<DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue> PerformanceItemValue { get; set; }
                     public class DescribeApplicationPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue : TeaModel {
+                        [NameInMap("Step")]
+                        [Validation(Required=false)]
+                        public long? Step { get; set; }
+
                         [NameInMap("Timestamp")]
                         [Validation(Required=false)]
                         public long? Timestamp { get; set; }
