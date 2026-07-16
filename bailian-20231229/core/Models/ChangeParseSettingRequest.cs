@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ChangeParseSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID. This is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain the ID from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - File tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab by clicking the ID icon next to the category name.</para>
+        /// <para>The category ID, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain it by clicking the ID icon next to the category name on the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - Files tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,38 +21,23 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The file type, specified by its extension. Valid values:</para>
+        /// <para>The file type (extension). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>doc</para>
-        /// </description></item>
-        /// <item><description><para>docx</para>
-        /// </description></item>
-        /// <item><description><para>ppt</para>
-        /// </description></item>
-        /// <item><description><para>pptx</para>
-        /// </description></item>
-        /// <item><description><para>xls</para>
-        /// </description></item>
-        /// <item><description><para>xlsx</para>
-        /// </description></item>
-        /// <item><description><para>md</para>
-        /// </description></item>
-        /// <item><description><para>txt</para>
-        /// </description></item>
-        /// <item><description><para>pdf</para>
-        /// </description></item>
-        /// <item><description><para>png</para>
-        /// </description></item>
-        /// <item><description><para>jpg</para>
-        /// </description></item>
-        /// <item><description><para>jpeg</para>
-        /// </description></item>
-        /// <item><description><para>bmp</para>
-        /// </description></item>
-        /// <item><description><para>gif</para>
-        /// </description></item>
-        /// <item><description><para>html</para>
-        /// </description></item>
+        /// <item><description>doc</description></item>
+        /// <item><description>docx</description></item>
+        /// <item><description>ppt</description></item>
+        /// <item><description>pptx</description></item>
+        /// <item><description>xls</description></item>
+        /// <item><description>xlsx</description></item>
+        /// <item><description>md</description></item>
+        /// <item><description>txt</description></item>
+        /// <item><description>pdf</description></item>
+        /// <item><description>png</description></item>
+        /// <item><description>jpg</description></item>
+        /// <item><description>jpeg</description></item>
+        /// <item><description>bmp</description></item>
+        /// <item><description>gif</description></item>
+        /// <item><description>html</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,16 +49,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The identifier for the parser. Different parsers are suitable for different scenarios. For more information, refer to the knowledge base. Valid values:</para>
+        /// <para>The parser identifier code. Different parsers are applicable to different scenarios. For more information, see &quot;Knowledge Base&quot;. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DOCMIND (intelligent document parsing)</para>
-        /// </description></item>
-        /// <item><description><para>DOCMIND_DIGITAL (digital document parsing)</para>
-        /// </description></item>
-        /// <item><description><para>DOCMIND_LLM_VERSION (LLM-based document parsing)</para>
-        /// </description></item>
-        /// <item><description><para>DASH_QWEN_VL_PARSER (Qwen VL Parser)</para>
-        /// </description></item>
+        /// <item><description>DOCMIND (Intelligent Document Parsing)</description></item>
+        /// <item><description>DOCMIND_DIGITAL (Electronic Document Parsing)</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION (Large Model Document Parsing)</description></item>
+        /// <item><description>DASH_QWEN_VL_PARSER (Qwen VL Parsing)</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION_MEDIA (Audio/Video Parsing)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +67,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>The parser configuration. This parameter is required only when the <c>Parser</c> parameter is set to <c>DASH_QWEN_VL_PARSER</c>.</para>
+        /// <para>The parser configuration. This parameter is required only when the parser is set to Qwen VL Parsing.</para>
         /// </summary>
         [NameInMap("ParserConfig")]
         [Validation(Required=false)]
@@ -102,7 +84,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The prompt to use when calling the Qwen VL Parser.</para>
+            /// <para>The prompt used when calling Qwen VL Parsing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>#角色

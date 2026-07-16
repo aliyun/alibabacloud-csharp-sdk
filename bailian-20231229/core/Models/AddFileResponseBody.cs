@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned for the request.</para>
+        /// <para>The data field returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddFileResponseBodyData Data { get; set; }
         public class AddFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the file. Save this ID for use in subsequent API calls involving this file.</para>
+            /// <para>The file ID. Keep this value safe because it is used in all subsequent API operations related to this file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</para>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The parser that was used for the file. A possible value is:</para>
+            /// <para>The parser type used to parse the file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>DASHSCOPE_DOCMIND</c>: Alibaba Cloud Document Intelligence</description></item>
+            /// <item><description>DASHSCOPE_DOCMIND: Alibaba Cloud intelligent document parsing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -82,12 +82,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The call was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The call failed.</para>
-        /// </description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

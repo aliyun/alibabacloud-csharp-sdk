@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public ListIndexDocumentsResponseBodyData Data { get; set; }
         public class ListIndexDocumentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of files in the knowledge base, sorted by file import time in descending order (consistent with the console).</para>
+            /// <para>The list of files in the knowledge base, sorted by document import time in descending order (consistent with the console).</para>
             /// </summary>
             [NameInMap("Documents")]
             [Validation(Required=false)]
             public List<ListIndexDocumentsResponseBodyDataDocuments> Documents { get; set; }
             public class ListIndexDocumentsResponseBodyDataDocuments : TeaModel {
                 /// <summary>
-                /// <para>The error status code for the file import.</para>
+                /// <para>The error status code for file import.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110002</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The error message for the file import.</para>
+                /// <para>The error message for file import.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</para>
@@ -105,12 +105,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
                 /// <summary>
                 /// <para>&lt;props=&quot;china&quot;&gt;</para>
-                /// <para>For document search or audio/video search knowledge bases, this parameter specifies the category ID, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain the category ID by clicking the ID icon next to the category name on the Files tab of the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page.</para>
-                /// <para>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain the data table ID by clicking the ID icon next to the data table name on the Tables tab of the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page.</para>
+                /// <para>For document search or audio/video search knowledge bases, this parameter specifies the category ID, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain it by clicking the ID icon next to the category name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</para>
+                /// <para>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain it by clicking the ID icon next to the data table name on the Tables tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</para>
                 /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-                /// <para>For document search knowledge bases, this parameter specifies the category ID, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain the category ID by clicking the ID icon next to the category name on the Files tab of the <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> page.</para>
-                /// <para>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain the data table ID by clicking the ID icon next to the data table name on the Tables tab of the <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</para>
-                /// <para>.</para>
+                /// <para>For document search knowledge bases, this parameter specifies the category ID, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain it by clicking the ID icon next to the category name on the Files tab of <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>.</para>
+                /// <para>For data query or image Q&amp;A knowledge bases, this parameter specifies the data table ID. You can obtain it by clicking the ID icon next to the data table name on the Tables tab of <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cate_21a407a3372c4ba7aedc649709143f0cxxxxxxxx</para>
@@ -122,10 +121,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INSERT_ERROR: The file failed to be imported.</description></item>
-                /// <item><description>RUNNING: The file is being imported.</description></item>
-                /// <item><description>DELETED: The file has been deleted.</description></item>
-                /// <item><description>FINISH: The file was imported.</description></item>
+                /// <item><description>INSERT_ERROR: File import failed.</description></item>
+                /// <item><description>RUNNING: File import in progress.</description></item>
+                /// <item><description>DELETED: File deleted.</description></item>
+                /// <item><description>FINISH: File import succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,8 +211,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The operation was successful.</description></item>
-        /// <item><description>false: The operation failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

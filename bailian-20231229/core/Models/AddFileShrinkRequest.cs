@@ -12,13 +12,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>CategoryType</c> is set to <c>UNSTRUCTURED</c>, you must specify the ID of the category to which the file belongs. This is the <c>CategoryId</c> returned by the <b>AddCategory</b> API. You can also obtain the category ID by navigating to the \<em>\<em>Application data\</em>\</em> &gt; \<em>\<em>Files\</em>\</em> tab and clicking the ID icon next to the category name. You can specify <c>default</c> to use the default category.</para>
+        /// <item><description><para>When CategoryType is set to UNSTRUCTURED, set this parameter to the category ID of the uploaded file, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also go to <a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>, click the File tab, and then click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</para>
         /// </description></item>
-        /// <item><description><para>If <c>CategoryType</c> is set to <c>SESSION_FILE</c>, specify <c>default</c>.</para>
+        /// <item><description><para>When CategoryType is set to SESSION_FILE, set this parameter to &quot;default&quot;.</para>
         /// </description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>The ID of the category to which the file belongs. This is the <c>CategoryId</c> returned by the <b>AddCategory</b> API. You can also obtain the category ID by navigating to the \<em>\<em>Application data\</em>\</em> &gt; \<em>\<em>Files\</em>\</em> tab and clicking the ID icon next to the category name. You can specify <c>default</c> to use the default category.</para>
+        /// <para>Set this parameter to the category ID of the uploaded file, which is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also go to <a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>, click the File tab, and then click the ID icon next to the category name to obtain the category ID. You can set this parameter to default to use the system-created default category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,17 +29,15 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The type of category. This parameter is optional. Default value: <c>UNSTRUCTURED</c>. Valid values:</para>
+        /// <para>The category type. This parameter is optional. Default value: UNSTRUCTURED. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>UNSTRUCTURED</c>: A category used for building a knowledge base.</description></item>
+        /// <item><description>UNSTRUCTURED: category used for building knowledge base scenarios.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><c>SESSION_FILE</c>: A file used for interactions within an agent <a href="https://help.aliyun.com/zh/model-studio/user-guide/file-interaction">session</a>.<remarks>
-        /// <para>If you set this parameter to <c>SESSION_FILE</c>, you must also set the <c>CategoryType</c> parameter to <c>SESSION_FILE</c> when you call the ApplyFileUploadLease API.
-        /// Files of this type are valid only for the current session and expire after the session is closed, with a maximum validity of 7 days. These files are not intended for long-term storage.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>SESSION_FILE: file used for <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> in agent applications.
+        /// <note>When using <c>SESSION_FILE</c>, set the CategoryType parameter to <c>SESSION_FILE</c> when calling the ApplyFileUploadLease operation as well.</note>
+        /// <note>The file is valid only for the current user session. After the user closes the session, the file expires. The maximum validity period is 7 days. Long-term storage is not supported.</note></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryType { get; set; }
 
         /// <summary>
-        /// <para>The upload lease ID. This value maps to the <c>FileUploadLeaseId</c> returned by the <b>ApplyFileUploadLease</b> API.</para>
+        /// <para>The upload lease ID, which corresponds to the <c>FileUploadLeaseId</c> returned by the <b>ApplyFileUploadLease</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,14 +60,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The URL of the file. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document retrieval-based knowledge base</a>. When you interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent</a> in the Alibaba Cloud Model Studio console, this URL is returned with the retrieval results for the file in the <c>docUrl</c> field.</para>
+        /// <para>Specifies a URL for the file. The system records this URL when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the retrieval results of the file through the <c>docUrl</c> field.</para>
         /// <remarks>
-        /// <para>For this parameter to take effect, the <b>knowledge base</b> feature must be enabled for the agent, and the <b>display the source of the answer</b> option must be enabled.</para>
+        /// <para>The agent application must have <b>Knowledge Base</b> enabled and the <b>Show answer sources</b> feature turned on. Otherwise, this parameter does not take effect.</para>
         /// </remarks>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>The URL of the file. The system records this link when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document retrieval-based knowledge base</a>. When you interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent</a> in the Alibaba Cloud Model Studio console, this URL is returned with the retrieval results for the file in the <c>docUrl</c> field.</para>
+        /// <para>Specifies a URL for the file. The system records this URL when building a <a href="https://help.aliyun.com/document_detail/2807740.html">document search knowledge base</a>. When you use the Alibaba Cloud Model Studio console to interact with an <a href="https://help.aliyun.com/document_detail/2842749.html">agent application</a>, this URL is returned with the retrieval results of the file through the <c>docUrl</c> field.</para>
         /// <remarks>
-        /// <para>For this parameter to take effect, the <b>knowledge base</b> feature must be enabled for the agent, and the <b>display the source of the answer</b> option must be enabled.</para>
+        /// <para>The agent application must have <b>Knowledge Base</b> enabled and the <b>Show answer sources</b> feature turned on. Otherwise, this parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,30 +78,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OriginalFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The type of parser. Valid values:</para>
+        /// <para>The parser type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DOCMIND: Intelligent Document Parsing</para>
-        /// </description></item>
-        /// <item><description><para>DOCMIND_DIGITAL: Digital Document Parsing</para>
-        /// </description></item>
-        /// <item><description><para>DOCMIND_LLM_VERSION: Large Language Model-based Document Parsing</para>
-        /// </description></item>
-        /// <item><description><para>DASH_QWEN_VL_PARSER: Qwen-VL Parsing</para>
-        /// </description></item>
-        /// <item><description><para>DOCMIND_LLM_VERSION_MEDIA: Audio and Video Parsing</para>
-        /// </description></item>
-        /// <item><description><para>AUTO_SELECT: Automatic Parser Selection</para>
-        /// </description></item>
+        /// <item><description>DOCMIND: intelligent document parsing</description></item>
+        /// <item><description>DOCMIND_DIGITAL: electronic document parsing</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION: large language model document parsing</description></item>
+        /// <item><description>DASH_QWEN_VL_PARSER: Qwen VL parsing</description></item>
+        /// <item><description>DOCMIND_LLM_VERSION_MEDIA: audio and video parsing</description></item>
+        /// <item><description>AUTO_SELECT: automatic parser selection</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <remarks>
-        /// <para>The system uses the specified parser to parse the uploaded file. If you set this parameter to <c>AUTO_SELECT</c>, the parser configured for the category is used.</para>
-        /// </remarks>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <remarks>
-        /// <para>If <c>CategoryType</c> is set to <c>UNSTRUCTURED</c>, the parser parses your uploaded file based on the category’s data parsing settings.
-        /// If <c>CategoryType</c> is set to <c>SESSION_FILE</c>, the system uses a default parsing method that cannot be changed.</para>
-        /// </remarks>
+        /// <para>&lt;props=&quot;intl&quot;&gt;
+        /// <note>The uploaded file is parsed by using the currently specified parser. If you set this parameter to AUTO_SELECT, the parser configured for the category is used.</note></para>
+        /// <para>&lt;props=&quot;china&quot;&gt;
+        /// <note>When CategoryType is set to UNSTRUCTURED, the parser parses the uploaded file based on the data parsing settings of the current category.</note>
+        /// <note>When CategoryType is set to SESSION_FILE, the system parses the file content by using the default method, which cannot be changed.</note></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +102,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>The parser configuration. This parameter is required only if you set <c>Parser</c> to <c>DASH_QWEN_VL_PARSER</c>.</para>
+        /// <para>The parser configuration. This parameter is required only when the parser type is set to Qwen VL parsing.</para>
         /// </summary>
         [NameInMap("ParserConfig")]
         [Validation(Required=false)]
@@ -122,10 +110,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>A list of tags for the file. You can specify up to 100 tags. The total length of all tags cannot exceed 700 characters.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is not specified, no tags are added.</para>
-        /// </description></item>
+        /// <item><description>The list of tags associated with the file. You can specify up to 100 tags, and the total character length of all tags cannot exceed 700.</description></item>
+        /// <item><description>Default value: empty, which means no tags are set.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Tags")]

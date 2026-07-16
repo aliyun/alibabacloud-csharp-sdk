@@ -8,45 +8,32 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
-    public class ChangeParseSettingResponseBody : TeaModel {
+    public class AddChunkResponseBody : TeaModel {
         /// <summary>
         /// <para>The error status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>InvalidParameter</para>
+        /// <para>Index.InvalidParameter</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned when the request is successful.</para>
+        /// <para>The business data returned upon a successful request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public ChangeParseSettingResponseBodyData Data { get; set; }
-        public class ChangeParseSettingResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>Indicates whether the configuration was changed. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: The configuration was updated.</description></item>
-            /// <item><description>false: The configuration was not changed. The modification failed.</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
-            [NameInMap("ChangeResult")]
-            [Validation(Required=false)]
-            public bool? ChangeResult { get; set; }
-
-        }
+        public bool? Data { get; set; }
 
         /// <summary>
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>User not authorized to operate on the specified resource.</para>
+        /// <para>Required parameter(%s) missing or invalid, please check the request parameters.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,7 +43,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7BA8ADD9-53D6-53F0-918F-A1E776AD230E</para>
+        /// <para>35A267BF-xxxx-54DB-8394-AA3B0742D833</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -73,11 +60,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Successful.</description></item>
-        /// <item><description>false: Failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

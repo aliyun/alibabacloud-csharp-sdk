@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndexDocumentsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the returned file list by file name (without the file extension). Default value: empty, which means the results are not filtered by file name.</para>
+        /// <para>Filters the returned file list by file name (without the file extension). Default value: empty, which means no filtering by file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product-overview</para>
@@ -22,12 +22,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Filters the returned file list by file import status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INSERT_ERROR: The file failed to be imported.</description></item>
-        /// <item><description>RUNNING: The file is being imported.</description></item>
-        /// <item><description>DELETED: The file has been deleted.</description></item>
-        /// <item><description>FINISH: The file was imported.</description></item>
+        /// <item><description>INSERT_ERROR: failed to import to the index.</description></item>
+        /// <item><description>RUNNING: index building in progress.</description></item>
+        /// <item><description>DELETED: deleted.</description></item>
+        /// <item><description>FINISH: index building succeeded.</description></item>
+        /// <item><description>PARSE_FAILED: parsing failed.</description></item>
+        /// <item><description>DOC_PARSING: parsing in progress.</description></item>
         /// </list>
-        /// <para>Default value: empty, which means the results are not filtered by file import status.</para>
+        /// <para>Default value: empty, which means no filtering by file import status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISH</para>
@@ -39,8 +41,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <c>DocumentName</c> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Fuzzy matching is used to filter the returned file list by file name.</description></item>
-        /// <item><description>false: Exact matching is used to filter the returned file list by file name.</description></item>
+        /// <item><description>true: Performs fuzzy matching on the returned file list based on the file name.</description></item>
+        /// <item><description>false: Performs exact matching on the returned file list based on the file name.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of files to display per page in a paging query. No maximum limit.
+        /// <para>The number of files to display per page in a paged query. No maximum limit.
         /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>

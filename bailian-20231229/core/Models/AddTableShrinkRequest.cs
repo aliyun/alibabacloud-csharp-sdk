@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string TableColumnsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The table description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>table description</para>
+        /// </summary>
         [NameInMap("TableDesc")]
         [Validation(Required=false)]
         public string TableDesc { get; set; }

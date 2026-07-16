@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.Forbidden</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public List<GetIndexJobStatusResponseBodyDataDocuments> Documents { get; set; }
             public class GetIndexJobStatusResponseBodyDataDocuments : TeaModel {
                 /// <summary>
-                /// <para>The error code.</para>
+                /// <para>The error status code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Index.Document.ChunkError</para>
@@ -80,10 +80,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INSERT_ERROR: The file import failed.</description></item>
-                /// <item><description>RUNNING: The file is being imported.</description></item>
-                /// <item><description>DELETED: The file has been deleted.</description></item>
-                /// <item><description>FINISH: The file was imported.</description></item>
+                /// <item><description>INSERT_ERROR: Failed to import into the index.</description></item>
+                /// <item><description>RUNNING: Index building in progress.</description></item>
+                /// <item><description>DELETED: Deleted.</description></item>
+                /// <item><description>FINISH: Index building succeeded.</description></item>
+                /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
+                /// <item><description>DOC_PARSING: Parsing in progress.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,10 +110,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// <summary>
             /// <para>The current status of the knowledge base job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMPLETED: The job succeeded.</description></item>
-            /// <item><description>FAILED: The job failed.</description></item>
-            /// <item><description>RUNNING: The job is running.</description></item>
-            /// <item><description>PENDING: The job is pending execution.</description></item>
+            /// <item><description>COMPLETED: Execution succeeded.</description></item>
+            /// <item><description>FAILED: Execution failed.</description></item>
+            /// <item><description>RUNNING: Execution in progress.</description></item>
+            /// <item><description>PENDING: Waiting for execution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned by the operation.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -156,8 +158,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The operation was successful.</description></item>
-        /// <item><description>false: The operation failed.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

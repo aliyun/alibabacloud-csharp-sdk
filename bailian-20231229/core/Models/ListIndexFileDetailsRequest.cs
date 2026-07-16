@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndexFileDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the documents to return. If you do not specify this parameter, the results are not filtered by name.</para>
+        /// <para>Filters the returned file details list by file name. Default value: empty, which means no filtering by file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>翻译平台运维文档</para>
@@ -20,18 +20,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string DocumentName { get; set; }
 
         /// <summary>
-        /// <para>The import status of the documents to return. Valid values:</para>
+        /// <para>Filters the returned file list by file import status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>INSERT_ERROR: The document failed to be imported.</para>
-        /// </description></item>
-        /// <item><description><para>RUNNING: The document is being imported.</para>
-        /// </description></item>
-        /// <item><description><para>DELETED: The document has been deleted.</para>
-        /// </description></item>
-        /// <item><description><para>FINISH: The document was imported successfully.</para>
-        /// </description></item>
+        /// <item><description>INSERT_ERROR: Failed to import to the index.</description></item>
+        /// <item><description>RUNNING: Index building in progress.</description></item>
+        /// <item><description>DELETED: Deleted.</description></item>
+        /// <item><description>FINISH: Index building succeeded.</description></item>
+        /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
+        /// <item><description>DOC_PARSING: Parsing in progress.</description></item>
         /// </list>
-        /// <para>If you do not specify this parameter, the results are not filtered by import status.</para>
+        /// <para>Default value: empty, which means no filtering by file import status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISH</para>
@@ -41,12 +39,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string DocumentStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a fuzzy search based on the document name. This parameter is used with the <c>DocumentName</c> parameter. Valid values:</para>
+        /// <para>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <c>DocumentName</c> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Performs a fuzzy search based on the document name.</para>
-        /// </description></item>
-        /// <item><description><para>false: Performs an exact match based on the document name.</para>
-        /// </description></item>
+        /// <item><description>true: Performs fuzzy matching on the returned file list based on the file name.</description></item>
+        /// <item><description>false: Performs exact matching on the returned file list based on the file name.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -58,7 +54,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string EnableNameLike { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge base. This is the value of the <c>Data.Id</c> parameter returned by the <b>CreateIndex</b> operation.</para>
+        /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79c0alxxxx</para>
@@ -68,7 +64,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value starts from 1. Default value: 1.</para>
+        /// <para>The page number to query. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,7 +74,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of documents to return on each page. Maximum value: 10.</para>
+        /// <para>The number of files to display per page for paging. Maximum value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

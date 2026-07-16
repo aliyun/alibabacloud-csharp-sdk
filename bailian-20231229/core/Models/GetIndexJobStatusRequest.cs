@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The <b>SubmitIndexJob</b> and <b>SubmitIndexAddDocumentsJob</b> operations support batch file import. This operation returns the overall knowledge base job status <c>Status</c> and the import status of each file <c>Document.Status</c>. If there are many files, use the <c>PageNumber</c> parameter for paging. Minimum value: 1. Default value: 1.</para>
+        /// <para>Both the <b>SubmitIndexJob</b> and <b>SubmitIndexAddDocumentsJob</b> operations support batch file import. This operation returns the overall status of the knowledge base job (<c>Status</c>) and the import status of each file (<c>Document.Status</c>). If there are many files, use the <c>PageNumber</c> parameter for paged query. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

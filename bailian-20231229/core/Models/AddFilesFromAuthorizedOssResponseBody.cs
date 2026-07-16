@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class AddFilesFromAuthorizedOssResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Business data field returned by the operation.</para>
+        /// <para>The data field returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public List<AddFilesFromAuthorizedOssResponseBodyDataAddFileResultList> AddFileResultList { get; set; }
             public class AddFilesFromAuthorizedOssResponseBodyDataAddFileResultList : TeaModel {
                 /// <summary>
-                /// <para>The file ID. Please keep this value safe, as it will be used for all subsequent API operations related to this file.</para>
+                /// <para>The file ID. Keep this value safe because it is required for all subsequent API operations related to this file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file_809f469a59ac449586ec692576xxxxx_102248XXX</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string FileId { get; set; }
 
                 /// <summary>
-                /// <para>Error information returned when file import fails.</para>
+                /// <para>The error message returned when the file import fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>size too large</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>The key name (Key) of the imported file in the OSS Bucket.</para>
+                /// <para>The key of the imported file in the OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root/path/this_is_temp_xxxx.pdf</para>
@@ -64,13 +64,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string OssKey { get; set; }
 
                 /// <summary>
-                /// <para>File import status. Possible values:</para>
+                /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SUCCESS: Import (application data) completed.</description></item>
-                /// <item><description>FAILED: Import (application data) failed.</description></item>
+                /// <item><description>SUCCESS: The import to application data is complete.</description></item>
+                /// <item><description>FAILED: The import to application data failed.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>Only files with the SUCCESS status can be used to create or update knowledge bases.</para>
+                /// <para>Only files with a SUCCESS status can be used to create or update a knowledge base.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>Error information.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cant find out category for category_id param.</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17204B98-xxxx-4F9A-8464-2446A84821CA</para>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation call succeeded. Possible values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Success.</description></item>
-        /// <item><description>false: Failure.</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

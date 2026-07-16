@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The list of file IDs to query. A maximum of 20 files can be queried per request.</para>
+        /// <para>The list of file IDs to query. A maximum of 20 files can be queried at a time.</para>
         /// </summary>
         [NameInMap("FileIds")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>The number of entries per page for paging. Valid values: 1 to 200.</para>
         /// <para>Default value:
-        /// If the value is not set or is less than 1, the default value is 20. If the value is greater than 200, the default value is 200.</para>
+        /// If no value is set or the value is less than 1, the default value is 20. If the value is set to greater than 200, the default value is 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndexFileDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data field returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListIndexFileDetailsResponseBodyData Data { get; set; }
         public class ListIndexFileDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of documents in the knowledge base. The documents are sorted by import time in descending order. This order is the same as the order in the console.</para>
+            /// <para>The list of files in the knowledge base, sorted by file import time in descending order (consistent with the console).</para>
             /// </summary>
             [NameInMap("Documents")]
             [Validation(Required=false)]
             public List<ListIndexFileDetailsResponseBodyDataDocuments> Documents { get; set; }
             public class ListIndexFileDetailsResponseBodyDataDocuments : TeaModel {
                 /// <summary>
-                /// <para>The custom chunking method.</para>
+                /// <para>The custom chunking mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DashSplitter</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string ChunkMode { get; set; }
 
                 /// <summary>
-                /// <para>The length of a chunk, in characters.</para>
+                /// <para>The segment length, which is the number of characters in each text chunk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string ChunkSize { get; set; }
 
                 /// <summary>
-                /// <para>The error code that is returned if the document fails to be imported.</para>
+                /// <para>The error status code for file import.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110002</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The format of the document. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</para>
+                /// <para>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pdf</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string DocumentType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the table headers of Excel files in an unstructured knowledge base are concatenated.</para>
+                /// <para>Indicates whether Excel file headers support concatenation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string EnableHeaders { get; set; }
 
                 /// <summary>
-                /// <para>The time when the document was imported. This value is a Unix timestamp.</para>
+                /// <para>The time when the file was imported to the knowledge base, in UNIX timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1744856423000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The document ID.</para>
+                /// <para>The file ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>doc_c134aa2073204a5d936d870bf960f56axxxxxxxx</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The error message that is returned if the document fails to be imported.</para>
+                /// <para>The error message for file import.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The name of the document.</para>
+                /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>翻译平台运维文档</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The overlap length of chunks.</para>
+                /// <para>The overlap length between segments.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string OverlapSize { get; set; }
 
                 /// <summary>
-                /// <para>The size of the document, in bytes.</para>
+                /// <para>The file size, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>996764</para>
@@ -154,16 +154,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string SourceId { get; set; }
 
                 /// <summary>
-                /// <para>The import status of the document. Valid values:</para>
+                /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>INSERT_ERROR: The document failed to be imported.</para>
-                /// </description></item>
-                /// <item><description><para>RUNNING: The document is being imported.</para>
-                /// </description></item>
-                /// <item><description><para>DELETED: The document has been deleted.</para>
-                /// </description></item>
-                /// <item><description><para>FINISH: The document was imported successfully.</para>
-                /// </description></item>
+                /// <item><description>INSERT_ERROR: File import failed.</description></item>
+                /// <item><description>RUNNING: File import in progress.</description></item>
+                /// <item><description>DELETED: File deleted.</description></item>
+                /// <item><description>FINISH: File import succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -206,7 +202,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The returned number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -216,7 +212,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2437</para>
@@ -238,7 +234,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35A267BF-xxxx-54DB-8394-AA3B0742D833</para>
@@ -248,7 +244,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -258,12 +254,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

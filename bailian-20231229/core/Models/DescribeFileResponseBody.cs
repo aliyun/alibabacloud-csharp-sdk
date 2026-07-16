@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field of the operation.</para>
+        /// <para>The data field returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The file type (extension). Valid values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</para>
+            /// <para>The file type (extension). Possible values: pdf, docx, doc, txt, md, pptx, ppt, xlsx, xls, html, png, jpg, jpeg, bmp, and gif.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pdf</para>
@@ -76,6 +76,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public string FileType { get; set; }
 
+            /// <summary>
+            /// <para>The reason for the parsing failure.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Error Message</para>
+            /// </summary>
             [NameInMap("ParseErrorMessage")]
             [Validation(Required=false)]
             public string ParseErrorMessage { get; set; }
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ParseResultDownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The parser type used to parse the file. Valid values:</para>
+            /// <para>The parser type used to parse the file. Possible values:</para>
             /// <list type="bullet">
             /// <item><description>DASHSCOPE_DOCMIND: the default document parser.</description></item>
             /// </list>
@@ -109,34 +115,34 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
             /// <summary>
             /// <para>&lt;props=&quot;china&quot;&gt;</para>
-            /// <para>For files used in document-based knowledge bases (type: UNSTRUCTURED), valid values:</para>
+            /// <para>For files used in document-based knowledge bases (type: UNSTRUCTURED), possible values:</para>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-            /// <para>For files used in unstructured knowledge bases (type: UNSTRUCTURED), valid values:</para>
+            /// <para>For files used in unstructured knowledge bases (type: UNSTRUCTURED), possible values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: pending parsing.</description></item>
-            /// <item><description>IN_PARSE_QUEUE: queued for parsing.</description></item>
-            /// <item><description>PARSING: being parsed.</description></item>
-            /// <item><description>PARSE_SUCCESS: parsing completed.
+            /// <item><description>INIT: Pending parsing.</description></item>
+            /// <item><description>IN_PARSE_QUEUE: Queued for parsing.</description></item>
+            /// <item><description>PARSING: Being parsed.</description></item>
+            /// <item><description>PARSE_SUCCESS: Parsing completed.
             /// <note>The document can be imported into a knowledge base only after the status changes to PARSE_SUCCESS.</note></description></item>
-            /// <item><description>PARSE_FAILED: parsing failed.</description></item>
+            /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
             /// </list>
             /// <para>&lt;props=&quot;china&quot;&gt;
-            /// For files used in agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> (type: SESSION_FILE), valid values:</para>
+            /// For files used in agent application <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/file-interaction">session interaction</a> (type: SESSION_FILE), possible values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: pending parsing.</description></item>
-            /// <item><description>IN_PARSE_QUEUE: queued for parsing.</description></item>
-            /// <item><description>PARSING: being parsed.</description></item>
-            /// <item><description>PARSE_SUCCESS: parsing completed.</description></item>
-            /// <item><description>PARSE_FAILED: parsing failed.</description></item>
-            /// <item><description>SAFE_CHECKING: security check in progress.</description></item>
-            /// <item><description>SAFE_CHECK_FAILED: security check failed.</description></item>
-            /// <item><description>INDEX_BUILDING: index being built.</description></item>
-            /// <item><description>INDEX_BUILD_SUCCESS: index built.</description></item>
-            /// <item><description>INDEX_BUILDING_FAILED: index building failed.</description></item>
-            /// <item><description>INDEX_DELETED: file index deleted.</description></item>
-            /// <item><description>FILE_IS_READY: file is ready.
-            /// <note>Q&amp;A can proceed only after the status changes to FILE_IS_READY.</note></description></item>
-            /// <item><description>FILE_EXPIRED: file expired.
+            /// <item><description>INIT: Pending parsing.</description></item>
+            /// <item><description>IN_PARSE_QUEUE: Queued for parsing.</description></item>
+            /// <item><description>PARSING: Being parsed.</description></item>
+            /// <item><description>PARSE_SUCCESS: Parsing completed.</description></item>
+            /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
+            /// <item><description>SAFE_CHECKING: Safety check in progress.</description></item>
+            /// <item><description>SAFE_CHECK_FAILED: Safety check failed.</description></item>
+            /// <item><description>INDEX_BUILDING: Index being built.</description></item>
+            /// <item><description>INDEX_BUILD_SUCCESS: Index built.</description></item>
+            /// <item><description>INDEX_BUILDING_FAILED: Index building failed.</description></item>
+            /// <item><description>INDEX_DELETED: File index deleted.</description></item>
+            /// <item><description>FILE_IS_READY: File is ready.
+            /// <note>Q&amp;A is available only after the status changes to FILE_IS_READY.</note></description></item>
+            /// <item><description>FILE_EXPIRED: File expired.
             /// <note>The file is valid only for the current user session. After the user closes the session, the file expires (maximum validity period: 7 days). Long-term retention is not supported.</note>
             /// .</description></item>
             /// </list>

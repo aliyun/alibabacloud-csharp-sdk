@@ -83,6 +83,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public string FileType { get; set; }
 
+                /// <summary>
+                /// <para>The reason for parsing failure.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Error Message</para>
+                /// </summary>
                 [NameInMap("ParseErrorMessage")]
                 [Validation(Required=false)]
                 public string ParseErrorMessage { get; set; }
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The file parsing status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INIT: Initialization state, waiting to be scheduled.</description></item>
+                /// <item><description>INIT: Initialization state. Waiting to be scheduled.</description></item>
                 /// <item><description>PARSING: Parsing in progress.</description></item>
                 /// <item><description>PARSE_SUCCESS: Parsing completed.</description></item>
                 /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
