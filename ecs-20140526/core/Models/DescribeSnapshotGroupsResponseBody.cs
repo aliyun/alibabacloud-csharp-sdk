@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token used to start the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// <remarks>
-        /// <para>If the return value is empty, no more data exists.</para>
+        /// <para>If this parameter is empty, no more results are available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3F9A4CC4-362F-469A-B9EF-B3204EF8AA3A</para>

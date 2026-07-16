@@ -269,6 +269,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 }
 
+                [NameInMap("Usable")]
+                [Validation(Required=false)]
+                public bool? Usable { get; set; }
+
                 [NameInMap("Usage")]
                 [Validation(Required=false)]
                 public string Usage { get; set; }

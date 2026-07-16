@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiskDefaultKMSKeyIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the KMS key.</para>
+        /// <para>The KMS key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>

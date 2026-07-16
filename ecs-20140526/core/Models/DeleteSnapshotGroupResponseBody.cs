@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EDE885A-FDC1-4FAE-BC44-6EACAEA6CC6E</para>

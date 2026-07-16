@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> AdditionalAttributes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-j6ca469urv8ei629****</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. Set the value to the NextToken value that is returned from the last call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of snapshot-consistent group N. Valid values of N: 1 to 10.</para>
+        /// <para>The ID of the snapshot-consistent group. Valid values of N: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ssg-j6ciyh3k52qp7ovm****</para>
@@ -109,13 +109,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> SnapshotGroupId { get; set; }
 
         /// <summary>
-        /// <para>The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:</para>
+        /// <para>The status of the snapshot-consistent group. Valid values of N: 1 to 3. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>progressing: The snapshot-consistent group is being created.</para>
         /// </description></item>
         /// <item><description><para>accomplished: The snapshot-consistent group is created.</para>
         /// </description></item>
-        /// <item><description><para>failed: The snapshot-consistent group fails to be created.</para>
+        /// <item><description><para>failed: The snapshot-consistent group failed to be created.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the snapshot-consistent group.</para>
+        /// <para>The tag key-value pairs of the snapshot-consistent group.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSnapshotGroupsRequestTag> Tag { get; set; }
         public class DescribeSnapshotGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key of the snapshot-consistent group. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value of the snapshot-consistent group. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class CopySnapshotRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is currently in invitational preview and unavailable for public use.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Arn")]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination region to which to copy the source snapshot.</para>
+        /// <para>The ID of the destination region to which to copy the snapshot.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationRegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>Default value: null.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationSnapshotDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
-        /// <para>This parameter is left empty by default.</para>
+        /// <para>The name of the new snapshot. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with http:// or https://. The name can contain letters, digits, and Unicode characters that are categorized under the letter classification. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>Default value: null.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,12 +114,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationStorageLocationArn { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to encrypt the new snapshot. Valid values:</para>
+        /// <para>Specifies whether to encrypt the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: encrypts the cloud disk.</description></item>
+        /// <item><description>false: does not encrypt the cloud disk.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -131,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.</para>
+        /// <para>The customer master key (CMK) in the destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source snapshot. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the source snapshot. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -174,8 +172,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the new snapshot. Unit: days. The new snapshot is automatically released when its retention period ends. Valid values: 1 to 65536.</para>
-        /// <para>This parameter is empty by default, which indicates that the snapshot is not automatically released.</para>
+        /// <para>The retention period of the new snapshot, in days. The snapshot undergoes automatic release when the retention period expires. Valid values: 1 to 65536.</para>
+        /// <para>Default value: null, which indicates that the snapshot does not undergo automatic release.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -196,14 +194,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The tag key and value of the new snapshot.</para>
+        /// <para>The tag information of the new snapshot.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CopySnapshotRequestTag> Tag { get; set; }
         public class CopySnapshotRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http\:// or https\://.</para>
+            /// <para>The tag key of the new snapshot. Once specified, the tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -213,7 +211,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http\:// or https\://.</para>
+            /// <para>The tag value of the new snapshot. Once specified, the tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

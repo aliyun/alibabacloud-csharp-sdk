@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CancelImagePipelineExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the build task.</para>
+        /// <para>The ID of the image building task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

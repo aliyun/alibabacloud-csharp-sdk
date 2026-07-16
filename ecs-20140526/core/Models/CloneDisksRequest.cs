@@ -86,16 +86,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the new disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_essd: standard SSD.</description></item>
+        /// <item><description>cloud_essd: enterprise SSD.</description></item>
         /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
         /// <item><description>cloud_essd_entry: ESSD Entry disk.</description></item>
-        /// <item><description>cloud_regional_disk_auto: regional Standard SSD (ESSD).</description></item>
+        /// <item><description>cloud_regional_disk_auto: regional ESSD.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Disk category restrictions for disk cloning:</para>
         /// <list type="bullet">
-        /// <item><description>Non-regional disks can only be cloned to non-regional disk types.</description></item>
-        /// <item><description>Regional disks can only be cloned to regional disk types.</description></item>
+        /// <item><description>Non-regional disks can be cloned only to non-regional types.</description></item>
+        /// <item><description>Regional disks can be cloned only to regional types.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -121,8 +121,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: sends a check request without querying the filing status. The system checks whether your AccessKey pair is valid, whether RAM user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false (default): sends a normal request. After the check passes, a 2XX HTTP status code is returned and the filing status is queried.</description></item>
+        /// <item><description>true: sends a check request without querying the filing status. The check items include whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user is granted the required authorization, and whether the required parameters are specified. If the check fails, the corresponding error message is returned. If the check succeeds, the DryRunOperation error code is returned.</description></item>
+        /// <item><description>false (default): sends a Normal request. After the check succeeds, a 2XX HTTP status code is returned and the filing status is directly queried.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the multi-attach attribute for the new disk. Settings for this parameter. Valid values:</para>
+        /// <para>Specifies whether to enable the multi-attach attribute for the new disk. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Disabled: disables the multi-attach attribute.</description></item>
-        /// <item><description>Enabled: enables the multi-attach attribute. Only standard SSDs support the value <c>Enabled</c>.</description></item>
+        /// <item><description>Enabled: enables the multi-attach attribute. Currently, only enterprise SSDs support Settings to <c>Enabled</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the enterprise SSD to create. Settings for this parameter vary based on the standard SSD type. Valid values:</para>
+        /// <para>The performance level of the standard SSD. Settings for this parameter depend on the disk category. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</description></item>
         /// <item><description>PL1: a single disk can deliver up to 50,000 random read/write IOPS.</description></item>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The capacity of the new disk. Unit: GiB. You must specify a value for this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_essd: the valid value range varies based on the performance level.<list type="bullet">
+        /// <item><description>cloud_essd: The valid values depend on the performance level.<list type="bullet">
         /// <item><description>PL0: 1 to 65,536.</description></item>
         /// <item><description>PL1: 20 to 65,536.</description></item>
         /// <item><description>PL2: 461 to 65,536.</description></item>

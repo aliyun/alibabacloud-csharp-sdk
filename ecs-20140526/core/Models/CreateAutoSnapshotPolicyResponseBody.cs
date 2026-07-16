@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateAutoSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The automatic snapshot policy ID.</para>
+        /// <para>The ID of the automatic snapshot policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-bp12m37ccmxvbmi5****</para>

@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiskEncryptionByDefaultStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether account-level default encryption of EBS resources is enabled in the region. Valid values:</para>
+        /// <para>Indicates whether account-level default encryption is enabled for block storage.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
+        /// <item><description><para>true: Enabled.</para>
         /// </description></item>
-        /// <item><description><para>false</para>
+        /// <item><description><para>false: Not enabled.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
