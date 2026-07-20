@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class CreateServiceLinkedRoleRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -17,6 +21,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public CreateServiceLinkedRoleRequestSdkRequest SdkRequest { get; set; }
         public class CreateServiceLinkedRoleRequestSdkRequest : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AliyunServiceRoleForWebsiteBuildPublish</para>
+            /// </summary>
             [NameInMap("ServiceLinkedRole")]
             [Validation(Required=false)]
             public string ServiceLinkedRole { get; set; }

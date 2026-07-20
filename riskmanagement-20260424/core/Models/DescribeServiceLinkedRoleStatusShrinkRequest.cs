@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class DescribeServiceLinkedRoleStatusShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

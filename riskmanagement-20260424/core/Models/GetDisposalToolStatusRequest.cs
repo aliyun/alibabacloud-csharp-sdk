@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetDisposalToolStatusRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DisposalTool</para>
+        /// </summary>
         [NameInMap("AuthType")]
         [Validation(Required=false)]
         public string AuthType { get; set; }

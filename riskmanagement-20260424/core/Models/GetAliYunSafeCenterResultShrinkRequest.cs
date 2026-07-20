@@ -39,6 +39,9 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ListInstanceStatus</para>
         /// </summary>
         [NameInMap("InterfaceCode")]
         [Validation(Required=false)]
@@ -48,6 +51,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public string ListInstancesRequestShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-guangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

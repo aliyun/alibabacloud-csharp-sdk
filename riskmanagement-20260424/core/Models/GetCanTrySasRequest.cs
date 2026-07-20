@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
     public class GetCanTrySasRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-guangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -17,10 +21,18 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         [Validation(Required=false)]
         public GetCanTrySasRequestSdkRequest SdkRequest { get; set; }
         public class GetCanTrySasRequestSdkRequest : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("FromEcs")]
             [Validation(Required=false)]
             public bool? FromEcs { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>zh</para>
+            /// </summary>
             [NameInMap("Lang")]
             [Validation(Required=false)]
             public string Lang { get; set; }
