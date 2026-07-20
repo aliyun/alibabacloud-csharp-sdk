@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListAssetCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of resource statistics.</para>
+        /// <para>The resource statistics list.</para>
         /// </summary>
         [NameInMap("AssetCountList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? CertificateCount { get; set; }
 
             /// <summary>
-            /// <para>The date when the statistics were collected.</para>
+            /// <para>The statistics date. The value is a UNIX timestamp accurate to seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1767680115423</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The current page number. The default value is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. This parameter is not returned if you do not specify \<c>ShowSize\\</c> in the request.</para>
+        /// <para>The number of entries displayed on each page for paging. This parameter is not returned if ShowSize is not specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

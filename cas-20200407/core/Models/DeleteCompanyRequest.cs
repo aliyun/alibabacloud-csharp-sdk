@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class RefundInstanceRequest : TeaModel {
+    public class DeleteCompanyRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The company ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cas-ivauto-hqito6</para>
+        /// <para>51001</para>
         /// </summary>
-        [NameInMap("InstanceId")]
+        [NameInMap("CompanyId")]
         [Validation(Required=false)]
-        public string InstanceId { get; set; }
+        public long? CompanyId { get; set; }
 
     }
 

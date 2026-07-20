@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class ListContactResponseBody : TeaModel {
         /// <summary>
-        /// <para>The contacts.</para>
+        /// <para>The contact list.</para>
         /// </summary>
         [NameInMap("ContactList")]
         [Validation(Required=false)]
         public List<ListContactResponseBodyContactList> ContactList { get; set; }
         public class ListContactResponseBodyContactList : TeaModel {
             /// <summary>
-            /// <para>The ID of the contact.</para>
+            /// <para>The contact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>519580</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the email address passed the verification.</para>
+            /// <para>Indicates whether the email address is verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? EmailStatus { get; set; }
 
             /// <summary>
-            /// <para>The phone number.</para>
+            /// <para>The mobile phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>139****8888</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Mobile { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the phone number was verified.</para>
+            /// <para>Indicates whether the mobile phone number is verified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? MobileStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the contact.</para>
+            /// <para>The contact name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>John</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The webhook URL of the chatbot.</para>
+            /// <para>The webhook URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;<a href="https://open.feishu.cn/open-apis/bot/v2/hook/XXX%5C%5C%22,%5C%5C%22https://oapi.dingtalk.com/robot/send?access_token=XXX%5C%5C%22,%5C%5C%22https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX%5C%5C%22%5D">https://open.feishu.cn/open-apis/bot/v2/hook/XXX\\&quot;,\\&quot;https://oapi.dingtalk.com/robot/send?access_token=XXX\\&quot;,\\&quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXX\\&quot;]</a></para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The current page number in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The keyword used in the fuzzy search.</para>
+        /// <para>The fuzzy match keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>186</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of certificates per page. Default value: <b>20</b>.</para>
+        /// <para>The number of certificates displayed per page in a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of search results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>The status of the certificate. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>issued</b>: issued.</description></item>
-        /// <item><description><b>revoked</b>: revoked.</description></item>
-        /// <item><description><b>willExpire</b>: about to expire.</description></item>
-        /// <item><description><b>expired</b>: expired.</description></item>
+        /// <item><description><b>issued</b>: Issued.</description></item>
+        /// <item><description><b>revoked</b>: Revoked.</description></item>
+        /// <item><description><b>willExpire</b>: About to expire.</description></item>
+        /// <item><description><b>expired</b>: Expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</para>
+        /// <para>The instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BUY: official certificate.</description></item>
+        /// <item><description>TEST: test certificate.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>

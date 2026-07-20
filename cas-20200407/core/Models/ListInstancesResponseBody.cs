@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string Brand { get; set; }
 
             /// <summary>
-            /// <para>The global certificate ID in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</para>
+            /// <para>The global certificate ID, in the format of certificate ID + &quot;-&quot; + site region ID. This ID is commonly used across Alibaba Cloud services.</para>
             /// <list type="bullet">
             /// <item><description>For the China site: certificate ID + &quot;-cn-hangzhou&quot;</description></item>
             /// <item><description>For the China site: certificate ID + &quot;-ap-southeast-1&quot;</description></item>
             /// </list>
-            /// <para>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the China site is &quot;123-ap-southeast-1&quot;.</para>
+            /// <para>For example, if the certificate ID is 123, the CertIdentifier on the China site is &quot;123-cn-hangzhou&quot;, and the CertIdentifier on the International site is &quot;123-ap-southeast-1&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21795675-cn-hangzhou</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string CertificateName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the latest certificate, in UNIX timestamp format. If no certificate has been issued, this value is empty.</para>
+            /// <para>The end time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -105,12 +105,18 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             [Validation(Required=false)]
             public long? CertificateNotAfter { get; set; }
 
+            /// <summary>
+            /// <para>The start time of the latest certificate, in timestamp format. If no certificate has been issued, this field is empty.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1776988800000</para>
+            /// </summary>
             [NameInMap("CertificateNotBefore")]
             [Validation(Required=false)]
             public long? CertificateNotBefore { get; set; }
 
             /// <summary>
-            /// <para>The revocation time of the latest certificate, in UNIX timestamp format.</para>
+            /// <para>The revocation time of the latest certificate, in timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -122,10 +128,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <summary>
             /// <para>The status of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>issued</b>: issued.</description></item>
-            /// <item><description><b>revoked</b>: revoked.</description></item>
-            /// <item><description><b>willExpire</b>: about to expire.</description></item>
-            /// <item><description><b>expired</b>: expired.</description></item>
+            /// <item><description><b>issued</b>: Issued.</description></item>
+            /// <item><description><b>revoked</b>: Revoked.</description></item>
+            /// <item><description><b>willExpire</b>: About to expire.</description></item>
+            /// <item><description><b>expired</b>: Expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +172,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public int? FullDomainCount { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the instance, in UNIX timestamp format. If no certificate has been issued, this value is empty.</para>
+            /// <para>The expiration time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -186,7 +192,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the instance, in UNIX timestamp format. If no certificate has been issued, this value is empty.</para>
+            /// <para>The start time of the instance, in timestamp format. If no certificate has been issued, this field is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -196,7 +202,11 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? InstanceStartTime { get; set; }
 
             /// <summary>
-            /// <para>The instance type. Valid values: BUY (official certificate) and TEST (test certificate).</para>
+            /// <para>The instance type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>BUY: official certificate.</description></item>
+            /// <item><description>TEST: test certificate.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>BUY</para>
@@ -212,7 +222,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             /// <item><description><b>RSA_3072</b></description></item>
             /// <item><description><b>RSA_4096</b></description></item>
             /// <item><description><b>ECC_256</b></description></item>
-            /// <item><description><b>SM2</b>.</description></item>
+            /// <item><description><b>SM2</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -223,7 +233,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string KeyAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The end time of the instance purchase, in UNIX timestamp format. This value is used to determine the purchase duration of the instance.</para>
+            /// <para>The end time of the instance purchase, in timestamp format. Used to determine the purchase duration of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>
@@ -233,7 +243,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? OrderEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the instance purchase, in UNIX timestamp format. This value is used to determine the refund time limit.</para>
+            /// <para>The start time of the instance purchase, in timestamp format. Used to determine the refund time limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1801324800000</para>

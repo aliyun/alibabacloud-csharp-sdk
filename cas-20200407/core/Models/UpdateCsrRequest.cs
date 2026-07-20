@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class UpdateCsrRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the CSR. This ID is generated when you upload a CSR. To obtain the ID, call the <a href="https://help.aliyun.com/document_detail/2709717.html">ListCsr</a> operation.</para>
+        /// <para>The unique ID of the CSR. The CsrId is generated when the CSR is uploaded. You can obtain this value by querying the CSR list. For more information, see <a href="https://help.aliyun.com/document_detail/2709717.html">ListCsr</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CsrId { get; set; }
 
         /// <summary>
-        /// <para>The content of the certificate private key in PEM format.</para>
+        /// <para>The private key content in PEM format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

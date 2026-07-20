@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetInstanceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specifies whether automatic managed renewal is enabled. Valid values:</para>
+        /// <para>Indicates whether automatic managed renewal is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>enable: Enabled.</description></item>
         /// <item><description>disable: Disabled.</description></item>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the latest certificate. The value is a UNIX timestamp. This field is empty if no certificate has been issued.</para>
+        /// <para>The end time of the latest certificate, in timestamp format. This value is empty if no certificate has been issued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CertificateNotBefore { get; set; }
 
         /// <summary>
-        /// <para>The revocation time of the latest certificate. The value is a UNIX timestamp.</para>
+        /// <para>The revocation time of the latest certificate, in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string DingGroupType { get; set; }
 
             /// <summary>
-            /// <para>The link to join the expert service DingTalk group.</para>
+            /// <para>The URL for joining the expert service DingTalk group.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://123.com">https://123.com</a></para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public List<GetInstanceDetailResponseBodyDomainValidationList> DomainValidationList { get; set; }
         public class GetInstanceDetailResponseBodyDomainValidationList : TeaModel {
             /// <summary>
-            /// <para>The CNAME record value for verification-free authorization. This field may be empty.</para>
+            /// <para>The CNAME record value for verification-free authorization. This value may be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123.com</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string ValidationType { get; set; }
 
             /// <summary>
-            /// <para>The host record value for validation.</para>
+            /// <para>The validation host record value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string GenerateCsrMethod { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the instance. The value is a UNIX timestamp. If no certificate has been issued, this field is empty.</para>
+        /// <para>The expiration time of the instance, in timestamp format. This value is empty if no certificate has been issued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance. The value is a UNIX timestamp. If no certificate has been issued, this field is empty.</para>
+        /// <para>The start time of the instance, in timestamp format. This value is empty if no certificate has been issued.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <item><description><b>RSA_3072</b></description></item>
         /// <item><description><b>RSA_4096</b></description></item>
         /// <item><description><b>ECC_256</b></description></item>
-        /// <item><description><b>SM2</b>.</description></item>
+        /// <item><description><b>SM2</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string KeyAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The end time of the instance purchase. The value is a UNIX timestamp. You can use this value to determine the purchase duration of the instance.</para>
+        /// <para>The end time of the instance purchase, in timestamp format. This value is used to determine the purchase duration of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the instance purchase. The value is a UNIX timestamp. You can use this value to determine the refund time limit.</para>
+        /// <para>The start time of the instance purchase, in timestamp format. This value is used to determine the refund time limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1801324800000</para>
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// </description></item>
         /// <item><description><para>payed: the instance upgrade has been paid.</para>
         /// </description></item>
-        /// <item><description><para>issued: the latest certificate has been issued after the instance upgrade.</para>
+        /// <item><description><para>issued: the latest certificate has been issued for the upgraded instance.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class RefundInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID generated for the request. Use this ID to troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D3F1FA43-1C26-50A2-8F0F-7A03851DBB46</para>

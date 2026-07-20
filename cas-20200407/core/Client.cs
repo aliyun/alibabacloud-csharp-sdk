@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a certificate application for a Certificate Management Service instance.</para>
+        /// <para>Applies for a certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a certificate application for a Certificate Management Service instance.</para>
+        /// <para>Applies for a certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a certificate application for a Certificate Management Service instance.</para>
+        /// <para>Applies for a certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a certificate application for a Certificate Management Service instance.</para>
+        /// <para>Applies for a certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -839,7 +839,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a pending certificate application that has not been issued.</para>
+        /// <para>Revokes a certificate application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -881,7 +881,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a pending certificate application that has not been issued.</para>
+        /// <para>Revokes a certificate application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -923,7 +923,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a pending certificate application that has not been issued.</para>
+        /// <para>Revokes a certificate application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -941,7 +941,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a pending certificate application that has not been issued.</para>
+        /// <para>Revokes a certificate application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1591,6 +1591,366 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateCertificateWithCsrRequestWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompanyResponse
+        /// </returns>
+        public CreateCompanyResponse CreateCompanyWithOptions(CreateCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyAddress))
+            {
+                query["CompanyAddress"] = request.CompanyAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyCode))
+            {
+                query["CompanyCode"] = request.CompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyEmail))
+            {
+                query["CompanyEmail"] = request.CompanyEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyPhone))
+            {
+                query["CompanyPhone"] = request.CompanyPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyType))
+            {
+                query["CompanyType"] = request.CompanyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
+            {
+                query["CountryCode"] = request.CountryCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Department))
+            {
+                query["Department"] = request.Department;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCode))
+            {
+                query["PostCode"] = request.PostCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                query["Province"] = request.Province;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCompanyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompanyResponse
+        /// </returns>
+        public async Task<CreateCompanyResponse> CreateCompanyWithOptionsAsync(CreateCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyAddress))
+            {
+                query["CompanyAddress"] = request.CompanyAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyCode))
+            {
+                query["CompanyCode"] = request.CompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyEmail))
+            {
+                query["CompanyEmail"] = request.CompanyEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyPhone))
+            {
+                query["CompanyPhone"] = request.CompanyPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyType))
+            {
+                query["CompanyType"] = request.CompanyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
+            {
+                query["CountryCode"] = request.CountryCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Department))
+            {
+                query["Department"] = request.Department;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCode))
+            {
+                query["PostCode"] = request.PostCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                query["Province"] = request.Province;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCompanyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompanyResponse
+        /// </returns>
+        public CreateCompanyResponse CreateCompany(CreateCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCompanyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCompanyResponse
+        /// </returns>
+        public async Task<CreateCompanyResponse> CreateCompanyAsync(CreateCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCompanyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a certificate application contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public CreateContactResponse CreateContactWithOptions(CreateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Idcard))
+            {
+                query["Idcard"] = request.Idcard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Webhooks))
+            {
+                query["Webhooks"] = request.Webhooks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a certificate application contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public async Task<CreateContactResponse> CreateContactWithOptionsAsync(CreateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Idcard))
+            {
+                query["Idcard"] = request.Idcard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Webhooks))
+            {
+                query["Webhooks"] = request.Webhooks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a certificate application contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public CreateContactResponse CreateContact(CreateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a certificate application contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContactResponse
+        /// </returns>
+        public async Task<CreateContactResponse> CreateContactAsync(CreateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateContactWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2843,6 +3203,246 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudAccessWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCompanyResponse
+        /// </returns>
+        public DeleteCompanyResponse DeleteCompanyWithOptions(DeleteCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCompanyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCompanyResponse
+        /// </returns>
+        public async Task<DeleteCompanyResponse> DeleteCompanyWithOptionsAsync(DeleteCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteCompanyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCompanyResponse
+        /// </returns>
+        public DeleteCompanyResponse DeleteCompany(DeleteCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteCompanyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteCompanyResponse
+        /// </returns>
+        public async Task<DeleteCompanyResponse> DeleteCompanyAsync(DeleteCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteCompanyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public DeleteContactResponse DeleteContactWithOptions(DeleteContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public async Task<DeleteContactResponse> DeleteContactWithOptionsAsync(DeleteContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public DeleteContactResponse DeleteContact(DeleteContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContactResponse
+        /// </returns>
+        public async Task<DeleteContactResponse> DeleteContactAsync(DeleteContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteContactWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4703,14 +5303,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of certificate-related assets, such as websites and cloud resources.</para>
+        /// <para>Queries the number of assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API call queries the number of CA certificates that you have created, including root CA certificates and sub-CA certificates.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>This API call has a single-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business. We recommend that you call this API operation at a reasonable rate.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The China single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -4740,14 +5340,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of certificate-related assets, such as websites and cloud resources.</para>
+        /// <para>Queries the number of assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API call queries the number of CA certificates that you have created, including root CA certificates and sub-CA certificates.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>This API call has a single-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business. We recommend that you call this API operation at a reasonable rate.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The China single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -4777,14 +5377,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of certificate-related assets, such as websites and cloud resources.</para>
+        /// <para>Queries the number of assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API call queries the number of CA certificates that you have created, including root CA certificates and sub-CA certificates.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>This API call has a single-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business. We recommend that you call this API operation at a reasonable rate.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The China single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4798,14 +5398,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of certificate-related assets, such as websites and cloud resources.</para>
+        /// <para>Queries the number of assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API call queries the number of CA certificates that you have created, including root CA certificates and sub-CA certificates.</para>
-        /// <h2>QPS Limit</h2>
-        /// <para>This API call has a single-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business. We recommend that you call this API operation at a reasonable rate.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The China single-user QPS limit for this API is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <returns>
@@ -5043,6 +5643,246 @@ namespace AlibabaCloud.SDK.Cas20200407
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCertificateDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCompanyResponse
+        /// </returns>
+        public GetCompanyResponse GetCompanyWithOptions(GetCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCompanyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCompanyResponse
+        /// </returns>
+        public async Task<GetCompanyResponse> GetCompanyWithOptionsAsync(GetCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCompanyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCompanyResponse
+        /// </returns>
+        public GetCompanyResponse GetCompany(GetCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCompanyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a company.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCompanyResponse
+        /// </returns>
+        public async Task<GetCompanyResponse> GetCompanyAsync(GetCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCompanyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContactResponse
+        /// </returns>
+        public GetContactResponse GetContactWithOptions(GetContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContactResponse
+        /// </returns>
+        public async Task<GetContactResponse> GetContactWithOptionsAsync(GetContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContactResponse
+        /// </returns>
+        public GetContactResponse GetContact(GetContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContactResponse
+        /// </returns>
+        public async Task<GetContactResponse> GetContactAsync(GetContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetContactWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5827,12 +6667,12 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the basic information, certificate body, and private key. You can also use this operation to download the certificate content and private key.</para>
+        /// <para>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for each user is 100. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you call this operation within this limit.</para>
+        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5878,12 +6718,12 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the basic information, certificate body, and private key. You can also use this operation to download the certificate content and private key.</para>
+        /// <para>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for each user is 100. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you call this operation within this limit.</para>
+        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5929,12 +6769,12 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the basic information, certificate body, and private key. You can also use this operation to download the certificate content and private key.</para>
+        /// <para>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for each user is 100. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you call this operation within this limit.</para>
+        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5952,12 +6792,12 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the basic information, certificate body, and private key. You can also use this operation to download the certificate content and private key.</para>
+        /// <para>Retrieves the details of a certificate, including basic information and public/private key content. You can use this operation to download the certificate content and private key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The queries per second (QPS) limit for each user is 100. If you exceed this limit, the system throttles your API calls, which may affect your business. We recommend that you call this operation within this limit.</para>
+        /// <para>The China single-user queries per second (QPS) limit for this operation is 100. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5975,14 +6815,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment statistics by cloud service type.</para>
+        /// <para>Queries the resource statistics list of cloud services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of created Certificate Authority (CA) certificates, including root and subordinate CA certificates.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
         /// <h2>QPS limit</h2>
-        /// <para>Each user can make up to 10 queries per second (QPS). If you exceed this limit, the system applies rate limiting to your API calls. This may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6036,14 +6876,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment statistics by cloud service type.</para>
+        /// <para>Queries the resource statistics list of cloud services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of created Certificate Authority (CA) certificates, including root and subordinate CA certificates.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
         /// <h2>QPS limit</h2>
-        /// <para>Each user can make up to 10 queries per second (QPS). If you exceed this limit, the system applies rate limiting to your API calls. This may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6097,14 +6937,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment statistics by cloud service type.</para>
+        /// <para>Queries the resource statistics list of cloud services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of created Certificate Authority (CA) certificates, including root and subordinate CA certificates.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
         /// <h2>QPS limit</h2>
-        /// <para>Each user can make up to 10 queries per second (QPS). If you exceed this limit, the system applies rate limiting to your API calls. This may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6122,14 +6962,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment statistics by cloud service type.</para>
+        /// <para>Queries the resource statistics list of cloud services.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the number of created Certificate Authority (CA) certificates, including root and subordinate CA certificates.</para>
+        /// <para>Queries the number of CA certificates (including root CA certificates and subordinate CA certificates) that you have created.</para>
         /// <h2>QPS limit</h2>
-        /// <para>Each user can make up to 10 queries per second (QPS). If you exceed this limit, the system applies rate limiting to your API calls. This may affect your business. Make API calls at a reasonable rate.</para>
+        /// <para>The China single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7015,7 +7855,151 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the contacts that receive certificate deployment notifications.</para>
+        /// <para>Retrieves a list of companies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCompaniesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCompaniesResponse
+        /// </returns>
+        public ListCompaniesResponse ListCompaniesWithOptions(ListCompaniesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
+            {
+                query["ShowSize"] = request.ShowSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCompanies",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCompaniesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of companies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCompaniesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCompaniesResponse
+        /// </returns>
+        public async Task<ListCompaniesResponse> ListCompaniesWithOptionsAsync(ListCompaniesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
+            {
+                query["ShowSize"] = request.ShowSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCompanies",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCompaniesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of companies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCompaniesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCompaniesResponse
+        /// </returns>
+        public ListCompaniesResponse ListCompanies(ListCompaniesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCompaniesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of companies.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCompaniesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCompaniesResponse
+        /// </returns>
+        public async Task<ListCompaniesResponse> ListCompaniesAsync(ListCompaniesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCompaniesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7065,7 +8049,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the contacts that receive certificate deployment notifications.</para>
+        /// <para>Retrieves a list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7115,7 +8099,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the contacts that receive certificate deployment notifications.</para>
+        /// <para>Retrieves a list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7133,7 +8117,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the contacts that receive certificate deployment notifications.</para>
+        /// <para>Retrieves a list of contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7295,7 +8279,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment tasks that are created in your account.</para>
+        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7349,7 +8333,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment tasks that are created in your account.</para>
+        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7403,7 +8387,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment tasks that are created in your account.</para>
+        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7421,7 +8405,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificate deployment tasks that are created in your account.</para>
+        /// <para>Retrieves a list of deployment tasks after you create a deployment task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7863,14 +8847,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL certificates and certificate orders in your account.</para>
+        /// <para>Queries the list of user certificates or orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of your certificates or orders. Set OrderType to CERT or UPLOAD to query certificates. Set OrderType to CPACK or BUY to query orders.</para>
+        /// <para>This operation is used to query the list of user certificates or orders. If OrderType is set to CERT or UPLOAD, the certificate list is queried. If OrderType is set to CPACK or BUY, the order list is queried.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7932,14 +8916,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL certificates and certificate orders in your account.</para>
+        /// <para>Queries the list of user certificates or orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of your certificates or orders. Set OrderType to CERT or UPLOAD to query certificates. Set OrderType to CPACK or BUY to query orders.</para>
+        /// <para>This operation is used to query the list of user certificates or orders. If OrderType is set to CERT or UPLOAD, the certificate list is queried. If OrderType is set to CPACK or BUY, the order list is queried.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8001,14 +8985,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL certificates and certificate orders in your account.</para>
+        /// <para>Queries the list of user certificates or orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of your certificates or orders. Set OrderType to CERT or UPLOAD to query certificates. Set OrderType to CPACK or BUY to query orders.</para>
+        /// <para>This operation is used to query the list of user certificates or orders. If OrderType is set to CERT or UPLOAD, the certificate list is queried. If OrderType is set to CPACK or BUY, the order list is queried.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8026,14 +9010,14 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL certificates and certificate orders in your account.</para>
+        /// <para>Queries the list of user certificates or orders.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries a list of your certificates or orders. Set OrderType to CERT or UPLOAD to query certificates. Set OrderType to CPACK or BUY to query orders.</para>
+        /// <para>This operation is used to query the list of user certificates or orders. If OrderType is set to CERT or UPLOAD, the certificate list is queried. If OrderType is set to CPACK or BUY, the order list is queried.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8539,7 +9523,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refunds a Certificate Management Service instance if the refund is requested within seven days of purchase.</para>
+        /// <para>Refunds an instance within 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8581,7 +9565,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refunds a Certificate Management Service instance if the refund is requested within seven days of purchase.</para>
+        /// <para>Refunds an instance within 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8623,7 +9607,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refunds a Certificate Management Service instance if the refund is requested within seven days of purchase.</para>
+        /// <para>Refunds an instance within 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8641,7 +9625,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refunds a Certificate Management Service instance if the refund is requested within seven days of purchase.</para>
+        /// <para>Refunds an instance within 7 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9283,7 +10267,383 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key associated with a certificate signing request (CSR).</para>
+        /// <para>Updates company information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCompanyResponse
+        /// </returns>
+        public UpdateCompanyResponse UpdateCompanyWithOptions(UpdateCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyAddress))
+            {
+                query["CompanyAddress"] = request.CompanyAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyCode))
+            {
+                query["CompanyCode"] = request.CompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyEmail))
+            {
+                query["CompanyEmail"] = request.CompanyEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyPhone))
+            {
+                query["CompanyPhone"] = request.CompanyPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyType))
+            {
+                query["CompanyType"] = request.CompanyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
+            {
+                query["CountryCode"] = request.CountryCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Department))
+            {
+                query["Department"] = request.Department;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCode))
+            {
+                query["PostCode"] = request.PostCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                query["Province"] = request.Province;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCompanyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates company information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCompanyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCompanyResponse
+        /// </returns>
+        public async Task<UpdateCompanyResponse> UpdateCompanyWithOptionsAsync(UpdateCompanyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.City))
+            {
+                query["City"] = request.City;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyAddress))
+            {
+                query["CompanyAddress"] = request.CompanyAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyCode))
+            {
+                query["CompanyCode"] = request.CompanyCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyEmail))
+            {
+                query["CompanyEmail"] = request.CompanyEmail;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyId))
+            {
+                query["CompanyId"] = request.CompanyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyName))
+            {
+                query["CompanyName"] = request.CompanyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyPhone))
+            {
+                query["CompanyPhone"] = request.CompanyPhone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompanyType))
+            {
+                query["CompanyType"] = request.CompanyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CountryCode))
+            {
+                query["CountryCode"] = request.CountryCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Department))
+            {
+                query["Department"] = request.Department;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostCode))
+            {
+                query["PostCode"] = request.PostCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Province))
+            {
+                query["Province"] = request.Province;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCompany",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCompanyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates company information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCompanyResponse
+        /// </returns>
+        public UpdateCompanyResponse UpdateCompany(UpdateCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCompanyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates company information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCompanyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCompanyResponse
+        /// </returns>
+        public async Task<UpdateCompanyResponse> UpdateCompanyAsync(UpdateCompanyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCompanyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public UpdateContactResponse UpdateContactWithOptions(UpdateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Idcard))
+            {
+                query["Idcard"] = request.Idcard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Webhooks))
+            {
+                query["Webhooks"] = request.Webhooks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContactResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public async Task<UpdateContactResponse> UpdateContactWithOptionsAsync(UpdateContactRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactId))
+            {
+                query["ContactId"] = request.ContactId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
+            {
+                query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Idcard))
+            {
+                query["Idcard"] = request.Idcard;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mobile))
+            {
+                query["Mobile"] = request.Mobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Webhooks))
+            {
+                query["Webhooks"] = request.Webhooks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContact",
+                Version = "2020-04-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContactResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public UpdateContactResponse UpdateContact(UpdateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateContactWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a contact.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContactRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContactResponse
+        /// </returns>
+        public async Task<UpdateContactResponse> UpdateContactAsync(UpdateContactRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateContactWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9329,7 +10689,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key associated with a certificate signing request (CSR).</para>
+        /// <para>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9375,7 +10735,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key associated with a certificate signing request (CSR).</para>
+        /// <para>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9393,7 +10753,7 @@ namespace AlibabaCloud.SDK.Cas20200407
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the private key associated with a certificate signing request (CSR).</para>
+        /// <para>Uploads the private key corresponding to a CSR if the private key was not provided when the local CSR was uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">

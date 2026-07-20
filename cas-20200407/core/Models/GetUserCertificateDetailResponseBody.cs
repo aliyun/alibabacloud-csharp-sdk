@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
 {
     public class GetUserCertificateDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The algorithm of the certificate.</para>
+        /// <para>The algorithm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RSA</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Indicates whether the certificate was purchased from Alibaba Cloud. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Yes</para>
+        /// <item><description><para><b>true</b>: Yes.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: No</para>
+        /// <item><description><para><b>false</b>: No.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public bool? BuyInAliyun { get; set; }
 
         /// <summary>
-        /// <para>The content of the certificate that does not use a Chinese cryptographic algorithm. This parameter is returned only when the certFilter request parameter is false.</para>
+        /// <para>The certificate content that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>---BEGIN CERTIFICATE----- MIIF...... -----END CERTIFICATE-----</para>
@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Cert { get; set; }
 
         /// <summary>
-        /// <para>The information about the certificate chain.</para>
+        /// <para>The certificate chain information.</para>
         /// </summary>
         [NameInMap("CertChain")]
         [Validation(Required=false)]
         public List<GetUserCertificateDetailResponseBodyCertChain> CertChain { get; set; }
         public class GetUserCertificateDetailResponseBodyCertChain : TeaModel {
             /// <summary>
-            /// <para>The common name of the certificate in the chain.</para>
+            /// <para>The common name in the certificate chain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string IssuerCommonName { get; set; }
 
             /// <summary>
-            /// <para>The expiration date of the certificate in the chain.</para>
+            /// <para>The end time of the certificate chain validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17352613180000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? NotAfter { get; set; }
 
             /// <summary>
-            /// <para>The issuance date of the certificate in the chain.</para>
+            /// <para>The start time of the certificate chain validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17322633180000</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public long? NotBefore { get; set; }
 
             /// <summary>
-            /// <para>The number of days until the certificate in the chain expires.</para>
+            /// <para>The remaining days of the certificate chain validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         }
 
         /// <summary>
-        /// <para>The certificate ID followed by &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the value of CertIdentifier is &quot;123-cn-hangzhou&quot;.</para>
+        /// <para>The certificate ID appended with &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13781326-cn-hangzhou</para>
@@ -114,6 +114,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>E696C2DB574DF99467A90BEF62B341294A9B0C731D228A0BD38265E1467D8EF0</para>
+        /// </summary>
         [NameInMap("CertSha2")]
         [Validation(Required=false)]
         public string CertSha2 { get; set; }
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string City { get; set; }
 
         /// <summary>
-        /// <para>The primary domain name that is bound to the certificate.</para>
+        /// <para>The primary domain name bound to the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*.com</para>
@@ -149,7 +153,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// <para>The content of the encryption certificate that uses a Chinese cryptographic algorithm. The certificate is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
+        /// <para>The encryption certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -161,7 +165,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptCert { get; set; }
 
         /// <summary>
-        /// <para>The private key of the encryption certificate that uses a Chinese cryptographic algorithm. The private key is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
+        /// <para>The private key of the encryption certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -173,7 +177,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string EncryptPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The expiration date of the certificate.</para>
+        /// <para>The certificate expiration date, in the format of YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-25</para>
@@ -185,10 +189,8 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         /// <summary>
         /// <para>Indicates whether the certificate has expired. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The certificate has expired.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The certificate has not expired.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The certificate has expired.</description></item>
+        /// <item><description><b>false</b>: The certificate has not expired.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,7 +201,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public bool? Expired { get; set; }
 
         /// <summary>
-        /// <para>The fingerprint of the certificate.</para>
+        /// <para>The certificate fingerprint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1D7801BBE772D5DE55CBF1F88AEB41A42402DA07</para>
@@ -209,7 +211,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Fingerprint { get; set; }
 
         /// <summary>
-        /// <para>The ID of the certificate.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121345</para>
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource instance.</para>
+        /// <para>The resource instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-ivauto-hqito6</para>
@@ -229,7 +231,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The certification authority (CA) that issued the certificate.</para>
+        /// <para>The certification authority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Digicert</para>
@@ -239,7 +241,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The private key of the certificate that does not use a Chinese cryptographic algorithm. This parameter is returned only when the certFilter request parameter is false.</para>
+        /// <para>The private key that uses a non-Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN RSA PRIVATE KEY----- MII.... -----END RSA PRIVATE KEY-----</para>
@@ -249,7 +251,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name of the certificate.</para>
+        /// <para>The certificate name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cert_name</para>
@@ -259,7 +261,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The end time of the validity period of the certificate.</para>
+        /// <para>The end time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17326613180000</para>
@@ -269,7 +271,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The start time of the validity period of the certificate.</para>
+        /// <para>The start time of the certificate validity period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17321613180000</para>
@@ -289,7 +291,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The name of the company or organization of the certificate purchaser.</para>
+        /// <para>The name of the company or organization to which the certificate purchaser belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alibaba</para>
@@ -309,7 +311,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Province { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This unique ID is generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -319,7 +321,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek****wia</para>
@@ -329,7 +331,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>All domain names that are bound to the certificate.</para>
+        /// <para>All domain names bound to the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*.com</para>
@@ -339,7 +341,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Sans { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the certificate.</para>
+        /// <para>The certificate serial number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>033cd852608689ef5e368fde89e0961769e8</para>
@@ -359,7 +361,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string Sha2 { get; set; }
 
         /// <summary>
-        /// <para>The content of the signing certificate that uses a Chinese cryptographic algorithm. The certificate is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
+        /// <para>The signing certificate content in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -371,7 +373,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignCert { get; set; }
 
         /// <summary>
-        /// <para>The private key of the signing certificate that uses a Chinese cryptographic algorithm. The private key is in PEM format. This parameter is returned only when the certFilter request parameter is false.</para>
+        /// <para>The private key of the signing certificate in PEM format that uses a Chinese cryptographic algorithm. This field is returned when the CertFilter request parameter is set to false, and is not returned when set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN EC PRIVATE KEY-----
@@ -383,7 +385,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string SignPrivateKey { get; set; }
 
         /// <summary>
-        /// <para>The issuance date of the certificate.</para>
+        /// <para>The certificate issuance date, in the format of YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-07-13</para>
@@ -393,14 +395,14 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>The list of tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetUserCertificateDetailResponseBodyTags> Tags { get; set; }
         public class GetUserCertificateDetailResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -410,7 +412,7 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

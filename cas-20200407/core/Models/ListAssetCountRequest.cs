@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The expiration date of the certificate.</para>
+        /// <para>The certificate expiration date, in seconds. The value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-07-13</para>
+        /// <para>1767807000000</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 50.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public long? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The date of certificate issuance.</para>
+        /// <para>The certificate issuance date, in seconds. The value is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2018-07-13</para>
+        /// <para>1767202200000</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

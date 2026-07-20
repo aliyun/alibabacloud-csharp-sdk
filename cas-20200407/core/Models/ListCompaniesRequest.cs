@@ -8,9 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class ListContactRequest : TeaModel {
+    public class ListCompaniesRequest : TeaModel {
         /// <summary>
-        /// <para>The current page number for paged queries. Default value: <b>1</b>.</para>
+        /// <para>The company ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>51001</para>
+        /// </summary>
+        [NameInMap("CompanyId")]
+        [Validation(Required=false)]
+        public long? CompanyId { get; set; }
+
+        /// <summary>
+        /// <para>The page number of the current page. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +30,10 @@ namespace AlibabaCloud.SDK.Cas20200407.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The search keyword, such as a keyword in the name, email address, or phone number.</para>
+        /// <para>The search keyword. For example, a keyword for the company name, province, country code, or city.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>186</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

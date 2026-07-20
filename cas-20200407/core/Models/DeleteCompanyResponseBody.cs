@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cas20200407.Models
 {
-    public class UpdateCsrResponseBody : TeaModel {
+    public class DeleteCompanyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>082FAB35-6AB9-4FD5-8750-D36673548E76</para>
+        /// <para>28627F67-2F87-55E6-B9C6-CE32FEC91315</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
