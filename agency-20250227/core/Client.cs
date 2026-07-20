@@ -99,6 +99,574 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteCreateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteCreateResponse
+        /// </returns>
+        public CustomerNoteCreateResponse CustomerNoteCreateWithOptions(CustomerNoteCreateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInformation))
+            {
+                body["ContactInformation"] = request.ContactInformation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
+            {
+                body["CustomerName"] = request.CustomerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                body["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteContent))
+            {
+                body["NoteContent"] = request.NoteContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TouchDate))
+            {
+                body["TouchDate"] = request.TouchDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteCreate",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteCreateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteCreateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteCreateResponse
+        /// </returns>
+        public async Task<CustomerNoteCreateResponse> CustomerNoteCreateWithOptionsAsync(CustomerNoteCreateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInformation))
+            {
+                body["ContactInformation"] = request.ContactInformation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
+            {
+                body["CustomerName"] = request.CustomerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                body["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteContent))
+            {
+                body["NoteContent"] = request.NoteContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TouchDate))
+            {
+                body["TouchDate"] = request.TouchDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteCreate",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteCreateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteCreateResponse
+        /// </returns>
+        public CustomerNoteCreateResponse CustomerNoteCreate(CustomerNoteCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CustomerNoteCreateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteCreateResponse
+        /// </returns>
+        public async Task<CustomerNoteCreateResponse> CustomerNoteCreateAsync(CustomerNoteCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CustomerNoteCreateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteEditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteEditResponse
+        /// </returns>
+        public CustomerNoteEditResponse CustomerNoteEditWithOptions(CustomerNoteEditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInformation))
+            {
+                body["ContactInformation"] = request.ContactInformation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteContent))
+            {
+                body["NoteContent"] = request.NoteContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteId))
+            {
+                body["NoteId"] = request.NoteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TouchDate))
+            {
+                body["TouchDate"] = request.TouchDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteEdit",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteEditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteEditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteEditResponse
+        /// </returns>
+        public async Task<CustomerNoteEditResponse> CustomerNoteEditWithOptionsAsync(CustomerNoteEditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactInformation))
+            {
+                body["ContactInformation"] = request.ContactInformation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactName))
+            {
+                body["ContactName"] = request.ContactName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteContent))
+            {
+                body["NoteContent"] = request.NoteContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteId))
+            {
+                body["NoteId"] = request.NoteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TouchDate))
+            {
+                body["TouchDate"] = request.TouchDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteEdit",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteEditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteEditResponse
+        /// </returns>
+        public CustomerNoteEditResponse CustomerNoteEdit(CustomerNoteEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CustomerNoteEditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Edits a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteEditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteEditResponse
+        /// </returns>
+        public async Task<CustomerNoteEditResponse> CustomerNoteEditAsync(CustomerNoteEditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CustomerNoteEditWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListResponse
+        /// </returns>
+        public CustomerNoteListResponse CustomerNoteListWithOptions(CustomerNoteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                body["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteList",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListResponse
+        /// </returns>
+        public async Task<CustomerNoteListResponse> CustomerNoteListWithOptionsAsync(CustomerNoteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                body["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                body["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteList",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListResponse
+        /// </returns>
+        public CustomerNoteListResponse CustomerNoteList(CustomerNoteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CustomerNoteListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a paged query list of customer notes with paging support.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListResponse
+        /// </returns>
+        public async Task<CustomerNoteListResponse> CustomerNoteListAsync(CustomerNoteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CustomerNoteListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListDetailResponse
+        /// </returns>
+        public CustomerNoteListDetailResponse CustomerNoteListDetailWithOptions(CustomerNoteListDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteId))
+            {
+                body["NoteId"] = request.NoteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteListDetail",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteListDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListDetailResponse
+        /// </returns>
+        public async Task<CustomerNoteListDetailResponse> CustomerNoteListDetailWithOptionsAsync(CustomerNoteListDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteId))
+            {
+                body["NoteId"] = request.NoteId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CustomerNoteListDetail",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CustomerNoteListDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListDetailResponse
+        /// </returns>
+        public CustomerNoteListDetailResponse CustomerNoteListDetail(CustomerNoteListDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CustomerNoteListDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a customer note.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CustomerNoteListDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CustomerNoteListDetailResponse
+        /// </returns>
+        public async Task<CustomerNoteListDetailResponse> CustomerNoteListDetailAsync(CustomerNoteListDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CustomerNoteListDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries exported bill files.</para>
         /// </summary>
         /// 
@@ -708,8 +1276,8 @@ namespace AlibabaCloud.SDK.Agency20250227
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international sites.</notice>.</para>
+        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international site.</notice>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -780,8 +1348,8 @@ namespace AlibabaCloud.SDK.Agency20250227
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international sites.</notice>.</para>
+        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international site.</notice>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -852,8 +1420,8 @@ namespace AlibabaCloud.SDK.Agency20250227
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international sites.</notice>.</para>
+        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international site.</notice>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -876,8 +1444,8 @@ namespace AlibabaCloud.SDK.Agency20250227
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
-        /// <notice>Available only for international sites.</notice>.</para>
+        /// <para>Ensure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international site.</notice>.</para>
         /// </description>
         /// 
         /// <param name="request">

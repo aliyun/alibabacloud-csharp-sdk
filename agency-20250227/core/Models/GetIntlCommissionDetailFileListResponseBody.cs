@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public GetIntlCommissionDetailFileListResponseBodyData Data { get; set; }
         public class GetIntlCommissionDetailFileListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The billing month.</para>
+            /// <para>The bill month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202502</para>
@@ -44,16 +44,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public List<GetIntlCommissionDetailFileListResponseBodyDataFileList> FileList { get; set; }
             public class GetIntlCommissionDetailFileListResponseBodyDataFileList : TeaModel {
                 /// <summary>
-                /// <para>The push status of the OSS file. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>初始化状态: initialization status</description></item>
-                /// <item><description>处理中: processing</description></item>
-                /// <item><description>处理成功: processing succeeded</description></item>
-                /// <item><description>处理失败: processing failed.</description></item>
-                /// </list>
+                /// <para>The OSS file push status. Valid values: init, processing, succeeded, or failed.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>处理中</para>
+                /// <para>PROCESSING</para>
                 /// </summary>
                 [NameInMap("BucketSyncStatus")]
                 [Validation(Required=false)]
@@ -63,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The commission policy name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>参考【APS佣金查询下载功能】的政策名称</para>
+                /// <para>202606_FY27_TEST</para>
                 /// </summary>
                 [NameInMap("CommissionPolicyName")]
                 [Validation(Required=false)]
@@ -97,7 +91,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         /// <para>The message information.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成功</para>
+        /// <para>SUCCESS</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -114,7 +108,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

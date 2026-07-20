@@ -1,3 +1,10 @@
+2026-07-20 Version: 1.2.0
+- Support API CustomerNoteCreate.
+- Support API CustomerNoteEdit.
+- Support API CustomerNoteList.
+- Support API CustomerNoteListDetail.
+
+
 2026-06-18 Version: 1.1.0
 - Support API GetIntlCommissionDetailFileList.
 
