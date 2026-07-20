@@ -7639,6 +7639,310 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>视频翻译</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>1. 产品简介</h2>
+        /// <para>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
+        /// API 采用异步调用模式：提交翻译任务后获取 <c>task_id</c>，通过查询接口轮询任务状态直至完成后获取结果。</para>
+        /// <h2>2. 适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>跨境电商视频本地化</b>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</para>
+        /// </description></item>
+        /// <item><description><para><b>国际社交媒体营销</b>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</para>
+        /// </description></item>
+        /// <item><description><para><b>全球品牌广告投放</b>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</para>
+        /// </description></item>
+        /// <item><description><para><b>培训与产品说明</b>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>3. 功能介绍</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>能力</th>
+        /// <th>标识码</th>
+        /// <th>说明</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>画面翻译</td>
+        /// <td><c>visual</c></td>
+        /// <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>4. 开发指南</h2>
+        /// <h3>4.1 提交翻译任务</h3>
+        /// <h4>请求</h4>
+        /// <para><c>POST /api/v1/video/translation</c></para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// VideoTranslationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoTranslationResponse
+        /// </returns>
+        public VideoTranslationResponse VideoTranslationWithOptions(VideoTranslationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            VideoTranslationShrinkRequest request = new VideoTranslationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Capabilities))
+            {
+                request.CapabilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "Capabilities", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
+            {
+                body["Capabilities"] = request.CapabilitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
+            {
+                body["VideoUrl"] = request.VideoUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VideoTranslation",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VideoTranslationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频翻译</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>1. 产品简介</h2>
+        /// <para>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
+        /// API 采用异步调用模式：提交翻译任务后获取 <c>task_id</c>，通过查询接口轮询任务状态直至完成后获取结果。</para>
+        /// <h2>2. 适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>跨境电商视频本地化</b>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</para>
+        /// </description></item>
+        /// <item><description><para><b>国际社交媒体营销</b>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</para>
+        /// </description></item>
+        /// <item><description><para><b>全球品牌广告投放</b>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</para>
+        /// </description></item>
+        /// <item><description><para><b>培训与产品说明</b>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>3. 功能介绍</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>能力</th>
+        /// <th>标识码</th>
+        /// <th>说明</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>画面翻译</td>
+        /// <td><c>visual</c></td>
+        /// <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>4. 开发指南</h2>
+        /// <h3>4.1 提交翻译任务</h3>
+        /// <h4>请求</h4>
+        /// <para><c>POST /api/v1/video/translation</c></para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// VideoTranslationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoTranslationResponse
+        /// </returns>
+        public async Task<VideoTranslationResponse> VideoTranslationWithOptionsAsync(VideoTranslationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            VideoTranslationShrinkRequest request = new VideoTranslationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Capabilities))
+            {
+                request.CapabilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Capabilities, "Capabilities", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CapabilitiesShrink))
+            {
+                body["Capabilities"] = request.CapabilitiesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceLanguage))
+            {
+                body["SourceLanguage"] = request.SourceLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetLanguage))
+            {
+                body["TargetLanguage"] = request.TargetLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoUrl))
+            {
+                body["VideoUrl"] = request.VideoUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VideoTranslation",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VideoTranslationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频翻译</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>1. 产品简介</h2>
+        /// <para>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
+        /// API 采用异步调用模式：提交翻译任务后获取 <c>task_id</c>，通过查询接口轮询任务状态直至完成后获取结果。</para>
+        /// <h2>2. 适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>跨境电商视频本地化</b>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</para>
+        /// </description></item>
+        /// <item><description><para><b>国际社交媒体营销</b>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</para>
+        /// </description></item>
+        /// <item><description><para><b>全球品牌广告投放</b>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</para>
+        /// </description></item>
+        /// <item><description><para><b>培训与产品说明</b>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>3. 功能介绍</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>能力</th>
+        /// <th>标识码</th>
+        /// <th>说明</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>画面翻译</td>
+        /// <td><c>visual</c></td>
+        /// <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>4. 开发指南</h2>
+        /// <h3>4.1 提交翻译任务</h3>
+        /// <h4>请求</h4>
+        /// <para><c>POST /api/v1/video/translation</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VideoTranslationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoTranslationResponse
+        /// </returns>
+        public VideoTranslationResponse VideoTranslation(VideoTranslationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return VideoTranslationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>视频翻译</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>1. 产品简介</h2>
+        /// <para>视频翻译 API 支持将视频画面中的嵌字（字幕、卖点文字等）翻译为目标语言，并擦除原文。适用于电商视频多语言分发、国际社交媒体营销、全球品牌广告投放等场景。
+        /// API 采用异步调用模式：提交翻译任务后获取 <c>task_id</c>，通过查询接口轮询任务状态直至完成后获取结果。</para>
+        /// <h2>2. 适用场景</h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>跨境电商视频本地化</b>：将商品介绍视频中的卖点文字翻译为目标市场语言，助力海外平台推广。</para>
+        /// </description></item>
+        /// <item><description><para><b>国际社交媒体营销</b>：针对 TikTok、Instagram、YouTube 等平台，将视频画面文字内容一键本地化，提升海外用户理解度与转化率。</para>
+        /// </description></item>
+        /// <item><description><para><b>全球品牌广告投放</b>：根据投放地区语言自动生成对应版本视频，减少人工制作成本。</para>
+        /// </description></item>
+        /// <item><description><para><b>培训与产品说明</b>：将培训课程或产品演示视频中的画面文字翻译为多语言版本，方便全球团队使用。</para>
+        /// </description></item>
+        /// </list>
+        /// <h2>3. 功能介绍</h2>
+        /// <table>
+        /// <thead>
+        /// <tr>
+        /// <th>能力</th>
+        /// <th>标识码</th>
+        /// <th>说明</th>
+        /// </tr>
+        /// </thead>
+        /// <tbody><tr>
+        /// <td>画面翻译</td>
+        /// <td><c>visual</c></td>
+        /// <td>翻译视频画面中的嵌字（字幕、卖点文字等），并擦除原文</td>
+        /// </tr>
+        /// </tbody></table>
+        /// <h2>4. 开发指南</h2>
+        /// <h3>4.1 提交翻译任务</h3>
+        /// <h4>请求</h4>
+        /// <para><c>POST /api/v1/video/translation</c></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// VideoTranslationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VideoTranslationResponse
+        /// </returns>
+        public async Task<VideoTranslationResponse> VideoTranslationAsync(VideoTranslationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await VideoTranslationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Provides a one-stop AI-powered image processing service for e-commerce sellers. Orchestrates seven atomic capabilities — element detection, intelligent matting, intelligent removal, Image Translation Pro, image expansion, intelligent cropping, and HD upscaling — into an image processing workflow. Upload an image once, select the desired capabilities, and complete multiple image optimizations sequentially in a single call to produce product images that meet listing platform requirements. (Asynchronous).</para>
         /// </summary>
         /// 
