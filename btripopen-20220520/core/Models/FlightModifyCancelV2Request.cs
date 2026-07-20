@@ -9,22 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightModifyCancelV2Request : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>name</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1017002195370467138</para>
+        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1017002195370467137</para>
+        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1019195786853020</para>
+        /// </summary>
         [NameInMap("out_sub_order_id")]
         [Validation(Required=false)]
         public string OutSubOrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1019195786853020</para>
+        /// </summary>
         [NameInMap("sub_order_id")]
         [Validation(Required=false)]
         public long? SubOrderId { get; set; }

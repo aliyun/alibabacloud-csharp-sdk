@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class TrainNoListSearchRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>包头东</para>
         /// </summary>
         [NameInMap("arr_location")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-05-16</para>
         /// </summary>
         [NameInMap("dep_date")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>包头</para>
         /// </summary>
         [NameInMap("dep_location")]
         [Validation(Required=false)]
@@ -37,12 +46,20 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public TrainNoListSearchRequestOption Option { get; set; }
         public class TrainNoListSearchRequestOption : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("need_transfer")]
             [Validation(Required=false)]
             public bool? NeedTransfer { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public string OrderId { get; set; }

@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class AddProjectManagerShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of manager group entities. Currently, entityType only supports &quot;1&quot; (employee). The maximum number is 10.</para>
+        /// </summary>
         [NameInMap("org_entities")]
         [Validation(Required=false)]
         public string OrgEntitiesShrink { get; set; }
 
+        /// <summary>
+        /// <para>The third-party project ID. You must specify at least one of project_id and out_project_id.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>projectabc</para>
+        /// </summary>
         [NameInMap("out_project_id")]
         [Validation(Required=false)]
         public string OutProjectId { get; set; }
 
+        /// <summary>
+        /// <para>The internal project ID. You must specify at least one of project_id and out_project_id.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("project_id")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }

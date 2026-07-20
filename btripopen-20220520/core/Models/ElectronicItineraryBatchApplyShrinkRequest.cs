@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string ApplyItineraryListShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("can_reprint")]
         [Validation(Required=false)]
         public bool? CanReprint { get; set; }

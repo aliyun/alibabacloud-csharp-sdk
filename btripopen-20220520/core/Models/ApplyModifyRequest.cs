@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class ApplyModifyRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4000</para>
+        /// </summary>
         [NameInMap("budget")]
         [Validation(Required=false)]
         public long? Budget { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("budget_merge")]
         [Validation(Required=false)]
         public int? BudgetMerge { get; set; }
@@ -21,16 +29,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ApplyModifyRequestCarRule CarRule { get; set; }
         public class ApplyModifyRequestCarRule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234567</para>
+            /// </summary>
             [NameInMap("scenario_template_id")]
             [Validation(Required=false)]
             public string ScenarioTemplateId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>测试场景模板</para>
+            /// </summary>
             [NameInMap("scenario_template_name")]
             [Validation(Required=false)]
             public string ScenarioTemplateName { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>阿里巴巴</para>
+        /// </summary>
         [NameInMap("corp_name")]
         [Validation(Required=false)]
         public string CorpName { get; set; }
@@ -39,26 +59,50 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ApplyModifyRequestDefaultStandard DefaultStandard { get; set; }
         public class ApplyModifyRequestDefaultStandard : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("business_discount")]
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("economy_discount")]
             [Validation(Required=false)]
             public int? EconomyDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>9</para>
+            /// </summary>
             [NameInMap("first_discount")]
             [Validation(Required=false)]
             public int? FirstDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Y</para>
+            /// </summary>
             [NameInMap("flight_cabins")]
             [Validation(Required=false)]
             public string FlightCabins { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("flight_intl_rule_code")]
             [Validation(Required=false)]
             public long? FlightIntlRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("flight_rule_code")]
             [Validation(Required=false)]
             public long? FlightRuleCode { get; set; }
@@ -67,14 +111,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestDefaultStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestDefaultStandardHotelCitys : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>500100</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>杭州</para>
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10000</para>
+                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
@@ -85,58 +141,112 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestDefaultStandardHotelIntlCitys> HotelIntlCitys { get; set; }
             public class ApplyModifyRequestDefaultStandardHotelIntlCitys : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>510100</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>城市名称</para>
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10000</para>
+                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("hotel_intl_rule_code")]
             [Validation(Required=false)]
             public long? HotelIntlRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("hotel_rule_code")]
             [Validation(Required=false)]
             public long? HotelRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>F</para>
+            /// </summary>
             [NameInMap("international_flight_cabins")]
             [Validation(Required=false)]
             public string InternationalFlightCabins { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("reserve_type")]
             [Validation(Required=false)]
             public int? ReserveType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("train_rule_code")]
             [Validation(Required=false)]
             public long? TrainRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1000</para>
+            /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>001</para>
+        /// </summary>
         [NameInMap("depart_id")]
         [Validation(Required=false)]
         public string DepartId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>采购部</para>
+        /// </summary>
         [NameInMap("depart_name")]
         [Validation(Required=false)]
         public string DepartName { get; set; }
 
+        /// <summary>
+        /// <para>可将补充描述传入此字段，账单中将会体现此字段的值。可以用于企业的统计和对账</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;cost_center&quot;:&quot;成本中心&quot;}</para>
+        /// </summary>
         [NameInMap("extend_field")]
         [Validation(Required=false)]
         public string ExtendField { get; set; }
@@ -145,54 +255,106 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<ApplyModifyRequestExternalTravelerList> ExternalTravelerList { get; set; }
         public class ApplyModifyRequestExternalTravelerList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
+            /// </summary>
             [NameInMap("attribute")]
             [Validation(Required=false)]
             public string Attribute { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>144224</para>
+            /// </summary>
             [NameInMap("cost_center_id")]
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>371164</para>
+            /// </summary>
             [NameInMap("external_user_id")]
             [Validation(Required=false)]
             public string ExternalUserId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>11411</para>
+            /// </summary>
             [NameInMap("invoice_id")]
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>11422</para>
+            /// </summary>
             [NameInMap("payment_department_id")]
             [Validation(Required=false)]
             public string PaymentDepartmentId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“一级事业部”</para>
+            /// </summary>
             [NameInMap("payment_department_name")]
             [Validation(Required=false)]
             public string PaymentDepartmentName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>acs</para>
+            /// </summary>
             [NameInMap("project_code")]
             [Validation(Required=false)]
             public string ProjectCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“成本项目”</para>
+            /// </summary>
             [NameInMap("project_title")]
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>91140100688069283J</para>
+            /// </summary>
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>HD4451224</para>
+            /// </summary>
             [NameInMap("thirdpart_cost_center_id")]
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>6281</para>
+            /// </summary>
             [NameInMap("thirdpart_depart_id")]
             [Validation(Required=false)]
             public string ThirdpartDepartId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>王武</para>
+            /// </summary>
             [NameInMap("user_name")]
             [Validation(Required=false)]
             public string UserName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>wu/wang</para>
+            /// </summary>
             [NameInMap("user_name_en")]
             [Validation(Required=false)]
             public string UserNameEn { get; set; }
@@ -203,26 +365,50 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ApplyModifyRequestExternalTravelerStandard ExternalTravelerStandard { get; set; }
         public class ApplyModifyRequestExternalTravelerStandard : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("business_discount")]
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("economy_discount")]
             [Validation(Required=false)]
             public int? EconomyDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("first_discount")]
             [Validation(Required=false)]
             public int? FirstDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Y</para>
+            /// </summary>
             [NameInMap("flight_cabins")]
             [Validation(Required=false)]
             public string FlightCabins { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("flight_intl_rule_code")]
             [Validation(Required=false)]
             public long? FlightIntlRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("flight_rule_code")]
             [Validation(Required=false)]
             public long? FlightRuleCode { get; set; }
@@ -231,14 +417,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestExternalTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestExternalTravelerStandardHotelCitys : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>北京</para>
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1001</para>
+                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
@@ -249,54 +447,104 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestExternalTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
             public class ApplyModifyRequestExternalTravelerStandardHotelIntlCitys : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>330100</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>杭州</para>
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1009</para>
+                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("hotel_intl_rule_code")]
             [Validation(Required=false)]
             public long? HotelIntlRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("hotel_rule_code")]
             [Validation(Required=false)]
             public long? HotelRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>F</para>
+            /// </summary>
             [NameInMap("international_flight_cabins")]
             [Validation(Required=false)]
             public string InternationalFlightCabins { get; set; }
 
+            /// <summary>
+            /// <para>超级经济舱折扣。1到10的整数</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("reserve_type")]
             [Validation(Required=false)]
             public int? ReserveType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("train_rule_code")]
             [Validation(Required=false)]
             public long? TrainRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("flight_budget")]
         [Validation(Required=false)]
         public long? FlightBudget { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("hotel_budget")]
         [Validation(Required=false)]
         public long? HotelBudget { get; set; }
@@ -305,78 +553,133 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public ApplyModifyRequestHotelShare HotelShare { get; set; }
         public class ApplyModifyRequestHotelShare : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>70</para>
+            /// </summary>
             [NameInMap("param")]
             [Validation(Required=false)]
             public string Param { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("intl_flight_budget")]
         [Validation(Required=false)]
         public long? IntlFlightBudget { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("intl_hotel_budget")]
         [Validation(Required=false)]
         public long? IntlHotelBudget { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("itinerary_list")]
         [Validation(Required=false)]
         public List<ApplyModifyRequestItineraryList> ItineraryList { get; set; }
         public class ApplyModifyRequestItineraryList : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>杭州</para>
             /// </summary>
             [NameInMap("arr_city")]
             [Validation(Required=false)]
             public string ArrCity { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>HGH</para>
+            /// </summary>
             [NameInMap("arr_city_code")]
             [Validation(Required=false)]
             public string ArrCityCode { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-07-12 00:00:00</para>
             /// </summary>
             [NameInMap("arr_date")]
             [Validation(Required=false)]
             public string ArrDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
+            /// </summary>
             [NameInMap("attribute")]
             [Validation(Required=false)]
             public string Attribute { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2021413</para>
+            /// </summary>
             [NameInMap("cost_center_id")]
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>北京</para>
             /// </summary>
             [NameInMap("dep_city")]
             [Validation(Required=false)]
             public string DepCity { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BJS</para>
+            /// </summary>
             [NameInMap("dep_city_code")]
             [Validation(Required=false)]
             public string DepCityCode { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2022-07-12 00:00:00</para>
             /// </summary>
             [NameInMap("dep_date")]
             [Validation(Required=false)]
             public string DepDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>614141</para>
+            /// </summary>
             [NameInMap("invoice_id")]
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2000131</para>
             /// </summary>
             [NameInMap("itinerary_id")]
             [Validation(Required=false)]
@@ -386,24 +689,44 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ApplyModifyRequestItineraryListItineraryTravelStandard ItineraryTravelStandard { get; set; }
             public class ApplyModifyRequestItineraryListItineraryTravelStandard : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("hotel_available_nights_per_day")]
                 [Validation(Required=false)]
                 public int? HotelAvailableNightsPerDay { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("need_hotel")]
             [Validation(Required=false)]
             public bool? NeedHotel { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("need_traffic")]
             [Validation(Required=false)]
             public bool? NeedTraffic { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>projectone</para>
+            /// </summary>
             [NameInMap("project_code")]
             [Validation(Required=false)]
             public string ProjectCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>项目1</para>
+            /// </summary>
             [NameInMap("project_title")]
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
@@ -412,16 +735,27 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<string> ProvinceTravelCityAdcodes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ZG14131</para>
+            /// </summary>
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>thirdpart5151</para>
+            /// </summary>
             [NameInMap("thirdpart_cost_center_id")]
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("traffic_type")]
             [Validation(Required=false)]
@@ -429,6 +763,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("trip_way")]
             [Validation(Required=false)]
@@ -436,6 +773,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("itinerary_rule")]
         [Validation(Required=false)]
         public int? ItineraryRule { get; set; }
@@ -452,18 +793,34 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string ArrDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
+            /// </summary>
             [NameInMap("attribute")]
             [Validation(Required=false)]
             public string Attribute { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BJS,SHA</para>
+            /// </summary>
             [NameInMap("city_code_set")]
             [Validation(Required=false)]
             public string CityCodeSet { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>北京，上海</para>
+            /// </summary>
             [NameInMap("city_set")]
             [Validation(Required=false)]
             public string CitySet { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>123455</para>
+            /// </summary>
             [NameInMap("cost_center_id")]
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
@@ -476,10 +833,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public string DepDate { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>12344</para>
+            /// </summary>
             [NameInMap("invoice_id")]
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>20220722001</para>
+            /// </summary>
             [NameInMap("itinerary_id")]
             [Validation(Required=false)]
             public string ItineraryId { get; set; }
@@ -488,16 +853,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public ApplyModifyRequestItinerarySetListItineraryTravelStandard ItineraryTravelStandard { get; set; }
             public class ApplyModifyRequestItinerarySetListItineraryTravelStandard : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("hotel_available_nights_per_day")]
                 [Validation(Required=false)]
                 public int? HotelAvailableNightsPerDay { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>projecttow</para>
+            /// </summary>
             [NameInMap("project_code")]
             [Validation(Required=false)]
             public string ProjectCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>项目1</para>
+            /// </summary>
             [NameInMap("project_title")]
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
@@ -506,63 +883,120 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<string> ProvinceTravelCityAdcodes { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>thridpart12138</para>
+            /// </summary>
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>thridpart12138</para>
+            /// </summary>
             [NameInMap("thirdpart_cost_center_id")]
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("traffic_type")]
             [Validation(Required=false)]
             public int? TrafficType { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("limit_traveler")]
         [Validation(Required=false)]
         public int? LimitTraveler { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("meal_budget")]
         [Validation(Required=false)]
         public long? MealBudget { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>141125</para>
+        /// </summary>
         [NameInMap("payment_department_id")]
         [Validation(Required=false)]
         public string PaymentDepartmentId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>产品部</para>
+        /// </summary>
         [NameInMap("payment_department_name")]
         [Validation(Required=false)]
         public string PaymentDepartmentName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public int? Status { get; set; }
 
+        /// <summary>
+        /// <para>子企业Id</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>btrip123</para>
+        /// </summary>
         [NameInMap("sub_corp_id")]
         [Validation(Required=false)]
         public string SubCorpId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0001A1100000007EX08O</para>
         /// </summary>
         [NameInMap("thirdpart_apply_id")]
         [Validation(Required=false)]
         public string ThirdpartApplyId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>202201413141</para>
+        /// </summary>
         [NameInMap("thirdpart_business_id")]
         [Validation(Required=false)]
         public string ThirdpartBusinessId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>三方部门id</para>
+        /// </summary>
         [NameInMap("thirdpart_depart_id")]
         [Validation(Required=false)]
         public string ThirdpartDepartId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("together_book_rule")]
         [Validation(Required=false)]
         public int? TogetherBookRule { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("train_budget")]
         [Validation(Required=false)]
         public long? TrainBudget { get; set; }
@@ -571,50 +1005,98 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<ApplyModifyRequestTravelerList> TravelerList { get; set; }
         public class ApplyModifyRequestTravelerList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“{&quot;name&quot;:&quot;张三&quot;}”</para>
+            /// </summary>
             [NameInMap("attribute")]
             [Validation(Required=false)]
             public string Attribute { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>12211</para>
+            /// </summary>
             [NameInMap("cost_center_id")]
             [Validation(Required=false)]
             public long? CostCenterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>11412</para>
+            /// </summary>
             [NameInMap("invoice_id")]
             [Validation(Required=false)]
             public long? InvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>11633</para>
+            /// </summary>
             [NameInMap("payment_department_id")]
             [Validation(Required=false)]
             public string PaymentDepartmentId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“一级事业部”</para>
+            /// </summary>
             [NameInMap("payment_department_name")]
             [Validation(Required=false)]
             public string PaymentDepartmentName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>acs</para>
+            /// </summary>
             [NameInMap("project_code")]
             [Validation(Required=false)]
             public string ProjectCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>“成本项目”</para>
+            /// </summary>
             [NameInMap("project_title")]
             [Validation(Required=false)]
             public string ProjectTitle { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>517492</para>
+            /// </summary>
             [NameInMap("third_part_invoice_id")]
             [Validation(Required=false)]
             public string ThirdPartInvoiceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>HD424333</para>
+            /// </summary>
             [NameInMap("thirdpart_cost_center_id")]
             [Validation(Required=false)]
             public string ThirdpartCostCenterId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1001A11000000000O7YC</para>
+            /// </summary>
             [NameInMap("thirdpart_depart_id")]
             [Validation(Required=false)]
             public string ThirdpartDepartId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>GS641312</para>
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>李四</para>
+            /// </summary>
             [NameInMap("user_name")]
             [Validation(Required=false)]
             public string UserName { get; set; }
@@ -625,6 +1107,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public List<ApplyModifyRequestTravelerStandard> TravelerStandard { get; set; }
         public class ApplyModifyRequestTravelerStandard : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("business_discount")]
             [Validation(Required=false)]
             public int? BusinessDiscount { get; set; }
@@ -635,6 +1121,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public class ApplyModifyRequestTravelerStandardCarCitySet : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>110100，330100</para>
                 /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
@@ -642,6 +1131,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>北京，杭州</para>
                 /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
@@ -933,22 +1425,42 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("economy_discount")]
             [Validation(Required=false)]
             public int? EconomyDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("first_discount")]
             [Validation(Required=false)]
             public int? FirstDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Y</para>
+            /// </summary>
             [NameInMap("flight_cabins")]
             [Validation(Required=false)]
             public string FlightCabins { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("flight_intl_rule_code")]
             [Validation(Required=false)]
             public long? FlightIntlRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("flight_rule_code")]
             [Validation(Required=false)]
             public long? FlightRuleCode { get; set; }
@@ -957,14 +1469,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardHotelCitys> HotelCitys { get; set; }
             public class ApplyModifyRequestTravelerStandardHotelCitys : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>北京</para>
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1014</para>
+                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
@@ -975,48 +1499,94 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<ApplyModifyRequestTravelerStandardHotelIntlCitys> HotelIntlCitys { get; set; }
             public class ApplyModifyRequestTravelerStandardHotelIntlCitys : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>110100</para>
+                /// </summary>
                 [NameInMap("city_code")]
                 [Validation(Required=false)]
                 public string CityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>杭州</para>
+                /// </summary>
                 [NameInMap("city_name")]
                 [Validation(Required=false)]
                 public string CityName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1009</para>
+                /// </summary>
                 [NameInMap("fee")]
                 [Validation(Required=false)]
                 public long? Fee { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("hotel_intl_rule_code")]
             [Validation(Required=false)]
             public long? HotelIntlRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("hotel_rule_code")]
             [Validation(Required=false)]
             public long? HotelRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>F</para>
+            /// </summary>
             [NameInMap("international_flight_cabins")]
             [Validation(Required=false)]
             public string InternationalFlightCabins { get; set; }
 
+            /// <summary>
+            /// <para>超级经济舱折扣。1到10的整数</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("premium_economy_discount")]
             [Validation(Required=false)]
             public int? PremiumEconomyDiscount { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("reserve_type")]
             [Validation(Required=false)]
             public int? ReserveType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10032</para>
+            /// </summary>
             [NameInMap("train_rule_code")]
             [Validation(Required=false)]
             public long? TrainRuleCode { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("train_seats")]
             [Validation(Required=false)]
             public string TrainSeats { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>thirdpart12138</para>
+            /// </summary>
             [NameInMap("user_id")]
             [Validation(Required=false)]
             public string UserId { get; set; }
@@ -1025,37 +1595,62 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>访问客户</para>
         /// </summary>
         [NameInMap("trip_cause")]
         [Validation(Required=false)]
         public string TripCause { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("trip_day")]
         [Validation(Required=false)]
         public int? TripDay { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>访问客户</para>
         /// </summary>
         [NameInMap("trip_title")]
         [Validation(Required=false)]
         public string TripTitle { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>union51415</para>
+        /// </summary>
         [NameInMap("union_no")]
         [Validation(Required=false)]
         public string UnionNo { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>thirdpart12138</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>张三</para>
+        /// </summary>
         [NameInMap("user_name")]
         [Validation(Required=false)]
         public string UserName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("vehicle_budget")]
         [Validation(Required=false)]
         public long? VehicleBudget { get; set; }

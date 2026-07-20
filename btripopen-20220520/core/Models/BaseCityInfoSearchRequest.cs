@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class BaseCityInfoSearchRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>杭州</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>

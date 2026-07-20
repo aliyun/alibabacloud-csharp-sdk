@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceRuleDeleteShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("del_all")]
         [Validation(Required=false)]
         public bool? DelAll { get; set; }
@@ -19,6 +23,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340049</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]

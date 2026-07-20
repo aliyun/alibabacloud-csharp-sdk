@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public int? MailBillDate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }

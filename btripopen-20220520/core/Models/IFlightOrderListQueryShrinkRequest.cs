@@ -21,18 +21,34 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BookerIdShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>yyyy-MM-dd HH:mm:ss</para>
+        /// </summary>
         [NameInMap("end_date")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("page_size")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CAESBgoEIgIIABgAIhkKFwMSAAAAMUw4ZGViODFlYmM3MYzM4</para>
+        /// </summary>
         [NameInMap("scroll_id")]
         [Validation(Required=false)]
         public string ScrollId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>yyyy-MM-dd HH:mm:ss</para>
+        /// </summary>
         [NameInMap("start_date")]
         [Validation(Required=false)]
         public string StartDate { get; set; }

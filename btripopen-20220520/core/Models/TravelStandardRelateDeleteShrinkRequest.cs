@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TravelStandardRelateDeleteShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("from_group")]
         [Validation(Required=false)]
         public bool? FromGroup { get; set; }
@@ -19,6 +23,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6523763</para>
         /// </summary>
         [NameInMap("rule_id")]
         [Validation(Required=false)]

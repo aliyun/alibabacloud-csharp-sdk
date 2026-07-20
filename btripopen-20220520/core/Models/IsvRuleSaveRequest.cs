@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IsvRuleSaveRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("apply_need")]
         [Validation(Required=false)]
         public bool? ApplyNeed { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>authorizedPerson</para>
         /// </summary>
         [NameInMap("book_type")]
         [Validation(Required=false)]
@@ -26,6 +33,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public class IsvRuleSaveRequestBookuserList : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123</para>
             /// </summary>
             [NameInMap("entity_id")]
             [Validation(Required=false)]
@@ -33,6 +43,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("entity_type")]
             [Validation(Required=false)]
@@ -40,12 +53,19 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("rule_need")]
         [Validation(Required=false)]
         public bool? RuleNeed { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
@@ -53,6 +73,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

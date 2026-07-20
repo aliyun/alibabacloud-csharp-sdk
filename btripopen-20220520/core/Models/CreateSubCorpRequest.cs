@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class CreateSubCorpRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>corp123</para>
         /// </summary>
         [NameInMap("outer_corp_id")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试企业</para>
         /// </summary>
         [NameInMap("outer_corp_name")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123</para>
         /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]

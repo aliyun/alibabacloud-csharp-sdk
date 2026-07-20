@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class TrainStopoverSearchRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>重庆西</para>
         /// </summary>
         [NameInMap("arr_station")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>巫山站</para>
         /// </summary>
         [NameInMap("dep_station")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2024-05-08</para>
         /// </summary>
         [NameInMap("train_date")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>k2345</para>
         /// </summary>
         [NameInMap("train_no")]
         [Validation(Required=false)]

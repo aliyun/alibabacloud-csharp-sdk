@@ -13,14 +13,26 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string OrgEntitiesShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>projectabc</para>
+        /// </summary>
         [NameInMap("out_project_id")]
         [Validation(Required=false)]
         public string OutProjectId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("project_id")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("remove_all")]
         [Validation(Required=false)]
         public bool? RemoveAll { get; set; }

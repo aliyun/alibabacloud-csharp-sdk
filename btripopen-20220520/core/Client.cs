@@ -39,8 +39,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>换取accessToken接口</para>
+        /// <para>This operation has been discontinued (existing enterprise users are not affected).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting now, when calling enterprise data, you only need to pass in:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">corpToken</a>: Applicable for regular enterprises to obtain travel data within their own enterprise.</description></item>
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4210653">groupCorpToken</a>: Applicable for group enterprises to obtain data of the parent enterprise or subsidiary enterprises.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccessTokenRequest
@@ -85,8 +94,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>换取accessToken接口</para>
+        /// <para>This operation has been discontinued (existing enterprise users are not affected).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting now, when calling enterprise data, you only need to pass in:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">corpToken</a>: Applicable for regular enterprises to obtain travel data within their own enterprise.</description></item>
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4210653">groupCorpToken</a>: Applicable for group enterprises to obtain data of the parent enterprise or subsidiary enterprises.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccessTokenRequest
@@ -131,8 +149,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>换取accessToken接口</para>
+        /// <para>This operation has been discontinued (existing enterprise users are not affected).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting now, when calling enterprise data, you only need to pass in:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">corpToken</a>: Applicable for regular enterprises to obtain travel data within their own enterprise.</description></item>
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4210653">groupCorpToken</a>: Applicable for group enterprises to obtain data of the parent enterprise or subsidiary enterprises.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccessTokenRequest
@@ -150,8 +177,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>换取accessToken接口</para>
+        /// <para>This operation has been discontinued (existing enterprise users are not affected).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting now, when calling enterprise data, you only need to pass in:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">corpToken</a>: Applicable for regular enterprises to obtain travel data within their own enterprise.</description></item>
+        /// <item><description><a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4210653">groupCorpToken</a>: Applicable for group enterprises to obtain data of the parent enterprise or subsidiary enterprises.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AccessTokenRequest
@@ -171,6 +207,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>创建企业部门</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddDepartmentRequest
@@ -245,6 +290,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// AddDepartmentRequest
         /// </param>
@@ -318,6 +372,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddDepartmentRequest
         /// </param>
@@ -337,6 +400,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AddDepartmentRequest
         /// </param>
@@ -353,8 +425,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加员工</para>
+        /// <para>Synchronizes employee information to Alibaba Business Travel. This operation is applicable to scenarios such as employee onboarding and cross-system employee data transfer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the <b>Organization Personnel Synchronization</b> application permission. If you do not have the permission, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                       </description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// <item><description>Frequency limit: 800 calls per minute, 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddEmployeeRequest
@@ -522,8 +603,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加员工</para>
+        /// <para>Synchronizes employee information to Alibaba Business Travel. This operation is applicable to scenarios such as employee onboarding and cross-system employee data transfer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the <b>Organization Personnel Synchronization</b> application permission. If you do not have the permission, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                       </description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// <item><description>Frequency limit: 800 calls per minute, 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddEmployeeRequest
@@ -691,8 +781,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加员工</para>
+        /// <para>Synchronizes employee information to Alibaba Business Travel. This operation is applicable to scenarios such as employee onboarding and cross-system employee data transfer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the <b>Organization Personnel Synchronization</b> application permission. If you do not have the permission, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                       </description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// <item><description>Frequency limit: 800 calls per minute, 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddEmployeeRequest
@@ -710,8 +809,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加员工</para>
+        /// <para>Synchronizes employee information to Alibaba Business Travel. This operation is applicable to scenarios such as employee onboarding and cross-system employee data transfer.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the <b>Organization Personnel Synchronization</b> application permission. If you do not have the permission, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                       </description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// <item><description>Frequency limit: 800 calls per minute, 40 calls per second.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddEmployeeRequest
@@ -729,8 +837,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增企业自定义角色下人员</para>
+        /// <para>Adds members in bulk to a custom enterprise role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, complete the application for permissions related to organization member synchronization. If you have not done so, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application flow</a> to complete the related operations.                                                                                     </description></item>
+        /// <item><description>When calling this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain <c>app_key</c>, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddEmployeesToCustomRoleRequest
@@ -794,8 +910,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增企业自定义角色下人员</para>
+        /// <para>Adds members in bulk to a custom enterprise role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, complete the application for permissions related to organization member synchronization. If you have not done so, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application flow</a> to complete the related operations.                                                                                     </description></item>
+        /// <item><description>When calling this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain <c>app_key</c>, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddEmployeesToCustomRoleRequest
@@ -859,8 +983,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增企业自定义角色下人员</para>
+        /// <para>Adds members in bulk to a custom enterprise role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, complete the application for permissions related to organization member synchronization. If you have not done so, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application flow</a> to complete the related operations.                                                                                     </description></item>
+        /// <item><description>When calling this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain <c>app_key</c>, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddEmployeesToCustomRoleRequest
@@ -878,8 +1010,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新增企业自定义角色下人员</para>
+        /// <para>Adds members in bulk to a custom enterprise role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, complete the application for permissions related to organization member synchronization. If you have not done so, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application flow</a> to complete the related operations.                                                                                     </description></item>
+        /// <item><description>When calling this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain <c>app_key</c>, refer to: <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddEmployeesToCustomRoleRequest
@@ -897,8 +1037,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增发票抬头适用人员</para>
+        /// <para>Adds applicable personnel to an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds applicable personnel information to an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddInvoiceEntityRequest
@@ -962,8 +1111,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增发票抬头适用人员</para>
+        /// <para>Adds applicable personnel to an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds applicable personnel information to an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddInvoiceEntityRequest
@@ -1027,8 +1185,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增发票抬头适用人员</para>
+        /// <para>Adds applicable personnel to an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds applicable personnel information to an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddInvoiceEntityRequest
@@ -1046,8 +1213,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增发票抬头适用人员</para>
+        /// <para>Adds applicable personnel to an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds applicable personnel information to an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddInvoiceEntityRequest
@@ -1065,8 +1241,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增项目负责人</para>
+        /// <para>Adds project managers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, apply for the application permissions related to <b>Cost Attribution</b>. If you do not have the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddProjectManagerRequest
@@ -1134,8 +1318,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增项目负责人</para>
+        /// <para>Adds project managers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, apply for the application permissions related to <b>Cost Attribution</b>. If you do not have the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddProjectManagerRequest
@@ -1203,8 +1395,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增项目负责人</para>
+        /// <para>Adds project managers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, apply for the application permissions related to <b>Cost Attribution</b>. If you do not have the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddProjectManagerRequest
@@ -1222,8 +1422,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增项目负责人</para>
+        /// <para>Adds project managers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, apply for the application permissions related to <b>Cost Attribution</b>. If you do not have the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a required parameter in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddProjectManagerRequest
@@ -1241,8 +1449,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商旅功能页跳转</para>
+        /// <para>Redirects to a business travel feature page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the permissions required for <b>business travel feature page redirection</b>. If you have not obtained the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.</description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressGetRequest
@@ -1368,8 +1584,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商旅功能页跳转</para>
+        /// <para>Redirects to a business travel feature page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the permissions required for <b>business travel feature page redirection</b>. If you have not obtained the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.</description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressGetRequest
@@ -1495,8 +1719,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商旅功能页跳转</para>
+        /// <para>Redirects to a business travel feature page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the permissions required for <b>business travel feature page redirection</b>. If you have not obtained the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.</description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressGetRequest
@@ -1514,8 +1746,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>商旅功能页跳转</para>
+        /// <para>Redirects to a business travel feature page.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this operation, apply for the permissions required for <b>business travel feature page redirection</b>. If you have not obtained the permissions, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">Obtain application permissions</a> to complete the required steps.</description></item>
+        /// <item><description>When you invoke this operation over HTTP, include <c>app_key</c> as a <b>required parameter</b> in the request URL. For information about how to obtain the <c>app_key</c>, refer to <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">Application basic information - Application credentials</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddressGetRequest
@@ -1535,6 +1775,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询机场数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机场数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// AirportSearchRequest
@@ -1595,6 +1844,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机场数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机场数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AirportSearchRequest
         /// </param>
@@ -1654,6 +1912,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机场数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机场数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AirportSearchRequest
         /// </param>
@@ -1673,6 +1940,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机场数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机场数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AirportSearchRequest
         /// </param>
@@ -1691,6 +1967,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>全量查询商旅城市行政区划编码信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以全量查询商旅城市行政区划编码信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="headers">
         /// AllBaseCityInfoQueryHeaders
@@ -1737,6 +2022,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>全量查询商旅城市行政区划编码信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以全量查询商旅城市行政区划编码信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// AllBaseCityInfoQueryHeaders
         /// </param>
@@ -1782,6 +2076,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>全量查询商旅城市行政区划编码信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以全量查询商旅城市行政区划编码信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <returns>
         /// AllBaseCityInfoQueryResponse
         /// </returns>
@@ -1797,6 +2100,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>全量查询商旅城市行政区划编码信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以全量查询商旅城市行政区划编码信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <returns>
         /// AllBaseCityInfoQueryResponse
         /// </returns>
@@ -1811,6 +2123,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>新建出差审批单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>出差审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ApplyAddRequest
@@ -2061,6 +2381,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新建出差审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>出差审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ApplyAddRequest
         /// </param>
@@ -2310,6 +2638,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新建出差审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>出差审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyAddRequest
         /// </param>
@@ -2329,6 +2665,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新建出差审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>出差审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyAddRequest
         /// </param>
@@ -2347,6 +2691,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新出差审批单（状态）</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单状态权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyApproveRequest
@@ -2427,6 +2780,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新出差审批单（状态）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单状态权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyApproveRequest
         /// </param>
@@ -2506,6 +2868,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新出差审批单（状态）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单状态权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyApproveRequest
         /// </param>
@@ -2525,6 +2896,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新出差审批单（状态）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单状态权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyApproveRequest
         /// </param>
@@ -2543,6 +2923,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>外部审批节点状态同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同步外部审批节点状态</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通商旅报销权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ApplyExternalNodeStatusUpdateRequest
@@ -2613,6 +3002,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>外部审批节点状态同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同步外部审批节点状态</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通商旅报销权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ApplyExternalNodeStatusUpdateRequest
         /// </param>
@@ -2682,6 +3080,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>外部审批节点状态同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同步外部审批节点状态</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通商旅报销权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyExternalNodeStatusUpdateRequest
         /// </param>
@@ -2701,6 +3108,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>外部审批节点状态同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同步外部审批节点状态</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通商旅报销权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyExternalNodeStatusUpdateRequest
         /// </param>
@@ -2719,6 +3135,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>申请发票</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以按账期维度申请发票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ApplyInvoiceTaskRequest
@@ -2785,6 +3211,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>申请发票</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以按账期维度申请发票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ApplyInvoiceTaskRequest
         /// </param>
@@ -2850,6 +3286,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>申请发票</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以按账期维度申请发票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyInvoiceTaskRequest
         /// </param>
@@ -2869,6 +3315,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>申请发票</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以按账期维度申请发票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyInvoiceTaskRequest
         /// </param>
@@ -2887,6 +3343,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询出差审批单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取出差审批单列表数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyListQueryRequest
@@ -2987,6 +3452,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询出差审批单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取出差审批单列表数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyListQueryRequest
         /// </param>
@@ -3086,6 +3560,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询出差审批单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取出差审批单列表数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyListQueryRequest
         /// </param>
@@ -3105,6 +3588,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询出差审批单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取出差审批单列表数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyListQueryRequest
         /// </param>
@@ -3123,6 +3615,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新出差审批单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ApplyModifyRequest
@@ -3365,6 +3866,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新出差审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ApplyModifyRequest
         /// </param>
@@ -3606,6 +4116,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新出差审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyModifyRequest
         /// </param>
@@ -3625,6 +4144,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新出差审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyModifyRequest
         /// </param>
@@ -3643,6 +4171,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询出差审批单详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询出差审批单详情信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyQueryRequest
@@ -3715,6 +4252,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询出差审批单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询出差审批单详情信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyQueryRequest
         /// </param>
@@ -3786,6 +4332,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询出差审批单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询出差审批单详情信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyQueryRequest
         /// </param>
@@ -3805,6 +4360,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询出差审批单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询出差审批单详情信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通出差审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyQueryRequest
         /// </param>
@@ -3823,6 +4387,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>执行审批任务</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同意\拒绝审批任务。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                         </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ApplyTripTaskExecuteRequest
@@ -3899,6 +4472,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>执行审批任务</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同意\拒绝审批任务。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                         </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyTripTaskExecuteRequest
         /// </param>
@@ -3974,6 +4556,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>执行审批任务</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同意\拒绝审批任务。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                         </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyTripTaskExecuteRequest
         /// </param>
@@ -3993,6 +4584,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>执行审批任务</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以同意\拒绝审批任务。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                         </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ApplyTripTaskExecuteRequest
         /// </param>
@@ -4011,6 +4611,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>搜索国内/国际（港澳台）城市基础行政区划数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>基础数据集</b>相关应用权限的申请。若无，请参见：获取<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">应用权限</a>完成相关操作。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BaseCityInfoSearchRequest
@@ -4071,6 +4679,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>搜索国内/国际（港澳台）城市基础行政区划数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>基础数据集</b>相关应用权限的申请。若无，请参见：获取<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">应用权限</a>完成相关操作。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BaseCityInfoSearchRequest
         /// </param>
@@ -4130,6 +4746,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>搜索国内/国际（港澳台）城市基础行政区划数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>基础数据集</b>相关应用权限的申请。若无，请参见：获取<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">应用权限</a>完成相关操作。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BaseCityInfoSearchRequest
         /// </param>
@@ -4149,6 +4773,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>搜索国内/国际（港澳台）城市基础行政区划数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>基础数据集</b>相关应用权限的申请。若无，请参见：获取<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">应用权限</a>完成相关操作。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-access-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/accesstoken-application-access-credential?handbookId=development-support">应用访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BaseCityInfoSearchRequest
         /// </param>
@@ -4167,6 +4799,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>批量/单个查询部门</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchQueryDepartmentRequest
@@ -4235,6 +4875,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量/单个查询部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchQueryDepartmentRequest
         /// </param>
@@ -4302,6 +4950,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量/单个查询部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BatchQueryDepartmentRequest
         /// </param>
@@ -4320,6 +4976,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>批量/单个查询部门</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BatchQueryDepartmentRequest
@@ -4532,6 +5196,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>商旅账单内容修改</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通过本接口对账单字段进行调整后，需调用 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060179">MonthBillConfirm</a> 接口进行调整确认。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BtripBillInfoAdjustRequest
         /// </param>
@@ -4606,6 +5279,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>商旅账单内容修改</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通过本接口对账单字段进行调整后，需调用 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060179">MonthBillConfirm</a> 接口进行调整确认。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BtripBillInfoAdjustRequest
@@ -4682,6 +5364,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>商旅账单内容修改</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通过本接口对账单字段进行调整后，需调用 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060179">MonthBillConfirm</a> 接口进行调整确认。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// BtripBillInfoAdjustRequest
         /// </param>
@@ -4700,6 +5391,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>商旅账单内容修改</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通过本接口对账单字段进行调整后，需调用 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060179">MonthBillConfirm</a> 接口进行调整确认。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BtripBillInfoAdjustRequest
@@ -5060,6 +5760,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新市内用车审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的市内用车审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改市内用车审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarApplyModifyRequest
         /// </param>
@@ -5130,6 +5839,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新市内用车审批单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的市内用车审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改市内用车审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CarApplyModifyRequest
@@ -5202,6 +5920,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新市内用车审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的市内用车审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改市内用车审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarApplyModifyRequest
         /// </param>
@@ -5221,6 +5948,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新市内用车审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业下的市内用车审批单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅修改市内用车审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarApplyModifyRequest
         /// </param>
@@ -5239,6 +5975,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询市内用车审批单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询市内用车申请单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通市内用车审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CarApplyQueryRequest
@@ -5315,6 +6060,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询市内用车审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询市内用车申请单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通市内用车审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarApplyQueryRequest
         /// </param>
@@ -5390,6 +6144,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询市内用车审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询市内用车申请单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通市内用车审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarApplyQueryRequest
         /// </param>
@@ -5409,6 +6172,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询市内用车审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询市内用车申请单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通市内用车审批单权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarApplyQueryRequest
         /// </param>
@@ -5427,6 +6199,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询用车记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CarBillSettlementQueryRequest
@@ -5523,6 +6305,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用车记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarBillSettlementQueryRequest
         /// </param>
@@ -5618,6 +6410,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用车记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarBillSettlementQueryRequest
         /// </param>
@@ -5637,6 +6439,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用车记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarBillSettlementQueryRequest
         /// </param>
@@ -5655,6 +6467,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询用车订单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CarOrderListQueryRequest
@@ -5751,6 +6572,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用车订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarOrderListQueryRequest
         /// </param>
@@ -5846,6 +6676,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用车订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarOrderListQueryRequest
         /// </param>
@@ -5865,6 +6704,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用车订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarOrderListQueryRequest
         /// </param>
@@ -5883,6 +6731,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>用车订单查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CarOrderQueryRequest
@@ -5943,6 +6800,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>用车订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarOrderQueryRequest
         /// </param>
@@ -6002,6 +6868,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>用车订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarOrderQueryRequest
         /// </param>
@@ -6021,6 +6896,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>用车订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的用车订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CarOrderQueryRequest
         /// </param>
@@ -6037,8 +6921,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业用车场景</para>
+        /// <para>Queries enterprise car service scenario templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries enterprise car service scenario templates.</para>
+        /// <ol>
+        /// <item><description>To use this operation, enable business management permissions in your application. For the permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="headers">
         /// CarSceneQueryHeaders
@@ -6082,8 +6975,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业用车场景</para>
+        /// <para>Queries enterprise car service scenario templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries enterprise car service scenario templates.</para>
+        /// <ol>
+        /// <item><description>To use this operation, enable business management permissions in your application. For the permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="headers">
         /// CarSceneQueryHeaders
@@ -6127,8 +7029,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业用车场景</para>
+        /// <para>Queries enterprise car service scenario templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries enterprise car service scenario templates.</para>
+        /// <ol>
+        /// <item><description>To use this operation, enable business management permissions in your application. For the permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <returns>
         /// CarSceneQueryResponse
@@ -6142,8 +7053,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业用车场景</para>
+        /// <para>Queries enterprise car service scenario templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries enterprise car service scenario templates.</para>
+        /// <ol>
+        /// <item><description>To use this operation, enable business management permissions in your application. For the permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-corp-token) in the request header. For information about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <returns>
         /// CarSceneQueryResponse
@@ -6159,6 +7079,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>渠道商创建企业</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成阿里商旅渠道伙伴身份认证。若无，请<a href="https://xapork.aliwork.com/o/Channel">点击此处</a>前往认证。</description></item>
+        /// <item><description>调用本接口前，请完成<b>企业账户</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>企业注册成功后,会向管理员发送激活短信，激活成功后即可登录阿里商旅使用相关功能。</description></item>
+        /// <item><description>渠道伙伴每日新增对接企业数量上限为 20。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChannelCorpCreateRequest
@@ -6263,6 +7194,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>渠道商创建企业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成阿里商旅渠道伙伴身份认证。若无，请<a href="https://xapork.aliwork.com/o/Channel">点击此处</a>前往认证。</description></item>
+        /// <item><description>调用本接口前，请完成<b>企业账户</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>企业注册成功后,会向管理员发送激活短信，激活成功后即可登录阿里商旅使用相关功能。</description></item>
+        /// <item><description>渠道伙伴每日新增对接企业数量上限为 20。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ChannelCorpCreateRequest
         /// </param>
@@ -6366,6 +7308,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>渠道商创建企业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成阿里商旅渠道伙伴身份认证。若无，请<a href="https://xapork.aliwork.com/o/Channel">点击此处</a>前往认证。</description></item>
+        /// <item><description>调用本接口前，请完成<b>企业账户</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>企业注册成功后,会向管理员发送激活短信，激活成功后即可登录阿里商旅使用相关功能。</description></item>
+        /// <item><description>渠道伙伴每日新增对接企业数量上限为 20。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ChannelCorpCreateRequest
         /// </param>
@@ -6385,6 +7338,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>渠道商创建企业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成阿里商旅渠道伙伴身份认证。若无，请<a href="https://xapork.aliwork.com/o/Channel">点击此处</a>前往认证。</description></item>
+        /// <item><description>调用本接口前，请完成<b>企业账户</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>企业注册成功后,会向管理员发送激活短信，激活成功后即可登录阿里商旅使用相关功能。</description></item>
+        /// <item><description>渠道伙伴每日新增对接企业数量上限为 20。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ChannelCorpCreateRequest
         /// </param>
@@ -6403,6 +7367,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询行政区划（市，区）基础数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询行政区划（市，区）基础数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CitySearchRequest
@@ -6459,6 +7432,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询行政区划（市，区）基础数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询行政区划（市，区）基础数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CitySearchRequest
         /// </param>
@@ -6514,6 +7496,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询行政区划（市，区）基础数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询行政区划（市，区）基础数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CitySearchRequest
         /// </param>
@@ -6533,6 +7524,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询行政区划（市，区）基础数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询行政区划（市，区）基础数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CitySearchRequest
         /// </param>
@@ -6551,6 +7551,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询退改审批信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询退改审批信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CommonApplyQueryRequest
@@ -6619,6 +7628,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询退改审批信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询退改审批信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CommonApplyQueryRequest
         /// </param>
@@ -6686,6 +7704,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询退改审批信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询退改审批信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CommonApplyQueryRequest
         /// </param>
@@ -6705,6 +7732,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询退改审批信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询退改审批信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CommonApplyQueryRequest
         /// </param>
@@ -6723,6 +7759,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>退改审批结果同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取退改审批结果同步。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CommonApplySyncRequest
@@ -6799,6 +7844,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>退改审批结果同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取退改审批结果同步。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CommonApplySyncRequest
         /// </param>
@@ -6874,6 +7928,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>退改审批结果同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取退改审批结果同步。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CommonApplySyncRequest
         /// </param>
@@ -6892,6 +7955,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>退改审批结果同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取退改审批结果同步。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通退改审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CommonApplySyncRequest
@@ -7060,6 +8132,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询服务商机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorFlightBillSettlementQueryRequest
         /// </param>
@@ -7158,6 +8238,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询服务商机票记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CooperatorFlightBillSettlementQueryRequest
@@ -7258,6 +8346,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询服务商机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorFlightBillSettlementQueryRequest
         /// </param>
@@ -7277,6 +8373,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询服务商机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorFlightBillSettlementQueryRequest
         /// </param>
@@ -7295,6 +8399,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询服务商酒店记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CooperatorHotelBillSettlementQueryRequest
@@ -7395,6 +8507,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询服务商酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorHotelBillSettlementQueryRequest
         /// </param>
@@ -7494,6 +8614,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询服务商酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorHotelBillSettlementQueryRequest
         /// </param>
@@ -7513,6 +8641,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询服务商酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorHotelBillSettlementQueryRequest
         /// </param>
@@ -7531,6 +8667,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单事件推送</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CooperatorHotelEventPushRequest
@@ -7611,6 +8753,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单事件推送</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorHotelEventPushRequest
         /// </param>
@@ -7690,6 +8838,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单事件推送</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorHotelEventPushRequest
         /// </param>
@@ -7709,6 +8863,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单事件推送</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorHotelEventPushRequest
         /// </param>
@@ -7727,6 +8887,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>个人支付结果推送</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商<para>
+        /// 实现方：中洲平台</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CooperatorSyncPayStatusRequest
@@ -7799,6 +8965,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>个人支付结果推送</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商<para>
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorSyncPayStatusRequest
         /// </param>
@@ -7870,6 +9042,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>个人支付结果推送</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商<para>
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CooperatorSyncPayStatusRequest
         /// </param>
@@ -7888,6 +9066,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>个人支付结果推送</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商<para>
+        /// 实现方：中洲平台</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CooperatorSyncPayStatusRequest
@@ -8010,6 +9194,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>换取CorpToken接口</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求方法：GET </description></item>
+        /// <item><description>请求地址：<a href="https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take">https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take</a></description></item>
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CorpTokenRequest
         /// </param>
@@ -8072,6 +9268,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>换取CorpToken接口</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求方法：GET </description></item>
+        /// <item><description>请求地址：<a href="https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take">https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take</a></description></item>
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CorpTokenRequest
@@ -8136,6 +9344,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>换取CorpToken接口</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求方法：GET </description></item>
+        /// <item><description>请求地址：<a href="https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take">https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take</a></description></item>
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CorpTokenRequest
         /// </param>
@@ -8155,6 +9375,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>换取CorpToken接口</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>请求方法：GET </description></item>
+        /// <item><description>请求地址：<a href="https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take">https://btripopen.alibtrip.com/api/btrip-open-auth/v1/corp-token/action/take</a></description></item>
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CorpTokenRequest
         /// </param>
@@ -8173,6 +9405,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除成本中心</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CostCenterDeleteRequest
@@ -8229,6 +9470,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterDeleteRequest
         /// </param>
@@ -8284,6 +9534,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterDeleteRequest
         /// </param>
@@ -8303,6 +9562,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterDeleteRequest
         /// </param>
@@ -8321,6 +9589,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>修改成本中心</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CostCenterModifyRequest
@@ -8397,6 +9674,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterModifyRequest
         /// </param>
@@ -8472,6 +9758,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterModifyRequest
         /// </param>
@@ -8491,6 +9786,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterModifyRequest
         /// </param>
@@ -8509,6 +9813,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查看成本中心</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// CostCenterQueryRequest
@@ -8581,6 +9894,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查看成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterQueryRequest
         /// </param>
@@ -8652,6 +9974,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查看成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterQueryRequest
         /// </param>
@@ -8671,6 +10002,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查看成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的成本中心。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterQueryRequest
         /// </param>
@@ -8689,6 +10029,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保存成本中心</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CostCenterSaveRequest
@@ -8765,6 +10113,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保存成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterSaveRequest
         /// </param>
@@ -8840,6 +10196,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保存成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterSaveRequest
         /// </param>
@@ -8859,6 +10223,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保存成本中心</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CostCenterSaveRequest
         /// </param>
@@ -8877,6 +10249,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>创建企业自定义角色</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>完成角色创建后，需要通过<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5020396">创建企业员工</a>接口或<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5018703">修改企业员工信息</a>接口中的<c>custom_role_code_list</c>字段进行员工与角色的绑定。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCustomRoleRequest
@@ -8937,6 +10318,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>完成角色创建后，需要通过<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5020396">创建企业员工</a>接口或<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5018703">修改企业员工信息</a>接口中的<c>custom_role_code_list</c>字段进行员工与角色的绑定。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateCustomRoleRequest
         /// </param>
@@ -8996,6 +10386,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>完成角色创建后，需要通过<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5020396">创建企业员工</a>接口或<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5018703">修改企业员工信息</a>接口中的<c>custom_role_code_list</c>字段进行员工与角色的绑定。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateCustomRoleRequest
         /// </param>
@@ -9015,6 +10414,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>完成角色创建后，需要通过<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5020396">创建企业员工</a>接口或<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=5018703">修改企业员工信息</a>接口中的<c>custom_role_code_list</c>字段进行员工与角色的绑定。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateCustomRoleRequest
         /// </param>
@@ -9033,6 +10441,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>创建子企业</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateSubCorpRequest
@@ -9097,6 +10514,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建子企业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSubCorpRequest
         /// </param>
@@ -9160,6 +10586,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建子企业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSubCorpRequest
         /// </param>
@@ -9179,6 +10614,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>创建子企业</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSubCorpRequest
         /// </param>
@@ -9197,6 +10641,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除企业自定义角色</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCustomRoleRequest
@@ -9253,6 +10705,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteCustomRoleRequest
         /// </param>
@@ -9308,6 +10768,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteCustomRoleRequest
         /// </param>
@@ -9327,6 +10795,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteCustomRoleRequest
         /// </param>
@@ -9345,6 +10821,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除企业部门</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
@@ -9401,6 +10886,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
         /// </param>
@@ -9456,6 +10950,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
         /// </param>
@@ -9475,6 +10978,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
         /// </param>
@@ -9493,6 +11005,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>批量删除企业自定义角色下人员</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteEmployeesFromCustomRoleRequest
@@ -9559,6 +11079,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量删除企业自定义角色下人员</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DeleteEmployeesFromCustomRoleRequest
         /// </param>
@@ -9624,6 +11152,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量删除企业自定义角色下人员</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteEmployeesFromCustomRoleRequest
         /// </param>
@@ -9643,6 +11179,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量删除企业自定义角色下人员</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteEmployeesFromCustomRoleRequest
         /// </param>
@@ -9659,8 +11203,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除发票抬头适用人员</para>
+        /// <para>Deletes applicable personnel from an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes applicable personnel information from an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For details about the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For details about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteInvoiceEntityRequest
@@ -9728,8 +11281,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除发票抬头适用人员</para>
+        /// <para>Deletes applicable personnel from an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes applicable personnel information from an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For details about the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For details about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteInvoiceEntityRequest
@@ -9797,8 +11359,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除发票抬头适用人员</para>
+        /// <para>Deletes applicable personnel from an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes applicable personnel information from an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For details about the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For details about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteInvoiceEntityRequest
@@ -9816,8 +11387,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除发票抬头适用人员</para>
+        /// <para>Deletes applicable personnel from an invoice header.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes applicable personnel information from an invoice header.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the cost attribution configuration permission in your application. For details about the data permission application process, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the enterprise access credential (x-acs-btrip-so-corp-token) in the request header. For details about how to obtain the enterprise access credential, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">Enterprise access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteInvoiceEntityRequest
@@ -9837,6 +11417,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>同步外部平台部门信息至商旅内部</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DepartmentSaveRequest
@@ -9899,6 +11487,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>同步外部平台部门信息至商旅内部</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// DepartmentSaveRequest
         /// </param>
@@ -9960,6 +11556,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>同步外部平台部门信息至商旅内部</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DepartmentSaveRequest
         /// </param>
@@ -9979,6 +11583,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>同步外部平台部门信息至商旅内部</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DepartmentSaveRequest
         /// </param>
@@ -9997,6 +11609,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>批量申请电子行程单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以批量申请开票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ElectronicItineraryBatchApplyRequest
@@ -10063,6 +11685,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量申请电子行程单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以批量申请开票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ElectronicItineraryBatchApplyRequest
         /// </param>
@@ -10128,6 +11760,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量申请电子行程单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以批量申请开票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ElectronicItineraryBatchApplyRequest
         /// </param>
@@ -10147,6 +11789,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>批量申请电子行程单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以批量申请开票。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ElectronicItineraryBatchApplyRequest
         /// </param>
@@ -10165,6 +11817,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>获取电子行程单申请结果</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以根据批次号查询电子行程单开具结果。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ElectronicItineraryGetApplyResultRequest
@@ -10221,6 +11883,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取电子行程单申请结果</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以根据批次号查询电子行程单开具结果。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ElectronicItineraryGetApplyResultRequest
         /// </param>
@@ -10276,6 +11948,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取电子行程单申请结果</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以根据批次号查询电子行程单开具结果。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ElectronicItineraryGetApplyResultRequest
         /// </param>
@@ -10295,6 +11977,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取电子行程单申请结果</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以根据批次号查询电子行程单开具结果。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程接口权限申请流程。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ElectronicItineraryGetApplyResultRequest
         /// </param>
@@ -10313,6 +12005,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>增加成本中心人员信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// EntityAddRequest
@@ -10379,6 +12080,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>增加成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// EntityAddRequest
         /// </param>
@@ -10444,6 +12154,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>增加成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EntityAddRequest
         /// </param>
@@ -10463,6 +12182,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>增加成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EntityAddRequest
         /// </param>
@@ -10481,6 +12209,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除成本中心人员信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// EntityDeleteRequest
@@ -10553,6 +12290,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// EntityDeleteRequest
         /// </param>
@@ -10624,6 +12370,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EntityDeleteRequest
         /// </param>
@@ -10643,6 +12398,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EntityDeleteRequest
         /// </param>
@@ -10661,6 +12425,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>设置成本中心人员信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/EntityAdd?handbookId=development-support">新增成本中心可用范围</a>和<a href="/#/document/server/EntityDelete?handbookId=development-support">删除成本中心可用范围</a>
+        /// 使用该接口可以更新对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// EntitySetRequest
@@ -10727,6 +12501,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>设置成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/EntityAdd?handbookId=development-support">新增成本中心可用范围</a>和<a href="/#/document/server/EntityDelete?handbookId=development-support">删除成本中心可用范围</a>
+        /// 使用该接口可以更新对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// EntitySetRequest
         /// </param>
@@ -10792,6 +12576,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>设置成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/EntityAdd?handbookId=development-support">新增成本中心可用范围</a>和<a href="/#/document/server/EntityDelete?handbookId=development-support">删除成本中心可用范围</a>
+        /// 使用该接口可以更新对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EntitySetRequest
         /// </param>
@@ -10811,6 +12605,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>设置成本中心人员信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/EntityAdd?handbookId=development-support">新增成本中心可用范围</a>和<a href="/#/document/server/EntityDelete?handbookId=development-support">删除成本中心可用范围</a>
+        /// 使用该接口可以更新对应成本中心的人员信息。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EntitySetRequest
         /// </param>
@@ -10829,6 +12633,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>预估价格查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询预估价格。</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// EstimatedPriceQueryRequest
@@ -10913,6 +12727,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>预估价格查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询预估价格。</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EstimatedPriceQueryRequest
         /// </param>
@@ -10996,6 +12820,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>预估价格查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询预估价格。</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EstimatedPriceQueryRequest
         /// </param>
@@ -11015,6 +12849,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>预估价格查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询预估价格。</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EstimatedPriceQueryRequest
         /// </param>
@@ -11031,8 +12875,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预估价格查询v2.0</para>
+        /// <para>Queries estimated prices (version 2.0).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries estimated prices.
+        /// This is a value-added operation that requires special approval. Contact the business travel customer operations team before submitting a permission request.
+        /// To use this operation, enable the value-added service data permission in your application. For more information about the data permission application process, see the API permission application process.
+        /// To use this operation, include the enterprise call credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise call credential, see Enterprise Access Credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EstimatedPriceQueryV2Request
@@ -11106,8 +12958,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预估价格查询v2.0</para>
+        /// <para>Queries estimated prices (version 2.0).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries estimated prices.
+        /// This is a value-added operation that requires special approval. Contact the business travel customer operations team before submitting a permission request.
+        /// To use this operation, enable the value-added service data permission in your application. For more information about the data permission application process, see the API permission application process.
+        /// To use this operation, include the enterprise call credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise call credential, see Enterprise Access Credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EstimatedPriceQueryV2Request
@@ -11181,8 +13041,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预估价格查询v2.0</para>
+        /// <para>Queries estimated prices (version 2.0).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries estimated prices.
+        /// This is a value-added operation that requires special approval. Contact the business travel customer operations team before submitting a permission request.
+        /// To use this operation, enable the value-added service data permission in your application. For more information about the data permission application process, see the API permission application process.
+        /// To use this operation, include the enterprise call credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise call credential, see Enterprise Access Credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EstimatedPriceQueryV2Request
@@ -11200,8 +13068,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预估价格查询v2.0</para>
+        /// <para>Queries estimated prices (version 2.0).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries estimated prices.
+        /// This is a value-added operation that requires special approval. Contact the business travel customer operations team before submitting a permission request.
+        /// To use this operation, enable the value-added service data permission in your application. For more information about the data permission application process, see the API permission application process.
+        /// To use this operation, include the enterprise call credential (x-acs-btrip-so-corp-token) in the request header. For more information about how to obtain the enterprise call credential, see Enterprise Access Credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EstimatedPriceQueryV2Request
@@ -11221,6 +13097,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>超标审批结果同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，完成<b>超标审批</b>权限的申请，若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。</para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 形式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExceedApplySyncRequest
@@ -11297,6 +13181,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>超标审批结果同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，完成<b>超标审批</b>权限的申请，若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。</para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 形式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExceedApplySyncRequest
         /// </param>
@@ -11372,6 +13264,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>超标审批结果同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，完成<b>超标审批</b>权限的申请，若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。</para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 形式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExceedApplySyncRequest
         /// </param>
@@ -11391,6 +13291,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>超标审批结果同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，完成<b>超标审批</b>权限的申请，若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。</para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 形式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExceedApplySyncRequest
         /// </param>
@@ -11409,6 +13317,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>添加外部出行人与证件信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ExternalUserAddRequest
@@ -11499,6 +13415,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>添加外部出行人与证件信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ExternalUserAddRequest
         /// </param>
@@ -11588,6 +13512,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>添加外部出行人与证件信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExternalUserAddRequest
         /// </param>
@@ -11607,6 +13539,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>添加外部出行人与证件信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExternalUserAddRequest
         /// </param>
@@ -11625,6 +13565,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除外部出行人</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="headers">
         /// ExternalUserDeleteHeaders
@@ -11671,6 +13619,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除外部出行人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// ExternalUserDeleteHeaders
         /// </param>
@@ -11716,6 +13672,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除外部出行人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <returns>
         /// ExternalUserDeleteResponse
         /// </returns>
@@ -11731,6 +13695,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除外部出行人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <returns>
         /// ExternalUserDeleteResponse
         /// </returns>
@@ -11745,6 +13717,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询外部出行人</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="headers">
         /// ExternalUserQueryHeaders
@@ -11791,6 +13771,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询外部出行人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// ExternalUserQueryHeaders
         /// </param>
@@ -11836,6 +13824,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询外部出行人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <returns>
         /// ExternalUserQueryResponse
         /// </returns>
@@ -11851,6 +13847,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询外部出行人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <returns>
         /// ExternalUserQueryResponse
         /// </returns>
@@ -11865,6 +13869,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>修改外部出行人与证件信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ExternalUserUpdateRequest
@@ -11947,6 +13959,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改外部出行人与证件信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// ExternalUserUpdateRequest
         /// </param>
@@ -12028,6 +14048,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改外部出行人与证件信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExternalUserUpdateRequest
         /// </param>
@@ -12047,6 +14075,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改外部出行人与证件信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExternalUserUpdateRequest
         /// </param>
@@ -12065,6 +14101,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询机票记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightBillSettlementQueryRequest
@@ -12161,6 +14207,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightBillSettlementQueryRequest
         /// </param>
@@ -12256,6 +14312,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightBillSettlementQueryRequest
         /// </param>
@@ -12275,6 +14341,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightBillSettlementQueryRequest
         /// </param>
@@ -12293,6 +14369,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班订单取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightCancelOrderRequest
@@ -12349,6 +14434,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCancelOrderRequest
         /// </param>
@@ -12404,6 +14498,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCancelOrderRequest
         /// </param>
@@ -12423,6 +14526,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCancelOrderRequest
         /// </param>
@@ -12441,6 +14553,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票订单取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightCancelOrderV2Request
@@ -12505,6 +14626,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCancelOrderV2Request
         /// </param>
@@ -12568,6 +14698,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCancelOrderV2Request
         /// </param>
@@ -12587,6 +14726,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCancelOrderV2Request
         /// </param>
@@ -12605,6 +14753,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班订单创建</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单创建。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightCreateOrderRequest
@@ -12747,6 +14904,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单创建。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightCreateOrderRequest
         /// </param>
@@ -12888,6 +15054,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单创建。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCreateOrderRequest
         /// </param>
@@ -12907,6 +15082,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单创建。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCreateOrderRequest
         /// </param>
@@ -12925,6 +15109,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票订单创建</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单创建”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightCreateOrderV2Request
@@ -13027,6 +15220,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单创建”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightCreateOrderV2Request
         /// </param>
@@ -13128,6 +15330,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单创建”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCreateOrderV2Request
         /// </param>
@@ -13147,6 +15358,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单创建”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightCreateOrderV2Request
         /// </param>
@@ -13165,6 +15385,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询飞机超标审批详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询机票超标审批单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通超标审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightExceedApplyQueryRequest
@@ -13225,6 +15454,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询飞机超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询机票超标审批单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通超标审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightExceedApplyQueryRequest
         /// </param>
@@ -13284,6 +15522,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询飞机超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询机票超标审批单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通超标审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightExceedApplyQueryRequest
         /// </param>
@@ -13303,6 +15550,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询飞机超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询机票超标审批单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通超标审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightExceedApplyQueryRequest
         /// </param>
@@ -13321,6 +15577,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询机票行程单扫描件</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机票行程单明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightItineraryScanQueryRequest
@@ -13405,6 +15671,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机票行程单扫描件</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机票行程单明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightItineraryScanQueryRequest
         /// </param>
@@ -13488,6 +15764,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机票行程单扫描件</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机票行程单明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightItineraryScanQueryRequest
         /// </param>
@@ -13507,6 +15793,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询机票行程单扫描件</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询机票行程单明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightItineraryScanQueryRequest
         /// </param>
@@ -13525,6 +15821,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班列表搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightListingSearchRequest
@@ -13597,6 +15902,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightListingSearchRequest
         /// </param>
@@ -13668,6 +15982,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightListingSearchRequest
         /// </param>
@@ -13687,6 +16010,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightListingSearchRequest
         /// </param>
@@ -13705,6 +16037,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班列表搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行“航班列表搜索”。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightListingSearchV2Request
@@ -13811,6 +16152,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行“航班列表搜索”。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightListingSearchV2Request
         /// </param>
@@ -13916,6 +16266,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行“航班列表搜索”。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightListingSearchV2Request
         /// </param>
@@ -13935,6 +16294,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行“航班列表搜索”。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightListingSearchV2Request
         /// </param>
@@ -13953,6 +16321,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightModifyApplyV2Request
@@ -14055,6 +16432,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightModifyApplyV2Request
         /// </param>
@@ -14156,6 +16542,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyApplyV2Request
         /// </param>
@@ -14175,6 +16570,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyApplyV2Request
         /// </param>
@@ -14193,6 +16597,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightModifyCancelV2Request
@@ -14265,6 +16678,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyCancelV2Request
         /// </param>
@@ -14336,6 +16758,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyCancelV2Request
         /// </param>
@@ -14355,6 +16786,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签取消”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyCancelV2Request
         /// </param>
@@ -14373,6 +16813,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签列表搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签列表搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightModifyListingSearchV2Request
@@ -14491,6 +16940,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签列表搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightModifyListingSearchV2Request
         /// </param>
@@ -14608,6 +17066,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签列表搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyListingSearchV2Request
         /// </param>
@@ -14627,6 +17094,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签列表搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyListingSearchV2Request
         /// </param>
@@ -14645,6 +17121,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票改签详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightModifyOrderDetailV2Request
@@ -14721,6 +17206,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票改签详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyOrderDetailV2Request
         /// </param>
@@ -14796,6 +17290,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票改签详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyOrderDetailV2Request
         /// </param>
@@ -14815,6 +17318,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票改签详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyOrderDetailV2Request
         /// </param>
@@ -14833,6 +17345,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签报价搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightModifyOtaSearchV2Request
@@ -14939,6 +17460,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签报价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightModifyOtaSearchV2Request
         /// </param>
@@ -15044,6 +17574,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签报价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyOtaSearchV2Request
         /// </param>
@@ -15063,6 +17602,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签报价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyOtaSearchV2Request
         /// </param>
@@ -15081,6 +17629,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightModifyPayV2Request
@@ -15167,6 +17724,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightModifyPayV2Request
         /// </param>
@@ -15252,6 +17818,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyPayV2Request
         /// </param>
@@ -15271,6 +17846,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票改签支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightModifyPayV2Request
         /// </param>
@@ -15289,6 +17873,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班订单明细信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班订单明细信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightOrderDetailInfoRequest
@@ -15345,6 +17938,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单明细信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班订单明细信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderDetailInfoRequest
         /// </param>
@@ -15400,6 +18002,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单明细信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班订单明细信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderDetailInfoRequest
         /// </param>
@@ -15419,6 +18030,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单明细信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班订单明细信息。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderDetailInfoRequest
         /// </param>
@@ -15437,6 +18057,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票订单详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightOrderDetailV2Request
@@ -15501,6 +18130,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderDetailV2Request
         /// </param>
@@ -15564,6 +18202,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderDetailV2Request
         /// </param>
@@ -15583,6 +18230,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderDetailV2Request
         /// </param>
@@ -15601,6 +18257,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国内查询机票订单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightOrderListQueryRequest
@@ -15697,6 +18362,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内查询机票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderListQueryRequest
         /// </param>
@@ -15792,6 +18466,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内查询机票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderListQueryRequest
         /// </param>
@@ -15811,6 +18494,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内查询机票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderListQueryRequest
         /// </param>
@@ -15829,6 +18521,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国内机票订单列表查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表，（支持单程、中转、往返航班）。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问地址</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightOrderListQueryV2Request
@@ -15947,6 +18648,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内机票订单列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表，（支持单程、中转、往返航班）。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问地址</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightOrderListQueryV2Request
         /// </param>
@@ -16064,6 +18774,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内机票订单列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表，（支持单程、中转、往返航班）。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问地址</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderListQueryV2Request
         /// </param>
@@ -16083,6 +18802,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内机票订单列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单列表，（支持单程、中转、往返航班）。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问地址</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderListQueryV2Request
         /// </param>
@@ -16101,6 +18829,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国内查询机票订单详情（含票信息）</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightOrderQueryRequest
@@ -16161,6 +18898,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内查询机票订单详情（含票信息）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderQueryRequest
         /// </param>
@@ -16220,6 +18966,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内查询机票订单详情（含票信息）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderQueryRequest
         /// </param>
@@ -16239,6 +18994,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国内查询机票订单详情（含票信息）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOrderQueryRequest
         /// </param>
@@ -16257,6 +19021,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询退改规则行李额</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询退改规则行李额”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightOtaItemDetailRequest
@@ -16325,6 +19098,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询退改规则行李额</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询退改规则行李额”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaItemDetailRequest
         /// </param>
@@ -16392,6 +19174,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询退改规则行李额</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询退改规则行李额”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaItemDetailRequest
         /// </param>
@@ -16411,6 +19202,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询退改规则行李额</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询退改规则行李额”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaItemDetailRequest
         /// </param>
@@ -16429,6 +19229,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班最低价搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班最低价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightOtaSearchRequest
@@ -16509,6 +19318,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班最低价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班最低价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaSearchRequest
         /// </param>
@@ -16588,6 +19406,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班最低价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班最低价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaSearchRequest
         /// </param>
@@ -16607,6 +19434,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班最低价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班最低价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaSearchRequest
         /// </param>
@@ -16625,6 +19461,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>单航班报价搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“单航班报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightOtaSearchV2Request
@@ -16715,6 +19560,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>单航班报价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“单航班报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightOtaSearchV2Request
         /// </param>
@@ -16804,6 +19658,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>单航班报价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“单航班报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaSearchV2Request
         /// </param>
@@ -16823,6 +19686,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>单航班报价搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“单航班报价搜索”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightOtaSearchV2Request
         /// </param>
@@ -16841,6 +19713,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班订单支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightPayOrderRequest
@@ -16919,6 +19800,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightPayOrderRequest
         /// </param>
@@ -16996,6 +19886,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightPayOrderRequest
         /// </param>
@@ -17015,6 +19914,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班订单支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightPayOrderRequest
         /// </param>
@@ -17033,6 +19941,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票订单支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightPayOrderV2Request
@@ -17105,6 +20022,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightPayOrderV2Request
         /// </param>
@@ -17176,6 +20102,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightPayOrderV2Request
         /// </param>
@@ -17195,6 +20130,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票订单支付”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightPayOrderV2Request
         /// </param>
@@ -17213,6 +20157,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班退票申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票退票申请</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightRefundApplyRequest
@@ -17335,6 +20288,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票退票申请</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightRefundApplyRequest
         /// </param>
@@ -17456,6 +20418,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票退票申请</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundApplyRequest
         /// </param>
@@ -17475,6 +20446,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票退票申请</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundApplyRequest
         /// </param>
@@ -17493,6 +20473,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票退票申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightRefundApplyV2Request
@@ -17603,6 +20592,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightRefundApplyV2Request
         /// </param>
@@ -17712,6 +20710,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundApplyV2Request
         /// </param>
@@ -17731,6 +20738,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票申请”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundApplyV2Request
         /// </param>
@@ -17749,6 +20765,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班退票详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班退票详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightRefundDetailRequest
@@ -17809,6 +20834,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班退票详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundDetailRequest
         /// </param>
@@ -17868,6 +20902,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班退票详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundDetailRequest
         /// </param>
@@ -17887,6 +20930,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询航班退票详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundDetailRequest
         /// </param>
@@ -17905,6 +20957,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票退票详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票退票详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightRefundDetailV2Request
@@ -17977,6 +21038,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票退票详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundDetailV2Request
         /// </param>
@@ -18048,6 +21118,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票退票详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundDetailV2Request
         /// </param>
@@ -18067,6 +21146,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询“机票退票详情”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundDetailV2Request
         /// </param>
@@ -18085,6 +21173,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票退票预计算</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票退票预计算。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightRefundPreCalRequest
@@ -18155,6 +21252,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票预计算</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票退票预计算。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightRefundPreCalRequest
         /// </param>
@@ -18224,6 +21330,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票预计算</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票退票预计算。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundPreCalRequest
         /// </param>
@@ -18243,6 +21358,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票预计算</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票退票预计算。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundPreCalRequest
         /// </param>
@@ -18261,6 +21385,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票退票费用预计算</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票费用预计算”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// FlightRefundPreCalV2Request
@@ -18351,6 +21484,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票费用预计算</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票费用预计算”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// FlightRefundPreCalV2Request
         /// </param>
@@ -18440,6 +21582,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票费用预计算</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票费用预计算”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundPreCalV2Request
         /// </param>
@@ -18459,6 +21610,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票退票费用预计算</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“机票退票费用预计算”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightRefundPreCalV2Request
         /// </param>
@@ -18477,6 +21637,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>航班列表搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FlightSearchListRequest
@@ -18585,6 +21754,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightSearchListRequest
         /// </param>
@@ -18692,6 +21870,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightSearchListRequest
         /// </param>
@@ -18711,6 +21898,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>航班列表搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FlightSearchListRequest
         /// </param>
@@ -18729,6 +21925,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询福豆记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FuPointBillSettlementQueryRequest
@@ -18829,6 +22035,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询福豆记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FuPointBillSettlementQueryRequest
         /// </param>
@@ -18928,6 +22144,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询福豆记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FuPointBillSettlementQueryRequest
         /// </param>
@@ -18947,6 +22173,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询福豆记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通<b>商旅账单数据</b>权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。app_key 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1小时 ≤记账截止时间 - 记账起始时间 ≤ 24小时。</description></item>
+        /// <item><description>记账数据的更新时机为当前时间 + 1小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FuPointBillSettlementQueryRequest
         /// </param>
@@ -18965,6 +22201,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>换取GroupCorpToken接口</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GroupCorpTokenRequest
@@ -19029,6 +22275,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>换取GroupCorpToken接口</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupCorpTokenRequest
         /// </param>
@@ -19092,6 +22348,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>换取GroupCorpToken接口</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupCorpTokenRequest
         /// </param>
@@ -19111,6 +22377,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>换取GroupCorpToken接口</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>建议您通过<b>中控服务统一处理</b>或<b>单位时间单一刷新</b>亦或通过<b>单机 Job 任务</b>的方式进行凭证获取，详细说明请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3917854">凭证获取指南</a>。</description></item>
+        /// <item><description>token 的有效时长可以从 <c>expire</c> 字段中获取，初始值为 2 小时（7200000ms）。为防止 token 失效，建议刷新间隔控制为：<b>5 分钟 ≤ 间隔 ≤ 2 小时</b>。在此间隔内刷新，上一次请求获取的 token 仍然有效。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 及 <c>app_secret</c> 作为<b>必填参数</b>传入。二者的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用凭证</a>。</description></item>
+        /// <item><description>原请求参数中的 <c>x-acs-btrip-access-token</c> 参数现<b>已作废</b>，请使用 <c>app_secret</c>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupCorpTokenRequest
         /// </param>
@@ -19129,6 +22405,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>集团部门同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请先完成部门人员同步相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GroupDepartSaveRequest
@@ -19215,6 +22499,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>集团部门同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请先完成部门人员同步相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// GroupDepartSaveRequest
         /// </param>
@@ -19300,6 +22592,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>集团部门同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请先完成部门人员同步相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupDepartSaveRequest
         /// </param>
@@ -19319,6 +22619,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>集团部门同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请先完成部门人员同步相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupDepartSaveRequest
         /// </param>
@@ -19337,6 +22645,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>集团人员同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅中多个集团子企业同步人员。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开组织人员同步权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GroupUserSaveRequest
@@ -19439,6 +22756,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>集团人员同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅中多个集团子企业同步人员。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开组织人员同步权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// GroupUserSaveRequest
         /// </param>
@@ -19540,6 +22866,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>集团人员同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅中多个集团子企业同步人员。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开组织人员同步权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupUserSaveRequest
         /// </param>
@@ -19559,6 +22894,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>集团人员同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅中多个集团子企业同步人员。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开组织人员同步权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GroupUserSaveRequest
         /// </param>
@@ -19577,6 +22921,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店起价</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店起价拉取。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelAskingPriceRequest
@@ -19683,6 +23036,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店起价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店起价拉取。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelAskingPriceRequest
         /// </param>
@@ -19788,6 +23150,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店起价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店起价拉取。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelAskingPriceRequest
         /// </param>
@@ -19807,6 +23178,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店起价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店起价拉取。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelAskingPriceRequest
         /// </param>
@@ -19825,6 +23205,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询酒店记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelBillSettlementQueryRequest
@@ -19921,6 +23311,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelBillSettlementQueryRequest
         /// </param>
@@ -20016,6 +23416,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelBillSettlementQueryRequest
         /// </param>
@@ -20035,6 +23445,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelBillSettlementQueryRequest
         /// </param>
@@ -20053,6 +23473,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店城市列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店城市列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelCityCodeListRequest
@@ -20109,6 +23538,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店城市列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店城市列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelCityCodeListRequest
         /// </param>
@@ -20164,6 +23602,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店城市列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店城市列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelCityCodeListRequest
         /// </param>
@@ -20183,6 +23630,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店城市列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店城市列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelCityCodeListRequest
         /// </param>
@@ -20201,6 +23657,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询酒店超标审批详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelExceedApplyQueryRequest
@@ -20261,6 +23726,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelExceedApplyQueryRequest
         /// </param>
@@ -20320,6 +23794,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelExceedApplyQueryRequest
         /// </param>
@@ -20339,6 +23822,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelExceedApplyQueryRequest
         /// </param>
@@ -20357,6 +23849,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店详情页报价接口(直连)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店实时报价接口</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelGoodsQueryRequest
@@ -20457,6 +23958,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店详情页报价接口(直连)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店实时报价接口</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelGoodsQueryRequest
         /// </param>
@@ -20556,6 +24066,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店详情页报价接口(直连)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店实时报价接口</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelGoodsQueryRequest
         /// </param>
@@ -20575,6 +24094,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店详情页报价接口(直连)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店实时报价接口</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelGoodsQueryRequest
         /// </param>
@@ -20593,6 +24121,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>获取酒店清单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店Id列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelIndexInfoRequest
@@ -20665,6 +24202,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取酒店清单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店Id列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelIndexInfoRequest
         /// </param>
@@ -20736,6 +24282,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取酒店清单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店Id列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelIndexInfoRequest
         /// </param>
@@ -20755,6 +24310,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取酒店清单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店Id列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelIndexInfoRequest
         /// </param>
@@ -20773,6 +24337,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单取消</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelOrderCancelRequest
@@ -20833,6 +24406,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单取消</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderCancelRequest
         /// </param>
@@ -20892,6 +24474,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单取消</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderCancelRequest
         /// </param>
@@ -20911,6 +24502,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单取消</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderCancelRequest
         /// </param>
@@ -20929,6 +24529,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单修改申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelOrderChangeApplyRequest
@@ -21007,6 +24616,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单修改申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelOrderChangeApplyRequest
         /// </param>
@@ -21084,6 +24702,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单修改申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderChangeApplyRequest
         /// </param>
@@ -21103,6 +24730,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单修改申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderChangeApplyRequest
         /// </param>
@@ -21121,6 +24757,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单修改详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelOrderChangeDetailRequest
@@ -21189,6 +24834,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单修改详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderChangeDetailRequest
         /// </param>
@@ -21256,6 +24910,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单修改详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderChangeDetailRequest
         /// </param>
@@ -21275,6 +24938,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单修改详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderChangeDetailRequest
         /// </param>
@@ -21293,6 +24965,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单创建</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelOrderCreateRequest
@@ -21467,6 +25148,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelOrderCreateRequest
         /// </param>
@@ -21640,6 +25330,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderCreateRequest
         /// </param>
@@ -21659,6 +25358,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单创建</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderCreateRequest
         /// </param>
@@ -21677,6 +25385,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单明细信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单详情</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelOrderDetailInfoRequest
@@ -21737,6 +25454,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单明细信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单详情</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderDetailInfoRequest
         /// </param>
@@ -21796,6 +25522,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单明细信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单详情</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderDetailInfoRequest
         /// </param>
@@ -21815,6 +25550,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单明细信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单详情</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderDetailInfoRequest
         /// </param>
@@ -21833,6 +25577,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>自营酒店订单查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的自营酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通阿里商旅自营-订单&amp;客票数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求参数中放入企业调用凭证数据信息（corp_token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterpris">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="headers">
         /// HotelOrderInfoQueryHeaders
@@ -21879,6 +25632,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>自营酒店订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的自营酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通阿里商旅自营-订单&amp;客票数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求参数中放入企业调用凭证数据信息（corp_token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterpris">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// HotelOrderInfoQueryHeaders
         /// </param>
@@ -21924,6 +25686,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>自营酒店订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的自营酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通阿里商旅自营-订单&amp;客票数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求参数中放入企业调用凭证数据信息（corp_token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterpris">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// HotelOrderInfoQueryResponse
         /// </returns>
@@ -21939,6 +25710,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>自营酒店订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的自营酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通阿里商旅自营-订单&amp;客票数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求参数中放入企业调用凭证数据信息（corp_token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterpris">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// HotelOrderInfoQueryResponse
         /// </returns>
@@ -21953,6 +25733,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询酒店订单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelOrderListQueryRequest
@@ -22053,6 +25842,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderListQueryRequest
         /// </param>
@@ -22152,6 +25950,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderListQueryRequest
         /// </param>
@@ -22171,6 +25978,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderListQueryRequest
         /// </param>
@@ -22189,6 +26005,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单支付</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelOrderPayRequest
@@ -22269,6 +26094,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单支付</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderPayRequest
         /// </param>
@@ -22348,6 +26182,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单支付</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderPayRequest
         /// </param>
@@ -22367,6 +26210,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以酒店订单支付</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderPayRequest
         /// </param>
@@ -22385,6 +26237,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店下单前校验</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口是酒店下单前校验</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelOrderPreValidateRequest
@@ -22507,6 +26368,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店下单前校验</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口是酒店下单前校验</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelOrderPreValidateRequest
         /// </param>
@@ -22628,6 +26498,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店下单前校验</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口是酒店下单前校验</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderPreValidateRequest
         /// </param>
@@ -22647,6 +26526,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店下单前校验</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口是酒店下单前校验</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderPreValidateRequest
         /// </param>
@@ -22665,6 +26553,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店订单查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelOrderQueryRequest
@@ -22721,6 +26618,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderQueryRequest
         /// </param>
@@ -22776,6 +26682,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderQueryRequest
         /// </param>
@@ -22795,6 +26710,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的酒店订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelOrderQueryRequest
         /// </param>
@@ -22813,6 +26737,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店拉动态拉取价格接口(落地)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“拉取存储酒店价格数据”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“酒店服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelPricePullRequest
@@ -22895,6 +26828,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店拉动态拉取价格接口(落地)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“拉取存储酒店价格数据”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“酒店服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelPricePullRequest
         /// </param>
@@ -22976,6 +26918,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店拉动态拉取价格接口(落地)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“拉取存储酒店价格数据”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“酒店服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelPricePullRequest
         /// </param>
@@ -22995,6 +26946,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店拉动态拉取价格接口(落地)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“拉取存储酒店价格数据”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“酒店服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelPricePullRequest
         /// </param>
@@ -23013,6 +26973,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>获取酒店静态房型详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态房型信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelRoomInfoRequest
@@ -23075,6 +27044,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取酒店静态房型详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态房型信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelRoomInfoRequest
         /// </param>
@@ -23136,6 +27114,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取酒店静态房型详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态房型信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelRoomInfoRequest
         /// </param>
@@ -23155,6 +27142,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取酒店静态房型详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态房型信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelRoomInfoRequest
         /// </param>
@@ -23173,6 +27169,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店列表搜索接口(直连)</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelSearchRequest
@@ -23327,6 +27332,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店列表搜索接口(直连)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelSearchRequest
         /// </param>
@@ -23480,6 +27494,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店列表搜索接口(直连)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelSearchRequest
         /// </param>
@@ -23499,6 +27522,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店列表搜索接口(直连)</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelSearchRequest
         /// </param>
@@ -23517,6 +27549,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询酒店静态详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// HotelStaticInfoRequest
@@ -23579,6 +27620,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店静态详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// HotelStaticInfoRequest
         /// </param>
@@ -23640,6 +27690,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店静态详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelStaticInfoRequest
         /// </param>
@@ -23659,6 +27718,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询酒店静态详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询酒店静态信息</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelStaticInfoRequest
         /// </param>
@@ -23677,6 +27745,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>酒店关键词搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店关键词搜索</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HotelSuggestV2Request
@@ -23753,6 +27830,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店关键词搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店关键词搜索</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelSuggestV2Request
         /// </param>
@@ -23828,6 +27914,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店关键词搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店关键词搜索</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelSuggestV2Request
         /// </param>
@@ -23847,6 +27942,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>酒店关键词搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行酒店关键词搜索</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通酒店服务权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotelSuggestV2Request
         /// </param>
@@ -23863,8 +27967,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IFlightOrderDetailQueryRequest
@@ -23918,8 +28031,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IFlightOrderDetailQueryRequest
@@ -23973,8 +28095,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IFlightOrderDetailQueryRequest
@@ -23992,8 +28123,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>国际机票订单详情</para>
+        /// <para>International Flight Order Details</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IFlightOrderDetailQueryRequest
@@ -24013,6 +28153,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票订单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的国际机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IFlightOrderListQueryRequest
@@ -24115,6 +28264,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的国际机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IFlightOrderListQueryRequest
         /// </param>
@@ -24216,6 +28374,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的国际机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IFlightOrderListQueryRequest
         /// </param>
@@ -24235,6 +28402,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的国际机票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅开放平台订单&amp;客票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IFlightOrderListQueryRequest
         /// </param>
@@ -24253,6 +28429,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询国际/中国港澳台用车记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IeCarBillSettlementQueryRequest
@@ -24349,6 +28535,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际/中国港澳台用车记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeCarBillSettlementQueryRequest
         /// </param>
@@ -24444,6 +28640,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际/中国港澳台用车记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeCarBillSettlementQueryRequest
         /// </param>
@@ -24463,6 +28669,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际/中国港澳台用车记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeCarBillSettlementQueryRequest
         /// </param>
@@ -24481,6 +28697,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询国际机票记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通商旅账单数据权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。AppKey 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IeFlightBillSettlementQueryRequest
@@ -24577,6 +28803,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通商旅账单数据权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。AppKey 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeFlightBillSettlementQueryRequest
         /// </param>
@@ -24672,6 +28908,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通商旅账单数据权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。AppKey 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeFlightBillSettlementQueryRequest
         /// </param>
@@ -24691,6 +28937,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际机票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，需要在应用中开通商旅账单数据权限。权限获取流程请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>。</description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。AppKey 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeFlightBillSettlementQueryRequest
         /// </param>
@@ -24709,6 +28965,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询国际/中国港澳台酒店记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IeHotelBillSettlementQueryRequest
@@ -24809,6 +29075,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际/中国港澳台酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeHotelBillSettlementQueryRequest
         /// </param>
@@ -24908,6 +29184,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际/中国港澳台酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeHotelBillSettlementQueryRequest
         /// </param>
@@ -24927,6 +29213,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询国际/中国港澳台酒店记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据的起止时间间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IeHotelBillSettlementQueryRequest
         /// </param>
@@ -24945,6 +29241,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询保险电子发票</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询保险电子发票明细数据</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permission-application-process-1?handbookId=development-support">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsInvoiceScanQueryRequest
@@ -25017,6 +29323,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询保险电子发票</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询保险电子发票明细数据</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permission-application-process-1?handbookId=development-support">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsInvoiceScanQueryRequest
         /// </param>
@@ -25088,6 +29404,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询保险电子发票</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询保险电子发票明细数据</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permission-application-process-1?handbookId=development-support">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsInvoiceScanQueryRequest
         /// </param>
@@ -25107,6 +29433,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询保险电子发票</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询保险电子发票明细数据</para>
+        /// <list type="bullet">
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看<a href="https://open.alibtrip.com/#/document/server/interface-permission-application-process-1?handbookId=development-support">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsInvoiceScanQueryRequest
         /// </param>
@@ -25125,6 +29461,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保险订单申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsureOrderApplyRequest
@@ -25205,6 +29550,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderApplyRequest
         /// </param>
@@ -25284,6 +29638,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderApplyRequest
         /// </param>
@@ -25303,6 +29666,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderApplyRequest
         /// </param>
@@ -25321,6 +29693,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保险订单取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsureOrderCancelRequest
@@ -25389,6 +29770,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderCancelRequest
         /// </param>
@@ -25456,6 +29846,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderCancelRequest
         /// </param>
@@ -25475,6 +29874,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderCancelRequest
         /// </param>
@@ -25493,6 +29901,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保险订单创建</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InsureOrderCreateRequest
@@ -25591,6 +30008,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// InsureOrderCreateRequest
         /// </param>
@@ -25688,6 +30114,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderCreateRequest
         /// </param>
@@ -25707,6 +30142,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单创建</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderCreateRequest
         /// </param>
@@ -25725,6 +30169,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保险订单查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsureOrderDetailRequest
@@ -25797,6 +30250,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderDetailRequest
         /// </param>
@@ -25868,6 +30330,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderDetailRequest
         /// </param>
@@ -25887,6 +30358,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderDetailRequest
         /// </param>
@@ -25905,6 +30385,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保险订单支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsureOrderPayRequest
@@ -25985,6 +30474,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderPayRequest
         /// </param>
@@ -26064,6 +30562,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderPayRequest
         /// </param>
@@ -26083,6 +30590,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderPayRequest
         /// </param>
@@ -26101,6 +30617,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保险订单退保</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InsureOrderRefundRequest
@@ -26191,6 +30716,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单退保</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// InsureOrderRefundRequest
         /// </param>
@@ -26280,6 +30814,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单退保</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderRefundRequest
         /// </param>
@@ -26299,6 +30842,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保险订单退保</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureOrderRefundRequest
         /// </param>
@@ -26317,6 +30869,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询保单详情链接</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="headers">
         /// InsureOrderUrlDetailHeaders
@@ -26363,6 +30924,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询保单详情链接</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// InsureOrderUrlDetailHeaders
         /// </param>
@@ -26408,6 +30978,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询保单详情链接</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// InsureOrderUrlDetailResponse
         /// </returns>
@@ -26423,6 +31002,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询保单详情链接</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// InsureOrderUrlDetailResponse
         /// </returns>
@@ -26437,6 +31025,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>退保详情查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsureRefundDetailRequest
@@ -26517,6 +31114,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>退保详情查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureRefundDetailRequest
         /// </param>
@@ -26596,6 +31202,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>退保详情查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureRefundDetailRequest
         /// </param>
@@ -26615,6 +31230,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>退保详情查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“接口功能描述”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“机票服务”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InsureRefundDetailRequest
         /// </param>
@@ -26633,6 +31257,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票创建订单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以创建国际机票订单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通国际机票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IntlFlightCreateOrderRequest
@@ -26747,6 +31380,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票创建订单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以创建国际机票订单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通国际机票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IntlFlightCreateOrderRequest
         /// </param>
@@ -26860,6 +31502,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票创建订单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以创建国际机票订单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通国际机票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightCreateOrderRequest
         /// </param>
@@ -26879,6 +31530,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票创建订单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以创建国际机票订单。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通国际机票权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightCreateOrderRequest
         /// </param>
@@ -26897,6 +31557,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票验舱验价</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对“国际机票航班报价进行验舱验价”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IntlFlightInventoryPriceCheckRequest
@@ -26979,6 +31648,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票验舱验价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对“国际机票航班报价进行验舱验价”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IntlFlightInventoryPriceCheckRequest
         /// </param>
@@ -27060,6 +31738,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票验舱验价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对“国际机票航班报价进行验舱验价”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightInventoryPriceCheckRequest
         /// </param>
@@ -27079,6 +31766,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票验舱验价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对“国际机票航班报价进行验舱验价”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightInventoryPriceCheckRequest
         /// </param>
@@ -27097,6 +31793,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票航班搜索</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IntlFlightListingSearchRequest
@@ -27203,6 +31908,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IntlFlightListingSearchRequest
         /// </param>
@@ -27308,6 +32022,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightListingSearchRequest
         /// </param>
@@ -27327,6 +32050,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班搜索</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightListingSearchRequest
         /// </param>
@@ -27345,6 +32077,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票订单取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行取消操作。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightOrderCancelRequest
@@ -27417,6 +32158,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行取消操作。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderCancelRequest
         /// </param>
@@ -27488,6 +32238,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行取消操作。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderCancelRequest
         /// </param>
@@ -27507,6 +32266,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行取消操作。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderCancelRequest
         /// </param>
@@ -27525,6 +32293,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票订单详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询国际机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightOrderDetailRequest
@@ -27597,6 +32374,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询国际机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderDetailRequest
         /// </param>
@@ -27668,6 +32454,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询国际机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderDetailRequest
         /// </param>
@@ -27687,6 +32482,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询国际机票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderDetailRequest
         /// </param>
@@ -27705,6 +32509,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票订单支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightOrderPayRequest
@@ -27781,6 +32594,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderPayRequest
         /// </param>
@@ -27856,6 +32678,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderPayRequest
         /// </param>
@@ -27875,6 +32706,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderPayRequest
         /// </param>
@@ -27893,6 +32733,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票订单支付前校验</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付前校验，校验通过才可支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightOrderPayCheckRequest
@@ -27965,6 +32814,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单支付前校验</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付前校验，校验通过才可支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderPayCheckRequest
         /// </param>
@@ -28036,6 +32894,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单支付前校验</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付前校验，校验通过才可支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderPayCheckRequest
         /// </param>
@@ -28055,6 +32922,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票订单支付前校验</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以对国际机票订单进行支付前校验，校验通过才可支付。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOrderPayCheckRequest
         /// </param>
@@ -28073,6 +32949,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票报价商品详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightOtaItemDetailRequest
@@ -28145,6 +33030,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票报价商品详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOtaItemDetailRequest
         /// </param>
@@ -28216,6 +33110,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票报价商品详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOtaItemDetailRequest
         /// </param>
@@ -28235,6 +33138,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票报价商品详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班列表搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOtaItemDetailRequest
         /// </param>
@@ -28253,6 +33165,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票航班报价查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班报价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IntlFlightOtaSearchRequest
@@ -28343,6 +33264,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班报价查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班报价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IntlFlightOtaSearchRequest
         /// </param>
@@ -28432,6 +33362,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班报价查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班报价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightOtaSearchRequest
         /// </param>
@@ -28450,6 +33389,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票航班报价查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行航班报价搜索。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightOtaSearchRequest
@@ -28710,6 +33658,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopCancelRequest
         /// </param>
@@ -28776,6 +33733,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票改签取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightReShopCancelRequest
@@ -28844,6 +33810,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopCancelRequest
         /// </param>
@@ -28863,6 +33838,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopCancelRequest
         /// </param>
@@ -28881,6 +33865,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票改签咨询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightReShopConsultRequest
@@ -28941,6 +33934,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签咨询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopConsultRequest
         /// </param>
@@ -29000,6 +34002,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签咨询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopConsultRequest
         /// </param>
@@ -29019,6 +34030,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签咨询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopConsultRequest
         /// </param>
@@ -29035,8 +34055,249 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a rebooking order for an international flight ticket.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopCreateRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopCreateHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCreateResponse
+        /// </returns>
+        public IntlFlightReShopCreateResponse IntlFlightReShopCreateWithOptions(IntlFlightReShopCreateRequest tmpReq, IntlFlightReShopCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopCreateShrinkRequest request = new IntlFlightReShopCreateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyKey))
+            {
+                body["async_apply_key"] = request.AsyncApplyKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyMode))
+            {
+                body["async_apply_mode"] = request.AsyncApplyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtaItemId))
+            {
+                body["ota_item_id"] = request.OtaItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                body["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                body["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                body["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalReShopFee))
+            {
+                body["total_re_shop_fee"] = request.TotalReShopFee;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopCreate",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopCreateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rebooking order for an international flight ticket.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopCreateRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopCreateHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCreateResponse
+        /// </returns>
+        public async Task<IntlFlightReShopCreateResponse> IntlFlightReShopCreateWithOptionsAsync(IntlFlightReShopCreateRequest tmpReq, IntlFlightReShopCreateHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopCreateShrinkRequest request = new IntlFlightReShopCreateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyKey))
+            {
+                body["async_apply_key"] = request.AsyncApplyKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsyncApplyMode))
+            {
+                body["async_apply_mode"] = request.AsyncApplyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                body["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OtaItemId))
+            {
+                body["ota_item_id"] = request.OtaItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                body["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutReShopApplyId))
+            {
+                body["out_re_shop_apply_id"] = request.OutReShopApplyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                body["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                body["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                body["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalReShopFee))
+            {
+                body["total_re_shop_fee"] = request.TotalReShopFee;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopCreate",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopCreateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rebooking order for an international flight ticket.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCreateResponse
+        /// </returns>
+        public IntlFlightReShopCreateResponse IntlFlightReShopCreate(IntlFlightReShopCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopCreateHeaders headers = new IntlFlightReShopCreateHeaders();
+            return IntlFlightReShopCreateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a rebooking order for an international flight ticket.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopCreateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopCreateResponse
+        /// </returns>
+        public async Task<IntlFlightReShopCreateResponse> IntlFlightReShopCreateAsync(IntlFlightReShopCreateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopCreateHeaders headers = new IntlFlightReShopCreateHeaders();
+            return await IntlFlightReShopCreateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>国际机票改签详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签详情查询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightReShopDetailRequest
@@ -29105,6 +34366,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签详情查询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopDetailRequest
         /// </param>
@@ -29172,6 +34442,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签详情查询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopDetailRequest
         /// </param>
@@ -29191,6 +34470,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签详情查询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopDetailRequest
         /// </param>
@@ -29207,8 +34495,473 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of available flights for rebooking international flight tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopListSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopListSearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopListSearchResponse
+        /// </returns>
+        public IntlFlightReShopListSearchResponse IntlFlightReShopListSearchWithOptions(IntlFlightReShopListSearchRequest tmpReq, IntlFlightReShopListSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopListSearchShrinkRequest request = new IntlFlightReShopListSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchJourneys))
+            {
+                request.SearchJourneysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchJourneys, "search_journeys", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutWheelSearch))
+            {
+                query["out_wheel_search"] = request.OutWheelSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                query["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                query["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchJourneysShrink))
+            {
+                query["search_journeys"] = request.SearchJourneysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                query["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["token"] = request.Token;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopListSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/listSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopListSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available flights for rebooking international flight tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopListSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopListSearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopListSearchResponse
+        /// </returns>
+        public async Task<IntlFlightReShopListSearchResponse> IntlFlightReShopListSearchWithOptionsAsync(IntlFlightReShopListSearchRequest tmpReq, IntlFlightReShopListSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopListSearchShrinkRequest request = new IntlFlightReShopListSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchJourneys))
+            {
+                request.SearchJourneysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchJourneys, "search_journeys", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutWheelSearch))
+            {
+                query["out_wheel_search"] = request.OutWheelSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                query["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                query["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchJourneysShrink))
+            {
+                query["search_journeys"] = request.SearchJourneysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                query["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["token"] = request.Token;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopListSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/listSearch",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopListSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available flights for rebooking international flight tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopListSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopListSearchResponse
+        /// </returns>
+        public IntlFlightReShopListSearchResponse IntlFlightReShopListSearch(IntlFlightReShopListSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopListSearchHeaders headers = new IntlFlightReShopListSearchHeaders();
+            return IntlFlightReShopListSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of available flights for rebooking international flight tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopListSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopListSearchResponse
+        /// </returns>
+        public async Task<IntlFlightReShopListSearchResponse> IntlFlightReShopListSearchAsync(IntlFlightReShopListSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopListSearchHeaders headers = new IntlFlightReShopListSearchHeaders();
+            return await IntlFlightReShopListSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flight rebooking quotes for international air tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopOtaSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopOtaSearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopOtaSearchResponse
+        /// </returns>
+        public IntlFlightReShopOtaSearchResponse IntlFlightReShopOtaSearchWithOptions(IntlFlightReShopOtaSearchRequest tmpReq, IntlFlightReShopOtaSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopOtaSearchShrinkRequest request = new IntlFlightReShopOtaSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchJourneys))
+            {
+                request.SearchJourneysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchJourneys, "search_journeys", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutWheelSearch))
+            {
+                query["out_wheel_search"] = request.OutWheelSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                query["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                query["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchJourneysShrink))
+            {
+                query["search_journeys"] = request.SearchJourneysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                query["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["token"] = request.Token;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopOtaSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/otaSerach",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopOtaSearchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flight rebooking quotes for international air tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// IntlFlightReShopOtaSearchRequest
+        /// </param>
+        /// <param name="headers">
+        /// IntlFlightReShopOtaSearchHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopOtaSearchResponse
+        /// </returns>
+        public async Task<IntlFlightReShopOtaSearchResponse> IntlFlightReShopOtaSearchWithOptionsAsync(IntlFlightReShopOtaSearchRequest tmpReq, IntlFlightReShopOtaSearchHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            IntlFlightReShopOtaSearchShrinkRequest request = new IntlFlightReShopOtaSearchShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SearchJourneys))
+            {
+                request.SearchJourneysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SearchJourneys, "search_journeys", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SelectedPassengers))
+            {
+                request.SelectedPassengersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SelectedPassengers, "selected_passengers", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderId))
+            {
+                query["order_id"] = request.OrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutOrderId))
+            {
+                query["out_order_id"] = request.OutOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutWheelSearch))
+            {
+                query["out_wheel_search"] = request.OutWheelSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PassengerJourneyGroupKey))
+            {
+                query["passenger_journey_group_key"] = request.PassengerJourneyGroupKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReShopReasonCode))
+            {
+                query["re_shop_reason_code"] = request.ReShopReasonCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchJourneysShrink))
+            {
+                query["search_journeys"] = request.SearchJourneysShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedPassengersShrink))
+            {
+                query["selected_passengers"] = request.SelectedPassengersShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["token"] = request.Token;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XAcsBtripCorpToken))
+            {
+                realHeaders["x-acs-btrip-corp-token"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XAcsBtripCorpToken);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "IntlFlightReShopOtaSearch",
+                Version = "2022-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/intl-flight/v1/flights/action/reshop/otaSerach",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<IntlFlightReShopOtaSearchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flight rebooking quotes for international air tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopOtaSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopOtaSearchResponse
+        /// </returns>
+        public IntlFlightReShopOtaSearchResponse IntlFlightReShopOtaSearch(IntlFlightReShopOtaSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopOtaSearchHeaders headers = new IntlFlightReShopOtaSearchHeaders();
+            return IntlFlightReShopOtaSearchWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries flight rebooking quotes for international air tickets.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// IntlFlightReShopOtaSearchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// IntlFlightReShopOtaSearchResponse
+        /// </returns>
+        public async Task<IntlFlightReShopOtaSearchResponse> IntlFlightReShopOtaSearchAsync(IntlFlightReShopOtaSearchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            IntlFlightReShopOtaSearchHeaders headers = new IntlFlightReShopOtaSearchHeaders();
+            return await IntlFlightReShopOtaSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>国际机票改签支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签支付。</para>
+        /// <remarks>
+        /// <para>Notice: 
+        ///  国际机票意向单零元改签特殊说明：</para>
+        /// </remarks>
+        /// <ol>
+        /// <item><description>如果改签单是待支付状态，即使改签金额是零元也需要调用支付，表示同意该改签方案并进行出票；</description></item>
+        /// <item><description>若我们的小二已经电联过用户，同意了改签方案，则会直接进入出票流程，不会有待支付状态，这种情况下无需则手动调用支付；</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightReShopPayRequest
@@ -29277,6 +35030,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签支付。</para>
+        /// <remarks>
+        /// <para>Notice: 
+        ///  国际机票意向单零元改签特殊说明：</para>
+        /// </remarks>
+        /// <ol>
+        /// <item><description>如果改签单是待支付状态，即使改签金额是零元也需要调用支付，表示同意该改签方案并进行出票；</description></item>
+        /// <item><description>若我们的小二已经电联过用户，同意了改签方案，则会直接进入出票流程，不会有待支付状态，这种情况下无需则手动调用支付；</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopPayRequest
         /// </param>
@@ -29344,6 +35114,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签支付。</para>
+        /// <remarks>
+        /// <para>Notice: 
+        ///  国际机票意向单零元改签特殊说明：</para>
+        /// </remarks>
+        /// <ol>
+        /// <item><description>如果改签单是待支付状态，即使改签金额是零元也需要调用支付，表示同意该改签方案并进行出票；</description></item>
+        /// <item><description>若我们的小二已经电联过用户，同意了改签方案，则会直接进入出票流程，不会有待支付状态，这种情况下无需则手动调用支付；</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopPayRequest
         /// </param>
@@ -29363,6 +35150,23 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票改签支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票改签支付。</para>
+        /// <remarks>
+        /// <para>Notice: 
+        ///  国际机票意向单零元改签特殊说明：</para>
+        /// </remarks>
+        /// <ol>
+        /// <item><description>如果改签单是待支付状态，即使改签金额是零元也需要调用支付，表示同意该改签方案并进行出票；</description></item>
+        /// <item><description>若我们的小二已经电联过用户，同意了改签方案，则会直接进入出票流程，不会有待支付状态，这种情况下无需则手动调用支付；</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票改签权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightReShopPayRequest
         /// </param>
@@ -29381,6 +35185,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票退票申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IntlFlightRefundApplyRequest
@@ -29471,6 +35284,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IntlFlightRefundApplyRequest
         /// </param>
@@ -29560,6 +35382,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundApplyRequest
         /// </param>
@@ -29579,6 +35410,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundApplyRequest
         /// </param>
@@ -29597,6 +35437,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票退票咨询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightRefundConsultRequest
@@ -29657,6 +35506,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票咨询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundConsultRequest
         /// </param>
@@ -29716,6 +35574,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票咨询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundConsultRequest
         /// </param>
@@ -29735,6 +35602,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票咨询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundConsultRequest
         /// </param>
@@ -29753,6 +35629,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票退票详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightRefundDetailRequest
@@ -29821,6 +35706,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundDetailRequest
         /// </param>
@@ -29888,6 +35782,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundDetailRequest
         /// </param>
@@ -29907,6 +35810,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票退票详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以进行国际机票退票咨询。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通国际机票退票权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.697d281fR0YqNt&docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightRefundDetailRequest
         /// </param>
@@ -29925,6 +35837,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>国际机票航班可用证件查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询国际机票航班可用证件”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// IntlFlightSegmentAvailableCertRequest
@@ -29993,6 +35914,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班可用证件查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询国际机票航班可用证件”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightSegmentAvailableCertRequest
         /// </param>
@@ -30060,6 +35990,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班可用证件查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询国际机票航班可用证件”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightSegmentAvailableCertRequest
         /// </param>
@@ -30079,6 +36018,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>国际机票航班可用证件查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询国际机票航班可用证件”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“国际机票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IntlFlightSegmentAvailableCertRequest
         /// </param>
@@ -30097,6 +36045,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>新增发票配置</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以新增指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InvoiceAddRequest
@@ -30189,6 +36146,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增发票配置</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以新增指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceAddRequest
         /// </param>
@@ -30280,6 +36246,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增发票配置</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以新增指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceAddRequest
         /// </param>
@@ -30299,6 +36274,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增发票配置</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以新增指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceAddRequest
         /// </param>
@@ -30317,6 +36301,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除发票抬头</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InvoiceDeleteRequest
@@ -30373,6 +36366,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除发票抬头</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceDeleteRequest
         /// </param>
@@ -30428,6 +36430,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除发票抬头</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceDeleteRequest
         /// </param>
@@ -30447,6 +36458,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除发票抬头</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceDeleteRequest
         /// </param>
@@ -30465,6 +36485,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>修改发票配置</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InvoiceModifyRequest
@@ -30557,6 +36586,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改发票配置</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceModifyRequest
         /// </param>
@@ -30648,6 +36686,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改发票配置</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceModifyRequest
         /// </param>
@@ -30667,6 +36714,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改发票配置</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以修改指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceModifyRequest
         /// </param>
@@ -30685,6 +36741,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>新增发票抬头可用员工</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InvoiceRuleAddRequest
@@ -30751,6 +36816,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增发票抬头可用员工</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// InvoiceRuleAddRequest
         /// </param>
@@ -30816,6 +36890,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增发票抬头可用员工</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceRuleAddRequest
         /// </param>
@@ -30835,6 +36918,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增发票抬头可用员工</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以增加发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceRuleAddRequest
         /// </param>
@@ -30853,6 +36945,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除发票抬头可用员工</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InvoiceRuleDeleteRequest
@@ -30923,6 +37024,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除发票抬头可用员工</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// InvoiceRuleDeleteRequest
         /// </param>
@@ -30992,6 +37102,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除发票抬头可用员工</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceRuleDeleteRequest
         /// </param>
@@ -31011,6 +37130,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除发票抬头可用员工</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以删除发票抬头可用员工</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceRuleDeleteRequest
         /// </param>
@@ -31029,6 +37157,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>保存发票规则</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/invoiceruleadd-new-invoice-header-available-employee?handbookId=development-support">新增发票抬头可用范围</a>和<a href="/#/document/server/invoiceruledelete-delete-invoice-header-available-employees?handbookId=development-support">删除发票抬头可用范围</a>
+        /// 使用该接口可以配置指定企业的发票抬头可用员工。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InvoiceRuleSaveRequest
@@ -31103,6 +37241,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保存发票规则</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/invoiceruleadd-new-invoice-header-available-employee?handbookId=development-support">新增发票抬头可用范围</a>和<a href="/#/document/server/invoiceruledelete-delete-invoice-header-available-employees?handbookId=development-support">删除发票抬头可用范围</a>
+        /// 使用该接口可以配置指定企业的发票抬头可用员工。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// InvoiceRuleSaveRequest
         /// </param>
@@ -31176,6 +37324,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保存发票规则</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/invoiceruleadd-new-invoice-header-available-employee?handbookId=development-support">新增发票抬头可用范围</a>和<a href="/#/document/server/invoiceruledelete-delete-invoice-header-available-employees?handbookId=development-support">删除发票抬头可用范围</a>
+        /// 使用该接口可以配置指定企业的发票抬头可用员工。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceRuleSaveRequest
         /// </param>
@@ -31195,6 +37353,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>保存发票规则</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口已废弃，请使用<a href="/#/document/server/invoiceruleadd-new-invoice-header-available-employee?handbookId=development-support">新增发票抬头可用范围</a>和<a href="/#/document/server/invoiceruledelete-delete-invoice-header-available-employees?handbookId=development-support">删除发票抬头可用范围</a>
+        /// 使用该接口可以配置指定企业的发票抬头可用员工。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceRuleSaveRequest
         /// </param>
@@ -31213,6 +37381,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>搜索用户可用发票抬头</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// InvoiceSearchRequest
@@ -31277,6 +37454,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>搜索用户可用发票抬头</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceSearchRequest
         /// </param>
@@ -31340,6 +37526,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>搜索用户可用发票抬头</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceSearchRequest
         /// </param>
@@ -31359,6 +37554,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>搜索用户可用发票抬头</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的发票抬头。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通费用归属配置权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// InvoiceSearchRequest
         /// </param>
@@ -31377,6 +37581,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>员工特殊角色修改</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>阿里商旅支持的特殊权限说明，请参见：<a href="https://www.yuque.com/alibtrip/ql4yyy/ywfpki">员工角色管理</a>。</description></item>
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IsvRuleSaveRequest
@@ -31459,6 +37672,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>员工特殊角色修改</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>阿里商旅支持的特殊权限说明，请参见：<a href="https://www.yuque.com/alibtrip/ql4yyy/ywfpki">员工角色管理</a>。</description></item>
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IsvRuleSaveRequest
         /// </param>
@@ -31540,6 +37762,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>员工特殊角色修改</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>阿里商旅支持的特殊权限说明，请参见：<a href="https://www.yuque.com/alibtrip/ql4yyy/ywfpki">员工角色管理</a>。</description></item>
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IsvRuleSaveRequest
         /// </param>
@@ -31559,6 +37790,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>员工特殊角色修改</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>阿里商旅支持的特殊权限说明，请参见：<a href="https://www.yuque.com/alibtrip/ql4yyy/ywfpki">员工角色管理</a>。</description></item>
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IsvRuleSaveRequest
         /// </param>
@@ -31577,6 +37817,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>用户同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IsvUserSaveRequest
@@ -31639,6 +37887,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>用户同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// IsvUserSaveRequest
         /// </param>
@@ -31700,6 +37956,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>用户同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IsvUserSaveRequest
         /// </param>
@@ -31719,6 +37983,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>用户同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// IsvUserSaveRequest
         /// </param>
@@ -31737,6 +38009,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>新增用餐申请单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MealApplyAddRequest
@@ -31851,6 +38131,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增用餐申请单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// MealApplyAddRequest
         /// </param>
@@ -31964,6 +38252,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增用餐申请单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyAddRequest
         /// </param>
@@ -31983,6 +38279,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增用餐申请单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyAddRequest
         /// </param>
@@ -32001,6 +38305,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新用餐申请单状态</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MealApplyApproveRequest
@@ -32073,6 +38385,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新用餐申请单状态</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyApproveRequest
         /// </param>
@@ -32144,6 +38464,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新用餐申请单状态</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyApproveRequest
         /// </param>
@@ -32163,6 +38491,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新用餐申请单状态</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyApproveRequest
         /// </param>
@@ -32181,6 +38517,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>修改用餐审批单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MealApplyModifyRequest
@@ -32295,6 +38639,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改用餐审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// MealApplyModifyRequest
         /// </param>
@@ -32408,6 +38760,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改用餐审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyModifyRequest
         /// </param>
@@ -32427,6 +38787,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改用餐审批单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyModifyRequest
         /// </param>
@@ -32445,6 +38813,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询用餐申请单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MealApplyQueryRequest
@@ -32501,6 +38877,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用餐申请单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyQueryRequest
         /// </param>
@@ -32556,6 +38940,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用餐申请单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyQueryRequest
         /// </param>
@@ -32575,6 +38967,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询用餐申请单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>用餐审批单</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口应用权限</a>完成相关操作。                                                                                      </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealApplyQueryRequest
         /// </param>
@@ -32593,6 +38993,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询因公用餐记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MealBillSettlementQueryRequest
@@ -32689,6 +39099,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询因公用餐记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealBillSettlementQueryRequest
         /// </param>
@@ -32784,6 +39204,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询因公用餐记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealBillSettlementQueryRequest
         /// </param>
@@ -32803,6 +39233,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询因公用餐记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealBillSettlementQueryRequest
         /// </param>
@@ -32821,6 +39261,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>获取用餐订单详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询用餐订单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// MealOrderDetailQueryRequest
@@ -32877,6 +39326,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取用餐订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询用餐订单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealOrderDetailQueryRequest
         /// </param>
@@ -32932,6 +39390,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取用餐订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询用餐订单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealOrderDetailQueryRequest
         /// </param>
@@ -32951,6 +39418,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取用餐订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询用餐订单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealOrderDetailQueryRequest
         /// </param>
@@ -32969,6 +39445,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>获取用餐订单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询订单列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MealOrderListQueryRequest
@@ -33025,6 +39510,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取用餐订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询订单列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealOrderListQueryRequest
         /// </param>
@@ -33080,6 +39574,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取用餐订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询订单列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealOrderListQueryRequest
         /// </param>
@@ -33099,6 +39602,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取用餐订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询订单列表</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MealOrderListQueryRequest
         /// </param>
@@ -33117,6 +39629,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>月账单确认</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通常为 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060203">BtripBillInfoAdjust</a> 字段调整接口的后续步骤。</description></item>
+        /// <item><description><b>调用本接口后，无法再对该账单进行修改。</b></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MonthBillConfirmRequest
@@ -33177,6 +39699,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>月账单确认</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通常为 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060203">BtripBillInfoAdjust</a> 字段调整接口的后续步骤。</description></item>
+        /// <item><description><b>调用本接口后，无法再对该账单进行修改。</b></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillConfirmRequest
         /// </param>
@@ -33236,6 +39768,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>月账单确认</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通常为 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060203">BtripBillInfoAdjust</a> 字段调整接口的后续步骤。</description></item>
+        /// <item><description><b>调用本接口后，无法再对该账单进行修改。</b></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillConfirmRequest
         /// </param>
@@ -33255,6 +39797,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>月账单确认</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>通常为 <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4060203">BtripBillInfoAdjust</a> 字段调整接口的后续步骤。</description></item>
+        /// <item><description><b>调用本接口后，无法再对该账单进行修改。</b></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillConfirmRequest
         /// </param>
@@ -33273,6 +39825,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询企业月账单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MonthBillGetRequest
@@ -33333,6 +39893,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillGetRequest
         /// </param>
@@ -33392,6 +39960,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillGetRequest
         /// </param>
@@ -33411,6 +39987,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillGetRequest
         /// </param>
@@ -33429,6 +40013,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询拆分版企业月账单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成商旅账单数据相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYqtdBn&docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将app_key作为必填参数拼接在请求地址中。app_key的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYQj6Uy&docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>请联系您的客户经理进行接口权限的开通。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MonthBillSplitGetRequest
@@ -33503,6 +40096,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询拆分版企业月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成商旅账单数据相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYqtdBn&docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将app_key作为必填参数拼接在请求地址中。app_key的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYQj6Uy&docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>请联系您的客户经理进行接口权限的开通。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// MonthBillSplitGetRequest
         /// </param>
@@ -33576,6 +40178,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询拆分版企业月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成商旅账单数据相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYqtdBn&docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将app_key作为必填参数拼接在请求地址中。app_key的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYQj6Uy&docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>请联系您的客户经理进行接口权限的开通。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillSplitGetRequest
         /// </param>
@@ -33595,6 +40206,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询拆分版企业月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成商旅账单数据相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYqtdBn&docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将app_key作为必填参数拼接在请求地址中。app_key的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?spm=openapi-amp.newDocPublishment.0.0.5f19281fYQj6Uy&docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>请联系您的客户经理进行接口权限的开通。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthBillSplitGetRequest
         /// </param>
@@ -33613,6 +40233,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询企业预出账月账单</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MonthPreBillGetRequest
@@ -33673,6 +40301,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业预出账月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthPreBillGetRequest
         /// </param>
@@ -33732,6 +40368,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业预出账月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthPreBillGetRequest
         /// </param>
@@ -33751,6 +40395,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业预出账月账单</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MonthPreBillGetRequest
         /// </param>
@@ -33769,6 +40421,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询订单退款明细</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OrderRefundDetailQueryRequest
@@ -33829,6 +40487,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询订单退款明细</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OrderRefundDetailQueryRequest
         /// </param>
@@ -33888,6 +40552,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询订单退款明细</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OrderRefundDetailQueryRequest
         /// </param>
@@ -33907,6 +40577,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询订单退款明细</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用方：服务商
+        /// 实现方：中洲平台</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// OrderRefundDetailQueryRequest
         /// </param>
@@ -33925,6 +40601,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>添加项目</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ProjectAddRequest
@@ -34001,6 +40685,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>添加项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectAddRequest
         /// </param>
@@ -34076,6 +40768,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>添加项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectAddRequest
         /// </param>
@@ -34095,6 +40795,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>添加项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectAddRequest
         /// </param>
@@ -34113,6 +40821,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除项目</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ProjectDeleteRequest
@@ -34169,6 +40885,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectDeleteRequest
         /// </param>
@@ -34224,6 +40948,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectDeleteRequest
         /// </param>
@@ -34243,6 +40975,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectDeleteRequest
         /// </param>
@@ -34261,6 +41001,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>变更项目</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ProjectModifyRequest
@@ -34337,6 +41085,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>变更项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectModifyRequest
         /// </param>
@@ -34412,6 +41168,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>变更项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectModifyRequest
         /// </param>
@@ -34431,6 +41195,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>变更项目</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ProjectModifyRequest
         /// </param>
@@ -34449,6 +41221,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询赔付信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询赔付信息列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCompenInfosForOpRequest
@@ -34513,6 +41294,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询赔付信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询赔付信息列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryCompenInfosForOpRequest
         /// </param>
@@ -34576,6 +41366,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询赔付信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询赔付信息列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryCompenInfosForOpRequest
         /// </param>
@@ -34595,6 +41394,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询赔付信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取查询赔付信息列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“订单&amp;客票”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryCompenInfosForOpRequest
         /// </param>
@@ -34613,6 +41421,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询企业信息详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成企业账户相关应用权限的申请。若无，请参考：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 app_key 作为必填参数拼接在请求地址中。app_key 的获取方式请参见：<a href="https://open.alibtrip.com/#/document/server/application-of-basic-information?handbookId=development-support">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>入参中 target_corp_id 以及 target_third_corp_id 在使用时，仅需二选一传入；都传入时将以 target_corp_id 为准；</description></item>
+        /// <item><description>若传入了 target_third_corp_id，则 account_id 必填。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryCorpDetailInfoRequest
@@ -34677,6 +41495,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业信息详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成企业账户相关应用权限的申请。若无，请参考：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 app_key 作为必填参数拼接在请求地址中。app_key 的获取方式请参见：<a href="https://open.alibtrip.com/#/document/server/application-of-basic-information?handbookId=development-support">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>入参中 target_corp_id 以及 target_third_corp_id 在使用时，仅需二选一传入；都传入时将以 target_corp_id 为准；</description></item>
+        /// <item><description>若传入了 target_third_corp_id，则 account_id 必填。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryCorpDetailInfoRequest
         /// </param>
@@ -34740,6 +41568,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业信息详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成企业账户相关应用权限的申请。若无，请参考：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 app_key 作为必填参数拼接在请求地址中。app_key 的获取方式请参见：<a href="https://open.alibtrip.com/#/document/server/application-of-basic-information?handbookId=development-support">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>入参中 target_corp_id 以及 target_third_corp_id 在使用时，仅需二选一传入；都传入时将以 target_corp_id 为准；</description></item>
+        /// <item><description>若传入了 target_third_corp_id，则 account_id 必填。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryCorpDetailInfoRequest
         /// </param>
@@ -34759,6 +41597,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询企业信息详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成企业账户相关应用权限的申请。若无，请参考：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 app_key 作为必填参数拼接在请求地址中。app_key 的获取方式请参见：<a href="https://open.alibtrip.com/#/document/server/application-of-basic-information?handbookId=development-support">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>入参中 target_corp_id 以及 target_third_corp_id 在使用时，仅需二选一传入；都传入时将以 target_corp_id 为准；</description></item>
+        /// <item><description>若传入了 target_third_corp_id，则 account_id 必填。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryCorpDetailInfoRequest
         /// </param>
@@ -34777,6 +41625,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>获取单个员工信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryEmployeeDetailRequest
@@ -34833,6 +41689,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取单个员工信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryEmployeeDetailRequest
         /// </param>
@@ -34888,6 +41752,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取单个员工信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryEmployeeDetailRequest
         /// </param>
@@ -34907,6 +41779,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>获取单个员工信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryEmployeeDetailRequest
         /// </param>
@@ -34925,6 +41805,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询子企业列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryGroupCorpListRequest
@@ -34981,6 +41870,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询子企业列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryGroupCorpListRequest
         /// </param>
@@ -35036,6 +41934,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询子企业列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryGroupCorpListRequest
         /// </param>
@@ -35055,6 +41962,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询子企业列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>在调用本接口之前，请先完成<b>主子账户</b>功能的开启。若无，请参考：<a href="https://www.yuque.com/alibtrip/ql4yyy/fp8el1">账户管理</a>完成相关操作。</description></item>
+        /// <item><description>在调用本接口前，请先完成<b>组织人员同步</b>相关应用权限申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                   </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryGroupCorpListRequest
         /// </param>
@@ -35073,6 +41989,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>报销单查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询报销审批单信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“查询报销审批单详情”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryReimbursementOrderRequest
@@ -35133,6 +42058,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>报销单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询报销审批单信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“查询报销审批单详情”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryReimbursementOrderRequest
         /// </param>
@@ -35192,6 +42126,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>报销单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询报销审批单信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“查询报销审批单详情”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryReimbursementOrderRequest
         /// </param>
@@ -35211,6 +42154,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>报销单查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询报销审批单信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“查询报销审批单详情”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryReimbursementOrderRequest
         /// </param>
@@ -35229,6 +42181,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除项目负责人</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RemoveProjectManagerRequest
@@ -35303,6 +42263,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除项目负责人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// RemoveProjectManagerRequest
         /// </param>
@@ -35376,6 +42344,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除项目负责人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveProjectManagerRequest
         /// </param>
@@ -35395,6 +42371,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除项目负责人</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请完成<b>费用归属</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                     </para>
+        /// <list type="bullet">
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveProjectManagerRequest
         /// </param>
@@ -35413,6 +42397,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>单个人员同步</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅对应的部门中进行单条人员信息的同步。
+        /// 使用该接口需要在应用中开通组织人员同步权限，具体的数据权限申请流程请查看接口权限申请流程
+        /// 使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证
+        /// 如有涉及到收费的 API，请在第一句加上粗体的“请确保在使用该接口前，已充分了解XXX产品的收费方式和价格。”其中价格是个超链，链接为：<a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SyncSingleUserRequest
@@ -35515,6 +42507,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>单个人员同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅对应的部门中进行单条人员信息的同步。
+        /// 使用该接口需要在应用中开通组织人员同步权限，具体的数据权限申请流程请查看接口权限申请流程
+        /// 使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证
+        /// 如有涉及到收费的 API，请在第一句加上粗体的“请确保在使用该接口前，已充分了解XXX产品的收费方式和价格。”其中价格是个超链，链接为：<a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// SyncSingleUserRequest
         /// </param>
@@ -35616,6 +42616,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>单个人员同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅对应的部门中进行单条人员信息的同步。
+        /// 使用该接口需要在应用中开通组织人员同步权限，具体的数据权限申请流程请查看接口权限申请流程
+        /// 使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证
+        /// 如有涉及到收费的 API，请在第一句加上粗体的“请确保在使用该接口前，已充分了解XXX产品的收费方式和价格。”其中价格是个超链，链接为：<a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncSingleUserRequest
         /// </param>
@@ -35635,6 +42643,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>单个人员同步</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以往商旅对应的部门中进行单条人员信息的同步。
+        /// 使用该接口需要在应用中开通组织人员同步权限，具体的数据权限申请流程请查看接口权限申请流程
+        /// 使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看企业访问凭证
+        /// 如有涉及到收费的 API，请在第一句加上粗体的“请确保在使用该接口前，已充分了解XXX产品的收费方式和价格。”其中价格是个超链，链接为：<a href="https://www.aliyun.com/price/product#/ecs/detail">https://www.aliyun.com/price/product#/ecs/detail</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncSingleUserRequest
         /// </param>
@@ -35653,6 +42669,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>同步三方用户映射关系</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>适用场景</b>：当企业人员数据是由 A 系统推送至阿里商旅，同时又希望在 B 系统中实现阿里商旅单点跳转等人员信息关联映射需求时，可通过本接口进行实现人员数据的同步映射。</description></item>
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncThirdUserMappingRequest
@@ -35721,6 +42746,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>同步三方用户映射关系</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>适用场景</b>：当企业人员数据是由 A 系统推送至阿里商旅，同时又希望在 B 系统中实现阿里商旅单点跳转等人员信息关联映射需求时，可通过本接口进行实现人员数据的同步映射。</description></item>
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncThirdUserMappingRequest
         /// </param>
@@ -35788,6 +42822,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>同步三方用户映射关系</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>适用场景</b>：当企业人员数据是由 A 系统推送至阿里商旅，同时又希望在 B 系统中实现阿里商旅单点跳转等人员信息关联映射需求时，可通过本接口进行实现人员数据的同步映射。</description></item>
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncThirdUserMappingRequest
         /// </param>
@@ -35807,6 +42850,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>同步三方用户映射关系</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description><b>适用场景</b>：当企业人员数据是由 A 系统推送至阿里商旅，同时又希望在 B 系统中实现阿里商旅单点跳转等人员信息关联映射需求时，可通过本接口进行实现人员数据的同步映射。</description></item>
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SyncThirdUserMappingRequest
         /// </param>
@@ -35825,6 +42877,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询淘宝账号信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询淘宝账号信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="headers">
         /// TBAccountInfoQueryHeaders
@@ -35871,6 +42932,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询淘宝账号信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询淘宝账号信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// TBAccountInfoQueryHeaders
         /// </param>
@@ -35916,6 +42986,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询淘宝账号信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询淘宝账号信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// TBAccountInfoQueryResponse
         /// </returns>
@@ -35931,6 +43010,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询淘宝账号信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“查询淘宝账号信息”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// TBAccountInfoQueryResponse
         /// </returns>
@@ -35945,6 +43033,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>解绑淘宝账号</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“淘宝账号解绑”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="headers">
         /// TBAccountUnbindHeaders
@@ -35991,6 +43088,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>解绑淘宝账号</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“淘宝账号解绑”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// TBAccountUnbindHeaders
         /// </param>
@@ -36036,6 +43142,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>解绑淘宝账号</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“淘宝账号解绑”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// TBAccountUnbindResponse
         /// </returns>
@@ -36051,6 +43166,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>解绑淘宝账号</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以“淘宝账号解绑”。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“用户账户”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <returns>
         /// TBAccountUnbindResponse
         /// </returns>
@@ -36065,6 +43189,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签申请。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TicketChangingApplyRequest
@@ -36155,6 +43288,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签申请。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TicketChangingApplyRequest
         /// </param>
@@ -36244,6 +43386,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签申请。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingApplyRequest
         /// </param>
@@ -36263,6 +43414,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签申请。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingApplyRequest
         /// </param>
@@ -36281,6 +43441,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TicketChangingCancelRequest
@@ -36341,6 +43510,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingCancelRequest
         /// </param>
@@ -36400,6 +43578,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingCancelRequest
         /// </param>
@@ -36419,6 +43606,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签取消。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingCancelRequest
         /// </param>
@@ -36437,6 +43633,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票改签单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TicketChangingDetailRequest
@@ -36497,6 +43702,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票改签单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingDetailRequest
         /// </param>
@@ -36556,6 +43770,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票改签单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingDetailRequest
         /// </param>
@@ -36575,6 +43798,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询商旅机票改签单详情</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通“接口名称”权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingDetailRequest
         /// </param>
@@ -36593,6 +43825,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签询价</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签询价。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TicketChangingEnquiryRequest
@@ -36673,6 +43914,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签询价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签询价。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingEnquiryRequest
         /// </param>
@@ -36752,6 +44002,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签询价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签询价。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingEnquiryRequest
         /// </param>
@@ -36771,6 +44030,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签询价</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签询价。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingEnquiryRequest
         /// </param>
@@ -36789,6 +44057,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签可改签航班列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签可改签航班列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TicketChangingFlightListRequest
@@ -36871,6 +44148,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签可改签航班列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签可改签航班列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TicketChangingFlightListRequest
         /// </param>
@@ -36952,6 +44238,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签可改签航班列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签可改签航班列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingFlightListRequest
         /// </param>
@@ -36971,6 +44266,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签可改签航班列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签可改签航班列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票航班权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingFlightListRequest
         /// </param>
@@ -36989,6 +44293,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>机票改签航班支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签航班支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TicketChangingPayRequest
@@ -37071,6 +44384,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签航班支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签航班支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TicketChangingPayRequest
         /// </param>
@@ -37152,6 +44474,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签航班支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签航班支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingPayRequest
         /// </param>
@@ -37171,6 +44502,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>机票改签航班支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以机票改签航班支付。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通机票服务权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看企业访问凭证<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TicketChangingPayRequest
         /// </param>
@@ -37189,6 +44529,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票改签申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签申请
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TrainApplyChangeRequest
@@ -37277,6 +44623,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签申请
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TrainApplyChangeRequest
         /// </param>
@@ -37364,6 +44716,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签申请
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainApplyChangeRequest
         /// </param>
@@ -37383,6 +44741,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签申请
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainApplyChangeRequest
         /// </param>
@@ -37401,6 +44765,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票退票申请</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票申请退票
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TrainApplyRefundRequest
@@ -37475,6 +44845,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票申请退票
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TrainApplyRefundRequest
         /// </param>
@@ -37548,6 +44924,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票申请退票
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainApplyRefundRequest
         /// </param>
@@ -37567,6 +44949,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票退票申请</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票申请退票
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainApplyRefundRequest
         /// </param>
@@ -37585,6 +44973,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询火车票记账数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainBillSettlementQueryRequest
@@ -37681,6 +45079,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainBillSettlementQueryRequest
         /// </param>
@@ -37776,6 +45184,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainBillSettlementQueryRequest
         /// </param>
@@ -37795,6 +45213,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票记账数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>商旅账单数据</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。</description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将<c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c>的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>查询时，记账数据起止时间的间隔规则为：1 小时 ≤记账截止时间 - 记账起始时间 ≤ 24 小时。</description></item>
+        /// <item><description>为保证数据准确性，阿里商旅记账数据的更新时机为当前时间 + 1 小时。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainBillSettlementQueryRequest
         /// </param>
@@ -37813,6 +45241,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询火车超标审批详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取指定企业的火车超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainExceedApplyQueryRequest
@@ -37873,6 +45310,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取指定企业的火车超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainExceedApplyQueryRequest
         /// </param>
@@ -37932,6 +45378,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取指定企业的火车超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainExceedApplyQueryRequest
         /// </param>
@@ -37951,6 +45406,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车超标审批详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以获取指定企业的火车超标审批详情。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通超标审批数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainExceedApplyQueryRequest
         /// </param>
@@ -37969,6 +45433,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票改签费用预估</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TrainFeeCalculateChangeRequest
@@ -38039,6 +45509,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签费用预估</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TrainFeeCalculateChangeRequest
         /// </param>
@@ -38108,6 +45584,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签费用预估</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainFeeCalculateChangeRequest
         /// </param>
@@ -38127,6 +45609,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签费用预估</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainFeeCalculateChangeRequest
         /// </param>
@@ -38145,6 +45633,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票退票费用预估</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票退票费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TrainFeeCalculateRefundRequest
@@ -38215,6 +45709,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票退票费用预估</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票退票费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TrainFeeCalculateRefundRequest
         /// </param>
@@ -38284,6 +45784,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票退票费用预估</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票退票费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainFeeCalculateRefundRequest
         /// </param>
@@ -38303,6 +45809,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票退票费用预估</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票退票费用预估
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainFeeCalculateRefundRequest
         /// </param>
@@ -38321,6 +45833,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票车次详情查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainNoInfoSearchRequest
@@ -38405,6 +45923,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票车次详情查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainNoInfoSearchRequest
         /// </param>
@@ -38488,6 +46012,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票车次详情查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainNoInfoSearchRequest
         /// </param>
@@ -38507,6 +46037,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票车次详情查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainNoInfoSearchRequest
         /// </param>
@@ -38525,6 +46061,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票车次列表查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次列表
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TrainNoListSearchRequest
@@ -38603,6 +46145,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票车次列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次列表
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TrainNoListSearchRequest
         /// </param>
@@ -38680,6 +46228,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票车次列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次列表
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainNoListSearchRequest
         /// </param>
@@ -38699,6 +46253,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票车次列表查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次列表
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainNoListSearchRequest
         /// </param>
@@ -38717,6 +46277,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票订单取消</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“阿里商旅分销-火车票服务”接口权限，权限申请流程可参见：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息<c>x-acs-btrip-corp-token</c>，企业调用凭证数据获取方式，请参见：<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderCancelRequest
@@ -38785,6 +46353,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“阿里商旅分销-火车票服务”接口权限，权限申请流程可参见：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息<c>x-acs-btrip-corp-token</c>，企业调用凭证数据获取方式，请参见：<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderCancelRequest
         /// </param>
@@ -38852,6 +46428,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“阿里商旅分销-火车票服务”接口权限，权限申请流程可参见：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息<c>x-acs-btrip-corp-token</c>，企业调用凭证数据获取方式，请参见：<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderCancelRequest
         /// </param>
@@ -38871,6 +46455,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单取消</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通“阿里商旅分销-火车票服务”接口权限，权限申请流程可参见：<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">获取应用权限</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息<c>x-acs-btrip-corp-token</c>，企业调用凭证数据获取方式，请参见：<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderCancelRequest
         /// </param>
@@ -38889,6 +46481,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票改签确认</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签确认
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderChangeConfirmRequest
@@ -38961,6 +46559,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签确认</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签确认
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderChangeConfirmRequest
         /// </param>
@@ -39032,6 +46636,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签确认</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签确认
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderChangeConfirmRequest
         /// </param>
@@ -39051,6 +46661,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票改签确认</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票改签确认
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderChangeConfirmRequest
         /// </param>
@@ -39069,6 +46685,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票正向预订</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票创单
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TrainOrderCreateRequest
@@ -39179,6 +46801,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票正向预订</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票创单
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TrainOrderCreateRequest
         /// </param>
@@ -39288,6 +46916,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票正向预订</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票创单
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderCreateRequest
         /// </param>
@@ -39307,6 +46941,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票正向预订</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票创单
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderCreateRequest
         /// </param>
@@ -39325,6 +46965,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票订单详情</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票订单详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderDetailQueryRequest
@@ -39385,6 +47031,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票订单详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderDetailQueryRequest
         /// </param>
@@ -39444,6 +47096,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票订单详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderDetailQueryRequest
         /// </param>
@@ -39463,6 +47121,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单详情</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票订单详情
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderDetailQueryRequest
         /// </param>
@@ -39481,6 +47145,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询火车票订单列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderListQueryRequest
@@ -39577,6 +47250,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderListQueryRequest
         /// </param>
@@ -39672,6 +47354,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderListQueryRequest
         /// </param>
@@ -39691,6 +47382,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票订单列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单列表。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderListQueryRequest
         /// </param>
@@ -39709,6 +47409,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票订单支付</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票正向订单支付
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderPayRequest
@@ -39773,6 +47479,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票正向订单支付
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderPayRequest
         /// </param>
@@ -39836,6 +47548,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票正向订单支付
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderPayRequest
         /// </param>
@@ -39855,6 +47573,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单支付</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票正向订单支付
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderPayRequest
         /// </param>
@@ -39873,6 +47597,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询火车票订单详情（含票信息）</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderQueryRequest
@@ -39933,6 +47666,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票订单详情（含票信息）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderQueryRequest
         /// </param>
@@ -39992,6 +47734,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票订单详情（含票信息）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderQueryRequest
         /// </param>
@@ -40011,6 +47762,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票订单详情（含票信息）</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderQueryRequest
         /// </param>
@@ -40029,6 +47789,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票订单查询V2</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainOrderQueryV2Request
@@ -40089,6 +47858,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单查询V2</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderQueryV2Request
         /// </param>
@@ -40148,6 +47926,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单查询V2</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderQueryV2Request
         /// </param>
@@ -40167,6 +47954,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票订单查询V2</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询指定企业的火车票订单详情。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通商旅订单数据权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainOrderQueryV2Request
         /// </param>
@@ -40185,6 +47981,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询火车站数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车站数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainStationSearchRequest
@@ -40241,6 +48046,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车站数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车站数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainStationSearchRequest
         /// </param>
@@ -40296,6 +48110,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车站数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车站数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainStationSearchRequest
         /// </param>
@@ -40315,6 +48138,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车站数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车站数据。</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通基础数据集权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                                                       </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainStationSearchRequest
         /// </param>
@@ -40333,6 +48165,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>火车票经停站查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次停靠站
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainStopoverSearchRequest
@@ -40401,6 +48239,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票经停站查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次停靠站
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainStopoverSearchRequest
         /// </param>
@@ -40468,6 +48312,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票经停站查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次停靠站
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainStopoverSearchRequest
         /// </param>
@@ -40487,6 +48337,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>火车票经停站查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询车次停靠站
+        /// 使用该接口需要在应用中开通“火车票服务”权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">查看企业访问凭证</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainStopoverSearchRequest
         /// </param>
@@ -40505,6 +48361,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询火车票凭证扫描件</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票凭证明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TrainTicketScanQueryRequest
@@ -40597,6 +48463,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票凭证扫描件</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票凭证明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainTicketScanQueryRequest
         /// </param>
@@ -40688,6 +48564,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票凭证扫描件</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票凭证明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainTicketScanQueryRequest
         /// </param>
@@ -40707,6 +48593,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询火车票凭证扫描件</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询火车票凭证明细数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TrainTicketScanQueryRequest
         /// </param>
@@ -40723,8 +48619,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标列表</para>
+        /// <para>Queries the list of enterprise travel standards (including categories such as domestic flights, international flights, train tickets, and hotels).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application Access Credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardListQueryRequest
@@ -40759,6 +48664,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["rule_name"] = request.RuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["user_id"] = request.UserId;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -40790,8 +48699,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标列表</para>
+        /// <para>Queries the list of enterprise travel standards (including categories such as domestic flights, international flights, train tickets, and hotels).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application Access Credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardListQueryRequest
@@ -40826,6 +48744,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
             {
                 query["rule_name"] = request.RuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["user_id"] = request.UserId;
+            }
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -40857,8 +48779,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标列表</para>
+        /// <para>Queries the list of enterprise travel standards (including categories such as domestic flights, international flights, train tickets, and hotels).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application Access Credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardListQueryRequest
@@ -40876,8 +48807,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标列表</para>
+        /// <para>Queries the list of enterprise travel standards (including categories such as domestic flights, international flights, train tickets, and hotels).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API Permission Application Process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application Access Credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardListQueryRequest
@@ -40895,8 +48835,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标详情</para>
+        /// <para>Queries the details of enterprise travel rules, including categories such as flights, international flights, train tickets, and hotels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TravelStandardQueryRequest
@@ -40964,8 +48913,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标详情</para>
+        /// <para>Queries the details of enterprise travel rules, including categories such as flights, international flights, train tickets, and hotels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TravelStandardQueryRequest
@@ -41033,8 +48991,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标详情</para>
+        /// <para>Queries the details of enterprise travel rules, including categories such as flights, international flights, train tickets, and hotels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardQueryRequest
@@ -41052,8 +49019,17 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询差标详情</para>
+        /// <para>Queries the details of enterprise travel rules, including categories such as flights, international flights, train tickets, and hotels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of travel standards configured for an enterprise.</para>
+        /// <list type="bullet">
+        /// <item><description>To use this operation, enable the travel standard permission in your application. For more information about how to apply for data permissions, see <a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">API permission application process</a>.</description></item>
+        /// <item><description>To use this operation, include the application access credential (x-acs-btrip-corp-token) in the request header. For more information about how to obtain the application access credential, see <a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">Application access credential</a>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardQueryRequest
@@ -41073,6 +49049,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>新增差旅标准关联人员实体</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TravelStandardRelateAddRequest
@@ -41143,6 +49128,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TravelStandardRelateAddRequest
         /// </param>
@@ -41212,6 +49206,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateAddRequest
         /// </param>
@@ -41231,6 +49234,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>新增差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateAddRequest
         /// </param>
@@ -41249,6 +49261,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>删除差旅标准关联人员实体</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TravelStandardRelateDeleteRequest
@@ -41319,6 +49340,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// TravelStandardRelateDeleteRequest
         /// </param>
@@ -41388,6 +49418,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateDeleteRequest
         /// </param>
@@ -41407,6 +49446,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>删除差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateDeleteRequest
         /// </param>
@@ -41425,6 +49473,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询差旅标准关联人员实体</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardRelateQueryRequest
@@ -41485,6 +49542,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateQueryRequest
         /// </param>
@@ -41544,6 +49610,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateQueryRequest
         /// </param>
@@ -41563,6 +49638,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询差旅标准关联人员实体</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardRelateQueryRequest
         /// </param>
@@ -41581,6 +49665,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新差旅标准绑定员工类型</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TravelStandardScopeSaveRequest
@@ -41645,6 +49738,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新差旅标准绑定员工类型</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardScopeSaveRequest
         /// </param>
@@ -41708,6 +49810,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新差旅标准绑定员工类型</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardScopeSaveRequest
         /// </param>
@@ -41727,6 +49838,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新差旅标准绑定员工类型</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询企业配置的差旅标准列表。</para>
+        /// <list type="bullet">
+        /// <item><description>使用该接口需要在应用中开通差旅标准权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">接口权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入应用访问凭证数据信息（x-acs-btrip-corp-token），应用访问凭证数据获取接口请查看<a href="https://open.alibtrip.com/?spm=openapi-amp.newDocPublishment.0.0.68ab281fSv8QIA#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">应用访问凭证</a></description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TravelStandardScopeSaveRequest
         /// </param>
@@ -41745,6 +49865,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询业务流程</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批实例信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TripBusinessInstanceQueryRequest
@@ -41813,6 +49942,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询业务流程</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批实例信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripBusinessInstanceQueryRequest
         /// </param>
@@ -41880,6 +50018,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询业务流程</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批实例信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripBusinessInstanceQueryRequest
         /// </param>
@@ -41899,6 +50046,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询业务流程</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批实例信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripBusinessInstanceQueryRequest
         /// </param>
@@ -41917,6 +50073,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询抄送信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询抄送详情信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TripCCInfoQueryRequest
@@ -41981,6 +50146,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询抄送信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询抄送详情信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripCCInfoQueryRequest
         /// </param>
@@ -42044,6 +50218,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询抄送信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询抄送详情信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripCCInfoQueryRequest
         /// </param>
@@ -42063,6 +50246,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询抄送信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询抄送详情信息</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>                                                          </description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-so-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripCCInfoQueryRequest
         /// </param>
@@ -42081,6 +50273,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询审批任务列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批任务</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// TripTaskQueryRequest
@@ -42149,6 +50350,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询审批任务列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批任务</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripTaskQueryRequest
         /// </param>
@@ -42216,6 +50426,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询审批任务列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批任务</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripTaskQueryRequest
         /// </param>
@@ -42235,6 +50454,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询审批任务列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询审批任务</para>
+        /// <ol>
+        /// <item><description>使用该接口需要在应用中开通用审批权限，具体的数据权限申请流程请查看接口<a href="https://open.alibtrip.com/#/document/server/interface-permissions?handbookId=development-support">权限申请流程</a></description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://open.alibtrip.com/#/document/server/corptoken-enterprise-access-credential?handbookId=development-support">企业访问凭证</a></description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// TripTaskQueryRequest
         /// </param>
@@ -42253,6 +50481,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新企业自定义角色</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCustomRoleRequest
@@ -42313,6 +50549,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCustomRoleRequest
         /// </param>
@@ -42372,6 +50616,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCustomRoleRequest
         /// </param>
@@ -42391,6 +50643,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新企业自定义角色</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成组织人员同步相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>  完成相关操作。                                                                                     </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCustomRoleRequest
         /// </param>
@@ -42409,6 +50669,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>修改企业部门</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateDepartmentRequest
@@ -42483,6 +50752,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateDepartmentRequest
         /// </param>
@@ -42556,6 +50834,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDepartmentRequest
         /// </param>
@@ -42575,6 +50862,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>修改企业部门</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                                    </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c>作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateDepartmentRequest
         /// </param>
@@ -42593,6 +50889,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新员工信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateEmployeeRequest
@@ -42759,6 +51064,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新员工信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpdateEmployeeRequest
         /// </param>
@@ -42924,6 +51238,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新员工信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateEmployeeRequest
         /// </param>
@@ -42943,6 +51266,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新员工信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateEmployeeRequest
         /// </param>
@@ -42961,6 +51293,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>更新员工在职状态</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEmployeeLeaveStatusRequest
@@ -43021,6 +51362,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新员工在职状态</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateEmployeeLeaveStatusRequest
         /// </param>
@@ -43080,6 +51430,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新员工在职状态</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateEmployeeLeaveStatusRequest
         /// </param>
@@ -43099,6 +51458,15 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>更新员工在职状态</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a>完成相关操作。                                                                                       </description></item>
+        /// <item><description>通过 HTTTP 方式调用本接口时，需要将 <c>app_key</c> 作为<b>必填参数</b>拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// <item><description>接口频率限制（QPS）：800 次/分钟、40 次/秒。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateEmployeeLeaveStatusRequest
         /// </param>
@@ -43117,6 +51485,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>人员查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UserQueryRequest
@@ -43185,6 +51561,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>人员查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UserQueryRequest
         /// </param>
@@ -43252,6 +51636,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>人员查询</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UserQueryRequest
         /// </param>
@@ -43270,6 +51662,14 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>人员查询</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>调用本接口前，请完成<b>组织人员同步</b>相关应用权限的申请。若无，请参考：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">获取应用权限</a> 完成相关操作。                                                                              </description></item>
+        /// <item><description>通过 HTTP 方式调用本接口时，需要将 <c>app_key</c> 作为必填参数拼接在请求地址中。<c>app_key</c> 的获取方式请参见：<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=4667763">应用基础信息-应用凭证</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UserQueryRequest
@@ -43746,6 +52146,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询账期待申请的发票数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询账期待开票数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// WaitApplyInvoiceTaskDetailQueryRequest
         /// </param>
@@ -43800,6 +52210,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询账期待申请的发票数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询账期待开票数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// WaitApplyInvoiceTaskDetailQueryRequest
@@ -43856,6 +52276,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <para>查询账期待申请的发票数据</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询账期待开票数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
+        /// 
         /// <param name="request">
         /// WaitApplyInvoiceTaskDetailQueryRequest
         /// </param>
@@ -43874,6 +52304,16 @@ namespace AlibabaCloud.SDK.BtripOpen20220520
         /// <summary>
         /// <para>查询账期待申请的发票数据</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>使用该接口可以查询账期待开票数据。</para>
+        /// <ol>
+        /// <item><description>增值接口需特殊审批，提交权限前请先和商旅客户运营沟通确认。</description></item>
+        /// <item><description>使用该接口需要在应用中开通增值服务数据权限，具体的数据权限申请流程请查看接口权限申请流程<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3771435">接口权限申请流程</a>。</description></item>
+        /// <item><description>使用该接口需要在请求头中放入企业调用凭证数据信息（x-acs-btrip-corp-token），企业调用凭证数据获取接口请查看<a href="https://openapi.alibtrip.com/doc/toDocDetail?docId=3769985">企业访问凭证</a>。</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// WaitApplyInvoiceTaskDetailQueryRequest

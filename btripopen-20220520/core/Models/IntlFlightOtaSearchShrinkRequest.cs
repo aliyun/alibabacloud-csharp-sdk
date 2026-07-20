@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class IntlFlightOtaSearchShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10023</para>
+        /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>张三</para>
+        /// </summary>
         [NameInMap("buyer_name")]
         [Validation(Required=false)]
         public string BuyerName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("cabin_type")]
         [Validation(Required=false)]
         public int? CabinType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>open12igetbis4o07v10B1TlOWcM00</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
@@ -38,6 +54,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("trip_type")]
         [Validation(Required=false)]

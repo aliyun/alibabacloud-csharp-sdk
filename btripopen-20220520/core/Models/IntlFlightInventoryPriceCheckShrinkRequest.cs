@@ -27,16 +27,27 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string BuyerName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ZJTD</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>102000</para>
+        /// </summary>
         [NameInMap("order_price")]
         [Validation(Required=false)]
         public long? OrderPrice { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>22111acaf9ea47c09ed0db6abc45be2d_0</para>
         /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class CitySearchRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>杭州</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]

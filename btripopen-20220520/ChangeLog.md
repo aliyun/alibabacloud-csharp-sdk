@@ -1,3 +1,10 @@
+2026-07-20 Version: 5.4.0
+- Support API IntlFlightReShopCreate.
+- Support API IntlFlightReShopListSearch.
+- Support API IntlFlightReShopOtaSearch.
+- Update API TravelStandardListQuery: add request parameters user_id.
+
+
 2026-07-15 Version: 5.3.0
 - Support API EstimatedPriceQueryV2.
 

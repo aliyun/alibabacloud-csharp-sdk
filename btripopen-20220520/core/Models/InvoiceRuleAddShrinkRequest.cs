@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4854821</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class TrainApplyRefundRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1002145190081005400</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123456778</para>
         /// </summary>
         [NameInMap("out_refund_id")]
         [Validation(Required=false)]
@@ -39,6 +48,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public class TrainApplyRefundRequestRefundTrainInfos : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-05-06 15:19:01</para>
             /// </summary>
             [NameInMap("dep_time")]
             [Validation(Required=false)]
@@ -53,6 +65,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             public class TrainApplyRefundRequestRefundTrainInfosRefundPassengerInfos : TeaModel {
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>291487e553c5abde3b611aae283e2526f0d733ab55094aadc0b5ba587222a233c</para>
                 /// </summary>
                 [NameInMap("passenger_cert_no")]
                 [Validation(Required=false)]
@@ -60,6 +75,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>170d9ac6f8807f9ec603c688f45f78a41</para>
                 /// </summary>
                 [NameInMap("passenger_cert_type")]
                 [Validation(Required=false)]
@@ -67,6 +85,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12334</para>
                 /// </summary>
                 [NameInMap("passenger_id")]
                 [Validation(Required=false)]
@@ -74,6 +95,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
                 /// <summary>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>949c9f34f677a0e5d249dfc94f5e62cc7</para>
                 /// </summary>
                 [NameInMap("passenger_name")]
                 [Validation(Required=false)]
@@ -83,6 +107,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>K234</para>
             /// </summary>
             [NameInMap("train_no")]
             [Validation(Required=false)]

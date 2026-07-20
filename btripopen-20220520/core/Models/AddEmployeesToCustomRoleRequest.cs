@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class AddEmployeesToCustomRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom enterprise role.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("role_id")]
         [Validation(Required=false)]
         public string RoleId { get; set; }
 
         /// <summary>
+        /// <para>The list of member IDs. The maximum number of members per request is 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>if can be null:</b>

@@ -29,16 +29,28 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public IntlFlightOrderCancelResponseBodyModule Module { get; set; }
         public class IntlFlightOrderCancelResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2023-08-10 17:45:32</para>
+            /// </summary>
             [NameInMap("cancel_time")]
             [Validation(Required=false)]
             public string CancelTime { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

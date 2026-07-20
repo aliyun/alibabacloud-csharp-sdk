@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class CreateSubCorpResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>该企业不是已签署主子账户协议的主企业，不可创建子企业！</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -21,20 +29,36 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public CreateSubCorpResponseBodyModule Module { get; set; }
         public class CreateSubCorpResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>btrip123</para>
+            /// </summary>
             [NameInMap("sub_corp_id")]
             [Validation(Required=false)]
             public string SubCorpId { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>B72B39C8-32DE-558D-AD1C-D53F11F6ADFE</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>21041ce316577904808056433edbb2</para>
+        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

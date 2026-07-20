@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class TicketChangingEnquiryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BJS</para>
         /// </summary>
         [NameInMap("arr_city")]
         [Validation(Required=false)]
@@ -18,6 +21,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>HGH</para>
         /// </summary>
         [NameInMap("dep_city")]
         [Validation(Required=false)]
@@ -25,6 +31,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dis123</para>
         /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
@@ -32,6 +41,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("is_voluntary")]
         [Validation(Required=false)]
@@ -39,6 +51,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2000-00-00 00:00:00</para>
         /// </summary>
         [NameInMap("modify_depart_date")]
         [Validation(Required=false)]
@@ -46,6 +61,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CA1704</para>
         /// </summary>
         [NameInMap("modify_flight_no")]
         [Validation(Required=false)]
@@ -53,6 +71,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ece19e8b1047898a5a98b6487348c2</para>
         /// </summary>
         [NameInMap("session_id")]
         [Validation(Required=false)]

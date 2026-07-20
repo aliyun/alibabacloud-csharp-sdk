@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class HotelOrderChangeApplyShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123122</para>
+        /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3685792244476194816</para>
         /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
@@ -22,6 +29,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>因个人原因导致的行程变更</para>
         /// </summary>
         [NameInMap("reason")]
         [Validation(Required=false)]
@@ -36,6 +46,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1402002197440511306</para>
         /// </summary>
         [NameInMap("sale_order_id")]
         [Validation(Required=false)]

@@ -11,11 +11,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
     public class FlightOrderQueryRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>246584390</para>
         /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>第三方用户id</para>
+        /// </summary>
         [NameInMap("user_id")]
         [Validation(Required=false)]
         public string UserId { get; set; }

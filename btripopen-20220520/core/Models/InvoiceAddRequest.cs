@@ -9,14 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class InvoiceAddRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("address")]
         [Validation(Required=false)]
         public string Address { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>XX银行</para>
+        /// </summary>
         [NameInMap("bank_name")]
         [Validation(Required=false)]
         public string BankName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456</para>
+        /// </summary>
         [NameInMap("bank_no")]
         [Validation(Required=false)]
         public string BankNo { get; set; }
@@ -25,16 +37,27 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string MailThirdPartId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12345</para>
+        /// </summary>
         [NameInMap("tax_no")]
         [Validation(Required=false)]
         public string TaxNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123</para>
+        /// </summary>
         [NameInMap("tel")]
         [Validation(Required=false)]
         public string Tel { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>340049</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]
@@ -42,6 +65,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试发票</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
@@ -49,11 +75,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
         public int? Type { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("unit_type")]
         [Validation(Required=false)]
         public int? UnitType { get; set; }

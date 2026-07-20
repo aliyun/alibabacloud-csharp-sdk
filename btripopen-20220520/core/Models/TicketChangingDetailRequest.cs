@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class TicketChangingDetailRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dis123</para>
+        /// </summary>
         [NameInMap("dis_order_id")]
         [Validation(Required=false)]
         public string DisOrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>chang123</para>
+        /// </summary>
         [NameInMap("dis_sub_order_id")]
         [Validation(Required=false)]
         public string DisSubOrderId { get; set; }

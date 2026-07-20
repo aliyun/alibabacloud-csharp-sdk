@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public IntlFlightReShopCancelResponseBodyModule Module { get; set; }
         public class IntlFlightReShopCancelResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2023-08-10 17:45:32</para>
+            /// </summary>
             [NameInMap("cancel_time")]
             [Validation(Required=false)]
             public string CancelTime { get; set; }

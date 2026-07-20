@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         public class InvoiceRuleAddRequestEntities : TeaModel {
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12345</para>
             /// </summary>
             [NameInMap("entity_id")]
             [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>张三</para>
             /// </summary>
             [NameInMap("entity_name")]
             [Validation(Required=false)]
@@ -32,6 +38,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
             /// <summary>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("entity_type")]
             [Validation(Required=false)]
@@ -41,6 +50,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>4854821</para>
         /// </summary>
         [NameInMap("third_part_id")]
         [Validation(Required=false)]

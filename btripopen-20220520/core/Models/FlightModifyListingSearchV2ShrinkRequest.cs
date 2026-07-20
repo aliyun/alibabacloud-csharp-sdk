@@ -17,18 +17,34 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string DepDateShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("interface_caller_is_support_retry")]
         [Validation(Required=false)]
         public bool? InterfaceCallerIsSupportRetry { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>name</para>
+        /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
         public string IsvName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1017002195370467138</para>
+        /// </summary>
         [NameInMap("order_id")]
         [Validation(Required=false)]
         public long? OrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1017002195370467137</para>
+        /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
@@ -37,10 +53,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string PassengerSegmentRelationsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("search_mode")]
         [Validation(Required=false)]
         public int? SearchMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a2c230080358295f99e03aa4e3ccf1bd</para>
+        /// </summary>
         [NameInMap("search_retry_token")]
         [Validation(Required=false)]
         public string SearchRetryToken { get; set; }
@@ -49,10 +73,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public string SelectedSegmentsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>a2ffebfe733742aab5c491d960ba3d59</para>
+        /// </summary>
         [NameInMap("session_id")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("voluntary")]
         [Validation(Required=false)]
         public bool? Voluntary { get; set; }

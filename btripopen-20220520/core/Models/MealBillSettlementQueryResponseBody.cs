@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class MealBillSettlementQueryResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -21,10 +29,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public MealBillSettlementQueryResponseBodyModule Module { get; set; }
         public class MealBillSettlementQueryResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>7</para>
+            /// </summary>
             [NameInMap("category")]
             [Validation(Required=false)]
             public int? Category { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{商旅企业id}</para>
+            /// </summary>
             [NameInMap("corp_id")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
@@ -33,302 +49,598 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
             [Validation(Required=false)]
             public List<MealBillSettlementQueryResponseBodyModuleItems> Items { get; set; }
             public class MealBillSettlementQueryResponseBodyModuleItems : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2025-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("adjust_time")]
                 [Validation(Required=false)]
                 public string AdjustTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>无</para>
+                /// </summary>
                 [NameInMap("apply_extend_field")]
                 [Validation(Required=false)]
                 public string ApplyExtendField { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1004430880</para>
+                /// </summary>
                 [NameInMap("apply_id")]
                 [Validation(Required=false)]
                 public string ApplyId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("bill_record_time")]
                 [Validation(Required=false)]
                 public string BillRecordTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("book_time")]
                 [Validation(Required=false)]
                 public string BookTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
                 [NameInMap("booker_id")]
                 [Validation(Required=false)]
                 public string BookerId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>A1234</para>
+                /// </summary>
                 [NameInMap("booker_job_no")]
                 [Validation(Required=false)]
                 public string BookerJobNo { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>张三</para>
+                /// </summary>
                 [NameInMap("booker_name")]
                 [Validation(Required=false)]
                 public string BookerName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("capital_direction")]
                 [Validation(Required=false)]
                 public string CapitalDirection { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>技术部-开发部</para>
+                /// </summary>
                 [NameInMap("cascade_department")]
                 [Validation(Required=false)]
                 public string CascadeDepartment { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>用餐</para>
+                /// </summary>
                 [NameInMap("category_desc")]
                 [Validation(Required=false)]
                 public string CategoryDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>杭州市某餐厅</para>
+                /// </summary>
                 [NameInMap("consume_report_address")]
                 [Validation(Required=false)]
                 public string ConsumeReportAddress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>杭州市</para>
+                /// </summary>
                 [NameInMap("consume_report_city")]
                 [Validation(Required=false)]
                 public string ConsumeReportCity { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>HGN</para>
+                /// </summary>
                 [NameInMap("consume_report_city_code")]
                 [Validation(Required=false)]
                 public string ConsumeReportCityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>到店餐饮</para>
+                /// </summary>
                 [NameInMap("consumer_scene")]
                 [Validation(Required=false)]
                 public string ConsumerScene { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100.0</para>
+                /// </summary>
                 [NameInMap("corp_settle_fee")]
                 [Validation(Required=false)]
                 public double? CorpSettleFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>测试成本中心</para>
+                /// </summary>
                 [NameInMap("cost_center")]
                 [Validation(Required=false)]
                 public string CostCenter { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cs1</para>
+                /// </summary>
                 [NameInMap("cost_center_number")]
                 [Validation(Required=false)]
                 public string CostCenterNumber { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>code1</para>
+                /// </summary>
                 [NameInMap("cost_department")]
                 [Validation(Required=false)]
                 public string CostDepartment { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>开发部</para>
+                /// </summary>
                 [NameInMap("department")]
                 [Validation(Required=false)]
                 public string Department { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1112</para>
+                /// </summary>
                 [NameInMap("department_id")]
                 [Validation(Required=false)]
                 public string DepartmentId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>70101</para>
+                /// </summary>
                 [NameInMap("fee_type")]
                 [Validation(Required=false)]
                 public string FeeType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>赔付</para>
+                /// </summary>
                 [NameInMap("fee_type_desc")]
                 [Validation(Required=false)]
                 public string FeeTypeDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("index")]
                 [Validation(Required=false)]
                 public string Index { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>测试发票抬头</para>
+                /// </summary>
                 [NameInMap("invoice_title")]
                 [Validation(Required=false)]
                 public string InvoiceTitle { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("main_apply_id")]
                 [Validation(Required=false)]
                 public string MainApplyId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>q1</para>
+                /// </summary>
                 [NameInMap("mapping_company_code")]
                 [Validation(Required=false)]
                 public string MappingCompanyCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>XXXX</para>
+                /// </summary>
                 [NameInMap("meal_address")]
                 [Validation(Required=false)]
                 public string MealAddress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>杭州市</para>
+                /// </summary>
                 [NameInMap("meal_city")]
                 [Validation(Required=false)]
                 public string MealCity { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>XXX</para>
+                /// </summary>
                 [NameInMap("meal_city_code")]
                 [Validation(Required=false)]
                 public string MealCityCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>XXX原因</para>
+                /// </summary>
                 [NameInMap("meal_reason")]
                 [Validation(Required=false)]
                 public string MealReason { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>差旅用餐-员工</para>
+                /// </summary>
                 [NameInMap("meal_rule")]
                 [Validation(Required=false)]
                 public string MealRule { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>差旅用餐</para>
+                /// </summary>
                 [NameInMap("meal_scene")]
                 [Validation(Required=false)]
                 public string MealScene { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>MEAL</para>
+                /// </summary>
                 [NameInMap("merchant_category")]
                 [Validation(Required=false)]
                 public string MerchantCategory { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>XXXX</para>
+                /// </summary>
                 [NameInMap("merchant_name")]
                 [Validation(Required=false)]
                 public string MerchantName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1002039196909288346</para>
+                /// </summary>
                 [NameInMap("order_id")]
                 [Validation(Required=false)]
                 public string OrderId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100.0</para>
+                /// </summary>
                 [NameInMap("order_price")]
                 [Validation(Required=false)]
                 public double? OrderPrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>预订成功</para>
+                /// </summary>
                 [NameInMap("order_status_desc")]
                 [Validation(Required=false)]
                 public string OrderStatusDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.0</para>
+                /// </summary>
                 [NameInMap("person_settle_price")]
                 [Validation(Required=false)]
                 public double? PersonSettlePrice { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>60698599</para>
+                /// </summary>
                 [NameInMap("primary_id")]
                 [Validation(Required=false)]
                 public long? PrimaryId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>www123</para>
+                /// </summary>
                 [NameInMap("processor_oa_code")]
                 [Validation(Required=false)]
                 public string ProcessorOaCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>acs</para>
+                /// </summary>
                 [NameInMap("project_code")]
                 [Validation(Required=false)]
                 public string ProjectCode { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>测试项目名称</para>
+                /// </summary>
                 [NameInMap("project_name")]
                 [Validation(Required=false)]
                 public string ProjectName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>测试单</para>
+                /// </summary>
                 [NameInMap("remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>5.0</para>
+                /// </summary>
                 [NameInMap("service_fee")]
                 [Validation(Required=false)]
                 public double? ServiceFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>企业月结</para>
+                /// </summary>
                 [NameInMap("settle_type_desc")]
                 [Validation(Required=false)]
                 public string SettleTypeDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>110.0</para>
+                /// </summary>
                 [NameInMap("settlement_fee")]
                 [Validation(Required=false)]
                 public double? SettlementFee { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2023-01-01 00:00:00</para>
+                /// </summary>
                 [NameInMap("settlement_time")]
                 [Validation(Required=false)]
                 public string SettlementTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
                 [NameInMap("settlement_type")]
                 [Validation(Required=false)]
                 public string SettlementType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>否</para>
+                /// </summary>
                 [NameInMap("share_dinner")]
                 [Validation(Required=false)]
                 public string ShareDinner { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>入账成功</para>
+                /// </summary>
                 [NameInMap("status_desc")]
                 [Validation(Required=false)]
                 public string StatusDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>XXXX</para>
+                /// </summary>
                 [NameInMap("store_address")]
                 [Validation(Required=false)]
                 public string StoreAddress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>6%</para>
+                /// </summary>
                 [NameInMap("tax_rate")]
                 [Validation(Required=false)]
                 public string TaxRate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cs2</para>
+                /// </summary>
                 [NameInMap("third_invoice_id")]
                 [Validation(Required=false)]
                 public string ThirdInvoiceId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>123</para>
+                /// </summary>
                 [NameInMap("third_part_business_id")]
                 [Validation(Required=false)]
                 public string ThirdPartBusinessId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>7244-1968</para>
+                /// </summary>
                 [NameInMap("thirdpart_apply_id")]
                 [Validation(Required=false)]
                 public string ThirdpartApplyId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>支出</para>
+                /// </summary>
                 [NameInMap("trade_action_desc")]
                 [Validation(Required=false)]
                 public string TradeActionDesc { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1234</para>
+                /// </summary>
                 [NameInMap("traveler_id")]
                 [Validation(Required=false)]
                 public string TravelerId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>A1234</para>
+                /// </summary>
                 [NameInMap("traveler_job_no")]
                 [Validation(Required=false)]
                 public string TravelerJobNo { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>外部员工</para>
+                /// </summary>
                 [NameInMap("traveler_member_type")]
                 [Validation(Required=false)]
                 public string TravelerMemberType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>内部员工</para>
+                /// </summary>
                 [NameInMap("traveler_member_type_name")]
                 [Validation(Required=false)]
                 public string TravelerMemberTypeName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>张三</para>
+                /// </summary>
                 [NameInMap("traveler_name")]
                 [Validation(Required=false)]
                 public string TravelerName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("voucher_type")]
                 [Validation(Required=false)]
                 public int? VoucherType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>增值税发票</para>
+                /// </summary>
                 [NameInMap("voucher_type_desc")]
                 [Validation(Required=false)]
                 public string VoucherTypeDesc { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1002039195025156700</para>
+            /// </summary>
             [NameInMap("order_id")]
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-07-02</para>
+            /// </summary>
             [NameInMap("period_end")]
             [Validation(Required=false)]
             public string PeriodEnd { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2022-07-01</para>
+            /// </summary>
             [NameInMap("period_start")]
             [Validation(Required=false)]
             public string PeriodStart { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1qwe</para>
+            /// </summary>
             [NameInMap("scroll_id")]
             [Validation(Required=false)]
             public string ScrollId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2695</para>
+            /// </summary>
             [NameInMap("total_num")]
             [Validation(Required=false)]
             public long? TotalNum { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("total_size")]
             [Validation(Required=false)]
             public long? TotalSize { get; set; }
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>407543AF-2BD9-5890-BD92-9D1AB7218B27</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>210f079e16603757182131635d866a</para>
+        /// </summary>
         [NameInMap("traceId")]
         [Validation(Required=false)]
         public string TraceId { get; set; }

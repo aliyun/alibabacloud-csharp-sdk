@@ -13,6 +13,12 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// <para>A header parameter obtained from the Enterprise Access Credential operation (added in the header). In HTTP mode, you can use so_corp_token=value or dtb_corp_token=value in the URL as an alternative.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>feth00jqwls</para>
+        /// </summary>
         [NameInMap("x-acs-btrip-so-corp-token")]
         [Validation(Required=false)]
         public string XAcsBtripSoCorpToken { get; set; }

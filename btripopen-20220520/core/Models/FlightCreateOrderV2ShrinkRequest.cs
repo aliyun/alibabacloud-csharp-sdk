@@ -9,18 +9,34 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightCreateOrderV2ShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>异步下单key</para>
+        /// </summary>
         [NameInMap("async_create_order_key")]
         [Validation(Required=false)]
         public string AsyncCreateOrderKey { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("async_create_order_mode")]
         [Validation(Required=false)]
         public bool? AsyncCreateOrderMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ali_00001</para>
+        /// </summary>
         [NameInMap("btrip_user_id")]
         [Validation(Required=false)]
         public string BtripUserId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>云妹</para>
+        /// </summary>
         [NameInMap("buyer_name")]
         [Validation(Required=false)]
         public string BuyerName { get; set; }
@@ -34,6 +50,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cheshiapi</para>
         /// </summary>
         [NameInMap("isv_name")]
         [Validation(Required=false)]
@@ -41,6 +60,9 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7fb731deeb4510b86c17e8c8c25740_11</para>
         /// </summary>
         [NameInMap("ota_item_id")]
         [Validation(Required=false)]
@@ -48,11 +70,18 @@ namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>外部订单号</para>
         /// </summary>
         [NameInMap("out_order_id")]
         [Validation(Required=false)]
         public string OutOrderId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
         [NameInMap("total_price_cent")]
         [Validation(Required=false)]
         public long? TotalPriceCent { get; set; }

@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.BtripOpen20220520.Models
 {
     public class FlightExceedApplyQueryRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>175634</para>
+        /// </summary>
         [NameInMap("apply_id")]
         [Validation(Required=false)]
         public long? ApplyId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2024060710160003300008684</para>
+        /// </summary>
         [NameInMap("business_instance_id")]
         [Validation(Required=false)]
         public string BusinessInstanceId { get; set; }
