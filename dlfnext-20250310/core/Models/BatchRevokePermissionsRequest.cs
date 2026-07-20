@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class BatchRevokePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The permissions to revoke.</para>
+        /// <para>The list of permissions to be revoked.</para>
         /// </summary>
         [NameInMap("permissions")]
         [Validation(Required=false)]

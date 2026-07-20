@@ -1,3 +1,12 @@
+2026-07-20 Version: 1.10.0
+- Support API GetCatalogKmsGrants.
+- Support API GetQuery.
+- Support API SubmitQuery.
+- Support API VerifyCatalogKms.
+- Update API ListDatabaseDetails: add request parameters status.
+- Update API ListTableDetails: add request parameters status.
+
+
 2026-06-26 Version: 1.9.0
 - Support API AlterTableSchema.
 - Support API ListPartitionsByNames.

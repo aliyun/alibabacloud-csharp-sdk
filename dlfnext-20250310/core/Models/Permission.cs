@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Access { get; set; }
 
+        [NameInMap("columnMasking")]
+        [Validation(Required=false)]
+        public Dictionary<string, ColumnMask> ColumnMasking { get; set; }
+
         [NameInMap("columns")]
         [Validation(Required=false)]
         public PermissionColumns Columns { get; set; }
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>database_name</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Principal { get; set; }
 
         /// <summary>
-        /// <para>The resource type of the permission.</para>
+        /// <para>The permission resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CATALOG</para>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public RowFilter RowFilter { get; set; }
 
         /// <summary>
-        /// <para>The name of the data table.</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table_name</para>

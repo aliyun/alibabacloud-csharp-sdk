@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class BatchGrantPermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The permissions to grant.</para>
+        /// <para>The list of permissions.</para>
         /// </summary>
         [NameInMap("permissions")]
         [Validation(Required=false)]

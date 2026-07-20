@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
-    public class ListPartitionsByNamesRequest : TeaModel {
+    public class VerifyCatalogKmsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of partition specifications.</para>
+        /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("specs")]
+        [NameInMap("kmsKeyId")]
         [Validation(Required=false)]
-        public List<Dictionary<string, string>> Specs { get; set; }
+        public string KmsKeyId { get; set; }
 
     }
 

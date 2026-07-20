@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListDatabaseDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The databases.</para>
+        /// <para>The list of databases.</para>
         /// </summary>
         [NameInMap("databaseDetails")]
         [Validation(Required=false)]
         public List<Database> DatabaseDetails { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. A null value indicates that all results have been retrieved.</para>
+        /// <para>The pagination token used to retrieve the next page of results. A value of null indicates that the current page is the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>

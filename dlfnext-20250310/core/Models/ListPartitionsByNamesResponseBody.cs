@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListPartitionsByNamesResponseBody : TeaModel {
         /// <summary>
-        /// <para>分区。</para>
+        /// <para>The partitions.</para>
         /// </summary>
         [NameInMap("partitions")]
         [Validation(Required=false)]

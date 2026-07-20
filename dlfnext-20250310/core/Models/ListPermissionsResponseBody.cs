@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class ListPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</para>
+        /// <para>The pagination token used to retrieve the next page of data. If null is returned, the current page is the last page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E8ABEB1C3DB893D16576269017992F57</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The permissions.</para>
+        /// <para>The permission list.</para>
         /// </summary>
         [NameInMap("permissions")]
         [Validation(Required=false)]

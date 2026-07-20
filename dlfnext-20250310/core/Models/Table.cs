@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who created the table.</para>
+        /// <para>The creator of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The table URI.</para>
+        /// <para>The path of the table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</para>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The table schema.</para>
+        /// <para>The table schema information.</para>
         /// </summary>
         [NameInMap("schema")]
         [Validation(Required=false)]
         public Schema Schema { get; set; }
 
         /// <summary>
-        /// <para>The ID of the schema.</para>
+        /// <para>The ID of the table schema.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,23 +100,18 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? SchemaId { get; set; }
 
-        /// <summary>
-        /// <para>The storage action.</para>
-        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("storageAction")]
         [Validation(Required=false)]
         public string StorageAction { get; set; }
 
-        /// <summary>
-        /// <para>The timestamp of the storage action.</para>
-        /// </summary>
         [NameInMap("storageActionTimestamp")]
         [Validation(Required=false)]
         public long? StorageActionTimestamp { get; set; }
 
-        /// <summary>
-        /// <para>The storage class of the table.</para>
-        /// </summary>
         [NameInMap("storageClass")]
         [Validation(Required=false)]
         public string StorageClass { get; set; }

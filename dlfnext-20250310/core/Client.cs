@@ -1150,7 +1150,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to one or more DLF users or roles.</para>
+        /// <para>Grants permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1196,7 +1196,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to one or more DLF users or roles.</para>
+        /// <para>Grants permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1242,7 +1242,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to one or more DLF users or roles.</para>
+        /// <para>Grants permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1261,7 +1261,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to one or more DLF users or roles.</para>
+        /// <para>Grants permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1280,7 +1280,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions in a batch.</para>
+        /// <para>Revokes permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1326,7 +1326,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions in a batch.</para>
+        /// <para>Revokes permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1372,7 +1372,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions in a batch.</para>
+        /// <para>Revokes permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1391,7 +1391,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes permissions in a batch.</para>
+        /// <para>Revokes permissions in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3232,6 +3232,124 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCatalogKmsGrantsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogKmsGrantsResponse
+        /// </returns>
+        public GetCatalogKmsGrantsResponse GetCatalogKmsGrantsWithOptions(string catalog, GetCatalogKmsGrantsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCatalogKmsGrants",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/catalogs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalog) + "/kms/grants",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCatalogKmsGrantsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCatalogKmsGrantsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogKmsGrantsResponse
+        /// </returns>
+        public async Task<GetCatalogKmsGrantsResponse> GetCatalogKmsGrantsWithOptionsAsync(string catalog, GetCatalogKmsGrantsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCatalogKmsGrants",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/catalogs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalog) + "/kms/grants",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCatalogKmsGrantsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCatalogKmsGrantsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogKmsGrantsResponse
+        /// </returns>
+        public GetCatalogKmsGrantsResponse GetCatalogKmsGrants(string catalog, GetCatalogKmsGrantsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetCatalogKmsGrantsWithOptions(catalog, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the DLF authorization information required to configure BYOK SSE-KMS for a catalog, including the data-access role ARN and the KMS Key Policy snippet.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCatalogKmsGrantsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogKmsGrantsResponse
+        /// </returns>
+        public async Task<GetCatalogKmsGrantsResponse> GetCatalogKmsGrantsAsync(string catalog, GetCatalogKmsGrantsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetCatalogKmsGrantsWithOptionsAsync(catalog, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the storage overview of a data catalog.</para>
         /// </summary>
         /// 
@@ -3602,7 +3720,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a database.</para>
+        /// <para>Retrieves the details of a specific database in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3638,7 +3756,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a database.</para>
+        /// <para>Retrieves the details of a specific database in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3674,7 +3792,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a database.</para>
+        /// <para>Retrieves the details of a specific database in a data lake.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3689,7 +3807,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a database.</para>
+        /// <para>Retrieves the details of a specific database in a data lake.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4034,6 +4152,124 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetIcebergTableWithOptionsAsync(catalogId, namespace_, table, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryResponse
+        /// </returns>
+        public GetQueryResponse GetQueryWithOptions(string queryId, GetQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQuery",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/query/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(queryId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryResponse
+        /// </returns>
+        public async Task<GetQueryResponse> GetQueryWithOptionsAsync(string queryId, GetQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetQuery",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/query/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(queryId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryResponse
+        /// </returns>
+        public GetQueryResponse GetQuery(string queryId, GetQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetQueryWithOptions(queryId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetQueryResponse
+        /// </returns>
+        public async Task<GetQueryResponse> GetQueryAsync(string queryId, GetQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetQueryWithOptionsAsync(queryId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5556,7 +5792,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves database details.</para>
+        /// <para>Lists databases in a data lake with paged query support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5588,6 +5824,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             {
                 query["pageToken"] = request.PageToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5610,7 +5850,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves database details.</para>
+        /// <para>Lists databases in a data lake with paged query support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5642,6 +5882,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             {
                 query["pageToken"] = request.PageToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5664,7 +5908,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves database details.</para>
+        /// <para>Lists databases in a data lake with paged query support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5683,7 +5927,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves database details.</para>
+        /// <para>Lists databases in a data lake with paged query support.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6846,7 +7090,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions for a resource or principal.</para>
+        /// <para>Retrieves the permission information of a specified resource or a specified principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6920,7 +7164,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions for a resource or principal.</para>
+        /// <para>Retrieves the permission information of a specified resource or a specified principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6994,7 +7238,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions for a resource or principal.</para>
+        /// <para>Retrieves the permission information of a specified resource or a specified principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7013,7 +7257,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the permissions for a resource or principal.</para>
+        /// <para>Retrieves the permission information of a specified resource or a specified principal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8160,7 +8404,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the details of one or more tables.</para>
+        /// <para>Queries the details of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8187,6 +8431,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
             {
                 query["pageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNamePattern))
             {
@@ -8218,7 +8466,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the details of one or more tables.</para>
+        /// <para>Queries the details of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8245,6 +8493,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageToken))
             {
                 query["pageToken"] = request.PageToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableNamePattern))
             {
@@ -8276,7 +8528,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the details of one or more tables.</para>
+        /// <para>Queries the details of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8295,7 +8547,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the details of one or more tables.</para>
+        /// <para>Queries the details of tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9422,6 +9674,168 @@ namespace AlibabaCloud.SDK.DlfNext20250310
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Submits a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitQueryResponse
+        /// </returns>
+        public SubmitQueryResponse SubmitQueryWithOptions(SubmitQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCatalog))
+            {
+                body["defaultCatalog"] = request.DefaultCatalog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDatabase))
+            {
+                body["defaultDatabase"] = request.DefaultDatabase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                body["sql"] = request.Sql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tier))
+            {
+                body["tier"] = request.Tier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitQuery",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitQueryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitQueryRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitQueryResponse
+        /// </returns>
+        public async Task<SubmitQueryResponse> SubmitQueryWithOptionsAsync(SubmitQueryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCatalog))
+            {
+                body["defaultCatalog"] = request.DefaultCatalog;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultDatabase))
+            {
+                body["defaultDatabase"] = request.DefaultDatabase;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sql))
+            {
+                body["sql"] = request.Sql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tier))
+            {
+                body["tier"] = request.Tier;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitQuery",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/query",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitQueryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitQueryResponse
+        /// </returns>
+        public SubmitQueryResponse SubmitQuery(SubmitQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitQueryWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitQueryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitQueryResponse
+        /// </returns>
+        public async Task<SubmitQueryResponse> SubmitQueryAsync(SubmitQueryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitQueryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Subscribes to DLF in the current region.</para>
         /// </summary>
         /// 
@@ -9804,6 +10218,136 @@ namespace AlibabaCloud.SDK.DlfNext20250310
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateRoleUsersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCatalogKmsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCatalogKmsResponse
+        /// </returns>
+        public VerifyCatalogKmsResponse VerifyCatalogKmsWithOptions(string catalog, VerifyCatalogKmsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                body["kmsKeyId"] = request.KmsKeyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyCatalogKms",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/catalogs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalog) + "/kms/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyCatalogKmsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCatalogKmsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCatalogKmsResponse
+        /// </returns>
+        public async Task<VerifyCatalogKmsResponse> VerifyCatalogKmsWithOptionsAsync(string catalog, VerifyCatalogKmsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                body["kmsKeyId"] = request.KmsKeyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "VerifyCatalogKms",
+                Version = "2025-03-10",
+                Protocol = "HTTPS",
+                Pathname = "/dlf/v1/catalogs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(catalog) + "/kms/verify",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<VerifyCatalogKmsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCatalogKmsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCatalogKmsResponse
+        /// </returns>
+        public VerifyCatalogKmsResponse VerifyCatalogKms(string catalog, VerifyCatalogKmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return VerifyCatalogKmsWithOptions(catalog, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Validates the BYOK SSE-KMS configuration of a catalog by performing an SSE-KMS write probe on the bucket using the issued temporary credentials and verifying the result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// VerifyCatalogKmsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// VerifyCatalogKmsResponse
+        /// </returns>
+        public async Task<VerifyCatalogKmsResponse> VerifyCatalogKmsAsync(string catalog, VerifyCatalogKmsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await VerifyCatalogKmsWithOptionsAsync(catalog, request, headers, runtime);
         }
 
     }

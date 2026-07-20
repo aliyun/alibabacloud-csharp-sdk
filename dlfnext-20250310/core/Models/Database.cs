@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
 {
     public class Database : TeaModel {
         /// <summary>
-        /// <para>The database creation time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The database creator.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
-        /// <para>The database UUID.</para>
+        /// <para>The UUID of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The database URI.</para>
+        /// <para>The storage path of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://clg-paimon-xxx/db-xxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
+        /// <para>The name of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_database</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public Dictionary<string, string> Options { get; set; }
 
         /// <summary>
-        /// <para>The owner.</para>
+        /// <para>The owner of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
@@ -76,15 +76,16 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
-        /// <summary>
-        /// <para>The number of tables in the database.</para>
-        /// </summary>
+        [NameInMap("status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
         [NameInMap("tableCount")]
         [Validation(Required=false)]
         public long? TableCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the database was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1744970111419</para>
@@ -94,7 +95,7 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         public long? UpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>The user who last updated the database.</para>
+        /// <para>The updater.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::[accountId]:root</para>
