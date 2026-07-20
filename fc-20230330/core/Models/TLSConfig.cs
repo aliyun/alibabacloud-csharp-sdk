@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>TLSv1.0</para>
+        /// <para>TLSv1.2</para>
         /// </summary>
         [NameInMap("minVersion")]
         [Validation(Required=false)]

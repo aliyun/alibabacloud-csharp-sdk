@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PauseSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The function alias or version associated with the session ID to save.</para>
+        /// <para>The alias or version of the function associated with the session to save.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>

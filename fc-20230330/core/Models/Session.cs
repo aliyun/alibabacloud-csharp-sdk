@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Session : TeaModel {
+        [NameInMap("allowInternetAccess")]
+        [Validation(Required=false)]
+        public bool? AllowInternetAccess { get; set; }
+
         /// <summary>
-        /// <para>The instance ID of the function instance associated with the session.</para>
+        /// <para>The instance ID of the function associated with the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-68999e02-16a1955c-d2a03d1ccs</para>
@@ -30,7 +34,12 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable session ID reuse. Default value: False, which indicates that after the session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</para>
+        /// <para>Specifies whether to disable session ID reuse after the session expires. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>False: After the session expires, you can use the same session ID to initiate requests. The system treats it as a new session and binds it to a new instance.</description></item>
+        /// <item><description>True: After the session expires, the session ID cannot be reused.</description></item>
+        /// </list>
+        /// <para>Default value: False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -78,6 +87,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
+        [NameInMap("network")]
+        [Validation(Required=false)]
+        public CreateSessionNetworkConfig Network { get; set; }
+
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
@@ -87,7 +100,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The qualifier passed in when the customer created the session. If not specified, the default value is LATEST.</para>
+        /// <para>The qualifier passed when the customer created the session. If not specified, the default value is LATEST.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliasName1</para>
@@ -117,7 +130,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The idle timeout period of the session.</para>
+        /// <para>The session idle timeout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -141,7 +154,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum lifetime of the session.</para>
+        /// <para>The maximum session lifetime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21600</para>
@@ -149,6 +162,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [NameInMap("sessionTTLInSeconds")]
         [Validation(Required=false)]
         public long? SessionTTLInSeconds { get; set; }
+
+        [NameInMap("trafficAccessToken")]
+        [Validation(Required=false)]
+        public string TrafficAccessToken { get; set; }
 
     }
 

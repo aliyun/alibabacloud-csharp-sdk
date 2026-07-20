@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <para>The type of GPU cards. Valid values: fc.gpu.tesla.1: Tesla T4 fc.gpu.ampere.1: Ampere A10</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fc.gpu.ampere.1</para>
+        /// <para>fc.gpu.tesla.1</para>
         /// </summary>
         [NameInMap("gpuType")]
         [Validation(Required=false)]

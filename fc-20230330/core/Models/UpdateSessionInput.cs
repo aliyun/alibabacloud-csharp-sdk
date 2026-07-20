@@ -9,13 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateSessionInput : TeaModel {
+        [NameInMap("allowInternetAccess")]
+        [Validation(Required=false)]
+        public bool? AllowInternetAccess { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to disable session ID reuse after the session expires. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>False: After the session associated with a SessionID expires, you can use the same SessionID to initiate requests. The system treats this as a new session and binds it to a new instance.</description></item>
-        /// <item><description>True: After the session associated with a SessionID expires, the SessionID cannot be reused.
-        /// Default value: False.</description></item>
-        /// </list>
+        /// <para>Specifies whether to disable session ID reuse after the session expires. Default value: False, which indicates that after a session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,6 +39,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
+        [NameInMap("network")]
+        [Validation(Required=false)]
+        public UpdateSessionNetworkConfig Network { get; set; }
+
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The session idle timeout period.</para>
+        /// <para>The session idle timeout.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
