@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListEdgeContainerAppVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</para>
+        /// <para>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The sorting field. Valid values:</para>
+        /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Name: the version name.</description></item>
-        /// <item><description>CreateTime: the time when the version was created.</description></item>
-        /// <item><description>UpdateTime: the time when the version was last modified.</description></item>
+        /// <item><description><b>Name</b>: the version name.</description></item>
+        /// <item><description><b>CreateTime</b>: the version creation time.</description></item>
+        /// <item><description><b>ModifyTime</b>: the version modification time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderKey { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the query results. Valid values:</para>
+        /// <para>The sort direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: in ascending order.</description></item>
-        /// <item><description>DESC: in descending order.</description></item>
+        /// <item><description><para><b>Asc</b>: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>Desc</b>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 65535.</para>
+        /// <para>The page number. Valid values: any integer from <b>1</b> to <b>65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The page size. Valid values: any integer from <b>1</b> to <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for the search.</para>
+        /// <para>The query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ver-100568263967926****</para>
@@ -80,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The parameter used for fuzzy search. Valid values: VersionId and Name.</para>
+        /// <para>The type for fuzzy match. Supported values: VersionId and Name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VersionId</para>

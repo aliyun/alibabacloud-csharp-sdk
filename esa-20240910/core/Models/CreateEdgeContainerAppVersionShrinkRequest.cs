@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateEdgeContainerAppVersionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</para>
+        /// <para>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</para>
+        /// <remarks>
+        /// <para>Notice: 1) Your account must have an ESA plan with the Edge Container feature enabled. 2) Call CreateEdgeContainerApp first to create an application and obtain the AppId. 3) Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</notice></para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The container group to be deployed for this version, which contains information about images.<br> The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</para>
+        /// <para>The container group to be deployed for this version, including specific image information. The image information consists of the image address, startup command, parameters, environment variables, and probe rules. Multiple images are supported in a JSON array structure.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ContainersShrink { get; set; }
 
         /// <summary>
-        /// <para>The version name, which must be 6 to 128 characters in length.</para>
+        /// <para>The version name. The name must be <b>6 to 128</b> characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The description of the version.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test app</para>

@@ -32,7 +32,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
+        /// <remarks>
+        /// <para>Notice: Although this parameter is marked as optional in the schema, it is required when you call this operation. If you do not specify this parameter, an InternalError(400) error is returned. Call the ListSites operation to obtain a valid SiteId.</notice></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>5407498413****</para>

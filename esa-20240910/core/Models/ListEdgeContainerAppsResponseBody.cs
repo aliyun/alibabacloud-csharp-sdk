@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListEdgeContainerAppsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried applications.</para>
+        /// <para>The list of applications.</para>
         /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the version was created.</para>
+            /// <para>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-12-01T16:16:27.418298794+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The domain name associated with the application.</para>
+            /// <para>The domain name bound to the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test.com</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The type of the gateway. Valid values:</para>
+            /// <para>The gateway type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>l7: Layer 7 gateway.</description></item>
-            /// <item><description>l4: Layer 4 gateway.</description></item>
+            /// <item><description><b>l7</b>: Layer 7 gateway.</description></item>
+            /// <item><description><b>l4</b>: Layer 4 gateway.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string GatewayType { get; set; }
 
             /// <summary>
-            /// <para>The information about health checks.</para>
+            /// <para>The health check information.</para>
             /// </summary>
             [NameInMap("HealthCheck")]
             [Validation(Required=false)]
             public ListEdgeContainerAppsResponseBodyAppsHealthCheck HealthCheck { get; set; }
             public class ListEdgeContainerAppsResponseBodyAppsHealthCheck : TeaModel {
                 /// <summary>
-                /// <para>The number of consecutive failed health checks for an application to be considered unhealthy.</para>
+                /// <para>The number of consecutive failed health checks required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? FailTimes { get; set; }
 
                 /// <summary>
-                /// <para>The domain name that is used for health checks.</para>
+                /// <para>The domain name used for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.com</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Host { get; set; }
 
                 /// <summary>
-                /// <para>The range of health check status codes that indicate successful health checks.</para>
+                /// <para>The range of HTTP status codes that indicate a successful health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http_2XX</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Interval { get; set; }
 
                 /// <summary>
-                /// <para>The HTTP method used for health checks.</para>
+                /// <para>The method used for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GET</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Method { get; set; }
 
                 /// <summary>
-                /// <para>The health check port.</para>
+                /// <para>The Health Check Port used for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive successful health checks for an application to be considered healthy.</para>
+                /// <para>The number of consecutive successful health checks required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? SuccTimes { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period of health checks. Unit: seconds.</para>
+                /// <para>The timeout period of the health check. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The type of health checks. Valid values:</para>
+                /// <para>The health check type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>l7</description></item>
-                /// <item><description>l4</description></item>
+                /// <item><description><b>l7</b>: Layer 7 health check.</description></item>
+                /// <item><description><b>l4</b>: Layer 4 health check.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The health check URL.</para>
+                /// <para>The URI path used for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/health_check</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The progress of the application creation task in percentage.</para>
+            /// <para>The creation progress percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Remarks { get; set; }
 
             /// <summary>
-            /// <para>The server port. Valid values: 1 to 65535.</para>
+            /// <para>The server port number. Valid values: <b>1 to 65535</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -226,9 +226,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>creating: The application is being created.</description></item>
-            /// <item><description>failed: The application failed to be created.</description></item>
-            /// <item><description>created: The application is created.</description></item>
+            /// <item><description><b>creating</b>: being created.</description></item>
+            /// <item><description><b>failed</b>: creation failed.</description></item>
+            /// <item><description><b>created</b>: created.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</para>
+            /// <para>The backend port, which is also the service port of the application. Valid values: <b>1 to 65535</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? TargetPort { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The last modification time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-15T12:11:02Z</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of versions of the application.</para>
+            /// <para>The number of application versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>. Valid values: 1 to 65535.</para>
+        /// <para>The page number. Default value: <b>1</b>. Valid values: <b>1 to 65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page. Valid values: <b>1 to 500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,21 +10,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeSiteTimeSeriesDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSiteTimeSeriesDataResponseBodyData> Data { get; set; }
         public class DescribeSiteTimeSeriesDataResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Returned data.</para>
+            /// <para>The returned data.</para>
             /// </summary>
             [NameInMap("DetailData")]
             [Validation(Required=false)]
             public List<DescribeSiteTimeSeriesDataResponseBodyDataDetailData> DetailData { get; set; }
             public class DescribeSiteTimeSeriesDataResponseBodyDataDetailData : TeaModel {
                 /// <summary>
-                /// <para>Start timestamp of the time slice.</para>
+                /// <para>The start time of the time slice.</para>
+                /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-08T16:00:00Z</para>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string TimeStamp { get; set; }
 
                 /// <summary>
-                /// <para>Value.</para>
+                /// <para>The value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -46,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Query dimension.</para>
+            /// <para>The query dimension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -56,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionName { get; set; }
 
             /// <summary>
-            /// <para>Query dimension value.</para>
+            /// <para>The dimension value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -66,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionValue { get; set; }
 
             /// <summary>
-            /// <para>Query metric value.</para>
+            /// <para>The metric name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Traffic</para>
@@ -78,8 +79,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The end time for fetching the data.</para>
-        /// <para>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The end time of the returned data.</para>
+        /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-09T16:00:00Z</para>
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The granularity of the data, in seconds.</para>
+        /// <para>The data granularity. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -109,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sampling rate, in %.</para>
+        /// <para>The sampling rate. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -119,8 +120,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? SamplingRate { get; set; }
 
         /// <summary>
-        /// <para>The start time for fetching the data.</para>
-        /// <para>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <para>The start time for the data query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>
@@ -130,14 +131,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Aggregated query data.</para>
+        /// <para>The summarized data.</para>
         /// </summary>
         [NameInMap("SummarizedData")]
         [Validation(Required=false)]
         public List<DescribeSiteTimeSeriesDataResponseBodySummarizedData> SummarizedData { get; set; }
         public class DescribeSiteTimeSeriesDataResponseBodySummarizedData : TeaModel {
             /// <summary>
-            /// <para>The aggregation method used.</para>
+            /// <para>The aggregation method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sum</para>
@@ -147,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AggMethod { get; set; }
 
             /// <summary>
-            /// <para>The dimension of the aggregated data being queried.</para>
+            /// <para>The summarized dimension name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -157,7 +158,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionName { get; set; }
 
             /// <summary>
-            /// <para>The value of the aggregated dimension being queried.</para>
+            /// <para>The summarized dimension value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -167,7 +168,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DimensionValue { get; set; }
 
             /// <summary>
-            /// <para>The value of the aggregated metric being queried.</para>
+            /// <para>The summarized metric name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Traffic</para>

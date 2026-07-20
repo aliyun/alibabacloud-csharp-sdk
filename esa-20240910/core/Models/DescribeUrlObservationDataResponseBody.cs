@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeUrlObservationDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range during which data was queried.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The time must be in UTC.</para>
+        /// <para>The end time for the data query.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-19T15:59:59Z</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The create time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+        /// <para>The start time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-06T16:00:00Z</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("UrlDetailData")]
         [Validation(Required=false)]
         public List<DescribeUrlObservationDataResponseBodyUrlDetailData> UrlDetailData { get; set; }
         public class DescribeUrlObservationDataResponseBodyUrlDetailData : TeaModel {
             /// <summary>
-            /// <para>Measures the maximum layout mutation score for every unexpected layout change that occurs throughout the life of the page.</para>
+            /// <para>The metric that measures the largest burst of layout shift scores for every unexpected layout shift that occurs throughout the entire lifecycle of a page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public float? CLS { get; set; }
 
             /// <summary>
-            /// <para>The platform of the device.</para>
+            /// <para>The device platform.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PC</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ClientPlatform { get; set; }
 
             /// <summary>
-            /// <para>The country or region to which the IP address belongs.</para>
+            /// <para>The country.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Country { get; set; }
 
             /// <summary>
-            /// <para>Measures the time between when the page is loaded and when any part of the page\&quot;s content is rendered on the screen. Unit: ms.</para>
+            /// <para>The time from when the page starts loading to when any part of the page content is rendered on the screen. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public float? FCP { get; set; }
 
             /// <summary>
-            /// <para>Measures the time between when the user first interacts with the page and when the browser is actually able to start processing an event handler in response to that interaction. Unit: ms.</para>
+            /// <para>The time from when a user first interacts with a page to when the browser is actually able to begin processing event handlers in response to that interaction. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public float? FID { get; set; }
 
             /// <summary>
-            /// <para>Measures the responsiveness of the page, or how long it takes for the page to respond to user input visibly. Unit: ms.</para>
+            /// <para>The responsiveness of a page, specifically how long it takes for the page to visibly respond to user input. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public float? INP { get; set; }
 
             /// <summary>
-            /// <para>Reports the rendering time of the largest image or text block visible in the viewport. Unit: ms.</para>
+            /// <para>The render time of the largest image or text block visible within the viewport. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public float? LCP { get; set; }
 
             /// <summary>
-            /// <para>This metric measures the time between when a resource initiates a request and when the first byte of the response starts to arrive. Unit: ms.</para>
+            /// <para>The time from when a resource request is initiated to when the first byte of the response begins to arrive. Unit: ms.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>

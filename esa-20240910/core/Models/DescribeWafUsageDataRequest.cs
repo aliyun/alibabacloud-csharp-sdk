@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The time granularity for the query data, in seconds.</para>
         /// <para>The valid values vary based on the time range specified by <b>StartTime</b> and <b>EndTime</b>:</para>
         /// <list type="bullet">
-        /// <item><description><para>Less than 3 days: <b>300</b>, <b>3600</b>, or <b>86400</b>. Default value: <b>300</b>.</para>
+        /// <item><description><para>Less than 3 days: Valid values are <b>300</b>, <b>3600</b>, and <b>86400</b>. Default value: <b>300</b>.</para>
         /// </description></item>
-        /// <item><description><para>3 to 31 days (excluding 31 days): <b>3600</b> or <b>86400</b>. Default value: <b>3600</b>.</para>
+        /// <item><description><para>3 to 31 days (exclusive of 31 days): Valid values are <b>3600</b> and <b>86400</b>. Default value: <b>3600</b>.</para>
         /// </description></item>
-        /// <item><description><para>31 days or more: <b>86400</b>. Default value: <b>86400</b>.</para>
+        /// <item><description><para>31 days or more: The only valid value is <b>86400</b>. Default value: <b>86400</b>.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListEdgeContainerAppsRequest : TeaModel {
         /// <summary>
-        /// <para>The sorting field. This parameter is left empty by default. Valid values:</para>
+        /// <para>The field used for sorting. If this parameter is not specified, no sorting is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Name: the version name.</description></item>
-        /// <item><description>CreateTime: the time when the version was created.</description></item>
-        /// <item><description>UpdateTime: the time when the version was last modified.</description></item>
+        /// <item><description><b>Name</b>: the version name.</description></item>
+        /// <item><description><b>CreateTime</b>: the version creation time.</description></item>
+        /// <item><description><b>ModifyTime</b>: the version modification time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,10 +25,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderKey { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the query results. This parameter is left empty by default. Valid values:</para>
+        /// <para>The sort order. If this parameter is not specified, no sorting is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: in ascending order.</description></item>
-        /// <item><description>DESC: in descending order.</description></item>
+        /// <item><description><para><b>Asc</b>: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>Desc</b>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>. Valid values: 1 to 65535.</para>
+        /// <para>The page number. Default value: <b>1</b>. Valid values: <b>1 to 65535</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>. Valid values: 1 to 500.</para>
+        /// <para>The number of entries per page. Default value: <b>20</b>. Valid values: <b>1 to 500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -69,10 +71,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The search criterion based on which you want to perform fuzzy search. Valid values:</para>
+        /// <para>The type of fuzzy match. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Appid: the application ID.</description></item>
-        /// <item><description>Name: the application name.</description></item>
+        /// <item><description><b>AppId</b>: the application ID.</description></item>
+        /// <item><description><b>Name</b>: the application name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

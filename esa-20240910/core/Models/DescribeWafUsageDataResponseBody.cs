@@ -88,6 +88,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>The beginning of the time interval.</para>
+            /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-10T00:00:00Z</para>

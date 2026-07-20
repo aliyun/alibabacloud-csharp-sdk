@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 500</b>. The default value is <b>500</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>500</b>. Default value: <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,12 +40,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field to sort the results by. Valid values:</para>
+        /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ExpireTime</b>: Expiration time.</para>
-        /// </description></item>
-        /// <item><description><para><b>CreateTime</b>: Creation time.</para>
-        /// </description></item>
+        /// <item><description><b>ExpireTime</b>: sorts by expiration time.</description></item>
+        /// <item><description><b>CreateTime</b>: sorts by creation time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +56,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b>: Ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b>: Descending order.</para>
-        /// </description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,16 +68,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The status of the cache reserve instance. Valid values:</para>
+        /// <para>The instance status of the cache reserve instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>online</b>: The instance is running normally.</para>
-        /// </description></item>
-        /// <item><description><para><b>offline</b>: The instance has expired and is unavailable but remains within the grace period.</para>
-        /// </description></item>
-        /// <item><description><para><b>disable</b>: The instance is disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>overdue</b>: The instance is suspended due to an overdue payment.</para>
-        /// </description></item>
+        /// <item><description><b>online</b>: Normal service status.</description></item>
+        /// <item><description><b>offline</b>: The instance expires but has not exceeded the retention period and is unavailable.</description></item>
+        /// <item><description><b>disable</b>: The instance has been released.</description></item>
+        /// <item><description><b>overdue</b>: The instance is stopped due to an overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

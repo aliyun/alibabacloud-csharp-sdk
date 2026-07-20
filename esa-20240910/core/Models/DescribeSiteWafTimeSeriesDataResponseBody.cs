@@ -25,6 +25,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public class DescribeSiteWafTimeSeriesDataResponseBodyDataDetailData : TeaModel {
                 /// <summary>
                 /// <para>The start time of the time slice.</para>
+                /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-08T16:00:00Z</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The end of the time range for the returned data.</para>
+        /// <para>The end time of the returned data.</para>
         /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? SamplingRate { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time for the data query.</para>
         /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The summarized data.</para>
+        /// <para>The summarized query data.</para>
         /// </summary>
         [NameInMap("SummarizedData")]
         [Validation(Required=false)]

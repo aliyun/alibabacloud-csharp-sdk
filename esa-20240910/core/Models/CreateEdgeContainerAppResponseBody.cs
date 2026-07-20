@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateEdgeContainerAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the application that is created.</para>
+        /// <para>The ID of the created application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app-880688675783794688</para>

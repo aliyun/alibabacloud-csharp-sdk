@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerAppStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the application.</para>
+        /// <para>The object that describes the application status information.</para>
         /// </summary>
         [NameInMap("AppStatus")]
         [Validation(Required=false)]
         public GetEdgeContainerAppStatusResponseBodyAppStatus AppStatus { get; set; }
         public class GetEdgeContainerAppStatusResponseBodyAppStatus : TeaModel {
             /// <summary>
-            /// <para>The base version of the application.</para>
+            /// <para>The baseline version of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ver-123123123123****</para>
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BaseLineVersion { get; set; }
 
             /// <summary>
-            /// <para>The deployment status of the application.</para>
+            /// <para>The deployment status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>undeploy</b>: The application is not deployed.</description></item>
-            /// <item><description><b>deploying</b>: The application is being deployed.</description></item>
-            /// <item><description><b>deployed</b>: The application is deployed.</description></item>
-            /// <item><description><b>undeploying</b>: The deployment is being canceled.</description></item>
+            /// <item><description><b>undeploy</b>: Not deployed.</description></item>
+            /// <item><description><b>deploying</b>: Being deployed.</description></item>
+            /// <item><description><b>deployed</b>: Deployed.</description></item>
+            /// <item><description><b>undeploying</b>: Being undeployed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DeployStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was deployed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The deployment time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-25T05:58:05Z</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DeployTime { get; set; }
 
             /// <summary>
-            /// <para>The release version of the application.</para>
+            /// <para>The deployed version of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ver-123123123123****</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DeployedVersion { get; set; }
 
             /// <summary>
-            /// <para>The expected release percentage of the application.</para>
+            /// <para>The expected publishing percentage of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50%</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ExpectPercentage { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to fully release the version. This parameter takes effect only when PublishType is set to region.</para>
+            /// <para>Indicates whether the application is fully released. This field takes effect only when PublishType is set to region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? FullRelease { get; set; }
 
             /// <summary>
-            /// <para>The environment to which the application was released. Valid values:</para>
+            /// <para>The publishing environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>prod</b>: the production environment.</description></item>
-            /// <item><description><b>staging</b>: the staging environment.</description></item>
+            /// <item><description><b>prod</b>: Production environment.</description></item>
+            /// <item><description><b>staging</b>: Staging environment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PublishEnv { get; set; }
 
             /// <summary>
-            /// <para>The release percentage of the application.</para>
+            /// <para>The publishing percentage of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50%</para>
@@ -107,12 +107,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? PublishPercentage { get; set; }
 
             /// <summary>
-            /// <para>The release status of the application. Valid values:</para>
+            /// <para>The publishing status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>publishing</b></description></item>
-            /// <item><description><b>published</b></description></item>
-            /// <item><description><b>rollbacking</b></description></item>
-            /// <item><description><b>rollbacked</b></description></item>
+            /// <item><description><b>publishing</b>: Being published.</description></item>
+            /// <item><description><b>published</b>: Published.</description></item>
+            /// <item><description><b>rollbacking</b>: Being rolled back.</description></item>
+            /// <item><description><b>rollbacked</b>: Rolled back.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PublishStatus { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The publishing time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-25T05:58:05Z</para>
@@ -133,12 +133,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PublishTime { get; set; }
 
             /// <summary>
-            /// <para>Specifies how the version is released. Valid values:</para>
+            /// <para>The publishing type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>percentage: releases the version by percentage.</description></item>
-            /// <item><description>region: releases the version by region.</description></item>
+            /// <item><description><para><b>percentage</b>: Publish by percentage.</para>
+            /// </description></item>
+            /// <item><description><para><b>region</b>: Publish by region.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If you do not specify this parameter, the version is released by percentage by default.</para>
+            /// <para>If this parameter is not specified, the default value percentage is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>percentage</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PublishType { get; set; }
 
             /// <summary>
-            /// <para>The release version of the application.</para>
+            /// <para>The publishing version of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ver-123123123123****</para>
@@ -168,7 +170,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The time when the last rollback was performed.</para>
+            /// <para>The most recent rollback time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-25T05:58:05Z</para>
@@ -178,7 +180,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RollbackTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the application deployment was canceled. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The undeployment time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-25T05:58:05Z</para>

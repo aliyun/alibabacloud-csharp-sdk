@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCacheReserveInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of cache reserve instances.</para>
+        /// <para>The list of cache reserve instances.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
         public List<ListCacheReserveInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListCacheReserveInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>The cache reserve capacity, in GB.</para>
+            /// <para>The capacity of the cache reserve instance. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? CacheReserveCapacity { get; set; }
 
             /// <summary>
-            /// <para>The region where the cache reserve instance is used.</para>
+            /// <para>The region where the cache reserve instance is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HK</para>
@@ -36,12 +36,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CacheReserveRegion { get; set; }
 
+            /// <summary>
+            /// <para>The billing type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PREPAY: subscription.</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PREPAY</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-12T05:41:51Z</para>
@@ -51,7 +61,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The purchase duration of the instance, in months.</para>
+            /// <para>The subscription duration of the instance. Unit: months.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the instance.</para>
+            /// <para>The time when the instance expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-05T16:00:00Z</para>
@@ -81,16 +91,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>online</b>: The instance is running normally.</para>
-            /// </description></item>
-            /// <item><description><para><b>offline</b>: The instance has expired and is unavailable but remains within the grace period.</para>
-            /// </description></item>
-            /// <item><description><para><b>disable</b>: The instance is disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>overdue</b>: The instance is suspended due to an overdue payment.</para>
-            /// </description></item>
+            /// <item><description><b>online</b>: The instance is running normally.</description></item>
+            /// <item><description><b>offline</b>: The instance has expired but has not exceeded the retention period and is unavailable.</description></item>
+            /// <item><description><b>disable</b>: The instance has been released.</description></item>
+            /// <item><description><b>overdue</b>: The instance is stopped due to an overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned data.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page. Default value: <b>500</b>. Valid values: <b>1</b> to <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
