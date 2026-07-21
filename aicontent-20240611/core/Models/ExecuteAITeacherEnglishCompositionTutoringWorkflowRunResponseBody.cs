@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunResponseBody : TeaModel {
         /// <summary>
+        /// <para>The content of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hi</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The event type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Event { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>

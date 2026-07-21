@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryCostTrendMetricsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The data object containing the cost trend metrics.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public CostQueryTrendDTO Data { get; set; }
 
         /// <summary>
+        /// <para>The error code returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
+        /// <para>A token to retrieve the next page of results. If no token is returned, all results have been retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID. If you encounter a problem, provide this ID to technical support for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -68,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. A value of <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

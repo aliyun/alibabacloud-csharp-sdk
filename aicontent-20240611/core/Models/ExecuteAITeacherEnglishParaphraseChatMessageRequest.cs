@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherEnglishParaphraseChatMessageRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID for the chat session.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6788e0b475a4631ffc626722</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChatId { get; set; }
 
         /// <summary>
+        /// <para>The user\&quot;s chat message.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The grade level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Grade { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the question.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxx</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string QuestionId { get; set; }
 
         /// <summary>
+        /// <para>The user\&quot;s question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string QuestionInfo { get; set; }
 
         /// <summary>
+        /// <para>The response mode. Set this to <c>streaming</c> to receive the response as a stream of events.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +73,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ResponseMode { get; set; }
 
         /// <summary>
+        /// <para>The user\&quot;s answer to the question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +84,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string UserAnswer { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

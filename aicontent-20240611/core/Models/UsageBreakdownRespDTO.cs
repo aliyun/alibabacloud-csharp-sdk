@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class UsageBreakdownRespDTO : TeaModel {
         /// <summary>
+        /// <para>Aggregation granularity: hourly or daily</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hourly</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>Current page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>List of detailed data entries</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<UsageBreakdownRowDTO> Rows { get; set; }
 
         /// <summary>
+        /// <para>Total number of entries</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

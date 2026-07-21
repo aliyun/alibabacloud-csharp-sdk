@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class CountOralEvaluationStatisticsCallsRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public OralEvaluationStatisticsCallsCountRequest Body { get; set; }

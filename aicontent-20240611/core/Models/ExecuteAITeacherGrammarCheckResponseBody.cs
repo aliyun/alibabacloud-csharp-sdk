@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherGrammarCheckResponseBody : TeaModel {
         /// <summary>
+        /// <para>The data object that contains the result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ExecuteAITeacherGrammarCheckResponseBodyData Data { get; set; }
         public class ExecuteAITeacherGrammarCheckResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The error analysis.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>主语 &quot;I&quot; 对应的动词应该是 &quot;am&quot; 而不是 &quot;is&quot;。</para>
             /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Analysis { get; set; }
 
             /// <summary>
+            /// <para>The corrected sentence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>I am good.</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Correction { get; set; }
 
             /// <summary>
+            /// <para>The result of the grammar check.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Has_Error</para>
             /// </summary>
@@ -41,6 +49,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public string CorrectionStatus { get; set; }
 
+            /// <summary>
+            /// <para>The error reason.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>暂无返回</para>
+            /// </summary>
             [NameInMap("errorReason")]
             [Validation(Required=false)]
             public string ErrorReason { get; set; }
@@ -48,6 +62,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -56,6 +72,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -64,6 +82,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -72,6 +92,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -80,6 +102,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

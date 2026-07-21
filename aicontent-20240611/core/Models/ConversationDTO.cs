@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ConversationDTO : TeaModel {
         /// <summary>
+        /// <para>A JSON-formatted string that represents the complete state of the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChatData { get; set; }
 
         /// <summary>
+        /// <para>The status of the conversation, where 0 means enabled and any non-zero value means disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? DeleteTag { get; set; }
 
         /// <summary>
+        /// <para>The creation time of the conversation, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The modification time of the conversation, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>ID</para>
+        /// <para>The ID of the conversation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The total number of messages in the conversation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MessageCount { get; set; }
 
         /// <summary>
+        /// <para>A JSON-formatted string that contains an array of model IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[1,2,3]</para>
         /// </summary>
@@ -67,6 +79,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string ModelIds { get; set; }
 
+        /// <summary>
+        /// <para>The title of the conversation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>我的对话</para>
+        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }

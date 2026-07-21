@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKeyName { get; set; }
 
         /// <summary>
+        /// <para>Department ID; 0 indicates no associated department</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -33,11 +35,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? ClientId { get; set; }
 
+        /// <summary>
+        /// <para>Department name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>研发部</para>
+        /// </summary>
         [NameInMap("clientName")]
         [Validation(Required=false)]
         public string ClientName { get; set; }
 
         /// <summary>
+        /// <para>Array of usage metrics, containing only entries with non-zero values</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;: &quot;total_calls&quot;, &quot;value&quot;: 100}]</para>
         /// </summary>
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<MetricKVPairDTO> Metrics { get; set; }
 
         /// <summary>
+        /// <para>Model identifier</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
@@ -54,6 +66,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelCode { get; set; }
 
         /// <summary>
+        /// <para>Model ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -61,11 +75,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? ModelId { get; set; }
 
+        /// <summary>
+        /// <para>Model name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>通义千问-Plus</para>
+        /// </summary>
         [NameInMap("modelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
+        /// <para>Statistics scope</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm</para>
         /// </summary>
@@ -74,6 +96,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>Statistics time point, Unix timestamp (seconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1700000000</para>
         /// </summary>

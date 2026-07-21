@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ClientBalanceDTO : TeaModel {
         /// <summary>
+        /// <para>The current balance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100.00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? Balance { get; set; }
 
         /// <summary>
+        /// <para>The balance type. Valid values are <c>amount</c> or <c>tokens</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>amount</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BalanceType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether balance-based rate limiting is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? EnableBalance { get; set; }
 
         /// <summary>
+        /// <para>The creation timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The last modification timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>ID</para>
+        /// <para>The unique ID of the balance record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

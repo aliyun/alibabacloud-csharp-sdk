@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherGrammarCheckRequest : TeaModel {
         /// <summary>
+        /// <para>The sentence to check.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

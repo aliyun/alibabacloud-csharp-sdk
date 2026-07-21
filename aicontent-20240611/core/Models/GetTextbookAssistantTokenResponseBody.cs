@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class GetTextbookAssistantTokenResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data object.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetTextbookAssistantTokenResponseBodyData Data { get; set; }
         public class GetTextbookAssistantTokenResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The authorization token. Use this token to make API calls to the English textbook-style AI teacher service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tc_197bf5bb81889cc79eb51ae9b8c0cea3</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string AuthToken { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the authorization token, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5400</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -39,11 +48,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
+        /// <summary>
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>未知错误</para>
+        /// </summary>
         [NameInMap("errMessage")]
         [Validation(Required=false)]
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -52,7 +69,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A5E9849-A2F0-551D-A7D8-1A8118557BAB</para>
@@ -62,6 +79,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The API call succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The API call failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

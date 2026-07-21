@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class CreateProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public CreateProjectResponseBodyData Data { get; set; }
         public class CreateProjectResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The project\&quot;s creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-02-15T09:17:39Z</para>
             /// </summary>
@@ -25,15 +29,23 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>The applications in the project.</para>
+            /// </summary>
             [NameInMap("ProjectApps")]
             [Validation(Required=false)]
             public List<CreateProjectResponseBodyDataProjectApps> ProjectApps { get; set; }
             public class CreateProjectResponseBodyDataProjectApps : TeaModel {
+                /// <summary>
+                /// <para>The access credentials for the application.</para>
+                /// </summary>
                 [NameInMap("ApplicationAccessIds")]
                 [Validation(Required=false)]
                 public List<CreateProjectResponseBodyDataProjectAppsApplicationAccessIds> ApplicationAccessIds { get; set; }
                 public class CreateProjectResponseBodyDataProjectAppsApplicationAccessIds : TeaModel {
                     /// <summary>
+                    /// <para>The app key.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1234567890</para>
                     /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                     public string ApplicationAccessId { get; set; }
 
                     /// <summary>
+                    /// <para>The app secret. This parameter is returned only for requests sent from the console.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>MyAppSecret</para>
                     /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
+                /// <para>The internal ID of the application.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4867</para>
                 /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The project ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4910</para>
                 /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>124187</para>
             /// </summary>
@@ -78,6 +98,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MyProject</para>
             /// </summary>
@@ -85,11 +107,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public string ProjectName { get; set; }
 
+            /// <summary>
+            /// <para>The SDKs for the project.</para>
+            /// </summary>
             [NameInMap("ProjectSDK")]
             [Validation(Required=false)]
             public List<CreateProjectResponseBodyDataProjectSDK> ProjectSDK { get; set; }
             public class CreateProjectResponseBodyDataProjectSDK : TeaModel {
                 /// <summary>
+                /// <para>The SDK\&quot;s creation time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-15T09:17:39Z</para>
                 /// </summary>
@@ -98,6 +125,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The demo\&quot;s URL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://demo.com/demo">http://demo.com/demo</a></para>
                 /// </summary>
@@ -105,11 +134,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 [Validation(Required=false)]
                 public string DemoUrl { get; set; }
 
+                /// <summary>
+                /// <para>The deployment mode. Valid values: client or server.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>客户端</para>
+                /// </summary>
                 [NameInMap("DeployMode")]
                 [Validation(Required=false)]
                 public string DeployMode { get; set; }
 
                 /// <summary>
+                /// <para>The development language.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>C++</para>
                 /// </summary>
@@ -118,6 +155,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string DevelopLanguage { get; set; }
 
                 /// <summary>
+                /// <para>The SDK\&quot;s documentation URL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://demo.com/doc">http://demo.com/doc</a></para>
                 /// </summary>
@@ -126,6 +165,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string DocUrl { get; set; }
 
                 /// <summary>
+                /// <para>The name of the SDK.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>C SDK</para>
                 /// </summary>
@@ -134,6 +175,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string SdkName { get; set; }
 
                 /// <summary>
+                /// <para>The SDK\&quot;s download URL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://demo.com/sdk.zip">http://demo.com/sdk.zip</a></para>
                 /// </summary>
@@ -142,6 +185,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string SdkUrl { get; set; }
 
                 /// <summary>
+                /// <para>The SDK version.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4.12.8</para>
                 /// </summary>
@@ -152,6 +197,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
+            /// <para>The project type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>WebApplication</para>
             /// </summary>
@@ -162,6 +209,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -170,6 +219,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -178,6 +229,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -186,6 +239,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -194,6 +249,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

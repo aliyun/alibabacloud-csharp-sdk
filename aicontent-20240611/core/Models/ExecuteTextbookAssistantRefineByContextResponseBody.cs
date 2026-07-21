@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteTextbookAssistantRefineByContextResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data object.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ExecuteTextbookAssistantRefineByContextResponseBodyData Data { get; set; }
         public class ExecuteTextbookAssistantRefineByContextResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The result data.</para>
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public ExecuteTextbookAssistantRefineByContextResponseBodyDataResult Result { get; set; }
             public class ExecuteTextbookAssistantRefineByContextResponseBodyDataResult : TeaModel {
                 /// <summary>
+                /// <para>The refined sentence.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Good evening! From the book, how does Mike Black introduce himself?</para>
                 /// </summary>
@@ -30,6 +38,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -38,6 +48,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -54,7 +68,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6F73C114-A76E-51AD-99E3-BC7B941B69E0</para>
@@ -64,6 +78,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>A value of <c>true</c> indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

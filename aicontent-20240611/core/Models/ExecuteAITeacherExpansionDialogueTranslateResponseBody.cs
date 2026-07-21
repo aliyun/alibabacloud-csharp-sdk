@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherExpansionDialogueTranslateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public ExecuteAITeacherExpansionDialogueTranslateResponseBodyData Data { get; set; }
         public class ExecuteAITeacherExpansionDialogueTranslateResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The translation result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>太好了，谢谢你过来，莉莉。你喜欢吃肉吗？</para>
             /// </summary>
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterCreateBillingRuleResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Contains the details of the billing rule.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ModelRouterCreateBillingRuleResponseBodyData Data { get; set; }
         public class ModelRouterCreateBillingRuleResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The billing type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>token_tiered</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string BillingType { get; set; }
 
             /// <summary>
+            /// <para>The delete marker.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? DeleteTag { get; set; }
 
             /// <summary>
+            /// <para>The effective time of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-01-01T00:00:00Z</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The creation time of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The modification time of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The model code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ModelCode { get; set; }
 
             /// <summary>
+            /// <para>The model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public long? ModelId { get; set; }
 
             /// <summary>
+            /// <para>The model name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>通义千问Plus</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ModelName { get; set; }
 
             /// <summary>
+            /// <para>The model type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>chat</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ModelType { get; set; }
 
             /// <summary>
+            /// <para>The pricing configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public object PricingConfig { get; set; }
 
             /// <summary>
+            /// <para>The provider identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alibaba</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Symbol { get; set; }
 
             /// <summary>
+            /// <para>The version of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -152,6 +189,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -160,6 +199,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

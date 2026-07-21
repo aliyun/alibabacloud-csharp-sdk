@@ -9,23 +9,36 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class OralEvaluationStatisticsErrorCountResponse : TeaModel {
+        /// <summary>
+        /// <para>Contains the statistical data aggregated by project.</para>
+        /// </summary>
         [NameInMap("ProjectData")]
         [Validation(Required=false)]
         public OralEvaluationStatisticsErrorCountResponseProjectData ProjectData { get; set; }
         public class OralEvaluationStatisticsErrorCountResponseProjectData : TeaModel {
+            /// <summary>
+            /// <para>A list of statistical data objects for the application.</para>
+            /// </summary>
             [NameInMap("ApplicationData")]
             [Validation(Required=false)]
             public List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationData> ApplicationData { get; set; }
             public class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationData : TeaModel {
+                /// <summary>
+                /// <para>A list of datasets.</para>
+                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataData> Data { get; set; }
                 public class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataData : TeaModel {
+                    /// <summary>
+                    /// <para>A list of statistical items.</para>
+                    /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public List<OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData> Data { get; set; }
                     public class OralEvaluationStatisticsErrorCountResponseProjectDataApplicationDataDataData : TeaModel {
                         /// <summary>
+                        /// <para>The count for the statistical item.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -36,6 +49,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                         public int? Count { get; set; }
 
                         /// <summary>
+                        /// <para>The name of the statistical item, which defines the display granularity.</para>
                         /// <para>This parameter is required.</para>
                         /// 
                         /// <b>Example:</b>
@@ -48,6 +62,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                     }
 
                     /// <summary>
+                    /// <para>The error code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>51000</para>
                     /// </summary>
@@ -56,6 +72,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
+                    /// <para>The error message.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>start the core unsuccessfull.</para>
                     /// </summary>
@@ -66,7 +84,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
-                /// <para>appId,appkey</para>
+                /// <para>The App ID or App Key.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -79,6 +97,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
+            /// <para>The internal ID of the application.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -91,6 +110,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

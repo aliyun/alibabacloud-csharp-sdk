@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryUsageBreakdownRequest : TeaModel {
         /// <summary>
+        /// <para>Optional. Filters results by API Key ID. This parameter is linked to the department and requires clientId to be specified first.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>Optional. Filters results by department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The query end time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The aggregation granularity. Valid values: hourly and daily.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 20. Maximum value: 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -78,6 +92,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The query start time, in UNIX timestamp (seconds).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

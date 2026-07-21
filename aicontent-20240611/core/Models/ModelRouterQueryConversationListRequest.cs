@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryConversationListRequest : TeaModel {
         /// <summary>
+        /// <para>The grouping field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GroupBy { get; set; }
 
         /// <summary>
+        /// <para>A keyword to filter the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return the total count of items. Set to <c>true</c> to return the total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page of results. To retrieve the first page, do not specify this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The sort field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values are <c>ASC</c> (ascending) and <c>DESC</c> (descending).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of items to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

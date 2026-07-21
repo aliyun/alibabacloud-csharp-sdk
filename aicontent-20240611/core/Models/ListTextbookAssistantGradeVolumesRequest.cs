@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ListTextbookAssistantGradeVolumesRequest : TeaModel {
         /// <summary>
+        /// <para>The authorization token. Obtain this token by calling the API that authorizes the Textbook Assistant feature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tc_197bf5bb81889cc79eb51ae9b8c0cea3</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AuthToken { get; set; }
 
         /// <summary>
+        /// <para>The scenario. Valid values: <c>SYNC</c> (synchronized practice) and <c>EXPAND</c> (extended practice).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

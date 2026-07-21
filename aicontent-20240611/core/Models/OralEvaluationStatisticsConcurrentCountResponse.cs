@@ -10,21 +10,29 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class OralEvaluationStatisticsConcurrentCountResponse : TeaModel {
         /// <summary>
+        /// <para>Statistical data for the project.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("projectData")]
         [Validation(Required=false)]
         public OralEvaluationStatisticsConcurrentCountResponseProjectData ProjectData { get; set; }
         public class OralEvaluationStatisticsConcurrentCountResponseProjectData : TeaModel {
+            /// <summary>
+            /// <para>A list of application data.</para>
+            /// </summary>
             [NameInMap("ApplicationData")]
             [Validation(Required=false)]
             public List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData> ApplicationData { get; set; }
             public class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationData : TeaModel {
+                /// <summary>
+                /// <para>A list of data nodes.</para>
+                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public List<OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData> Data { get; set; }
                 public class OralEvaluationStatisticsConcurrentCountResponseProjectDataApplicationDataData : TeaModel {
                     /// <summary>
+                    /// <para>The count of the item.</para>
                     /// <para>This parameter is required.</para>
                     /// </summary>
                     [NameInMap("count")]
@@ -32,6 +40,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                     public int? Count { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the statistical item.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -44,7 +53,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 }
 
                 /// <summary>
-                /// <para>appkey</para>
+                /// <para>The app key.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -57,6 +66,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
+            /// <para>The internal application ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -69,6 +79,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

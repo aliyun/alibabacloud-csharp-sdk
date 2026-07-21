@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApplicationAccessId { get; set; }
 
         /// <summary>
+        /// <para>End Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-15 07:40:01</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Query granularity (hour, Day, month)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DAY</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>project ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>Start Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-10-14 07:40:01</para>
         /// </summary>

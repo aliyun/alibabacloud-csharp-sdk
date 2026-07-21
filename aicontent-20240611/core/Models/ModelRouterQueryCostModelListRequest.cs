@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>The department ID to filter the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +28,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The query\&quot;s end time, specified as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The time granularity for data aggregation. Valid values: <c>hourly</c> and <c>daily</c>. Default value: <c>hourly</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hourly</para>
         /// </summary>
@@ -44,6 +49,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -52,6 +59,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The model types to query. Separate multiple types with a comma.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LLM,VL</para>
         /// </summary>
@@ -60,7 +69,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelTypes { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
+        /// <para>A token from a previous response used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
@@ -70,6 +79,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>A keyword for a fuzzy search on the model name or model code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen</para>
         /// </summary>
@@ -78,6 +89,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Search { get; set; }
 
         /// <summary>
+        /// <para>The query\&quot;s start time, specified as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

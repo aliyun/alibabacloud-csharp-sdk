@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class PersonalizedTextToImageQueryImageAssetRequest : TeaModel {
         /// <summary>
+        /// <para>The image encoding format. For example, specify <c>base64</c> to receive the image data as a Base64-encoded string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>base64</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EncodeFormat { get; set; }
 
         /// <summary>
+        /// <para>The image ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

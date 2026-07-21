@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterCreateApiKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID. A value of <c>null</c> represents the default client.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

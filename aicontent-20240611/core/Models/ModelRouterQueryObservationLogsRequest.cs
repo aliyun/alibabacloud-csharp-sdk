@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryObservationLogsRequest : TeaModel {
         /// <summary>
+        /// <para>Filters the results by API key ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by client ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The end time for a custom time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-02T00:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The grouping field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GroupBy { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by model ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return the total count of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? NeedTotalCount { get; set; }
 
         /// <summary>
+        /// <para>The pagination token from a previous response to retrieve the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The sort field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>resourceId</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>The sort direction.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string OrderDirection { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time for a custom time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The time range for the query. Valid values are <c>1h</c>, <c>6h</c>, <c>24h</c>, <c>7d</c>, and <c>30d</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>24h</para>
         /// </summary>

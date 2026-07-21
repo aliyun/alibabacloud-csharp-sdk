@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class QueryApplicationAccessIdRequest : TeaModel {
         /// <summary>
+        /// <para>The application access ID (appkey).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
         /// </summary>

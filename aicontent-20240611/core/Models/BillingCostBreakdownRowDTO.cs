@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKeyName { get; set; }
 
         /// <summary>
+        /// <para>Billing type; currently fixed as total_amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>total_amount</para>
         /// </summary>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BillingType { get; set; }
 
         /// <summary>
+        /// <para>Department ID; 0 indicates no associated department</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -41,6 +45,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? ClientId { get; set; }
 
+        /// <summary>
+        /// <para>Department name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>研发部</para>
+        /// </summary>
         [NameInMap("clientName")]
         [Validation(Required=false)]
         public string ClientName { get; set; }
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string DimValues { get; set; }
 
         /// <summary>
+        /// <para>Model identifier</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelCode { get; set; }
 
         /// <summary>
+        /// <para>Model ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -69,11 +83,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? ModelId { get; set; }
 
+        /// <summary>
+        /// <para>Model name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>通义千问-Plus</para>
+        /// </summary>
         [NameInMap("modelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
+        /// <para>Statistics category</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm</para>
         /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>Payable amount, rounded to 8 decimal places</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.00012800</para>
         /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public float? PayableAmount { get; set; }
 
         /// <summary>
+        /// <para>Statistics time point, Unix timestamp (seconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1700000000</para>
         /// </summary>

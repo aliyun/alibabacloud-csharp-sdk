@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterSaveFlowConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The model ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ModelId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of requests per minute (RPM).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Rpm { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable smooth flow control.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public bool? SmoothFlowEnabled { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of tokens per minute (TPM).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000</para>
         /// </summary>

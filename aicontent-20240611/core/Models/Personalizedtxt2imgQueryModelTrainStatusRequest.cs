@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class Personalizedtxt2imgQueryModelTrainStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The model ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

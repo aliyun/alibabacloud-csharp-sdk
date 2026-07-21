@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherEnglishParaphraseChatMessageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The content associated with the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>how</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The event type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Event { get; set; }
 
         /// <summary>
+        /// <para>The request ID. This ID is returned with every response and is useful for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>

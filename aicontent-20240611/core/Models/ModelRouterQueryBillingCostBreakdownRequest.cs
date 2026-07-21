@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the client to query. If not specified, data for all clients is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -26,6 +28,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The end time for the query, specified as a Unix timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +39,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The granularity for data aggregation. Valid values: <c>hourly</c> and <c>daily</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return. This parameter is used for pagination along with <c>nextToken</c> and is mutually exclusive with <c>page</c> and <c>pageSize</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The ID of the model to query. If not specified, data for all models is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
+        /// <para>The types of the models to query, separated by commas. For example: <c>Chat,Embedding</c>. If not specified, data for all model types is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Chat</para>
         /// </summary>
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelTypes { get; set; }
 
         /// <summary>
+        /// <para>The pagination token that is used to retrieve the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
         /// </summary>
@@ -78,6 +90,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -86,6 +100,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default: 20. Maximum: 500.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -94,6 +110,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time for the query, specified as a Unix timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

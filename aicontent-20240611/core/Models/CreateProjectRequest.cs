@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class CreateProjectRequest : TeaModel {
         /// <summary>
+        /// <para>Project name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MyProject</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>Project type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>online_oral_evaluation_post_paid_call_count</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryModelListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Contains the paginated list of models and pagination metadata.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public ModelRouterQueryModelListResponseBodyData Data { get; set; }
         public class ModelRouterQueryModelListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>An array of model objects.</para>
+            /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ModelDTO> List { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of results per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string MaxResults { get; set; }
 
             /// <summary>
+            /// <para>The pagination token used to retrieve the next page of results. An empty value indicates that no more results are available.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>None</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>The number of models per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of models that meet the filter criteria.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code. Returned only when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message. Returned only when the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,7 +109,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>maxResults</para>
+        /// <para>The maximum number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -98,6 +119,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -106,6 +129,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

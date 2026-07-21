@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryClientDiscountLogsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of discount modification logs.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ModelRouterQueryClientDiscountLogsResponseBodyData> Data { get; set; }
         public class ModelRouterQueryClientDiscountLogsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The client ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public long? ClientId { get; set; }
 
             /// <summary>
+            /// <para>A flag that indicates whether the record is deleted. A value of 0 means the record is active.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public long? DeleteTag { get; set; }
 
             /// <summary>
+            /// <para>The discount.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public float? Discount { get; set; }
 
             /// <summary>
+            /// <para>The time when the discount took effect.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-09-01 00:00:00</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string EffectiveTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the discount expires.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-09-10 00:00:00</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the record was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The time when the record was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The record ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -77,6 +96,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The remark.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>备注</para>
+            /// </summary>
             [NameInMap("remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -100,6 +129,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -108,7 +139,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>maxResults</para>
+        /// <para>The maximum number of results returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -118,7 +149,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
+        /// <para>The token to use in a subsequent request to retrieve the next page of results. If this parameter is not returned, all results have been retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates if the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

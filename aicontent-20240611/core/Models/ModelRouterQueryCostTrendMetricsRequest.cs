@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by department ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +28,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query, specified as a Unix timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The granularity of the data. Valid values: <c>hourly</c> and <c>daily</c>. Default: <c>hourly</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hourly</para>
         /// </summary>
@@ -44,6 +49,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -52,6 +59,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The model types to query, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LLM,VL</para>
         /// </summary>
@@ -60,7 +69,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelTypes { get; set; }
 
         /// <summary>
-        /// <para>nextToken</para>
+        /// <para>The pagination token from a previous response to retrieve the next page of results. If this parameter is omitted, the first page of results is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxx-xxxxx</para>
@@ -70,6 +79,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query, specified as a Unix timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

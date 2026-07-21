@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class QueryProjectRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

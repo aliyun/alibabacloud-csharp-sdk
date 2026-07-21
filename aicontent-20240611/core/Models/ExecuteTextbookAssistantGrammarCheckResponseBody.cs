@@ -9,19 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteTextbookAssistantGrammarCheckResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data object.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ExecuteTextbookAssistantGrammarCheckResponseBodyData Data { get; set; }
         public class ExecuteTextbookAssistantGrammarCheckResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The result data.</para>
+            /// </summary>
             [NameInMap("result")]
             [Validation(Required=false)]
             public ExecuteTextbookAssistantGrammarCheckResponseBodyDataResult Result { get; set; }
             public class ExecuteTextbookAssistantGrammarCheckResponseBodyDataResult : TeaModel {
+                /// <summary>
+                /// <para>The error analysis.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>主语 \&quot;I\&quot; 后应跟动词 \&quot;am\&quot; 而不是 \&quot;are\&quot;。</para>
+                /// </summary>
                 [NameInMap("analysis")]
                 [Validation(Required=false)]
                 public string Analysis { get; set; }
 
                 /// <summary>
+                /// <para>The corrected sentence.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>I am you.</para>
                 /// </summary>
@@ -30,6 +44,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Correction { get; set; }
 
                 /// <summary>
+                /// <para>The grammar check result. Valid values: <c>Has_Error</c> (an error was found), <c>No_Error</c> (no errors were found), and <c>Invalid_Sentence</c> (the sentence could not be parsed).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Has_Error</para>
                 /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -50,6 +68,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -58,6 +78,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -66,7 +88,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1e96d17091734639835114e12c8</para>
@@ -76,6 +98,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class CostModelDetailRowDTO : TeaModel {
         /// <summary>
+        /// <para>UNIX timestamp (Unix seconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1700000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Timestamp { get; set; }
 
         /// <summary>
+        /// <para>Metric value mapping, where the key is the metric name and the value is numeric</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;total_calls\&quot;:3,\&quot;video_duration\&quot;:0,\&quot;total_amount\&quot;:0.6,\&quot;image_count\&quot;:3,\&quot;timestamp\&quot;:1776787200}&quot;</para>
         /// </summary>

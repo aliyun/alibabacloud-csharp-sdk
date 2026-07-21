@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class GetAITeacherExpansionDialogueSuggestionResponseBody : TeaModel {
         /// <summary>
+        /// <para>A container for the returned data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public GetAITeacherExpansionDialogueSuggestionResponseBodyData Data { get; set; }
         public class GetAITeacherExpansionDialogueSuggestionResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Chinese translation of the suggested response.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>谢谢莉莉.你喜欢吃肉吗，莉莉？</para>
             /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ChineseResult { get; set; }
 
             /// <summary>
+            /// <para>The suggested response in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Thanks, Lily. Do you like meat, Lily?</para>
             /// </summary>
@@ -36,6 +42,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -68,6 +82,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

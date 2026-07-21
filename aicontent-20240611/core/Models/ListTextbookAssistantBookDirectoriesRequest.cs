@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ListTextbookAssistantBookDirectoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The API authorization token. You can obtain this token from the authorization API for the AI English teacher feature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AuthToken { get; set; }
 
         /// <summary>
+        /// <para>The book ID. You can obtain this ID from the API for retrieving English textbooks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BookId { get; set; }
 
         /// <summary>
+        /// <para>The exercise scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

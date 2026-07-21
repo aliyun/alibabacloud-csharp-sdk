@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class Personalizedtxt2imgAddModelTrainJobRequest : TeaModel {
         /// <summary>
+        /// <para>A list of one or more image URLs for training. For example: [&quot;url_1&quot;, &quot;url_2&quot;, ...]</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("imageUrl")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<string> ImageUrl { get; set; }
 
         /// <summary>
+        /// <para>The name of the model training job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>A single word that defines the object type in the training images, such as &quot;girl&quot;, &quot;person&quot;, &quot;man&quot;, &quot;boy&quot;, or &quot;dog&quot;.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ObjectType { get; set; }
 
         /// <summary>
+        /// <para>The number of training steps for the model training job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>800</para>
         /// </summary>

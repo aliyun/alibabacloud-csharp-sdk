@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryBillingRuleListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ModelRouterQueryBillingRuleListResponseBodyData Data { get; set; }
         public class ModelRouterQueryBillingRuleListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of billing rules</para>
+            /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<ModelRouterQueryBillingRuleListResponseBodyDataList> List { get; set; }
             public class ModelRouterQueryBillingRuleListResponseBodyDataList : TeaModel {
                 /// <summary>
+                /// <para>Billing type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>token_tiered</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string BillingType { get; set; }
 
                 /// <summary>
+                /// <para>Delete marker</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public int? DeleteTag { get; set; }
 
                 /// <summary>
+                /// <para>Effective time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01T00:00:00Z</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string EffectiveTime { get; set; }
 
                 /// <summary>
+                /// <para>Expiration time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-01T00:00:00Z</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string ExpireTime { get; set; }
 
                 /// <summary>
+                /// <para>Creation time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01T00:00:00Z</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Modification time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01T00:00:00Z</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Rule ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>Model identifier</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qwen-plus</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string ModelCode { get; set; }
 
                 /// <summary>
+                /// <para>Model ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public long? ModelId { get; set; }
 
                 /// <summary>
+                /// <para>Model name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>通义千问Plus</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string ModelName { get; set; }
 
                 /// <summary>
+                /// <para>Model type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>chat</para>
                 /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string ModelType { get; set; }
 
                 /// <summary>
+                /// <para>Billing configuration</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
                 /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public object PricingConfig { get; set; }
 
                 /// <summary>
+                /// <para>Vendor identifier</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>alibaba</para>
                 /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 public string Symbol { get; set; }
 
                 /// <summary>
+                /// <para>Version number</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -132,6 +166,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             }
 
             /// <summary>
+            /// <para>Current page number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -140,6 +176,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Page { get; set; }
 
             /// <summary>
+            /// <para>Number of items per page</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -148,6 +186,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total number of records</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -158,6 +198,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -166,6 +208,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -174,6 +218,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -202,6 +248,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -210,6 +258,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ClientBalanceLogDTO : TeaModel {
         /// <summary>
+        /// <para>The new balance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100.00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? BalanceAfter { get; set; }
 
         /// <summary>
+        /// <para>The previous balance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90.00</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? BalanceBefore { get; set; }
 
         /// <summary>
+        /// <para>The change amount. A positive value represents a recharge, and a negative value represents a deduction.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.00</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? ChangeAmount { get; set; }
 
         /// <summary>
+        /// <para>The type of change. Possible values are <c>auto_deduct</c>, <c>deduct</c>, or <c>recharge</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>recharge</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChangeType { get; set; }
 
         /// <summary>
+        /// <para>The client ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
+        /// <para>The creation time in ISO 8601 UTC format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The unique record ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -65,6 +79,12 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>Notes about the balance change.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>充值</para>
+        /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

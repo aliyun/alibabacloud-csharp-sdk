@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class CreateAccessWarrantResponseBody : TeaModel {
         /// <summary>
+        /// <para>The returned data object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public CreateAccessWarrantResponseBodyData Data { get; set; }
         public class CreateAccessWarrantResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The access token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
             /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string AccessToken { get; set; }
 
             /// <summary>
+            /// <para>The access warrant ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ex2xxxxxxxx</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string AccessWarrantId { get; set; }
 
             /// <summary>
+            /// <para>The merchant\&quot;s application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ApplicationAccessId { get; set; }
 
             /// <summary>
+            /// <para>The creation time of the access warrant.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1672531200</para>
             /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the access warrant.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1672531200</para>
             /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The merchant\&quot;s user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
             /// </summary>
@@ -68,6 +82,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -76,6 +92,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -84,6 +102,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -92,6 +112,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -100,6 +122,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryBillingRuleListRequest : TeaModel {
         /// <summary>
+        /// <para>Return only currently effective rules.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Filter by model identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelCode { get; set; }
 
         /// <summary>
+        /// <para>Filter by model ID (required).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? ModelId { get; set; }
 
         /// <summary>
+        /// <para>Filter by model type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>chat</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Page number. Default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>Page number (takes precedence).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -78,6 +90,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page. Default is 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

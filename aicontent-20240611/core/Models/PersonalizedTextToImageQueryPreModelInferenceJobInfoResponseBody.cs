@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response data object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBodyData Data { get; set; }
         public class PersonalizedTextToImageQueryPreModelInferenceJobInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The creation time of the inference job.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-12-25T12:00:00</para>
             /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The inference job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3220</para>
             /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The job status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FINISHED</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string JobStatus { get; set; }
 
             /// <summary>
+            /// <para>The job progress.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
             /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public double? JobTrainProgress { get; set; }
 
             /// <summary>
+            /// <para>The model ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>modelId-xxxx-xxxx-xxxx</para>
             /// </summary>
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string ModelId { get; set; }
 
             /// <summary>
-            /// <para>promptId</para>
+            /// <para>The ID of the prompt used for the job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>promptId-xxxx-xxxx-xxxx</para>
@@ -68,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string PromptId { get; set; }
 
             /// <summary>
+            /// <para>A list of resource IDs for the generated images.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0000.png</para>
             /// </summary>
@@ -78,6 +92,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_ERROR</para>
         /// </summary>
@@ -86,6 +102,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>未知错误</para>
         /// </summary>
@@ -94,6 +112,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ErrMessage { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -102,6 +122,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>
@@ -110,6 +132,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

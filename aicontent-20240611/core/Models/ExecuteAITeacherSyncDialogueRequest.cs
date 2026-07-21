@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherSyncDialogueRequest : TeaModel {
         /// <summary>
+        /// <para>An array of dialogue task objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("dialogueTasks")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<ExecuteAITeacherSyncDialogueRequestDialogueTasks> DialogueTasks { get; set; }
         public class ExecuteAITeacherSyncDialogueRequestDialogueTasks : TeaModel {
             /// <summary>
+            /// <para>The assistant\&quot;s dialogue content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Assistant { get; set; }
 
             /// <summary>
+            /// <para>The translation of the assistant\&quot;s dialogue content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>为什么有些人认为遛狗是份好差事?</para>
             /// </summary>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string AssistantTranslate { get; set; }
 
             /// <summary>
+            /// <para>The sequence number of the task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Order { get; set; }
 
             /// <summary>
+            /// <para>The user\&quot;s dialogue content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +63,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>The language and dialect of the dialogue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en-gb</para>
         /// </summary>
@@ -64,11 +72,15 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string LanguageCode { get; set; }
 
+        /// <summary>
+        /// <para>An array of dialogue record objects.</para>
+        /// </summary>
         [NameInMap("records")]
         [Validation(Required=false)]
         public List<ExecuteAITeacherSyncDialogueRequestRecords> Records { get; set; }
         public class ExecuteAITeacherSyncDialogueRequestRecords : TeaModel {
             /// <summary>
+            /// <para>The message content.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -79,6 +91,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the user\&quot;s response is off-topic, acting as a flow control mechanism. This value is based on how the user\&quot;s previous response aligned with the dialogue task. If the user goes off-topic more than twice, the system sets this parameter to <c>true</c> to trigger a task switch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>跑题：true, 不跑题：false</para>
             /// </summary>
@@ -87,6 +101,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public bool? IsOffTopicControl { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the response is on-topic.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>扣题：true, 不扣题：false</para>
             /// </summary>
@@ -95,6 +111,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public bool? IsOnTopic { get; set; }
 
             /// <summary>
+            /// <para>The sequence number of the message.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -105,10 +122,11 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             public int? Order { get; set; }
 
             /// <summary>
+            /// <para>The role of the message author.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>老师：assistant；学生：user</para>
+            /// <para>AI：assistant；用户：user</para>
             /// </summary>
             [NameInMap("role")]
             [Validation(Required=false)]
@@ -117,6 +135,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         }
 
         /// <summary>
+        /// <para>A unique identifier for the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

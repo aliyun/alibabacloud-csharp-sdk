@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterUpdateModelRequest : TeaModel {
         /// <summary>
-        /// <para>API Key</para>
+        /// <para>The API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>Base URL</para>
+        /// <para>The base URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string BaseUrl { get; set; }
 
         /// <summary>
+        /// <para>The model description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>通义千问大模型</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The maximum input length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8192</para>
         /// </summary>
@@ -46,6 +50,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MaxInputLength { get; set; }
 
         /// <summary>
+        /// <para>The maximum output length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2048</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string MaxOutputLength { get; set; }
 
         /// <summary>
+        /// <para>The model ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-turbo</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelId { get; set; }
 
         /// <summary>
+        /// <para>The model type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Chat</para>
         /// </summary>
@@ -70,6 +80,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>The model name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>通义千问</para>
         /// </summary>
@@ -78,6 +90,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The model status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -86,6 +100,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The provider symbol.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alibaba</para>
         /// </summary>
@@ -94,6 +110,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Symbol { get; set; }
 
         /// <summary>
+        /// <para>Comma-separated tags.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>chat,NLP</para>
         /// </summary>

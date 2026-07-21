@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ListTextbookAssistantArticlesRequest : TeaModel {
         /// <summary>
+        /// <para>The authorization token. Obtain this token from the API to send Service Window messages.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AuthToken { get; set; }
 
         /// <summary>
+        /// <para>The directory ID. Obtain this ID by calling the API to retrieve textbook directories.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

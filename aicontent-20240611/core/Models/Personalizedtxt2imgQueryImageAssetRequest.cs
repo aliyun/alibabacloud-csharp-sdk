@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class Personalizedtxt2imgQueryImageAssetRequest : TeaModel {
         /// <summary>
+        /// <para>The encoding format of the image. If this parameter is set to <c>base64</c>, the image is returned as a Base64-encoded string. If this parameter is omitted, the raw binary data of the image is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>base64</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EncodeFormat { get; set; }
 
         /// <summary>
+        /// <para>The ID of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRowDTO : TeaModel {
         /// <summary>
+        /// <para>Model identity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelCode { get; set; }
 
         /// <summary>
+        /// <para>Model ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? ModelId { get; set; }
 
+        /// <summary>
+        /// <para>Model name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>通义千问-Plus</para>
+        /// </summary>
         [NameInMap("modelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
+        /// <para>Metric value mapping, where the key is the metric name and the value is the numeric value</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;total_calls\&quot;:21,\&quot;video_duration\&quot;:210,\&quot;total_amount\&quot;:126,\&quot;image_count\&quot;:0}&quot;</para>
         /// </summary>

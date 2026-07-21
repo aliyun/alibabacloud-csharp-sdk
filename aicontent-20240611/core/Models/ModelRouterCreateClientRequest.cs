@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterCreateClientRequest : TeaModel {
         /// <summary>
+        /// <para>The company address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>杭州市</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Address { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of model IDs that the client can use. If this parameter is empty, the client can use all available models.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AllowedModels { get; set; }
 
         /// <summary>
+        /// <para>The contact information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13800138000</para>
         /// </summary>
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public double? Discount { get; set; }
 
         /// <summary>
+        /// <para>The client name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>我的客户</para>
         /// </summary>
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ParentId { get; set; }
 
         /// <summary>
+        /// <para>Additional remarks.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>备注</para>
         /// </summary>

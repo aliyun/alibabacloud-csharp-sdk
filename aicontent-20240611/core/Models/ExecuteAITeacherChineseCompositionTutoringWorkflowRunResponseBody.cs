@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The content associated with the event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>春天里常见的景</para>
+        /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The event type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Event { get; set; }
 
         /// <summary>
+        /// <para>The unique ID for the request. This ID is useful for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxxxxxx</para>
         /// </summary>

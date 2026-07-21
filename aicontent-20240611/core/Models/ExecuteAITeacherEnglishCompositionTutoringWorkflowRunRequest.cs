@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest : TeaModel {
         /// <summary>
+        /// <para>The essay outline.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Title: The Importance of Reading
         /// I. Introduction
@@ -21,6 +23,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EssayOutline { get; set; }
 
         /// <summary>
+        /// <para>The essay requirements.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +34,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EssayRequirements { get; set; }
 
         /// <summary>
+        /// <para>The essay topic.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +45,9 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EssayTopic { get; set; }
 
         /// <summary>
+        /// <para>The essay type. Valid values:</para>
+        /// <para><c>outline</c>: an outline</para>
+        /// <para>essay: essay</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,6 +58,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string EssayType { get; set; }
 
         /// <summary>
+        /// <para>The required word count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -59,6 +68,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? EssayWordCount { get; set; }
 
         /// <summary>
+        /// <para>The student\&quot;s grade level.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,6 +79,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? Grade { get; set; }
 
         /// <summary>
+        /// <para>The response mode. For example, set this value to <c>streaming</c> to receive server-sent events.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,6 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ResponseMode { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

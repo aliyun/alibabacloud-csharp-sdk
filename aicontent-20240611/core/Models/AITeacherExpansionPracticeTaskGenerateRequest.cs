@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class AITeacherExpansionPracticeTaskGenerateRequest : TeaModel {
         /// <summary>
+        /// <para>The grade.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,15 +20,23 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string Grade { get; set; }
 
+        /// <summary>
+        /// <para>A list of key sentences from the <c>textContent</c> to focus on during task generation.</para>
+        /// </summary>
         [NameInMap("keySentences")]
         [Validation(Required=false)]
         public List<string> KeySentences { get; set; }
 
+        /// <summary>
+        /// <para>A list of keywords from the <c>textContent</c> to focus on during task generation.</para>
+        /// </summary>
         [NameInMap("keyWords")]
         [Validation(Required=false)]
         public List<string> KeyWords { get; set; }
 
         /// <summary>
+        /// <para>The learning object to guide task generation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Understanding unique professions such as dog walkers, hotel test sleepers, and food tasters, including their job responsibilities and the benefits or challenges associated with each role.</para>
         /// </summary>
@@ -36,6 +45,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string LearningObject { get; set; }
 
         /// <summary>
+        /// <para>The reference article used to generate questions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,11 +55,18 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string TextContent { get; set; }
 
+        /// <summary>
+        /// <para>The name of the textbook.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>英语（基础模块）修订版</para>
+        /// </summary>
         [NameInMap("textbook")]
         [Validation(Required=false)]
         public string Textbook { get; set; }
 
         /// <summary>
+        /// <para>The conversation topic.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +77,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Topic { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

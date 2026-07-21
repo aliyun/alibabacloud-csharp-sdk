@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ExecuteTextbookAssistantRetryConversationRequest : TeaModel {
         /// <summary>
+        /// <para>The AI assistant\&quot;s message ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string Assistant { get; set; }
 
         /// <summary>
+        /// <para>The authorization token. You can obtain this token from the API that provides authorization for the textbook AI assistant feature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string AuthToken { get; set; }
 
         /// <summary>
+        /// <para>The conversation ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ChatId { get; set; }
 
         /// <summary>
+        /// <para>Specifies the scenario. Valid values: <c>SYNC</c> for synchronized practice and <c>EXPAND</c> for expansion practice.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

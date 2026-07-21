@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class GetTextbookAssistantTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The device ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,6 +24,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>The device model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
