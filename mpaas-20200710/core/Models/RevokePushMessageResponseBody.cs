@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20200710.Models
 {
     public class RevokePushMessageResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("PushResult")]
         [Validation(Required=false)]
         public RevokePushMessageResponseBodyPushResult PushResult { get; set; }
