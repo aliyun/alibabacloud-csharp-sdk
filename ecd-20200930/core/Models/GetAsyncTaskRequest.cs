@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetAsyncTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The asynchronous task ID. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and information about an asynchronous task.</para>
+        /// <para>The asynchronous task ID. When you call the <a href="https://help.aliyun.com/document_detail/2247626.html">CopyCdsFile</a> operation to copy a folder, this field is returned because the copy is performed asynchronously in the background. Call this operation and pass in the asynchronous task ID to retrieve the task details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AsyncTaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>The enterprise network disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

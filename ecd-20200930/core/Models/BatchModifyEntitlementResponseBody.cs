@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BatchModifyEntitlementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The results.</para>
+        /// <para>The collection of assignment results.</para>
         /// </summary>
         [NameInMap("Entitlements")]
         [Validation(Required=false)]
@@ -34,27 +34,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopId { get; set; }
 
                 /// <summary>
-                /// <para>The authorized user IDs for the cloud computer.</para>
+                /// <para>The user IDs (usernames) authorized for the cloud computer.</para>
                 /// </summary>
                 [NameInMap("EndUserIds")]
                 [Validation(Required=false)]
                 public List<string> EndUserIds { get; set; }
 
                 /// <summary>
-                /// <para>The assign result for each cloud computer.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>FAILED</para>
-                /// </description></item>
-                /// <item><description><para>NOT_STARTED</para>
-                /// </description></item>
-                /// <item><description><para>STARTED</para>
-                /// </description></item>
-                /// <item><description><para>PROCESSING</para>
-                /// </description></item>
-                /// <item><description><para>FINISHED</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The assignment result of a single cloud computer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISHED</para>
@@ -66,20 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The result.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>FAILED</para>
-            /// </description></item>
-            /// <item><description><para>NOT_STARTED</para>
-            /// </description></item>
-            /// <item><description><para>STARTED</para>
-            /// </description></item>
-            /// <item><description><para>PROCESSING</para>
-            /// </description></item>
-            /// <item><description><para>FINISHED</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The overall assignment result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINISHED</para>

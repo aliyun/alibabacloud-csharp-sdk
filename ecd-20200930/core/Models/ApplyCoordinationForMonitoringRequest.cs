@@ -10,16 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyCoordinationForMonitoringRequest : TeaModel {
         /// <summary>
-        /// <para>The coordination policy.</para>
-        /// <para>Set the value to FULL_CONTROL.</para>
-        /// <list type="bullet">
-        /// <item><description><para>The value FULL_CONTROL specifies that the cloud desktop is shared and remote access to the cloud desktop is allowed.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The access policy during the remote assistance procedure.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CoordinatePolicyType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user who initiates the stream collaboration. If the initiator is the administrator, do not specify this parameter.</para>
+        /// <para>The ID of the end user who initiates the coordination flow. This parameter is not required if the request is initiated by an administrator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -40,16 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The type of the initiator.</para>
-        /// <para>Set the value to ADMIN_INITIATE.</para>
-        /// <list type="bullet">
-        /// <item><description><para>The value ADMIN_INITIATE specifies that the administrator initiates the coordination request.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The initiator type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADMIN_INITIATE</para>
@@ -59,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InitiatorType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://next.api.aliyun.com/document/ecd/2020-09-30/DescribeRegions">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud desktops that run the collaboration task at the same time.</para>
+        /// <para>The list of cloud computers that need to accept remote assistance.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceCandidates")]
@@ -78,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<ApplyCoordinationForMonitoringRequestResourceCandidates> ResourceCandidates { get; set; }
         public class ApplyCoordinationForMonitoringRequestResourceCandidates : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the current cloud desktop belongs.</para>
+            /// <para>The Alibaba Cloud account ID of the cloud computer administrator.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -89,7 +71,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? OwnerAliUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the current end user.</para>
+            /// <para>The username of the current user of the cloud computer.</para>
+            /// <remarks>
+            /// <para>This field is required.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -99,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OwnerEndUserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud computer ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The cloud computer name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -121,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The properties of the cloud desktop.</para>
+            /// <para>The properties of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestProperty</para>
@@ -143,15 +128,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The resource type.</para>
-            /// <para>Set the value to CLOUD_DESKTOP.</para>
-            /// <list type="bullet">
-            /// <item><description><para>The value CLOUD_DESKTOP specifies that the resource is a cloud desktop.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -164,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The universally unique identifier (UUID) of the device.</para>
+        /// <para>The UUID (unique identifier) of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

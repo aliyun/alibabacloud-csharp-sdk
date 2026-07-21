@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DownloadCdsFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The download URL of the file.</para>
+        /// <para>The URL for downloading the file.</para>
         /// </summary>
         [NameInMap("DownloadFileModel")]
         [Validation(Required=false)]
         public DownloadCdsFileResponseBodyDownloadFileModel DownloadFileModel { get; set; }
         public class DownloadCdsFileResponseBodyDownloadFileModel : TeaModel {
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>Deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None.</para>
             /// </summary>
             [NameInMap("DownloadType")]
             [Validation(Required=false)]
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>Deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None.</para>
             /// </summary>
             [NameInMap("ExpirationSecond")]
             [Validation(Required=false)]
             public string ExpirationSecond { get; set; }
 
             /// <summary>
-            /// <para>The validity period of the download URL.</para>
+            /// <para>The expiration time of the file download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-07-18T02:55:49.795Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The size of the file. Unit: bytes.</para>
+            /// <para>The file size, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1594642</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
+            /// <para>Deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>无</para>
+            /// <para>None.</para>
             /// </summary>
             [NameInMap("StreamUrl")]
             [Validation(Required=false)]

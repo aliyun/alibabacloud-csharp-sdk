@@ -10,23 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ExportDesktopListInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the cloud computer.</para>
-        /// <para>Default value: Postpaid. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Postpaid: pay-as-you-go</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PrePaid: subscription</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The billing method of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -36,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 100 IDs.</para>
+        /// <para>The cloud desktop IDs. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer.</para>
+        /// <para>The name of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DemoComputer01</para>
@@ -53,65 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The status of the cloud computers.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Stopped</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Starting</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Rebuilding</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Running</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Stopping</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Expired</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Deleted</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Pending</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The status of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -121,9 +47,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopStatus { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the end users of the cloud computer. You can specify 1 to 100 IDs.</para>
+        /// <para>The list of authorized usernames for the cloud desktop. You can specify 1 to 100 usernames.</para>
         /// <remarks>
-        /// <para> During a specific period of time, only one user can connect to and use the cloud computer.</para>
+        /// <para>Only one user can connect to and use the cloud desktop at a time.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("EndUserId")]
@@ -131,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The time when a subscription cloud computer expires.</para>
+        /// <para>The expiration time of the subscription cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-31T15:59Z</para>
@@ -141,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool to which the cloud computers belong.</para>
+        /// <para>The ID of the cloud desktop pool to which the cloud desktop belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-boyczi8enfyc5***</para>
@@ -151,23 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The language in which the cloud computer is displayed in the console UI. You can export the list of cloud computers in the specified language.</para>
-        /// <para>Default value: zh-CN. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>zh-CN: Simplified Chinese</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>en-GB: British English</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The language type displayed on the frontend page. The backend sets the language type of the exported file based on this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para><c>zh-CN</c></para>
@@ -177,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string LangType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -189,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. If this parameter is empty, all results are returned.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -209,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy that is attached to the cloud computer.</para>
+        /// <para>The ID of the policy associated with the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system-all-enabled-policy</para>
@@ -219,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -230,14 +140,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</para>
+        /// <para>The list of tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud desktops for easier searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ExportDesktopListInfoRequestTag> Tag { get; set; }
         public class ExportDesktopListInfoRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. If you specify the <c>Tag</c> parameter, you must also specify the <c>Key</c> parameter. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c> and cannot contain only spaces.</para>
+            /// <para>The tag key. If you specify <c>Tag</c>, <c>Key</c> is required. The tag key cannot exceed 128 characters, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>. It also cannot consist of only spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -247,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag value. The tag value cannot exceed 128 characters, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -259,7 +169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The username of the end user who is using the cloud computer.</para>
+        /// <para>The username of the user who is currently using the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>

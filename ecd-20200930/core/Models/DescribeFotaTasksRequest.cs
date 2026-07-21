@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class DescribeFotaTasksRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,12 +22,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FotaStatus { get; set; }
 
         /// <summary>
-        /// <para>The language of the image version to update.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>en: English.</description></item>
-        /// <item><description>zh: Simplified Chinese.</description></item>
-        /// </list>
+        /// <para>The language type of the upgrade version description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -37,10 +32,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 100</description></item>
-        /// <item><description>Default value: 20</description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 20.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -61,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,19 +67,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the image update tasks.</para>
+        /// <para>The list of image upgrade tasks.</para>
         /// </summary>
         [NameInMap("TaskUid")]
         [Validation(Required=false)]
         public List<string> TaskUid { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically push the image update task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Running: automatically pushes the image update task.</description></item>
-        /// <item><description>Pending: does not automatically push the image update task.</description></item>
-        /// </list>
+        /// <para>Specifies whether the image upgrade task is automatically pushed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Pending</para>

@@ -14,50 +14,35 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for filtering query results. The logical relationship between each filter condition is &quot;and&quot; (&amp;). Each filter condition contains FilterKey and FilterValues, which indicate the key and value for the filter condition.</para>
+        /// <para>The list of filter conditions for query results. The filter condition objects have a logical AND (&amp;) relationship.
+        /// Each filter condition contains FilterKey and FilterValues, which represent the filter condition name and specific values.</para>
         /// </summary>
         [NameInMap("FilterList")]
         [Validation(Required=false)]
         public List<CreateEcdReportTaskRequestFilterList> FilterList { get; set; }
         public class CreateEcdReportTaskRequestFilterList : TeaModel {
             /// <summary>
-            /// <para>The key of the filter condition for filtering query results. When SubType is set to:</para>
+            /// <para>The report query filter condition. The valid values vary based on the SubType value:</para>
             /// <ol>
-            /// <item><description>DESKTOP (indicating a cloud computer report), the following filter conditions are available:</description></item>
+            /// <item><description>Cloud computer report</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description><para>KeyWord: cloud computer keyword (supports automatic recognition)</para>
-            /// </description></item>
-            /// <item><description><para>RegionId: region ID</para>
-            /// </description></item>
-            /// <item><description><para>DesktopId: cloud computer ID</para>
-            /// </description></item>
-            /// <item><description><para>DesktopName: cloud computer name (supports fuzzy matching)</para>
-            /// </description></item>
-            /// <item><description><para>OfficeSiteId: office network ID</para>
-            /// </description></item>
-            /// <item><description><para>OfficeSiteName: office network name (supports fuzzy matching)</para>
-            /// </description></item>
-            /// <item><description><para>Status: cloud computer status</para>
-            /// </description></item>
-            /// <item><description><para>DesktopType: desktop type</para>
-            /// </description></item>
-            /// <item><description><para>DesktopIP: cloud computer IP address</para>
-            /// </description></item>
-            /// <item><description><para>SubPayType: billing method</para>
-            /// </description></item>
-            /// <item><description><para>EndUserId: user name (supports fuzzy matching)</para>
-            /// </description></item>
-            /// <item><description><para>ExpireTime: expiration date and time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format</para>
-            /// </description></item>
-            /// <item><description><para>IncludeAssignedUser: indicates whether the cloud computer is assigned to users or not</para>
-            /// </description></item>
-            /// <item><description><para>ResourceGroupId: resource group ID</para>
-            /// </description></item>
-            /// <item><description><para>PolicyId: policy ID</para>
-            /// </description></item>
-            /// <item><description><para>Tag:{Tag Key value}: cloud computer tag (To filter data using multiple tags, specify multiple filter condition objects.)</para>
-            /// </description></item>
+            /// <item><description>KeyWord: automatic keyword recognition for cloud computers.</description></item>
+            /// <item><description>RegionId: the region ID.</description></item>
+            /// <item><description>DesktopId: the cloud computer ID.</description></item>
+            /// <item><description>DesktopName: the cloud computer name (fuzzy match).</description></item>
+            /// <item><description>OfficeSiteId: the office network ID.</description></item>
+            /// <item><description>OfficeSiteName: the office network name (fuzzy match).</description></item>
+            /// <item><description>Status: the cloud computer status.</description></item>
+            /// <item><description>DesktopType: the desktop specifications.</description></item>
+            /// <item><description>DesktopIP: the cloud computer IP address.</description></item>
+            /// <item><description>SubPayType: the billing method.</description></item>
+            /// <item><description>EndUserId: the username (fuzzy match).</description></item>
+            /// <item><description>ExpireTime: the expiration time in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</description></item>
+            /// <item><description>IncludeAssignedUser: specifies whether users are assigned.</description></item>
+            /// <item><description>ResourceGroupId: the resource group ID.</description></item>
+            /// <item><description>PolicyId: the policy ID.</description></item>
+            /// <item><description>Tag:{Tag Key}: the cloud computer tag. To query by multiple tags, pass in multiple Filter objects.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,22 +53,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FilterKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter condition. Only the first value of the FilterValues parameter is used, if FilterKey is set to one of the following values:</para>
+            /// <para>The values of the filter condition.
+            /// When FilterKey is set to one of the following values, only the first value in FilterValues is used:</para>
             /// <list type="bullet">
-            /// <item><description><para>KeyWord</para>
-            /// </description></item>
-            /// <item><description><para>DesktopName</para>
-            /// </description></item>
-            /// <item><description><para>OfficeSiteName</para>
-            /// </description></item>
-            /// <item><description><para>DesktopIP</para>
-            /// </description></item>
-            /// <item><description><para>EndUserId</para>
-            /// </description></item>
-            /// <item><description><para>ExpireTime</para>
-            /// </description></item>
-            /// <item><description><para>IncludeAssignedUser</para>
-            /// </description></item>
+            /// <item><description>KeyWord</description></item>
+            /// <item><description>DesktopName</description></item>
+            /// <item><description>OfficeSiteName</description></item>
+            /// <item><description>DesktopIP</description></item>
+            /// <item><description>EndUserId</description></item>
+            /// <item><description>ExpireTime</description></item>
+            /// <item><description>IncludeAssignedUser</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The language of the report. An enumerated type.</para>
+        /// <para>The report language type. This is an enumerated value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -106,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string LangType { get; set; }
 
         /// <summary>
-        /// <para>The name of the report file.</para>
+        /// <para>The report file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test report name</para>
@@ -116,7 +95,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ReportFileName { get; set; }
 
         /// <summary>
-        /// <para>The sub-type of the report export task.</para>
+        /// <para>The report task subtype.
+        /// [_single.params.SubType.enum.  DESKTOP]Cloud computer</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,11 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SubType { get; set; }
 
         /// <summary>
-        /// <para>The type of the report task.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>RESOURCE_REPORT</description></item>
-        /// </list>
+        /// <para>The report task type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

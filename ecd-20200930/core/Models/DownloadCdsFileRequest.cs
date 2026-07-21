@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DownloadCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>The enterprise drive ID.</para>
+        /// <para>The enterprise cloud drive ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+cds-643267****</para>

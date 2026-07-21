@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyCoordinationForMonitoringResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of stream collaboration models.</para>
+        /// <para>The list of coordination flow data.</para>
         /// </summary>
         [NameInMap("CoordinateFlowModels")]
         [Validation(Required=false)]
         public List<ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels> CoordinateFlowModels { get; set; }
         public class ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels : TeaModel {
             /// <summary>
-            /// <para>The ID of the stream collaboration.</para>
+            /// <para>The coordination flow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>co-0sot77uale3****</para>
@@ -27,18 +27,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CoId { get; set; }
 
             /// <summary>
-            /// <para>The current status of the collaboration task.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>COORDINATING: The collaboration task is being executed.</para>
-            /// </description></item>
-            /// <item><description><para>TERMINATING: The collaboration task is being terminated.</para>
-            /// </description></item>
-            /// <item><description><para>TERMINATED: The collaboration task is terminated.</para>
-            /// </description></item>
-            /// <item><description><para>PENDING: The collaboration task is pending to be executed.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The current coordination status.
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.COORDINATING  ]coordinating
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATING  ] terminating
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATED ]terminated
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.PENDING ]pending acceptance</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>
@@ -48,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CoordinateStatus { get; set; }
 
             /// <summary>
-            /// <para>The ticket that is used to establish the Adaptive Streaming Protocol (ASP)-based connection.</para>
+            /// <para>The ticket used by ASP to establish a connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1VDQ0VTUw0KW0Rlc2t0b3BdDQpHV1Rva2VuPTAwTzgwL3liS25zUEVGdkF6eU1Pc1ExeHZWdmk4VEE3NFJvU1V1d0dPYm1BNkNJWklDMHVNQklWcjU2NS80S0ZQekQ4aGFTR0ZHelZqMTFGbkRpWWgvUFF1Zm1xSXNGdFRFNFRWMExJNit3TkU0L2RMb04wNXBBSE5Tc3M4dWFXY3lwWE****</para>
@@ -58,16 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CoordinateTicket { get; set; }
 
             /// <summary>
-            /// <para>The type of the initiator.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>ADMIN_INITIATE_FORCE: The administrator forcibly initiates the collaboration request.</para>
-            /// </description></item>
-            /// <item><description><para>ADMIN_INITIATE: The administrator initiates the collaboration request.</para>
-            /// </description></item>
-            /// <item><description><para>COORDINATOR_INITIATE_FORCE: The coordinator forcibly initiates the collaboration request.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The initiator type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COORDINATOR_INITIATE_FORCE</para>
@@ -77,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InitiatorType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account of the end user.</para>
+            /// <para>The Alibaba Cloud account ID of the user on the user side.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -87,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-96vi03f9emqnl****</para>
@@ -97,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The cloud computer name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoComputer</para>

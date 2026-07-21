@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeModificationPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum public bandwidth. Unit: Mbit/s.</para>
+        /// <para>The peak Internet bandwidth. Unit: Mbit/s.</para>
         /// <remarks>
-        /// <para>Valid values when PayByTraffic is set to PayByBandwidth: 10 to 1000.</para>
+        /// <para>If you use the pay-by-bandwidth billing method, the valid values range from 10 to 1000.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of either the monthly subscription cloud computer with unlimited hours or the premium bandwidth plan.</para>
+        /// <para>The instance ID. The value can be the ID of a monthly-subscribed (unlimited-duration) cloud computer or the ID of a premium Internet bandwidth instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-0gfv2z3sf95zvt****</para>
@@ -33,49 +33,31 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The specifications.</para>
+        /// <para>The resource specification.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when you set <c>ResourceType</c> to <c>Desktop</c>:</para>
+        /// <item><description><para>If <c>ResourceType</c> is set to <c>Desktop</c>, valid values include:</para>
         /// <list type="bullet">
-        /// <item><description><para>ecd.basic.small</para>
-        /// </description></item>
-        /// <item><description><para>ecd.basic.large</para>
-        /// </description></item>
-        /// <item><description><para>ecd.advanced.large</para>
-        /// </description></item>
-        /// <item><description><para>ecd.advanced.xlarge</para>
-        /// </description></item>
-        /// <item><description><para>ecd.performance.2xlarge</para>
-        /// </description></item>
-        /// <item><description><para>ecd.graphics.xlarge</para>
-        /// </description></item>
-        /// <item><description><para>ecd.graphics.2xlarge</para>
-        /// </description></item>
-        /// <item><description><para>ecd.advanced.xlarge_s8d2</para>
-        /// </description></item>
-        /// <item><description><para>ecd.advanced.xlarge_s8d7</para>
-        /// </description></item>
-        /// <item><description><para>ecd.graphics.1g72c</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.2c2g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.2c4g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.2c8g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.4c8g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.4c16g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.8c16g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.8c32g</para>
-        /// </description></item>
-        /// <item><description><para>eds.general.16c32g</para>
-        /// </description></item>
+        /// <item><description>ecd.basic.small</description></item>
+        /// <item><description>ecd.basic.large</description></item>
+        /// <item><description>ecd.advanced.large</description></item>
+        /// <item><description>ecd.advanced.xlarge</description></item>
+        /// <item><description>ecd.performance.2xlarge</description></item>
+        /// <item><description>ecd.graphics.xlarge</description></item>
+        /// <item><description>ecd.graphics.2xlarge</description></item>
+        /// <item><description>ecd.advanced.xlarge_s8d2</description></item>
+        /// <item><description>ecd.advanced.xlarge_s8d7</description></item>
+        /// <item><description>ecd.graphics.1g72c</description></item>
+        /// <item><description>eds.general.2c2g</description></item>
+        /// <item><description>eds.general.2c4g</description></item>
+        /// <item><description>eds.general.2c8g</description></item>
+        /// <item><description>eds.general.4c8g</description></item>
+        /// <item><description>eds.general.4c16g</description></item>
+        /// <item><description>eds.general.8c16g</description></item>
+        /// <item><description>eds.general.8c32g</description></item>
+        /// <item><description>eds.general.16c32g</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>You can skip this parameter if <c>ResourceType</c> is set to <c>NetworkPackage</c>.</para>
+        /// <item><description><para>If <c>ResourceType</c> is set to <c>NetworkPackage</c>, you do not need to specify this parameter.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -87,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Promotion activity ID.</para>
+        /// <para>The promotion ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -97,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>User ID for resource ownership in resale mode. You do not need to specify this parameter if resale mode is not used.</para>
+        /// <para>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1422724566551XXX</para>
@@ -118,14 +100,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>List of resource specification templates.</para>
+        /// <para>The list of resource specification templates.</para>
         /// </summary>
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
         public List<DescribeModificationPriceRequestResourceSpecs> ResourceSpecs { get; set; }
         public class DescribeModificationPriceRequestResourceSpecs : TeaModel {
             /// <summary>
-            /// <para>Cloud computer ID.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-6ghhzivgmnzgeyXXX</para>
@@ -135,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>System disk size. Unit: GiB.</para>
+            /// <para>The system cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -145,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RootDiskSizeGib { get; set; }
 
             /// <summary>
-            /// <para>Data disk size. Unit: GiB.</para>
+            /// <para>The data cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -157,12 +139,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The resource type. The required parameters depend on the resource type.</para>
+        /// <para>The resource type. The required parameters vary based on the resource type for which you want to query the specification change price:</para>
         /// <list type="bullet">
-        /// <item><description><para>When <c>ResourceType</c> is set to <c>Desktop</c>, the required parameters are <c>InstanceType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When <c>ResourceType</c> is set to <c>NetworkPackage</c>, the required parameter is <c>Bandwidth</c>.</para>
-        /// </description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>Desktop</c>, you must specify the <c>InstanceType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c> parameters.</description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>NetworkPackage</c>, you must specify the <c>Bandwidth</c> parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Performance level of the system disk. When the WUYING Workspace instance type is set to graphics-optimized or high clock speed, you can specify the disk performance level. For differences between performance levels, see <a href="t583241.xdita#"></a>.</para>
+        /// <para>The performance level of the system cloud disk. You can configure the disk performance level in Settings when the cloud computer specification is set to graphics-accelerated or high frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD does not support performance level configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -183,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GiB.</para>
+        /// <para>The system cloud disk size. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -193,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
-        /// <para>Performance level of the data disk. When the WUYING Workspace instance type is set to graphics-optimized or high clock speed, you can specify the disk performance level. For differences between performance levels, see <a href="t583241.xdita#"></a>.</para>
+        /// <para>The performance level of the data cloud disk. You can configure the disk performance level in Settings when the cloud computer specification is set to graphics-accelerated or high frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD does not support performance level configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -203,7 +183,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the data disk. Unit: GiB.</para>
+        /// <para>The data cloud disk size. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

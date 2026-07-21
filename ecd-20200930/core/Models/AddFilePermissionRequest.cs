@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AddFilePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise drive.</para>
+        /// <para>The enterprise cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who uses the network disk.</para>
+        /// <para>The ID of the user who uses the cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
+        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team space.</para>
+        /// <para>The team space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The users that you want to authorize to use the cloud disk.</para>
+        /// <para>The list of authorized users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<AddFilePermissionRequestMemberList> MemberList { get; set; }
         public class AddFilePermissionRequestMemberList : TeaModel {
             /// <summary>
-            /// <para>The user of the cloud disk.</para>
+            /// <para>The user object.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("CdsIdentity")]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public AddFilePermissionRequestMemberListCdsIdentity CdsIdentity { get; set; }
             public class AddFilePermissionRequestMemberListCdsIdentity : TeaModel {
                 /// <summary>
-                /// <para>The ID of the convenience user.</para>
+                /// <para>The user ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -80,11 +80,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                 /// <summary>
                 /// <para>The user type.</para>
-                /// <para>Set the value to TENANT_ADMIN.</para>
-                /// <list type="bullet">
-                /// <item><description>IT_Group: group.</description></item>
-                /// <item><description>IT_User: user.</description></item>
-                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -97,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether the users of the child group can inherit the folder permissions.</para>
+            /// <para>Specifies whether sub-user groups inherit the permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -107,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? DisinheritSubGroup { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The value never expires. You can specify a value that is predefined by the system for this parameter. Example: 4775500800000.</para>
+            /// <para>The time when the authorization expires. The value is the number of milliseconds from January 1, 1970, 00:00:00 to the target time. To set permanent validity, specify a predefined system value, such as 4775500800000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4775500800000</para>
@@ -117,23 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <c>ActionList</c>.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SystemFileEditorWithoutShareLink: The role that can edit but cannot share files.</description></item>
-            /// <item><description>SystemFileUploaderAndDownloaderWithShareLink: The role that can upload, download, and share files.</description></item>
-            /// <item><description>SystemFileDownloader: The role that can download files.</description></item>
-            /// <item><description>SystemFileEditorWithoutDelete: The role that can edit but cannot edit files.</description></item>
-            /// <item><description>SystemFileOwner: The role that can collaborate with others on files.</description></item>
-            /// <item><description>SystemFileDownloaderWithShareLink: The role that can download and share files.</description></item>
-            /// <item><description>SystemFileUploaderAndViewer: The role that can preview and upload files.</description></item>
-            /// <item><description>SystemFileViewer: The role that can preview files.</description></item>
-            /// <item><description>SystemFileEditor: The role that can edit files.</description></item>
-            /// <item><description>SystemFileUploaderWithShareLink: The role that can upload and share files.</description></item>
-            /// <item><description>SystemFileUploader: The role that can upload files.</description></item>
-            /// <item><description>SystemFileUploaderAndDownloader: The role that can upload and download files.</description></item>
-            /// <item><description>SystemFileMetaViewer: The role that can view file list.</description></item>
-            /// </list>
+            /// <para>Two methods are supported for setting permissions: specifying a role or customizing operation permissions. This parameter specifies a role for permission settings and is mutually exclusive with ActionList. If both parameters are specified, this parameter takes precedence.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -146,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeClientEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud desktop. If you omit this parameter, the operation returns events for all cloud desktops in the region.</para>
+        /// <para>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-8fupvkhg0aayu****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the cloud desktop. If you omit this parameter, the operation returns events for all cloud desktops in the region.</para>
+        /// <para>The IP address of the cloud computer. If you do not specify this parameter, events of all cloud computers in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.<em>.</em></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopIp { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud desktop.</para>
+        /// <para>The name of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not in use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,8 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.<br>
-        /// If you omit this parameter, the operation uses the current time.<br></para>
+        /// <para>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the current time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-31T06:32:31Z</para>
@@ -63,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user, which can be a RAM user ID or an AD username. If you omit this parameter, the operation returns events for all users in the region.</para>
+        /// <para>The logon user information, which is a Resource Access Management (RAM) user ID or AD username. If you do not specify this parameter, events of all users in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28961708130834****</para>
@@ -72,8 +71,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        [NameInMap("EndUserIds")]
+        [Validation(Required=false)]
+        public List<string> EndUserIds { get; set; }
+
         /// <summary>
-        /// <para>The event type to query. If EventTypes is specified, this parameter is ignored. If you omit both this parameter and EventTypes, the operation returns all events.</para>
+        /// <para>The event type to query. If EventTypes is not empty, the EventTypes combination is used as the query filter condition. If both EventTypes and EventType are empty, all events are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESKTOP_DISCONNECT</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>An array of event types to query. The operation returns events that match any of the specified types.</para>
+        /// <para>The combination of event types to query. You can specify multiple event types. The query results include events of all specified types.</para>
         /// </summary>
         [NameInMap("EventTypes")]
         [Validation(Required=false)]
@@ -98,8 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.<br>
-        /// Default value: 100.<br></para>
+        /// <para>The number of entries per page for a paged query. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous response to retrieve the next page of results.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -119,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network to which the cloud desktop belongs. If you omit this parameter, the operation returns events for users in all office networks in the region.</para>
+        /// <para>The ID of the office network to which the cloud computer belongs. If you do not specify this parameter, user events in all office networks in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-bh77qa8nmjot4****</para>
@@ -139,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,8 +152,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.<br>
-        /// If you omit this parameter, the query returns events that occurred before the time specified by <c>EndTime</c>.<br></para>
+        /// <para>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, events are queried backward from the time specified by <c>EndTime</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T06:32:31Z</para>

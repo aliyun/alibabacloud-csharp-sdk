@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of sessions.</para>
+        /// <para>The session details.</para>
         /// </summary>
         [NameInMap("Sessions")]
         [Validation(Required=false)]
@@ -46,8 +46,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
+            [NameInMap("CreationTime")]
+            [Validation(Required=false)]
+            public string CreationTime { get; set; }
+
             /// <summary>
-            /// <para>The ID of the desktop group.</para>
+            /// <para>The shared cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-iaqu3bi2xtie****</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the desktop group.</para>
+            /// <para>The shared cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoCCGroup</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-g6t1ukbaea****</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoComputer</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the end user.</para>
+            /// <para>The end user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestUser</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>A list of assigned end user IDs.</para>
+            /// <para>The list of assigned end user IDs.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The duration of the last connection, in seconds.</para>
+            /// <para>The duration of the most recent connection to the cloud desktop. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? LatestConnectionTime { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the cloud desktop, in MiB.</para>
+            /// <para>The memory of the cloud desktop. Unit: MiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4096</para>
@@ -144,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the office site.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-8904****</para>
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the office site.</para>
+            /// <para>The office network name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestOfficeSite</para>
@@ -164,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The office site type.</para>
+            /// <para>The office network type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Simple</para>
@@ -176,10 +180,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Windows</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Linux</c></para>
-            /// </description></item>
+            /// <item><description>Windows</description></item>
+            /// <item><description>Linux</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -190,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The operating system version.</para>
+            /// <para>The specific operating system version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows 10</para>
@@ -202,10 +204,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>HDX</c></para>
-            /// </description></item>
-            /// <item><description><para><c>ASP</c></para>
-            /// </description></item>
+            /// <item><description>HDX</description></item>
+            /// <item><description>ASP</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -226,14 +226,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>A list of resource groups.</para>
+            /// <para>The enterprise resource group name.</para>
             /// </summary>
             [NameInMap("ResourceGroups")]
             [Validation(Required=false)]
             public List<DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups> ResourceGroups { get; set; }
             public class DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups : TeaModel {
                 /// <summary>
-                /// <para>The ID of the resource group.</para>
+                /// <para>The enterprise resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-f3s3dgt8dtb0vlqc8</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group.</para>
+                /// <para>The resource group name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dms_test</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The idle duration of the session, in minutes.</para>
+            /// <para>The session idle duration. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -265,14 +265,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? SessionIdleTime { get; set; }
 
             /// <summary>
-            /// <para>A list of sessions.</para>
+            /// <para>The session details.</para>
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<DescribeGlobalDesktopRecordsResponseBodySessionsSessions> Sessions { get; set; }
             public class DescribeGlobalDesktopRecordsResponseBodySessionsSessions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the end user.</para>
+                /// <para>The end user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TestUser</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The time the session was created.</para>
+                /// <para>The time when the session was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-31T06:56:45Z</para>
@@ -304,14 +304,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? StatusChangeTime { get; set; }
 
             /// <summary>
-            /// <para>The billing method for the cloud desktop. Valid values:</para>
+            /// <para>The billing method of the cloud desktop. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>prePaid</c>: Subscription.</para>
-            /// </description></item>
-            /// <item><description><para><c>postPaid</c>: Pay-as-you-go.</para>
-            /// </description></item>
-            /// <item><description><para><c>monthPackage</c>: Monthly usage package.</para>
-            /// </description></item>
+            /// <item><description>prePaid: monthly subscription with unlimited usage duration.</description></item>
+            /// <item><description>postPaid: pay-as-you-go.</description></item>
+            /// <item><description>monthPackage: monthly duration package.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -322,7 +319,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SubPayType { get; set; }
 
             /// <summary>
-            /// <para>The total connection duration, in seconds.</para>
+            /// <para>The total connection duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>240</para>
@@ -332,7 +329,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalConnectionTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop uptime, in seconds.</para>
+            /// <para>The cloud desktop uptime. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86400</para>
@@ -344,7 +341,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

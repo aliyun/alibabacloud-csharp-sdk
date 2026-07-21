@@ -11,13 +11,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class CloneCenterPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The business type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>1: public cloud</para>
-        /// </description></item>
-        /// <item><description><para>8: commercial edition.</para>
-        /// </description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer policy that you want to clone.</para>
+        /// <para>The policy name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer policy that you want to clone.</para>
+        /// <para>The ID of the target cloud computer policy to clone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Set the value to cn-shanghai.</para>
+        /// <para>The region ID. This feature is region-independent. Set this parameter to cn-shanghai.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,13 +55,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>app: cloud applications.</para>
-        /// </description></item>
-        /// <item><description><para>desktop: cloud computers.</para>
-        /// </description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

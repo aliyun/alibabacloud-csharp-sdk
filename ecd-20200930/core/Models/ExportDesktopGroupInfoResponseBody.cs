@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ExportDesktopGroupInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24E05D3E-08F4-551E-B1F0-F6D84EE0BCCC</para>
@@ -20,28 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the XLSX file that contains cloud computer shares. The XLSX file provides the following information:</para>
+        /// <para>The download URL of the exported shared cloud desktop list file. The exported file contains the following details of shared cloud desktops:</para>
         /// <list type="bullet">
-        /// <item><description><para>Cloud computer share ID/name</para>
-        /// </description></item>
-        /// <item><description><para>Office network ID/name</para>
-        /// </description></item>
-        /// <item><description><para>Cloud computer share template</para>
-        /// </description></item>
-        /// <item><description><para>vCPUs/Memory size</para>
-        /// </description></item>
-        /// <item><description><para>System disk/Data disk</para>
-        /// </description></item>
-        /// <item><description><para>Security policy name</para>
-        /// </description></item>
-        /// <item><description><para>Number of authorized users</para>
-        /// </description></item>
-        /// <item><description><para>Billing method</para>
-        /// </description></item>
-        /// <item><description><para>Creation time</para>
-        /// </description></item>
-        /// <item><description><para>Expiration time</para>
-        /// </description></item>
+        /// <item><description>Shared cloud desktop ID/name</description></item>
+        /// <item><description>Office network ID/name</description></item>
+        /// <item><description>Shared cloud desktop template</description></item>
+        /// <item><description>CPU/memory</description></item>
+        /// <item><description>System cloud disk/data cloud disk</description></item>
+        /// <item><description>Security policy name</description></item>
+        /// <item><description>Number of currently authorized users</description></item>
+        /// <item><description>Billing method</description></item>
+        /// <item><description>Creation time</description></item>
+        /// <item><description>Expiration time</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

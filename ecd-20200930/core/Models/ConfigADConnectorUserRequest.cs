@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ConfigADConnectorUserRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the AD user that has the permissions to join computers to domains.</para>
+        /// <para>The password of the AD user that has the permission to join computers to the domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainPassword { get; set; }
 
         /// <summary>
-        /// <para>The username of the AD user that has the permissions to join computers to domains.</para>
-        /// <para>After the username is configured, the cloud desktops in the same AD workspace are joined to the specified OU.</para>
+        /// <para>The username of the AD user that has the permission to join computers to the domain. After the configuration is complete, cloud computers created in the corresponding AD office network are added to the specified OU.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainUserName { get; set; }
 
         /// <summary>
-        /// <para>The name of the OU in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU name.</para>
+        /// <para>The organizational unit (OU) of the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OUName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AD workspace.</para>
+        /// <para>The ID of the AD office network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

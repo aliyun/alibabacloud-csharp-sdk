@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRefundPriceRequest : TeaModel {
         /// <summary>
-        /// <para>A list of cloud desktop IDs. You can specify one or more IDs. The number of IDs (N) must be between 1 and 20.</para>
+        /// <para>The list of cloud computer IDs. You can specify one or more IDs. Valid values of N: 1 to 20.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>Refund type.</para>
+        /// <para>The unsubscription type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RemainRefund</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RefundType { get; set; }
 
         /// <summary>
-        /// <para>Region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

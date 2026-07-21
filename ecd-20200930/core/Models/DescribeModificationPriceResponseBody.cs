@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public DescribeModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeModificationPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>&lt;props=&quot;china&quot;&gt;The unit of currency (CNY).&lt;props=&quot;intl&quot;&gt;The unit of currency (USD).</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+                /// &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discounted amount.</para>
+                /// <para>The discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15.8</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// <para>The orders.</para>
+                /// <para>The order information.</para>
                 /// </summary>
                 [NameInMap("OrderLines")]
                 [Validation(Required=false)]
@@ -61,14 +62,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The promotion activities.</para>
+                /// <para>The list of promotion information.</para>
                 /// </summary>
                 [NameInMap("Promotions")]
                 [Validation(Required=false)]
                 public List<DescribeModificationPriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribeModificationPriceResponseBodyPriceInfoPricePromotions : TeaModel {
                     /// <summary>
-                    /// <para>The description of the promotion rule.</para>
+                    /// <para>The promotion rule description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -81,14 +82,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     /// <para>The promotion description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>新品上市，立享优惠</para>
+                    /// <para>New product launch with exclusive discounts.</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
                     public string PromotionDesc { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the promotion activity.</para>
+                    /// <para>The promotion ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>promo_option</para>
@@ -98,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string PromotionId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the promotion activity.</para>
+                    /// <para>The promotion name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Featured deals</para>
@@ -108,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string PromotionName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether an item is selected.</para>
+                    /// <para>Indicates whether the promotion is selected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -120,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 }
 
                 /// <summary>
-                /// <para>The actual price. The actual price is the original price minus the discount.</para>
+                /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>63.2</para>
@@ -132,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The promotion rules.</para>
+            /// <para>The promotion rule information.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -142,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>买满1年，立享官网价格8.5折优惠。</para>
+                /// <para>Get 15% off the list price for a one-year purchase.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

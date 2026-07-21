@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CancelCoordinationForMonitoringRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of stream collaboration tasks.</para>
+        /// <para>The list of coordination flow IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CoIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> CoIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.</para>
+        /// <para>The ID of the end user who initiated the coordination flow. This parameter is not required if the request is initiated by an administrator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the user.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>TENANT_ADMIN: administrator.</description></item>
-        /// </list>
+        /// <para>The user type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TENANT_ADMIN</para>

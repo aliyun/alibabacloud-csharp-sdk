@@ -17,19 +17,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopMetadataResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopMetadataResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// <para>A list of agents that the cloud computer supports.</para>
+            /// <para>The agents supported by the current cloud desktop.</para>
             /// </summary>
             [NameInMap("AgentProviderList")]
             [Validation(Required=false)]
             public List<string> AgentProviderList { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the cloud desktop. Valid values:</para>
+            /// <para>The billing type of the cloud desktop. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PostPaid</c>: pay-as-you-go</para>
-            /// </description></item>
-            /// <item><description><para><c>PrePaid</c>: subscription</para>
-            /// </description></item>
+            /// <item><description>PostPaid: pay-as-you-go.</description></item>
+            /// <item><description>PrePaid: subscription.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the cloud desktop.</para>
+            /// <para>The time when the cloud desktop was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:28Z</para>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the desktop group.</para>
+            /// <para>The shared cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-3uiojcc0j4kh7****</para>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -82,22 +80,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The status of the cloud desktop. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Stopped</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Starting</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Rebuilding</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Running</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Stopping</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Expired</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Deleted</c></para>
-            /// </description></item>
-            /// <item><description><para><c>Pending</c></para>
-            /// </description></item>
+            /// <item><description>Stopped</description></item>
+            /// <item><description>Starting</description></item>
+            /// <item><description>Rebuilding</description></item>
+            /// <item><description>Running</description></item>
+            /// <item><description>Stopping</description></item>
+            /// <item><description>Expired</description></item>
+            /// <item><description>Deleted</description></item>
+            /// <item><description>Pending</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the cloud desktop.</para>
+            /// <para>The cloud desktop specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.general.2c8g</para>
@@ -118,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the cloud desktop. This parameter is returned only for cloud desktops that use the subscription billing method.</para>
+            /// <para>The time when the cloud desktop expires. This value is returned only for cloud desktops whose billable methods is subscription.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-31T15:59Z</para>
@@ -128,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-4zfb6zj728hhr****</para>
@@ -138,24 +128,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The local name of the region where the cloud desktop resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华东2（上海）</para>
+            /// <para>China (Shanghai)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The management flags for the cloud computer.</para>
+            /// <para>The management status of the cloud desktop.</para>
             /// </summary>
             [NameInMap("ManagementFlags")]
             [Validation(Required=false)]
             public List<string> ManagementFlags { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the instance\&quot;s network interface.</para>
+            /// <para>The IP address of the member elastic network interface (ENI) of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.2.1</para>
@@ -165,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemberEniIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the office network.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-363353****</para>
@@ -175,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The operating system of the cloud desktop.</para>
+            /// <para>The operating system platform information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ubuntu</para>
@@ -185,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -195,7 +185,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-f3s3dgt8dtb0vlqc8</para>
@@ -205,7 +195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group.</para>
+            /// <para>The resource group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>serverless_new</para>
@@ -215,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud desktop started.</para>
+            /// <para>The start time of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:31Z</para>
@@ -227,7 +217,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

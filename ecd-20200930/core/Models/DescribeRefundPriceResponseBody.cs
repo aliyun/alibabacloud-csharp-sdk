@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRefundPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Price details.</para>
+        /// <para>The price details.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRefundPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRefundPriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>&lt;props=&quot;china&quot;&gt;Currency unit (CNY).
-            /// &lt;props=&quot;intl&quot;&gt;Currency unit (USD).</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+            /// &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>This refund amount.</para>
+            /// <para>The refund amount for this unsubscription.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3990.75</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

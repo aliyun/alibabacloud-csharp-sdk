@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CopyCdsFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</para>
+        /// <para>The execution result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details about the file copying.</para>
+        /// <para>The result of copying the file.</para>
         /// </summary>
         [NameInMap("CopyCdsFileModel")]
         [Validation(Required=false)]
         public CopyCdsFileResponseBodyCopyCdsFileModel CopyCdsFileModel { get; set; }
         public class CopyCdsFileResponseBodyCopyCdsFileModel : TeaModel {
             /// <summary>
-            /// <para>The ID of the asynchronous task. This parameter is not returned if you copy a file. This parameter is returned if you copy a folder in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</para>
+            /// <para>The asynchronous task ID. This field is not returned when a file is copied. When a folder is copied, the copy operation is performed asynchronously in the background, so this field is returned. You can call <a href="https://help.aliyun.com/document_detail/2357404.html">GetAsyncTask</a> and pass in this asynchronous task ID to obtain the task details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4221bf6e6ab43a255edc4463bffa6f5f5d31****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AsyncTaskId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the copied file or folder.</para>
+            /// <para>The ID of the new file or folder after the copy operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6400727cb878821bcb414615a609b4072463****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The error message that is returned. This parameter is not returned if the value of Code is success.</para>
+        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -69,23 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

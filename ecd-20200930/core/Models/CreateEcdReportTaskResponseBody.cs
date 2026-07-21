@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateEcdReportTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request result. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
+        /// <para>The operation result. The value <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed. This parameter is not returned if the value of Code is success.</para>
+        /// <para>The error message. This parameter is not returned when Code is success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the report export task.</para>
+        /// <para>The report task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ret-g67ip******</para>

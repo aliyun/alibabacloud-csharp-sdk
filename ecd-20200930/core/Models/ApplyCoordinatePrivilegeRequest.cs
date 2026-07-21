@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyCoordinatePrivilegeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application for the coordinate permissions.</para>
+        /// <para>The coordination stream ID. This value is the <c>Coid</c> returned by the <a href="~~ApplyCoordinationForMonitoring~~">ApplyCoordinationForMonitoring</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CoId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user.</para>
+        /// <para>The username of the end user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,8 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of user who requires the coordinate permissions.</para>
-        /// <para>Valid value: TENANT_ADMIN.</para>
+        /// <para>The type of the coordination user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserType { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <b>About</b> on the client logon page to view the identifier of the client.</para>
+        /// <para>The UUID (unique identifier) of the device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E14A18BD4D088504B9F8A8751AB****</para>

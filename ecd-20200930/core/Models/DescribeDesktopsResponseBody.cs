@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the desktops.</para>
+        /// <para>The details of cloud computers.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<string> AgentProviderList { get; set; }
 
             /// <summary>
-            /// <para>The number of concurrent sessions allowed per desktop in a multi-session desktop pool.</para>
+            /// <para>The number of concurrent sessions allowed per cloud computer in a multi-session cloud computer pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? BindAmount { get; set; }
 
             /// <summary>
-            /// <para>The desktop template ID used by the desktop.</para>
+            /// <para>The ID of the cloud computer template used by the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b-2g65ljy4291vl****</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BundleId { get; set; }
 
             /// <summary>
-            /// <para>The desktop template name used by the desktop.</para>
+            /// <para>The name of the cloud computer template used by the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TemplateName</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BundleName { get; set; }
 
             /// <summary>
-            /// <para>The billing method for the desktop.</para>
+            /// <para>The billing method of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The time when the desktop was created.</para>
+            /// <para>The time when the cloud computer was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:28Z</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The desktop pool ID that the desktop belongs to. Default value: <c>null</c>.</para>
+            /// <para>The ID of the cloud computer pool to which the cloud computer belongs. Default value: <c>null</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The desktop ID.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The desktop name.</para>
+            /// <para>The cloud computer name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoComputer01</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The desktop status.</para>
+            /// <para>The cloud computer status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The desktop instance type.</para>
+            /// <para>The cloud computer specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd.basic.large</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The directory ID. This is the same as the office site ID (OfficeSiteId).</para>
+            /// <para>The directory ID, which is the same as the office network ID (OfficeSiteId).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-363353****</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -245,21 +245,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>Disk information.</para>
+            /// <para>The disk information.</para>
             /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
             public List<DescribeDesktopsResponseBodyDesktopsDisks> Disks { get; set; }
             public class DescribeDesktopsResponseBodyDesktopsDisks : TeaModel {
                 /// <summary>
-                /// <para>The disk type.</para>
+                /// <para>The cloud disk category.</para>
                 /// <list type="bullet">
-                /// <item><description><para>cloud_efficiency (ultra disk)</para>
-                /// <list type="bullet">
-                /// <item><description><para>cloud_auto (extreme disk)</para>
-                /// </description></item>
-                /// <item><description><para>cloud_essd (enhanced SSD disk, supported only on select instance types)</para>
-                /// </description></item>
+                /// <item><description>cloud_efficiency (ultra cloud disk)<list type="bullet">
+                /// <item><description>cloud_auto (ESSD AutoPL cloud disk)</description></item>
+                /// <item><description>cloud_essd (enhanced standard SSD, supported only by specific specifications)</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -302,8 +299,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The performance level of ESSD disks, if the disk uses ESSD.</para>
-                /// <para>For differences between performance levels, see <a href="t583241.xdita#"></a>.</para>
+                /// <para>The performance level (PL) of the ESSD when the cloud disk is an ESSD.</para>
+                /// <para>For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL0</para>
@@ -319,7 +316,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DomainType { get; set; }
 
             /// <summary>
-            /// <para>The number of times the desktop can be downgraded.</para>
+            /// <para>The number of times the specifications can be downgraded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -329,7 +326,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? DowngradeQuota { get; set; }
 
             /// <summary>
-            /// <para>The number of times the desktop has been downgraded.</para>
+            /// <para>The number of times the specifications have been downgraded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -339,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? DowngradedTimes { get; set; }
 
             /// <summary>
-            /// <para>The authorized user IDs for the desktop.</para>
+            /// <para>The authorized user IDs of the cloud computer.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
@@ -358,7 +355,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time for subscription desktops.</para>
+            /// <para>The expiration time of the subscription cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-31T15:59Z</para>
@@ -368,14 +365,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The image version information for the desktop.</para>
+            /// <para>The image version information of the cloud computer.</para>
             /// </summary>
             [NameInMap("FotaUpdate")]
             [Validation(Required=false)]
             public DescribeDesktopsResponseBodyDesktopsFotaUpdate FotaUpdate { get; set; }
             public class DescribeDesktopsResponseBodyDesktopsFotaUpdate : TeaModel {
                 /// <summary>
-                /// <para>The current image version number of the desktop.</para>
+                /// <para>The current image version of the cloud computer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.0-D-20220102.000000</para>
@@ -385,7 +382,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CurrentAppVersion { get; set; }
 
                 /// <summary>
-                /// <para>The image version number to which the desktop can be upgraded.</para>
+                /// <para>The image version to which the cloud computer can be upgraded.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.0-R-20220307.190736</para>
@@ -395,7 +392,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string NewAppVersion { get; set; }
 
                 /// <summary>
-                /// <para>The description of the upgradeable image version.</para>
+                /// <para>The release note of the upgradable image version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>测试升级包03-07</para>
@@ -405,7 +402,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ReleaseNote { get; set; }
 
                 /// <summary>
-                /// <para>The English description of the upgradeable version.</para>
+                /// <para>The English release note of the upgradable version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>What\&quot;s new</para>
@@ -415,7 +412,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ReleaseNoteEn { get; set; }
 
                 /// <summary>
-                /// <para>The Japanese description of the upgradeable version.</para>
+                /// <para>The Japanese release note of the upgradable version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>リリースノート</para>
@@ -425,7 +422,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ReleaseNoteJp { get; set; }
 
                 /// <summary>
-                /// <para>The size of the upgradeable version installation package. Unit: KB.</para>
+                /// <para>The size of the upgradable version installation package. Unit: KB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>108815097</para>
@@ -437,7 +434,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Whether the desktop is a GPU desktop.</para>
+            /// <para>Indicates whether the cloud computer is a GPU cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -457,7 +454,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? GpuCount { get; set; }
 
             /// <summary>
-            /// <para>The GPU driver version for the desktop.</para>
+            /// <para>The GPU driver version of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -467,7 +464,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuDriverVersion { get; set; }
 
             /// <summary>
-            /// <para>The GPU specification.</para>
+            /// <para>The GPU specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NVIDIA T4</para>
@@ -478,7 +475,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -490,7 +487,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -501,7 +498,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? HibernationOptionsConfigured { get; set; }
 
             /// <summary>
-            /// <para>The host name.</para>
+            /// <para>The hostname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -520,6 +517,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
+            [NameInMap("ImageName")]
+            [Validation(Required=false)]
+            public string ImageName { get; set; }
+
             [NameInMap("IsLdap")]
             [Validation(Required=false)]
             public bool? IsLdap { get; set; }
@@ -535,7 +536,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ManagementFlag { get; set; }
 
             /// <summary>
-            /// <para>The management flags.</para>
+            /// <para>The management flag.</para>
             /// </summary>
             [NameInMap("ManagementFlags")]
             [Validation(Required=false)]
@@ -552,7 +553,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the secondary ENI created by the desktop service under a RAM or AD user. This value cannot be modified.</para>
+            /// <para>The ID of the secondary elastic network interface (ENI) created by the cloud computer service under the RAM or AD user. This value cannot be modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -562,7 +563,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the secondary ENI created by the desktop service under a RAM or AD user.</para>
+            /// <para>The IP address of the secondary ENI created by the cloud computer service under the RAM or AD user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -572,7 +573,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkInterfaceIp { get; set; }
 
             /// <summary>
-            /// <para>The office site ID.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-363353****</para>
@@ -582,7 +583,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The office site name.</para>
+            /// <para>The office network name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -592,7 +593,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The account system type for the office site.</para>
+            /// <para>The account system type of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -602,7 +603,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteType { get; set; }
 
             /// <summary>
-            /// <para>The VPC type of the office site.</para>
+            /// <para>The VPC type of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -664,7 +665,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The desktop policy ID.</para>
+            /// <para>The cloud computer policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>system-all-enabled-policy</para>
@@ -674,7 +675,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The collection of desktop policy IDs.</para>
+            /// <para>The list of cloud computer policy IDs.</para>
             /// </summary>
             [NameInMap("PolicyGroupIdList")]
             [Validation(Required=false)]
@@ -691,7 +692,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupName { get; set; }
 
             /// <summary>
-            /// <para>The list of desktop policy names.</para>
+            /// <para>The list of cloud computer policy names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test policy 01</para>
@@ -701,7 +702,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<string> PolicyGroupNameList { get; set; }
 
             /// <summary>
-            /// <para>The creation progress of the desktop.</para>
+            /// <para>The creation progress of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -764,14 +765,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SessionType { get; set; }
 
             /// <summary>
-            /// <para>Session information for the desktop user.</para>
+            /// <para>The user session information of the cloud computer.</para>
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<DescribeDesktopsResponseBodyDesktopsSessions> Sessions { get; set; }
             public class DescribeDesktopsResponseBodyDesktopsSessions : TeaModel {
                 /// <summary>
-                /// <para>The user ID connected to the desktop.</para>
+                /// <para>The ID of the user connected to the cloud computer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>29615820929547****</para>
@@ -781,7 +782,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the desktop session was established.</para>
+                /// <para>The time when the cloud computer session was established.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-03-07T08:23Z</para>
@@ -791,7 +792,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EstablishmentTime { get; set; }
 
                 /// <summary>
-                /// <para>The external user name.</para>
+                /// <para>The external username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Testname</para>
@@ -822,15 +823,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string SnapshotPolicyName { get; set; }
 
-            /// <summary>
-            /// <para>The standard start time.</para>
-            /// </summary>
             [NameInMap("StandardStartTime")]
             [Validation(Required=false)]
             public string StandardStartTime { get; set; }
 
             /// <summary>
-            /// <para>The first time the desktop started.</para>
+            /// <para>The time when the cloud computer was first started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:31Z</para>
@@ -839,8 +837,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string StartTime { get; set; }
 
+            [NameInMap("SubnetId")]
+            [Validation(Required=false)]
+            public string SubnetId { get; set; }
+
             /// <summary>
-            /// <para>Whether hibernation is supported.</para>
+            /// <para>Indicates whether hibernation is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -851,7 +853,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -863,7 +865,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not available for use.</para>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -874,7 +876,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>Tag information.</para>
+            /// <para>The tag information.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -903,7 +905,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>Whether disk encryption is enabled.</para>
+            /// <para>Indicates whether disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -913,7 +915,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key used when disk encryption is enabled. You can obtain it through the <a href="t22712.xdita#"></a>interface.</para>
+            /// <para>The KMS key ID used for disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>
@@ -923,7 +925,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string VolumeEncryptionKey { get; set; }
 
             /// <summary>
-            /// <para>The type of zone to query. Default value: <c>AvailabilityZone</c>, which refers to standard cloud availability zones.</para>
+            /// <para>The zone type. Default value: <c>AvailabilityZone</c>, which indicates a standard cloud zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AvailabilityZone</para>
@@ -935,7 +937,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token that starts the next query. An empty NextToken means no more results.</para>
+        /// <para>The pagination token for the next query. If this parameter is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -945,7 +947,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query.</para>
+        /// <para>The page number of the current page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -955,7 +957,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paged query.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -975,7 +977,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of desktops.</para>
+        /// <para>The total number of cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

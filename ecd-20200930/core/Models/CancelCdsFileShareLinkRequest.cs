@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CancelCdsFileShareLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>The enterprise drive ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file sharing task.</para>
+        /// <para>The share ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

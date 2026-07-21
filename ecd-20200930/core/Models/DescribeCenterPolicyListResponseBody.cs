@@ -572,6 +572,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string FileTransferAddress { get; set; }
 
+            [NameInMap("FileTransferInSize")]
+            [Validation(Required=false)]
+            public string FileTransferInSize { get; set; }
+
+            [NameInMap("FileTransferInUnit")]
+            [Validation(Required=false)]
+            public string FileTransferInUnit { get; set; }
+
+            [NameInMap("FileTransferOutSize")]
+            [Validation(Required=false)]
+            public string FileTransferOutSize { get; set; }
+
+            [NameInMap("FileTransferOutUnit")]
+            [Validation(Required=false)]
+            public string FileTransferOutUnit { get; set; }
+
+            [NameInMap("FileTransferSizeLimit")]
+            [Validation(Required=false)]
+            public string FileTransferSizeLimit { get; set; }
+
             [NameInMap("FileTransferSpeed")]
             [Validation(Required=false)]
             public string FileTransferSpeed { get; set; }

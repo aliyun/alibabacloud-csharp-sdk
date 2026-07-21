@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopMetadataRequest : TeaModel {
         /// <summary>
-        /// <para>The creation time of the cloud computer. The time must be in the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c> format and in UTC.</para>
+        /// <para>The time when the cloud desktop was created. The time is in UTC format:
+        /// <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-01T12:00:00Z</para>
@@ -20,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CreationTimeStart { get; set; }
 
         /// <summary>
-        /// <para>A list of cloud computer IDs.</para>
+        /// <para>The list of cloud desktop IDs.</para>
         /// </summary>
         [NameInMap("DesktopIds")]
         [Validation(Required=false)]
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user.</para>
+        /// <para>The end user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-user</para>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer share.</para>
+        /// <para>The shared cloud desktop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-i1ruuudp92qpj****</para>
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-gx2x1dhsmusr2****</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include cloud computers in cloud computer shares in the response.</para>
+        /// <para>Specifies whether the response includes cloud desktops in shared cloud desktop groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Maximum: 100. Default: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -98,8 +99,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        [NameInMap("NetworkInterfaceIp")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceIp { get; set; }
+
         /// <summary>
-        /// <para>The token returned from the previous call to retrieve the next page of results.</para>
+        /// <para>The token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -109,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-778418****</para>
@@ -119,7 +124,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query for operations. The time must be in the <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c> format and in UTC.</para>
+        /// <para>The start time of the operation performed on the cloud desktop. The time is in UTC format:
+        /// <c>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-01T12:00:00Z</para>

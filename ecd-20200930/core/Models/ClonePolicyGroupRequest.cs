@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ClonePolicyGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the cloud computer policy that you want to create.</para>
+        /// <para>The name of the new cloud computer policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination cloud computer policy that you want to clone.</para>
+        /// <para>The ID of the cloud computer policy that you want to clone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

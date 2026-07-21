@@ -10,23 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CopyCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically rename the file if a file that has the same name exists in the folder to which you want to copy the file. Default value: false.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Specifies whether to automatically rename the file when a file with the same name exists in the destination folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -36,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRename { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>The enterprise cloud drive ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The user ID that you want to use to access the cloud disk.</para>
+        /// <para>The ID of the user who is logged on to the cloud drive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user01</para>
@@ -57,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. You can call the CreateCdsFile operation to query the file ID.</para>
+        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,9 +52,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>目标复制文件所在的个人空间 ID（即 UserId，您可以在 DescribeCloudDriveUsers 接口返回的报文中获取。）或者目标复制文件所在的团队空间 ID（即 GroupId，您可以在 DescribeCloudDriveGroups 接口返回的报文中获取。）</para>
+        /// <para>The ID of the personal drive (which can be obtained from the <c>UserId</c> response parameter of the <a href="https://help.aliyun.com/document_detail/2357237.html">DescribeCloudDriveUsers</a> operation) or the team space ID (which can be obtained from the <c>GroupId</c> response parameter of the <a href="https://help.aliyun.com/document_detail/609896.html">DescribeCloudDriveGroups</a> operation) at the copy destination.</para>
         /// <remarks>
-        /// <para>FileReceiverId 和 FileReceiverType 都为空时，默认复制到文件所在的个人空间。</para>
+        /// <para>If both <c>FileReceiverId</c> and <c>FileReceiverType</c> are empty, the file is copied to the personal drive where the file currently resides by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileReceiverId { get; set; }
 
         /// <summary>
-        /// <para>文件所属的空间类型。</para>
+        /// <para>The type of space to which the file belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -91,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileReceiverType { get; set; }
 
         /// <summary>
-        /// <para>The team Space ID.</para>
+        /// <para>The team space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-hs3i1w39o68ma****</para>
@@ -101,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent folder of the folder to which you want to copy the file. If you want to copy the file to the root directory, set this parameter to root.</para>
+        /// <para>The ID of the parent folder at the copy destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the folder. Set this parameter to <c>root</c> if you want to copy the file to the root directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ParentFolderId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

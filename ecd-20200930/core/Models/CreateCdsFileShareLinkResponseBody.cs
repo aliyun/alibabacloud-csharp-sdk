@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCdsFileShareLinkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</para>
+        /// <para>The execution result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public CdsFileShareLinkModel Data { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned. This parameter is not returned if the value of Code is success.</para>
+        /// <para>The error message. This parameter is not returned when Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -47,22 +47,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
-        /// <para>Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

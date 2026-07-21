@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeInvocationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The command execution records.</para>
+        /// <para>The array of script execution records.</para>
         /// </summary>
         [NameInMap("Invocations")]
         [Validation(Required=false)]
         public List<DescribeInvocationsResponseBodyInvocations> Invocations { get; set; }
         public class DescribeInvocationsResponseBodyInvocations : TeaModel {
             /// <summary>
-            /// <para>The Base64-encoded command content.</para>
+            /// <para>The script content, transmitted in Base64 encoding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cnBtIC1xYSB8IGdyZXAgdnNm****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CommandContent { get; set; }
 
             /// <summary>
-            /// <para>The type of the command.</para>
+            /// <para>The script type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RunPowerShellScript</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CommandType { get; set; }
 
             /// <summary>
-            /// <para>The time when the execution task is created.</para>
+            /// <para>The creation time of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-19T09:15:46Z</para>
@@ -46,8 +46,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string CreationTime { get; set; }
 
+            [NameInMap("DesktopScenario")]
+            [Validation(Required=false)]
+            public string DesktopScenario { get; set; }
+
             /// <summary>
-            /// <para>The ID of the end user.</para>
+            /// <para>The end user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User1</para>
@@ -57,33 +61,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The overall execution status of the command. The value of this parameter depends on the execution status of the command on all the involved cloud computers. Valid values:</para>
+            /// <para>The overall execution status of the script. The overall execution status depends on the combined execution status of all cloud desktops in this call. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The command is being verified or sent. If the execution status is Pending on at least one cloud computer, the overall status is considered Pending.</para>
-            /// </description></item>
-            /// <item><description><para>Running: The command is being executed on cloud computers. If the execution status is Running on at least one cloud computer, the overall status is considered Running.</para>
-            /// </description></item>
-            /// <item><description><para>Success: If the execution status is Success on at least one cloud computer and either Success or Stopped on all other cloud computers, the overall status is considered Success.</para>
-            /// </description></item>
-            /// <item><description><para>Failed: If the execution status is Stopped or Failed on all cloud computers, the overall status is considered Failed. If any execution status on cloud computers matches one of the following values, Failed is returned.</para>
-            /// <list type="bullet">
-            /// <item><description>Invalid: The command is invalid.</description></item>
-            /// <item><description>Aborted: The command failed to be sent.</description></item>
-            /// <item><description>Failed: The command is executed, but the exit code is not 0.</description></item>
-            /// <item><description>Timeout: The command execution timed out.</description></item>
-            /// <item><description>Error: An error occurred when the command is being executed.</description></item>
+            /// <item><description>Pending: The system is validating or sending the command. If the script execution status on at least one cloud desktop is Pending, the overall execution status is Pending.</description></item>
+            /// <item><description>Running: The command is running on the cloud desktop. If the script execution status on at least one cloud desktop is Running, the overall execution status is Running.</description></item>
+            /// <item><description>Success: The script execution status on each cloud desktop is Stopped or Success, and the script execution status on at least one cloud desktop is Success. The overall execution status is Success.</description></item>
+            /// <item><description>Failed: The script execution status on each cloud desktop is Stopped or Failed. The overall execution status is Failed. The return value is Failed when one or more of the following statuses occur on a cloud desktop:<list type="bullet">
+            /// <item><description>Command validation failed (Invalid).</description></item>
+            /// <item><description>Command delivery failed (Aborted).</description></item>
+            /// <item><description>Command execution completed but the exit code is non-zero (Failed).</description></item>
+            /// <item><description>Command execution timed out (Timeout).</description></item>
+            /// <item><description>Command execution encountered an exception (Error).</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Stopping: The command execution is being stopped. If the execution status is Stopping on at least one cloud computer, the overall status is considered Stopping.</para>
-            /// </description></item>
-            /// <item><description><para>Stopped: The command execution stops. If the execution status is Stopped on at least one cloud computer, the overall status is considered Stopped. If any execution status on cloud computers matches one of the following values, Stopped is returned.</para>
-            /// <list type="bullet">
-            /// <item><description>Cancelled: The command execution is canceled.</description></item>
-            /// <item><description>Terminated: The command execution is terminated.</description></item>
+            /// <item><description>Stopping: The task is being stopped. If the script execution status on at least one instance is Stopping, the overall execution status is Stopping.</description></item>
+            /// <item><description>Stopped: The task has been stopped. If the script execution status on all instances is Stopped, the overall execution status is Stopped. The return value is Stopped when the script execution status on an instance is one of the following:<list type="bullet">
+            /// <item><description>Task cancelled (Cancelled).</description></item>
+            /// <item><description>Task terminated (Terminated).</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>PartialFailed: The command execution succeeded on some cloud computers but failed on others. If the execution status on any cloud computer is Success, Failed, or Stopped, the overall status is considered PartialFailed.</para>
-            /// </description></item>
+            /// <item><description>PartialFailed: Some instances succeeded and some instances failed. If the script execution status on each instance is Success, Failed, or Stopped, the overall execution status is PartialFailed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InvocationStatus { get; set; }
 
             /// <summary>
-            /// <para>The total number of cloud computers on which the command is executed.</para>
+            /// <para>The total number of cloud desktops on which the script was run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -104,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? InvokeDesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of cloud computers on which the command execution succeeds.</para>
+            /// <para>The total number of cloud desktops on which the script was run successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,14 +111,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? InvokeDesktopSucceedCount { get; set; }
 
             /// <summary>
-            /// <para>The cloud computers on which the command is executed.</para>
+            /// <para>The list of target cloud desktops for execution.</para>
             /// </summary>
             [NameInMap("InvokeDesktops")]
             [Validation(Required=false)]
             public List<DescribeInvocationsResponseBodyInvocationsInvokeDesktops> InvokeDesktops { get; set; }
             public class DescribeInvocationsResponseBodyInvocationsInvokeDesktops : TeaModel {
                 /// <summary>
-                /// <para>The time when the command execution was performed.</para>
+                /// <para>The creation time of the script process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-20T06:15:54Z</para>
@@ -131,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The cloud computer ID.</para>
+                /// <para>The cloud desktop ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecd-7w78ozhjcwa3u****</para>
@@ -141,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopId { get; set; }
 
                 /// <summary>
-                /// <para>The cloud computer name.</para>
+                /// <para>The cloud desktop name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>demo1234</para>
@@ -151,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopName { get; set; }
 
                 /// <summary>
-                /// <para>The size of the text that is truncated and discarded when the Output value exceeds 24 KB in size.</para>
+                /// <para>The length of the truncated and discarded text after the text length in the Output field exceeds 24 KB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -161,22 +158,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? Dropped { get; set; }
 
                 /// <summary>
-                /// <para>The code explaining why the command failed to be sent or executed. Valid values:</para>
+                /// <para>The error code for the command delivery failure or execution failure. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Null: The command is executed successfully.</description></item>
-                /// <item><description>InstanceNotExists: The specified cloud computer does not exist or is released.</description></item>
-                /// <item><description>InstanceReleased: The cloud computer is released during the execution.</description></item>
-                /// <item><description>InstanceNotRunning: The cloud computer is not running during the execution.</description></item>
-                /// <item><description>CommandNotApplicable: The command cannot be executed on the specified cloud computer.</description></item>
-                /// <item><description>ClientNotRunning: The Cloud Assistant agent is not running.</description></item>
-                /// <item><description>ClientNotResponse: The Cloud Assistant agent does not respond.</description></item>
-                /// <item><description>ClientIsUpgrading: The Cloud Assistant agent is being updated.</description></item>
-                /// <item><description>ClientNeedUpgrade: The Cloud Assistant agent needs to be updated.</description></item>
-                /// <item><description>DeliveryTimeout: The command sending times out.</description></item>
-                /// <item><description>ExecutionTimeout: The command execution times out.</description></item>
-                /// <item><description>ExecutionException: An exception occurs when the command is being executed.</description></item>
-                /// <item><description>ExecutionInterrupted: The command execution is interrupted.</description></item>
-                /// <item><description>ExitCodeNonzero: The command execution completes, but the exit code is not 0.</description></item>
+                /// <item><description>Empty: The command ran normally.</description></item>
+                /// <item><description>InstanceNotExists: The specified cloud desktop does not exist or has been released.</description></item>
+                /// <item><description>InstanceReleased: The cloud desktop was released during task execution.</description></item>
+                /// <item><description>InstanceNotRunning: The cloud desktop was not running when the task was created.</description></item>
+                /// <item><description>CommandNotApplicable: The command is not applicable to the specified cloud desktop.</description></item>
+                /// <item><description>ClientNotRunning: The Cloud Assistant client is not running.</description></item>
+                /// <item><description>ClientNotResponse: The Cloud Assistant client is not responding.</description></item>
+                /// <item><description>ClientIsUpgrading: The Cloud Assistant client is being upgraded.</description></item>
+                /// <item><description>ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</description></item>
+                /// <item><description>DeliveryTimeout: Command delivery timed out.</description></item>
+                /// <item><description>ExecutionTimeout: Command execution timed out.</description></item>
+                /// <item><description>ExecutionException: An exception occurred during command execution.</description></item>
+                /// <item><description>ExecutionInterrupted: Command execution was interrupted.</description></item>
+                /// <item><description>ExitCodeNonzero: Command execution completed with a non-zero exit code.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -187,22 +184,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The message explaining why the command failed to be sent or executed. Valid values:</para>
+                /// <para>The detailed information about the command delivery failure or execution failure. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Null: The command is executed successfully.</description></item>
-                /// <item><description>the specified instance does not exists: The specified cloud computer does not exist or is released.</description></item>
-                /// <item><description>the instance has released when create task: The cloud computer is released during the execution.</description></item>
-                /// <item><description>the instance is not running when create task: The cloud computer is not running during the execution.</description></item>
-                /// <item><description>the command is not applicable: The command cannot be executed on the specified cloud computer.</description></item>
-                /// <item><description>the aliyun service is not running on the instance: The Cloud Assistant agent is not running.</description></item>
-                /// <item><description>the aliyun service in the instance does not response: The Cloud Assistant agent does not respond.</description></item>
-                /// <item><description>the aliyun service in the instance is upgrading now: The Cloud Assistant agent is being updated.</description></item>
-                /// <item><description>the aliyun service in the instance need upgrade: The Cloud Assistant agent needs to be updated.</description></item>
-                /// <item><description>the command delivery has been timeout: The command sending times out.</description></item>
-                /// <item><description>the command execution has been timeout: The command execution times out.</description></item>
-                /// <item><description>the command execution got an exception: An exception occurs when the command is being executed.</description></item>
-                /// <item><description>the command execution has been interrupted: The command execution is interrupted.</description></item>
-                /// <item><description>the command execution exit code is not zero: The command execution completes, but the exit code is not 0.</description></item>
+                /// <item><description>Empty: The command ran normally.</description></item>
+                /// <item><description>the specified instance does not exists: The specified cloud desktop does not exist or has been released.</description></item>
+                /// <item><description>the instance has released when create task: The cloud desktop was released during task execution.</description></item>
+                /// <item><description>the instance is not running when create task: The cloud desktop was not running when the task was created.</description></item>
+                /// <item><description>the command is not applicable: The command is not applicable to the specified cloud desktop.</description></item>
+                /// <item><description>the aliyun service is not running on the instance: The Cloud Assistant client is not running.</description></item>
+                /// <item><description>the aliyun service in the instance does not response: The Cloud Assistant client is not responding.</description></item>
+                /// <item><description>the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.</description></item>
+                /// <item><description>the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.</description></item>
+                /// <item><description>the command delivery has been timeout: Command delivery timed out.</description></item>
+                /// <item><description>the command execution has been timeout: Command execution timed out.</description></item>
+                /// <item><description>the command execution got an exception: An exception occurred during command execution.</description></item>
+                /// <item><description>the command execution has been interrupted: Command execution was interrupted.</description></item>
+                /// <item><description>the command execution exit code is not zero: Command execution completed with a non-zero exit code.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -213,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ErrorInfo { get; set; }
 
                 /// <summary>
-                /// <para>The exit code of the execution.</para>
+                /// <para>The exit code of the script process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -223,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? ExitCode { get; set; }
 
                 /// <summary>
-                /// <para>The time when the command execution ended.</para>
+                /// <para>The end time of the script process.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-20T06:15:56Z</para>
@@ -233,7 +230,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The execution progress of the command on a single cloud computer.</para>
+                /// <para>The script execution status on a single cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -242,11 +239,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 [Validation(Required=false)]
                 public string InvocationStatus { get; set; }
 
+                [NameInMap("JvsAgentId")]
+                [Validation(Required=false)]
+                public string JvsAgentId { get; set; }
+
                 /// <summary>
-                /// <para>The command output.</para>
+                /// <para>The output of the script process.</para>
                 /// <list type="bullet">
-                /// <item><description>When the <c>IncludeOutput</c> parameter is set to false, the output is not returned.</description></item>
-                /// <item><description>When the <c>ContentEncoding</c> parameter is set to Base64, the output is returned as a Base64-encoded string.</description></item>
+                /// <item><description>If the request parameter <c>IncludeOutput</c> is set to false, Output is not returned.</description></item>
+                /// <item><description>If the request parameter <c>ContentEncoding</c> is set to Base64, Output is the Base64-encoded output.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -257,7 +258,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Output { get; set; }
 
                 /// <summary>
-                /// <para>The number of times the command has been executed on the cloud computer.</para>
+                /// <para>The number of times the command was run on the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -267,7 +268,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? Repeats { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the command execution.</para>
+                /// <para>The time when the script process started running on the cloud desktop.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-20T06:15:55Z</para>
@@ -277,7 +278,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
-                /// <para>The stop time of the command execution (StopInvocatio).</para>
+                /// <para>The time when execution was stopped, if StopInvocation was called.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-25T09:15:47Z</para>
@@ -287,7 +288,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string StopTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the execution status was updated.</para>
+                /// <para>The update time of the task status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-12-25T06:15:56Z</para>
@@ -299,7 +300,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The ID of the execution.</para>
+            /// <para>The execution ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-hz0jdfwd9f****</para>
@@ -311,7 +312,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The query token that is returned from this call.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -321,7 +322,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>

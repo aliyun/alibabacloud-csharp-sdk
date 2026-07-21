@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? CheckOsSession { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer. You can specify 1 to 100 IDs.</para>
+        /// <para>The cloud computer IDs. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud computer.</para>
+        /// <para>The cloud computer name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DemoComputer</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user.</para>
+        /// <para>The end user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user. This parameter is the same as the <c>EndUserId</c> parameter. Specify only one of them.</para>
+        /// <para>The end user ID. This parameter is the same as EndUserId. You only need to specify one of them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -66,15 +66,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserIdFilter { get; set; }
 
+        [NameInMap("EndUserIds")]
+        [Validation(Required=false)]
+        public List<string> EndUserIds { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to return information about the terminal.</para>
+        /// <para>Specifies whether to include terminal information in the response.</para>
         /// </summary>
         [NameInMap("FillHardwareInfo")]
         [Validation(Required=false)]
         public bool? FillHardwareInfo { get; set; }
 
         /// <summary>
-        /// <para>The language of the returned information.</para>
+        /// <para>The language type of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -104,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for a paged query.</para>
+        /// <para>The maximum number of rows per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. Call <a href="t2167755.xdita#"></a>to obtain a list of regions that Elastic Desktop Service (EDS) supports.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The connection status of the session.</para>
+        /// <para>The session connection status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Connected</para>
@@ -149,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud computer.</para>
+        /// <para>The purchase method of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monthPackage</para>

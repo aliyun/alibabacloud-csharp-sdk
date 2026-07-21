@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message. If the request was successful, a <c>success</c> is returned. If the request failed, an error message is returned.</para>
+        /// <para>The operation result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Details about the image update task.</para>
+        /// <para>The image upgrade task information.</para>
         /// </summary>
         [NameInMap("FotaTasks")]
         [Validation(Required=false)]
         public List<DescribeFotaTasksResponseBodyFotaTasks> FotaTasks { get; set; }
         public class DescribeFotaTasksResponseBodyFotaTasks : TeaModel {
             /// <summary>
-            /// <para>The image version. You can call the <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> operation to obtain the value of this parameter.</para>
+            /// <para>The image version. You can call <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> to obtain this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1-D-20220513.143129</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FotaProject { get; set; }
 
             /// <summary>
-            /// <para>The number of custom images that can be updated to this version.</para>
+            /// <para>The number of custom images that can be upgraded to this version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? PendingCustomImageCount { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud computers whose images can be updated to this version.</para>
+            /// <para>The number of cloud desktops that can be upgraded to this version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? PendingDesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the image version available for update was published.</para>
+            /// <para>The publish time of the upgrade version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-31T04:28:48Z</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PublishTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the image version available for update.</para>
+            /// <para>The upgrade version description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// <para>The size of the update package. Unit: KB.</para>
+            /// <para>The size of the upgrade package. Unit: KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>568533470</para>
@@ -99,12 +99,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image update task is automatically pushed.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Running: automatically pushes the image update task.</description></item>
-            /// <item><description>Pending: does not automatically push the image update task.</description></item>
-            /// </list>
+            /// <para>Indicates whether the image upgrade task is automatically pushed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>valid</para>
@@ -126,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The returned error message. This parameter is not returned if the Code value is a <c>success</c> message.</para>
+        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is not specified.</para>
@@ -136,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>

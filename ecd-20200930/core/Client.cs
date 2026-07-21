@@ -66,12 +66,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks a convenience office network that is automatically locked due to a long idle period of time.</para>
+        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</para>
+        /// <para>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -117,12 +117,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks a convenience office network that is automatically locked due to a long idle period of time.</para>
+        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</para>
+        /// <para>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -168,12 +168,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks a convenience office network that is automatically locked due to a long idle period of time.</para>
+        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</para>
+        /// <para>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -191,12 +191,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks a convenience office network that is automatically locked due to a long idle period of time.</para>
+        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you do not create any cloud computer in a convenience office network within 15 days, the office network is automatically locked and virtual private cloud (VPC) resources are released. If you want to resume the office network, you can call this operation to unlock the office network.</para>
+        /// <para>For office networks based on convenience accounts, if no cloud computers are created within 15 consecutive calendar days, the office network is automatically locked and VPC-related resources are released. To use the office network again, call this operation to unlock it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -522,12 +522,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a shared folder to the network disk.</para>
+        /// <para>Creates a shared folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</para>
+        /// <para>You can share a specified folder with other users and set access permissions for the folder.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -595,12 +595,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a shared folder to the network disk.</para>
+        /// <para>Creates a shared folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</para>
+        /// <para>You can share a specified folder with other users and set access permissions for the folder.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -668,12 +668,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a shared folder to the network disk.</para>
+        /// <para>Creates a shared folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</para>
+        /// <para>You can share a specified folder with other users and set access permissions for the folder.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -691,12 +691,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a shared folder to the network disk.</para>
+        /// <para>Creates a shared folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to share a specific folder with other users. You can also configure the folder permissions.</para>
+        /// <para>You can share a specified folder with other users and set access permissions for the folder.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1362,7 +1362,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for the coordinate permissions.</para>
+        /// <para>Requests permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1420,7 +1420,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for the coordinate permissions.</para>
+        /// <para>Requests permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1478,7 +1478,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for the coordinate permissions.</para>
+        /// <para>Requests permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1496,7 +1496,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for the coordinate permissions.</para>
+        /// <para>Requests permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1514,7 +1514,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
+        /// <para>Sends a remote assistance request from an administrator to an end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1576,7 +1576,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
+        /// <para>Sends a remote assistance request from an administrator to an end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1638,7 +1638,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
+        /// <para>Sends a remote assistance request from an administrator to an end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1656,7 +1656,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for coordination monitoring. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
+        /// <para>Sends a remote assistance request from an administrator to an end user. This operation is mainly used in administrator assistance scenarios and education scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1674,12 +1674,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allows you to upgrade images.</para>
+        /// <para>Allows an image upgrade.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers for which you want to allow image updates must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1729,12 +1729,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allows you to upgrade images.</para>
+        /// <para>Allows an image upgrade.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers for which you want to allow image updates must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1784,12 +1784,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allows you to upgrade images.</para>
+        /// <para>Allows an image upgrade.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers for which you want to allow image updates must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1807,12 +1807,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Allows you to upgrade images.</para>
+        /// <para>Allows an image upgrade.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computers for which you want to allow image updates must be in the Running state.</para>
+        /// <para>The cloud computer must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1982,7 +1982,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2032,7 +2032,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2082,7 +2082,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2100,7 +2100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a premium bandwidth plan to an office network. A premium bandwidth plan is used together with only one office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2622,15 +2622,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// <para>Assigns users to multiple cloud computers in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The target cloud computers must be in the Running state.</description></item>
-        /// <item><description>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <c>ManagementFlags</c> parameter. A value of <c>ASSIGNING</c> means it is in progress; otherwise, it is complete.</description></item>
-        /// <item><description>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</description></item>
+        /// <item><description>The cloud computers must be in the Running state.</description></item>
+        /// <item><description>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <c>ManagementFlags</c> response parameter: <c>ASSIGNING</c> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</description></item>
+        /// <item><description>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2697,15 +2697,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// <para>Assigns users to multiple cloud computers in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The target cloud computers must be in the Running state.</description></item>
-        /// <item><description>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <c>ManagementFlags</c> parameter. A value of <c>ASSIGNING</c> means it is in progress; otherwise, it is complete.</description></item>
-        /// <item><description>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</description></item>
+        /// <item><description>The cloud computers must be in the Running state.</description></item>
+        /// <item><description>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <c>ManagementFlags</c> response parameter: <c>ASSIGNING</c> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</description></item>
+        /// <item><description>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2772,15 +2772,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// <para>Assigns users to multiple cloud computers in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The target cloud computers must be in the Running state.</description></item>
-        /// <item><description>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <c>ManagementFlags</c> parameter. A value of <c>ASSIGNING</c> means it is in progress; otherwise, it is complete.</description></item>
-        /// <item><description>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</description></item>
+        /// <item><description>The cloud computers must be in the Running state.</description></item>
+        /// <item><description>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <c>ManagementFlags</c> response parameter: <c>ASSIGNING</c> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</description></item>
+        /// <item><description>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2799,15 +2799,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assigns multiple cloud computers to users in a batch.</para>
+        /// <para>Assigns users to multiple cloud computers in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>The target cloud computers must be in the Running state.</description></item>
-        /// <item><description>This is an asynchronous API. To check the assignment status, call <a href="t2167745.xdita#"></a>and refer to the <c>ManagementFlags</c> parameter. A value of <c>ASSIGNING</c> means it is in progress; otherwise, it is complete.</description></item>
-        /// <item><description>Recommended polling interval: 2–5 seconds (max duration: 50s). The process usually takes 1–5 seconds.</description></item>
+        /// <item><description>The cloud computers must be in the Running state.</description></item>
+        /// <item><description>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <c>ManagementFlags</c> response parameter: <c>ASSIGNING</c> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</description></item>
+        /// <item><description>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3098,7 +3098,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a file sharing task.</para>
+        /// <para>Cancels file sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3144,7 +3144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a file sharing task.</para>
+        /// <para>Cancels file sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3190,7 +3190,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a file sharing task.</para>
+        /// <para>Cancels file sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3208,7 +3208,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a file sharing task.</para>
+        /// <para>Cancels file sharing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3226,7 +3226,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a remote assistance request to the end user.</para>
+        /// <para>Cancels a remote assistance request initiated to an end user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3280,7 +3280,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a remote assistance request to the end user.</para>
+        /// <para>Cancels a remote assistance request initiated to an end user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3334,7 +3334,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a remote assistance request to the end user.</para>
+        /// <para>Cancels a remote assistance request initiated to an end user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3352,7 +3352,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels a remote assistance request to the end user.</para>
+        /// <para>Cancels a remote assistance request initiated to an end user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3370,7 +3370,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the operation of copying an image to another region.</para>
+        /// <para>Cancels an ongoing image copy operation to another region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3416,7 +3416,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the operation of copying an image to another region.</para>
+        /// <para>Cancels an ongoing image copy operation to another region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3462,7 +3462,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the operation of copying an image to another region.</para>
+        /// <para>Cancels an ongoing image copy operation to another region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3480,7 +3480,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the operation of copying an image to another region.</para>
+        /// <para>Cancels an ongoing image copy operation to another region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3498,7 +3498,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a policy based on an existing global policy.</para>
+        /// <para>Clones a policy based on an existing region-independent policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3556,7 +3556,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a policy based on an existing global policy.</para>
+        /// <para>Clones a policy based on an existing region-independent policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3614,7 +3614,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a policy based on an existing global policy.</para>
+        /// <para>Clones a policy based on an existing region-independent policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3632,7 +3632,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones a policy based on an existing global policy.</para>
+        /// <para>Clones a policy based on an existing region-independent policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3650,7 +3650,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy to quickly create a policy.</para>
+        /// <para>Clones a cloud computer policy to quickly create a custom cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3700,7 +3700,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy to quickly create a policy.</para>
+        /// <para>Clones a cloud computer policy to quickly create a custom cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3750,7 +3750,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy to quickly create a policy.</para>
+        /// <para>Clones a cloud computer policy to quickly create a custom cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3768,7 +3768,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clones an existing policy to quickly create a policy.</para>
+        /// <para>Clones a cloud computer policy to quickly create a custom cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3946,7 +3946,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.</para>
+        /// <para>Configures a trust relationship for an AD office network. For office networks (formerly workspaces) that use the HDX protocol, you must configure conditional forwarders and trust relationships before the networks can function properly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4000,7 +4000,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.</para>
+        /// <para>Configures a trust relationship for an AD office network. For office networks (formerly workspaces) that use the HDX protocol, you must configure conditional forwarders and trust relationships before the networks can function properly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4054,7 +4054,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.</para>
+        /// <para>Configures a trust relationship for an AD office network. For office networks (formerly workspaces) that use the HDX protocol, you must configure conditional forwarders and trust relationships before the networks can function properly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4072,7 +4072,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a conditional forwarder and trust relationship for a high-definition experience (HDX)-based office network (formerly workspace). You can call the operation to configure a trust relationship for an enterprise Active Directory (AD) office network.</para>
+        /// <para>Configures a trust relationship for an AD office network. For office networks (formerly workspaces) that use the HDX protocol, you must configure conditional forwarders and trust relationships before the networks can function properly.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4090,7 +4090,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</para>
+        /// <para>Specifies the organizational unit (OU) and administrator for an AD office network (formerly workspace).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4148,7 +4148,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</para>
+        /// <para>Specifies the organizational unit (OU) and administrator for an AD office network (formerly workspace).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4206,7 +4206,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</para>
+        /// <para>Specifies the organizational unit (OU) and administrator for an AD office network (formerly workspace).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4224,7 +4224,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specify an organizational unit (OU) and administrator for the Active Directory (AD) office network (formerly known as workspace).</para>
+        /// <para>Specifies the organizational unit (OU) and administrator for an AD office network (formerly workspace).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4242,7 +4242,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a copy of a file or folder in the cloud drive.</para>
+        /// <para>Creates a copy of a file or folder in a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4316,7 +4316,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a copy of a file or folder in the cloud drive.</para>
+        /// <para>Creates a copy of a file or folder in a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4390,7 +4390,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a copy of a file or folder in the cloud drive.</para>
+        /// <para>Creates a copy of a file or folder in a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4408,7 +4408,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a copy of a file or folder in the cloud drive.</para>
+        /// <para>Creates a copy of a file or folder in a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4426,7 +4426,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.</para>
+        /// <para>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4484,7 +4484,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.</para>
+        /// <para>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4542,7 +4542,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.</para>
+        /// <para>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4560,7 +4560,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copy an image to another region. If you want to share an image across regions, you can call this operation to copy the image to the destination region and then share the image.</para>
+        /// <para>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6098,7 +6098,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a file share.</para>
+        /// <para>Creates a file share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6192,7 +6192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a file share.</para>
+        /// <para>Creates a file share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6286,7 +6286,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a file share.</para>
+        /// <para>Creates a file share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6304,7 +6304,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a file share.</para>
+        /// <para>Creates a file share.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6322,7 +6322,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a region-independent cloud desktop policy.</para>
+        /// <para>Creates a region-independent Cloud Desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6506,6 +6506,26 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
             {
                 query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInSize))
+            {
+                query["FileTransferInSize"] = request.FileTransferInSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInUnit))
+            {
+                query["FileTransferInUnit"] = request.FileTransferInUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutSize))
+            {
+                query["FileTransferOutSize"] = request.FileTransferOutSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutUnit))
+            {
+                query["FileTransferOutUnit"] = request.FileTransferOutUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSizeLimit))
+            {
+                query["FileTransferSizeLimit"] = request.FileTransferSizeLimit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
             {
@@ -6892,7 +6912,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a region-independent cloud desktop policy.</para>
+        /// <para>Creates a region-independent Cloud Desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7076,6 +7096,26 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
             {
                 query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInSize))
+            {
+                query["FileTransferInSize"] = request.FileTransferInSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInUnit))
+            {
+                query["FileTransferInUnit"] = request.FileTransferInUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutSize))
+            {
+                query["FileTransferOutSize"] = request.FileTransferOutSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutUnit))
+            {
+                query["FileTransferOutUnit"] = request.FileTransferOutUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSizeLimit))
+            {
+                query["FileTransferSizeLimit"] = request.FileTransferSizeLimit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
             {
@@ -7462,7 +7502,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a region-independent cloud desktop policy.</para>
+        /// <para>Creates a region-independent Cloud Desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7480,7 +7520,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can create a region-independent cloud desktop policy.</para>
+        /// <para>Creates a region-independent Cloud Desktop policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9962,7 +10002,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10004,7 +10044,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10046,7 +10086,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10064,7 +10104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables disk encryption and creates the required service-linked role in your Resource Access Management (RAM) user account for the Enterprise Drive.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14206,7 +14246,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete files or folders from the network disk.</para>
+        /// <para>Deletes a file or folder from a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14264,7 +14304,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete files or folders from the network disk.</para>
+        /// <para>Deletes a file or folder from a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14322,7 +14362,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete files or folders from the network disk.</para>
+        /// <para>Deletes a file or folder from a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14340,7 +14380,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete files or folders from the network disk.</para>
+        /// <para>Deletes a file or folder from a cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14358,7 +14398,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global policy.</para>
+        /// <para>Deletes a non-region-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14412,7 +14452,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global policy.</para>
+        /// <para>Deletes a non-region-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14466,7 +14506,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global policy.</para>
+        /// <para>Deletes a non-region-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14484,7 +14524,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a global policy.</para>
+        /// <para>Deletes a non-region-specific policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19142,7 +19182,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</para>
+        /// <para>Queries the operation logs of end users, including events such as cloud computer startup, shutdown, and session disconnection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19182,6 +19222,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
             {
@@ -19244,7 +19288,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</para>
+        /// <para>Queries the operation logs of end users, including events such as cloud computer startup, shutdown, and session disconnection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19284,6 +19328,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
             {
                 query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
             {
@@ -19346,7 +19394,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</para>
+        /// <para>Queries the operation logs of end users, including events such as cloud computer startup, shutdown, and session disconnection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19364,7 +19412,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query end-user operation logs for events such as starting and stopping a WUYING Workspace, and disconnecting from sessions.</para>
+        /// <para>Queries the operation logs of end users, including events such as cloud computer startup, shutdown, and session disconnection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19934,7 +19982,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the permission settings details of the enterprise cloud drive.</para>
+        /// <para>Queries the permission settings of an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19980,7 +20028,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the permission settings details of the enterprise cloud drive.</para>
+        /// <para>Queries the permission settings of an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20026,7 +20074,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the permission settings details of the enterprise cloud drive.</para>
+        /// <para>Queries the permission settings of an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20044,7 +20092,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the permission settings details of the enterprise cloud drive.</para>
+        /// <para>Queries the permission settings of an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21166,12 +21214,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud computers and their metadata from all regions.</para>
+        /// <para>Queries the list and metadata of cloud desktops across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21224,6 +21272,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["MaxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIp))
+            {
+                query["NetworkInterfaceIp"] = request.NetworkInterfaceIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
@@ -21265,12 +21317,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud computers and their metadata from all regions.</para>
+        /// <para>Queries the list and metadata of cloud desktops across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21323,6 +21375,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["MaxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIp))
+            {
+                query["NetworkInterfaceIp"] = request.NetworkInterfaceIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
@@ -21364,12 +21420,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud computers and their metadata from all regions.</para>
+        /// <para>Queries the list and metadata of cloud desktops across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21387,12 +21443,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud computers and their metadata from all regions.</para>
+        /// <para>Queries the list and metadata of cloud desktops across all regions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is centralized, available only in the China (Shanghai) and Singapore regions.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21858,12 +21914,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information for cloud computers.</para>
+        /// <para>Queries the detailed session information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve data only from the last 30 days.</para>
+        /// <para>Only data within the last 30 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21903,6 +21959,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIdFilter))
             {
                 query["EndUserIdFilter"] = request.EndUserIdFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FillHardwareInfo))
             {
@@ -21965,12 +22025,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information for cloud computers.</para>
+        /// <para>Queries the detailed session information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve data only from the last 30 days.</para>
+        /// <para>Only data within the last 30 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22010,6 +22070,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIdFilter))
             {
                 query["EndUserIdFilter"] = request.EndUserIdFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FillHardwareInfo))
             {
@@ -22072,12 +22136,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information for cloud computers.</para>
+        /// <para>Queries the detailed session information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve data only from the last 30 days.</para>
+        /// <para>Only data within the last 30 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22095,12 +22159,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information for cloud computers.</para>
+        /// <para>Queries the detailed session information of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve data only from the last 30 days.</para>
+        /// <para>Only data within the last 30 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22406,7 +22470,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of your cloud computers.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22596,7 +22660,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of your cloud computers.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22786,7 +22850,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of your cloud computers.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22804,7 +22868,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of your cloud computers.</para>
+        /// <para>Queries the details of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24174,7 +24238,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of update tasks.</para>
+        /// <para>Retrieves the list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24240,7 +24304,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of update tasks.</para>
+        /// <para>Retrieves the list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24306,7 +24370,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of update tasks.</para>
+        /// <para>Retrieves the list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24324,7 +24388,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of update tasks.</para>
+        /// <para>Retrieves the list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24342,16 +24406,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information and usage duration for all recent Cloud Desktops.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</description></item>
-        /// <item><description>By default, this operation returns both active and deleted Cloud Desktops.</description></item>
-        /// <item><description>You can query only Cloud Desktops deleted within the last three months.</description></item>
-        /// <item><description>You cannot use the sort condition with other query conditions.</description></item>
+        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
+        /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
+        /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24441,6 +24505,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["SubPayType"] = request.SubPayType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNames))
+            {
+                query["UserNames"] = request.UserNames;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -24462,16 +24530,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information and usage duration for all recent Cloud Desktops.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</description></item>
-        /// <item><description>By default, this operation returns both active and deleted Cloud Desktops.</description></item>
-        /// <item><description>You can query only Cloud Desktops deleted within the last three months.</description></item>
-        /// <item><description>You cannot use the sort condition with other query conditions.</description></item>
+        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
+        /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
+        /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24561,6 +24629,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["SubPayType"] = request.SubPayType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserNames))
+            {
+                query["UserNames"] = request.UserNames;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -24582,16 +24654,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information and usage duration for all recent Cloud Desktops.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</description></item>
-        /// <item><description>By default, this operation returns both active and deleted Cloud Desktops.</description></item>
-        /// <item><description>You can query only Cloud Desktops deleted within the last three months.</description></item>
-        /// <item><description>You cannot use the sort condition with other query conditions.</description></item>
+        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
+        /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
+        /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -24610,16 +24682,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries basic information and usage duration for all recent Cloud Desktops.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Select China (Shanghai) for the Alibaba Cloud China site and Singapore for the Alibaba Cloud International site.</description></item>
-        /// <item><description>By default, this operation returns both active and deleted Cloud Desktops.</description></item>
-        /// <item><description>You can query only Cloud Desktops deleted within the last three months.</description></item>
-        /// <item><description>You cannot use the sort condition with other query conditions.</description></item>
+        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
+        /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
+        /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25718,14 +25790,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to query the execution list and status of Cloud Assistant scripts.</para>
+        /// <para>Queries the execution list and status of Cloud Assistant scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </description></item>
-        /// <item><description>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25812,14 +25884,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to query the execution list and status of Cloud Assistant scripts.</para>
+        /// <para>Queries the execution list and status of Cloud Assistant scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </description></item>
-        /// <item><description>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25906,14 +25978,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to query the execution list and status of Cloud Assistant scripts.</para>
+        /// <para>Queries the execution list and status of Cloud Assistant scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </description></item>
-        /// <item><description>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25932,14 +26004,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Used to query the execution list and status of Cloud Assistant scripts.</para>
+        /// <para>Queries the execution list and status of Cloud Assistant scripts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you execute a command, it does not necessarily mean that the command was successfully executed or produced the expected effect. You must check the actual execution result based on the return value from the API, and the actual output result prevails.  </description></item>
-        /// <item><description>You can query execution information from the past two weeks, with a maximum retention limit of 100,000 records.</description></item>
+        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26230,7 +26302,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</para>
+        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26316,7 +26388,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</para>
+        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26402,7 +26474,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</para>
+        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26420,7 +26492,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Upgrade/Downgrade price for monthly subscription cloud desktops with unlimited duration or Internet premium bandwidth.</para>
+        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28698,7 +28770,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the refund amount for monthly subscription WUYING Workspaces.</para>
+        /// <para>Queries the unsubscription price of cloud computers purchased on a monthly basis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28752,7 +28824,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the refund amount for monthly subscription WUYING Workspaces.</para>
+        /// <para>Queries the unsubscription price of cloud computers purchased on a monthly basis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28806,7 +28878,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the refund amount for monthly subscription WUYING Workspaces.</para>
+        /// <para>Queries the unsubscription price of cloud computers purchased on a monthly basis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28824,7 +28896,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the refund amount for monthly subscription WUYING Workspaces.</para>
+        /// <para>Queries the unsubscription price of cloud computers purchased on a monthly basis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29922,7 +29994,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots and their details for a cloud desktop.</para>
+        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29950,6 +30022,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
             {
                 query["DesktopName"] = request.DesktopName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopScenario))
+            {
+                query["DesktopScenario"] = request.DesktopScenario;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -30012,7 +30088,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots and their details for a cloud desktop.</para>
+        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30040,6 +30116,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
             {
                 query["DesktopName"] = request.DesktopName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopScenario))
+            {
+                query["DesktopScenario"] = request.DesktopScenario;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
@@ -30102,7 +30182,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots and their details for a cloud desktop.</para>
+        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30120,7 +30200,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots and their details for a cloud desktop.</para>
+        /// <para>Queries the snapshot list and snapshot details of a cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32598,7 +32678,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a premium bandwidth plan from an office network.</para>
+        /// <para>Disassociates a premium Internet bandwidth plan from the office network to which it was previously bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32644,7 +32724,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a premium bandwidth plan from an office network.</para>
+        /// <para>Disassociates a premium Internet bandwidth plan from the office network to which it was previously bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32690,7 +32770,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a premium bandwidth plan from an office network.</para>
+        /// <para>Disassociates a premium Internet bandwidth plan from the office network to which it was previously bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32708,7 +32788,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a premium bandwidth plan from an office network.</para>
+        /// <para>Disassociates a premium Internet bandwidth plan from the office network to which it was previously bound.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32726,7 +32806,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the download link of the target file.</para>
+        /// <para>Retrieves the download URL of a specified file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32784,7 +32864,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the download link of the target file.</para>
+        /// <para>Retrieves the download URL of a specified file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32842,7 +32922,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the download link of the target file.</para>
+        /// <para>Retrieves the download URL of a specified file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32860,7 +32940,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the download link of the target file.</para>
+        /// <para>Retrieves the download URL of a specified file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33086,7 +33166,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
+        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33172,7 +33252,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
+        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33258,7 +33338,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
+        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33276,7 +33356,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</para>
+        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33294,28 +33374,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a cloud computer list as a CSV file.</para>
+        /// <para>Exports the cloud desktop list as a CSV file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</para>
+        /// <para>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Cloud computer ID and name</description></item>
-        /// <item><description>Office network ID and name</description></item>
-        /// <item><description>The instance type, OS and protocol of the cloud computer</description></item>
-        /// <item><description>System disk and data disk of the cloud computer</description></item>
-        /// <item><description>The status</description></item>
-        /// <item><description>Purchase method</description></item>
-        /// <item><description>The time when the cloud computer expires</description></item>
-        /// <item><description>Remaining duration and total duration</description></item>
-        /// <item><description>Number of assigned users and number of current users</description></item>
+        /// <item><description>Cloud desktop ID/Cloud desktop name</description></item>
+        /// <item><description>Office network ID/Office network name</description></item>
+        /// <item><description>Specifications/System/Protocol</description></item>
+        /// <item><description>System cloud disk/Data cloud disk</description></item>
+        /// <item><description>Status</description></item>
+        /// <item><description>Billing method</description></item>
+        /// <item><description>Expiration time</description></item>
+        /// <item><description>Remaining duration/Total duration</description></item>
+        /// <item><description>Number of assigned users/Current user</description></item>
         /// <item><description>Office network type</description></item>
-        /// <item><description>The time when the cloud computer was created</description></item>
+        /// <item><description>Creation time</description></item>
         /// <item><description>Tags</description></item>
-        /// <item><description>Encryption status</description></item>
+        /// <item><description>Encrypted or not</description></item>
         /// <item><description>IP</description></item>
-        /// <item><description>The hostname</description></item>
+        /// <item><description>Hostname</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33414,28 +33494,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a cloud computer list as a CSV file.</para>
+        /// <para>Exports the cloud desktop list as a CSV file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</para>
+        /// <para>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Cloud computer ID and name</description></item>
-        /// <item><description>Office network ID and name</description></item>
-        /// <item><description>The instance type, OS and protocol of the cloud computer</description></item>
-        /// <item><description>System disk and data disk of the cloud computer</description></item>
-        /// <item><description>The status</description></item>
-        /// <item><description>Purchase method</description></item>
-        /// <item><description>The time when the cloud computer expires</description></item>
-        /// <item><description>Remaining duration and total duration</description></item>
-        /// <item><description>Number of assigned users and number of current users</description></item>
+        /// <item><description>Cloud desktop ID/Cloud desktop name</description></item>
+        /// <item><description>Office network ID/Office network name</description></item>
+        /// <item><description>Specifications/System/Protocol</description></item>
+        /// <item><description>System cloud disk/Data cloud disk</description></item>
+        /// <item><description>Status</description></item>
+        /// <item><description>Billing method</description></item>
+        /// <item><description>Expiration time</description></item>
+        /// <item><description>Remaining duration/Total duration</description></item>
+        /// <item><description>Number of assigned users/Current user</description></item>
         /// <item><description>Office network type</description></item>
-        /// <item><description>The time when the cloud computer was created</description></item>
+        /// <item><description>Creation time</description></item>
         /// <item><description>Tags</description></item>
-        /// <item><description>Encryption status</description></item>
+        /// <item><description>Encrypted or not</description></item>
         /// <item><description>IP</description></item>
-        /// <item><description>The hostname</description></item>
+        /// <item><description>Hostname</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33534,28 +33614,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a cloud computer list as a CSV file.</para>
+        /// <para>Exports the cloud desktop list as a CSV file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</para>
+        /// <para>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Cloud computer ID and name</description></item>
-        /// <item><description>Office network ID and name</description></item>
-        /// <item><description>The instance type, OS and protocol of the cloud computer</description></item>
-        /// <item><description>System disk and data disk of the cloud computer</description></item>
-        /// <item><description>The status</description></item>
-        /// <item><description>Purchase method</description></item>
-        /// <item><description>The time when the cloud computer expires</description></item>
-        /// <item><description>Remaining duration and total duration</description></item>
-        /// <item><description>Number of assigned users and number of current users</description></item>
+        /// <item><description>Cloud desktop ID/Cloud desktop name</description></item>
+        /// <item><description>Office network ID/Office network name</description></item>
+        /// <item><description>Specifications/System/Protocol</description></item>
+        /// <item><description>System cloud disk/Data cloud disk</description></item>
+        /// <item><description>Status</description></item>
+        /// <item><description>Billing method</description></item>
+        /// <item><description>Expiration time</description></item>
+        /// <item><description>Remaining duration/Total duration</description></item>
+        /// <item><description>Number of assigned users/Current user</description></item>
         /// <item><description>Office network type</description></item>
-        /// <item><description>The time when the cloud computer was created</description></item>
+        /// <item><description>Creation time</description></item>
         /// <item><description>Tags</description></item>
-        /// <item><description>Encryption status</description></item>
+        /// <item><description>Encrypted or not</description></item>
         /// <item><description>IP</description></item>
-        /// <item><description>The hostname</description></item>
+        /// <item><description>Hostname</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33574,28 +33654,28 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports a cloud computer list as a CSV file.</para>
+        /// <para>Exports the cloud desktop list as a CSV file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer list exported by calling this operation is saved as a CSV file. Each entry of data of a cloud computer includes the following fields:</para>
+        /// <para>The cloud desktop list exported by calling this operation is saved as a CSV file. Each cloud desktop record includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Cloud computer ID and name</description></item>
-        /// <item><description>Office network ID and name</description></item>
-        /// <item><description>The instance type, OS and protocol of the cloud computer</description></item>
-        /// <item><description>System disk and data disk of the cloud computer</description></item>
-        /// <item><description>The status</description></item>
-        /// <item><description>Purchase method</description></item>
-        /// <item><description>The time when the cloud computer expires</description></item>
-        /// <item><description>Remaining duration and total duration</description></item>
-        /// <item><description>Number of assigned users and number of current users</description></item>
+        /// <item><description>Cloud desktop ID/Cloud desktop name</description></item>
+        /// <item><description>Office network ID/Office network name</description></item>
+        /// <item><description>Specifications/System/Protocol</description></item>
+        /// <item><description>System cloud disk/Data cloud disk</description></item>
+        /// <item><description>Status</description></item>
+        /// <item><description>Billing method</description></item>
+        /// <item><description>Expiration time</description></item>
+        /// <item><description>Remaining duration/Total duration</description></item>
+        /// <item><description>Number of assigned users/Current user</description></item>
         /// <item><description>Office network type</description></item>
-        /// <item><description>The time when the cloud computer was created</description></item>
+        /// <item><description>Creation time</description></item>
         /// <item><description>Tags</description></item>
-        /// <item><description>Encryption status</description></item>
+        /// <item><description>Encrypted or not</description></item>
         /// <item><description>IP</description></item>
-        /// <item><description>The hostname</description></item>
+        /// <item><description>Hostname</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33614,7 +33694,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</para>
+        /// <para>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33660,7 +33740,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</para>
+        /// <para>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33706,7 +33786,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</para>
+        /// <para>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33724,7 +33804,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>When you call the CopyCdsFile operation to copy a folder, the operation returns AsyncTaskId. Call this operation specifying the obtained AsyncTaskId, and you can query the information about the asynchronous task.</para>
+        /// <para>Retrieves the details of a folder copy asynchronous node based on the AsyncTaskId parameter returned by the CopyCdsFile operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38078,7 +38158,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration that does not have a region-specific policy.</para>
+        /// <para>Modifies the configuration of a region-free policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38262,6 +38342,26 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
             {
                 query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInSize))
+            {
+                query["FileTransferInSize"] = request.FileTransferInSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInUnit))
+            {
+                query["FileTransferInUnit"] = request.FileTransferInUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutSize))
+            {
+                query["FileTransferOutSize"] = request.FileTransferOutSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutUnit))
+            {
+                query["FileTransferOutUnit"] = request.FileTransferOutUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSizeLimit))
+            {
+                query["FileTransferSizeLimit"] = request.FileTransferSizeLimit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
             {
@@ -38656,7 +38756,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration that does not have a region-specific policy.</para>
+        /// <para>Modifies the configuration of a region-free policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38840,6 +38940,26 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferAddress))
             {
                 query["FileTransferAddress"] = request.FileTransferAddress;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInSize))
+            {
+                query["FileTransferInSize"] = request.FileTransferInSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferInUnit))
+            {
+                query["FileTransferInUnit"] = request.FileTransferInUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutSize))
+            {
+                query["FileTransferOutSize"] = request.FileTransferOutSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferOutUnit))
+            {
+                query["FileTransferOutUnit"] = request.FileTransferOutUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSizeLimit))
+            {
+                query["FileTransferSizeLimit"] = request.FileTransferSizeLimit;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileTransferSpeed))
             {
@@ -39234,7 +39354,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration that does not have a region-specific policy.</para>
+        /// <para>Modifies the configuration of a region-free policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39252,7 +39372,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a configuration that does not have a region-specific policy.</para>
+        /// <para>Modifies the configuration of a region-free policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46162,7 +46282,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Move files or folders.</para>
+        /// <para>Moves a file or folder in a cloud disk to a new location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46228,7 +46348,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Move files or folders.</para>
+        /// <para>Moves a file or folder in a cloud disk to a new location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46294,7 +46414,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Move files or folders.</para>
+        /// <para>Moves a file or folder in a cloud disk to a new location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46312,7 +46432,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Move files or folders.</para>
+        /// <para>Moves a file or folder in a cloud disk to a new location.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49334,7 +49454,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the coordinate permissions.</para>
+        /// <para>Cancels the permission for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49392,7 +49512,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the coordinate permissions.</para>
+        /// <para>Cancels the permission for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49450,7 +49570,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the coordinate permissions.</para>
+        /// <para>Cancels the permission for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49468,7 +49588,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the coordinate permissions.</para>
+        /// <para>Cancels the permission for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52550,13 +52670,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads your custom Windows image.</para>
+        /// <para>Uploads a custom Windows image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can upload only Windows images.</para>
+        /// <para>Only Windows operating system images can be uploaded.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -52574,6 +52694,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootMode))
+            {
+                query["BootMode"] = request.BootMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
             {
                 query["DataDiskSize"] = request.DataDiskSize;
@@ -52643,13 +52767,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads your custom Windows image.</para>
+        /// <para>Uploads a custom Windows image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can upload only Windows images.</para>
+        /// <para>Only Windows operating system images can be uploaded.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -52667,6 +52791,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BootMode))
+            {
+                query["BootMode"] = request.BootMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDiskSize))
             {
                 query["DataDiskSize"] = request.DataDiskSize;
@@ -52736,13 +52864,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads your custom Windows image.</para>
+        /// <para>Uploads a custom Windows image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can upload only Windows images.</para>
+        /// <para>Only Windows operating system images can be uploaded.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -52761,13 +52889,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads your custom Windows image.</para>
+        /// <para>Uploads a custom Windows image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can upload only Windows images.</para>
+        /// <para>Only Windows operating system images can be uploaded.</para>
         /// </remarks>
         /// </description>
         /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeClientEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of user events.</para>
+        /// <para>The user events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeClientEventsResponseBodyEvents> Events { get; set; }
         public class DescribeClientEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account associated with the event.</para>
+            /// <para>The Alibaba Cloud account associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>112259558861****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes received.</para>
+            /// <para>The number of bytes received. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8665</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BytesReceived { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes sent.</para>
+            /// <para>The number of bytes sent. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2345</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BytesSend { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the client.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.68.<em>.</em></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The operating system of the client.</para>
+            /// <para>The client operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Darwin 17.7.0 x64</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the desktop group.</para>
+            /// <para>The cloud computer pool ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-kadkdfaf****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the desktop group.</para>
+            /// <para>The cloud computer pool name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-8fupvkhg0aayu****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the cloud desktop.</para>
+            /// <para>The IP address of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.10.XX.XX</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop\&quot;s directory.</para>
+            /// <para>The directory ID to which the cloud computer belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-bh77qa8nmjot4****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the end user. The value can be the ID of a RAM user or the username of an AD user.</para>
+            /// <para>The logon user information, which is a Resource Access Management (RAM) user ID or AD username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>28961708130834****</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The time the event occurred.</para>
+            /// <para>The time when the event occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-30T06:32:31Z</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop\&quot;s office site.</para>
+            /// <para>The ID of the office network to which the cloud computer belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-bh77qa8nmjot4****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the office site.</para>
+            /// <para>The name of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The type of account system for the office site.</para>
+            /// <para>The account system type of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -237,12 +237,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the event. This parameter is returned for <c>DESKTOP_DISCONNECT</c> and <c>GET_CONNECTION_TICKET</c> events. Valid values:</para>
+            /// <para>The status of the event action. This field typically appears in <c>DESKTOP_DISCONNECT</c> and <c>GET_CONNECTION_TICKET</c> events. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>200</c>: Success.</para>
-            /// </description></item>
-            /// <item><description><para>An error message, such as <c>FailedToGetConnectionTicket</c>.</para>
-            /// </description></item>
+            /// <item><description>200: success.</description></item>
+            /// <item><description>A failure message is returned, such as FailedToGetConnectionTicket.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,7 +271,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. If this parameter is empty, all results have been returned.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -291,6 +289,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public int? TotalCount { get; set; }
 
     }
 
