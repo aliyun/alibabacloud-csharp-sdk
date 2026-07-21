@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class VirtualDeliveryToMsceneResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("MpaasUserGamecenterPaymentVirtualdeliveryResponse")]
         [Validation(Required=false)]
         public VirtualDeliveryToMsceneResponseBodyMpaasUserGamecenterPaymentVirtualdeliveryResponse MpaasUserGamecenterPaymentVirtualdeliveryResponse { get; set; }

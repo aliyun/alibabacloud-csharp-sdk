@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class QueryPayOrderToMsenceResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("MpaasUserGamecenterPaymentQuerystatusResponse")]
         [Validation(Required=false)]
         public QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse MpaasUserGamecenterPaymentQuerystatusResponse { get; set; }

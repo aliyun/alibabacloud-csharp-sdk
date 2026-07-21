@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class CheckUserAuthToMsceneResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("MpaasUserAuthCheckResponse")]
         [Validation(Required=false)]
         public CheckUserAuthToMsceneResponseBodyMpaasUserAuthCheckResponse MpaasUserAuthCheckResponse { get; set; }

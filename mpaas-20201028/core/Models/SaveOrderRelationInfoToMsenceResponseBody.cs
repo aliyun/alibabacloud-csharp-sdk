@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class SaveOrderRelationInfoToMsenceResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("MpaasSaveOrderRelationResponse")]
         [Validation(Required=false)]
         public SaveOrderRelationInfoToMsenceResponseBodyMpaasSaveOrderRelationResponse MpaasSaveOrderRelationResponse { get; set; }
