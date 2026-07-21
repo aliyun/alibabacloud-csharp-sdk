@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class ListDatasetsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>product_faq_dataset</para>

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public int? SamplingRate { get; set; }
 
+        [NameInMap("serviceNames")]
+        [Validation(Required=false)]
+        public List<string> ServiceNames { get; set; }
+
     }
 
 }

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<ListDatasetsResponseBodyDatasets> Datasets { get; set; }
         public class ListDatasetsResponseBodyDatasets : TeaModel {
             /// <summary>
-            /// <para>The name of the agent space.</para>
+            /// <para>The agent space name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sop-agent</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AgentSpace { get; set; }
 
             /// <summary>
-            /// <para>The time when the dataset was created.</para>
+            /// <para>The creation time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the dataset.</para>
+            /// <para>The dataset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>product_faq_dataset</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string DatasetName { get; set; }
 
             /// <summary>
-            /// <para>The description of the dataset.</para>
+            /// <para>The dataset description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Product FAQ dataset for semantic search</para>
@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("isFavorite")]
+            [Validation(Required=false)]
+            public bool? IsFavorite { get; set; }
 
             /// <summary>
             /// <para>The region ID.</para>
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The time when the dataset was last updated.</para>
+            /// <para>The update time.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -91,8 +95,8 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page of results.</para>
-        /// <para>If the total number of results exceeds the maxResults limit, the results are truncated. You can use this token to query the next page of results.</para>
+        /// <para>The token for the next page of results.</para>
+        /// <para>If the total number of results exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>umaQfI7x758Ns4TgWrj8yA3fYlnk7dJgsfhMrSViRY8=</para>
