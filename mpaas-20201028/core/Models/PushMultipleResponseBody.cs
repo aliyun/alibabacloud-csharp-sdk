@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class PushMultipleResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public string AccessDeniedDetail { get; set; }
+
         [NameInMap("PushResult")]
         [Validation(Required=false)]
         public PushMultipleResponseBodyPushResult PushResult { get; set; }
