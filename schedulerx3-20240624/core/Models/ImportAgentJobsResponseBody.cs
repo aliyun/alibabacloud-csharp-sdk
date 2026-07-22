@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class OperateStopJobExecutionResponseBody : TeaModel {
+    public class ImportAgentJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -20,28 +18,22 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Parameter check error</para>
+        /// <para>Parameter error: content is null.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>E82D8B33-204D-58E1-8F56-909F6B48F3D1</para>
+        /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. <b>true</b>: The call was successful. <b>false</b>: The call failed.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

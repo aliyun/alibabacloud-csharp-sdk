@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -103,32 +103,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>The job execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: <b>UNKNOWN</b>.</para>
-        /// </description></item>
-        /// <item><description><para>1: <b>WAITING</b>.</para>
-        /// </description></item>
-        /// <item><description><para>2: <b>READY</b>.</para>
-        /// </description></item>
-        /// <item><description><para>3: <b>RUNNING</b>.</para>
-        /// </description></item>
-        /// <item><description><para>4: <b>SUCCESS</b>.</para>
-        /// </description></item>
-        /// <item><description><para>5: <b>FAILED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>6: <b>PAUSED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>7: <b>SUBMITTED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>8: <b>REJECTED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>9: <b>ACCEPTED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>10: <b>PARTIAL_FAILED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>11: <b>SKIPPED</b>.</para>
-        /// </description></item>
-        /// <item><description><para>12: <b>REMOVED</b>.</para>
-        /// </description></item>
+        /// <item><description>0: <b>UNKNOWN</b>.</description></item>
+        /// <item><description>1: <b>WAITING</b>.</description></item>
+        /// <item><description>2: <b>READY</b>.</description></item>
+        /// <item><description>3: <b>RUNNING</b>.</description></item>
+        /// <item><description>4: <b>SUCCESS</b>.</description></item>
+        /// <item><description>5: <b>FAILED</b>.</description></item>
+        /// <item><description>6: <b>PAUSED</b>.</description></item>
+        /// <item><description>7: <b>SUBMITTED</b>.</description></item>
+        /// <item><description>8: <b>REJECTED</b>.</description></item>
+        /// <item><description>9: <b>ACCEPTED</b>.</description></item>
+        /// <item><description>10: <b>PARTIAL_FAILED</b>.</description></item>
+        /// <item><description>11: <b>SKIPPED</b>.</description></item>
+        /// <item><description>12: <b>REMOVED</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +126,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The workflow execution ID.</para>
+        /// <para>The workflow instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

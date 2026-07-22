@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateRerunJobRequest : TeaModel {
+        [NameInMap("AppId")]
+        [Validation(Required=false)]
+        public long? AppId { get; set; }
+
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The specific time of day for which to rerun the data. The format is <c>HH:mm:ss</c>.</para>
+        /// <para>The data timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string DataTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to rerun, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the job.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to rerun, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

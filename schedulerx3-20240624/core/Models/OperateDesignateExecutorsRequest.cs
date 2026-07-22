@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateDesignateExecutorsRequest : TeaModel {
         /// <summary>
-        /// <para>A list of machine addresses to designate.</para>
+        /// <para>The address list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddressList")]
         [Validation(Required=false)]
         public List<string> AddressList { get; set; }
+
+        [NameInMap("AppGroupId")]
+        [Validation(Required=false)]
+        public long? AppGroupId { get; set; }
 
         /// <summary>
         /// <para>The application name.</para>
@@ -40,12 +44,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The designation type. Valid values:</para>
+        /// <para>The type of the designated machine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: By worker.</para>
-        /// </description></item>
-        /// <item><description><para><b>2</b>: By label.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: designated worker.</description></item>
+        /// <item><description><b>2</b>: designated label.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? DesignateType { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateExecuteJobRequest : TeaModel {
+        [NameInMap("AppGroupId")]
+        [Validation(Required=false)]
+        public long? AppGroupId { get; set; }
+
         /// <summary>
         /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The custom parameters for the job instance.</para>
+        /// <para>The instance parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name=zhangsan</para>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string InstanceParameters { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
-        /// <para>The label used to select a specific worker.</para>
+        /// <para>The label of the specified machine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gray</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The address (<c>workerAddr</c>) of a specific worker.</para>
+        /// <para>The workerAddr of the specified machine.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://192.168.***.5:9999/">http://192.168.***.5:9999/</a></para>

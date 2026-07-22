@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateStopJobExecutionRequest : TeaModel {
+        [NameInMap("AppGroupId")]
+        [Validation(Required=false)]
+        public long? AppGroupId { get; set; }
+
         /// <summary>
-        /// <para>The name of the Application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Job Execution.</para>
+        /// <para>The job execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
-        /// <para>A list of Task IDs.</para>
+        /// <para>The subtask IDs.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]

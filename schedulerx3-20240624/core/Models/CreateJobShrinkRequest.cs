@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The retry interval upon failure. Unit: seconds. Default value: 30.</para>
+        /// <para>The retry interval. Unit: seconds. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? AttemptInterval { get; set; }
 
         /// <summary>
-        /// <para>The custom calendar. This parameter is available only for the cron time type.</para>
+        /// <para>The custom calendar. This parameter is optional for the cron time type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workday</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The client-side blocking strategy. Valid values:</para>
+        /// <para>The client blocking strategy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1: serial execution on a single machine</description></item>
         /// <item><description>2: ignore subsequent scheduling</description></item>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? ExecutorBlockStrategy { get; set; }
 
         /// <summary>
-        /// <para>The JobHandler name.</para>
+        /// <para>The jobhandler name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testJobVoidHandler</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? StartTimeType { get; set; }
 
         /// <summary>
-        /// <para>The node status. Default value: enabled. Valid values:</para>
+        /// <para>The node status. Default value: 1 (enabled). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: disabled</description></item>
         /// <item><description>1: enabled</description></item>
@@ -265,11 +265,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <summary>
         /// <para>The time expression. Set this parameter based on the selected time type.</para>
         /// <list type="bullet">
-        /// <item><description><b>none</b>: no value required.</description></item>
-        /// <item><description><b>cron</b>: a standard cron expression. Online verification is supported.</description></item>
-        /// <item><description><b>api</b>: no value required.</description></item>
-        /// <item><description><b>fixed_rate</b>: a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</description></item>
-        /// <item><description><b>one_time</b>: a scheduling time in the yyyy-MM-dd HH:mm:ss format or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</description></item>
+        /// <item><description><b>none</b>: No value is required.</description></item>
+        /// <item><description><b>cron</b>: Specify a standard cron expression. Online verification is supported.</description></item>
+        /// <item><description><b>api</b>: No value is required.</description></item>
+        /// <item><description><b>fixed_rate</b>: Specify a fixed frequency value in seconds. For example, 200 indicates that the node is triggered every 200 seconds.</description></item>
+        /// <item><description><b>one_time</b>: Specify a scheduling time in the format of yyyy-MM-dd HH:mm:ss or a timestamp in milliseconds. For example, &quot;2022-10-10 10:10:00&quot;.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Weight { get; set; }
 
         /// <summary>
-        /// <para>The extended attributes. This parameter is required for K8s node types.
+        /// <para>The configuration for K8s node types. Set this parameter if the node type is K8s.
         /// Job node: {&quot;resource&quot;:&quot;job&quot;}
         /// Shell node: {&quot;image&quot;:&quot;busybox&quot;,&quot;resource&quot;:&quot;shell&quot;}</para>
         /// 

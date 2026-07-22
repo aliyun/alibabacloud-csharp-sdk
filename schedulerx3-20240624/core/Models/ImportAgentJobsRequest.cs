@@ -8,36 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
-    public class OperateEnableJobsRequest : TeaModel {
-        [NameInMap("AppGroupId")]
-        [Validation(Required=false)]
-        public long? AppGroupId { get; set; }
-
+    public class ImportAgentJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-app</para>
+        /// <para>名称</para>
         /// </summary>
-        [NameInMap("AppName")]
+        [NameInMap("AgentName")]
         [Validation(Required=false)]
-        public string AppName { get; set; }
+        public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxljob-b6ec1xxxx</para>
+        /// <para>2027179f-20b1-4e0b-841b-d86f2bc7ebf7</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        [NameInMap("JobIds")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("MigrateStrategy")]
         [Validation(Required=false)]
-        public List<long?> JobIds { get; set; }
+        public int? MigrateStrategy { get; set; }
 
     }
 

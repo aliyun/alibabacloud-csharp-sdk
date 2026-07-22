@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateEnableJobsShrinkRequest : TeaModel {
+        [NameInMap("AppGroupId")]
+        [Validation(Required=false)]
+        public long? AppGroupId { get; set; }
+
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,9 +35,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the jobs to enable.</para>
-        /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]
         public string JobIdsShrink { get; set; }

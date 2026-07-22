@@ -2686,7 +2686,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs in a batch.</para>
+        /// <para>Deletes nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2709,6 +2709,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -2742,7 +2746,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs in a batch.</para>
+        /// <para>Deletes nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2765,6 +2769,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -2798,7 +2806,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs in a batch.</para>
+        /// <para>Deletes nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2816,7 +2824,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs in a batch.</para>
+        /// <para>Deletes nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3814,7 +3822,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the designation information for a job.</para>
+        /// <para>Retrieves the information about a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3852,7 +3860,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the designation information for a job.</para>
+        /// <para>Retrieves the information about a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3890,7 +3898,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the designation information for a job.</para>
+        /// <para>Retrieves the information about a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3908,7 +3916,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the designation information for a job.</para>
+        /// <para>Retrieves the information about a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4230,15 +4238,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a sharding task execution.</para>
+        /// <para>Retrieves the execution details of a sharding task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Add the enhancement plugin</h1>
-        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
-        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
-        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// <h1>Import the enhanced plugin</h1>
+        /// <para>Add the enhanced plugin to the <c>pom.xml</c> file to improve the capabilities of the Executor.
+        /// <b>Note</b>: Make sure this plugin is placed <b>above</b> the <c>xxl-job-core</c> dependency in the pom file.
+        /// <b>For more information, refer to</b>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4276,15 +4284,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a sharding task execution.</para>
+        /// <para>Retrieves the execution details of a sharding task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Add the enhancement plugin</h1>
-        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
-        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
-        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// <h1>Import the enhanced plugin</h1>
+        /// <para>Add the enhanced plugin to the <c>pom.xml</c> file to improve the capabilities of the Executor.
+        /// <b>Note</b>: Make sure this plugin is placed <b>above</b> the <c>xxl-job-core</c> dependency in the pom file.
+        /// <b>For more information, refer to</b>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4322,15 +4330,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a sharding task execution.</para>
+        /// <para>Retrieves the execution details of a sharding task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Add the enhancement plugin</h1>
-        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
-        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
-        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// <h1>Import the enhanced plugin</h1>
+        /// <para>Add the enhanced plugin to the <c>pom.xml</c> file to improve the capabilities of the Executor.
+        /// <b>Note</b>: Make sure this plugin is placed <b>above</b> the <c>xxl-job-core</c> dependency in the pom file.
+        /// <b>For more information, refer to</b>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4348,15 +4356,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a sharding task execution.</para>
+        /// <para>Retrieves the execution details of a sharding task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>Add the enhancement plugin</h1>
-        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
-        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
-        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// <h1>Import the enhanced plugin</h1>
+        /// <para>Add the enhanced plugin to the <c>pom.xml</c> file to improve the capabilities of the Executor.
+        /// <b>Note</b>: Make sure this plugin is placed <b>above</b> the <c>xxl-job-core</c> dependency in the pom file.
+        /// <b>For more information, refer to</b>: <a href="https://www.alibabacloud.com/help/en/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version description</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5522,6 +5530,162 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetWorkflowExecutionDAGWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportAgentJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportAgentJobsResponse
+        /// </returns>
+        public ImportAgentJobsResponse ImportAgentJobsWithOptions(ImportAgentJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrateStrategy))
+            {
+                body["MigrateStrategy"] = request.MigrateStrategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportAgentJobs",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportAgentJobsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportAgentJobsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportAgentJobsResponse
+        /// </returns>
+        public async Task<ImportAgentJobsResponse> ImportAgentJobsWithOptionsAsync(ImportAgentJobsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MigrateStrategy))
+            {
+                body["MigrateStrategy"] = request.MigrateStrategy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportAgentJobs",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportAgentJobsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportAgentJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportAgentJobsResponse
+        /// </returns>
+        public ImportAgentJobsResponse ImportAgentJobs(ImportAgentJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportAgentJobsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>导入agent中的定时任务到scheduler平台（SSE），该接口禁止使用xxljob的clusterid调用，不支持XXLJOB相关集群，这个接口仅限AI任务调度集群使用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ImportAgentJobsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportAgentJobsResponse
+        /// </returns>
+        public async Task<ImportAgentJobsResponse> ImportAgentJobsAsync(ImportAgentJobsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportAgentJobsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7202,7 +7366,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists executors.</para>
+        /// <para>Queries the list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7240,7 +7404,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists executors.</para>
+        /// <para>Queries the list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7278,7 +7442,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists executors.</para>
+        /// <para>Queries the list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7296,7 +7460,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists executors.</para>
+        /// <para>Queries the list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7314,7 +7478,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of task instances.</para>
+        /// <para>Retrieves a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7396,7 +7560,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of task instances.</para>
+        /// <para>Retrieves a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7478,7 +7642,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of task instances.</para>
+        /// <para>Retrieves a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7496,7 +7660,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of task instances.</para>
+        /// <para>Retrieves a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7666,7 +7830,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a task list.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7744,7 +7908,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a task list.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7822,7 +7986,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a task list.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7840,7 +8004,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a task list.</para>
+        /// <para>Retrieves a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9402,7 +9566,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates one or more executors for a job.</para>
+        /// <para>Specifies the executor.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9428,6 +9592,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressListShrink))
             {
                 body["AddressList"] = request.AddressListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -9470,7 +9638,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates one or more executors for a job.</para>
+        /// <para>Specifies the executor.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9496,6 +9664,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddressListShrink))
             {
                 body["AddressList"] = request.AddressListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
@@ -9538,7 +9710,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates one or more executors for a job.</para>
+        /// <para>Specifies the executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9556,7 +9728,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates one or more executors for a job.</para>
+        /// <para>Specifies the executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9574,7 +9746,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs.</para>
+        /// <para>Disables nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9597,6 +9769,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -9630,7 +9806,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs.</para>
+        /// <para>Disables nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9653,6 +9829,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -9686,7 +9866,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs.</para>
+        /// <para>Disables nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9704,7 +9884,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs.</para>
+        /// <para>Disables nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9890,7 +10070,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs in a batch.</para>
+        /// <para>Starts nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9913,6 +10093,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -9946,7 +10130,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs in a batch.</para>
+        /// <para>Starts nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9969,6 +10153,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.JobIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JobIds, "JobIds", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -10002,7 +10190,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs in a batch.</para>
+        /// <para>Starts nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10020,7 +10208,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs in a batch.</para>
+        /// <para>Starts nodes in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10186,7 +10374,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job on demand.</para>
+        /// <para>Runs a node once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10203,6 +10391,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -10248,7 +10440,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job on demand.</para>
+        /// <para>Runs a node once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10265,6 +10457,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -10310,7 +10506,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job on demand.</para>
+        /// <para>Runs a node once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10328,7 +10524,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job on demand.</para>
+        /// <para>Runs a node once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11046,7 +11242,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns historical data for a job within a specified time range.</para>
+        /// <para>Reruns historical data for a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11063,6 +11259,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -11108,7 +11308,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns historical data for a job within a specified time range.</para>
+        /// <para>Reruns historical data for a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11125,6 +11325,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -11170,7 +11374,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns historical data for a job within a specified time range.</para>
+        /// <para>Reruns historical data for a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11188,7 +11392,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns historical data for a job within a specified time range.</para>
+        /// <para>Reruns historical data for a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11206,7 +11410,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed Job Instance.</para>
+        /// <para>Reruns a failed job instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11229,6 +11433,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.TaskListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskList, "TaskList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                query["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -11270,7 +11478,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed Job Instance.</para>
+        /// <para>Reruns a failed job instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11293,6 +11501,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.TaskListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskList, "TaskList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                query["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -11334,7 +11546,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed Job Instance.</para>
+        /// <para>Reruns a failed job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11352,7 +11564,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a failed Job Instance.</para>
+        /// <para>Reruns a failed job instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11650,7 +11862,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Job Execution.</para>
+        /// <para>Stops a running task instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11673,6 +11885,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.TaskListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskList, "TaskList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                query["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -11710,7 +11926,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Job Execution.</para>
+        /// <para>Stops a running task instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11733,6 +11949,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.TaskListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskList, "TaskList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                query["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 query["AppName"] = request.AppName;
@@ -11770,7 +11990,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Job Execution.</para>
+        /// <para>Stops a running task instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11788,7 +12008,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running Job Execution.</para>
+        /// <para>Stops a running task instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13761,6 +13981,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.NoticeContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NoticeContacts, "NoticeContacts", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;
@@ -13913,6 +14137,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
                 request.NoticeContactsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.NoticeContacts, "NoticeContacts", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppGroupId))
+            {
+                body["AppGroupId"] = request.AppGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
             {
                 body["AppName"] = request.AppName;

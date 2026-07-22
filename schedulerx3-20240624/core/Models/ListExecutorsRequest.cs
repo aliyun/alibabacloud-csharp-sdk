@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListExecutorsRequest : TeaModel {
+        [NameInMap("AppGroupId")]
+        [Validation(Required=false)]
+        public long? AppGroupId { get; set; }
+
         /// <summary>
         /// <para>The application name.</para>
         /// <para>This parameter is required.</para>

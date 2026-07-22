@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class DeleteJobsShrinkRequest : TeaModel {
+        [NameInMap("AppGroupId")]
+        [Validation(Required=false)]
+        public long? AppGroupId { get; set; }
+
         /// <summary>
         /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
@@ -31,9 +35,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the jobs to delete.</para>
-        /// </summary>
         [NameInMap("JobIds")]
         [Validation(Required=false)]
         public string JobIdsShrink { get; set; }
