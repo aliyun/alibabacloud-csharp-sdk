@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the intervention glossary. This parameter is optional. Create the glossary in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
+        /// <para>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the provided glossary ID is empty, the translation results will not be modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The URL of the original image. This parameter is required. Image requirements: the width and height cannot exceed 4000 × 4000 pixels, the file size cannot exceed 10 MB, and the supported formats are png, jpeg, jpg, bmp, and webp.</para>
+        /// <list type="bullet">
+        /// <item><description>Image URL: Must be publicly accessible.</description></item>
+        /// <item><description>Format: png, jpeg, jpg, bmp, webp</description></item>
+        /// <item><description>Pixels: Width and height must not exceed 4000</description></item>
+        /// <item><description>File size: Original file ≤ 10 MB</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +36,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate text on the product subject in the image. This parameter is optional. Default value: false. This helps protect information by preventing translation of embedded information such as product names.</para>
+        /// <para>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information and avoids translating embedded information such as product names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>The source language code. This parameter is required. For supported language directions, see the supported language directions list.</para>
+        /// <para>The source language code. Required. For supported language directions, see the supported language direction list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The target language code. This parameter is required. For supported language directions, see the supported language directions list.</para>
+        /// <para>The target language code. Required. For supported language directions, see the supported language direction list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +68,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</para>
+        /// <para>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps protect brand name information from being translated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -71,6 +76,16 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         [NameInMap("TranslatingBrandInTheProduct")]
         [Validation(Required=false)]
         public bool? TranslatingBrandInTheProduct { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to return layer information such as text position, font, and color. When set to true, layer information is returned for secondary editing through an image editor. Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("UseImageEditor")]
+        [Validation(Required=false)]
+        public bool? UseImageEditor { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextTranslateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Returns &quot;success&quot; for successful calls.</para>
+        /// <para>The response code. Returns &quot;success&quot; for normal calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<TextTranslateResponseBodyDataTranslations> Translations { get; set; }
             public class TextTranslateResponseBodyDataTranslations : TeaModel {
                 /// <summary>
-                /// <para>The number of characters in the source text.</para>
+                /// <para>The source text character count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 /// <para>The translated text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>你好世界</para>
+                /// <para>Hello World.</para>
                 /// </summary>
                 [NameInMap("TranslatedText")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. Returns &quot;Success&quot; for successful calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
+        /// <para>The error message. Returns &quot;Success&quot; for normal calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
