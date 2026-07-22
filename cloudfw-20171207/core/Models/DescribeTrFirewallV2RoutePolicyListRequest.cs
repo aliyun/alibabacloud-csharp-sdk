@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallV2RoutePolicyListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number in a paged query. Default value: 1. For more information about paging, see the corresponding parameter descriptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC firewall instance.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <remarks>
+        /// <para>FirewallId is required. If this parameter is not specified, the ErrorParameters (400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId. Prerequisites: CEN Enterprise Edition with a transit router and VPC mount are configured, and the FirewallId is obtained by calling DescribeTrFirewallsV2List.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-d5ba592ac6c84aff****</para>
@@ -30,12 +33,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 10. For more information about paging, see the corresponding parameter descriptions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

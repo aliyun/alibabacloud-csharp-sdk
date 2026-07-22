@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID, which is the unique identifier of the task.</para>
+        /// <para>The task ID, which uniquely identifies the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>

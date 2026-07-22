@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddDnsFirewallPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the access control list.</para>
+        /// <para>The unique ID of the access control policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f88dae6f-XXX-XXX-613de9ab2be8</para>

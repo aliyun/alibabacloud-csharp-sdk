@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyIpsRulesToDefaultRequest : TeaModel {
         /// <summary>
-        /// <para>The application that is affected by the attack.</para>
+        /// <para>The attack application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PHP</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackApp { get; set; }
 
         /// <summary>
-        /// <para>The type of the Cloud Firewall. Valid values:</para>
+        /// <para>The type of the cloud firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VpcFirewall</b>: VPC firewall.</para>
-        /// </description></item>
-        /// <item><description><para><b>InternetFirewall</b> (default): Internet firewall.</para>
-        /// </description></item>
+        /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewalls.</description></item>
+        /// <item><description><b>InternetFirewall</b> (default): the Internet border firewall.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,12 +50,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>basicRule</b></para>
-        /// </description></item>
-        /// <item><description><para><b>customize</b></para>
-        /// </description></item>
+        /// <item><description><b>basicRule</b></description></item>
+        /// <item><description><b>customize</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The list of rules.</para>
+        /// <para>The rule list. Conditional requirement: when RuleType is set to customize, you must specify at least one of this parameter or AttackApp. If you specify only RuleType without Rules or AttackApp, the API returns ErrorParameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -82,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Rules { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>140.205.118.XXX</para>

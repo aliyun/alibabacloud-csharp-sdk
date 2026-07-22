@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallDropTrafficTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of data for the Overview page.</para>
+        /// <para>The data list on the overview page.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropSession { get; set; }
 
             /// <summary>
-            /// <para>The data timestamp. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The data timestamp. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1659405600</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The peak number of dropped sessions for the specified period.</para>
+        /// <para>The maximum number of dropped sessions (peak value) within the corresponding period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62436</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DropSessionMax { get; set; }
 
         /// <summary>
-        /// <para>The timestamp that corresponds to the peak number of dropped sessions. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The period in which the maximum number of dropped sessions occurred. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1525662720</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DropSessionMaxTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>

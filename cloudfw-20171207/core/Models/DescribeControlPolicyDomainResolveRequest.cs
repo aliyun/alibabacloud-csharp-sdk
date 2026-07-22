@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeControlPolicyDomainResolveRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The domain name. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The Cloud Firewall type.</para>
+        /// <para>The type of the cloud firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internet</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The supported IP address version.</para>
+        /// <para>The supported IP address version. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -40,11 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>en</b>: English</description></item>
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// </list>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

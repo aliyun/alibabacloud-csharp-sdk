@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The VPC-connected instance ID. You must specify at least one of TaskId and ChildInstanceId. If neither is specified, the API returns ErrorParameters(400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-cd6000c588214403****</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ChildInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The task ID. You must specify at least one of TaskId and ChildInstanceId. If neither is specified, the API returns ErrorParameters(400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>199431783</para>
@@ -48,9 +46,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>NAT</b>: NAT border task</para>
+        /// <item><description><para><b>NAT</b>: NAT firewall task</para>
         /// </description></item>
-        /// <item><description><para><b>VPC</b>: VPC border task</para>
+        /// <item><description><para><b>VPC</b>: VPC firewall task</para>
         /// </description></item>
         /// </list>
         /// 

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>finish: The task is complete. You can query the task to obtain the download URL of the task file.</para>
+        /// <item><description><para>finish: The task is completed. You can call a task query operation to obtain the download URL of the task file.</para>
         /// </description></item>
         /// <item><description><para>start: The task has started.</para>
         /// </description></item>
@@ -31,6 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><para>expire: The task has expired. The task file is no longer valid and cannot be downloaded.</para>
         /// </description></item>
         /// </list>
+        /// <para>This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned. Use a task query operation to obtain the real-time status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>start</para>
@@ -40,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The task ID, which uniquely identifies the task.</para>
+        /// <para>The task ID, which uniquely identifies the task. This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned. Use a task query operation to obtain the task status and download URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the file download task.</para>
+        /// <para>The name of the file download task. This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-IPv4</para>

@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NatBps { get; set; }
 
             /// <summary>
-            /// <para>The time when the traffic occurred. The value is a UNIX timestamp. Unit: seconds.</para>
-            /// <para>If the data at this point in time has not been processed, the values of all other fields are -1.</para>
+            /// <para>The time when the traffic occurred. The value is a UNIX timestamp in seconds.</para>
+            /// <para>If the data at this point in time has not been processed, the values of other fields are -1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758470400</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The timestamp when the peak total traffic occurred. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1758470400</para>

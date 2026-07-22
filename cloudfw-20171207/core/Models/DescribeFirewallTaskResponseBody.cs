@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsFound { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7D5483BF-2262-586D-8706-BDDB8B42****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the task was completed.</para>
+        /// <para>The time when the task was completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17151381075</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskFinishTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>189997648</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>egressgw</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the task started.</para>
+        /// <para>The time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17151361285</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskStartTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>init</b></para>
         /// </description></item>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The steps of the task.</para>
+        /// <para>The task steps.</para>
         /// </summary>
         [NameInMap("TaskSteps")]
         [Validation(Required=false)]
         public List<DescribeFirewallTaskResponseBodyTaskSteps> TaskSteps { get; set; }
         public class DescribeFirewallTaskResponseBodyTaskSteps : TeaModel {
             /// <summary>
-            /// <para>The information about the task step.</para>
+            /// <para>The task information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abcd</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepInfo { get; set; }
 
             /// <summary>
-            /// <para>Creating the Cloud Firewall.</para>
+            /// <para>The name of the Cloud Firewall security step.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Create Firewall</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The status of the task step. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>init</b></para>
+            /// <item><description><para><b>init</b> </para>
             /// </description></item>
             /// <item><description><para><b>running</b></para>
             /// </description></item>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The waiting time in minutes.</para>
+        /// <para>The waiting time, in minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

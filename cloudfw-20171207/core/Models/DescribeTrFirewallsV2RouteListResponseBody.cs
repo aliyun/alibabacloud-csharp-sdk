@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallsV2RouteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of route tables for the VPC firewall.</para>
+        /// <para>The route table list of Cloud Firewall.</para>
         /// </summary>
         [NameInMap("FirewallRouteDetailList")]
         [Validation(Required=false)]
         public List<DescribeTrFirewallsV2RouteListResponseBodyFirewallRouteDetailList> FirewallRouteDetailList { get; set; }
         public class DescribeTrFirewallsV2RouteListResponseBodyFirewallRouteDetailList : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block of the route.</para>
+            /// <para>The destination address of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.10.0/25</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrFirewallRouteDestination { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next hop for the route.</para>
+            /// <para>The next hop ID of the route.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tr-attach-hnxab1y0pxn16p****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABF190A2-B4D0-53F6-995A-5690A721F91C</para>

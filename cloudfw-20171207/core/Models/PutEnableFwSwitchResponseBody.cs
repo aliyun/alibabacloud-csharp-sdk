@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutEnableFwSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information about unsynchronized assets.</para>
+        /// <para>The status information list of assets that are not synchronized.</para>
         /// </summary>
         [NameInMap("AbnormalResourceStatusList")]
         [Validation(Required=false)]
         public List<PutEnableFwSwitchResponseBodyAbnormalResourceStatusList> AbnormalResourceStatusList { get; set; }
         public class PutEnableFwSwitchResponseBodyAbnormalResourceStatusList : TeaModel {
             /// <summary>
-            /// <para>A message that provides details about why an asset was not synchronized. Valid value:</para>
+            /// <para>The message when the asset is not synchronized. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cloudfirewall do not sync this ip address</c>: Cloud Firewall does not synchronize the IP address of the asset.</description></item>
+            /// <item><description>cloudfirewall do not sync this ip address: Cloud Firewall has not synchronized this asset IP address.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the asset.</para>
+            /// <para>The asset IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>203.0.113.0</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The synchronization status of the asset. Valid value:</para>
+            /// <para>The status of the asset that is not synchronized. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ip_not_sync</c>: The asset is not synchronized.</description></item>
+            /// <item><description>ip_not_sync: The asset is not synchronized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,6 +53,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Status { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>Indicates that this is a successful dry run response. A value of true indicates that only the dry run was completed and no real changes were made. This field is not returned or is set to false for real calls.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>

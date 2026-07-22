@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallManualVSwitchListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EED3674-74E7-54DC-8FD4-6A374133****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of vSwitches.</para>
+        /// <para>The vSwitch list.</para>
         /// </summary>
         [NameInMap("VSwitchList")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The UID of the Alibaba Cloud account.</para>
             /// <remarks>
-            /// <para>The root account of the Cloud Firewall member account.</para>
+            /// <para>The primary account of the Cloud Firewall member accounts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The ID of the owner.</para>
+            /// <para>The owner user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>137578716100****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated route table.</para>
+            /// <para>The ID of the associate a prefix list with a route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-2zet3gyk01o07so****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp10d0kcp907721z****</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VSwitchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC instance.</para>
+            /// <para>The VPC-connected instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf62kq7c364sil2z2****</para>

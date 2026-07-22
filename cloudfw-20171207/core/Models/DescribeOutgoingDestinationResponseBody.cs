@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the destination addresses.</para>
+        /// <para>The destination address information.</para>
         /// </summary>
         [NameInMap("DstList")]
         [Validation(Required=false)]
         public List<DescribeOutgoingDestinationResponseBodyDstList> DstList { get; set; }
         public class DescribeOutgoingDestinationResponseBodyDstList : TeaModel {
             /// <summary>
-            /// <para>The recommended Access Control List (ACL) details.</para>
+            /// <para>The recommended ACL content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclStatus { get; set; }
 
             /// <summary>
-            /// <para>The business to which the domain name belongs.</para>
+            /// <para>The domain name business.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The category name of the service.</para>
+            /// <para>The category name of the product.</para>
             /// 
             /// <b>Example:</b>
             /// <para>categor_test</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the destination is manually marked as normal.</para>
+            /// <para>Indicates whether the entry is manually marked as normal by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The tag list.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2845BA9-1642-5B27-9F04-8014DD94****</para>

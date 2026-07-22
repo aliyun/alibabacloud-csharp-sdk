@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the query.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the flow log.</para>
+        /// <para>The URL in the flow log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The language type of the received message. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Location { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member accounts.</para>
+        /// <para>The UID of one of the member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128599825273****</para>
@@ -273,6 +273,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public string PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The query ID. If the query is too large, a query ID is returned. Use this query ID to retrieve results in subsequent requests.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>d158c8ed-bc57-40fd-86d3-468169d4cfe2</para>
+        /// </summary>
+        [NameInMap("QueryId")]
+        [Validation(Required=false)]
+        public string QueryId { get; set; }
 
         /// <summary>
         /// <para>The rule ID.</para>
@@ -386,7 +396,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcVpcRegionNo { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. A single query should not exceed one day.</para>
+        /// <para>The start time. Specify a UNIX timestamp in seconds. Only data within the last 7 days can be queried. We recommend that a single query span no more than one day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

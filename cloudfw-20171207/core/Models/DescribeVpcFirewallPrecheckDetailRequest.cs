@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallPrecheckDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The Cloud Enterprise Network (CEN) instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-hxsqf2bv6di1a****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account in Cloud Firewall.</para>
+        /// <para>The UID of the Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>134388541648****</para>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the network instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cen_firewall</b>: a firewall for a CEN instance (Basic Edition)</para>
+        /// <item><description><para><b>cen_firewall</b>: CEN basic edition firewall</para>
         /// </description></item>
-        /// <item><description><para><b>cen_tr_firewall</b>: a firewall for a CEN instance with a transit router</para>
+        /// <item><description><para><b>cen_tr_firewall</b>: CEN-TR firewall</para>
         /// </description></item>
         /// </list>
         /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NetworkInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. This parameter is required. If it is not specified, ErrorParameters is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router instance.</para>
+        /// <para>The transit router instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a transit router (TR) scenario. If neither is specified, ErrorParameters is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-2vcn4u2g86tm72****</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The VPC-connected instance ID. You must specify at least one of VpcId and TransitRouterId. Specify VpcId when querying a basic edition firewall, or specify TransitRouterId when querying a forward routing (TR) scenario. If neither is specified, ErrorParameters is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zev8s8rxao33xt****</para>

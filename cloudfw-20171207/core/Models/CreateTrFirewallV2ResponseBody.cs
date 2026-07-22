@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateTrFirewallV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the VPC firewall instance.</para>
+        /// <para>The VPC firewall instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-37e22bf0d9b34870****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>822B9125-6E1A-551C-8EAF-6E7AE7444B00</para>

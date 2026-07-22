@@ -20,13 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response.</para>
-        /// <para>Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para>en: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The operation to perform. Currently, only the open operation is supported.</para>
+        /// <para>The operation type. Currently, only the activation operation is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>open: Enables the VPC border firewall.</description></item>
+        /// <item><description>open: activation</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

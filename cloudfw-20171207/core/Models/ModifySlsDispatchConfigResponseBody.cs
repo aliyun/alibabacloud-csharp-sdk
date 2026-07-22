@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class CreateTrFirewallV2RoutePolicyResponseBody : TeaModel {
+    public class ModifySlsDispatchConfigResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>C91D68BA-A0BE-51BF-A0F1-1CB5C57FE58D</para>
+        /// <para>4CD646BA-490F-5584-9272-B6FFE3BB****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the firewall routing policy.</para>
+        /// <para>The task ID. Modifying log configurations is an asynchronous task. This field indicates the unique identifier of the task. You can use this ID to query the status of the task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>policy-8ebed27e13e14ce2****</para>
+        /// <para>d8c995ec-40a5-4382-a3f3-57713096****</para>
         /// </summary>
-        [NameInMap("TrFirewallRoutePolicyId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string TrFirewallRoutePolicyId { get; set; }
+        public string TaskId { get; set; }
 
     }
 

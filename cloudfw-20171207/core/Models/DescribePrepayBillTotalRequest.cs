@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalRequest : TeaModel {
         /// <summary>
-        /// <para>The billing type. Valid values:</para>
+        /// <para>The bill type of the user. This parameter is required. An error is returned if this parameter is not specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>elastic_traffic: elastic traffic.</description></item>
-        /// <item><description>sdl: sensitive data leak detection traffic.</description></item>
+        /// <item><description>elastic_traffic: elastic traffic</description></item>
+        /// <item><description>sdl: sensitive data leak detection traffic</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The end time. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,12 +45,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh</description></item>
-        /// <item><description>en</description></item>
-        /// </list>
-        /// <para>Default value: zh.</para>
+        /// <para>The language. Enumeration value.
+        /// Default value: zh.
+        /// Valid value: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -70,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

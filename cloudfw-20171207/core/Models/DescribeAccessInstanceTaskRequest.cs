@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the synchronization node.</para>
+        /// <para>The synchronization node ID. You must specify at least one of TaskId and AccessInstanceId. If neither is specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pdi-3bc2f91695ee48bd9377</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the synchronization node.</para>
+        /// <para>The synchronization node type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AckClusterConnector</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The language of the response messages.</para>
+        /// <para>The language of the response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The task ID. You must specify at least one of TaskId and AccessInstanceId. If neither is specified, the API returns a 400 error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-c92d4544ef7b6a42</para>

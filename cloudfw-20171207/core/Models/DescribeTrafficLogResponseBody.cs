@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeTrafficLogResponseBodyDataList> DataList { get; set; }
         public class DescribeTrafficLogResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The policy ID of the ACL pre-match. If this parameter is not specified, all policies are included.</para>
+            /// <para>The policy ID of the ACL pre-match. If this parameter is empty, all policies are included.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The ACL pre-match status. Valid values:</para>
-            /// <para><b>app_unknown</b>: application not identified</para>
-            /// <para><b>domain_unknown</b>: domain name not identified</para>
-            /// <para><b>normal</b>: normal</para>
+            /// <para><b>app_unknown</b>: application not identified.</para>
+            /// <para><b>domain_unknown</b>: domain name not identified.</para>
+            /// <para><b>normal</b>: normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The application identification status. Valid values:</para>
-            /// <para><b>none</b>: initial state</para>
-            /// <para><b>policy_discard</b>: connection establishment failed because the connection was blocked by a user ACL or threat intelligence rule</para>
-            /// <para><b>tcp_not_establish</b>: TCP connection establishment failed</para>
-            /// <para><b>no_payload</b>: connection established, but DPI has analyzed 0 payloads</para>
-            /// <para><b>analysing</b>: identification in progress</para>
-            /// <para><b>unknown_loose</b>: loose mode, identification failed, continuing identification</para>
-            /// <para><b>unknown_strict</b>: strict mode, identification failed</para>
-            /// <para><b>success</b>: identification succeeded</para>
+            /// <para><b>none</b>: initial state.</para>
+            /// <para><b>policy_discard</b>: connection establishment failed because the connection was blocked by a user ACL or threat intelligence rule.</para>
+            /// <para><b>tcp_not_establish</b>: TCP connection establishment failed.</para>
+            /// <para><b>no_payload</b>: connection established, but DPI has analyzed 0 payloads.</para>
+            /// <para><b>analysing</b>: identification in progress.</para>
+            /// <para><b>unknown_loose</b>: loose mode. Identification failed. Identification continues.</para>
+            /// <para><b>unknown_strict</b>: strict mode. Identification failed.</para>
+            /// <para><b>success</b>: identification succeeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The URL of the flow log.</para>
+            /// <para>The URL in the flow log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx.com</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RegionNo { get; set; }
 
                 /// <summary>
-                /// <para>The VPC-connected instance ID.</para>
+                /// <para>The VPC instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-8vba1c1em97h0ji71b****</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Other extended data.</para>
+            /// <para>The additional extended data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Ext { get; set; }
 
             /// <summary>
-            /// <para>The inbound traffic.</para>
+            /// <para>The inbound traffic in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>125</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The outbound traffic.</para>
+            /// <para>The outbound traffic in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>230</para>
@@ -423,9 +423,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The final result of the traffic. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Allow.</description></item>
-            /// <item><description><b>1</b>: Alert.</description></item>
-            /// <item><description><b>2</b>: Drop.</description></item>
+            /// <item><description><b>0</b>: allowed.</description></item>
+            /// <item><description><b>1</b>: alerted.</description></item>
+            /// <item><description><b>2</b>: dropped.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -436,13 +436,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RuleResult { get; set; }
 
             /// <summary>
-            /// <para>The source of the matched detection rule. Valid values:</para>
+            /// <para>The source of the hit detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: None.</description></item>
-            /// <item><description><b>1</b>: Basic protection.</description></item>
-            /// <item><description><b>2</b>: Virtual patches.</description></item>
-            /// <item><description><b>3</b>: Access control.</description></item>
-            /// <item><description><b>4</b>: Threat intelligence.</description></item>
+            /// <item><description><b>0</b>: none.</description></item>
+            /// <item><description><b>1</b>: basic protection.</description></item>
+            /// <item><description><b>2</b>: Virtual Patches.</description></item>
+            /// <item><description><b>3</b>: access control.</description></item>
+            /// <item><description><b>4</b>: threat intelligence.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -660,6 +660,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? TotalCount { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The query ID. If the query is too large, a query ID is returned first. Use this query ID to retrieve results in subsequent requests.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>398542bf-e001-47a3-aee2-b132b588e3c8</para>
+        /// </summary>
+        [NameInMap("QueryId")]
+        [Validation(Required=false)]
+        public string QueryId { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>

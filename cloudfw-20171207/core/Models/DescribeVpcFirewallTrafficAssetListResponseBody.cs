@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallTrafficAssetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The number of intrusion prevention system (IPS) hits.</para>
+            /// <para>The number of IPS hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The total traffic in bytes.</para>
+            /// <para>The total traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>253023143</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The VPC where the asset resides.</para>
+            /// <para>The ID of the VPC where the asset resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.com</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</para>

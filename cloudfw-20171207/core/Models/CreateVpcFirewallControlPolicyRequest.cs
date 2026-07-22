@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <item><description><b>MongoDB</b></description></item>
         /// <item><description><b>Memcache</b></description></item>
         /// <item><description><b>SSL</b></description></item>
-        /// <item><description><b>ANY</b>: all application types.</description></item>
+        /// <item><description><b>ANY</b>: all application types</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination port of traffic in the virtual private cloud (VPC) firewall access control policy.</para>
+        /// <para>The destination port in the virtual private cloud (VPC) firewall access control policy for traffic access.</para>
         /// <remarks>
-        /// <para>Set this parameter when <b>DestPortType</b> is set to <c>port</c>.</para>
+        /// <para>When <b>DestPortType</b> is set to <c>port</c>, configure this parameter. When Proto is set to TCP/UDP/ICMP, either DestPort (with DestPortType=port) or DestPortGroup (with DestPortType=group) is conditionally required. Otherwise, ErrorParametersDestPort(400) is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestPort { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination port address book of traffic in the virtual private cloud (VPC) firewall access control policy.</para>
+        /// <para>The name of the destination port address book for traffic access in the virtual private cloud (VPC) firewall access control policy.</para>
         /// <remarks>
-        /// <para>Set this parameter when <b>DestPortType</b> is set to <c>group</c>.</para>
+        /// <para>When <b>DestPortType</b> is set to <c>group</c>, configure this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,10 +100,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestPortGroup { get; set; }
 
         /// <summary>
-        /// <para>The type of the destination port of traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</para>
+        /// <para>The type of the destination port for traffic access in the virtual private cloud (VPC) firewall access control policy. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>port</b>: port</description></item>
-        /// <item><description><b>group</b>: port address book.</description></item>
+        /// <item><description><b>group</b>: port address book</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestPortType { get; set; }
 
         /// <summary>
-        /// <para>The destination address of traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</para>
+        /// <para>The destination address in the virtual private cloud (VPC) firewall access control policy for traffic access. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>If <b>DestinationType</b> is set to <c>net</c>, the value of <b>Destination</b> is a destination CIDR block.</para>
         /// </description></item>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <list type="bullet">
         /// <item><description><b>net</b>: destination CIDR block</description></item>
         /// <item><description><b>group</b>: destination address book</description></item>
-        /// <item><description><b>domain</b>: destination domain name.</description></item>
+        /// <item><description><b>domain</b>: destination domain name</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -151,9 +151,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The domain name resolution method of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FQDN</b>: FQDN-based resolution</description></item>
+        /// <item><description><b>FQDN</b>: FQDN-based</description></item>
         /// <item><description><b>DNS</b>: DNS-based dynamic resolution</description></item>
-        /// <item><description><b>FQDN_AND_DNS</b>: FQDN-based and DNS-based dynamic resolution.</description></item>
+        /// <item><description><b>FQDN_AND_DNS</b>: FQDN and DNS-based dynamic resolution</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or on the half hour and must be at least 30 minutes later than the start time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent, EndTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must be specified.</para>
+        /// <para>When RepeatType is set to Permanent, EndTime is empty. When RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -213,12 +213,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NewOrder { get; set; }
 
         /// <summary>
-        /// <para>The security protocol type of traffic in the virtual private cloud (VPC) firewall access control policy. Valid values:</para>
+        /// <para>The security protocol type for traffic access in the virtual private cloud (VPC) firewall access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ANY</b>: any protocol type. Set this value if the protocol type is uncertain.</description></item>
+        /// <item><description><b>ANY</b>: any protocol type</description></item>
         /// <item><description><b>TCP</b></description></item>
         /// <item><description><b>UDP</b></description></item>
-        /// <item><description><b>ICMP</b>.</description></item>
+        /// <item><description><b>ICMP</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -244,18 +244,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The days of the recurrence for the policy validity period of the access control policy.</para>
+        /// <para>The days of a week or of a month on which the access control policy takes effect.</para>
         /// <list type="bullet">
-        /// <item><description>If RepeatType is set to <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, RepeatDays is an empty collection.
+        /// <item><description>When RepeatType is set to <c>Permanent</c>, <c>None</c>, or <c>Daily</c>, RepeatDays is an empty collection.
         /// Example: []</description></item>
-        /// <item><description>If RepeatType is set to Weekly, RepeatDays cannot be empty.
+        /// <item><description>When RepeatType is set to Weekly, RepeatDays cannot be empty.
         /// Example: [0, 6]<remarks>
-        /// <para>If RepeatType is set to Weekly, the values in RepeatDays cannot be repeated.</para>
+        /// <para>When RepeatType is set to Weekly, RepeatDays does not allow duplicate values.</para>
         /// </remarks>
         /// </description></item>
-        /// <item><description>If RepeatType is set to <c>Monthly</c>, RepeatDays cannot be empty.
+        /// <item><description>When RepeatType is set to <c>Monthly</c>, RepeatDays cannot be empty.
         /// Example: [1, 31]<remarks>
-        /// <para>If RepeatType is set to Monthly, the values in RepeatDays cannot be repeated.</para>
+        /// <para>When RepeatType is set to Monthly, RepeatDays does not allow duplicate values.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The recurrence end time of the policy validity period for the access control policy. Example: 23:30. The value must be on the hour or on the half hour and must be at least 30 minutes later than the recurrence start time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent or None, RepeatEndTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must be specified. The format is HH:MM (24-hour clock), such as 08:00.</para>
+        /// <para>When RepeatType is set to Permanent or None, RepeatEndTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value. Format: HH:MM (24-hour clock). Example: 08:00.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The recurrence start time of the policy validity period for the access control policy. Example: 08:00. The value must be on the hour or on the half hour and must be at least 30 minutes earlier than the recurrence end time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent or None, RepeatStartTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must be specified. The format is HH:MM (24-hour clock), such as 08:00.</para>
+        /// <para>When RepeatType is set to Permanent or None, RepeatStartTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value. Format: HH:MM (24-hour clock). Example: 08:00.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -293,11 +293,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The recurrence type of the policy validity period for the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Permanent</b> (default): The policy is always valid.</description></item>
-        /// <item><description><b>None</b>: The policy is valid for a specified single time period.</description></item>
-        /// <item><description><b>Daily</b>: The policy is valid on a daily basis.</description></item>
-        /// <item><description><b>Weekly</b>: The policy is valid on a weekly basis.</description></item>
-        /// <item><description><b>Monthly</b>: The policy is valid on a monthly basis.</description></item>
+        /// <item><description><b>Permanent</b> (default): always</description></item>
+        /// <item><description><b>None</b>: one-time</description></item>
+        /// <item><description><b>Daily</b>: daily</description></item>
+        /// <item><description><b>Weekly</b>: weekly</description></item>
+        /// <item><description><b>Monthly</b>: monthly</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -327,7 +327,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <list type="bullet">
         /// <item><description><para><b>net</b>: source CIDR block</para>
         /// </description></item>
-        /// <item><description><para><b>group</b>: source address book.</para>
+        /// <item><description><para><b>group</b>: source address book</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or on the half hour and must be at least 30 minutes earlier than the end time.</para>
         /// <remarks>
-        /// <para>If RepeatType is set to Permanent, StartTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must be specified.</para>
+        /// <para>When RepeatType is set to Permanent, StartTime is empty. When RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -355,13 +355,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The ID of the virtual private cloud (VPC) firewall access control policy group.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the VPC firewall protects traffic between two VPCs connected through CEN, the value of this parameter is the CEN instance ID.</para>
+        /// <item><description><para>If the VPC firewall protects traffic between two VPCs connected through a CEN instance, the value of this parameter is the CEN instance ID.</para>
         /// </description></item>
-        /// <item><description><para>If the VPC firewall protects traffic between two VPCs connected through Express Connect, the value of this parameter is the VPC firewall instance ID.</para>
+        /// <item><description><para>If the VPC firewall protects traffic between two VPCs connected through an Express Connect circuit, the value of this parameter is the VPC firewall instance ID.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

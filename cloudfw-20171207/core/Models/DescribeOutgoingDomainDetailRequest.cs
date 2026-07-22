@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The domain name.</para>
+        /// <para>The destination domain name to query. You must specify at least one of Domain or DomainList. If neither is specified, the API returns ErrorDomainName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The list of domain names.</para>
+        /// <para>The list of destination domain names to query. You must specify at least one of Domain or DomainList. If neither is specified, the API returns ErrorDomainName.</para>
         /// </summary>
         [NameInMap("DomainList")]
         [Validation(Required=false)]
         public List<string> DomainList { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query. Specify a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query NAT private network outbound connections.</para>
+        /// <para>Specifies whether to query outbound connections from NAT private IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NatPrivate</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query. Specify a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

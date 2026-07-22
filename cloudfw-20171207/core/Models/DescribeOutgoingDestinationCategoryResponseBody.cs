@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C1ED80BC-FFC8-57DB-8151-705DC31****</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of outbound connection categories.</para>
+        /// <para>The list of outbound connections categorizations.</para>
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]
         public List<DescribeOutgoingDestinationCategoryResponseBodyTypeList> TypeList { get; set; }
         public class DescribeOutgoingDestinationCategoryResponseBodyTypeList : TeaModel {
             /// <summary>
-            /// <para>The list of outbound connection categories.</para>
+            /// <para>The list of outbound connections categorizations.</para>
             /// </summary>
             [NameInMap("CategoryList")]
             [Validation(Required=false)]
             public List<DescribeOutgoingDestinationCategoryResponseBodyTypeListCategoryList> CategoryList { get; set; }
             public class DescribeOutgoingDestinationCategoryResponseBodyTypeListCategoryList : TeaModel {
                 /// <summary>
-                /// <para>The description of the outbound connection category.</para>
+                /// <para>The outbound connections categorization description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AliYun</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CategoryDescribe { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the outbound connection category.</para>
+                /// <para>The outbound connections categorization ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CategoryId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the outbound connection category.</para>
+                /// <para>The outbound connections categorization name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AliYun</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CategoryName { get; set; }
 
                 /// <summary>
-                /// <para>The classification ID of the outbound connection category.</para>
+                /// <para>The outbound connections categorization level ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Trusted</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The description of the fixed category.</para>
+            /// <para>The fixed category description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliYun</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TypeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the fixed category.</para>
+            /// <para>The fixed category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliYun</para>

@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The IP version of the asset that is protected by Cloud Firewall.</para>
+            /// <para>The IP version of the asset protected by Cloud Firewall.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>4</b>: IPv4 address</para>
+            /// <item><description><para><b>4</b>: IPv4</para>
             /// </description></item>
-            /// <item><description><para><b>6</b>: IPv6 address</para>
+            /// <item><description><para><b>6</b>: IPv6</para>
             /// </description></item>
             /// </list>
             /// 
@@ -56,12 +56,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>low</b>: low risk</para>
-            /// </description></item>
-            /// <item><description><para><b>middle</b>: medium risk</para>
-            /// </description></item>
-            /// <item><description><para><b>high</b>: high risk</para>
-            /// </description></item>
+            /// <item><description><b>low</b>: low risk</description></item>
+            /// <item><description><b>middle</b>: medium risk</description></item>
+            /// <item><description><b>high</b>: high risk</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443C5781-1C03-5FCD-8EC5-FB9C0B9AC396</para>

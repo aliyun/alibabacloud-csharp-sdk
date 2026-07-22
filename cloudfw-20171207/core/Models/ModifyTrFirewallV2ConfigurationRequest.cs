@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyTrFirewallV2ConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the VPC firewall instance.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <remarks>
+        /// <para>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-bcdf89d405ce4bd2****</para>
@@ -20,7 +23,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPC firewall instance.</para>
+        /// <para>The instance name of the virtual private cloud (VPC) firewall.</para>
+        /// <remarks>
+        /// <para>FirewallId and FirewallName are jointly required. If both are not provided, an ErrorParameters(400) error is returned.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-firewall</para>
@@ -30,12 +36,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallName { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the content within the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

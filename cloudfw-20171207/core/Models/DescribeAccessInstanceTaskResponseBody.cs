@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The steps of the task.</para>
+        /// <para>The task steps.</para>
         /// </summary>
         [NameInMap("TaskSteps")]
         [Validation(Required=false)]
         public List<DescribeAccessInstanceTaskResponseBodyTaskSteps> TaskSteps { get; set; }
         public class DescribeAccessInstanceTaskResponseBodyTaskSteps : TeaModel {
             /// <summary>
-            /// <para>The name of the step.</para>
+            /// <para>The step name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Obtain ACK cluster information</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepName { get; set; }
 
             /// <summary>
-            /// <para>The progress of the step.</para>
+            /// <para>The step progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepProgress { get; set; }
 
             /// <summary>
-            /// <para>The status of the step.</para>
+            /// <para>The step status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>finished</para>

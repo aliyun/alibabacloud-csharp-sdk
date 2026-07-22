@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The language of the received messages.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: (default) Chinese</description></item>
+        /// <item><description><b>zh</b>: (default) Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The query conditions for the download task.</para>
+        /// <para>The request query conditions for the download task. This parameter is required. If this parameter is not specified, the API returns error code -340408 (download task TaskData invalid).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;SearchItem\&quot;:\&quot;\&quot;,\&quot;UserType\&quot;:\&quot;buy\&quot;,\&quot;IpVersion\&quot;:\&quot;4\&quot;}</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskData { get; set; }
 
         /// <summary>
-        /// <para>The task type. For valid values, call the API operation that queries file download task types.</para>
+        /// <para>The task type. For valid values, call the operation that queries file download task types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternetFirewallAsset</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The time zone for time information in the downloaded file. The value is an IANA time zone identifier. Default value: Asia/Shanghai (UTC+8).</para>
+        /// <para>The time zone for time information in the downloaded file. Specify the value in IANA time zone identity format. Default value: Asia/Shanghai (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Shanghai</para>

@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyDnsFirewallPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The action that is performed on traffic that hits the access control policy. Valid values:</para>
+        /// <para>The action that Cloud Firewall performs on the traffic in the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>accept</b>: Allow</para>
-        /// </description></item>
-        /// <item><description><para><b>drop</b>: Deny</para>
-        /// </description></item>
-        /// <item><description><para><b>log</b>: Monitor</para>
-        /// </description></item>
+        /// <item><description><b>accept</b>: Allow.</description></item>
+        /// <item><description><b>drop</b>: Deny.</description></item>
+        /// <item><description><b>log</b>: Monitor.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,14 +48,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The destination address in the access control policy.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>DestinationType</b> is set to net, <b>Destination</b> specifies the destination CIDR block. For example: 1.2.3.4/24</para>
-        /// </description></item>
-        /// <item><description><para>If <b>DestinationType</b> is set to group, <b>Destination</b> specifies the name of the destination address book. For example: db_group</para>
-        /// </description></item>
-        /// <item><description><para>If <b>DestinationType</b> is set to domain, <b>Destination</b> specifies the destination domain name. For example: \*.aliyuncs.com</para>
-        /// </description></item>
-        /// <item><description><para>If <b>DestinationType</b> is set to location, <b>Destination</b> specifies the destination region. For more information about the location codes, see the following description. For example: [&quot;BJ11&quot;, &quot;ZB&quot;]</para>
-        /// </description></item>
+        /// <item><description>If <b>DestinationType</b> is set to net, <b>Destination</b> is a destination CIDR block. Example: 1.2.3.4/24.</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to group, <b>Destination</b> is a destination address book name. Example: db_group.</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to domain, <b>Destination</b> is a destination domain name. Example: *.aliyuncs.com.</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to location, <b>Destination</b> is a destination area. For specific area positional encoding values, see the subsequent sections. Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,12 +65,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The type of the destination address in the access control policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>net</b>: destination CIDR block (CIDR address)</para>
-        /// </description></item>
-        /// <item><description><para><b>group</b>: destination address book</para>
-        /// </description></item>
-        /// <item><description><para><b>domain</b>: destination domain name</para>
-        /// </description></item>
+        /// <item><description><b>net</b>: destination CIDR block.</description></item>
+        /// <item><description><b>group</b>: destination address book.</description></item>
+        /// <item><description><b>domain</b>: destination domain name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +78,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:-<b>zh</b>: Chinese-<b>en</b>: English</para>
+        /// <para>The language of the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -98,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The priority of the access control policy before the modification.</para>
+        /// <para>The policy priority of the access control policy before the modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,12 +102,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>The status of the access control policy. By default, the policy is enabled after it is created. Valid values:</para>
+        /// <para>The enabled status of the access control policy. The policy is enabled by default after it is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: enables the access control policy.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: disables the access control policy.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Enable the access control policy.</description></item>
+        /// <item><description><b>false</b>: Disable the access control policy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -140,9 +132,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the source address in the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>net</b>: source CIDR block (CIDR)</para>
+        /// <item><description><para><b>net</b>: source CIDR block.</para>
         /// </description></item>
-        /// <item><description><para><b>group</b>: source address book</para>
+        /// <item><description><para><b>group</b>: source address book.</para>
         /// </description></item>
         /// </list>
         /// 

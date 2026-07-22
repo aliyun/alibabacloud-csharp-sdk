@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlLastPayloadRequest : TeaModel {
         /// <summary>
-        /// <para>The destination IP address.</para>
+        /// <para>The destination IP address. This is an optional parameter used to filter by destination IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.102.XXX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstIp { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the value as a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the query (UNIX timestamp in seconds). This parameter is required. If this parameter is not specified, the API returns an error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1534408267</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of sensitive credential.</para>
+        /// <para>The type of sensitive credential. This parameter is required. If this parameter is not specified, the API returns an error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id_card</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SensitiveCategory { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The source IP address. This is an optional parameter used to filter by source IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.40.84.XXX</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcIp { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the value as a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the query (UNIX timestamp in seconds). This parameter is required. If this parameter is not specified, the API returns an error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656837360</para>

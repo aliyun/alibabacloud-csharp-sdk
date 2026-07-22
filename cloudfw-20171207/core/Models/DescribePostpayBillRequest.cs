@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query, expressed as a UNIX timestamp in seconds.</para>
+        /// <para>The end time of the bill query, expressed as a second-level UNIX timestamp. The value must be later than StartTime.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time interval for querying data. This is an enumeration value. Valid values:</para>
+        /// <para>Specifies the time interval for querying data. This is an enumeration value. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3600: queries data at the hourly level.</description></item>
-        /// <item><description>86400: queries data at the daily level.</description></item>
+        /// <item><description>3600: queries hourly data.</description></item>
+        /// <item><description>86400: queries daily data.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language. This is an enumeration value.
         /// Default value: zh.
-        /// Valid values: en.</para>
+        /// Valid value: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query, expressed as a UNIX timestamp in seconds.</para>
+        /// <para>The start time of the bill query, expressed as a second-level UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

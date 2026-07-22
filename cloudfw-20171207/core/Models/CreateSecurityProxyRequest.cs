@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: enabled</description></item>
-        /// <item><description><b>close</b>: disabled.</description></item>
+        /// <item><description><b>open</b>: Enabled.</description></item>
+        /// <item><description><b>close</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FwVswitchZoneId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,8 +165,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to use the automatic vSwitch mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatic mode</description></item>
-        /// <item><description><b>false</b>: manual mode.</description></item>
+        /// <item><description><b>true</b>: Automatic mode.</description></item>
+        /// <item><description><b>false</b>: Manual mode.<remarks>
+        /// <para>The default value of VswitchAuto is true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

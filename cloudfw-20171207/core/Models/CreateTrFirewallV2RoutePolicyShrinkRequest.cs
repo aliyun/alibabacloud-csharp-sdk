@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateTrFirewallV2RoutePolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of secondary traffic redirection instances.</para>
+        /// <para>The secondary traffic redirection instances.</para>
         /// </summary>
         [NameInMap("DestCandidateList")]
         [Validation(Required=false)]
         public string DestCandidateListShrink { get; set; }
 
         /// <summary>
-        /// <para>The VPC border firewall instance ID.</para>
+        /// <para>The ID of the virtual private cloud (VPC) firewall instance.</para>
+        /// <remarks>
+        /// <para>FirewallId is required. If it is not specified, ErrorParameters(400) is returned. You can call DescribeTrFirewallsV2List to obtain the instance ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-f8ce36689b224f77****</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language type for receiving messages. Valid values:</para>
+        /// <para>The language of the content within the response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b> (default): Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The traffic redirection description.</para>
+        /// <para>The description of the traffic redirection configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Singapore Point to Multipoint</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PolicyDescription { get; set; }
 
         /// <summary>
-        /// <para>The traffic redirection name.</para>
+        /// <para>The name of the traffic redirection configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Singapore Point to Multipoint</para>
@@ -61,13 +64,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The traffic redirection scenario type for the VPC border firewall with Cloud Enterprise Network Enterprise Edition. Valid values:</para>
+        /// <para>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on a Cloud Enterprise Network (CEN) Enterprise Edition transit router. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>fullmesh</b>: Multi-point interconnection</para>
+        /// <item><description><para><b>fullmesh</b>: multi-point interconnection</para>
         /// </description></item>
-        /// <item><description><para><b>one_to_one</b>: Point-to-point</para>
+        /// <item><description><para><b>one_to_one</b>: point-to-point</para>
         /// </description></item>
-        /// <item><description><para><b>end_to_end</b>: Point-to-multipoint</para>
+        /// <item><description><para><b>end_to_end</b>: point-to-multipoint</para>
         /// </description></item>
         /// </list>
         /// 
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PolicyType { get; set; }
 
         /// <summary>
-        /// <para>The list of primary traffic redirection instances.</para>
+        /// <para>The primary traffic redirection instances.</para>
         /// </summary>
         [NameInMap("SrcCandidateList")]
         [Validation(Required=false)]

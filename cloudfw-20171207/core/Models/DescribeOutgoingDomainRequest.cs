@@ -10,18 +10,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The asset category. If you leave this parameter empty, assets in all categories are queried. Valid values:</para>
+        /// <para>The product category. Default value: empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>All</b>: all categories</para>
-        /// </description></item>
-        /// <item><description><para><b>RiskDomain</b>: risky domain names</para>
-        /// </description></item>
-        /// <item><description><para><b>RiskIP</b>: risky IP addresses</para>
-        /// </description></item>
-        /// <item><description><para><b>AliYun</b>: Alibaba Cloud services</para>
-        /// </description></item>
-        /// <item><description><para><b>NotAliYun</b>: third-party services</para>
-        /// </description></item>
+        /// <item><description><b>All</b>: All categories.</description></item>
+        /// <item><description><b>RiskDomain</b>: Risky domain category.</description></item>
+        /// <item><description><b>RiskIP</b>: Risky IP category.</description></item>
+        /// <item><description><b>AliYun</b>: Alibaba Cloud product category.</description></item>
+        /// <item><description><b>NotAliYun</b>: Non-Alibaba Cloud product category.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,8 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The page number of the results to return in a paged query.</para>
+        /// <para>Default value: 1, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,12 +38,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The source of traffic statistics. The default value is \<c>internet\\</c>, which indicates Internet Firewall. Valid values:</para>
+        /// <para>The source of the traffic statistics. Default value: Internet firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>internet</b>: Internet Firewall</para>
-        /// </description></item>
-        /// <item><description><para><b>nat</b>: NAT Firewall</para>
-        /// </description></item>
+        /// <item><description><b>internet</b>: Internet firewall.</description></item>
+        /// <item><description><b>nat</b>: NAT firewall.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The outbound domain name.</para>
+        /// <para>The domain name of outbound connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></para>
@@ -69,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,12 +73,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to count only traffic from accessing AI services. The default value is \<c>false\\</c>. Valid values:</para>
+        /// <para>Specifies whether to collect statistics only on traffic that accesses AI services. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: yes</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: no</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,12 +87,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsAITraffic { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
+        /// <para>The language type of the request message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,12 +101,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>asc</b>: ascending</para>
-        /// </description></item>
-        /// <item><description><para><b>desc</b> (default): descending</para>
-        /// </description></item>
+        /// <item><description><b>asc</b>: ascending order.</description></item>
+        /// <item><description><b>desc</b> (default): descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// <para>Default value: 6. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
@@ -139,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the Elastic Compute Service (ECS) instance that initiates the outbound connections.</para>
+        /// <para>The public IP address of the ECS instance that initiates the outbound connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -149,12 +136,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by. Valid values:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>SessionCount</b> (default): the number of requests</para>
-        /// </description></item>
-        /// <item><description><para><b>TotalBytes</b>: the total traffic</para>
-        /// </description></item>
+        /// <item><description><b>SessionCount</b> (default): the number of requests.</description></item>
+        /// <item><description><b>TotalBytes</b>: the total traffic volume.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,7 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -176,82 +161,45 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the intelligence tag. Valid values:</para>
+        /// <para>The intelligence tags label ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>AliYun</b>: Alibaba Cloud service</para>
-        /// </description></item>
-        /// <item><description><para><b>RiskDomain</b>: Risky domain name</para>
-        /// </description></item>
-        /// <item><description><para><b>RiskIP</b>: Risky IP address</para>
-        /// </description></item>
-        /// <item><description><para><b>TrustedDomain</b>: Trusted website</para>
-        /// </description></item>
-        /// <item><description><para><b>AliPay</b>: Alipay</para>
-        /// </description></item>
-        /// <item><description><para><b>DingDing</b>: DingTalk</para>
-        /// </description></item>
-        /// <item><description><para><b>WeChat</b>: WeChat</para>
-        /// </description></item>
-        /// <item><description><para><b>QQ</b>: Tencent QQ</para>
-        /// </description></item>
-        /// <item><description><para><b>SecurityService</b>: Security service</para>
-        /// </description></item>
-        /// <item><description><para><b>Microsoft</b>: Microsoft</para>
-        /// </description></item>
-        /// <item><description><para><b>Amazon</b>: Amazon</para>
-        /// </description></item>
-        /// <item><description><para><b>Pan</b>: Cloud storage service</para>
-        /// </description></item>
-        /// <item><description><para><b>Map</b>: Map service</para>
-        /// </description></item>
-        /// <item><description><para><b>Code</b>: Code hosting service</para>
-        /// </description></item>
-        /// <item><description><para><b>SystemService</b>: System service</para>
-        /// </description></item>
-        /// <item><description><para><b>Taobao</b>: Taobao</para>
-        /// </description></item>
-        /// <item><description><para><b>Google</b>: Google</para>
-        /// </description></item>
-        /// <item><description><para><b>ThirdPartyService</b>: Third-party service</para>
-        /// </description></item>
-        /// <item><description><para><b>FirstFlow</b>: First-time access</para>
-        /// </description></item>
-        /// <item><description><para><b>Downloader</b>: Malicious downloader</para>
-        /// </description></item>
-        /// <item><description><para><b>Alexa Top 1M</b>: Popular website</para>
-        /// </description></item>
-        /// <item><description><para><b>Miner</b>: Mining pool</para>
-        /// </description></item>
-        /// <item><description><para><b>Intelligence</b>: Threat intelligence</para>
-        /// </description></item>
-        /// <item><description><para><b>DDoS</b>: DDoS trojan</para>
-        /// </description></item>
-        /// <item><description><para><b>Ransomware</b>: Ransomware</para>
-        /// </description></item>
-        /// <item><description><para><b>Spyware</b>: Spyware</para>
-        /// </description></item>
-        /// <item><description><para><b>Rogue</b>: Rogue software</para>
-        /// </description></item>
-        /// <item><description><para><b>Botnet</b>: Botnet</para>
-        /// </description></item>
-        /// <item><description><para><b>Suspicious</b>: Suspicious website</para>
-        /// </description></item>
-        /// <item><description><para><b>C\&amp;C</b>: Command and control (C\&amp;C)</para>
-        /// </description></item>
-        /// <item><description><para><b>Gang</b>: Gang-related activity</para>
-        /// </description></item>
-        /// <item><description><para><b>CVE</b>: CVE vulnerability</para>
-        /// </description></item>
-        /// <item><description><para><b>Backdoor</b>: Backdoor</para>
-        /// </description></item>
-        /// <item><description><para><b>Phishing</b>: Phishing website</para>
-        /// </description></item>
-        /// <item><description><para><b>APT</b>: Advanced Persistent Threat (APT) attack</para>
-        /// </description></item>
-        /// <item><description><para><b>Supply Chain Attack</b>: Supply chain attack</para>
-        /// </description></item>
-        /// <item><description><para><b>Malware</b>: Malicious software</para>
-        /// </description></item>
+        /// <item><description><b>AliYun</b>: Alibaba Cloud product.</description></item>
+        /// <item><description><b>RiskDomain</b>: Risky domain.</description></item>
+        /// <item><description><b>RiskIP</b>: Risky IP.</description></item>
+        /// <item><description><b>TrustedDomain</b>: Trusted website.</description></item>
+        /// <item><description><b>AliPay</b>: Alipay.</description></item>
+        /// <item><description><b>DingDing</b>: DingTalk.</description></item>
+        /// <item><description><b>WeChat</b>: WeChat.</description></item>
+        /// <item><description><b>QQ</b>: Tencent QQ.</description></item>
+        /// <item><description><b>SecurityService</b>: Security service.</description></item>
+        /// <item><description><b>Microsoft</b>: Microsoft.</description></item>
+        /// <item><description><b>Amazon</b>: Amazon.</description></item>
+        /// <item><description><b>Pan</b>: Cloud drive.</description></item>
+        /// <item><description><b>Map</b>: Map.</description></item>
+        /// <item><description><b>Code</b>: Code hosting.</description></item>
+        /// <item><description><b>SystemService</b>: System service.</description></item>
+        /// <item><description><b>Taobao</b>: Taobao.</description></item>
+        /// <item><description><b>Google</b>: Google.</description></item>
+        /// <item><description><b>ThirdPartyService</b>: Third-party platform service.</description></item>
+        /// <item><description><b>FirstFlow</b>: First Visit.</description></item>
+        /// <item><description><b>Downloader</b>: Malicious download.</description></item>
+        /// <item><description><b>Alexa Top1M</b>: Popular website.</description></item>
+        /// <item><description><b>Miner</b>: Miner Pool.</description></item>
+        /// <item><description><b>Intelligence</b>: Threat intelligence.</description></item>
+        /// <item><description><b>DDoS</b>: DDoS Trojan.</description></item>
+        /// <item><description><b>Ransomware</b>: Ransomware.</description></item>
+        /// <item><description><b>Spyware</b>: Spyware.</description></item>
+        /// <item><description><b>Rogue</b>: Rogue software.</description></item>
+        /// <item><description><b>Botnet</b>: Botnets.</description></item>
+        /// <item><description><b>Suspicious</b>: Suspicious website.</description></item>
+        /// <item><description><b>C&amp;C</b>: Remote control.</description></item>
+        /// <item><description><b>Gang</b>: Gang.</description></item>
+        /// <item><description><b>CVE</b>: CVE vulnerability.</description></item>
+        /// <item><description><b>Backdoor</b>: Backdoor Trojan.</description></item>
+        /// <item><description><b>Phishing</b>: Phishing website.</description></item>
+        /// <item><description><b>APT</b>: APT attack.</description></item>
+        /// <item><description><b>Supply Chain Attack</b>: Supply chain attack.</description></item>
+        /// <item><description><b>Malicious software</b>: Malware.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

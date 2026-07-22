@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddDnsFirewallPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the action to take on traffic that matches the access control policy. Valid values:</para>
+        /// <para>The method that is used by the access control policy to control traffic that passes through Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>accept</b>: Allows the traffic.</para>
-        /// </description></item>
-        /// <item><description><para><b>drop</b>: Denies the traffic.</para>
-        /// </description></item>
-        /// <item><description><para><b>log</b>: Monitors the traffic.</para>
-        /// </description></item>
+        /// <item><description><b>accept</b>: allows the traffic.</description></item>
+        /// <item><description><b>drop</b>: deny the traffic.</description></item>
+        /// <item><description><b>log</b>: monitors the traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,14 +39,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The destination address in the access control policy.</para>
         /// <list type="bullet">
-        /// <item><description><para>When <b>DestinationType</b> is <c>net</c>, this parameter specifies the destination CIDR block. Example: <c>1.2.3.4/24</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When <b>DestinationType</b> is <c>group</c>, this parameter specifies the name of the destination address book. Example: <c>db_group</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When <b>DestinationType</b> is <c>domain</c>, this parameter specifies the destination domain name. Example: <c>*.aliyuncs.com</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When <b>DestinationType</b> is <c>location</c>, this parameter specifies the destination region. For more information about location codes, see the documentation. Example: <c>[&quot;BJ11&quot;, &quot;ZB&quot;]</c>.</para>
-        /// </description></item>
+        /// <item><description>If <b>DestinationType</b> is set to net, <b>Destination</b> is a destination CIDR block. Example: 1.2.3.4/24.</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to group, <b>Destination</b> is the name of a destination address book. Example: db_group.</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to domain, <b>Destination</b> is a destination domain name. Example: *.aliyuncs.com.</description></item>
+        /// <item><description>If <b>DestinationType</b> is set to location, <b>Destination</b> is a destination area (for specific area positional encoding, see the following sections). Example: [&quot;BJ11&quot;, &quot;ZB&quot;\].</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,12 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The type of the destination address in the access control policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>net</b>: destination CIDR block</para>
-        /// </description></item>
-        /// <item><description><para><b>group</b>: destination address book</para>
-        /// </description></item>
-        /// <item><description><para><b>domain</b>: destination domain name</para>
-        /// </description></item>
+        /// <item><description><b>group</b>: destination address book</description></item>
+        /// <item><description><b>domain</b>: destination domain name</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,13 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestinationType { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction for the access control policy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>in</b>: inbound traffic</para>
-        /// </description></item>
-        /// <item><description><para><b>out</b>: outbound traffic</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The direction of the DNS firewall policy. The backend fixes this value to out (internal-to-external). Set Direction to out.</para>
         /// 
         /// <b>Example:</b>
         /// <para>out</para>
@@ -97,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The IP version supported by the policy.</para>
+        /// <para>The IP address version supported.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>4</b>: IPv4</para>
@@ -115,7 +98,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response. Valid values:<br>-<b>zh</b>: Chinese<br>-<b>en</b>: English<br><br></para>
+        /// <para>The language of the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -125,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The priority of the access control policy. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the policy. A smaller value indicates a higher priority. Valid values: 1 to 20000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -136,12 +123,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Priority { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the access control policy. Valid values:</para>
+        /// <para>Specifies whether to enable the access control policy. The policy is enabled by default after it is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enables the access control policy.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disables the access control policy.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enables the access control policy.</description></item>
+        /// <item><description><b>false</b>: does not enable the access control policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -153,11 +138,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The source address in the access control policy.</para>
+        /// <para>The source address in the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>When <b>SourceType</b> is <c>net</c>, this parameter specifies the source CIDR block. Example: <c>10.2.XX.XX/24</c>.</para>
+        /// <item><description><para>If <b>SourceType</b> is set to <c>net</c>, Source is a source CIDR block. Example: 10.2.XX.XX/24.</para>
         /// </description></item>
-        /// <item><description><para>When <b>SourceType</b> is <c>group</c>, this parameter specifies the name of the source address book. Example: <c>db_group</c>.</para>
+        /// <item><description><para>If <b>SourceType</b> is set to <c>group</c>, Source is the name of a source address book. Example: db_group.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

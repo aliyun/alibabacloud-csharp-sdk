@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrepayBillTotalResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bill list, aggregated by day.</para>
+        /// <para>The bill list, with each entry representing a day.</para>
         /// </summary>
         [NameInMap("BillList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DefaultBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The elastic bandwidth. Unit: Mbit/s.</para>
+            /// <para>The elastic bandwidth value. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ElasticBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The end time of the day. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The end time of the day. The value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761667200</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? InternetTrafficBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The monthly free traffic quota for sensitive data detection. Unit: GB.</para>
+            /// <para>The monthly free traffic for sensitive data detection. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public float? NatTrafficBandwidth { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the maximum combined bandwidth (Internet + VPC + NAT) occurred on that day.</para>
+            /// <para>The timestamp when the maximum bandwidth (Internet + VPC + NAT) of the day occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761588300</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OverflowTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the day. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The start time of the day. The value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1761580800</para>

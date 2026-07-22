@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateIpsPrivateAssocResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID of the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99A65AA0-C5B5-5092-BFCF-8111B436****</para>

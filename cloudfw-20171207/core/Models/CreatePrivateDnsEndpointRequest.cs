@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The type of cloud firewall. Valid values:</para>
+        /// <para>The type of the cloud firewall. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>internet</b></description></item>
         /// <item><description><b>vpc</b></description></item>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud member account.</para>
+        /// <para>The UID of the Alibaba Cloud member account. This parameter is required when you use Cloud Firewall to manage member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The primary DNS.</para>
+        /// <para>The primary DNS server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryDns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary vSwitch.</para>
+        /// <para>The ID of the primary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, an error is returned. The region must also be in the supported list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6b0dkyryer8******</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryVSwitchIp { get; set; }
 
         /// <summary>
-        /// <para>The type of private DNS. Valid values:</para>
+        /// <para>The private DNS type. When PrivateDnsType is set to Custom, Port and IpProtocol are required. When PrivateDnsType is set to PrivateZone, the backend automatically sets the port to 53 and uses the default protocol. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PrivateZone</b></description></item>
         /// <item><description><b>Custom</b> (default)</description></item>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The standby DNS.</para>
+        /// <para>The secondary DNS server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.1.2</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyDns { get; set; }
 
         /// <summary>
-        /// <para>The ID of the standby vSwitch.</para>
+        /// <para>The ID of the secondary vSwitch. The zone of PrimaryVSwitchId and StandbyVSwitchId must be a zone that supports private DNS. Otherwise, error code -200534 is returned. The region must also be in the supported list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-8vb6jk75wfcwn******</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the standby vSwitch.</para>
+        /// <para>The IP address of the secondary vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.2.2.2</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyVSwitchIp { get; set; }
 
         /// <summary>
-        /// <para>The VPC instance ID.</para>
+        /// <para>The instance ID of the VPC-connected instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

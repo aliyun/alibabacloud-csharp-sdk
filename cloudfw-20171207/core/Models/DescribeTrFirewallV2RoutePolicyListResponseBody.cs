@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies> TrFirewallRoutePolicies { get; set; }
         public class DescribeTrFirewallV2RoutePolicyListResponseBodyTrFirewallRoutePolicies : TeaModel {
             /// <summary>
-            /// <para>The list of destination traffic redirection instances.</para>
+            /// <para>The list of secondary traffic redirection instances.</para>
             /// </summary>
             [NameInMap("DestCandidateList")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The description of the policy.</para>
+            /// <para>The policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Point to multipoint</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PolicyDescription { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Singapore Point to Multipoint</para>
@@ -86,19 +86,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The status of the policy. Valid values:</para>
+            /// <para>The policy status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>creating: The policy is being created.</para>
+            /// <item><description><para>creating: being created</para>
             /// </description></item>
-            /// <item><description><para>deleting: The policy is being deleted.</para>
+            /// <item><description><para>deleting: being deleted</para>
             /// </description></item>
-            /// <item><description><para>opening: The policy is being enabled.</para>
+            /// <item><description><para>opening: being enabled</para>
             /// </description></item>
-            /// <item><description><para>opened: The policy is enabled.</para>
+            /// <item><description><para>opened: enabled</para>
             /// </description></item>
-            /// <item><description><para>closing: The policy is being disabled.</para>
+            /// <item><description><para>closing: being disabled</para>
             /// </description></item>
-            /// <item><description><para>closed: The policy is disabled.</para>
+            /// <item><description><para>closed: disabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -110,9 +110,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PolicyStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of traffic redirection scenario for the VPC firewall. The firewall is created for a transit router that belongs to an Enterprise Edition Cloud Enterprise Network (CEN) instance. Valid values:</para>
+            /// <para>The traffic redirection scenario type for the virtual private cloud (VPC) firewall on CEN Enterprise Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>fullmesh</b>: full-mesh</para>
+            /// <item><description><para><b>fullmesh</b>: multi-point interconnection</para>
             /// </description></item>
             /// <item><description><para><b>one_to_one</b>: point-to-point</para>
             /// </description></item>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The list of source traffic redirection instances.</para>
+            /// <para>The list of primary traffic redirection instances.</para>
             /// </summary>
             [NameInMap("SrcCandidateList")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeOutgoingDestinationCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID.</para>
+        /// <para>The category ID. Valid values are predefined destination category enumerations (25+ in total), such as TrustedDomain (trusted websites), AliPay (Alipay products), and CDN (CDN services). For the complete list of enumeration values and their semantics, refer to the product documentation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>All</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The destination type.</para>
+        /// <para>The destination type. This parameter is required. If this parameter is not specified, ErrorDstType is returned. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Domain: domain name.</description></item>
+        /// <item><description>DstIP: IP address.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>domain</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstType { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query. Specify the value as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language type of the response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -50,18 +54,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>59.82.45.XXX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. This is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query. Specify the value as a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
