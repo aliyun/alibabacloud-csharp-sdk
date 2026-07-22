@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>fdc7f121056249c2b64e04bba27bcc8c</para>
+            /// <para>ag_68ca759b4903b255*******</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]

@@ -8,22 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class SubmitVideoGenerationJobResponseBody : TeaModel {
+    public class CreateAssetCategoryRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ag_3e761e9d1140c42a1b7****</para>
+        /// <para>Third-level subcategory</para>
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("CategoryName")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public string CategoryName { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
+        /// <para>5</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("ParentId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public long? ParentId { get; set; }
 
     }
 

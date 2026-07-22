@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
         [Validation(Required=false)]
         public bool? AppendTags { get; set; }
 
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public long? CategoryId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg">https://bullet-time-20240910.oss-cn-shanghai.aliyuncs.com/ice-generated/a97255309a7c71f093d3e7f6d75a6302/snapshots/normal/2a4030b1950443048f3e3f81489d57eb-00001.jpg</a></para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
     public class ImportMediaRequest : TeaModel {
+        [NameInMap("CategoryId")]
+        [Validation(Required=false)]
+        public long? CategoryId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><a href="https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png">https://outin-55c9ab3fb1b911ee817b00163e32b0a3.oss-cn-shanghai.aliyuncs.com/60425a2758a971f181385017f0e90102/covers/ice-generated/d4aee2d6c6f84769ac89f18c667699c6-cover.png</a></para>

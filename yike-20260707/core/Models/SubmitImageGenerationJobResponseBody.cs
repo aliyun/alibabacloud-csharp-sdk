@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
     public class SubmitImageGenerationJobResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para><b><b><b>3B0E1A586AAC29742247</b></b></b></para>
+        /// <para>ag_68ca759b4903b255*******</para>
         /// </summary>
         [NameInMap("JobId")]
         [Validation(Required=false)]

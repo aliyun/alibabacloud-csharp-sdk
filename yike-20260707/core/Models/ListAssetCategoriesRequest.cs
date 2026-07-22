@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class SubmitVideoGenerationJobResponseBody : TeaModel {
+    public class ListAssetCategoriesRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ag_3e761e9d1140c42a1b7****</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public int? PageNo { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><b><b>63E8B7C7-4812-46AD-0FA56029AC86</b></b></para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public int? PageSize { get; set; }
 
     }
 

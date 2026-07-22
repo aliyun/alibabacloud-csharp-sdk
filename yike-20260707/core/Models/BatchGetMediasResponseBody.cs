@@ -559,6 +559,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
             [Validation(Required=false)]
             public BatchGetMediasResponseBodyMediaInfosMediaBasicInfo MediaBasicInfo { get; set; }
             public class BatchGetMediasResponseBodyMediaInfosMediaBasicInfo : TeaModel {
+                [NameInMap("CategoryId")]
+                [Validation(Required=false)]
+                public long? CategoryId { get; set; }
+
+                [NameInMap("CategoryName")]
+                [Validation(Required=false)]
+                public string CategoryName { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/01e1271d-ff4f-4689-9c20-e1df81486859_open_live_cover.jpg</a></para>

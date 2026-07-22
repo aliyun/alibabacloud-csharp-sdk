@@ -8,14 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Yike20260707.Models
 {
-    public class GetImageGenerationJobRequest : TeaModel {
+    public class DeleteAssetCategoryRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>ag_68ca759b4903b255*******</para>
+        /// <para>45</para>
         /// </summary>
-        [NameInMap("JobId")]
+        [NameInMap("CategoryId")]
         [Validation(Required=false)]
-        public string JobId { get; set; }
+        public long? CategoryId { get; set; }
 
     }
 

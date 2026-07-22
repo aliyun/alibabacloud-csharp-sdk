@@ -575,6 +575,14 @@ namespace AlibabaCloud.SDK.Yike20260707.Models
                 [Validation(Required=false)]
                 public string BusinessType { get; set; }
 
+                [NameInMap("CategoryId")]
+                [Validation(Required=false)]
+                public long? CategoryId { get; set; }
+
+                [NameInMap("CategoryName")]
+                [Validation(Required=false)]
+                public string CategoryName { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para><a href="https://dtlive-vip.oss-cn-shanghai.aliyuncs.com/cover/4e88a055-75fc-4ff5-8b8a-f32224917514_open_live_cover.jpg">https://dtlive-vip.oss-cn-shanghai.aliyuncs.com/cover/4e88a055-75fc-4ff5-8b8a-f32224917514_open_live_cover.jpg</a></para>
