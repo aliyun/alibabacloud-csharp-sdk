@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeAndroidInstanceGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the instance group.</para>
+        /// <para>The details of the instance groups.</para>
         /// </summary>
         [NameInMap("InstanceGroupModel")]
         [Validation(Required=false)]
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ArchitectureType { get; set; }
 
             /// <summary>
-            /// <para>The number of active instances.</para>
+            /// <para>The number of available instances.</para>
             /// <remarks>
-            /// <para>An instance is considered active if its instance status is not &quot;Deleting&quot; or &quot;Deleted&quot;.</para>
+            /// <para>Available means the instance status is not &quot;being deleted&quot; or &quot;deleted&quot;.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageType { get; set; }
 
             /// <summary>
-            /// <para>The public network bandwidth throttling rules for the instance group.</para>
+            /// <para>The public network bandwidth limit rules for the instance group.</para>
             /// </summary>
             [NameInMap("BindQosRules")]
             [Validation(Required=false)]
             public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules BindQosRules { get; set; }
             public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelBindQosRules : TeaModel {
                 /// <summary>
-                /// <para>The public network bandwidth throttling rules bound to the instance.</para>
+                /// <para>The public network bandwidth limit rule bound to the instance.</para>
                 /// </summary>
                 [NameInMap("InstanceQosRule")]
                 [Validation(Required=false)]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the public network bandwidth throttling rule. This rule applies only to premium bandwidth.</para>
+                    /// <para>The ID of the public network bandwidth limit rule (applies only to premium bandwidth).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>qos-3kh93uu0vdbka****</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 }
 
                 /// <summary>
-                /// <para>The total number of public network bandwidth throttling rules for the instance group.</para>
+                /// <para>The total number of public network bandwidth limit rules for the instance group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> Disks { get; set; }
             public class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks : TeaModel {
                 /// <summary>
-                /// <para>The disk size, in GB.</para>
+                /// <para>The disk size (unit: GB).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <summary>
             /// <para>The network type of the instance.</para>
             /// <remarks>
-            /// <para>This field is returned only for instance groups with a standard network.</para>
+            /// <para>This field is returned only for instance groups with standard networking.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The rendering type of the instance group.</para>
+            /// <para>The rendering method of the instance group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CPU</para>
@@ -502,7 +502,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that indicates the position where the current call returns. An empty value indicates that all data has been read.</para>
+        /// <para>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>

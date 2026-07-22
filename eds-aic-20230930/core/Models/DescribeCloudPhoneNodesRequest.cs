@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCloudPhoneNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bandwidth plan instance.</para>
+        /// <para>The instance ID of the bandwidth plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cbwp-bp17psa7fhxqmm*****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Only the subscription billing method is supported.</para>
+        /// <para>The billing type. Only subscription is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
+        /// <para>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. If a query does not return all results, NextToken is not empty. Use the returned NextToken in your next query to continue.</para>
+        /// <para>The pagination token for the next query. If the results of a query are not completely returned, the returned NextToken is not empty. You can pass the returned NextToken in the next request to continue the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of Cloud Phone matrix IDs.</para>
+        /// <para>The list of cloud phone matrix IDs.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the Cloud Phone matrix.</para>
+        /// <para>The name of the cloud phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_name</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> NodeNameList { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the Cloud Phone matrix.</para>
+        /// <para>The specifications of the cloud phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cpm.gx7.10xlarge</para>
@@ -90,8 +90,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ServerType { get; set; }
 
+        [NameInMap("SortKey")]
+        [Validation(Required=false)]
+        public string SortKey { get; set; }
+
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public string SortType { get; set; }
+
         /// <summary>
-        /// <para>The status of the Cloud Phone matrix.</para>
+        /// <para>The status of the cloud phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>

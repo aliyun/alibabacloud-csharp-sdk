@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCloudPhoneNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned on each page.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. Valid values:</para>
+        /// <para>Indicates whether a next pagination token exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>NextToken</b> is empty, there are no more results.</para>
-        /// </description></item>
-        /// <item><description><para>If <b>NextToken</b> has a value, it indicates the token for the next query.</para>
-        /// </description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> has a value, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,14 +34,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The details of the Cloud Phone matrices.</para>
+        /// <para>The details of the cloud phone matrix.</para>
         /// </summary>
         [NameInMap("NodeModel")]
         [Validation(Required=false)]
         public List<DescribeCloudPhoneNodesResponseBodyNodeModel> NodeModel { get; set; }
         public class DescribeCloudPhoneNodesResponseBodyNodeModel : TeaModel {
             /// <summary>
-            /// <para>The ID of the bandwidth plan.</para>
+            /// <para>The bandwidth plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cbwp-7xvrl7axet2qg6yia******</para>
@@ -53,7 +51,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageId { get; set; }
 
             /// <summary>
-            /// <para>The status of the bandwidth plan: 0 indicates initializing, 1 indicates normal, and 2 indicates deleted.</para>
+            /// <para>The status of the bandwidth plan. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: initializing</description></item>
+            /// <item><description>1: normal</description></item>
+            /// <item><description>2: deleted</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BandwidthPackageType { get; set; }
 
             /// <summary>
-            /// <para>An array of tag information.</para>
+            /// <para>The array of tag information.</para>
             /// </summary>
             [NameInMap("BizTags")]
             [Validation(Required=false)]
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
-            /// <para>The billing method.</para>
+            /// <para>The billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the subscription-based matrix.</para>
+            /// <para>The expiration time of the subscription matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-09 02:00:34</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtExpired { get; set; }
 
             /// <summary>
-            /// <para>The last modification time.</para>
+            /// <para>The time when the matrix was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-13 02:03:14</para>
@@ -182,14 +185,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NetworkId { get; set; }
 
             /// <summary>
-            /// <para>The network information.</para>
+            /// <para>The network-related information.</para>
             /// </summary>
             [NameInMap("NetworkInfos")]
             [Validation(Required=false)]
             public List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> NetworkInfos { get; set; }
             public class DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos : TeaModel {
                 /// <summary>
-                /// <para>The ID of the bandwidth plan instance.</para>
+                /// <para>The instance ID of the bandwidth plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cbwp-hn3tj409amvamz8mf****</para>
@@ -229,7 +232,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch in the virtual private cloud (VPC).</para>
+                /// <para>The vSwitch ID in the VPC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-j6cjgev6fv3ftw4f0****</para>
@@ -251,7 +254,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The Cloud Phone matrix ID.</para>
+            /// <para>The cloud phone matrix ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpn-ehs0yoedq8ntm****</para>
@@ -261,7 +264,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Cloud Phone matrix.</para>
+            /// <para>The name of the cloud phone matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>node_name</para>
@@ -271,7 +274,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The number of instances in the Cloud Phone matrix.</para>
+            /// <para>The number of instances provisioned under the cloud phone matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -281,14 +284,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? PhoneCount { get; set; }
 
             /// <summary>
-            /// <para>The information about the independent phone storage.</para>
+            /// <para>The independent device storage information.</para>
             /// </summary>
             [NameInMap("PhoneDataInfo")]
             [Validation(Required=false)]
             public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo PhoneDataInfo { get; set; }
             public class DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the independent phone storage.</para>
+                /// <para>The ID of the independent device storage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pd-dhusabisshj****</para>
@@ -298,7 +301,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 public string PhoneDataId { get; set; }
 
                 /// <summary>
-                /// <para>The size of the independent phone storage. Unit: GiB.</para>
+                /// <para>The storage capacity of the independent device storage. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -340,7 +343,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? ResolutionWidth { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the Cloud Phone matrix.</para>
+            /// <para>The specifications of the cloud phone matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpm.gx7.10xlarge</para>
@@ -350,7 +353,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>The size of the shared phone storage. Unit: GiB.</para>
+            /// <para>The size of the shared device storage. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -360,7 +363,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? ShareDataVolume { get; set; }
 
             /// <summary>
-            /// <para>The status of the Cloud Phone matrix.</para>
+            /// <para>The status of the cloud phone matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
