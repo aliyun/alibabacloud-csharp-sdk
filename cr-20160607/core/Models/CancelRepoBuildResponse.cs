@@ -11,7 +11,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cr20160607.Models
 {
-    public class CancelRepoBuildResponse : TeaModel {
+    public class CancelRepoBuildResponse : BaseModel {
         [NameInMap("headers")]
         [Validation(Required=true)]
         public Dictionary<string, string> Headers { get; set; }
