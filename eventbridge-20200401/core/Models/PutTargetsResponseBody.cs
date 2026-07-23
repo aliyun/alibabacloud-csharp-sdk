@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class PutTargetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description>Success: The call succeeded.</description></item>
-        /// <item><description>Other codes: The call failed. For more information about error codes, see Error codes.</description></item>
+        /// <item><description><para>Success: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other values indicate an error. For details, see Error codes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +26,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PutTargetsResponseBodyData Data { get; set; }
         public class PutTargetsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the failed event target.</para>
+            /// <para>Details about the event targets that failed to be processed.</para>
             /// </summary>
             [NameInMap("ErrorEntries")]
             [Validation(Required=false)]
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string EntryId { get; set; }
 
                 /// <summary>
-                /// <para>The error code returned.</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EventRuleTargetIdDuplicate</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned.</para>
+                /// <para>The description of the error.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The id of event target is duplicate!</para>
@@ -70,10 +72,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The number of failed event targets. Valid values:</para>
+            /// <para>The number of event targets that failed to be processed. A value of 0 indicates that all event targets were processed successfully.</para>
             /// <list type="bullet">
-            /// <item><description>0: All event targets succeeded.</description></item>
-            /// <item><description>An integer other than 0: indicates the number of failed event targets.</description></item>
+            /// <item><description></description></item>
+            /// <item><description></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -86,7 +88,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The error message that is returned if the request failed.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The event rule not existed!</para>
@@ -96,7 +98,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID that Alibaba Cloud generates for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6FB52207-7621-5292-BDF2-A17E2E984160</para>
@@ -106,11 +108,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The request is successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
-        /// </list>
+        /// <para>Returns true if the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

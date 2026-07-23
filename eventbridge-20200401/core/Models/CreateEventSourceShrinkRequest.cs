@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class CreateEventSourceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description of the event source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RabbitMQ event source</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the event bus with which the event source is associated.</para>
+        /// <para>The name of the event bus associated with the event source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventSourceName { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the external data source.</para>
+        /// <para>The configuration of the external data source.</para>
         /// </summary>
         [NameInMap("ExternalSourceConfig")]
         [Validation(Required=false)]
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public byte[] ExternalSourceType { get; set; }
 
         /// <summary>
-        /// <para>Specify whether to connect to an external data source.</para>
+        /// <para>Specifies whether to connect to an external data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -66,53 +69,56 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? LinkedExternalSource { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is HTTP events.</para>
+        /// <para>Parameters for an HTTP endpoint event source.</para>
         /// </summary>
         [NameInMap("SourceHttpEventParameters")]
         [Validation(Required=false)]
         public string SourceHttpEventParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is Message Queue for Apache Kafka.</para>
+        /// <para>Parameters for the Message Queue for Apache Kafka event source.</para>
         /// </summary>
         [NameInMap("SourceKafkaParameters")]
         [Validation(Required=false)]
         public string SourceKafkaParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if you specify Simple Message Queue (formerly MNS) (SMQ) as the event source. If you specify SMQ as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</para>
+        /// <para>Parameters for the Message Service (MNS) event source. The <c>RegionId</c>, <c>IsBase64Decode</c>, and <c>QueueName</c> parameters are required for this type.</para>
         /// </summary>
         [NameInMap("SourceMNSParameters")]
         [Validation(Required=false)]
         public string SourceMNSParametersShrink { get; set; }
 
+        /// <summary>
+        /// <para>Parameters for the Object Storage Service (OSS) event source.</para>
+        /// </summary>
         [NameInMap("SourceOSSEventParameters")]
         [Validation(Required=false)]
         public string SourceOSSEventParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is Message Queue for RabbitMQ.</para>
+        /// <para>Parameters for the Message Queue for RabbitMQ event source.</para>
         /// </summary>
         [NameInMap("SourceRabbitMQParameters")]
         [Validation(Required=false)]
         public string SourceRabbitMQParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is Message Queue for Apache RocketMQ.</para>
+        /// <para>Parameters for the Message Queue for Apache RocketMQ event source.</para>
         /// </summary>
         [NameInMap("SourceRocketMQParameters")]
         [Validation(Required=false)]
         public string SourceRocketMQParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if the event source is Log Service.</para>
+        /// <para>Parameters for the Simple Log Service (SLS) event source.</para>
         /// </summary>
         [NameInMap("SourceSLSParameters")]
         [Validation(Required=false)]
         public string SourceSLSParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured if you specify scheduled events as the event source.</para>
+        /// <para>Parameters for a scheduled event source.</para>
         /// </summary>
         [NameInMap("SourceScheduledEventParameters")]
         [Validation(Required=false)]

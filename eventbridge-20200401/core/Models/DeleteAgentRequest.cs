@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the agent.</para>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-agent</para>
         /// </summary>

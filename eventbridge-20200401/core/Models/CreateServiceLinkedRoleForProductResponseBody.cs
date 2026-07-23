@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateServiceLinkedRoleForProductResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</para>
+        /// <para>The status code of the request. \<c>Success\\</c> indicates that the request was successful. For more information about error codes, see the Error codes section.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,6 +20,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>2xx</b>: a 2xx status code.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: a 3xx status code.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: a 4xx status code.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: a 5xx status code.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>If this parameter is not specified, all HTTP status codes are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -28,7 +41,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request is successful, success is returned.</para>
+        /// <para>The returned message. If the request is successful, \<c>success\\</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -38,7 +51,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C36345A1-75F3-5A1A-BFCF-33B8271971FA</para>
@@ -48,7 +61,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</para>
+        /// <para>Indicates whether the request was successful. If the request is successful, \<c>true\\</c> is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

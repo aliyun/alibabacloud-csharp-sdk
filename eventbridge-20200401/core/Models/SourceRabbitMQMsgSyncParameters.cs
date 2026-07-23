@@ -13,6 +13,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string BodyDataType { get; set; }
 
+        [NameInMap("CloudMigrationTaskId")]
+        [Validation(Required=false)]
+        public string CloudMigrationTaskId { get; set; }
+
+        [NameInMap("DstClusterHost")]
+        [Validation(Required=false)]
+        public string DstClusterHost { get; set; }
+
+        [NameInMap("DstClusterType")]
+        [Validation(Required=false)]
+        public string DstClusterType { get; set; }
+
         [NameInMap("Endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
@@ -41,9 +53,25 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string PrefetchCount { get; set; }
 
+        [NameInMap("Regex")]
+        [Validation(Required=false)]
+        public string Regex { get; set; }
+
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
+
+        [NameInMap("SrcClusterHost")]
+        [Validation(Required=false)]
+        public string SrcClusterHost { get; set; }
+
+        [NameInMap("SrcClusterType")]
+        [Validation(Required=false)]
+        public string SrcClusterType { get; set; }
+
+        [NameInMap("SyncMetaType")]
+        [Validation(Required=false)]
+        public string SyncMetaType { get; set; }
 
         [NameInMap("Username")]
         [Validation(Required=false)]

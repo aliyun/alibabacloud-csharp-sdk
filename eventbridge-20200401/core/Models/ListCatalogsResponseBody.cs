@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListCatalogsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code, 200 indicates success</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCatalogsResponseBodyData Data { get; set; }
         public class ListCatalogsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Catalog list</para>
+            /// </summary>
             [NameInMap("Catalogs")]
             [Validation(Required=false)]
             public List<Catalog> Catalogs { get; set; }
 
             /// <summary>
+            /// <para>Next page token</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>Total count</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -44,6 +56,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
         /// </summary>
@@ -52,6 +66,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the operation was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

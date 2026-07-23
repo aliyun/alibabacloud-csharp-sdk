@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The Alibaba Cloud Resource Name (ARN) of the event bus.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>acs:eventbridge:cn-hangzhou:123456789098***:eventbus/default</para>
+                /// <para>acs:eventbridge:cn-hangzhou:12345678909****:eventbus/default</para>
                 /// </summary>
                 [NameInMap("EventBusARN")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D1DCF64A-3F2C-5323-ADCB-3F4DF30FAD2D</para>
+        /// <para>D1DCF64A-3F2C-5323-ADCB-3F4DF30F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteTableRequest : TeaModel {
         /// <summary>
-        /// <para>表所属的数据目录名称。可通过 ListCatalogs 获取</para>
+        /// <para>Data catalog the table belongs to</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>用于保证请求幂等性的Token。建议使用 UUID</para>
+        /// <para>Idempotent token</para>
         /// 
         /// <b>Example:</b>
         /// <para>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>要删除的事件表名称。删除后不可恢复，表中的所有数据将被永久清除。需同时指定所属 Catalog 和 Namespace。可通过 ListTables 获取</para>
+        /// <para>Table name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>表所属的命名空间名称。可通过 ListNamespaces 获取</para>
+        /// <para>Namespace the table belongs to</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>

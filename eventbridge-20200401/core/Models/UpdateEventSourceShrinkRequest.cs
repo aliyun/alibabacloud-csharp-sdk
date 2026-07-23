@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class UpdateEventSourceShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description of the event source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RabbitMQ event source</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

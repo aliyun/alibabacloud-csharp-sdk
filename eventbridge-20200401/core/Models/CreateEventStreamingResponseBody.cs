@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateEventStreamingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The returned code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success: The request is successful.</description></item>
-        /// <item><description>Other codes: The request failed. For more information about error codes, see Error codes.</description></item>
+        /// <item><description>Success: The request was successful.                                </description></item>
+        /// <item><description>Other values: An error occurred. For more information, see Error codes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateEventStreamingResponseBodyData Data { get; set; }
         public class CreateEventStreamingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ARN of the event stream.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the event stream.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:eventbridge:cn-hangzhou:164901546557****:eventstreaming/myeventstreaming</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The returned error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The name [xxxx] of event streaming in request is already exist!</para>
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B896B484-F16D-59DE-9E23-DD0E5C361108</para>
+        /// <para>B896B484-F16D-59DE-9E23-DD0E5C36****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. The value true indicates that the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful. The value true is returned if the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

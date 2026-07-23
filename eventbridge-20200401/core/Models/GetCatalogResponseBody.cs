@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetCatalogResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code. 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Catalog details</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Catalog Data { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

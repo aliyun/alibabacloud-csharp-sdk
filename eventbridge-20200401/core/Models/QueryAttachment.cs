@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryAttachment : TeaModel {
         /// <summary>
+        /// <para>Query statement</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;SELECT city, COUNT(*) AS cnt FROM events GROUP BY city&quot;</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// <para>Query execution result</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ExecutionResult Result { get; set; }

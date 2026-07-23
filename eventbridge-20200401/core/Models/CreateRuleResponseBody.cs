@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</para>
+        /// <para>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateRuleResponseBodyData Data { get; set; }
         public class CreateRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ARN of the event rule. The ARN is used for authorization.</para>
+            /// <para>The ARN of the event rule, which is used for authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/default/rule/MNSRule</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The returned error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Remote error. requestId: [xxxx], error code: [xxx], message: [The target in event rule is invalid! Endpoint is xxx</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

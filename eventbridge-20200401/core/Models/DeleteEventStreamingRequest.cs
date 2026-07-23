@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class DeleteEventStreamingRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the event stream that you want to delete.</para>
+        /// <para>The name of the event stream to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

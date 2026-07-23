@@ -10,25 +10,42 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateServiceLinkedRoleForProductRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the cloud service or the name of the service-linked role with which the cloud service is associated. Valid values:</para>
+        /// <para>The name of the cloud service or the service-linked role (SLR) that is associated with the service.</para>
         /// <list type="bullet">
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToFC: allows EventBridge to deliver events to Function Compute.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToSMS: allows EventBridge to deliver events to Short Message Service (SMS).</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToDirectMail: allows EventBridge to deliver events to Direct Mail.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceRocketMQ: allows EventBridge to integrate with ApsaraMQ for RocketMQ.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceMNS: allows EventBridge to integrate with Simple Message Queue (SMQ, formerly MNS).</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeConnectVPC: allows EventBridge to access virtual private clouds (VPCs).</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceActionTrail: allows EventBridge to integrate with ActionTrail.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceRabbitMQ: allows EventBridge to integrate with ApsaraMQ for RabbitMQ.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToRabbitMQ: allows EventBridge to deliver events to ApsaraMQ for RabbitMQ.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToRocketMQ: allows EventBridge to deliver events to ApsaraMQ for RocketMQ.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceCMS: allow EventBridge to integrate with CloudMonitor.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToKafka: allows EventBridge to deliver events to ApsaraMQ for Kafka.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceKafka: allows EventBridge to integrate with ApsaraMQ for Kafka.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToRDS: allows EventBridge to deliver events to ApsaraDB RDS.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSendToSAE: allows EventBridge to deliver events to Serverless App Engine (SAE).</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceMqtt: allows EventBridge to integrate with ApsaraMQ for MQTT.</description></item>
-        /// <item><description>AliyunServiceRoleForEventBridgeSourceSLS: allows EventBridge to integrate with Simple Log Service.</description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToFC: Delivers events to Function Compute (FC).</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToSMS: Delivers events as text messages to Short Message Service (SMS).</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToDirectMail: Delivers events as emails to Alibaba Cloud DirectMail.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceRocketMQ: Integrates messages from ApsaraMQ for RocketMQ instances into EventBridge.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceMNS: Integrates Message Service (MNS) into EventBridge.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeConnectVPC: Lets EventBridge access your Virtual Private Cloud (VPC) network.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceActionTrail: Uses operation records from ActionTrail as event sources.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceRabbitMQ: Integrates ApsaraMQ for RabbitMQ instances into EventBridge.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToRabbitMQ: Delivers EventBridge events to ApsaraMQ for RabbitMQ instances.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToRocketMQ: Delivers EventBridge events to ApsaraMQ for RocketMQ instances.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceCMS: Integrates CloudMonitor (CMS) into EventBridge.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToKafka: Delivers EventBridge events to ApsaraMQ for Kafka clusters.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceKafka: Integrates ApsaraMQ for Kafka into EventBridge.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToRDS: Delivers EventBridge events to Relational Database Service (RDS) instances.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSendToSAE: Delivers EventBridge events to Serverless App Engine (SAE) applications.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceMqtt: Integrates ApsaraMQ for MQTT into EventBridge.</para>
+        /// </description></item>
+        /// <item><description><para>AliyunServiceRoleForEventBridgeSourceSLS: Integrates Simple Log Service (SLS) into EventBridge.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The Alibaba Cloud Resource Name (ARN) of the event bus.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>acs:eventbridge:cn-hangzhou:SYSTEM:eventsource/acs.aliyuncvc</para>
+                /// <para>acs:eventbridge:cn-hangzhou:SYSTEM:eventbus/default/eventsource/acs.arms</para>
                 /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The time when the event source was created. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1607071602000</para>
+                /// <para>1602730025890</para>
                 /// </summary>
                 [NameInMap("Ctime")]
                 [Validation(Required=false)]
@@ -55,6 +55,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 /// <summary>
                 /// <para>The description of the event source.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Elastic Compute Service</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The name of the event source to which the event type belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>acs.aliyuncvc</para>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("EventBusName")]
                 [Validation(Required=false)]
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <para>The name of the event source.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>name</para>
+                    /// <para>acs.arms</para>
                     /// </summary>
                     [NameInMap("EventSourceName")]
                     [Validation(Required=false)]
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <para>The name of the group to which the event type belongs.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>aliyuncvc:MeetingEvent</para>
+                    /// <para>ActionTrail</para>
                     /// </summary>
                     [NameInMap("GroupName")]
                     [Validation(Required=false)]
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <para>The full name of the event type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>aliyuncvc:MeetingEvent:MeetingStateEvent</para>
+                    /// <para>arms:ActionTrail:AliyunServiceEvent</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <para>The short name of the event type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>MeetingStateEvent</para>
+                    /// <para>AliyunServiceEven</para>
                     /// </summary>
                     [NameInMap("ShortName")]
                     [Validation(Required=false)]
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The full name of the event source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>E-MapReduce</para>
+                /// <para>Application Real-Time Monitoring Service</para>
                 /// </summary>
                 [NameInMap("FullName")]
                 [Validation(Required=false)]
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The name of the event source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>acs.aliyuncvc</para>
+                /// <para>acs.arms</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 /// <para>The type of the event source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>AliyunOfficial</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

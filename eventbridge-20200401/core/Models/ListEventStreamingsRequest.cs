@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListEventStreamingsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. A maximum of 100 entries can be returned in a call.</para>
+        /// <para>The maximum number of entries returned per request. You can use this parameter together with NextToken to implement paging.</para>
+        /// <remarks>
+        /// <para>Notice: The maximum number of entries returned per request cannot exceed 100.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The name of the event stream that you want to query.</para>
+        /// <para>The name prefix of the event stream.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -30,7 +33,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NamePrefix { get; set; }
 
         /// <summary>
-        /// <para>If you configure Limit and excess return values exist, this parameter is returned.</para>
+        /// <para>If the number of entries exceeds the value of Limit, a NextToken is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,17 +53,22 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string SinkArn { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the event source.</para>
+        /// <para>The ARN of the event source.</para>
         /// </summary>
         [NameInMap("SourceArn")]
         [Validation(Required=false)]
         public string SourceArn { get; set; }
 
+        /// <summary>
+        /// <para>The tags used for filtering.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListEventStreamingsRequestTags> Tags { get; set; }
         public class ListEventStreamingsRequestTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mns</para>
             /// </summary>
@@ -69,6 +77,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mnstest</para>
             /// </summary>

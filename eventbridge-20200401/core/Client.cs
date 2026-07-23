@@ -18,7 +18,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"},
+                {"us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"},
+                {"eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "eventbridge-console.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "eventbridge-console.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "eventbridge-console.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "eventbridge-console.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eventbridge", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +68,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</para>
+        /// <para>Queries data using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +122,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</para>
+        /// <para>Queries data using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +176,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</para>
+        /// <para>Queries data using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +194,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用自然语言查询事件数据。输入问题后系统自动生成SQL并执行，返回结构化结果；若问题含糊则返回澄清提示。支持通过ConversationId进行多轮追问。</para>
+        /// <para>Queries data using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,8 +212,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
+        /// <para>Checks whether a service-linked role is authorized for an account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks for a service-linked role by name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckServiceLinkedRoleForProductRequest
@@ -225,8 +259,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
+        /// <para>Checks whether a service-linked role is authorized for an account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks for a service-linked role by name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckServiceLinkedRoleForProductRequest
@@ -267,8 +306,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
+        /// <para>Checks whether a service-linked role is authorized for an account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks for a service-linked role by name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckServiceLinkedRoleForProductRequest
@@ -285,8 +329,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a service-linked role is created for an Alibaba Cloud account.</para>
+        /// <para>Checks whether a service-linked role is authorized for an account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Checks for a service-linked role by name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckServiceLinkedRoleForProductRequest
@@ -303,7 +352,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Creates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -363,7 +412,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Creates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -423,7 +472,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Creates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +490,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Creates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -635,12 +684,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -716,12 +765,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -797,12 +846,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -820,12 +869,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a connection.</para>
+        /// <para>Creates a connection configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -991,12 +1040,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1128,12 +1177,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1265,12 +1314,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1288,12 +1337,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create an event source.</para>
+        /// <para>Creates an external event source.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1316,7 +1365,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event stream.</para>
+        /// <para>Creates an event stream.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1362,6 +1411,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterPattern))
             {
                 body["FilterPattern"] = request.FilterPattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunOptionsShrink))
             {
@@ -1409,7 +1462,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event stream.</para>
+        /// <para>Creates an event stream.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1455,6 +1508,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterPattern))
             {
                 body["FilterPattern"] = request.FilterPattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunOptionsShrink))
             {
@@ -1502,7 +1559,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event stream.</para>
+        /// <para>Creates an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1525,7 +1582,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event stream.</para>
+        /// <para>Creates an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1543,7 +1600,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建命名空间</para>
+        /// <para>Create Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1599,7 +1656,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建命名空间</para>
+        /// <para>Create Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1655,7 +1712,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建命名空间</para>
+        /// <para>Create Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1673,7 +1730,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建命名空间</para>
+        /// <para>Create Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1696,7 +1753,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event rule.</para>
+        /// <para>Creates an event rule.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1769,7 +1826,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event rule.</para>
+        /// <para>Creates an event rule.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1842,7 +1899,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event rule.</para>
+        /// <para>Creates an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1865,7 +1922,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create an event rule.</para>
+        /// <para>Creates an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1883,12 +1940,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1930,12 +1987,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1977,12 +2034,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2000,12 +2057,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a service-linked role for your cloud service.</para>
+        /// <para>Creates the service-linked role (SLR) that is associated with a specified product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2023,8 +2080,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Create a data catalog</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event target under the specified rule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTableRequest
@@ -2099,8 +2161,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Create a data catalog</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event target under the specified rule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTableRequest
@@ -2175,8 +2242,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Create a data catalog</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event target under the specified rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTableRequest
@@ -2193,8 +2265,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建表</para>
+        /// <para>Create a data catalog</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an event target under the specified rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTableRequest
@@ -2211,7 +2288,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteAgent</para>
+        /// <para>Deletes a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2253,7 +2330,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteAgent</para>
+        /// <para>Deletes a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2295,7 +2372,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteAgent</para>
+        /// <para>Deletes a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2313,7 +2390,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteAgent</para>
+        /// <para>Deletes a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2611,12 +2688,144 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a data integration job.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteEventAnalysisJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventAnalysisJobResponse
+        /// </returns>
+        public DeleteEventAnalysisJobResponse DeleteEventAnalysisJobWithOptions(DeleteEventAnalysisJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEventAnalysisJobShrinkRequest request = new DeleteEventAnalysisJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceResource))
+            {
+                request.SourceResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceResource, "SourceResource", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceResourceShrink))
+            {
+                body["SourceResource"] = request.SourceResourceShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEventAnalysisJob",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEventAnalysisJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data integration job.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteEventAnalysisJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventAnalysisJobResponse
+        /// </returns>
+        public async Task<DeleteEventAnalysisJobResponse> DeleteEventAnalysisJobWithOptionsAsync(DeleteEventAnalysisJobRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteEventAnalysisJobShrinkRequest request = new DeleteEventAnalysisJobShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SourceResource))
+            {
+                request.SourceResourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceResource, "SourceResource", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceResourceShrink))
+            {
+                body["SourceResource"] = request.SourceResourceShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEventAnalysisJob",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEventAnalysisJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data integration job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventAnalysisJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventAnalysisJobResponse
+        /// </returns>
+        public DeleteEventAnalysisJobResponse DeleteEventAnalysisJob(DeleteEventAnalysisJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEventAnalysisJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a data integration job.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventAnalysisJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventAnalysisJobResponse
+        /// </returns>
+        public async Task<DeleteEventAnalysisJobResponse> DeleteEventAnalysisJobAsync(DeleteEventAnalysisJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEventAnalysisJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an event bus.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event bus.</para>
+        /// <para>Deletes an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2663,7 +2872,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event bus.</para>
+        /// <para>Deletes an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2710,7 +2919,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event bus.</para>
+        /// <para>Deletes an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2733,7 +2942,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event bus.</para>
+        /// <para>Deletes an event bus.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2751,12 +2960,132 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventHouseRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventHouseRuntimeResponse
+        /// </returns>
+        public DeleteEventHouseRuntimeResponse DeleteEventHouseRuntimeWithOptions(DeleteEventHouseRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEventHouseRuntime",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEventHouseRuntimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventHouseRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventHouseRuntimeResponse
+        /// </returns>
+        public async Task<DeleteEventHouseRuntimeResponse> DeleteEventHouseRuntimeWithOptionsAsync(DeleteEventHouseRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEventHouseRuntime",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEventHouseRuntimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventHouseRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventHouseRuntimeResponse
+        /// </returns>
+        public DeleteEventHouseRuntimeResponse DeleteEventHouseRuntime(DeleteEventHouseRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEventHouseRuntimeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEventHouseRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEventHouseRuntimeResponse
+        /// </returns>
+        public async Task<DeleteEventHouseRuntimeResponse> DeleteEventHouseRuntimeAsync(DeleteEventHouseRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEventHouseRuntimeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an event source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event source.</para>
+        /// <para>Deletes an event source.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2807,7 +3136,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event source.</para>
+        /// <para>Deletes an event source.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2858,7 +3187,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event source.</para>
+        /// <para>Deletes an event source.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2881,7 +3210,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event source.</para>
+        /// <para>Deletes an event source.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2904,7 +3233,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event stream.</para>
+        /// <para>Deletes an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2951,7 +3280,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event stream.</para>
+        /// <para>Deletes an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2998,7 +3327,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event stream.</para>
+        /// <para>Deletes an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3021,7 +3350,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to delete an event stream.</para>
+        /// <para>Deletes an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3039,7 +3368,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Delete Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3091,7 +3420,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Delete Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3143,7 +3472,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Delete Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3161,7 +3490,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除命名空间</para>
+        /// <para>Delete Namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3327,7 +3656,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Delete table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3383,7 +3712,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Delete table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3439,7 +3768,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Delete table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3457,7 +3786,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除表</para>
+        /// <para>Delete table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3791,8 +4120,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
+        /// <para>Discovers the schema and simple data of an event source, such as MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Discovers information about an event source.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DiscoverEventSourceRequest
@@ -3839,8 +4173,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
+        /// <para>Discovers the schema and simple data of an event source, such as MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Discovers information about an event source.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DiscoverEventSourceRequest
@@ -3887,8 +4226,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
+        /// <para>Discovers the schema and simple data of an event source, such as MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Discovers information about an event source.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DiscoverEventSourceRequest
@@ -3905,8 +4249,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Discovers the schema and simple data of an event source (such as MySQL).</para>
+        /// <para>Discovers the schema and simple data of an event source, such as MySQL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Discovers information about an event source.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DiscoverEventSourceRequest
@@ -4071,7 +4420,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EventCenterQueryEvents</para>
+        /// <para>Queries events from the event center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4133,7 +4482,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EventCenterQueryEvents</para>
+        /// <para>Queries events from the event center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4195,7 +4544,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EventCenterQueryEvents</para>
+        /// <para>Queries events from the event center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4213,7 +4562,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>EventCenterQueryEvents</para>
+        /// <para>Queries events from the event center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4231,7 +4580,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</para>
+        /// <para>Retrieves agent metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4273,7 +4622,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</para>
+        /// <para>Retrieves agent metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4315,7 +4664,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</para>
+        /// <para>Retrieves agent metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4333,7 +4682,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前Agent的基本信息，包括名称、描述和已绑定的数据目录列表。用于了解当前接入点的能力范围。</para>
+        /// <para>Retrieves agent metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4491,7 +4840,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据目录的详细信息，包括目录名称和描述。传入Name即可查询。</para>
+        /// <para>Get data catalog</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4539,7 +4888,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据目录的详细信息，包括目录名称和描述。传入Name即可查询。</para>
+        /// <para>Get data catalog</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4587,7 +4936,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据目录的详细信息，包括目录名称和描述。传入Name即可查询。</para>
+        /// <para>Get data catalog</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4605,7 +4954,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据目录的详细信息，包括目录名称和描述。传入Name即可查询。</para>
+        /// <para>Get data catalog</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4623,12 +4972,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4670,12 +5019,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4717,12 +5066,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4740,12 +5089,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the configurations of a connection.</para>
+        /// <para>Queries the configuration information of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4903,12 +5252,132 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event stream.</para>
+        /// <para>Queries the status and operation progress of an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventHouseRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventHouseRuntimeResponse
+        /// </returns>
+        public GetEventHouseRuntimeResponse GetEventHouseRuntimeWithOptions(GetEventHouseRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEventHouseRuntime",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventHouseRuntimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status and operation progress of an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventHouseRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventHouseRuntimeResponse
+        /// </returns>
+        public async Task<GetEventHouseRuntimeResponse> GetEventHouseRuntimeWithOptionsAsync(GetEventHouseRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetEventHouseRuntime",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetEventHouseRuntimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status and operation progress of an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventHouseRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventHouseRuntimeResponse
+        /// </returns>
+        public GetEventHouseRuntimeResponse GetEventHouseRuntime(GetEventHouseRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetEventHouseRuntimeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status and operation progress of an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetEventHouseRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetEventHouseRuntimeResponse
+        /// </returns>
+        public async Task<GetEventHouseRuntimeResponse> GetEventHouseRuntimeAsync(GetEventHouseRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetEventHouseRuntimeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4950,12 +5419,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4997,12 +5466,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5020,12 +5489,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event stream.</para>
+        /// <para>Retrieves the details of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5043,7 +5512,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定命名空间的详细信息。需传入Catalog和Name。</para>
+        /// <para>Get namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5095,7 +5564,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定命名空间的详细信息。需传入Catalog和Name。</para>
+        /// <para>Get namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5147,7 +5616,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定命名空间的详细信息。需传入Catalog和Name。</para>
+        /// <para>Get namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5165,7 +5634,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定命名空间的详细信息。需传入Catalog和Name。</para>
+        /// <para>Get namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5183,12 +5652,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event rule.</para>
+        /// <para>Retrieves the details of an event rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// <para>Gets the details of an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5234,12 +5703,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event rule.</para>
+        /// <para>Retrieves the details of an event rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// <para>Gets the details of an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5285,12 +5754,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event rule.</para>
+        /// <para>Retrieves the details of an event rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// <para>Gets the details of an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5308,12 +5777,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an event rule.</para>
+        /// <para>Retrieves the details of an event rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query the details of an event rule.</para>
+        /// <para>Gets the details of an event rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5331,7 +5800,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据表的完整结构，包括所有列的名称、类型和描述。在编写查询前调用此工具了解表结构。</para>
+        /// <para>Get Table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5856,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据表的完整结构，包括所有列的名称、类型和描述。在编写查询前调用此工具了解表结构。</para>
+        /// <para>Get Table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5443,7 +5912,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据表的完整结构，包括所有列的名称、类型和描述。在编写查询前调用此工具了解表结构。</para>
+        /// <para>Get Table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5461,7 +5930,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据表的完整结构，包括所有列的名称、类型和描述。在编写查询前调用此工具了解表结构。</para>
+        /// <para>Get Table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5479,7 +5948,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Agent 列表</para>
+        /// <para>Retrieves a list of custom agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5529,7 +5998,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Agent 列表</para>
+        /// <para>Retrieves a list of custom agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5579,7 +6048,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Agent 列表</para>
+        /// <para>Retrieves a list of custom agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5597,7 +6066,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Agent 列表</para>
+        /// <para>Retrieves a list of custom agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5887,7 +6356,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前Agent可访问的所有数据目录。每个Catalog是一个独立的数据源，内含多个命名空间和表。支持分页。</para>
+        /// <para>Query data catalog list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5933,7 +6402,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前Agent可访问的所有数据目录。每个Catalog是一个独立的数据源，内含多个命名空间和表。支持分页。</para>
+        /// <para>Query data catalog list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5979,7 +6448,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前Agent可访问的所有数据目录。每个Catalog是一个独立的数据源，内含多个命名空间和表。支持分页。</para>
+        /// <para>Query data catalog list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5997,7 +6466,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前Agent可访问的所有数据目录。每个Catalog是一个独立的数据源，内含多个命名空间和表。支持分页。</para>
+        /// <para>Query data catalog list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6015,12 +6484,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6074,12 +6543,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6133,12 +6602,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6156,12 +6625,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query connections.</para>
+        /// <para>Queries the list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6335,12 +6804,140 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of EventHouse runtimes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventHouseRuntimesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventHouseRuntimesResponse
+        /// </returns>
+        public ListEventHouseRuntimesResponse ListEventHouseRuntimesWithOptions(ListEventHouseRuntimesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEventHouseRuntimes",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventHouseRuntimesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of EventHouse runtimes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventHouseRuntimesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventHouseRuntimesResponse
+        /// </returns>
+        public async Task<ListEventHouseRuntimesResponse> ListEventHouseRuntimesWithOptionsAsync(ListEventHouseRuntimesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEventHouseRuntimes",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEventHouseRuntimesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of EventHouse runtimes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventHouseRuntimesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventHouseRuntimesResponse
+        /// </returns>
+        public ListEventHouseRuntimesResponse ListEventHouseRuntimes(ListEventHouseRuntimesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEventHouseRuntimesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of EventHouse runtimes.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEventHouseRuntimesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEventHouseRuntimesResponse
+        /// </returns>
+        public async Task<ListEventHouseRuntimesResponse> ListEventHouseRuntimesAsync(ListEventHouseRuntimesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEventHouseRuntimesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries event streams.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event streams.</para>
+        /// <para>Queries event streams.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6407,7 +7004,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event streams.</para>
+        /// <para>Queries event streams.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6474,7 +7071,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event streams.</para>
+        /// <para>Queries event streams.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6497,7 +7094,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event streams.</para>
+        /// <para>Queries event streams.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6515,7 +7112,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定数据目录下的所有命名空间。命名空间用于组织同一目录内的表，类似数据库中的schema。支持分页。</para>
+        /// <para>Query namespace list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6565,7 +7162,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定数据目录下的所有命名空间。命名空间用于组织同一目录内的表，类似数据库中的schema。支持分页。</para>
+        /// <para>Query namespace list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6615,7 +7212,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定数据目录下的所有命名空间。命名空间用于组织同一目录内的表，类似数据库中的schema。支持分页。</para>
+        /// <para>Query namespace list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6633,7 +7230,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定数据目录下的所有命名空间。命名空间用于组织同一目录内的表，类似数据库中的schema。支持分页。</para>
+        /// <para>Query namespace list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6815,7 +7412,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定命名空间下的数据表，支持按表名模糊搜索。返回表名和描述列表，支持分页。</para>
+        /// <para>Query table list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6869,7 +7466,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定命名空间下的数据表，支持按表名模糊搜索。返回表名和描述列表，支持分页。</para>
+        /// <para>Query table list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6923,7 +7520,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定命名空间下的数据表，支持按表名模糊搜索。返回表名和描述列表，支持分页。</para>
+        /// <para>Query table list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6941,7 +7538,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定命名空间下的数据表，支持按表名模糊搜索。返回表名和描述列表，支持分页。</para>
+        /// <para>Query table list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7111,12 +7708,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all custom event sources.</para>
+        /// <para>This operation queries all custom event sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query custom event sources.</para>
+        /// <para>Queries all custom event sources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7170,12 +7767,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all custom event sources.</para>
+        /// <para>This operation queries all custom event sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query custom event sources.</para>
+        /// <para>Queries all custom event sources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7229,12 +7826,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all custom event sources.</para>
+        /// <para>This operation queries all custom event sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query custom event sources.</para>
+        /// <para>Queries all custom event sources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7252,12 +7849,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all custom event sources.</para>
+        /// <para>This operation queries all custom event sources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query custom event sources.</para>
+        /// <para>Queries all custom event sources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7275,12 +7872,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7322,12 +7919,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7369,12 +7966,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7392,12 +7989,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to stop an event stream that is running.</para>
+        /// <para>Pauses a running event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7415,7 +8012,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</para>
+        /// <para>Polls for natural language query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7461,7 +8058,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</para>
+        /// <para>Polls for natural language query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7507,7 +8104,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</para>
+        /// <para>Polls for natural language query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7525,7 +8122,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>轮询AskLuma的异步查询结果。传入AskLuma返回的MessageId，获取执行状态和最终结果；状态为RUNNING时应立即重试，无需退避。</para>
+        /// <para>Polls for natural language query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7543,12 +8140,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates event targets under a rule.</para>
+        /// <para>Create or update event targets for the specified rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// <para>Creates or updates event targets for a specified rule.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7604,12 +8201,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates event targets under a rule.</para>
+        /// <para>Create or update event targets for the specified rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// <para>Creates or updates event targets for a specified rule.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7665,12 +8262,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates event targets under a rule.</para>
+        /// <para>Create or update event targets for the specified rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// <para>Creates or updates event targets for a specified rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7688,12 +8285,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates event targets under a rule.</para>
+        /// <para>Create or update event targets for the specified rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create or update event targets under a rule.</para>
+        /// <para>Creates or updates event targets for a specified rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7711,7 +8308,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Queries the history logs of natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7761,7 +8358,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Queries the history logs of natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7811,7 +8408,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Queries the history logs of natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7829,7 +8426,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Queries the history logs of natural language queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8003,7 +8600,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接执行SQL语句查询事件仓数据。适用于已知确切SQL的场景，无需自然语言转换，无对话上下文。返回结构化结果集。</para>
+        /// <para>Query event store data</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8049,7 +8646,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接执行SQL语句查询事件仓数据。适用于已知确切SQL的场景，无需自然语言转换，无对话上下文。返回结构化结果集。</para>
+        /// <para>Query event store data</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8095,7 +8692,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接执行SQL语句查询事件仓数据。适用于已知确切SQL的场景，无需自然语言转换，无对话上下文。返回结构化结果集。</para>
+        /// <para>Query event store data</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8113,7 +8710,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直接执行SQL语句查询事件仓数据。适用于已知确切SQL的场景，无需自然语言转换，无对话上下文。返回结构化结果集。</para>
+        /// <para>Query event store data</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8435,12 +9032,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event traces by time range.</para>
+        /// <para>This operation queries <c>event trace</c> data within a <c>time range</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// <para>Queries for event traces within a specified time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8514,12 +9111,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event traces by time range.</para>
+        /// <para>This operation queries <c>event trace</c> data within a <c>time range</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// <para>Queries for event traces within a specified time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8593,12 +9190,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event traces by time range.</para>
+        /// <para>This operation queries <c>event trace</c> data within a <c>time range</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// <para>Queries for event traces within a specified time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8616,12 +9213,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries event traces by time range.</para>
+        /// <para>This operation queries <c>event trace</c> data within a <c>time range</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query event traces by time range.</para>
+        /// <para>Queries for event traces within a specified time range.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8639,12 +9236,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8686,12 +9283,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8733,12 +9330,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8756,12 +9353,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to enable a created or deactivated event stream.</para>
+        /// <para>Enables a created or disabled event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8779,12 +9376,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// <para>Tests if an event pattern matches a given event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// <para>Use this action to test an event pattern before you apply it to a rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8830,12 +9427,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// <para>Tests if an event pattern matches a given event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// <para>Use this action to test an event pattern before you apply it to a rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8881,12 +9478,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// <para>Tests if an event pattern matches a given event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// <para>Use this action to test an event pattern before you apply it to a rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8904,12 +9501,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the event pattern matches the provided JSON format.</para>
+        /// <para>Tests if an event pattern matches a given event.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to check whether the event pattern matches the provided JSON format.</para>
+        /// <para>Use this action to test an event pattern before you apply it to a rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8927,12 +9524,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether event source configurations are available.</para>
+        /// <para>Checks whether the event source configuration is active.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// <para>Returns a list of all external event sources.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8980,12 +9577,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether event source configurations are available.</para>
+        /// <para>Checks whether the event source configuration is active.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// <para>Returns a list of all external event sources.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9033,12 +9630,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether event source configurations are available.</para>
+        /// <para>Checks whether the event source configuration is active.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// <para>Returns a list of all external event sources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9056,12 +9653,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether event source configurations are available.</para>
+        /// <para>Checks whether the event source configuration is active.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to query all custom event sources.</para>
+        /// <para>Returns a list of all external event sources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9079,7 +9676,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Updates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9143,7 +9740,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Updates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9207,7 +9804,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Updates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9225,7 +9822,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询历史会话</para>
+        /// <para>Updates a custom agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9419,12 +10016,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to update a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9500,12 +10097,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to update a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9581,12 +10178,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to update a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9604,12 +10201,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to update a connection.</para>
+        /// <para>Updates the connection configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9771,6 +10368,134 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateEventBusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEventHouseRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventHouseRuntimeResponse
+        /// </returns>
+        public UpdateEventHouseRuntimeResponse UpdateEventHouseRuntimeWithOptions(UpdateEventHouseRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                query["Cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEventHouseRuntime",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEventHouseRuntimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEventHouseRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventHouseRuntimeResponse
+        /// </returns>
+        public async Task<UpdateEventHouseRuntimeResponse> UpdateEventHouseRuntimeWithOptionsAsync(UpdateEventHouseRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                query["Cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEventHouseRuntime",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEventHouseRuntimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEventHouseRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventHouseRuntimeResponse
+        /// </returns>
+        public UpdateEventHouseRuntimeResponse UpdateEventHouseRuntime(UpdateEventHouseRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateEventHouseRuntimeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an EventHouse Runtime.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEventHouseRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEventHouseRuntimeResponse
+        /// </returns>
+        public async Task<UpdateEventHouseRuntimeResponse> UpdateEventHouseRuntimeAsync(UpdateEventHouseRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateEventHouseRuntimeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10095,12 +10820,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10147,6 +10872,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["FilterPattern"] = request.FilterPattern;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunOptionsShrink))
             {
                 body["RunOptions"] = request.RunOptionsShrink;
@@ -10184,12 +10913,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10236,6 +10965,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["FilterPattern"] = request.FilterPattern;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunOptionsShrink))
             {
                 body["RunOptions"] = request.RunOptionsShrink;
@@ -10273,12 +11006,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10296,12 +11029,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</para>
+        /// <para>Modifies the basic information, event source information, event filtering pattern, or event target information of an event stream.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10319,8 +11052,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API operation allows you to query event streams.</para>
+        /// <para>Querying an event stream</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEventStreamingBusinessOptionRequest
@@ -10373,8 +11111,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API operation allows you to query event streams.</para>
+        /// <para>Querying an event stream</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEventStreamingBusinessOptionRequest
@@ -10427,8 +11170,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API operation allows you to query event streams.</para>
+        /// <para>Querying an event stream</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEventStreamingBusinessOptionRequest
@@ -10445,8 +11193,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API operation allows you to query event streams.</para>
+        /// <para>Querying an event stream</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the billing method, compute unit (CU) resources, and other configurations of an event stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateEventStreamingBusinessOptionRequest
@@ -10463,7 +11216,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改命名空间</para>
+        /// <para>Modify namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10519,7 +11272,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改命名空间</para>
+        /// <para>Modify namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10575,7 +11328,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改命名空间</para>
+        /// <para>Modify namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10593,7 +11346,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改命名空间</para>
+        /// <para>Modify namespace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10783,8 +11536,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改表</para>
+        /// <para>Update table</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an event rule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateTableRequest
@@ -10891,8 +11649,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改表</para>
+        /// <para>Update table</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an event rule.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateTableRequest
@@ -10999,8 +11762,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改表</para>
+        /// <para>Update table</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an event rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTableRequest
@@ -11017,8 +11785,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改表</para>
+        /// <para>Update table</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of an event rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTableRequest

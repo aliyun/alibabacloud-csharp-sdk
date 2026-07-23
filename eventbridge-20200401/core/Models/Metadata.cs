@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class Metadata : TeaModel {
+        /// <summary>
+        /// <para>Associated data</para>
+        /// </summary>
         [NameInMap("Attachments")]
         [Validation(Required=false)]
         public List<MetadataAttachments> Attachments { get; set; }
         public class MetadataAttachments : TeaModel {
             /// <summary>
+            /// <para>ARN of the associated data</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs:eventbridge:cn-hangzhou:12345:eventhouse/system-rocketmq/namespace/rmq-cn-xxx/table/order</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Arn { get; set; }
 
             /// <summary>
+            /// <para>Data type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>inner-resource/event-table</para>
             /// </summary>

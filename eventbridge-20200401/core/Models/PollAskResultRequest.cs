@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class PollAskResultRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string AgentName { get; set; }
 
         /// <summary>
+        /// <para>The message ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

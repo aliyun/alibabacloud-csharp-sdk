@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class StartEventStreamingRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the event stream that you want to enable.</para>
+        /// <para>The name of the event stream to enable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

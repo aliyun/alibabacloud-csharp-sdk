@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The value Success indicates that the request is successful.</para>
+        /// <para>The API status or POP error code. Valid values: Success: The request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The list of returned connection configurations.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListConnectionsResponseBodyData Data { get; set; }
         public class ListConnectionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The connections.</para>
+            /// <para>The list of returned connection configurations.</para>
             /// </summary>
             [NameInMap("Connections")]
             [Validation(Required=false)]
             public List<ListConnectionsResponseBodyDataConnections> Connections { get; set; }
             public class ListConnectionsResponseBodyDataConnections : TeaModel {
                 /// <summary>
-                /// <para>The parameters that are returned for authentication.</para>
+                /// <para>The data structure of authentication parameters.</para>
                 /// </summary>
                 [NameInMap("AuthParameters")]
                 [Validation(Required=false)]
                 public ListConnectionsResponseBodyDataConnectionsAuthParameters AuthParameters { get; set; }
                 public class ListConnectionsResponseBodyDataConnectionsAuthParameters : TeaModel {
                     /// <summary>
-                    /// <para>The parameters that are returned for API key authentication.</para>
+                    /// <para>The data structure of API key authentication parameters.</para>
                     /// </summary>
                     [NameInMap("ApiKeyAuthParameters")]
                     [Validation(Required=false)]
@@ -70,11 +70,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The authentication method. Valid values:</para>
+                    /// <para>The authentication type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>BASIC_AUTH: basic authentication.</description></item>
-                    /// <item><description>API_KEY_AUTH: API key authentication.</description></item>
-                    /// <item><description>OAUTH_AUTH: OAuth authentication.</description></item>
+                    /// <item><description><para>BASIC: BASIC_AUTH</para>
+                    /// </description></item>
+                    /// <item><description><para>API KEY: API_KEY_AUTH</para>
+                    /// </description></item>
+                    /// <item><description><para>OAUTH: OAUTH_AUTH</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -85,14 +88,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string AuthorizationType { get; set; }
 
                     /// <summary>
-                    /// <para>The parameters that are returned for basic authentication.</para>
+                    /// <para>The data structure of basic authentication parameters.</para>
                     /// </summary>
                     [NameInMap("BasicAuthParameters")]
                     [Validation(Required=false)]
                     public ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters BasicAuthParameters { get; set; }
                     public class ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters : TeaModel {
                         /// <summary>
-                        /// <para>The password for basic authentication.</para>
+                        /// <para>The password used for basic authentication.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>admin</para>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Password { get; set; }
 
                         /// <summary>
-                        /// <para>The username for basic authentication.</para>
+                        /// <para>The username used for basic authentication.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>admin</para>
@@ -114,14 +117,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The parameters that are returned for OAuth authentication.</para>
+                    /// <para>The data structure of OAuth request parameters.</para>
                     /// </summary>
                     [NameInMap("OAuthParameters")]
                     [Validation(Required=false)]
                     public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters OAuthParameters { get; set; }
                     public class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters : TeaModel {
                         /// <summary>
-                        /// <para>The endpoint that is used to obtain the OAuth token.</para>
+                        /// <para>The endpoint URL for obtaining the OAuth token.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string AuthorizationEndpoint { get; set; }
 
                         /// <summary>
-                        /// <para>The parameters that are returned for the client.</para>
+                        /// <para>The data structure of client parameters.</para>
                         /// </summary>
                         [NameInMap("ClientParameters")]
                         [Validation(Required=false)]
@@ -148,7 +151,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                             public string ClientID { get; set; }
 
                             /// <summary>
-                            /// <para>The AccessKey secret of the client.</para>
+                            /// <para>The client secret of the application.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>ClientSecret</para>
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         }
 
                         /// <summary>
-                        /// <para>The HTTP request method. Valid values:</para>
+                        /// <para>The HTTP method used for the request. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description>GET</description></item>
                         /// <item><description>POST</description></item>
@@ -175,21 +178,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string HttpMethod { get; set; }
 
                         /// <summary>
-                        /// <para>The request parameters of OAuth authentication.</para>
+                        /// <para>The request parameters used for OAuth authentication.</para>
                         /// </summary>
                         [NameInMap("OAuthHttpParameters")]
                         [Validation(Required=false)]
                         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters { get; set; }
                         public class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters : TeaModel {
                             /// <summary>
-                            /// <para>The parameters that are configured for the request.</para>
+                            /// <para>The list of request parameter data structures.</para>
                             /// </summary>
                             [NameInMap("BodyParameters")]
                             [Validation(Required=false)]
                             public List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> BodyParameters { get; set; }
                             public class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters : TeaModel {
                                 /// <summary>
-                                /// <para>Indicates whether authentication is enabled.</para>
+                                /// <para>Specifies whether the value is used for authentication.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>false</para>
@@ -199,7 +202,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                                 public string IsValueSecret { get; set; }
 
                                 /// <summary>
-                                /// <para>The key of the request body.</para>
+                                /// <para>The key of the body request parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>name</para>
@@ -209,7 +212,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                                 public string Key { get; set; }
 
                                 /// <summary>
-                                /// <para>The value of the request body.</para>
+                                /// <para>The value of the body request parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>demo</para>
@@ -221,14 +224,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                             }
 
                             /// <summary>
-                            /// <para>The parameters that are returned for the request header.</para>
+                            /// <para>The list of header parameters.</para>
                             /// </summary>
                             [NameInMap("HeaderParameters")]
                             [Validation(Required=false)]
                             public List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters> HeaderParameters { get; set; }
                             public class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters : TeaModel {
                                 /// <summary>
-                                /// <para>Indicates whether authentication is enabled.</para>
+                                /// <para>Specifies whether the value is used for authentication.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>false</para>
@@ -238,7 +241,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                                 public string IsValueSecret { get; set; }
 
                                 /// <summary>
-                                /// <para>The key of the request header.</para>
+                                /// <para>The key of the header parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>name</para>
@@ -248,7 +251,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                                 public string Key { get; set; }
 
                                 /// <summary>
-                                /// <para>The value of the request header.</para>
+                                /// <para>The value of the header parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>demo</para>
@@ -260,14 +263,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                             }
 
                             /// <summary>
-                            /// <para>The parameters that are returned for the request path.</para>
+                            /// <para>The data structure of query string parameters.</para>
                             /// </summary>
                             [NameInMap("QueryStringParameters")]
                             [Validation(Required=false)]
                             public List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters> QueryStringParameters { get; set; }
                             public class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters : TeaModel {
                                 /// <summary>
-                                /// <para>Indicates whether authentication is enabled.</para>
+                                /// <para>Specifies whether the value is used for authentication.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>false</para>
@@ -277,7 +280,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                                 public string IsValueSecret { get; set; }
 
                                 /// <summary>
-                                /// <para>The key of the request path.</para>
+                                /// <para>The key of the query string parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>name</para>
@@ -287,7 +290,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                                 public string Key { get; set; }
 
                                 /// <summary>
-                                /// <para>The value of the request path.</para>
+                                /// <para>The value of the query string parameter.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>demo</para>
@@ -305,7 +308,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The connection name.</para>
+                /// <para>The name of the connection configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>connection-name</para>
@@ -315,17 +318,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ConnectionName { get; set; }
 
                 /// <summary>
-                /// <para>The connection description.</para>
+                /// <para>The description of the connection configuration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The description of the connection.</para>
+                /// <para>Description of the connection configuration</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time when the connection was created.</para>
+                /// <para>The timestamp when the data source was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1592838994234</para>
@@ -335,7 +338,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the connection.</para>
+                /// <para>The ID of the connection configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1141093</para>
@@ -345,7 +348,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The parameters that are returned for the network.</para>
+                /// <para>The data structure of the network configuration.</para>
                 /// </summary>
                 [NameInMap("NetworkParameters")]
                 [Validation(Required=false)]
@@ -353,8 +356,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public class ListConnectionsResponseBodyDataConnectionsNetworkParameters : TeaModel {
                     /// <summary>
                     /// <list type="bullet">
-                    /// <item><description>PublicNetwork: the Internet.</description></item>
-                    /// <item><description>PrivateNetwork: virtual private cloud (VPC).</description></item>
+                    /// <item><description><para>Public network: PublicNetwork</para>
+                    /// </description></item>
+                    /// <item><description><para>Virtual private cloud: PrivateNetwork</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -375,7 +380,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID.</para>
+                    /// <para>The ID of the virtual private cloud (VPC).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eb-test/vpc-bp1symadadwnwgmqud</para>
@@ -397,7 +402,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>数据源连接参数（JSON 对象）。仅数据源类型连接返回，Http 类型为空。字段定义参考 GetConnectionType 返回的 ParamsSchema</para>
+                /// <para>The data source connection parameters (JSON object). This field is only returned for data source type connections and is empty for Http type. For field definitions, refer to the ParamsSchema returned by GetConnectionType.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
@@ -407,7 +412,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public object Parameters { get; set; }
 
                 /// <summary>
-                /// <para>连接类型。可选值：Http、MySQL、PostgreSQL、Elasticsearch</para>
+                /// <para>The connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Http</para>
@@ -419,7 +424,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -429,7 +434,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public float? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>If excess return values exist, this parameter is returned.</para>
+            /// <para>If there are more results to fetch, NextToken is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -439,7 +444,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -451,7 +456,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -461,7 +466,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</para>
+        /// <para>Common parameter. The ID of each request is unique and can be used for troubleshooting and issue locating.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E3619976-8714-5D88-BBA2-6983D798A8BB</para>

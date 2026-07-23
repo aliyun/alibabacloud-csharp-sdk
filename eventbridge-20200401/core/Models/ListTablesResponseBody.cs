@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListTablesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Response data</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;测试事件表&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public ListTablesResponseBodyData Data { get; set; }
         public class ListTablesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Next page token</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
+            /// <summary>
+            /// <para>Table entities. Each element represents a specific table, including but not limited to information such as table name and table ID.</para>
+            /// </summary>
             [NameInMap("Tables")]
             [Validation(Required=false)]
             public List<Table> Tables { get; set; }
 
             /// <summary>
+            /// <para>Total count</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
+        /// <para>API response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

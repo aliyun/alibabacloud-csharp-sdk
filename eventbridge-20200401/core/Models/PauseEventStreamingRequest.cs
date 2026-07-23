@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class PauseEventStreamingRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the event stream that you want to stop.</para>
+        /// <para>The name of the event stream to be paused.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

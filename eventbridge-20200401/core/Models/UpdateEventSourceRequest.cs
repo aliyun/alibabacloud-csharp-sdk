@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
     public class UpdateEventSourceRequest : TeaModel {
         /// <summary>
         /// <para>The description of the event source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RabbitMQ event source</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the Message Queue for Apache Kafka instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cbwp-bp1o3m66wcjgbkssm3k5m</para>
+            /// <para>cbwp-bp1o3m66wcjgbkssm3****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -210,7 +213,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required only if you set Network to PublicNetwork.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sg-5wz3mjgo9wpvdnwpwnhkjdjwn</para>
+            /// <para>sg-5wz3mjgo9wpvdnwpwnhkj****</para>
             /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
@@ -230,7 +233,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required only if you set Network to PublicNetwork.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vsw-bp1xyntcxiwplhqxjybuk</para>
+            /// <para>vsw-bp1xyntcxiwplhqxj****</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -240,7 +243,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required only if you set Network to PublicNetwork.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc-2zefu4vfmx6siogujmo0b</para>
+            /// <para>vpc-2zefu4vfmx6sioguj****</para>
             /// </summary>
             [NameInMap("VpcId")]
             [Validation(Required=false)]
@@ -334,7 +337,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>bastionhost-cn-7mz2zkyff09</para>
+            /// <para>bastionhost-cn-7mz2zky****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -413,7 +416,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>dbaudit-cn-i7m2nx2or01</para>
+            /// <para>dbaudit-cn-i7m2nx****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
@@ -487,7 +490,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <para>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc-bp1a4gmlk31hyg6ptl3ss</para>
+            /// <para>vpc-bp1a4gmlk31hyg6pt****</para>
             /// </summary>
             [NameInMap("InstanceVpcId")]
             [Validation(Required=false)]

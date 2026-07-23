@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryTracedEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range when event traces are queried. Unit: milliseconds.</para>
+        /// <para>The end of the time range for the query, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,10 +52,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</para>
-        /// <remarks>
-        /// <para> A maximum of 100 entries can be returned in a request.</para>
-        /// </remarks>
+        /// <para>The maximum number of entries to return per page. Use this parameter with NextToken to paginate the results.&gt;Notice: The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -65,7 +62,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The name of the event rule that is matched.</para>
+        /// <para>The name of the matched rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-mnsrule</para>
@@ -75,7 +72,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string MatchedRule { get; set; }
 
         /// <summary>
-        /// <para>If you configure Limit and excess return values exist, this parameter is returned.</para>
+        /// <para>The token for retrieving the next page of results. It is returned in the response to a previous request if more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -85,7 +82,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query event traces. Unit: milliseconds.</para>
+        /// <para>The beginning of the time range for the query, specified as a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,6 +92,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
+        /// <summary>
+        /// <para>The event subject.</para>
+        /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]
         public string Subject { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>API response code, 200 indicates success</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateNamespaceResponseBodyData Data { get; set; }
         public class CreateNamespaceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Namespace ARN</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs:eventbridge:cn-hangzhou:123456789:catalog/my_catalog/namespace/my_namespace</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
+        /// <para>API response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Operation success</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the operation was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

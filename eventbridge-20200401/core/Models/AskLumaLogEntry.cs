@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class AskLumaLogEntry : TeaModel {
         /// <summary>
+        /// <para>Agent name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-agent</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string AgentName { get; set; }
 
         /// <summary>
+        /// <para>Whether clarification is needed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -25,15 +29,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public bool? ClarificationNeeded { get; set; }
 
+        /// <summary>
+        /// <para>Clarification question text</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>您指的是哪张表？</para>
+        /// </summary>
         [NameInMap("ClarificationQuestion")]
         [Validation(Required=false)]
         public string ClarificationQuestion { get; set; }
 
+        /// <summary>
+        /// <para>Structured result body</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Content Content { get; set; }
 
         /// <summary>
+        /// <para>Conversation ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>conv_xxx</para>
         /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>Creation time (milliseconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1717200000000</para>
         /// </summary>
@@ -50,6 +67,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>Invocation duration (milliseconds)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3200</para>
         /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public long? DurationMs { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ExecutionFailed</para>
         /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Error details</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</para>
         /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>Whether it is an error</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? IsError { get; set; }
 
         /// <summary>
+        /// <para>Message ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>msg_xxx</para>
         /// </summary>
@@ -89,11 +116,19 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string MessageId { get; set; }
 
+        /// <summary>
+        /// <para>Input question</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>帮我统计一下最近的订单数据。</para>
+        /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]
         public string Question { get; set; }
 
         /// <summary>
+        /// <para>Log source</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MCP, CHAT</para>
         /// </summary>
@@ -102,6 +137,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>Execution status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING, SUCCEEDED, FAILED, TIMEOUT</para>
         /// </summary>

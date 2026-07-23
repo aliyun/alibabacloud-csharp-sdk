@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For information about error codes, see Error codes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CheckServiceLinkedRoleForProductResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of \<c>Success\\</c> indicates that the request is successful. For more information about other error codes, see Error codes.</para>
+        /// <para>Success: The request is successful.</para>
+        /// <para>Other codes indicate that the request failed. For more information about error codes, see Error codes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
+        /// <para>The returned message. If the request is successful, \<c>Success\\</c> is returned. If the request fails, an error message is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -55,6 +61,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
@@ -63,6 +71,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. \<c>true\\</c>: The request was successful. \<c>false\\</c>: The request failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

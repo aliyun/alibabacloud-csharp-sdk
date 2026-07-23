@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateTableRequest : TeaModel {
         /// <summary>
-        /// <para>表所属的数据目录名称。可通过 ListCatalogs 获取已有目录列表</para>
+        /// <para>The data catalog to which the table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>用于保证请求幂等性的Token，防止因网络重试导致重复创建。建议使用 UUID</para>
+        /// <para>The idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>表的列定义（JSON 数组）。每列包含 Name（列名，必填）、Type（数据类型，必填，如 STRING、INT32、INT64、FLOAT、DOUBLE、BOOLEAN、TIMESTAMP）、Comment（列备注，选填）</para>
+        /// <para>The column definitions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public List<CreateTableRequestColumns> Columns { get; set; }
         public class CreateTableRequestColumns : TeaModel {
             /// <summary>
+            /// <para>The description of the field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Isp</para>
             /// </summary>
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The name of the connector.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kafka-default-agent-alikafka_pre-cn-28t3sfzno003</para>
             /// </summary>
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The type of the column.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ehpc_cluster</para>
             /// </summary>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>表的备注描述信息，无格式限制</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试事件表</para>
@@ -76,7 +82,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>事件表名称。以字母或数字开头，支持字母、数字、下划线和短横线，长度1~127。在同一命名空间下唯一</para>
+        /// <para>The name of the table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>表所属的命名空间名称。可通过 ListNamespaces 获取已有命名空间列表</para>
+        /// <para>The namespace to which the table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>数据保留策略（JSON 对象）。包含 HotTTL（热数据保留天数，高性能查询）和 ColdTTL（冷数据保留天数，低成本存储）。不传则使用系统默认值</para>
+        /// <para>The data retention policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;HotTTL&quot;:7,&quot;ColdTTL&quot;:30}</para>
@@ -107,6 +113,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public CreateTableRequestRetentionPolicy RetentionPolicy { get; set; }
         public class CreateTableRequestRetentionPolicy : TeaModel {
             /// <summary>
+            /// <para>The cold storage retention time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -115,6 +123,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? ColdTTL { get; set; }
 
             /// <summary>
+            /// <para>The hot storage retention time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>

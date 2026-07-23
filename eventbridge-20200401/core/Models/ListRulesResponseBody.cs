@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <para>The ID of the custom event target.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>177</para>
+                    /// <para>Mlm123456JHd2Rs****</para>
                     /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     /// <para>The transformer that is used to push events.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>MATCHED_EVENT</para>
+                    /// <para>PARAM_TRANSFORMER</para>
                     /// </summary>
                     [NameInMap("PushSelector")]
                     [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>C7043799-F4DA-5290-9249-97C359876D97</para>
+        /// <para>C7043799-F4DA-5290-9249-97C35987****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

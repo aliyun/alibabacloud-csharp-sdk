@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class QueryEventHouseRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of rows to return. If a LIMIT clause is already specified in the SQL statement, the SQL\&quot;s own LIMIT takes precedence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? Limit { get; set; }
 
         /// <summary>
+        /// <para>The query statement. Typically uses a three-part table name in the format catalog.namespace.table.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

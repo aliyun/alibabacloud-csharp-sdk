@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class ListConnectionsRequest : TeaModel {
         /// <summary>
-        /// <para>The key word that you specify to query connections. Connections can be queried by prefixes.</para>
+        /// <para>The name prefix of the connection configurations to query. Supports prefix matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>connection-name</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConnectionNamePrefix { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging.</para>
+        /// <para>The maximum number of entries to return on each page. Can be used together with NextToken to implement pagination.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description>Default value: 10</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If you set the Limit parameter and excess return values exist, this parameter is returned.</para>
+        /// <para>When MaxResults is specified, NextToken is returned if there are more results to fetch.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 0.</description></item>
+        /// <item><description>NextToken starts from 0 by default. Default value: 0.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>按连接类型过滤查询结果。可选值：Http、MySQL、PostgreSQL、Elasticsearch。不传则返回所有类型</para>
+        /// <para>Filters query results by connection type. Valid values: Http, MySQL, PostgreSQL, Elasticsearch. If left empty, connections of all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>

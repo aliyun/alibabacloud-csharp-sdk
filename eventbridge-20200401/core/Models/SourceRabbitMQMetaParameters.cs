@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        [NameInMap("SyncMetaType")]
+        [Validation(Required=false)]
+        public string SyncMetaType { get; set; }
+
         [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }

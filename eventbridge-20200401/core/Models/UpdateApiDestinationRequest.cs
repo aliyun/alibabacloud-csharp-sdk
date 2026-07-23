@@ -61,12 +61,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             /// <summary>
             /// <para>The HTTP request method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GET</description></item>
-            /// <item><description>POST</description></item>
-            /// <item><description>HEAD</description></item>
-            /// <item><description>DELETE</description></item>
-            /// <item><description>PUT</description></item>
-            /// <item><description>PATCH</description></item>
+            /// <item><description><para>GET</para>
+            /// </description></item>
+            /// <item><description><para>POST</para>
+            /// </description></item>
+            /// <item><description><para>HEAD</para>
+            /// </description></item>
+            /// <item><description><para>DELETE</para>
+            /// </description></item>
+            /// <item><description><para>PUT</para>
+            /// </description></item>
+            /// <item><description><para>PATCH</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

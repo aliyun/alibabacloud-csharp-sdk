@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>96D7C0AB-DCE5-5E82-96B8-4725E1706BB1</para>
+        /// <para>96D7C0AB-DCE5-5E82-96B8-4725E170****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

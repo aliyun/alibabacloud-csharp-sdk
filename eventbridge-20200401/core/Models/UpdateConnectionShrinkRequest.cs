@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateConnectionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters that are configured for authentication.</para>
+        /// <para>The data structure of the authentication parameters.</para>
         /// </summary>
         [NameInMap("AuthParameters")]
         [Validation(Required=false)]
         public string AuthParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the connection that you want to update. The name must be 2 to 127 characters in length.</para>
+        /// <para>The name of the connection to be updated. The maximum length is 127 characters. The minimum length is 2 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,17 +28,17 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// <para>The description of the connection. The description can be up to 255 characters in length.</para>
+        /// <para>The description. The maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the connection.</para>
+        /// <para>Description of the connection configuration</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured for the network.</para>
+        /// <para>The data structure of the network configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkParameters")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NetworkParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</para>
+        /// <para>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType API and refer to the ParamsSchema in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</para>
+        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, and Http.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>

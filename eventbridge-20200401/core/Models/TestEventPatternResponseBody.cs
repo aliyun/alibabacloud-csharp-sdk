@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class TestEventPatternResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</para>
+        /// <para>The return code. <c>Success</c> indicates that the call was successful. For more information about other return codes, see Error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The result of the test.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TestEventPatternResponseBodyData Data { get; set; }
         public class TestEventPatternResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The value true indicates that the event pattern matches the provided JSON format. The value false indicates that the event pattern does not match the provided JSON format.</para>
+            /// <para>Indicates if the event matches the event pattern.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. If the operation is successful, the value true is returned.</para>
+        /// <para>Indicates if the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

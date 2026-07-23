@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Success</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c057d379-ea65-41ec-a8a8-90627a968204</para>
+        /// <para>c057d379-ea65-41ec-a8a8-90627a9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

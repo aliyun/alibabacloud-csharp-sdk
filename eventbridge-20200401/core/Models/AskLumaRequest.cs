@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class AskLumaRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string AgentName { get; set; }
 
         /// <summary>
+        /// <para>The conversation ID. This parameter is required for multi-turn conversations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>conv_1474xxx32_593b9d08-9</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of rows to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -36,7 +41,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public int? MaxRows { get; set; }
 
         /// <summary>
+        /// <para>The natural language question.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>帮我统计一下最近的订单数据。</para>
         /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]

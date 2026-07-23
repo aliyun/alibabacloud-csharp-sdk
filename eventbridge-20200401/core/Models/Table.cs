@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class Table : TeaModel {
         /// <summary>
-        /// <para>表所属的数据目录名称</para>
+        /// <para>The name of the data catalog to which the table belongs</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>表的列定义列表。每列包含 Name（列名）、Type（数据类型）、Comment（备注）</para>
+        /// <para>The column definition list of the table. Each column contains Name (column name), Type (data type), and Comment (remarks)</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>表的备注描述信息</para>
+        /// <para>Comment description of the table</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试事件表</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>表的创建时间（Unix 时间戳，毫秒）</para>
+        /// <para>The creation time of the table (Unix timestamp, in milliseconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717948800000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>事件表的唯一标识名称</para>
+        /// <para>The unique identifier name of the event table</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_table</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>表所属的命名空间名称</para>
+        /// <para>The name of the namespace to which the table belongs</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>数据保留策略。包含热数据和冷数据的保留天数</para>
+        /// <para>Data retention policy. Includes the retention days for hot data and cold data</para>
         /// </summary>
         [NameInMap("RetentionPolicy")]
         [Validation(Required=false)]
         public TableRetentionPolicy RetentionPolicy { get; set; }
         public class TableRetentionPolicy : TeaModel {
             /// <summary>
-            /// <para>冷数据保留天数，低成本归档存储</para>
+            /// <para>Retention days for cold data, used for low-cost archival storage</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public int? ColdTTL { get; set; }
 
             /// <summary>
-            /// <para>热数据保留天数，高性能查询存储</para>
+            /// <para>Retention days for hot data, used for high-performance query storage</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         }
 
         /// <summary>
-        /// <para>表的最后更新时间（Unix 时间戳，毫秒）</para>
+        /// <para>The last update time of the table (Unix timestamp, in milliseconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717948800000</para>

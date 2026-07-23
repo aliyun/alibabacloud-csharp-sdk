@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class TestEventPatternRequest : TeaModel {
         /// <summary>
-        /// <para>The event.</para>
+        /// <para>The event to test, which must be a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The event pattern.</para>
+        /// <para>The event pattern to test, which must be a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

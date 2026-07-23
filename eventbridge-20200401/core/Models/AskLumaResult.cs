@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class AskLumaResult : TeaModel {
         /// <summary>
+        /// <para>Whether clarification is needed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -17,19 +19,33 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public bool? ClarificationNeeded { get; set; }
 
+        /// <summary>
+        /// <para>Clarification question text</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>您指的是哪个数据库中的员工表？</para>
+        /// </summary>
         [NameInMap("ClarificationQuestion")]
         [Validation(Required=false)]
         public string ClarificationQuestion { get; set; }
 
+        /// <summary>
+        /// <para>Query constraints</para>
+        /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]
         public Constraints Constraints { get; set; }
 
+        /// <summary>
+        /// <para>Structured result body</para>
+        /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Content Content { get; set; }
 
         /// <summary>
+        /// <para>Conversation identifier, used for multi-turn follow-up questions</para>
+        /// 
         /// <b>Example:</b>
         /// <para>conv_xxx</para>
         /// </summary>
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ExecutionFailed, Timeout, RateLimited, InternalError, ConversationExpired</para>
         /// </summary>
@@ -46,6 +64,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Error details</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</para>
         /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>Whether it is an error. false = query succeeded or clarification (including empty result set); true = execution failed / timeout / rate limited / internal error</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? IsError { get; set; }
 
         /// <summary>
+        /// <para>Message identifier, used for PollAskResult polling</para>
+        /// 
         /// <b>Example:</b>
         /// <para>msg_xxx</para>
         /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string MessageId { get; set; }
 
         /// <summary>
+        /// <para>Execution status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING, SUCCEEDED, FAILED, TIMEOUT</para>
         /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Whether the result was truncated due to exceeding the storage limit. Only appears in large result set scenarios</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
