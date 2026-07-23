@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class SetDeletionProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of deletion protection.</para>
+        /// <para>The description of deletion protection.  </para>
         /// <remarks>
-        /// <para>This parameter is available only when EnableDeletionProtection is set to true.</para>
+        /// <para>This parameter is valid only when EnableDeletionProtection is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         /// <list type="bullet">
         /// <item><description><para>true: enables deletion protection.</para>
         /// </description></item>
-        /// <item><description><para>false: disables deletion protection. This is the default value.</para>
+        /// <item><description><para>false (default): disables deletion protection.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -54,8 +54,7 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         public string KmsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the CMK for which you want to configure deletion protection.<br>
-        /// You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the ARN of the CMK.<br><br></para>
+        /// <para>The ARN of the CMK for which you want to set deletion protection.<br>You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the CMK ARN (Arn).</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:kms:cn-hangzhou:123213123****:key/0225f411-b21d-46d1-be5b-93931c82****</para>

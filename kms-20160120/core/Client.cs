@@ -53,9 +53,7 @@ namespace AlibabaCloud.SDK.Kms20160120
                 {"ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-2", "kms.ap-southeast-2.aliyuncs.com"},
                 {"ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"},
-                {"ap-south-1", "kms.ap-south-1.aliyuncs.com"},
                 {"ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"},
             };
@@ -8455,6 +8453,178 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the plaintext of a managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that must be granted to a RAM user or RAM role to call this operation, refer to access control.
+        /// This operation can be called through a shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetManagedDataKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagedDataKeyResponse
+        /// </returns>
+        public GetManagedDataKeyResponse GetManagedDataKeyWithOptions(GetManagedDataKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataKeyName))
+            {
+                query["DataKeyName"] = request.DataKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataKeyVersionId))
+            {
+                query["DataKeyVersionId"] = request.DataKeyVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseLatest))
+            {
+                query["UseLatest"] = request.UseLatest;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetManagedDataKey",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetManagedDataKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the plaintext of a managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that must be granted to a RAM user or RAM role to call this operation, refer to access control.
+        /// This operation can be called through a shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetManagedDataKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagedDataKeyResponse
+        /// </returns>
+        public async Task<GetManagedDataKeyResponse> GetManagedDataKeyWithOptionsAsync(GetManagedDataKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataKeyName))
+            {
+                query["DataKeyName"] = request.DataKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataKeyVersionId))
+            {
+                query["DataKeyVersionId"] = request.DataKeyVersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseLatest))
+            {
+                query["UseLatest"] = request.UseLatest;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetManagedDataKey",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetManagedDataKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the plaintext of a managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that must be granted to a RAM user or RAM role to call this operation, refer to access control.
+        /// This operation can be called through a shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetManagedDataKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagedDataKeyResponse
+        /// </returns>
+        public GetManagedDataKeyResponse GetManagedDataKey(GetManagedDataKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetManagedDataKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the plaintext of a managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the access policy that must be granted to a RAM user or RAM role to call this operation, refer to access control.
+        /// This operation can be called through a shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetManagedDataKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetManagedDataKeyResponse
+        /// </returns>
+        public async Task<GetManagedDataKeyResponse> GetManagedDataKeyAsync(GetManagedDataKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetManagedDataKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the parameters that are used to import key material for a customer master key (CMK).</para>
         /// </summary>
         /// 
@@ -10787,6 +10957,178 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Lists the key versions of a specified managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through the shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListManagedDataKeyVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManagedDataKeyVersionsResponse
+        /// </returns>
+        public ListManagedDataKeyVersionsResponse ListManagedDataKeyVersionsWithOptions(ListManagedDataKeyVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataKeyName))
+            {
+                query["DataKeyName"] = request.DataKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListManagedDataKeyVersions",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListManagedDataKeyVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the key versions of a specified managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through the shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListManagedDataKeyVersionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManagedDataKeyVersionsResponse
+        /// </returns>
+        public async Task<ListManagedDataKeyVersionsResponse> ListManagedDataKeyVersionsWithOptionsAsync(ListManagedDataKeyVersionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataKeyName))
+            {
+                query["DataKeyName"] = request.DataKeyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListManagedDataKeyVersions",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListManagedDataKeyVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the key versions of a specified managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through the shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListManagedDataKeyVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManagedDataKeyVersionsResponse
+        /// </returns>
+        public ListManagedDataKeyVersionsResponse ListManagedDataKeyVersions(ListManagedDataKeyVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListManagedDataKeyVersionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the key versions of a specified managed data key (DK).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For details about the access policy required when a RAM user or RAM role invokes this operation, refer to access control.
+        /// This operation can be invoked through the shared gateway. For more information, refer to Alibaba Cloud SDK.</para>
+        /// <list type="bullet">
+        /// <item><description>Shared gateway: Access KMS through public or VPC endpoints.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListManagedDataKeyVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListManagedDataKeyVersionsResponse
+        /// </returns>
+        public async Task<ListManagedDataKeyVersionsResponse> ListManagedDataKeyVersionsAsync(ListManagedDataKeyVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListManagedDataKeyVersionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries all network access rules in the current region.</para>
         /// </summary>
         /// 
@@ -13021,9 +13363,9 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
-        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete the CMK. To delete the CMK, disable deletion protection first.  </description></item>
+        /// <item><description>Before you invoke the SetDeletionProtection operation, make sure that the CMK is not in the PendingDeletion state. You can invoke the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status (KeyState) of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13088,9 +13430,9 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
-        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete the CMK. To delete the CMK, disable deletion protection first.  </description></item>
+        /// <item><description>Before you invoke the SetDeletionProtection operation, make sure that the CMK is not in the PendingDeletion state. You can invoke the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status (KeyState) of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13155,9 +13497,9 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
-        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete the CMK. To delete the CMK, disable deletion protection first.  </description></item>
+        /// <item><description>Before you invoke the SetDeletionProtection operation, make sure that the CMK is not in the PendingDeletion state. You can invoke the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status (KeyState) of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13182,9 +13524,9 @@ namespace AlibabaCloud.SDK.Kms20160120
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For more information about the access policy required for a RAM user or RAM role to call this API operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>After you enable deletion protection for a CMK, you cannot delete it. To delete the CMK, you must first disable deletion protection.</description></item>
-        /// <item><description>Before you call the SetDeletionProtection operation, ensure that the CMK is not in the PendingDeletion state. You can call the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status of the CMK.</description></item>
+        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>After you enable deletion protection for a CMK, you cannot delete the CMK. To delete the CMK, disable deletion protection first.  </description></item>
+        /// <item><description>Before you invoke the SetDeletionProtection operation, make sure that the CMK is not in the PendingDeletion state. You can invoke the <a href="https://help.aliyun.com/document_detail/28952.html">DescribeKey</a> operation to query the status (KeyState) of the CMK.</description></item>
         /// </list>
         /// </description>
         /// 
