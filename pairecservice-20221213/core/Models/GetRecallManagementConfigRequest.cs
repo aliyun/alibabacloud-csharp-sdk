@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetRecallManagementConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. You can call the ListInstances operation to obtain the instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>learn-pairec-xxx</para>
         /// </summary>

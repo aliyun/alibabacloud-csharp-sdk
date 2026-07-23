@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateExperimentGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the experiment group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A04CB8C0-E74A-5E83-BC61-64D153574EC7</para>

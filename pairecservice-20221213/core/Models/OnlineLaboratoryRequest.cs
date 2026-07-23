@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class OnlineLaboratoryRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. This ID is returned by the ListInstances API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

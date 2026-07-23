@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateParamResponseBody : TeaModel {
         /// <summary>
+        /// <para>The parameter ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

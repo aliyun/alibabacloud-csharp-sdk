@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetExperimentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The alias of the experiment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>L1#EG1#E1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string AliasExperimentId { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of bucket numbers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
         /// </summary>
@@ -26,14 +30,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Buckets { get; set; }
 
         /// <summary>
+        /// <para>The experiment configuration, in JSON format.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>{&quot;RankBy&quot;: &quot;Score&quot;}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The debug crowd ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -42,14 +50,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
+        /// <para>The UIDs of debug users, which can be the UIDs of an Alibaba Cloud main account or a RAM user. Separate multiple UIDs with a comma (,).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>uid1,uid2,uid3</para>
+        /// <para>1124512470******,1124512471******,1124512472******</para>
         /// </summary>
         [NameInMap("DebugUsers")]
         [Validation(Required=false)]
         public string DebugUsers { get; set; }
 
         /// <summary>
+        /// <para>The experiment description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The experiment group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
+        /// <para>The traffic percentage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? FlowPercent { get; set; }
 
         /// <summary>
+        /// <para>The creation time, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The modification time, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The laboratory ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LaboratoryId { get; set; }
 
         /// <summary>
+        /// <para>The layer ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LayerId { get; set; }
 
         /// <summary>
+        /// <para>The experiment name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>experiment_test1</para>
         /// </summary>
@@ -114,7 +140,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74D958EF-3598-56FA-8296-FF1575CE43DF</para>
@@ -124,6 +150,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The scene ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -132,6 +160,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
+        /// <para>The status of the experiment. Valid values:<br>● Offline<br>● Online<br><br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>Offline</para>
         /// </summary>
@@ -140,6 +170,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The type of the experiment. Valid values:<br>● Baseline: a baseline experiment.<br>● Normal: a normal experiment.<br><br></para>
+        /// 
         /// <b>Example:</b>
         /// <para>Baseline</para>
         /// </summary>

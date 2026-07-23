@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ReportABMetricGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the base experiment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string BaseExperimentId { get; set; }
 
         /// <summary>
+        /// <para>The dimension fields.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;gender&quot;:&quot;man&quot;}</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DimensionFields { get; set; }
 
         /// <summary>
+        /// <para>The end date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-07-01</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The ID of the experiment group. You can call the <a href="https://help.aliyun.com/document_detail/2402573.html">ListExperimentGroups</a> operation to obtain the ID of the experiment group. This parameter is required for offline and real-time reports.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentGroupId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the experiments. You can call the <a href="https://help.aliyun.com/document_detail/2402582.html">ListExperiments</a> operation to obtain the IDs of the experiments.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExperimentIds { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +73,15 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the report.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Realtime: real-time report.</para>
+        /// </description></item>
+        /// <item><description><para>Offline: offline report.</para>
+        /// </description></item>
+        /// <item><description><para>Market: dashboard report.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +92,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ReportType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the scene ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,6 +102,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
+        /// <para>The start date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-07-01</para>
         /// </summary>
@@ -90,6 +112,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartDate { get; set; }
 
         /// <summary>
+        /// <para>The time statistics method. This parameter is required for real-time reports.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Hour: The statistics are collected by hour.</para>
+        /// </description></item>
+        /// <item><description><para>Day: The statistics are accumulated from 00:00 on the current day.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Hour</para>
         /// </summary>

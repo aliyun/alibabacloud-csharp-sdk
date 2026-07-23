@@ -14,6 +14,41 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Hologres</para>
+        /// </description></item>
+        /// <item><description><para>EAS</para>
+        /// </description></item>
+        /// <item><description><para>BE</para>
+        /// </description></item>
+        /// <item><description><para>Rec</para>
+        /// </description></item>
+        /// <item><description><para>Platform</para>
+        /// </description></item>
+        /// <item><description><para>SLS</para>
+        /// </description></item>
+        /// <item><description><para>DataHub</para>
+        /// </description></item>
+        /// <item><description><para>Kafka</para>
+        /// </description></item>
+        /// <item><description><para>Flinkvvp</para>
+        /// </description></item>
+        /// <item><description><para>ACR</para>
+        /// </description></item>
+        /// <item><description><para>OSS</para>
+        /// </description></item>
+        /// <item><description><para>DataWorks</para>
+        /// </description></item>
+        /// <item><description><para>PAI</para>
+        /// </description></item>
+        /// <item><description><para>MaxCompute</para>
+        /// </description></item>
+        /// <item><description><para>GraphCompute</para>
+        /// </description></item>
+        /// <item><description><para>Redis</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +59,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The resource URI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bucket-test-123</para>
         /// </summary>

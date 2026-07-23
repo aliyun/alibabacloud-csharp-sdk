@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetInstanceResourceTableResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of fields in the data table.</para>
+        /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<GetInstanceResourceTableResponseBodyFields> Fields { get; set; }
         public class GetInstanceResourceTableResponseBodyFields : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the field is a dimension field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -21,11 +26,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public bool? IsDimensionField { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the field is a partition field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsPartitionField")]
             [Validation(Required=false)]
             public bool? IsPartitionField { get; set; }
 
             /// <summary>
+            /// <para>The meaning of the field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Meaning { get; set; }
 
             /// <summary>
+            /// <para>The field name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>age</para>
             /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The field type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>BIGINT</para>
             /// </summary>
@@ -52,6 +69,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>74D958EF-3598-56FA-8296-FF1575CE43DF</para>
         /// </summary>
@@ -60,6 +79,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_table</para>
         /// </summary>

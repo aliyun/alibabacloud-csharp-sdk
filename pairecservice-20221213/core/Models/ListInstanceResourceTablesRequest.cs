@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListInstanceResourceTablesRequest : TeaModel {
         /// <summary>
+        /// <para>The MaxCompute schema.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>jackal</para>
         /// </summary>

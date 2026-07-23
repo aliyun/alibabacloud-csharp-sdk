@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListABMetricGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The A/B metric groups.</para>
+        /// </summary>
         [NameInMap("ABMetricGroups")]
         [Validation(Required=false)]
         public List<ListABMetricGroupsResponseBodyABMetricGroups> ABMetricGroups { get; set; }
         public class ListABMetricGroupsResponseBodyABMetricGroups : TeaModel {
             /// <summary>
+            /// <para>The A/B metric group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ABMetricGroupId { get; set; }
 
             /// <summary>
+            /// <para>The comma-separated IDs of the A/B metrics in the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1,2</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ABMetricIds { get; set; }
 
             /// <summary>
+            /// <para>The comma-separated names of the A/B metrics in the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pv,uv</para>
             /// </summary>
@@ -37,11 +46,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string ABMetricNames { get; set; }
 
+            /// <summary>
+            /// <para>The description of the A/B metric group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>访问量相关指标</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The A/B metric group name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>visits</para>
             /// </summary>
@@ -50,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2799614***</para>
             /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the A/B metric group is a real-time group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? Realtime { get; set; }
 
             /// <summary>
+            /// <para>The scene ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E15A1443-7917-5BE0-AE70-25538ECF398D</para>
         /// </summary>
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of A/B metric groups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

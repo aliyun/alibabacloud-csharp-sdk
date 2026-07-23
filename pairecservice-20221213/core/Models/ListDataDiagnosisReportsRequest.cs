@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListDataDiagnosisReportsRequest : TeaModel {
         /// <summary>
+        /// <para>The end date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The feature name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feature1</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The retention rate report type.</para>
+        /// <list type="bullet">
+        /// <item><description>Period: A report for the specified time period.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Period</para>
         /// </summary>
@@ -46,6 +55,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RemainRateType { get; set; }
 
         /// <summary>
+        /// <para>The start date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +66,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartDate { get; set; }
 
         /// <summary>
+        /// <para>The number of top results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

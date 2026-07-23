@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ExportRecallManagementTableRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-test1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The MaxCompute project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string MaxcomputeProjectName { get; set; }
 
         /// <summary>
-        /// <para>maxcompute schema。</para>
+        /// <para>The MaxCompute project schema.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string MaxcomputeSchema { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination table in MaxCompute.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table-1</para>
         /// </summary>
@@ -43,11 +49,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string MaxcomputeTableName { get; set; }
 
+        /// <summary>
+        /// <para>The table partitions to export. The value must be a JSON object where each key is a partition field and its value is the corresponding partition value.</para>
+        /// </summary>
         [NameInMap("Partitions")]
         [Validation(Required=false)]
         public Dictionary<string, string> Partitions { get; set; }
 
         /// <summary>
+        /// <para>The version ID of the recall management table. This parameter defaults to the current published version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20250213000000</para>
         /// </summary>

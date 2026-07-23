@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateRecallManagementServiceVersionConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the recall management service version configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RecallManagementServiceVersionConfigId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F8F613A9-DF1C-551A-88E1-397A3981A785</para>
         /// </summary>

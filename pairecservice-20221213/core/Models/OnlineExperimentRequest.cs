@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class OnlineExperimentRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance, which you can obtain by calling the ListInstances API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>
         /// </summary>

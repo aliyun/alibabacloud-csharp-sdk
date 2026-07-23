@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteTableMetaRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>实例ID	pairec-cn-test1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

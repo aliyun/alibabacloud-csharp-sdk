@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateLaboratoryRequest : TeaModel {
         /// <summary>
+        /// <para>The number of buckets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>24</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? BucketCount { get; set; }
 
         /// <summary>
+        /// <para>The bucketing method. Valid values: ● <c>UidHash</c>: by UID hash (default) ● <c>Uid</c>: by UID ● <c>Filter</c>: filter-based</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string BucketType { get; set; }
 
         /// <summary>
+        /// <para>The assigned bucket numbers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3,10-20</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Buckets { get; set; }
 
         /// <summary>
+        /// <para>The debug crowd ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
+        /// <para>The UIDs of debug users, separated by commas. Each UID must belong to an Alibaba Cloud primary account or a RAM user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1124512470******,1124512471******,1124512472******</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugUsers { get; set; }
 
         /// <summary>
+        /// <para>The laboratory description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
         /// </summary>
@@ -60,6 +71,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The environment. Valid values: ● <c>Daily</c>: daily ● <c>Pre</c>: staging ● <c>Prod</c>: production</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
+        /// <para>The filter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>filter=xxx</para>
         /// </summary>
@@ -78,6 +92,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Filter { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. To get it, call the <c>ListInstances</c> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +103,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The laboratory name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,6 +114,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The scene ID. To get it, call the <c>ListScenes</c> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,6 +125,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
+        /// <para>The laboratory type. Valid values: <c>Base</c> and <c>NonBase</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

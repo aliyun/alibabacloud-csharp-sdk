@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue : TeaModel {
         /// <summary>
+        /// <para>The reported traffic for this target within the experiment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public double? Traffic { get; set; }
 
         /// <summary>
+        /// <para>The timestamp indicating when the data was reported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1760319273</para>
         /// </summary>

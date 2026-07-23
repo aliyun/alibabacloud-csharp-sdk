@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneFeatureConsistencyCheckJobConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the new feature consistency check job configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureConsistencyCheckId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>74D958EF-3598-56FA-8296-FF1575CE43DF</para>
         /// </summary>

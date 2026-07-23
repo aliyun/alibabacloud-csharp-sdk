@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListInstanceResourceTablesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01D22D08-BA20-5F35-8302-99115F288220</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A list of data tables.</para>
+        /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]
         public List<ListInstanceResourceTablesResponseBodyTables> Tables { get; set; }
         public class ListInstanceResourceTablesResponseBodyTables : TeaModel {
             /// <summary>
+            /// <para>The table name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>table-1</para>
             /// </summary>
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The total count of data tables.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneExperimentRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. Call the ListInstances operation to get the instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

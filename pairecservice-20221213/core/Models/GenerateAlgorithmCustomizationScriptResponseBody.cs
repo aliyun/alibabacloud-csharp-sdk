@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GenerateAlgorithmCustomizationScriptResponseBody : TeaModel {
         /// <summary>
+        /// <para>The log ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogId { get; set; }
 
         /// <summary>
+        /// <para>The OSS address of the generated package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss:xxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string OssAddress { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6CF1E160-3F36-5E73-A170-C75504F05BBC</para>
         /// </summary>

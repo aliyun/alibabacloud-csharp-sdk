@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListLayersRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. You can obtain this ID by calling the ListInstances API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The laboratory ID. You can obtain this ID by calling the ListLaboratories API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

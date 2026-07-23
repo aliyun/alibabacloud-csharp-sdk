@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateParamRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. You can retrieve this ID by calling the ListInstances API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The parameter\&quot;s value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>house</para>
         /// </summary>

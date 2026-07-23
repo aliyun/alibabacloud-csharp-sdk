@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class SyncFeatureConsistencyCheckJobReplayLogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C7D0B48F-0105-52B9-B60A-FA7606E2234D</para>
         /// </summary>

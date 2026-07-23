@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryTrafficControlTargetItemReportDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The report date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Date { get; set; }
 
         /// <summary>
+        /// <para>The deployment environment. Valid values are Daily (daily environment), Pre (staging environment), and Prod (production environment).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

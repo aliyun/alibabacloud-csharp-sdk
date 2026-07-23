@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryTrafficControlTargetItemReportDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
         /// </summary>
@@ -17,19 +19,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Traffic control details for an item.</para>
+        /// </summary>
         [NameInMap("TrafficControlTargetItemReportDetail")]
         [Validation(Required=false)]
         public QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetail TrafficControlTargetItemReportDetail { get; set; }
         public class QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetail : TeaModel {
+            /// <summary>
+            /// <para>Report details for the tail 100 controlled items.</para>
+            /// </summary>
             [NameInMap("ItemControlTailReportDetails")]
             [Validation(Required=false)]
             public List<QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTailReportDetails> ItemControlTailReportDetails { get; set; }
             public class QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTailReportDetails : TeaModel {
+                /// <summary>
+                /// <para>Key-value pairs for the traffic control target.</para>
+                /// </summary>
                 [NameInMap("Features")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Features { get; set; }
 
                 /// <summary>
+                /// <para>The item ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>794872809896</para>
                 /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string ItemId { get; set; }
 
                 /// <summary>
+                /// <para>The progress toward the target.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>49%</para>
                 /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string TargetProgress { get; set; }
 
                 /// <summary>
+                /// <para>The target traffic.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -55,15 +72,23 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             }
 
+            /// <summary>
+            /// <para>Report details for the top 100 controlled items.</para>
+            /// </summary>
             [NameInMap("ItemControlTopReportDetails")]
             [Validation(Required=false)]
             public List<QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTopReportDetails> ItemControlTopReportDetails { get; set; }
             public class QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTopReportDetails : TeaModel {
+                /// <summary>
+                /// <para>Key-value pairs for the traffic control target.</para>
+                /// </summary>
                 [NameInMap("Features")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Features { get; set; }
 
                 /// <summary>
+                /// <para>The item ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>398734</para>
                 /// </summary>
@@ -72,6 +97,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string ItemId { get; set; }
 
                 /// <summary>
+                /// <para>The progress toward the target.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>49%</para>
                 /// </summary>
@@ -80,6 +107,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string TargetProgress { get; set; }
 
                 /// <summary>
+                /// <para>The target traffic.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateCalculationJobsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of calculation job IDs.</para>
+        /// </summary>
         [NameInMap("CalculationJobIds")]
         [Validation(Required=false)]
         public List<string> CalculationJobIds { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8C27790E-CCA5-56BB-BA17-646295DEC0A2</para>
         /// </summary>

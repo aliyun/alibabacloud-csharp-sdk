@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateLaboratoryRequest : TeaModel {
         /// <summary>
+        /// <para>The number of buckets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>24</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? BucketCount { get; set; }
 
         /// <summary>
+        /// <para>The bucketing method. Valid values: ● Uid: Bucketing by UID (default). ● UidHash: Bucketing by UID hash. ● Filter: Bucketing by a filter condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string BucketType { get; set; }
 
         /// <summary>
+        /// <para>The assigned bucket numbers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3,10-20</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Buckets { get; set; }
 
         /// <summary>
+        /// <para>The debug crowd ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugCrowdId { get; set; }
 
         /// <summary>
+        /// <para>The UIDs of debugging users. These UIDs must belong to an Alibaba Cloud main account or a sub-account. Separate multiple UIDs with a comma (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1124512470******,1124512471******,1124512472******</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DebugUsers { get; set; }
 
         /// <summary>
+        /// <para>The laboratory description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The environment. Valid values: ● Daily: The daily environment. ● Pre: The staging environment. ● Prod: The production environment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
+        /// <para>The filter condition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>filter=xxx</para>
         /// </summary>
@@ -76,6 +91,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Filter { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. Call the ListInstances operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +102,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The laboratory name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,6 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The laboratory type. Valid values: ● Base ● NonBase</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

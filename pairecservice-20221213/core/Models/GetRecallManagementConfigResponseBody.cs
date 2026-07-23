@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetRecallManagementConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The network configuration information.</para>
+        /// </summary>
         [NameInMap("NetworkConfigs")]
         [Validation(Required=false)]
         public List<GetRecallManagementConfigResponseBodyNetworkConfigs> NetworkConfigs { get; set; }
         public class GetRecallManagementConfigResponseBodyNetworkConfigs : TeaModel {
             /// <summary>
+            /// <para>The private endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx">http://xxx</a></para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PrivateLinkAddress { get; set; }
 
             /// <summary>
+            /// <para>The public endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
             /// </summary>
@@ -30,6 +37,20 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string PublicEndpoint { get; set; }
 
             /// <summary>
+            /// <para>The network connectivity status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Connecting: connecting.</para>
+            /// </description></item>
+            /// <item><description><para>Connected: connected.</para>
+            /// </description></item>
+            /// <item><description><para>ConnectionFailed: connection failed.</para>
+            /// </description></item>
+            /// <item><description><para>Updating: updating.</para>
+            /// </description></item>
+            /// <item><description><para>UpdateFailed: update failed.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Connecting</para>
             /// </summary>
@@ -38,6 +59,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The public network connection token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
             /// </summary>
@@ -46,6 +69,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Token { get; set; }
 
             /// <summary>
+            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>
             /// </summary>
@@ -53,6 +78,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string VpcId { get; set; }
 
+            /// <summary>
+            /// <para>The zones.</para>
+            /// </summary>
             [NameInMap("VswitchIds")]
             [Validation(Required=false)]
             public Dictionary<string, string> VswitchIds { get; set; }
@@ -70,6 +98,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The username.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>scene_test</para>
         /// </summary>

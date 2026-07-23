@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateLayerRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the layer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance. Call the <c>ListInstances</c> operation to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the laboratory. Call the <c>ListLaboratories</c> operation to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LaboratoryId { get; set; }
 
         /// <summary>
+        /// <para>The name of the layer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

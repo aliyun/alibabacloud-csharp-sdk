@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetLayerRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance. You can call the ListInstances operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

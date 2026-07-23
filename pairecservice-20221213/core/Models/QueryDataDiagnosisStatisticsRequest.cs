@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryDataDiagnosisStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>The end date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-08</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>learn-pairec-xxx</para>
         /// </summary>
@@ -26,6 +30,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The retention rate report type.</para>
+        /// <list type="bullet">
+        /// <item><description>Period: A periodic report.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Period</para>
         /// </summary>
@@ -34,6 +43,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RemainRateType { get; set; }
 
         /// <summary>
+        /// <para>The start date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-01</para>
         /// </summary>

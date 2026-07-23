@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateSubCrowdRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. You can obtain the instance ID by calling the ListInstances API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The source of users for the sub-crowd. Valid values: ● ManualInput: manual input ● UploadFile: file upload</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>A comma-separated list of users in the sub-crowd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListRecallManagementServicesResponseBody : TeaModel {
         /// <summary>
+        /// <para>This parameter is not yet available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>This parameter is not yet available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The list of recall management services.</para>
+        /// </summary>
         [NameInMap("RecallManagementServices")]
         [Validation(Required=false)]
         public List<ListRecallManagementServicesResponseBodyRecallManagementServices> RecallManagementServices { get; set; }
         public class ListRecallManagementServicesResponseBodyRecallManagementServices : TeaModel {
             /// <summary>
+            /// <para>The ID of the current recall management service version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CurrentRecallManagementServiceVersionId { get; set; }
 
             /// <summary>
+            /// <para>The name of the current recall management service version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>version-1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string CurrentRecallManagementServiceVersionName { get; set; }
 
             /// <summary>
+            /// <para>The recall management service description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>this is a test recall</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The recall management service name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hot_group_recall</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The recall management service ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -86,6 +107,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string RecallManagementServiceId { get; set; }
 
             /// <summary>
+            /// <para>The status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Online: online.</para>
+            /// </description></item>
+            /// <item><description><para>Offline: offline.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Online</para>
             /// </summary>
@@ -96,6 +125,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
         /// </summary>
@@ -104,6 +135,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

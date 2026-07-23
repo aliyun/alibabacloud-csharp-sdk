@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateABMetricGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the A/B metric group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ABMetricGroupId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E15A1443-7917-5BE0-AE70-25538ECF398D</para>
         /// </summary>

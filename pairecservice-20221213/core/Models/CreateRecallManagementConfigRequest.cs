@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateRecallManagementConfigRequest : TeaModel {
         /// <summary>
+        /// <para><b>The instance ID.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>learn-pairec-xxx</para>
         /// </summary>
@@ -17,16 +19,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para><b>The network configurations.</b></para>
+        /// </summary>
         [NameInMap("NetworkConfigs")]
         [Validation(Required=false)]
         public List<CreateRecallManagementConfigRequestNetworkConfigs> NetworkConfigs { get; set; }
         public class CreateRecallManagementConfigRequestNetworkConfigs : TeaModel {
+            /// <summary>
+            /// <para>A map of availability zones to VSwitch IDs.</para>
+            /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
             public Dictionary<string, string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>Vpc id</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>
@@ -38,6 +46,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para><b>The password.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -46,6 +56,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para><b>The user name.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhhangsan</para>
         /// </summary>

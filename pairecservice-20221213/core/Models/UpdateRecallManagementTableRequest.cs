@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateRecallManagementTableRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable the data size fluctuation threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? EnableDataSizeFluctuationThreshold { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the row count fluctuation threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -25,15 +29,35 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public bool? EnableRowCountFluctuationThreshold { get; set; }
 
+        /// <summary>
+        /// <para>A list of fields.</para>
+        /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public UpdateRecallManagementTableRequestFields Fields { get; set; }
         public class UpdateRecallManagementTableRequestFields : TeaModel {
+            /// <summary>
+            /// <para>Specifies the role of the field. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>Primary</c>: The primary key field.</para>
+            /// </description></item>
+            /// <item><description><para><c>Item</c>: The item field.</para>
+            /// </description></item>
+            /// <item><description><para><c>Score</c>: The recall score field.</para>
+            /// </description></item>
+            /// <item><description><para><c>Vector</c>: The vector field.</para>
+            /// </description></item>
+            /// <item><description><para><c>Index</c>: The index field.</para>
+            /// </description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<string> Attributes { get; set; }
 
             /// <summary>
+            /// <para>The field name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>age</para>
             /// </summary>
@@ -41,11 +65,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The data type of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STRING(全大写)</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The vector dimension.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>32</para>
             /// </summary>
@@ -54,6 +86,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public int? VectorDimension { get; set; }
 
             /// <summary>
+            /// <para>The vector metric type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>L2</para>
             /// </summary>
@@ -64,6 +98,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The version ID of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20250701</para>
         /// </summary>
@@ -72,6 +108,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string IndexVersionId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +119,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The maximum value for the data size fluctuation threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -90,6 +129,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxDataSizeFluctuationThreshold { get; set; }
 
         /// <summary>
+        /// <para>The maximum value for the row count fluctuation threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -98,6 +139,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MaxRowCountFluctuationThreshold { get; set; }
 
         /// <summary>
+        /// <para>The minimum value for the data size fluctuation threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -106,6 +149,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public int? MinDataSizeFluctuationThreshold { get; set; }
 
         /// <summary>
+        /// <para>The minimum value for the row count fluctuation threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

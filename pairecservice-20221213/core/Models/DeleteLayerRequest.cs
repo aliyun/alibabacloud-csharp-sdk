@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteLayerRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID, which can be obtained by calling the ListInstances API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-abcdefg1234</para>
         /// </summary>

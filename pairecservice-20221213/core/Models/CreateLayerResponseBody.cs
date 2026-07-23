@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateLayerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the layer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LayerId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>59CE7EC6-F268-5D71-9215-32922CC50D72</para>

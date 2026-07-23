@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryTrafficControlTaskDeployResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>The message returned for the Flink platform deployment operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>deploy job draft success</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DeployMessage { get; set; }
 
         /// <summary>
+        /// <para>The status of deploying the draft. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Failed: failed.</description></item>
+        /// <item><description>Running: running.</description></item>
+        /// <item><description>Success: succeeded.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DeployStatus { get; set; }
 
         /// <summary>
+        /// <para>The message returned for pushing the draft to Flink.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>push draft success</para>
         /// </summary>
@@ -34,6 +45,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DraftMessage { get; set; }
 
         /// <summary>
+        /// <para>The status of pushing the draft to Flink. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Failed: failed.</description></item>
+        /// <item><description>Running: running.</description></item>
+        /// <item><description>Success: succeeded.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -42,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DraftStatus { get; set; }
 
         /// <summary>
+        /// <para>The message returned for the preparation phase.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -50,6 +70,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PrepareMessage { get; set; }
 
         /// <summary>
+        /// <para>The status of the preparation phase. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Failed: failed.</description></item>
+        /// <item><description>Running: running.</description></item>
+        /// <item><description>Success: succeeded.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -58,6 +85,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PrepareStatus { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
         /// </summary>
@@ -66,6 +95,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The message returned for starting the Flink task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>start job success</para>
         /// </summary>
@@ -74,6 +105,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartMessage { get; set; }
 
         /// <summary>
+        /// <para>The status of starting the Flink task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Failed: failed.</description></item>
+        /// <item><description>Running: running.</description></item>
+        /// <item><description>Success: succeeded.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -82,6 +120,28 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartStatus { get; set; }
 
         /// <summary>
+        /// <para>The stop details.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
+        [NameInMap("StopMessage")]
+        [Validation(Required=false)]
+        public string StopMessage { get; set; }
+
+        /// <summary>
+        /// <para>The stop status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Success</para>
+        /// </summary>
+        [NameInMap("StopStatus")]
+        [Validation(Required=false)]
+        public string StopStatus { get; set; }
+
+        /// <summary>
+        /// <para>The traffic control task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

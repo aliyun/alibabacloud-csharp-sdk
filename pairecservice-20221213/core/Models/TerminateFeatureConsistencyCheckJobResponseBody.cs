@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class TerminateFeatureConsistencyCheckJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID generated for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A6C01890-54CA-5C49-BC91-AD85A98E4A98</para>
         /// </summary>

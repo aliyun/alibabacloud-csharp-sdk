@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GenerateAlgorithmCustomizationScriptRequest : TeaModel {
         /// <summary>
+        /// <para>The deployment mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>EasyDeploy</b>: Performs a one-click deployment.</para>
+        /// </description></item>
+        /// <item><description><para><b>GenerateScript</b>: Generates a deployment script.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>EasyDeploy</para>
         /// </summary>
@@ -18,6 +26,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DeployMode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-test-xxx</para>
         /// </summary>
@@ -26,6 +36,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The data types of fields in the JSON configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;item_table&quot;:&quot;array&quot;}</para>
         /// </summary>

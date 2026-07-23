@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneExperimentGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The target environment for the experiment group. ● Daily: Daily environment ● Pre: pre-release environment ● Prod: production environment</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. You can get this ID by calling the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The layer ID. You can get this ID by calling the ListLayers operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

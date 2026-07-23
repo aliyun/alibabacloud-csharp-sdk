@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListFeatureConsistencyCheckJobFeatureReportsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance. To obtain the ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The item ID used for feature comparison.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogItemId { get; set; }
 
         /// <summary>
+        /// <para>The request ID used for feature comparison.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogRequestId { get; set; }
 
         /// <summary>
+        /// <para>The user ID used for feature comparison.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

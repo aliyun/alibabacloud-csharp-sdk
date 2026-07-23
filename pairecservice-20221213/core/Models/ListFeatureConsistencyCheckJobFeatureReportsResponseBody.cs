@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The data path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>https://********</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string DataPath { get; set; }
 
         /// <summary>
+        /// <para>The OSS path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://********</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string OssPath { get; set; }
 
+        /// <summary>
+        /// <para>The feature comparison reports.</para>
+        /// </summary>
         [NameInMap("ReportsOfFeatureDiff")]
         [Validation(Required=false)]
         public List<ListFeatureConsistencyCheckJobFeatureReportsResponseBodyReportsOfFeatureDiff> ReportsOfFeatureDiff { get; set; }
         public class ListFeatureConsistencyCheckJobFeatureReportsResponseBodyReportsOfFeatureDiff : TeaModel {
             /// <summary>
+            /// <para>The feature name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gender</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FeatureName { get; set; }
 
             /// <summary>
+            /// <para>The item ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9010</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LogItemId { get; set; }
 
             /// <summary>
+            /// <para>The request ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LogRequestId { get; set; }
 
             /// <summary>
+            /// <para>The user ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1010</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string LogUserId { get; set; }
 
             /// <summary>
+            /// <para>The offline value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>male</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string OfflineValue { get; set; }
 
             /// <summary>
+            /// <para>The online value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>male</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BBD41FBF-E75C-551A-92FA-CAD654AA006F</para>
         /// </summary>

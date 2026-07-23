@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListScenesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8987BF7-6028-5B17-80E0-251B7BD67BBA</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of scenes.</para>
+        /// </summary>
         [NameInMap("Scenes")]
         [Validation(Required=false)]
         public List<ListScenesResponseBodyScenes> Scenes { get; set; }
         public class ListScenesResponseBodyScenes : TeaModel {
             /// <summary>
+            /// <para>The description of the scene.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>This is a test.</para>
             /// </summary>
@@ -31,11 +36,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The list of flows associated with the scene.</para>
+            /// </summary>
             [NameInMap("Flows")]
             [Validation(Required=false)]
             public List<ListScenesResponseBodyScenesFlows> Flows { get; set; }
             public class ListScenesResponseBodyScenesFlows : TeaModel {
                 /// <summary>
+                /// <para>The code of the flow.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>liuliang1</para>
                 /// </summary>
@@ -44,6 +54,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 public string FlowCode { get; set; }
 
                 /// <summary>
+                /// <para>The name of the flow.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>流量1</para>
                 /// </summary>
@@ -54,6 +66,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
+            /// <para>The name of the scene.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>scene1</para>
             /// </summary>
@@ -62,6 +76,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The unique ID of the scene.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -72,6 +88,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The total number of scenes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateInstanceResourceRequest : TeaModel {
         /// <summary>
+        /// <para>The resource configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The resource address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bucket-test-123</para>
         /// </summary>

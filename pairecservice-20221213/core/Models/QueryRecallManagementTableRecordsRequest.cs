@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryRecallManagementTableRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-test123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The primary keys of the records to retrieve.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;1001&quot;,&quot;1002&quot;]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public byte[] PrimaryKeys { get; set; }
 
         /// <summary>
+        /// <para>The recall management table version ID. If you omit this parameter, the API uses the currently published version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

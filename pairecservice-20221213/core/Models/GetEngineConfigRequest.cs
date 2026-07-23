@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetEngineConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-***test</para>
         /// </summary>

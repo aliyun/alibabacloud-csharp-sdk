@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteLaboratoryRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID, which can be obtained by calling the ListInstances API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

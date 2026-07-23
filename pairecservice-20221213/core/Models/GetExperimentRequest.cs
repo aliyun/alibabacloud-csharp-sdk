@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetExperimentRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID. You can obtain this ID by calling the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pairec-test1</para>
+        /// <para>pairec-cn-abcdefg1234</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

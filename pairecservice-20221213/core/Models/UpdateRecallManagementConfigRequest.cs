@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateRecallManagementConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The network configuration.</para>
+        /// </summary>
         [NameInMap("NetworkConfigs")]
         [Validation(Required=false)]
         public List<UpdateRecallManagementConfigRequestNetworkConfigs> NetworkConfigs { get; set; }
         public class UpdateRecallManagementConfigRequestNetworkConfigs : TeaModel {
             /// <summary>
+            /// <para>The ID of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-xxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>A map of availability zones to VSwitch IDs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The password.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

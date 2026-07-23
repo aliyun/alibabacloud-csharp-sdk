@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateCrowdRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the crowd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. To get this ID, call the ListInstances operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The crowd label.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>os=android</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Label { get; set; }
 
         /// <summary>
+        /// <para>The crowd name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The source of the user data. Valid values: ● ManualInput: Users are provided in the Users parameter. ● UploadFile: Users are provided from an uploaded file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ManualInput</para>
         /// </summary>
@@ -56,6 +63,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>The users to include in the crowd. Separate multiple users with commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user1,user2,user3</para>
         /// </summary>

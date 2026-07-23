@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetSceneResponseBody : TeaModel {
         /// <summary>
+        /// <para>The scene description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>A list of flows.</para>
+        /// </summary>
         [NameInMap("Flows")]
         [Validation(Required=false)]
         public List<GetSceneResponseBodyFlows> Flows { get; set; }
         public class GetSceneResponseBodyFlows : TeaModel {
             /// <summary>
+            /// <para>The flow code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>liuliang1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string FlowCode { get; set; }
 
             /// <summary>
+            /// <para>The flow name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>流量1</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The scene name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>scene1</para>
         /// </summary>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B8987BF7-6028-5B17-80E0-251B7BD67BBA</para>

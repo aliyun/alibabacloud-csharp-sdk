@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class TrafficControlTaskTrafficInfoTaskTrafficsValue : TeaModel {
         /// <summary>
+        /// <para>The reported traffic for this experiment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

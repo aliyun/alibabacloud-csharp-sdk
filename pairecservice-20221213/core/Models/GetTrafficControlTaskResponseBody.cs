@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetTrafficControlTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The behavior table ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string BehaviorTableMetaId { get; set; }
 
         /// <summary>
+        /// <para>The control granularity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Global</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ControlGranularity { get; set; }
 
         /// <summary>
+        /// <para>The control logic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Guaranteed</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ControlLogic { get; set; }
 
         /// <summary>
+        /// <para>The control type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Percent</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ControlType { get; set; }
 
         /// <summary>
+        /// <para>The description of the traffic control task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a test task</para>
         /// </summary>
@@ -49,15 +59,23 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The list of effective scene IDs.</para>
+        /// </summary>
         [NameInMap("EffectiveSceneIds")]
         [Validation(Required=false)]
         public List<int?> EffectiveSceneIds { get; set; }
 
+        /// <summary>
+        /// <para>The list of effective scene names.</para>
+        /// </summary>
         [NameInMap("EffectiveSceneNames")]
         [Validation(Required=false)]
         public List<string> EffectiveSceneNames { get; set; }
 
         /// <summary>
+        /// <para>The end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-25</para>
         /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the task has ever been published.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public bool? EverPublished { get; set; }
 
         /// <summary>
+        /// <para>The execution time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Permanent</para>
         /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ExecutionTime { get; set; }
 
         /// <summary>
+        /// <para>The Flink resource ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>resource-xxx</para>
         /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FlinkResourceId { get; set; }
 
         /// <summary>
+        /// <para>The Flink resource name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>flink_test</para>
         /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FlinkResourceName { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-11T02:27:38.208Z</para>
         /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The last modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-11T02:27:38.208Z</para>
         /// </summary>
@@ -114,6 +144,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The item conditions in array format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
         /// </summary>
@@ -122,6 +154,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionArray { get; set; }
 
         /// <summary>
+        /// <para>The item conditions in expression format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>status=1</para>
         /// </summary>
@@ -130,6 +164,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionExpress { get; set; }
 
         /// <summary>
+        /// <para>The item condition type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Array</para>
         /// </summary>
@@ -138,6 +174,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemConditionType { get; set; }
 
         /// <summary>
+        /// <para>The item table ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -146,6 +184,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemTableMetaId { get; set; }
 
         /// <summary>
+        /// <para>The name of the traffic control task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>task-1</para>
         /// </summary>
@@ -154,6 +194,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The experiment IDs in the staging environment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
         /// </summary>
@@ -162,6 +204,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PreExperimentIds { get; set; }
 
         /// <summary>
+        /// <para>The staging environment status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -170,6 +214,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string PrepubStatus { get; set; }
 
         /// <summary>
+        /// <para>The experiment IDs in the production environment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4,5,6</para>
         /// </summary>
@@ -178,6 +224,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ProdExperimentIds { get; set; }
 
         /// <summary>
+        /// <para>The production environment status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -186,6 +234,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ProductStatus { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
         /// </summary>
@@ -194,6 +244,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The scene ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -202,6 +254,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneId { get; set; }
 
         /// <summary>
+        /// <para>The scene name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>scene-2</para>
         /// </summary>
@@ -210,6 +264,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneName { get; set; }
 
         /// <summary>
+        /// <para>The service ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -217,11 +273,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
+        /// <summary>
+        /// <para>The list of service IDs.</para>
+        /// </summary>
         [NameInMap("ServiceIds")]
         [Validation(Required=false)]
         public List<int?> ServiceIds { get; set; }
 
         /// <summary>
+        /// <para>The start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-03-25</para>
         /// </summary>
@@ -230,6 +291,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The behavior statistics conditions in array format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</para>
         /// </summary>
@@ -238,6 +301,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StatisBehaviorConditionArray { get; set; }
 
         /// <summary>
+        /// <para>The behavior statistics conditions in expression format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>click=30</para>
         /// </summary>
@@ -246,6 +311,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string StatisBehaviorConditionExpress { get; set; }
 
         /// <summary>
+        /// <para>The behavior statistics condition type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Array</para>
         /// </summary>
@@ -253,11 +320,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string StatisBehaviorConditionType { get; set; }
 
+        /// <summary>
+        /// <para>The list of traffic control targets.</para>
+        /// </summary>
         [NameInMap("TrafficControlTargets")]
         [Validation(Required=false)]
         public List<GetTrafficControlTaskResponseBodyTrafficControlTargets> TrafficControlTargets { get; set; }
         public class GetTrafficControlTaskResponseBodyTrafficControlTargets : TeaModel {
             /// <summary>
+            /// <para>The end time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-04-25</para>
             /// </summary>
@@ -266,6 +338,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The control target event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>click</para>
             /// </summary>
@@ -274,6 +348,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Event { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-03-25T06:04:28.441Z</para>
             /// </summary>
@@ -282,6 +358,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
+            /// <para>The last modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-03-25T06:04:28.441Z</para>
             /// </summary>
@@ -290,6 +368,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The item conditions in array format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</para>
             /// </summary>
@@ -298,6 +378,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionArray { get; set; }
 
             /// <summary>
+            /// <para>The item conditions in expression format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>status=1</para>
             /// </summary>
@@ -306,6 +388,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionExpress { get; set; }
 
             /// <summary>
+            /// <para>The item condition type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Array</para>
             /// </summary>
@@ -314,6 +398,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ItemConditionType { get; set; }
 
             /// <summary>
+            /// <para>The name of the control target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>target-1</para>
             /// </summary>
@@ -322,6 +408,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether this is a new product regulation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -330,6 +418,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public bool? NewProductRegulation { get; set; }
 
             /// <summary>
+            /// <para>The recall Policy Name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>recall-1</para>
             /// </summary>
@@ -337,18 +427,30 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string RecallName { get; set; }
 
+            /// <summary>
+            /// <para>The split configuration of the control target.</para>
+            /// </summary>
             [NameInMap("SplitParts")]
             [Validation(Required=false)]
             public GetTrafficControlTaskResponseBodyTrafficControlTargetsSplitParts SplitParts { get; set; }
             public class GetTrafficControlTaskResponseBodyTrafficControlTargetsSplitParts : TeaModel {
+                /// <summary>
+                /// <para>The list of target value split points.</para>
+                /// </summary>
                 [NameInMap("SetPoints")]
                 [Validation(Required=false)]
                 public List<int?> SetPoints { get; set; }
 
+                /// <summary>
+                /// <para>The list of control target set values.</para>
+                /// </summary>
                 [NameInMap("SetValues")]
                 [Validation(Required=false)]
                 public List<long?> SetValues { get; set; }
 
+                /// <summary>
+                /// <para>The time points for splitting the control target.</para>
+                /// </summary>
                 [NameInMap("TimePoints")]
                 [Validation(Required=false)]
                 public List<int?> TimePoints { get; set; }
@@ -356,6 +458,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             }
 
             /// <summary>
+            /// <para>The start time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-03-25</para>
             /// </summary>
@@ -364,6 +468,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>The statistical period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Daily</para>
             /// </summary>
@@ -372,6 +478,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string StatisPeriod { get; set; }
 
             /// <summary>
+            /// <para>The status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Opened</para>
             /// </summary>
@@ -380,6 +488,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The tolerance range of the control target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -388,6 +498,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public long? ToleranceValue { get; set; }
 
             /// <summary>
+            /// <para>The ID of the traffic control target.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -396,6 +508,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string TrafficControlTargetId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the traffic control task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -404,6 +518,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string TrafficControlTaskId { get; set; }
 
             /// <summary>
+            /// <para>The control target value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -414,6 +530,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The ID of the traffic control task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -422,6 +540,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string TrafficControlTaskId { get; set; }
 
         /// <summary>
+        /// <para>The target user group conditions in array format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</para>
         /// </summary>
@@ -430,6 +550,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserConditionArray { get; set; }
 
         /// <summary>
+        /// <para>The target user group conditions in expression format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</para>
         /// </summary>
@@ -438,6 +560,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserConditionExpress { get; set; }
 
         /// <summary>
+        /// <para>The condition type for the target user group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Array</para>
         /// </summary>
@@ -446,6 +570,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string UserConditionType { get; set; }
 
         /// <summary>
+        /// <para>The user table ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

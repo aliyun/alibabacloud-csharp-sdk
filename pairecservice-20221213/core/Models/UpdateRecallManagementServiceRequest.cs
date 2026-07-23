@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class UpdateRecallManagementServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the recall management service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>reso-2s416t146ffjc3yefx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-cn-test123</para>
         /// </summary>

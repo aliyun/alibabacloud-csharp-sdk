@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class BackflowFeatureConsistencyCheckJobDataRequest : TeaModel {
         /// <summary>
+        /// <para>The feature consistency check job configuration ID. To obtain the configuration ID, call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string FeatureConsistencyCheckJobConfigId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The item features.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ItemFeatures { get; set; }
 
         /// <summary>
+        /// <para>The item ID in the log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogItemId { get; set; }
 
         /// <summary>
+        /// <para>The log request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogRequestId { get; set; }
 
         /// <summary>
+        /// <para>The log request time (UNIX epoch timestamp).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +76,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public long? LogRequestTime { get; set; }
 
         /// <summary>
+        /// <para>The user ID in the log.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +87,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LogUserId { get; set; }
 
         /// <summary>
+        /// <para>The scene name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +98,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string SceneName { get; set; }
 
         /// <summary>
+        /// <para>The scores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,6 +113,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ServiceName { get; set; }
 
         /// <summary>
+        /// <para>The user features.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

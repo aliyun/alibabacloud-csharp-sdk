@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetTrafficControlTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The filter for traffic control targets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>All</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ControlTargetFilter { get; set; }
 
         /// <summary>
+        /// <para>The environment to which the parameter belongs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Daily: daily environment</description></item>
+        /// <item><description>Pre: staging environment</description></item>
+        /// <item><description>Prod: production environment.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Daily</para>
         /// </summary>
@@ -26,6 +35,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pairec-1324***</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Latest</para>
         /// </summary>

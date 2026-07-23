@@ -10,6 +10,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class GetServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The Container Registry Enterprise instance ID selected by the user when a non-official image is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cri-xxx</para>
+        /// </summary>
+        [NameInMap("CrInstanceId")]
+        [Validation(Required=false)]
+        public string CrInstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The service description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a test rec engine</para>
         /// </summary>
@@ -18,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The engine configuration ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -26,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string EngineConfigId { get; set; }
 
         /// <summary>
+        /// <para>The time of the most recent production release.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -34,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string GmtReleasedTime { get; set; }
 
         /// <summary>
+        /// <para>The image secret.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -41,15 +59,23 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string ImageAuth { get; set; }
 
+        /// <summary>
+        /// <para>The image name.</para>
+        /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
+        /// <summary>
+        /// <para>The most recent production release record.</para>
+        /// </summary>
         [NameInMap("LatestProdReleaseOrder")]
         [Validation(Required=false)]
         public GetServiceResponseBodyLatestProdReleaseOrder LatestProdReleaseOrder { get; set; }
         public class GetServiceResponseBodyLatestProdReleaseOrder : TeaModel {
             /// <summary>
+            /// <para>The release content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>update golang version to 1.22</para>
             /// </summary>
@@ -58,6 +84,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The image version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>
             /// </summary>
@@ -66,6 +94,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ImageVersion { get; set; }
 
             /// <summary>
+            /// <para>The release information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;Pre&quot;: {
@@ -83,6 +113,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ReleaseInfo { get; set; }
 
             /// <summary>
+            /// <para>The release order ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -91,6 +123,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string ReleaseOrderId { get; set; }
 
             /// <summary>
+            /// <para>The publisher, including the name and UID of the Resource Access Management (RAM) users.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:E-xxx.xxx-@xxx.onaliyun.com">E-xxx.xxx-@xxx.onaliyun.com</a></para>
             /// </summary>
@@ -99,6 +133,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Releaser { get; set; }
 
             /// <summary>
+            /// <para>The release title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>update version</para>
             /// </summary>
@@ -109,6 +145,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The service name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_rec</para>
         /// </summary>
@@ -117,6 +155,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region where the service is deployed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -125,6 +165,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The Container Registry Enterprise Edition repository ID selected by the user when a non-official image is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>crr-xxx</para>
+        /// </summary>
+        [NameInMap("RepositoryId")]
+        [Validation(Required=false)]
+        public string RepositoryId { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</para>
         /// </summary>
@@ -133,6 +185,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The configuration used to publish the service, such as the service configuration in EAS.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Port&quot;:8080}</para>
         /// </summary>
@@ -141,6 +195,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string ServiceConfig { get; set; }
 
         /// <summary>
+        /// <para>The resource address used to publish the service, such as the resource group name in Elastic Algorithm Service (EAS).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eas-resource-xxx</para>
         /// </summary>

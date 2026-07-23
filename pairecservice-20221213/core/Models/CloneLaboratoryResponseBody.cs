@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CloneLaboratoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the cloned laboratory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string LaboratoryId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01D22D08-BA20-5F35-8302-99115F288220</para>

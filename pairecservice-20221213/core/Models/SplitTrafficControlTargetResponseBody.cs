@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class SplitTrafficControlTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8F613A9-DF1C-551A-88E1-397A3981A785</para>

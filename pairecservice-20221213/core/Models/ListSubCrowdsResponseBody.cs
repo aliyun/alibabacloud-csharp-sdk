@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class ListSubCrowdsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5AEB79E-FAA4-5DCE-8CD7-1CAF549ECC3E</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of subcrowds.</para>
+        /// </summary>
         [NameInMap("SubCrowds")]
         [Validation(Required=false)]
         public List<ListSubCrowdsResponseBodySubCrowds> SubCrowds { get; set; }
         public class ListSubCrowdsResponseBodySubCrowds : TeaModel {
             /// <summary>
+            /// <para>The time when the subcrowd was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-12-15T23:24:33.132+08:00</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
+            /// <para>The number of users in the subcrowd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public int? Quantity { get; set; }
 
             /// <summary>
+            /// <para>The source of the subcrowd.<br>● ManualInput: Users were added manually.<br>● UploadFile: Users were added by uploading a file.<br><br></para>
+            /// 
             /// <b>Example:</b>
             /// <para>ManualInput</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string Source { get; set; }
 
             /// <summary>
+            /// <para>The subcrowd ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             public string SubCrowdId { get; set; }
 
             /// <summary>
+            /// <para>The users in the subcrowd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user1,user2</para>
             /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         }
 
         /// <summary>
+        /// <para>The total number of subcrowds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
