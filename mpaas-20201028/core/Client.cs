@@ -16534,6 +16534,150 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             return await QueryMgsTestreqbodyautogenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询小游戏信息(含资质)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMiniGameInfoByAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMiniGameInfoByAppResponse
+        /// </returns>
+        public QueryMiniGameInfoByAppResponse QueryMiniGameInfoByAppWithOptions(QueryMiniGameInfoByAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramCode))
+            {
+                body["MiniProgramCode"] = request.MiniProgramCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMiniGameInfoByApp",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMiniGameInfoByAppResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询小游戏信息(含资质)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMiniGameInfoByAppRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMiniGameInfoByAppResponse
+        /// </returns>
+        public async Task<QueryMiniGameInfoByAppResponse> QueryMiniGameInfoByAppWithOptionsAsync(QueryMiniGameInfoByAppRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramCode))
+            {
+                body["MiniProgramCode"] = request.MiniProgramCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMiniGameInfoByApp",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMiniGameInfoByAppResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询小游戏信息(含资质)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMiniGameInfoByAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMiniGameInfoByAppResponse
+        /// </returns>
+        public QueryMiniGameInfoByAppResponse QueryMiniGameInfoByApp(QueryMiniGameInfoByAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMiniGameInfoByAppWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询小游戏信息(含资质)</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMiniGameInfoByAppRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMiniGameInfoByAppResponse
+        /// </returns>
+        public async Task<QueryMiniGameInfoByAppResponse> QueryMiniGameInfoByAppAsync(QueryMiniGameInfoByAppRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMiniGameInfoByAppWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QueryMpsSchedulerListRequest
         /// </param>
