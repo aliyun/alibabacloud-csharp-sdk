@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccuracyTestInsId { get; set; }
 
         /// <summary>
-        /// <para>The task ID used for exact filtering.</para>
+        /// <para>Filters by the exact task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>692abb8f-xxxx-xxxx-xxxx-xxxxxxxxxxxx</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AccuracyTestInsId { get; set; }
 
         /// <summary>
-        /// <para>The accuracy test sample.</para>
+        /// <para>The accuracy test sample file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>包含问题、答案[、SQL]的文件</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8wfig6l33n4f4xxxxxxxxxx</para>

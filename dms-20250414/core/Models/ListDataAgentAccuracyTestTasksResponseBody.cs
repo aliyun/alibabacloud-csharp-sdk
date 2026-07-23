@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public List<ListDataAgentAccuracyTestTasksResponseBodyData> Data { get; set; }
         public class ListDataAgentAccuracyTestTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the accuracy test to which the task belongs.</para>
+            /// <para>The accuracy test instance ID to which the task belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>at-106n4rg17gv9fxxxxxxxxxx</para>

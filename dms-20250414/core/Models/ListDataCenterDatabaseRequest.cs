@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataCenterDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is for internal use.</para>
+        /// <para>Used only by the frontend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Frontend only</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallFrom { get; set; }
 
         /// <summary>
-        /// <para>The DMS unit.</para>
+        /// <para>The current Data Management unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ImportType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is for internal use.</para>
+        /// <para>Used only by the frontend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Frontend only</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The keyword for a fuzzy search for databases.</para>
+        /// <para>The keyword for fuzzy match of databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("SearchKey")]
         [Validation(Required=false)]
         public string SearchKey { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

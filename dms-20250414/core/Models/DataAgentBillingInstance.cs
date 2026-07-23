@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public int? FreeAgentSeats { get; set; }
 
+        [NameInMap("FreeLLM")]
+        [Validation(Required=false)]
+        public int? FreeLLM { get; set; }
+
         [NameInMap("GmtCreated")]
         [Validation(Required=false)]
         public long? GmtCreated { get; set; }

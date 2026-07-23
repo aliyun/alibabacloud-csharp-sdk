@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request fails.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True: The request is successful.                                 </description></item>
-        /// <item><description>False: The request fails.</description></item>
+        /// <item><description>True: The request was successful.                                 </description></item>
+        /// <item><description>False: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeFileUploadSignatureRequest : TeaModel {
         /// <summary>
-        /// <para>Used by the frontend only</para>
+        /// <para>The parameter used only by the frontend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>仅前端使用</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallFrom { get; set; }
 
         /// <summary>
-        /// <para>Current DMS unit</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("DmsUnit")]
         [Validation(Required=false)]
         public string DmsUnit { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentAccuracyTestRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom agent for which you want to run the accuracy test.</para>
+        /// <para>The ID of the custom agent to be tested for accuracy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-xxxxxxxxxxxxxxxxxxxx</para>
@@ -23,11 +23,20 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The data source. We recommend that you configure this in the custom agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxx49\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;75xxx6\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Dataset")]
         [Validation(Required=false)]
         public string Dataset { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;isInternal&quot;:&quot;N&quot;,&quot;TableIds&quot;:[&quot;51<em><b>70&quot;,&quot;51</b></em>71&quot;],&quot;DataSourceType&quot;:&quot;database&quot;,&quot;Database&quot;:&quot;internal_data_employees&quot;,&quot;DmsInstanceId&quot;:&quot;27<em><b>5&quot;,&quot;DmsDatabaseId&quot;:&quot;71</b></em>04&quot;,&quot;Tables&quot;:[&quot;employees&quot;,&quot;salaries&quot;],&quot;FileId&quot;:&quot;rm-
+        /// ***&quot;,&quot;DbName&quot;:&quot;internal_data_employees&quot;,&quot;CatalogName&quot;:&quot;def&quot;,&quot;RegionId&quot;:&quot;cn-hangzhou&quot;,&quot;Engine&quot;:&quot;mysql&quot;}]</para>
+        /// </summary>
+        [NameInMap("Datasource")]
+        [Validation(Required=false)]
+        public string Datasource { get; set; }
 
         /// <summary>
         /// <para>The description.</para>
@@ -110,7 +119,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether sessions are displayed after the analysis. This parameter is not supported.</para>
+        /// <para>Specifies whether sessions are displayed after analysis. This parameter is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

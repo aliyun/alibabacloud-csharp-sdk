@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class FileUploadCallbackRequest : TeaModel {
         /// <summary>
-        /// <para>For frontend use only.</para>
+        /// <para>Used only by the frontend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TrailCenter</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallFrom { get; set; }
 
         /// <summary>
-        /// <para>The current DMS unit.</para>
+        /// <para>The current Data Management unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DmsUnit { get; set; }
 
         /// <summary>
-        /// <para>The file size in bytes.</para>
+        /// <para>The file size, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8110</para>
@@ -55,18 +55,20 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssBucket { get; set; }
 
         /// <summary>
-        /// <para>The full path for the file upload.</para>
+        /// <para>The full path of the uploaded file.</para>
         /// <list type="bullet">
-        /// <item><description><para>Format: This path is formed by appending the file name to the UploadDir value returned by the DescribeFileUploadSignature operation.</para>
-        /// </description></item>
-        /// <item><description><para>Example: ${UploadDir}/${Filename}</para>
-        /// </description></item>
+        /// <item><description>Format: The UploadDir field returned by the DescribeFileUploadSignature operation concatenated with the file name.</description></item>
+        /// <item><description>Example: ${UploadDir}/${Filename}</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UploadLocation")]
         [Validation(Required=false)]
         public string UploadLocation { get; set; }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateDataAgentAccuracyTestResponseBodyData Data { get; set; }
         public class CreateDataAgentAccuracyTestResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the accuracy test.</para>
+            /// <para>The accuracy test instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>at-xxxxxxxxxxxxxxxxxxxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>

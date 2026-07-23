@@ -46,8 +46,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            [NameInMap("Datasource")]
+            [Validation(Required=false)]
+            public string Datasource { get; set; }
+
             /// <summary>
-            /// <para>The test set file ID.</para>
+            /// <para>The ID of the test set file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent sessions during testing.</para>
+            /// <para>The maximum number of concurrent sessions during the test.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether sessions are displayed after analysis. This feature is not currently supported.</para>
+            /// <para>Specifies whether sessions are displayed after analysis. This parameter is not supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

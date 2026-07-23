@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentAccuracyTestResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the accuracy test to which the task belongs.</para>
+        /// <para>The instance ID of the accuracy test.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-106n4rg17gv9fxxxxxxxxxx</para>

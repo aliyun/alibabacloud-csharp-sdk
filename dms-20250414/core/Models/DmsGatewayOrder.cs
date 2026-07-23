@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string ExpireTime { get; set; }
 
+        [NameInMap("FreeOrder")]
+        [Validation(Required=false)]
+        public bool? FreeOrder { get; set; }
+
+        [NameInMap("GmtCreate")]
+        [Validation(Required=false)]
+        public string GmtCreate { get; set; }
+
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }

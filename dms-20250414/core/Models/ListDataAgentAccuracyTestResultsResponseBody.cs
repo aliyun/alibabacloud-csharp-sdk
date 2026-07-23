@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AccuracyTestTaskId { get; set; }
 
                 /// <summary>
-                /// <para>The actual answer returned by the agent.</para>
+                /// <para>The actual answer from the agent.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>在公司历史职位记录中，共有97,750名员工曾拥有Senior Engineer头衔。</para>
@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [NameInMap("AgentResult")]
                 [Validation(Required=false)]
                 public string AgentResult { get; set; }
+
+                [NameInMap("AgentSql")]
+                [Validation(Required=false)]
+                public string AgentSql { get; set; }
 
                 /// <summary>
                 /// <para>The expected answer.</para>
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string AnswerResult { get; set; }
 
                 /// <summary>
-                /// <para>The expected SQL statement.</para>
+                /// <para>The expected SQL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELECT COUNT(*) FROM titles WHERE title = \&quot;Senior Engineer\&quot;;</para>
@@ -133,6 +137,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string ResultId { get; set; }
 
+                [NameInMap("SessionId")]
+                [Validation(Required=false)]
+                public string SessionId { get; set; }
+
                 /// <summary>
                 /// <para>The subtask ID.</para>
                 /// 
@@ -155,6 +163,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public long? CorrectCount { get; set; }
 
+            [NameInMap("FailedCount")]
+            [Validation(Required=false)]
+            public string FailedCount { get; set; }
+
             /// <summary>
             /// <para>The page number.</para>
             /// 
@@ -174,6 +186,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("PageSize")]
             [Validation(Required=false)]
             public long? PageSize { get; set; }
+
+            [NameInMap("PendingCount")]
+            [Validation(Required=false)]
+            public string PendingCount { get; set; }
 
             /// <summary>
             /// <para>The total number of results.</para>

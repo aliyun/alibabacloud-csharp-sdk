@@ -1607,6 +1607,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Dataset"] = request.Dataset;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasource))
+            {
+                query["Datasource"] = request.Datasource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
             {
                 query["Desc"] = request.Desc;
@@ -1696,6 +1700,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
             {
                 query["Dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasource))
+            {
+                query["Datasource"] = request.Datasource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
             {
@@ -2114,7 +2122,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent collaborative workspace.</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2168,7 +2176,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent collaborative workspace.</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2222,7 +2230,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent collaborative workspace.</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2240,7 +2248,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent collaborative workspace.</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3226,6 +3234,126 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCustomAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a DataAgent seat.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentResponse
+        /// </returns>
+        public DeleteDataAgentResponse DeleteDataAgentWithOptions(DeleteDataAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgent",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a DataAgent seat.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentResponse
+        /// </returns>
+        public async Task<DeleteDataAgentResponse> DeleteDataAgentWithOptionsAsync(DeleteDataAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgent",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a DataAgent seat.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentResponse
+        /// </returns>
+        public DeleteDataAgentResponse DeleteDataAgent(DeleteDataAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases a DataAgent seat.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentResponse
+        /// </returns>
+        public async Task<DeleteDataAgentResponse> DeleteDataAgentAsync(DeleteDataAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4990,6 +5118,150 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries DataAgent metrics.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentMetricsResponse
+        /// </returns>
+        public DescribeDataAgentMetricsResponse DescribeDataAgentMetricsWithOptions(DescribeDataAgentMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricNames))
+            {
+                query["MetricNames"] = request.MetricNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                query["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDataAgentMetrics",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDataAgentMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DataAgent metrics.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentMetricsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentMetricsResponse
+        /// </returns>
+        public async Task<DescribeDataAgentMetricsResponse> DescribeDataAgentMetricsWithOptionsAsync(DescribeDataAgentMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricNames))
+            {
+                query["MetricNames"] = request.MetricNames;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricType))
+            {
+                query["MetricType"] = request.MetricType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDataAgentMetrics",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDataAgentMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DataAgent metrics.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentMetricsResponse
+        /// </returns>
+        public DescribeDataAgentMetricsResponse DescribeDataAgentMetrics(DescribeDataAgentMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDataAgentMetricsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries DataAgent metrics.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentMetricsResponse
+        /// </returns>
+        public async Task<DescribeDataAgentMetricsResponse> DescribeDataAgentMetricsAsync(DescribeDataAgentMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDataAgentMetricsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the description of a DataAgent session.</para>
         /// </summary>
         /// 
@@ -5254,7 +5526,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeFileUploadSignature</para>
+        /// <para>Retrieves the signature information for file uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5279,6 +5551,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DmsUnit"] = request.DmsUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5300,7 +5576,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeFileUploadSignature</para>
+        /// <para>Retrieves the signature information for file uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5325,6 +5601,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DmsUnit"] = request.DmsUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5346,7 +5626,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeFileUploadSignature</para>
+        /// <para>Retrieves the signature information for file uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5364,7 +5644,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeFileUploadSignature</para>
+        /// <para>Retrieves the signature information for file uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5622,7 +5902,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FileUploadCallback</para>
+        /// <para>Calls back after a file is uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5663,6 +5943,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["UploadLocation"] = request.UploadLocation;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5684,7 +5968,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FileUploadCallback</para>
+        /// <para>Calls back after a file is uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5725,6 +6009,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["UploadLocation"] = request.UploadLocation;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -5746,7 +6034,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FileUploadCallback</para>
+        /// <para>Calls back after a file is uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5764,7 +6052,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>FileUploadCallback</para>
+        /// <para>Calls back after a file is uploaded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5778,6 +6066,126 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await FileUploadCallbackWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information by install token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticAgentByInstallTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticAgentByInstallTokenResponse
+        /// </returns>
+        public GetAgenticAgentByInstallTokenResponse GetAgenticAgentByInstallTokenWithOptions(GetAgenticAgentByInstallTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstallToken))
+            {
+                query["InstallToken"] = request.InstallToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticAgentByInstallToken",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticAgentByInstallTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information by install token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticAgentByInstallTokenRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticAgentByInstallTokenResponse
+        /// </returns>
+        public async Task<GetAgenticAgentByInstallTokenResponse> GetAgenticAgentByInstallTokenWithOptionsAsync(GetAgenticAgentByInstallTokenRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstallToken))
+            {
+                query["InstallToken"] = request.InstallToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgenticAgentByInstallToken",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgenticAgentByInstallTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information by install token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticAgentByInstallTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticAgentByInstallTokenResponse
+        /// </returns>
+        public GetAgenticAgentByInstallTokenResponse GetAgenticAgentByInstallToken(GetAgenticAgentByInstallTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgenticAgentByInstallTokenWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information by install token.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgenticAgentByInstallTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgenticAgentByInstallTokenResponse
+        /// </returns>
+        public async Task<GetAgenticAgentByInstallTokenResponse> GetAgenticAgentByInstallTokenAsync(GetAgenticAgentByInstallTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgenticAgentByInstallTokenWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8850,13 +9258,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// <para>Queries the running status of accuracy test nodes by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running status of self-test tasks by paging.
-        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// <para>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8922,13 +9329,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// <para>Queries the running status of accuracy test nodes by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running status of self-test tasks by paging.
-        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// <para>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8994,13 +9400,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// <para>Queries the running status of accuracy test nodes by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running status of self-test tasks by paging.
-        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// <para>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9018,13 +9423,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the running status of self-test tasks by paging.</para>
+        /// <para>Queries the running status of accuracy test nodes by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the running status of self-test tasks by paging.
-        /// If AccuracyTestInsId or AccuracyTestTaskId is empty, all test tasks are queried.</para>
+        /// <para>Queries the running status of self-test nodes by using paging. If AccuracyTestInsId or AccuracyTestTaskId is empty, all test nodes are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9618,7 +10022,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
+        /// <para>Retrieves the list of files uploaded by users in the data center. Only file types are supported. Database types are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9655,6 +10059,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["SearchKey"] = request.SearchKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9676,7 +10084,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
+        /// <para>Retrieves the list of files uploaded by users in the data center. Only file types are supported. Database types are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9713,6 +10121,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["SearchKey"] = request.SearchKey;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -9734,7 +10146,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
+        /// <para>Retrieves the list of files uploaded by users in the data center. Only file types are supported. Database types are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9752,7 +10164,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
+        /// <para>Retrieves the list of files uploaded by users in the data center. Only file types are supported. Database types are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13587,10 +13999,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13716,10 +14128,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13845,10 +14257,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13876,10 +14288,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>The <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> fields are optional but provide more detailed context information.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14820,6 +15232,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Dataset"] = request.Dataset;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasource))
+            {
+                query["Datasource"] = request.Datasource;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
             {
                 query["Desc"] = request.Desc;
@@ -14914,6 +15330,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
             {
                 query["Dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Datasource))
+            {
+                query["Datasource"] = request.Datasource;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Desc))
             {

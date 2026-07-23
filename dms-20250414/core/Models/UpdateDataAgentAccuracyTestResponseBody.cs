@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>The data source. We recommend that you configure this in the custom agent.</para>
+            /// <para>The data source. We recommend that you configure this parameter in a custom agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{\&quot;DataSourceType\&quot;:\&quot;database\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;DmsInstanceId\&quot;:\&quot;27xxxxx\&quot;,\&quot;DmsDatabaseId\&quot;:\&quot;752xxxxx\&quot;,\&quot;Database\&quot;:\&quot;employees\&quot;,\&quot;Tables\&quot;:[\&quot;employees\&quot;,\&quot;salaries\&quot;,\&quot;departments\&quot;]}]</para>
@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("Dataset")]
             [Validation(Required=false)]
             public string Dataset { get; set; }
+
+            [NameInMap("Datasource")]
+            [Validation(Required=false)]
+            public string Datasource { get; set; }
+
+            [NameInMap("Desc")]
+            [Validation(Required=false)]
+            public string Desc { get; set; }
 
             /// <summary>
             /// <para>The accuracy evaluation criteria. An empty value indicates the default criteria.</para>
@@ -66,6 +74,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string FileId { get; set; }
 
+            [NameInMap("MaxConcurrent")]
+            [Validation(Required=false)]
+            public int? MaxConcurrent { get; set; }
+
             /// <summary>
             /// <para>The analysis mode.</para>
             /// 
@@ -75,6 +87,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public int? Mode { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("NeedDelete")]
+            [Validation(Required=false)]
+            public bool? NeedDelete { get; set; }
 
             /// <summary>
             /// <para>The workspace ID.</para>

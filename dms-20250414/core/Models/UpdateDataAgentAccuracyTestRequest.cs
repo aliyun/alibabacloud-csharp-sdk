@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Dataset { get; set; }
 
+        [NameInMap("Datasource")]
+        [Validation(Required=false)]
+        public string Datasource { get; set; }
+
         /// <summary>
         /// <para>The description.</para>
         /// 
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The current DMS unit.</para>
+        /// <para>The current Data Management unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

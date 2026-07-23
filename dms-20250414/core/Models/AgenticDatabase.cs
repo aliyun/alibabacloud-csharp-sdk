@@ -31,13 +31,6 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogUuid { get; set; }
 
         /// <summary>
-        /// <para>The data source type, such as <c>MySQL</c> or <c>PostgreSQL</c>.</para>
-        /// </summary>
-        [NameInMap("DataSourceType")]
-        [Validation(Required=false)]
-        public string DataSourceType { get; set; }
-
-        /// <summary>
         /// <para>The database\&quot;s business attributes.</para>
         /// </summary>
         [NameInMap("DatabaseBizAttrs")]
@@ -50,6 +43,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("DatabaseUuid")]
         [Validation(Required=false)]
         public string DatabaseUuid { get; set; }
+
+        [NameInMap("DbType")]
+        [Validation(Required=false)]
+        public string DbType { get; set; }
 
         /// <summary>
         /// <para>The database description.</para>

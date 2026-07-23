@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateDataAgentWorkspaceResponseBodyData Data { get; set; }
         public class CreateDataAgentWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the workspace was created. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The creation time of the workspace. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765960516</para>
@@ -36,12 +36,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether session sharing is enabled within the workspace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("IsSessionShareEnabled")]
             [Validation(Required=false)]
             public bool? IsSessionShareEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765961516</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The number of members in the workspace.</para>
+            /// <para>The total number of members in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -70,6 +76,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public long? TotalMember { get; set; }
 
+            /// <summary>
+            /// <para>The workspace type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>personal: personal workspace.</description></item>
+            /// <item><description>common/null: multi-user collaborative workspace.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>personal/common</para>
+            /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
             public string Type { get; set; }

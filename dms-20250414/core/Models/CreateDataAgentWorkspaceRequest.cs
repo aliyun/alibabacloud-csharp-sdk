@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DMSUnit { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether session sharing is enabled within the workspace.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsSessionShareEnabled")]
         [Validation(Required=false)]
         public bool? IsSessionShareEnabled { get; set; }
 
         /// <summary>
-        /// <para>The description of the collaborative workspace.</para>
+        /// <para>The description of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Space for test</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the collaborative workspace.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspaceTest</para>

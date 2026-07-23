@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class OpenClawInstanceVO : TeaModel {
+        [NameInMap("AgentType")]
+        [Validation(Required=false)]
+        public string AgentType { get; set; }
+
         [NameInMap("AliyunAccountUid")]
         [Validation(Required=false)]
         public string AliyunAccountUid { get; set; }
@@ -94,6 +98,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
+
+        [NameInMap("ModelCallQuota")]
+        [Validation(Required=false)]
+        public long? ModelCallQuota { get; set; }
+
+        [NameInMap("ModelCallUsed")]
+        [Validation(Required=false)]
+        public long? ModelCallUsed { get; set; }
 
         [NameInMap("OpenclawToken")]
         [Validation(Required=false)]
