@@ -10,17 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteLogDeliveryQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The log category. Valid values:</para>
-        /// <ol>
-        /// <item><description><para>dcdn_log_access_l1 (default): access logs.</para>
-        /// </description></item>
-        /// <item><description><para>dcdn_log_er: Edge Routine logs.</para>
-        /// </description></item>
-        /// <item><description><para>dcdn_log_waf: firewall logs.</para>
-        /// </description></item>
-        /// <item><description><para>dcdn_log_ipa: TCP/UDP proxy logs.</para>
-        /// </description></item>
-        /// </ol>
+        /// <para>The type of real-time logs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>dcdn_log_access_l1 (default)</b>: access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: edge function logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

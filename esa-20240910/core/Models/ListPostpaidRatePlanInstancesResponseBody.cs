@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The billing mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description>POSTPAY: Pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,11 +43,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BillingMode { get; set; }
 
             /// <summary>
-            /// <para>The acceleration regions to which sites can be associated with this instance. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>domestic: the Chinese mainland.</description></item>
-            /// <item><description>overseas: global (excluding the Chinese mainland).</description></item>
-            /// <item><description>global: global (including the Chinese mainland).</description></item>
+            /// <item><description>domestic: The Chinese mainland.</description></item>
+            /// <item><description>overseas: Global (excluding the Chinese mainland).</description></item>
+            /// <item><description>global: Global (including the Chinese mainland).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the instance was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled specification change time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The scheduled specification change time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -87,8 +87,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            [NameInMap("OwnerId")]
+            [Validation(Required=false)]
+            public string OwnerId { get; set; }
+
             /// <summary>
-            /// <para>The plan name in English.</para>
+            /// <para>The English name of the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>basic</para>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanName { get; set; }
 
             /// <summary>
-            /// <para>The plan name in Chinese.</para>
+            /// <para>The Chinese name of the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-plan</para>
@@ -120,6 +124,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("PlanType")]
             [Validation(Required=false)]
             public string PlanType { get; set; }
+
+            [NameInMap("ShareType")]
+            [Validation(Required=false)]
+            public string ShareType { get; set; }
 
             /// <summary>
             /// <para>The site quota.</para>
@@ -164,7 +172,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <item><description>pending: The site is pending configuration.</description></item>
                 /// <item><description>active: The site is activated.</description></item>
                 /// <item><description>offline: The site is offline.</description></item>
-                /// <item><description>moved: The site has been replaced.</description></item>
+                /// <item><description>moved: The site has been superseded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

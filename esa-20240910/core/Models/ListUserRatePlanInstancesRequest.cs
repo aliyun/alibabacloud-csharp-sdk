@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The plan instance ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The plan instance ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
@@ -33,8 +33,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("IsShared")]
+        [Validation(Required=false)]
+        public bool? IsShared { get; set; }
+
         /// <summary>
-        /// <para>The page number to return in a paged query. Default value: <b>1</b>. Valid values: <b>1</b> to <b>100000</b>. Settings for paging take effect only when this parameter is specified.</para>
+        /// <para>The page number settings for paging. Default value: <b>1</b>. Valid values: <b>1 to 100000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Valid values: 1 to 500. This parameter is used for paging.</para>
+        /// <para>The number of entries per page for paging. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plan name in English.</para>
+        /// <para>The plan name (English).</para>
         /// 
         /// <b>Example:</b>
         /// <para>entranceplan</para>
@@ -66,8 +70,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The plan type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: fixed-version plan</description></item>
-        /// <item><description>enterprise: Enterprise Edition plan.</description></item>
+        /// <item><description>normal: fixed edition plan</description></item>
+        /// <item><description>enterprise: enterprise edition plan</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,11 +91,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? RemainingExpireDays { get; set; }
 
+        [NameInMap("ResourceOwner")]
+        [Validation(Required=false)]
+        public long? ResourceOwner { get; set; }
+
         /// <summary>
-        /// <para>The field by which to sort the results. By default, results are sorted by purchase time. Valid values:</para>
+        /// <para>The sort field. By default, results are sorted by purchase time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTime</b>: purchase time.</description></item>
-        /// <item><description><b>ExpireTime</b>: expiration time.</description></item>
+        /// <item><description><b>CreateTime</b>: Purchase time.</description></item>
+        /// <item><description><b>ExpireTime</b>: Expiration time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,8 +112,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The sort order. Default value: desc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: ascending order.</description></item>
-        /// <item><description><b>desc</b>: descending order.</description></item>
+        /// <item><description><b>asc</b>: Ascending order.</description></item>
+        /// <item><description><b>desc</b>: Descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,10 +126,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: The plan instance is in normal service.</description></item>
-        /// <item><description><b>offline</b>: The plan instance has expired but has not exceeded the grace period and is not active.</description></item>
-        /// <item><description><b>disable</b>: The plan instance has been released.</description></item>
-        /// <item><description><b>overdue</b>: The plan instance has an overdue payment.</description></item>
+        /// <item><description><b>online</b>: Normal service status.</description></item>
+        /// <item><description><b>offline</b>: Expired but not overdue, in an inactive state.</description></item>
+        /// <item><description><b>disable</b>: Released.</description></item>
+        /// <item><description><b>overdue</b>: Overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,12 +145,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The plan subscription type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>entranceplan: Free Edition (Chinese mainland)</description></item>
-        /// <item><description>entranceplan_intl: Free Edition (International)</description></item>
-        /// <item><description>basicplan: Basic Edition</description></item>
-        /// <item><description>standardplan: Standard Edition</description></item>
-        /// <item><description>advancedplan: Premium Edition</description></item>
-        /// <item><description>enterpriseplan: Enterprise Edition.</description></item>
+        /// <item><description>Free Edition (Chinese mainland): entranceplan</description></item>
+        /// <item><description>Free Edition (International): entranceplan_intl</description></item>
+        /// <item><description>Basic Edition: basicplan</description></item>
+        /// <item><description>Standard Edition: standardplan</description></item>
+        /// <item><description>Premium Edition: advancedplan</description></item>
+        /// <item><description>Enterprise Edition: enterpriseplan</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

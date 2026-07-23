@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>running: The instance is running.</description></item>
-        /// <item><description>renewing: The instance is being renewed.</description></item>
-        /// <item><description>upgrading: The configuration of the instance is being upgraded.</description></item>
-        /// <item><description>releasePrepaidService: The instance is released due to expiration.</description></item>
-        /// <item><description>creating: The instance is being created.</description></item>
-        /// <item><description>downgrading: The configuration of the instance is being downgraded.</description></item>
-        /// <item><description>ceasePrepaidService: The instance has expired.</description></item>
+        /// <item><description>running: Running.</description></item>
+        /// <item><description>renewing: Being renewed.</description></item>
+        /// <item><description>upgrading: Being upgraded.</description></item>
+        /// <item><description>releasePrepaidService: Released due to prepaid expiration.</description></item>
+        /// <item><description>creating: Being created.</description></item>
+        /// <item><description>downgrading: Being downgraded.</description></item>
+        /// <item><description>ceasePrepaidService: Suspended due to prepaid expiration.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

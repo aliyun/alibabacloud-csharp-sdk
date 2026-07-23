@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The status of the bandwidth abuse protection rule.</para>
+            /// <para>The switch status of the bandwidth abuse protection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The configuration for disabling the security module.</para>
+        /// <para>The disable security module configuration.</para>
         /// </summary>
         [NameInMap("DisableSecurityModule")]
         [Validation(Required=false)]
@@ -258,11 +258,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The request body inspection configuration. Controls the deep packet inspection behavior of WAF for HTTP request bodies. After this feature is enabled, content-based matching rules such as SQL injection and XSS detection take effect on request bodies.</para>
-        /// <para>This structure can contain the following fields:</para>
+        /// <para>This configuration can contain the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>Id: The unique identifier of the built-in inspection rule.</description></item>
-        /// <item><description>SizeLimit: The maximum size of the request body to inspect.</description></item>
-        /// <item><description>Action: The action to take when the request body exceeds the size limit.</description></item>
+        /// <item><description><c>Id</c>: The unique identifier of the built-in inspection rule.</description></item>
+        /// <item><description><c>SizeLimit</c>: The maximum size of the request body to inspect.</description></item>
+        /// <item><description><c>Action</c>: The action to take when the request body exceeds the size limit.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("RequestBodyInspection")]
@@ -270,13 +270,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public WafSiteSettingsRequestBodyInspection RequestBodyInspection { get; set; }
         public class WafSiteSettingsRequestBodyInspection : TeaModel {
             /// <summary>
-            /// <para>The action to take when the request body size exceeds SizeLimit.</para>
-            /// <para>Common valid values (the complete list is determined by the server-side configuration):</para>
+            /// <para>The action to take when the request body size exceeds <c>SizeLimit</c>.</para>
+            /// <para>Common values (the complete enumeration is subject to the server-side configuration):</para>
             /// <list type="bullet">
-            /// <item><description>allow: allows the request without performing deep packet inspection on the portion that exceeds the limit.</description></item>
+            /// <item><description><c>allow</c>: Allow directly without performing deep packet inspection on the excess portion.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The complete enumeration is determined by the WAF server-side configuration.</para>
+            /// <para>The complete enum is subject to the WAF server-side configuration.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The request body inspection rule ID, which is the unique identifier of the built-in rule. When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The valid values are based on the built-in rule list of WAF.</para>
+            /// <para>The request body inspection rule ID (unique identifier of the built-in rule). When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The ID value is subject to the WAF built-in rule list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000001</para>
@@ -299,11 +299,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The maximum size of the request body to inspect, in bytes.</para>
             /// <list type="bullet">
-            /// <item><description>If the request body is less than or equal to this value, the entire content is subject to WAF matching.</description></item>
-            /// <item><description>If the request body exceeds this value, the action specified in the Action field is taken, such as inspecting only the first N bytes, rejecting the request, or allowing the request.</description></item>
+            /// <item><description>When the request body is less than or equal to this value, the entire content is subject to WAF matching.</description></item>
+            /// <item><description>When the request body exceeds this value, the action specified in the <c>Action</c> field is taken (for example, inspect only the first N bytes, reject, or allow directly).</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The valid value range and default value are determined by the WAF server-side configuration.</para>
+            /// <para>The specific value range and default value are subject to the WAF server-side configuration.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -322,6 +322,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public WafSiteSettingsSecurityLevel SecurityLevel { get; set; }
         public class WafSiteSettingsSecurityLevel : TeaModel {
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
             /// <summary>
             /// <para>The security level value.</para>
             /// 

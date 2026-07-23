@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class EditSiteWafSettingsRequest : TeaModel {
         /// <summary>
-        /// <para>WAF configuration information for the site, passed in JSON format.</para>
+        /// <para>The WAF configuration of the site, passed in JSON format.</para>
         /// </summary>
         [NameInMap("Settings")]
         [Validation(Required=false)]
         public WafSiteSettings Settings { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version.</para>
+        /// <para>The site version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

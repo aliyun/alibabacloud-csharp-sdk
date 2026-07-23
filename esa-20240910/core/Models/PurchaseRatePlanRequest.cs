@@ -20,8 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment.
-        /// Set this parameter to true when you directly call this operation.</para>
+        /// <para>Specifies whether to enable automatic payment. Set this parameter to true when you directly call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Auto-renewal is enabled.</description></item>
-        /// <item><description>false: Auto-renewal is disabled.</description></item>
+        /// <item><description>false: Auto-renewal is not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,9 +57,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PREPAY: subscription.</description></item>
-        /// <item><description>POSTPAY: pay-as-you-go.
-        /// Set this parameter to PREPAY when you directly call this operation.</description></item>
+        /// <item><description>POSTPAY: pay-as-you-go.</description></item>
         /// </list>
+        /// <para>Set this parameter to PREPAY when you directly call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PREPAY</para>
@@ -84,9 +83,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Coverage { get; set; }
 
+        [NameInMap("OveragePolicy")]
+        [Validation(Required=false)]
+        public string OveragePolicy { get; set; }
+
         /// <summary>
-        /// <para>The purchase period, in months.
-        /// This parameter is required when you directly call this operation.</para>
+        /// <para>The purchase period, in months. This parameter is required when you directly call this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,18 +99,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The plan code.</para>
-        /// <para>China site</para>
+        /// <para>Chinese site</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
         /// <item><description>Basic: basicplan</description></item>
         /// <item><description>Standard: standardplan</description></item>
-        /// <item><description>Premium: advancedplan</description></item>
+        /// <item><description>Advanced: advancedplan</description></item>
         /// </list>
         /// <para>International site</para>
         /// <list type="bullet">
         /// <item><description>Entrance: entranceplan</description></item>
         /// <item><description>Pro: standardplan</description></item>
-        /// <item><description>Premium: advancedpla.</description></item>
+        /// <item><description>Premium: advancedpla</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,12 +122,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The plan name.</para>
-        /// <para>China site</para>
+        /// <para>Chinese site</para>
         /// <list type="bullet">
         /// <item><description>Free Edition: entranceplan</description></item>
         /// <item><description>Basic: basic</description></item>
         /// <item><description>Standard: medium</description></item>
-        /// <item><description>Premium: high</description></item>
+        /// <item><description>Advanced: high</description></item>
         /// </list>
         /// <para>International site</para>
         /// <list type="bullet">
@@ -133,9 +135,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <item><description>Pro: basicplan_intl</description></item>
         /// <item><description>Premium: vipplan_intl</description></item>
         /// </list>
-        /// <remarks>
         /// <para>Note: For Enterprise Edition plans, the plan name is provided after backend configuration.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>basic</para>

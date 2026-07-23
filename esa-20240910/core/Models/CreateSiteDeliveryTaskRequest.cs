@@ -12,14 +12,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>dcdn_log_access_l1</b> (default): access log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_er</b>: edge function log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_waf</b>: WAF protection log.</para>
-        /// </description></item>
-        /// <item><description><para><b>dcdn_log_ipa</b>: Layer-4 acceleration log.</para>
-        /// </description></item>
+        /// <item><description><b>dcdn_log_access_l1</b> (default): Access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: Edge Routine logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: Security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,10 +29,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn</b>: Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>oversea</b>: regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>oversea</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,20 +41,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The type of the delivery destination. Valid values:</para>
+        /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sls</b>: Log Service.</para>
-        /// </description></item>
-        /// <item><description><para><b>http</b>: an HTTP service.</para>
-        /// </description></item>
-        /// <item><description><para><b>aws3</b>: Amazon S3.</para>
-        /// </description></item>
-        /// <item><description><para><b>oss</b>: Object Storage Service.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: a Kafka service.</para>
-        /// </description></item>
-        /// <item><description><para><b>aws3cmpt</b>: an Amazon S3-compatible service.</para>
-        /// </description></item>
+        /// <item><description><b>sls</b>: Simple Log Service.</description></item>
+        /// <item><description><b>http</b>: HTTP service.</description></item>
+        /// <item><description><b>aws3</b>: Amazon S3.</description></item>
+        /// <item><description><b>oss</b>: Object Storage Service (OSS).</description></item>
+        /// <item><description><b>kafka</b>: Kafka service.</description></item>
+        /// <item><description><b>aws3cmpt</b>: Amazon S3-compatible service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// <para>The discard rate. If you do not specify this parameter, the default value 0 is used.</para>
+        /// <para>The discard rate. If you do not specify this parameter, the default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0</para>
@@ -82,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>The log fields for delivery. Separate multiple fields with a comma (,).</para>
+        /// <para>The log fields to be delivered, separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,14 +85,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FilterVer { get; set; }
 
         /// <summary>
-        /// <para>The parameters for delivering logs to an HTTP server.</para>
+        /// <para>The HTTP delivery configuration parameters.</para>
         /// </summary>
         [NameInMap("HttpDelivery")]
         [Validation(Required=false)]
         public CreateSiteDeliveryTaskRequestHttpDelivery HttpDelivery { get; set; }
         public class CreateSiteDeliveryTaskRequestHttpDelivery : TeaModel {
             /// <summary>
-            /// <para>The compression method. By default, logs are delivered uncompressed.</para>
+            /// <para>The compression method. By default, no compression is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gzip</para>
@@ -114,7 +102,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Compress { get; set; }
 
             /// <summary>
-            /// <para>The URL of the destination HTTP server.</para>
+            /// <para>The delivery URL of the HTTP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.aliyun.com/v1/log/upload">http://xxx.aliyun.com/v1/log/upload</a></para>
@@ -124,7 +112,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DestUrl { get; set; }
 
             /// <summary>
-            /// <para>The custom HTTP request headers.</para>
+            /// <para>The custom header.</para>
             /// </summary>
             [NameInMap("HeaderParam")]
             [Validation(Required=false)]
@@ -135,7 +123,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? LastLogSplit { get; set; }
 
             /// <summary>
-            /// <para>The prefix of the delivered log package.</para>
+            /// <para>The prefix of the log delivery package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cdnVersion:1.0</para>
@@ -145,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string LogBodyPrefix { get; set; }
 
             /// <summary>
-            /// <para>The suffix of the delivered log package.</para>
+            /// <para>The suffix of the log delivery package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cdnVersion:1.0</para>
@@ -163,7 +151,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string LogSplitWords { get; set; }
 
             /// <summary>
-            /// <para>The maximum size of a delivery, in MB.</para>
+            /// <para>The maximum size per delivery batch, in MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -173,7 +161,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? MaxBatchMB { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of log entries per delivery.</para>
+            /// <para>The maximum number of entries per delivery batch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -193,14 +181,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? MaxRetry { get; set; }
 
             /// <summary>
-            /// <para>The custom query parameters.</para>
+            /// <para>The custom request parameter.</para>
             /// </summary>
             [NameInMap("QueryParam")]
             [Validation(Required=false)]
             public Dictionary<string, HttpDeliveryQueryParamValue> QueryParam { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use standard authentication.</para>
+            /// <para>Specifies whether standard authentication is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -219,7 +207,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The encryption timeout period.</para>
                 /// <remarks>
-                /// <para>The value must be greater than 0. We recommend that you set the value to 300 or greater.</para>
+                /// <para>Set this parameter to a value greater than 0. We recommend that you set it to at least 300.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -264,7 +252,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The parameters for delivering logs to a Kafka cluster.</para>
+        /// <para>The Kafka delivery configuration parameters.</para>
         /// </summary>
         [NameInMap("KafkaDelivery")]
         [Validation(Required=false)]
@@ -281,7 +269,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Balancer { get; set; }
 
             /// <summary>
-            /// <para>The array of servers.</para>
+            /// <para>The server array.</para>
             /// </summary>
             [NameInMap("Brokers")]
             [Validation(Required=false)]
@@ -308,7 +296,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string MachanismType { get; set; }
 
             /// <summary>
-            /// <para>The password for encryption.</para>
+            /// <para>The encryption password.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -318,7 +306,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The Kafka topic.</para>
+            /// <para>The Kafka message topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dqc_test2</para>
@@ -327,8 +315,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Topic { get; set; }
 
+            [NameInMap("UseTLS")]
+            [Validation(Required=false)]
+            public bool? UseTLS { get; set; }
+
             /// <summary>
-            /// <para>Specifies whether to enable user authentication.</para>
+            /// <para>Specifies whether user authentication is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -350,7 +342,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The parameters for delivering logs to Object Storage Service (OSS).</para>
+        /// <para>The OSS delivery configuration.</para>
         /// </summary>
         [NameInMap("OssDelivery")]
         [Validation(Required=false)]
@@ -377,7 +369,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The prefix of the object key when logs are stored in the OSS bucket.</para>
+            /// <para>The prefix of the OSS storage path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test/</para>
@@ -387,7 +379,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PrefixPath { get; set; }
 
             /// <summary>
-            /// <para>The region of the OSS bucket.</para>
+            /// <para>The OSS region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -399,7 +391,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The parameters for delivering logs to an Amazon S3 bucket or an S3-compatible service.</para>
+        /// <para>The configuration parameters for S3 or S3-compatible delivery.</para>
         /// </summary>
         [NameInMap("S3Delivery")]
         [Validation(Required=false)]
@@ -428,7 +420,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The endpoint of the server. This parameter is required when S3Cmpt is set to true.</para>
             /// <remarks>
-            /// <para>For S3-compatible services, you must configure DNS resolution for a domain name that is spliced by the bucket and endpoint. For example, if Endpoint is set to example.com and Bucket is set to demo, the actual delivery address is demo.example.com.</para>
+            /// <para>For S3-compatible services, configure the domain name resolution by concatenating the bucket and endpoint. For example, if the endpoint is example.com and the bucket is demo, the actual delivery address is demo.example.com.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -439,7 +431,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The storage path prefix.</para>
+            /// <para>The prefix of the storage path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logriver-test/log</para>
@@ -449,7 +441,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PrefixPath { get; set; }
 
             /// <summary>
-            /// <para>The region where the service is located.</para>
+            /// <para>The region where the service resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -469,7 +461,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? S3Cmpt { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret of the S3 account.</para>
+            /// <para>The secret key used by the S3 account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LDSIKh***</para>
@@ -489,7 +481,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to query the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -500,14 +492,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The parameters for delivering logs to Log Service.</para>
+        /// <para>The Simple Log Service delivery configuration.</para>
         /// </summary>
         [NameInMap("SlsDelivery")]
         [Validation(Required=false)]
         public CreateSiteDeliveryTaskRequestSlsDelivery SlsDelivery { get; set; }
         public class CreateSiteDeliveryTaskRequestSlsDelivery : TeaModel {
             /// <summary>
-            /// <para>The name of the Logstore in Log Service.</para>
+            /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accesslog-test</para>
@@ -517,7 +509,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SLSLogStore { get; set; }
 
             /// <summary>
-            /// <para>The name of the Log Service project.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dcdn-test20240417</para>
@@ -527,7 +519,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SLSProject { get; set; }
 
             /// <summary>
-            /// <para>The region of the Log Service project.</para>
+            /// <para>The region of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -539,7 +531,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The task name.</para>
+        /// <para>The name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

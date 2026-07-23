@@ -10,17 +10,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteLogDeliveryQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log category. Valid values:</para>
-        /// <ol>
-        /// <item><description><para>dcdn_log_access_l1 (default): access logs.</para>
-        /// </description></item>
-        /// <item><description><para>dcdn_log_er: Edge Routine logs.</para>
-        /// </description></item>
-        /// <item><description><para>dcdn_log_waf: firewall logs.</para>
-        /// </description></item>
-        /// <item><description><para>dcdn_log_ipa: TCP/UDP proxy logs.</para>
-        /// </description></item>
-        /// </ol>
+        /// <para>The type of real-time logs. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>dcdn_log_access_l1 (default)</b>: access logs.</description></item>
+        /// <item><description><b>dcdn_log_er</b>: edge function logs.</description></item>
+        /// <item><description><b>dcdn_log_waf</b>: security protection logs.</description></item>
+        /// <item><description><b>dcdn_log_ipa</b>: Layer 4 acceleration logs.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>dcdn_log_access_l1</para>
@@ -50,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

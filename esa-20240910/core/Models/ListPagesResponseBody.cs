@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom response page. You can call the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation to obtain the ID.</para>
+            /// <para>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -89,6 +89,32 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
+            [NameInMap("Moderation")]
+            [Validation(Required=false)]
+            public ListPagesResponseBodyPagesModeration Moderation { get; set; }
+            public class ListPagesResponseBodyPagesModeration : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>[]</para>
+                /// </summary>
+                [NameInMap("Reasons")]
+                [Validation(Required=false)]
+                public List<string> Reasons { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>pending</para>
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The name of the custom response page.</para>
             /// 
             /// <b>Example:</b>
@@ -99,7 +125,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the custom response page was last modified.</para>
+            /// <para>The last modification time of the custom response page.</para>
             /// <para>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</para>
             /// <para>Example: 2026-06-10T14:23:45Z</para>
             /// 

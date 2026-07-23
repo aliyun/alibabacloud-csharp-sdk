@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetSiteWafSettingsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the configuration path. If not provided, all configurations will be retrieved.</para>
+        /// <para>The configuration path. If this parameter is not specified, all configurations are retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bot_management</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version.</para>
+        /// <para>The site version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

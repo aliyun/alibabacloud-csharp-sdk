@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Coverage { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation. You must specify at least one of the instance ID and site ID. If both are specified, the instance ID takes precedence.</para>
+        /// <para>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2852398.html">ListUserRatePlanInstances</a> operation to obtain the instance ID. You must specify at least one of the instance ID and site ID. If both are specified, the instance ID takes precedence.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
+
+        [NameInMap("ResourceOwner")]
+        [Validation(Required=false)]
+        public long? ResourceOwner { get; set; }
 
         /// <summary>
         /// <para>The site name.</para>

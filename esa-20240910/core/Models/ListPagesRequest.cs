@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The keyword used for fuzzy matching against the name or description of custom pages.</para>
+            /// <para>The fuzzy match string for the name or description of a custom page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>

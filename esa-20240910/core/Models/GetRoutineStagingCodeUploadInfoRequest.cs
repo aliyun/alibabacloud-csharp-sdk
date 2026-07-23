@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CodeDescription { get; set; }
 
         /// <summary>
-        /// <para>The routine name.</para>
+        /// <para>The name of the Edge Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

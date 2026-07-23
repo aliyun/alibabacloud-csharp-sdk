@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AssetsDirectory { get; set; }
 
         /// <summary>
-        /// <para>The branches that trigger a build. Set this parameter to * for all branches. To specify multiple branches, separate branch names with commas.</para>
+        /// <para>The branches that trigger a build. Set this to * for all branches. To specify multiple branches, separate branch names with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>int,abc</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The build command.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>npm xxx</para>
+        /// <para>npm run build</para>
         /// </summary>
         [NameInMap("BuildCommand")]
         [Validation(Required=false)]
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The environment variables.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("EnvironmentVariables")]
         [Validation(Required=false)]
@@ -57,10 +60,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? GitAccountId { get; set; }
 
         /// <summary>
+        /// <para>The Git platform. Valid values: github, gitee, and upload.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>github</para>
+        /// </summary>
+        [NameInMap("GitPlatform")]
+        [Validation(Required=false)]
+        public string GitPlatform { get; set; }
+
+        /// <summary>
         /// <para>The install command.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>npm install xxx</para>
+        /// <para>npm install</para>
         /// </summary>
         [NameInMap("InstallCommand")]
         [Validation(Required=false)]
@@ -81,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? IsPrivate { get; set; }
 
         /// <summary>
-        /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, and <c>12.x</c>.</para>
+        /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, <c>12.x</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22.x</para>
@@ -121,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RootDirectory { get; set; }
 
         /// <summary>
-        /// <para>The path of the ER entry file.</para>
+        /// <para>The ER entry file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/home</para>

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class HttpDeliveryHeaderParamValue : TeaModel {
-        /// <summary>
-        /// <para>The static variable.</para>
-        /// </summary>
         [NameInMap("StaticValue")]
         [Validation(Required=false)]
         public string StaticValue { get; set; }

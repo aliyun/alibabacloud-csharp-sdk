@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Specify this parameter to query a specific instance.</para>
+        /// <para>The instance ID. Use this parameter to query a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-dps-xxxxxx</para>
@@ -55,8 +55,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("ResourceOwner")]
+        [Validation(Required=false)]
+        public long? ResourceOwner { get; set; }
+
         /// <summary>
-        /// <para>The field by which to sort the results. Valid values:</para>
+        /// <para>The field by which to sort results. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CreateTime: sorted by creation time</description></item>
         /// </list>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineStagingCodeUploadInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code version.</para>
+        /// <para>The code version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710120201067203242</para>
@@ -20,18 +20,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CodeVersion { get; set; }
 
         /// <summary>
-        /// <para>The configuration information that can be used to upload to OSS.</para>
+        /// <para>The configuration information for uploading a JavaScript file to OSS. When uploading to OSS, you must include the OSSAccessKeyId and x-oss-security-token parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{
+        /// <para>&quot;OssPostConfig&quot;: {
         ///             &quot;Url&quot;: &quot;<a href="http://oss_fake_bucket_url">http://oss_fake_bucket_url</a>&quot;,
         ///             &quot;OSSAccessKeyId&quot;: &quot;xxx&quot;,
-        ///             &quot;key&quot;: &quot;site_er_js/hello.1418586423220543.unstable.js&quot;,
-        ///             &quot;callback&quot;: &quot;xxx==&quot;,
+        ///             &quot;XOssSecurityToken&quot;: &quot;&quot;,
+        ///             &quot;key&quot;: &quot;sp_esa_rwa/xxx/hello/unstable/routine/index.js&quot;,
+        ///             &quot;callback&quot;: &quot;xxx=&quot;,
         ///             &quot;x:codeDescription&quot;: &quot;xxx=&quot;,
-        ///             &quot;policy&quot;: &quot;xxx&quot;,
+        ///             &quot;policy&quot;: &quot;xxx=&quot;,
         ///             &quot;Signature&quot;: &quot;xxx=&quot;
-        /// }</para>
+        ///         }</para>
         /// </summary>
         [NameInMap("OssPostConfig")]
         [Validation(Required=false)]
