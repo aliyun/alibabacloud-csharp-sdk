@@ -1577,6 +1577,446 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentPlanResponse
+        /// </returns>
+        public CreateExperimentPlanResponse CreateExperimentPlanWithOptions(string agentSpace, CreateExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Evaluators))
+            {
+                body["evaluators"] = request.Evaluators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentType))
+            {
+                body["experimentType"] = request.ExperimentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Experiments))
+            {
+                body["experiments"] = request.Experiments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                body["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuerySql))
+            {
+                body["querySql"] = request.QuerySql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedItemIds))
+            {
+                body["selectedItemIds"] = request.SelectedItemIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExperimentPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentPlanResponse
+        /// </returns>
+        public async Task<CreateExperimentPlanResponse> CreateExperimentPlanWithOptionsAsync(string agentSpace, CreateExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Evaluators))
+            {
+                body["evaluators"] = request.Evaluators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentType))
+            {
+                body["experimentType"] = request.ExperimentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Experiments))
+            {
+                body["experiments"] = request.Experiments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                body["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuerySql))
+            {
+                body["querySql"] = request.QuerySql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedItemIds))
+            {
+                body["selectedItemIds"] = request.SelectedItemIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExperimentPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentPlanResponse
+        /// </returns>
+        public CreateExperimentPlanResponse CreateExperimentPlan(string agentSpace, CreateExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateExperimentPlanWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentPlan to create an experiment plan under a specified AgentSpace. Use this operation to define the configuration of an offline or online experiment, including the data source, optional evaluators, and experiment groups required for online experiments. After the plan is created, call CreateExperimentRun to start execution.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentPlanResponse
+        /// </returns>
+        public async Task<CreateExperimentPlanResponse> CreateExperimentPlanAsync(string agentSpace, CreateExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateExperimentPlanWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an experiment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentRunResponse
+        /// </returns>
+        public CreateExperimentRunResponse CreateExperimentRunWithOptions(string agentSpace, CreateExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedAt))
+            {
+                body["completedAt"] = request.CompletedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedTasks))
+            {
+                body["completedTasks"] = request.CompletedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutedAt))
+            {
+                body["executedAt"] = request.ExecutedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentPlanId))
+            {
+                body["experimentPlanId"] = request.ExperimentPlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailedTasks))
+            {
+                body["failedTasks"] = request.FailedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfflineExperiments))
+            {
+                body["offlineExperiments"] = request.OfflineExperiments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                body["recordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTasks))
+            {
+                body["totalTasks"] = request.TotalTasks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/execute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExperimentRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an experiment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentRunResponse
+        /// </returns>
+        public async Task<CreateExperimentRunResponse> CreateExperimentRunWithOptionsAsync(string agentSpace, CreateExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedAt))
+            {
+                body["completedAt"] = request.CompletedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedTasks))
+            {
+                body["completedTasks"] = request.CompletedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutedAt))
+            {
+                body["executedAt"] = request.ExecutedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentPlanId))
+            {
+                body["experimentPlanId"] = request.ExperimentPlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailedTasks))
+            {
+                body["failedTasks"] = request.FailedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OfflineExperiments))
+            {
+                body["offlineExperiments"] = request.OfflineExperiments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                body["recordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTasks))
+            {
+                body["totalTasks"] = request.TotalTasks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/execute",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExperimentRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an experiment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentRunResponse
+        /// </returns>
+        public CreateExperimentRunResponse CreateExperimentRun(string agentSpace, CreateExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateExperimentRunWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an experiment.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateExperimentRun to initiate an experiment execution based on an existing experiment plan. For online experiments, you typically only need to pass <c>experimentPlanId</c>. For offline experiments, you need to pass <c>offlineExperiments</c> (1 to 5 items).</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExperimentRunResponse
+        /// </returns>
+        public async Task<CreateExperimentRunResponse> CreateExperimentRunAsync(string agentSpace, CreateExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateExperimentRunWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a pipeline.</para>
         /// </summary>
         /// 
@@ -2751,6 +3191,282 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteEvaluatorSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentPlanResponse
+        /// </returns>
+        public DeleteExperimentPlanResponse DeleteExperimentPlanWithOptions(string agentSpace, string planId, DeleteExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExperimentPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentPlanResponse
+        /// </returns>
+        public async Task<DeleteExperimentPlanResponse> DeleteExperimentPlanWithOptionsAsync(string agentSpace, string planId, DeleteExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExperimentPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentPlanResponse
+        /// </returns>
+        public DeleteExperimentPlanResponse DeleteExperimentPlan(string agentSpace, string planId, DeleteExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteExperimentPlanWithOptions(agentSpace, planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentPlan to delete a specified experiment plan. After deletion, no new executions can be initiated based on this plan. Existing experiment records can still be queried.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentPlanResponse
+        /// </returns>
+        public async Task<DeleteExperimentPlanResponse> DeleteExperimentPlanAsync(string agentSpace, string planId, DeleteExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteExperimentPlanWithOptionsAsync(agentSpace, planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentRunResponse
+        /// </returns>
+        public DeleteExperimentRunResponse DeleteExperimentRunWithOptions(string agentSpace, string recordId, DeleteExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(recordId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExperimentRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentRunResponse
+        /// </returns>
+        public async Task<DeleteExperimentRunResponse> DeleteExperimentRunWithOptionsAsync(string agentSpace, string recordId, DeleteExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(recordId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExperimentRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentRunResponse
+        /// </returns>
+        public DeleteExperimentRunResponse DeleteExperimentRun(string agentSpace, string recordId, DeleteExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an experiment record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls DeleteExperimentRun to delete a specified experiment run record. Deleting the record does not delete the experiment plan to which it belongs.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExperimentRunResponse
+        /// </returns>
+        public async Task<DeleteExperimentRunResponse> DeleteExperimentRunAsync(string agentSpace, string recordId, DeleteExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteExperimentRunWithOptionsAsync(agentSpace, recordId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4177,6 +4893,282 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetEvaluatorSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query an experiment plan</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentPlanResponse
+        /// </returns>
+        public GetExperimentPlanResponse GetExperimentPlanWithOptions(string agentSpace, string planId, GetExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExperimentPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query an experiment plan</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentPlanResponse
+        /// </returns>
+        public async Task<GetExperimentPlanResponse> GetExperimentPlanWithOptionsAsync(string agentSpace, string planId, GetExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExperimentPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query an experiment plan</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentPlanResponse
+        /// </returns>
+        public GetExperimentPlanResponse GetExperimentPlan(string agentSpace, string planId, GetExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetExperimentPlanWithOptions(agentSpace, planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query an experiment plan</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls the GetExperimentPlan operation to query the complete configuration of a specified experiment plan, including experiment groups, data sources, evaluators, and timestamps.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentPlanResponse
+        /// </returns>
+        public async Task<GetExperimentPlanResponse> GetExperimentPlanAsync(string agentSpace, string planId, GetExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetExperimentPlanWithOptionsAsync(agentSpace, planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an experiment run record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentRunResponse
+        /// </returns>
+        public GetExperimentRunResponse GetExperimentRunWithOptions(string agentSpace, string recordId, GetExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(recordId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExperimentRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an experiment run record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentRunResponse
+        /// </returns>
+        public async Task<GetExperimentRunResponse> GetExperimentRunWithOptionsAsync(string agentSpace, string recordId, GetExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(recordId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExperimentRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an experiment run record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentRunResponse
+        /// </returns>
+        public GetExperimentRunResponse GetExperimentRun(string agentSpace, string recordId, GetExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an experiment run record.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls GetExperimentRun to query the details of a specific experiment run record, including the status, progress, configuration snapshot, and associated evaluation task ID.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExperimentRunResponse
+        /// </returns>
+        public async Task<GetExperimentRunResponse> GetExperimentRunAsync(string agentSpace, string recordId, GetExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetExperimentRunWithOptionsAsync(agentSpace, recordId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5807,6 +6799,402 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListEvaluatorsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment plans.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentPlansRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentPlansResponse
+        /// </returns>
+        public ListExperimentPlansResponse ListExperimentPlansWithOptions(string agentSpace, ListExperimentPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                query["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExperimentPlans",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExperimentPlansResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment plans.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentPlansRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentPlansResponse
+        /// </returns>
+        public async Task<ListExperimentPlansResponse> ListExperimentPlansWithOptionsAsync(string agentSpace, ListExperimentPlansRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                query["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExperimentPlans",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExperimentPlansResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment plans.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentPlansRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentPlansResponse
+        /// </returns>
+        public ListExperimentPlansResponse ListExperimentPlans(string agentSpace, ListExperimentPlansRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListExperimentPlansWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment plans.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentPlans to query the list of experiment plans under a specified AgentSpace for the current account. Supports fuzzy match by plan name, filtering by status, and pagination using <c>offset</c>/<c>limit</c>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentPlansRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentPlansResponse
+        /// </returns>
+        public async Task<ListExperimentPlansResponse> ListExperimentPlansAsync(string agentSpace, ListExperimentPlansRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListExperimentPlansWithOptionsAsync(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentRunsResponse
+        /// </returns>
+        public ListExperimentRunsResponse ListExperimentRunsWithOptions(string agentSpace, ListExperimentRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentName))
+            {
+                query["experimentName"] = request.ExperimentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                query["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExperimentRuns",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExperimentRunsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentRunsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentRunsResponse
+        /// </returns>
+        public async Task<ListExperimentRunsResponse> ListExperimentRunsWithOptionsAsync(string agentSpace, ListExperimentRunsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                query["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentName))
+            {
+                query["experimentName"] = request.ExperimentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                query["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExperimentRuns",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExperimentRunsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentRunsResponse
+        /// </returns>
+        public ListExperimentRunsResponse ListExperimentRuns(string agentSpace, ListExperimentRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListExperimentRunsWithOptions(agentSpace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of experiment run records.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls ListExperimentRuns to query experiment run records under a specified AgentSpace for the current account. You can filter results by status, dataset, plan name, or experiment name, and use <c>page</c>/<c>pageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExperimentRunsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExperimentRunsResponse
+        /// </returns>
+        public async Task<ListExperimentRunsResponse> ListExperimentRunsAsync(string agentSpace, ListExperimentRunsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListExperimentRunsWithOptionsAsync(agentSpace, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8185,6 +9573,438 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateEvaluatorSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentPlanResponse
+        /// </returns>
+        public UpdateExperimentPlanResponse UpdateExperimentPlanWithOptions(string agentSpace, string planId, UpdateExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetProject))
+            {
+                body["datasetProject"] = request.DatasetProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Evaluators))
+            {
+                body["evaluators"] = request.Evaluators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentType))
+            {
+                body["experimentType"] = request.ExperimentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Experiments))
+            {
+                body["experiments"] = request.Experiments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                body["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuerySql))
+            {
+                body["querySql"] = request.QuerySql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedItemIds))
+            {
+                body["selectedItemIds"] = request.SelectedItemIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExperimentPlanResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentPlanRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentPlanResponse
+        /// </returns>
+        public async Task<UpdateExperimentPlanResponse> UpdateExperimentPlanWithOptionsAsync(string agentSpace, string planId, UpdateExperimentPlanRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetProject))
+            {
+                body["datasetProject"] = request.DatasetProject;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Evaluators))
+            {
+                body["evaluators"] = request.Evaluators;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExperimentType))
+            {
+                body["experimentType"] = request.ExperimentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Experiments))
+            {
+                body["experiments"] = request.Experiments;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Input))
+            {
+                body["input"] = request.Input;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanName))
+            {
+                body["planName"] = request.PlanName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuerySql))
+            {
+                body["querySql"] = request.QuerySql;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedItemIds))
+            {
+                body["selectedItemIds"] = request.SelectedItemIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExperimentPlan",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experiments/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/plans/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(planId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExperimentPlanResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentPlanResponse
+        /// </returns>
+        public UpdateExperimentPlanResponse UpdateExperimentPlan(string agentSpace, string planId, UpdateExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateExperimentPlanWithOptions(agentSpace, planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment plan.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentPlan to update a specified experiment plan. Fields that are not passed remain unchanged. Only plans created by the current account can be updated.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentPlanRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentPlanResponse
+        /// </returns>
+        public async Task<UpdateExperimentPlanResponse> UpdateExperimentPlanAsync(string agentSpace, string planId, UpdateExperimentPlanRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateExperimentPlanWithOptionsAsync(agentSpace, planId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentRunResponse
+        /// </returns>
+        public UpdateExperimentRunResponse UpdateExperimentRunWithOptions(string agentSpace, string recordId, UpdateExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedAt))
+            {
+                body["completedAt"] = request.CompletedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedTasks))
+            {
+                body["completedTasks"] = request.CompletedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutedAt))
+            {
+                body["executedAt"] = request.ExecutedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailedTasks))
+            {
+                body["failedTasks"] = request.FailedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                body["recordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTasks))
+            {
+                body["totalTasks"] = request.TotalTasks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(recordId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExperimentRunResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentRunRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentRunResponse
+        /// </returns>
+        public async Task<UpdateExperimentRunResponse> UpdateExperimentRunWithOptionsAsync(string agentSpace, string recordId, UpdateExperimentRunRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedAt))
+            {
+                body["completedAt"] = request.CompletedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompletedTasks))
+            {
+                body["completedTasks"] = request.CompletedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutedAt))
+            {
+                body["executedAt"] = request.ExecutedAt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FailedTasks))
+            {
+                body["failedTasks"] = request.FailedTasks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordName))
+            {
+                body["recordName"] = request.RecordName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalTasks))
+            {
+                body["totalTasks"] = request.TotalTasks;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExperimentRun",
+                Version = "2026-05-20",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/experimentruns/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpace) + "/records/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(recordId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExperimentRunResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentRunResponse
+        /// </returns>
+        public UpdateExperimentRunResponse UpdateExperimentRun(string agentSpace, string recordId, UpdateExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateExperimentRunWithOptions(agentSpace, recordId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an experiment run.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls UpdateExperimentRun to update the name, status, and task counts of an experiment record. Fields that are not specified remain unchanged. Typical sequence for offline experiments: running → progress writeback → completed.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExperimentRunRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExperimentRunResponse
+        /// </returns>
+        public async Task<UpdateExperimentRunResponse> UpdateExperimentRunAsync(string agentSpace, string recordId, UpdateExperimentRunRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateExperimentRunWithOptionsAsync(agentSpace, recordId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
