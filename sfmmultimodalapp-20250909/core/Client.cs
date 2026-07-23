@@ -1919,6 +1919,170 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>并行仲裁的仲裁结果上传</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InterruptForArbitrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptForArbitrationResponse
+        /// </returns>
+        public InterruptForArbitrationResponse InterruptForArbitrationWithOptions(InterruptForArbitrationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InterruptForArbitrationShrinkRequest request = new InterruptForArbitrationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Interrupt))
+            {
+                request.InterruptShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Interrupt, "Interrupt", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                query["ChatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HubRequestId))
+            {
+                query["HubRequestId"] = request.HubRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptShrink))
+            {
+                query["Interrupt"] = request.InterruptShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InterruptForArbitration",
+                Version = "2025-09-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InterruptForArbitrationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>并行仲裁的仲裁结果上传</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// InterruptForArbitrationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptForArbitrationResponse
+        /// </returns>
+        public async Task<InterruptForArbitrationResponse> InterruptForArbitrationWithOptionsAsync(InterruptForArbitrationRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InterruptForArbitrationShrinkRequest request = new InterruptForArbitrationShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Interrupt))
+            {
+                request.InterruptShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Interrupt, "Interrupt", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                query["ChatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HubRequestId))
+            {
+                query["HubRequestId"] = request.HubRequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InterruptShrink))
+            {
+                query["Interrupt"] = request.InterruptShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InterruptForArbitration",
+                Version = "2025-09-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InterruptForArbitrationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>并行仲裁的仲裁结果上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InterruptForArbitrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptForArbitrationResponse
+        /// </returns>
+        public InterruptForArbitrationResponse InterruptForArbitration(InterruptForArbitrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InterruptForArbitrationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>并行仲裁的仲裁结果上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InterruptForArbitrationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InterruptForArbitrationResponse
+        /// </returns>
+        public async Task<InterruptForArbitrationResponse> InterruptForArbitrationAsync(InterruptForArbitrationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InterruptForArbitrationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>指令列表</para>
         /// </summary>
         /// 
