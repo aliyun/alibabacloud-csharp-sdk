@@ -17,11 +17,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The data returned for a successful request.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ChangeConfirmResponseBodyData Data { get; set; }
         public class ChangeConfirmResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The payment amount for the flight change.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -38,6 +43,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public long? PayTime { get; set; }
 
             /// <summary>
+            /// <para>The payment transaction number for the flight change.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hkduendkd-2023-dj0</para>
             /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
+        /// <para>The business error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -56,6 +65,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The data returned for a failed request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -64,6 +75,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -72,6 +85,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -80,6 +95,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

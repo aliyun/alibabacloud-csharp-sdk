@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundApplyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Order number</para>
+        /// <para>The order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? OrderNum { get; set; }
 
         /// <summary>
-        /// <para>Itinerary for which a refund is being requested</para>
+        /// <para>The journeys for the refund application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_journeys")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RefundJourneysShrink { get; set; }
 
         /// <summary>
-        /// <para>List of passengers applying for a refund</para>
+        /// <para>The list of passengers for the refund application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_passenger_list")]
@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RefundPassengerListShrink { get; set; }
 
         /// <summary>
-        /// <para>Refund type - involuntary or voluntary. 
-        /// attachments are required for involuntary refund application.</para>
+        /// <para>The refund type. Attachments are required for involuntary refund applications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_type")]

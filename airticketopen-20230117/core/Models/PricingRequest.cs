@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class PricingRequest : TeaModel {
         /// <summary>
-        /// <para>solution_id returned by Enrich</para>
+        /// <para>solution_id.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

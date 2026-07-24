@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class BookShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>contact information</para>
+        /// <para>The contact information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("contact")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ContactShrink { get; set; }
 
         /// <summary>
-        /// <para>external order number(buyer customization)</para>
+        /// <para>The external order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string OutOrderNum { get; set; }
 
         /// <summary>
-        /// <para>passenger-ancillary purchase relationship</para>
+        /// <para>The mapping between passengers and ancillary purchases.</para>
         /// </summary>
         [NameInMap("passenger_ancillary_purchase_map_list")]
         [Validation(Required=false)]
         public string PassengerAncillaryPurchaseMapListShrink { get; set; }
 
         /// <summary>
-        /// <para>passenger list</para>
+        /// <para>The list of passengers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("passenger_list")]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string PassengerListShrink { get; set; }
 
         /// <summary>
-        /// <para>solution_id returned by Enrich</para>
+        /// <para>solution_id.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

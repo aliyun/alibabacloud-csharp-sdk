@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class ChangeApplyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The data returned for a successful request.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ChangeApplyResponseBodyData Data { get; set; }
         public class ChangeApplyResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of change order application results.</para>
+            /// </summary>
             [NameInMap("change_orders")]
             [Validation(Required=false)]
             public List<ChangeApplyResponseBodyDataChangeOrders> ChangeOrders { get; set; }
             public class ChangeApplyResponseBodyDataChangeOrders : TeaModel {
                 /// <summary>
+                /// <para>The change order number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>49884*****950</para>
                 /// </summary>
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? ChangeOrderNum { get; set; }
 
                 /// <summary>
+                /// <para>The change order status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: Change order created.</description></item>
+                /// <item><description>5: Change order creation failed.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -42,6 +58,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? ChangeOrderStatus { get; set; }
 
                 /// <summary>
+                /// <para>The reason for the change order creation failure.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>desc reason</para>
                 /// </summary>
@@ -49,11 +67,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public string FailReason { get; set; }
 
+                /// <summary>
+                /// <para>The passenger information of the change order.</para>
+                /// </summary>
                 [NameInMap("passengers")]
                 [Validation(Required=false)]
                 public List<ChangeApplyResponseBodyDataChangeOrdersPassengers> Passengers { get; set; }
                 public class ChangeApplyResponseBodyDataChangeOrdersPassengers : TeaModel {
                     /// <summary>
+                    /// <para>The document number.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>411***********4411</para>
                     /// </summary>
@@ -62,6 +85,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Document { get; set; }
 
                     /// <summary>
+                    /// <para>The first name of the passenger.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>SAN</para>
                     /// </summary>
@@ -70,6 +95,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string FirstName { get; set; }
 
                     /// <summary>
+                    /// <para>The last name of the passenger.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ZHANG</para>
                     /// </summary>
@@ -82,6 +109,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
+            /// <para>The order number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4988430***950</para>
             /// </summary>
@@ -92,6 +121,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
+        /// <para>The business error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -100,6 +131,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The data returned with the error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -108,6 +141,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -116,6 +151,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -124,6 +161,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

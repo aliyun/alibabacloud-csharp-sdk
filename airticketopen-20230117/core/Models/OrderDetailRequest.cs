@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class OrderDetailRequest : TeaModel {
         /// <summary>
-        /// <para>order number created by book</para>
+        /// <para>The order number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4966***617111</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? OrderNum { get; set; }
 
         /// <summary>
-        /// <para>external order number(customized by buyer when book)</para>
+        /// <para>The external order number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x091-2023-0220-j-0001</para>

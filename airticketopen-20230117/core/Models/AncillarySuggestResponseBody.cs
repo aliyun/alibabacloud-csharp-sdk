@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class AncillarySuggestResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Properly processed return data</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public AncillarySuggestResponseBodyData Data { get; set; }
         public class AncillarySuggestResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>ancillary detail list</para>
+            /// <para>The mapping between flights and ancillary products.</para>
             /// </summary>
             [NameInMap("seg_ancillary_map_list")]
             [Validation(Required=false)]
             public List<AncillarySuggestResponseBodyDataSegAncillaryMapList> SegAncillaryMapList { get; set; }
             public class AncillarySuggestResponseBodyDataSegAncillaryMapList : TeaModel {
                 /// <summary>
-                /// <para>Ancillary product</para>
+                /// <para>The ancillary product.</para>
                 /// </summary>
                 [NameInMap("ancillary")]
                 [Validation(Required=false)]
                 public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary Ancillary { get; set; }
                 public class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillary : TeaModel {
                     /// <summary>
-                    /// <para>Ancillary product ID</para>
+                    /// <para>The ancillary product ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eJwz8DeySEo0NjQ01TU3TU</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string AncillaryId { get; set; }
 
                     /// <summary>
-                    /// <para>Ancillary product type. currently supports 4: paid luggage</para>
+                    /// <para>The ancillary product type. Currently supported value: 4 (paid baggage).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public int? AncillaryType { get; set; }
 
                     /// <summary>
-                    /// <para>Baggage details</para>
+                    /// <para>The baggage ancillary details.</para>
                     /// </summary>
                     [NameInMap("baggage_ancillary")]
                     [Validation(Required=false)]
                     public AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary BaggageAncillary { get; set; }
                     public class AncillarySuggestResponseBodyDataSegAncillaryMapListAncillaryBaggageAncillary : TeaModel {
                         /// <summary>
-                        /// <para>baggage quantity, values such as: 3, 2, 1, 0, -2.     -2 indicates weight-based</para>
+                        /// <para>The number of baggage pieces. Valid values: 3, 2, 1, 0, and -2. A value of -2 indicates weight-based calculation.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public int? BaggageAmount { get; set; }
 
                         /// <summary>
-                        /// <para>Baggage weight, 0-50. When isAllWeight=true, it represents the total weight of all baggages.</para>
+                        /// <para>The baggage weight, ranging from 0 to 50. If isAllWeight is set to true, this value represents the total weight of all pieces.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public int? BaggageWeight { get; set; }
 
                         /// <summary>
-                        /// <para>Unit of baggage weight</para>
+                        /// <para>The unit of baggage weight.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>KG</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string BaggageWeightUnit { get; set; }
 
                         /// <summary>
-                        /// <para>Whether the weight is for all baggages</para>
+                        /// <para>Indicates whether the weight represents the total weight of all baggage pieces.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public bool? IsAllWeight { get; set; }
 
                         /// <summary>
-                        /// <para>Total price</para>
+                        /// <para>The total price.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10.0</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>Segment ID list, these segments share the same ancillary</para>
+                /// <para>The list of segment IDs. These segments share the same ancillary product.</para>
                 /// </summary>
                 [NameInMap("segment_id_list")]
                 [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>solution_id, equals to solution_id in request</para>
+            /// <para>The solution_id of the flight.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The business error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Data carried in error handling</para>
+        /// <para>The data returned with the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>http request successful, status value is always 200</para>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>true represents success, false represents failure</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

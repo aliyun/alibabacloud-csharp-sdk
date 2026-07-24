@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class CollectFlightLowestPriceShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The lowest-price flight information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("lowest_price_flight_info_list")]

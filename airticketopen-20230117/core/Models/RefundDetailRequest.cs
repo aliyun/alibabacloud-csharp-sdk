@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundDetailRequest : TeaModel {
         /// <summary>
-        /// <para>Refund order number</para>
+        /// <para>The refund order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundDetailListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request RequestId</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Properly processed return data</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public RefundDetailListResponseBodyData Data { get; set; }
         public class RefundDetailListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Data list</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<RefundDetailListResponseBodyDataList> List { get; set; }
             public class RefundDetailListResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>Whether it is a supplementary refund</para>
+                /// <para>Indicates whether this is a supplementary refund order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public bool? IsMultiRefund { get; set; }
 
                 /// <summary>
-                /// <para>Order number （ Ticketing Order Number）</para>
+                /// <para>The order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884*****2345</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? OrderNum { get; set; }
 
                 /// <summary>
-                /// <para>Refund order number</para>
+                /// <para>The refund order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884*****950</para>
@@ -64,7 +64,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? RefundOrderNum { get; set; }
 
                 /// <summary>
-                /// <para>Refund order status: 0: Refund application; 1: Refund in progress; 2: Refund failed; 3: Refund succeeded</para>
+                /// <para>The refund order status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: refund requested.</description></item>
+                /// <item><description>1: refund being processed.</description></item>
+                /// <item><description>2: refund failed.</description></item>
+                /// <item><description>3: refund succeeded.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? RefundOrderStatus { get; set; }
 
                 /// <summary>
-                /// <para>The original refund order number associated with this supplementary refund. Only present for supplementary refunds, indicating the ID of the original refund order.</para>
+                /// <para>The refund order number of the original order associated with this supplementary refund order. This field is returned only for supplementary refund orders and indicates the refund order ID of the associated original order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884*****2387</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string RelatedRefundOrderNum { get; set; }
 
                 /// <summary>
-                /// <para>Transaction serial number</para>
+                /// <para>The transaction number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49884**tde-95za</para>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string TransactionNo { get; set; }
 
                 /// <summary>
-                /// <para>Creation time, UTC timestamp</para>
+                /// <para>The creation time. The value is a UTC timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1677229002000</para>
@@ -106,14 +112,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>Pagination information</para>
+            /// <para>The pagination information.</para>
             /// </summary>
             [NameInMap("pagination")]
             [Validation(Required=false)]
             public RefundDetailListResponseBodyDataPagination Pagination { get; set; }
             public class RefundDetailListResponseBodyDataPagination : TeaModel {
                 /// <summary>
-                /// <para>Current page number</para>
+                /// <para>The current page number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>Number of items per page</para>
+                /// <para>The number of records per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>Total count</para>
+                /// <para>The total number of records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? TotalCount { get; set; }
 
                 /// <summary>
-                /// <para>Total pages</para>
+                /// <para>The total number of pages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The business error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -167,7 +173,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Data carried in error handling</para>
+        /// <para>The data returned with the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -177,7 +183,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -187,7 +193,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>HTTP request successful, status value is 200</para>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -197,7 +203,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation was successful</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

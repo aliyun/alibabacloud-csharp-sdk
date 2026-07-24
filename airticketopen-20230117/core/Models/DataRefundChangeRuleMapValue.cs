@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class DataRefundChangeRuleMapValue : TeaModel {
         /// <summary>
-        /// <para>refund rule for fully-unused tickets</para>
+        /// <para>全程未使用退票规则</para>
         /// </summary>
         [NameInMap("refund_rule_all_unused_list")]
         [Validation(Required=false)]
         public List<DataRefundChangeRuleMapValueRefundRuleAllUnusedList> RefundRuleAllUnusedList { get; set; }
         public class DataRefundChangeRuleMapValueRefundRuleAllUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 0 - fully-unused ticket; 1 - partially used ticket</para>
+            /// <para>该退票规则适用航程使用类型 0:全程未使用; 1:部分未使用</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>时间单位：day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule start time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule end time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether refundable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 可否退票</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanRefund { get; set; }
 
             /// <summary>
-            /// <para>refund fee X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 退票手续费</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public double? RefundFee { get; set; }
 
             /// <summary>
-            /// <para>whether tax is fully refundable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 是否全额退税</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanReturnAllTax { get; set; }
 
             /// <summary>
-            /// <para>tax amount refundable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 可部分退税金额</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>refund rule for partially-used tickets</para>
+        /// <para>部分未使用退票规则</para>
         /// </summary>
         [NameInMap("refund_rule_part_unused_list")]
         [Validation(Required=false)]
         public List<DataRefundChangeRuleMapValueRefundRulePartUnusedList> RefundRulePartUnusedList { get; set; }
         public class DataRefundChangeRuleMapValueRefundRulePartUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 0 - fully-unused ticket; 1 - partially used ticket</para>
+            /// <para>该退票规则适用航程使用类型 0:全程未使用; 1:部分未使用</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>时间单位：day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule start time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable refund rule end time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether refundable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 可否退票</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanRefund { get; set; }
 
             /// <summary>
-            /// <para>refund fee X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 退票手续费</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public double? RefundFee { get; set; }
 
             /// <summary>
-            /// <para>whether tax is fully refundable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 是否全额退税</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanReturnAllTax { get; set; }
 
             /// <summary>
-            /// <para>tax amount refundable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 可部分退税金额</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>change rule for inbound segment unused tickets</para>
+        /// <para>回程未使用改签规则</para>
         /// </summary>
         [NameInMap("change_rule_in_unused_list")]
         [Validation(Required=false)]
         public List<DataRefundChangeRuleMapValueChangeRuleInUnusedList> ChangeRuleInUnusedList { get; set; }
         public class DataRefundChangeRuleMapValueChangeRuleInUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 2 - outbound segment unused; 3 - inbound segment unused</para>
+            /// <para>该改签规则适用航程使用类型 2:去程未使用; 3:回程未使用</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>时间单位：day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule start time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule end time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether changeable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 可否可以改签</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanChange { get; set; }
 
             /// <summary>
-            /// <para>change fee X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 改签费</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -257,14 +257,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>change rule for outbound-flight-unused tickets</para>
+        /// <para>去程未使用改签规则</para>
         /// </summary>
         [NameInMap("change_rule_out_unused_list")]
         [Validation(Required=false)]
         public List<DataRefundChangeRuleMapValueChangeRuleOutUnusedList> ChangeRuleOutUnusedList { get; set; }
         public class DataRefundChangeRuleMapValueChangeRuleOutUnusedList : TeaModel {
             /// <summary>
-            /// <para>type: 2 - outbound segment unused; 3 - inbound segment unused</para>
+            /// <para>该改签规则适用航程使用类型 2:去程未使用; 3:回程未使用</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Type { get; set; }
 
             /// <summary>
-            /// <para>time unit: day/hour</para>
+            /// <para>时间单位：day/hour</para>
             /// 
             /// <b>Example:</b>
             /// <para>hour</para>
@@ -284,7 +284,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string TimeUnit { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule start time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>36</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleStartTime { get; set; }
 
             /// <summary>
-            /// <para>applicable change rule end time, time unit (day/hour)</para>
+            /// <para>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RuleEndTime { get; set; }
 
             /// <summary>
-            /// <para>whether changeable X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 可否可以改签</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CanChange { get; set; }
 
             /// <summary>
-            /// <para>change fee X-Y hour(day) before departure</para>
+            /// <para>起飞前X-Y小时(天) 改签费</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

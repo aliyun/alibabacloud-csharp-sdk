@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class BookRequest : TeaModel {
         /// <summary>
-        /// <para>contact information</para>
+        /// <para>The contact information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("contact")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public BookRequestContact Contact { get; set; }
         public class BookRequestContact : TeaModel {
             /// <summary>
-            /// <para>email address</para>
+            /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gao******@gmail.com</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>first name</para>
+            /// <para>The first name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAN</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string FirstName { get; set; }
 
             /// <summary>
-            /// <para>last name</para>
+            /// <para>The last name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ZHANG</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string LastName { get; set; }
 
             /// <summary>
-            /// <para>country code</para>
+            /// <para>The country calling code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>86</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string MobileCountryCode { get; set; }
 
             /// <summary>
-            /// <para>mobile phone number</para>
+            /// <para>The mobile phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>183******96</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>external order number(buyer customization)</para>
+        /// <para>The external order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,21 +81,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string OutOrderNum { get; set; }
 
         /// <summary>
-        /// <para>passenger-ancillary purchase relationship</para>
+        /// <para>The mapping between passengers and ancillary purchases.</para>
         /// </summary>
         [NameInMap("passenger_ancillary_purchase_map_list")]
         [Validation(Required=false)]
         public List<BookRequestPassengerAncillaryPurchaseMapList> PassengerAncillaryPurchaseMapList { get; set; }
         public class BookRequestPassengerAncillaryPurchaseMapList : TeaModel {
             /// <summary>
-            /// <para>ancillary information</para>
+            /// <para>The ancillary product object for the booking request.</para>
             /// </summary>
             [NameInMap("book_ancillary_req_item")]
             [Validation(Required=false)]
             public BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem BookAncillaryReqItem { get; set; }
             public class BookRequestPassengerAncillaryPurchaseMapListBookAncillaryReqItem : TeaModel {
                 /// <summary>
-                /// <para>ancillary product ID, returned by AncillarySuggest.</para>
+                /// <para>The ancillary product ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MDY2NTAxLCJleHAiOjE2NxNzM3MDEsIm5ix</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string AncillaryId { get; set; }
 
                 /// <summary>
-                /// <para>type of ancillary product, only support &quot;4&quot;(4 means paid baggage) currently.</para>
+                /// <para>The ancillary product type. Currently supported value: 4 (paid baggage). More types will be supported in the future.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>passenger list for unified ancillary purchases</para>
+            /// <para>The list of passengers who purchase the same ancillary product.</para>
             /// </summary>
             [NameInMap("passenger_list")]
             [Validation(Required=false)]
             public List<BookRequestPassengerAncillaryPurchaseMapListPassengerList> PassengerList { get; set; }
             public class BookRequestPassengerAncillaryPurchaseMapListPassengerList : TeaModel {
                 /// <summary>
-                /// <para>date of birth (yyyyMMdd)</para>
+                /// <para>The date of birth in yyyyMMdd format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20020320</para>
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Birthday { get; set; }
 
                 /// <summary>
-                /// <para>travel document</para>
+                /// <para>The credential information.</para>
                 /// </summary>
                 [NameInMap("credential")]
                 [Validation(Required=false)]
                 public BookRequestPassengerAncillaryPurchaseMapListPassengerListCredential Credential { get; set; }
                 public class BookRequestPassengerAncillaryPurchaseMapListPassengerListCredential : TeaModel {
                     /// <summary>
-                    /// <para>place of issue, two-letter code</para>
+                    /// <para>The place of issue. Use a two-letter country code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CN</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string CertIssuePlace { get; set; }
 
                     /// <summary>
-                    /// <para>travel document number</para>
+                    /// <para>The credential number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>E1***5673</para>
@@ -161,7 +161,27 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string CredentialNum { get; set; }
 
                     /// <summary>
-                    /// <para>travel document type , only support &quot;1&quot;(1 means passport) currently</para>
+                    /// <para>The credential type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: ID card</description></item>
+                    /// <item><description>1: passport</description></item>
+                    /// <item><description>2: student ID</description></item>
+                    /// <item><description>3: military ID</description></item>
+                    /// <item><description>4: Home Return Permit</description></item>
+                    /// <item><description>5: Taiwan Compatriot Permit</description></item>
+                    /// <item><description>6: Hong Kong and Macau Travel Permit</description></item>
+                    /// <item><description>7: international seafarer certificate</description></item>
+                    /// <item><description>8: foreigner permanent residence permit</description></item>
+                    /// <item><description>10: police officer certificate</description></item>
+                    /// <item><description>11: soldier certificate</description></item>
+                    /// <item><description>12: Taiwan Travel Permit</description></item>
+                    /// <item><description>13: Taiwan Entry Permit</description></item>
+                    /// <item><description>14: household register</description></item>
+                    /// <item><description>15: birth certificate</description></item>
+                    /// <item><description>16: driver license</description></item>
+                    /// <item><description>17: Hong Kong and Macau resident residence permit</description></item>
+                    /// <item><description>18: Taiwan resident residence permit.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -171,7 +191,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public int? CredentialType { get; set; }
 
                     /// <summary>
-                    /// <para>expiration date</para>
+                    /// <para>The expiration date of the credential.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20290102</para>
@@ -183,7 +203,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>first name</para>
+                /// <para>The first name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -194,7 +214,11 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string FirstName { get; set; }
 
                 /// <summary>
-                /// <para>gender 0: male; 1: female</para>
+                /// <para>The gender. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: MALE</description></item>
+                /// <item><description>1: FEMALE.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -204,7 +228,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? Gender { get; set; }
 
                 /// <summary>
-                /// <para>last name</para>
+                /// <para>The last name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -215,7 +239,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string LastName { get; set; }
 
                 /// <summary>
-                /// <para>country code for mobile phone number</para>
+                /// <para>The country calling code for the mobile phone number.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -226,7 +250,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string MobileCountryCode { get; set; }
 
                 /// <summary>
-                /// <para>mobile phone number</para>
+                /// <para>The mobile phone number.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -237,7 +261,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string MobilePhoneNumber { get; set; }
 
                 /// <summary>
-                /// <para>nationality</para>
+                /// <para>The nationality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
@@ -247,7 +271,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string Nationality { get; set; }
 
                 /// <summary>
-                /// <para>passenger type 0: adult; 1: child; 8: Infant</para>
+                /// <para>The passenger type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: adult</description></item>
+                /// <item><description>1: child</description></item>
+                /// <item><description>8: infant.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -262,7 +291,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>passenger list</para>
+        /// <para>The list of passengers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("passenger_list")]
@@ -270,7 +299,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<BookRequestPassengerList> PassengerList { get; set; }
         public class BookRequestPassengerList : TeaModel {
             /// <summary>
-            /// <para>date of birth (yyyyMMdd)</para>
+            /// <para>The date of birth in yyyyMMdd format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20200320</para>
@@ -280,14 +309,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string Birthday { get; set; }
 
             /// <summary>
-            /// <para>travel document</para>
+            /// <para>The credential information.</para>
             /// </summary>
             [NameInMap("credential")]
             [Validation(Required=false)]
             public BookRequestPassengerListCredential Credential { get; set; }
             public class BookRequestPassengerListCredential : TeaModel {
                 /// <summary>
-                /// <para>place of issue, two-letter code</para>
+                /// <para>The place of issue. Use a two-letter country code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
@@ -297,7 +326,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string CertIssuePlace { get; set; }
 
                 /// <summary>
-                /// <para>travel document number</para>
+                /// <para>The credential number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>E1***5674</para>
@@ -307,7 +336,16 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string CredentialNum { get; set; }
 
                 /// <summary>
-                /// <para>travel document type , only support &quot;1&quot;(1 means passport) currently.</para>
+                /// <para>The credential type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: ID card</description></item>
+                /// <item><description>1: passport</description></item>
+                /// <item><description>4: Home Return Permit</description></item>
+                /// <item><description>5: Taiwan Compatriot Permit</description></item>
+                /// <item><description>6: Hong Kong and Macau Travel Permit</description></item>
+                /// <item><description>12: Taiwan Travel Permit</description></item>
+                /// <item><description>19: no credential.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -317,7 +355,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? CredentialType { get; set; }
 
                 /// <summary>
-                /// <para>expiration date</para>
+                /// <para>The expiration date of the credential.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20290101</para>
@@ -329,7 +367,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>first name</para>
+            /// <para>The first name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -340,7 +378,11 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string FirstName { get; set; }
 
             /// <summary>
-            /// <para>gender 0: MALE; 1: FEMALE</para>
+            /// <para>The gender. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: MALE</description></item>
+            /// <item><description>1: FEMALE.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -350,7 +392,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? Gender { get; set; }
 
             /// <summary>
-            /// <para>last name</para>
+            /// <para>The last name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -361,7 +403,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string LastName { get; set; }
 
             /// <summary>
-            /// <para>mobile country code</para>
+            /// <para>The country calling code for the mobile phone number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -372,7 +414,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string MobileCountryCode { get; set; }
 
             /// <summary>
-            /// <para>mobile phone number</para>
+            /// <para>The mobile phone number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -383,7 +425,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string MobilePhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>nationality (two-letter code)</para>
+            /// <para>The nationality. Use a two-letter country code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -393,7 +435,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string Nationality { get; set; }
 
             /// <summary>
-            /// <para>passenger type 0: adult; 1: child; 8: infant</para>
+            /// <para>The passenger type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: adult</description></item>
+            /// <item><description>1: child</description></item>
+            /// <item><description>8: infant.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -406,7 +453,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>solution_id returned by Enrich</para>
+        /// <para>solution_id.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

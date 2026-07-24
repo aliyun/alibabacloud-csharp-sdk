@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class AncillarySuggestRequest : TeaModel {
         /// <summary>
-        /// <para>solution_id returned by enrich</para>
+        /// <para>The solution_id of the flight.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class ChangeDetailListOfOrderNumRequest : TeaModel {
         /// <summary>
+        /// <para>The order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? OrderNum { get; set; }
 
         /// <summary>
+        /// <para>The page index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

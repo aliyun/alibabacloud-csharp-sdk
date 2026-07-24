@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundApplyRequest : TeaModel {
         /// <summary>
-        /// <para>Order number</para>
+        /// <para>The order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? OrderNum { get; set; }
 
         /// <summary>
-        /// <para>Itinerary for which a refund is being requested</para>
+        /// <para>The journeys for the refund application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_journeys")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<RefundApplyRequestRefundJourneys> RefundJourneys { get; set; }
         public class RefundApplyRequestRefundJourneys : TeaModel {
             /// <summary>
-            /// <para>Flight segment information</para>
+            /// <para>The segment information.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("segment_list")]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<RefundApplyRequestRefundJourneysSegmentList> SegmentList { get; set; }
             public class RefundApplyRequestRefundJourneysSegmentList : TeaModel {
                 /// <summary>
-                /// <para>Three-letter code of the arrival airport (uppercase)</para>
+                /// <para>The three-letter IATA code of the arrival airport (uppercase).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string ArrivalAirport { get; set; }
 
                 /// <summary>
-                /// <para>Three-letter code of the arrival city (uppercase)</para>
+                /// <para>The three-letter IATA code of the arrival city (uppercase).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string ArrivalCity { get; set; }
 
                 /// <summary>
-                /// <para>Three-letter code of the departure airport (uppercase)</para>
+                /// <para>The three-letter IATA code of the departure airport (uppercase).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string DepartureAirport { get; set; }
 
                 /// <summary>
-                /// <para>Three-letter code of the departure city (uppercase)</para>
+                /// <para>The three-letter IATA code of the departure city (uppercase).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>List of passengers applying for a refund</para>
+        /// <para>The list of passengers for the refund application.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_passenger_list")]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<RefundApplyRequestRefundPassengerList> RefundPassengerList { get; set; }
         public class RefundApplyRequestRefundPassengerList : TeaModel {
             /// <summary>
-            /// <para>Document number</para>
+            /// <para>The document number of the passenger.</para>
             /// 
             /// <b>Example:</b>
             /// <para>411***********4411</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string Document { get; set; }
 
             /// <summary>
-            /// <para>Passenger\&quot;s first name</para>
+            /// <para>The first name of the passenger.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string FirstName { get; set; }
 
             /// <summary>
-            /// <para>Passenger\&quot;s last name</para>
+            /// <para>The last name of the passenger.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -127,8 +127,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>Refund type - involuntary or voluntary. 
-        /// attachments are required for involuntary refund application.</para>
+        /// <para>The refund type. Attachments are required for involuntary refund applications.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("refund_type")]
@@ -136,7 +135,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public RefundApplyRequestRefundType RefundType { get; set; }
         public class RefundApplyRequestRefundType : TeaModel {
             /// <summary>
-            /// <para>Array of attachment file URLs. First, upload the files using a separate file upload interface to get the file URLs.</para>
+            /// <para>The array of attachment file URLs. Upload files first by using the dedicated file upload operation to obtain the file URLs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[xxx,yyy]</para>
@@ -146,9 +145,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<string> File { get; set; }
 
             /// <summary>
-            /// <para>2: Voluntary (I want to change my travel plan/I don\&quot;t want to fly). 
-            /// 5: Involuntary, due to flight delay or cancellation, schedule changes, or other airline reasons. 
-            /// 6: Involuntary, due to health reasons with a medical report from a hospital of at least secondary level A or above.</para>
+            /// <para>The refund type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>2: Voluntary refund (change of travel plans or decision not to fly).</description></item>
+            /// <item><description>5: Involuntary refund due to airline reasons such as flight delay, cancellation, or schedule change.</description></item>
+            /// <item><description>6: Involuntary refund due to medical reasons with a certificate from a Grade II Class A hospital or above.</description></item>
+            /// </list>
+            /// <para>Note: Attachments are not mandatory, but providing attachments for involuntary refunds can improve the success rate of the refund application.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -159,7 +162,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public int? RefundTypeId { get; set; }
 
             /// <summary>
-            /// <para>Remark: detailed description about the refund application</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark desc</para>

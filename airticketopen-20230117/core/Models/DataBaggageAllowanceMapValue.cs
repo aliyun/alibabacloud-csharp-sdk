@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class DataBaggageAllowanceMapValue : TeaModel {
         /// <summary>
-        /// <para>checked baggage quantity</para>
+        /// <para>托运行李件数</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? BaggageAmount { get; set; }
 
         /// <summary>
-        /// <para>checked baggage weight</para>
+        /// <para>托运行李重量</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? BaggageWeight { get; set; }
 
         /// <summary>
-        /// <para>checked baggage weight unit</para>
+        /// <para>托运行李重量单位</para>
         /// 
         /// <b>Example:</b>
         /// <para>KG</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string BaggageWeightUnit { get; set; }
 
         /// <summary>
-        /// <para>Whether the weight is for all baggages</para>
+        /// <para>是否所有托运行李重量</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public bool? IsAllWeight { get; set; }
 
         /// <summary>
-        /// <para>carry-on baggage quantity</para>
+        /// <para>手提行李件数</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryOnAmount { get; set; }
 
         /// <summary>
-        /// <para>carry-on baggage weight</para>
+        /// <para>手提行李重量</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryOnWeight { get; set; }
 
         /// <summary>
-        /// <para>carry-on baggage weight unit</para>
+        /// <para>手提行李重量单位</para>
         /// 
         /// <b>Example:</b>
         /// <para>KG</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CarryOnWeightUnit { get; set; }
 
         /// <summary>
-        /// <para>Whether the weight is for all baggages</para>
+        /// <para>是否所有手提行李重量</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

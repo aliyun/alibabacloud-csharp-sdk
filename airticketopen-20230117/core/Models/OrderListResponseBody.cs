@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class OrderListResponseBody : TeaModel {
         /// <summary>
-        /// <para>request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>data</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public OrderListResponseBodyData Data { get; set; }
         public class OrderListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>order list</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("list")]
             [Validation(Required=false)]
             public List<OrderListResponseBodyDataList> List { get; set; }
             public class OrderListResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>book time(timestamp)</para>
+                /// <para>The booking time (order creation time). The value is a 13-digit UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1677210784000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? BookTime { get; set; }
 
                 /// <summary>
-                /// <para>order number created by book</para>
+                /// <para>The order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4966***617111</para>
@@ -54,12 +54,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? OrderNum { get; set; }
 
                 /// <summary>
-                /// <para>order status</para>
-                /// <para>1: order reservation in process</para>
-                /// <para>2: order reservation successful</para>
-                /// <para>3: order paid</para>
-                /// <para>4: order successful</para>
-                /// <para>5: order closed</para>
+                /// <para>The order status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>2: order creation succeeded.</description></item>
+                /// <item><description>3: order paid.</description></item>
+                /// <item><description>4: order succeeded.</description></item>
+                /// <item><description>5: order closed.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -69,7 +70,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string OrderStatus { get; set; }
 
                 /// <summary>
-                /// <para>external order number(customized by buyer when book)</para>
+                /// <para>The external order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>x091-2023-0220-j-0001</para>
@@ -79,14 +80,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string OutOrderNum { get; set; }
 
                 /// <summary>
-                /// <para>the information about all passenger of current order</para>
+                /// <para>The passenger list.</para>
                 /// </summary>
                 [NameInMap("passenger_list")]
                 [Validation(Required=false)]
                 public List<OrderListResponseBodyDataListPassengerList> PassengerList { get; set; }
                 public class OrderListResponseBodyDataListPassengerList : TeaModel {
                     /// <summary>
-                    /// <para>date of birth (yyyyMMdd)</para>
+                    /// <para>The date of birth in the yyyyMMdd format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20020301</para>
@@ -96,14 +97,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Birthday { get; set; }
 
                     /// <summary>
-                    /// <para>credential</para>
+                    /// <para>The credential information.</para>
                     /// </summary>
                     [NameInMap("credential")]
                     [Validation(Required=false)]
                     public OrderListResponseBodyDataListPassengerListCredential Credential { get; set; }
                     public class OrderListResponseBodyDataListPassengerListCredential : TeaModel {
                         /// <summary>
-                        /// <para>issuing place (two-letter code)</para>
+                        /// <para>The place of issue, represented as a two-letter code.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CN</para>
@@ -113,7 +114,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string CertIssuePlace { get; set; }
 
                         /// <summary>
-                        /// <para>credential number</para>
+                        /// <para>The credential number.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>E1***5674</para>
@@ -123,7 +124,27 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string CredentialNum { get; set; }
 
                         /// <summary>
-                        /// <para>credential type , only support &quot;1&quot;(1 means passport) currently.</para>
+                        /// <para>The credential type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>0: ID card.</description></item>
+                        /// <item><description>1: passport.</description></item>
+                        /// <item><description>2: student ID.</description></item>
+                        /// <item><description>3: military ID.</description></item>
+                        /// <item><description>4: Home Return Permit.</description></item>
+                        /// <item><description>5: Taiwan Compatriot Permit.</description></item>
+                        /// <item><description>6: Hong Kong and Macao Travel Permit.</description></item>
+                        /// <item><description>7: international seafarer certificate.</description></item>
+                        /// <item><description>8: Foreigner Permanent Residence Card.</description></item>
+                        /// <item><description>10: police officer ID.</description></item>
+                        /// <item><description>11: soldier ID.</description></item>
+                        /// <item><description>12: Taiwan Travel Permit.</description></item>
+                        /// <item><description>13: Taiwan Entry Permit.</description></item>
+                        /// <item><description>14: household register.</description></item>
+                        /// <item><description>15: birth certificate.</description></item>
+                        /// <item><description>16: driver license.</description></item>
+                        /// <item><description>17: Hong Kong and Macao Resident Residence Permit.</description></item>
+                        /// <item><description>18: Taiwan Resident Residence Permit.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -133,7 +154,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public int? CredentialType { get; set; }
 
                         /// <summary>
-                        /// <para>credential expiration date</para>
+                        /// <para>The credential expiration date.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>20290101</para>
@@ -145,7 +166,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     }
 
                     /// <summary>
-                    /// <para>first name</para>
+                    /// <para>The first name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SAN</para>
@@ -155,7 +176,11 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string FirstName { get; set; }
 
                     /// <summary>
-                    /// <para>gender 0: MALE; 1: FEMALE</para>
+                    /// <para>The gender. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: MALE.</description></item>
+                    /// <item><description>1: FEMALE.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -165,7 +190,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public int? Gender { get; set; }
 
                     /// <summary>
-                    /// <para>last name</para>
+                    /// <para>The last name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ZHANG</para>
@@ -175,7 +200,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string LastName { get; set; }
 
                     /// <summary>
-                    /// <para>mobile country code</para>
+                    /// <para>The country code of the mobile phone number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>86</para>
@@ -185,7 +210,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string MobileCountryCode { get; set; }
 
                     /// <summary>
-                    /// <para>mobile phone number</para>
+                    /// <para>The mobile phone number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>183******96</para>
@@ -195,7 +220,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string MobilePhoneNumber { get; set; }
 
                     /// <summary>
-                    /// <para>nationality (two-letter code)</para>
+                    /// <para>The two-letter nationality code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CN</para>
@@ -205,7 +230,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Nationality { get; set; }
 
                     /// <summary>
-                    /// <para>passenger type 0: adult; 1: child; 8: infant</para>
+                    /// <para>The passenger type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>0: adult.</description></item>
+                    /// <item><description>1: child.</description></item>
+                    /// <item><description>8: infant.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -217,11 +247,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>payment status</para>
-                /// <para>1: payment in process</para>
-                /// <para>2: deduction successful</para>
-                /// <para>3: paid to the seller</para>
-                /// <para>4: transaction closed</para>
+                /// <para>The payment status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: initialized.</description></item>
+                /// <item><description>1: creation succeeded.</description></item>
+                /// <item><description>2: payment succeeded.</description></item>
+                /// <item><description>4: transaction closed.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -231,7 +263,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string PayStatus { get; set; }
 
                 /// <summary>
-                /// <para>pay time(timestamp)</para>
+                /// <para>The payment time. The value is a 13-digit UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1677210788000</para>
@@ -241,7 +273,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? PayTime { get; set; }
 
                 /// <summary>
-                /// <para>discount amount</para>
+                /// <para>The discount amount. Unit: yuan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -251,7 +283,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? PromotionPrice { get; set; }
 
                 /// <summary>
-                /// <para>actual payment amount</para>
+                /// <para>The actual payment amount. Unit: yuan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -261,7 +293,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? RealPayPrice { get; set; }
 
                 /// <summary>
-                /// <para>buyer nickname</para>
+                /// <para>The buyer nickname.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nick</para>
@@ -271,7 +303,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string SessionNick { get; set; }
 
                 /// <summary>
-                /// <para>order success time(timestamp)</para>
+                /// <para>The ticketing time. The value is a 13-digit UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1677210786000</para>
@@ -281,7 +313,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? SucceedTime { get; set; }
 
                 /// <summary>
-                /// <para>total price of current order</para>
+                /// <para>The total price of the order. Unit: yuan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -291,7 +323,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? TotalPrice { get; set; }
 
                 /// <summary>
-                /// <para>transaction number</para>
+                /// <para>The transaction serial number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hkduendkd-2023-dj0</para>
@@ -303,14 +335,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>information of pagination</para>
+            /// <para>The pagination information.</para>
             /// </summary>
             [NameInMap("pagination")]
             [Validation(Required=false)]
             public OrderListResponseBodyDataPagination Pagination { get; set; }
             public class OrderListResponseBodyDataPagination : TeaModel {
                 /// <summary>
-                /// <para>current page index</para>
+                /// <para>The current page number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -320,7 +352,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>page size</para>
+                /// <para>The number of records per page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -330,7 +362,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? PageSize { get; set; }
 
                 /// <summary>
-                /// <para>the number of total orders</para>
+                /// <para>The total number of records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -340,7 +372,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? TotalCount { get; set; }
 
                 /// <summary>
-                /// <para>the number of total pages</para>
+                /// <para>The total number of pages.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -354,7 +386,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The business error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -364,7 +396,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>error data</para>
+        /// <para>The data returned with the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -374,7 +406,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
-        /// <para>error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -384,7 +416,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>http reqeust has been processed successfully，status code is 200</para>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -394,7 +426,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>true represents success, false represents failure</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class BookResponseBody : TeaModel {
         /// <summary>
-        /// <para>request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>data</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public BookResponseBodyData Data { get; set; }
         public class BookResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>order information list</para>
+            /// <para>The list of order information.</para>
             /// </summary>
             [NameInMap("order_list")]
             [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>order number</para>
+                /// <para>The order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4966***617111</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The business error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>error data</para>
+        /// <para>The data returned with the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public BookResponseBodyErrorData ErrorData { get; set; }
         public class BookResponseBodyErrorData : TeaModel {
             /// <summary>
-            /// <para>order information list. When the same input parameters are used to repeat a Book, if the booking has already been successful, the order number will be returned.</para>
+            /// <para>The list of order information. If you call the Book operation again with the same parameters after a successful booking, the order number is returned.</para>
             /// </summary>
             [NameInMap("order_list")]
             [Validation(Required=false)]
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>order number</para>
+                /// <para>The order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4966***617111</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>http reqeust has been processed successfully，status code is 200</para>
+        /// <para>The HTTP status code. The value is always 200 for successful HTTP requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>true represents success, false represents failure</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

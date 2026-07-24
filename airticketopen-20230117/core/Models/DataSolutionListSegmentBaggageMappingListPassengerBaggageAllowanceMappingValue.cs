@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? BaggageAmount { get; set; }
 
         /// <summary>
-        /// <para>Weight of checked baggage</para>
+        /// <para>Checked baggage weight</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? BaggageWeight { get; set; }
 
         /// <summary>
-        /// <para>Unit of checked baggage weight (KG)</para>
+        /// <para>Checked baggage weight unit KG</para>
         /// 
         /// <b>Example:</b>
         /// <para>KG</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string BaggageWeightUnit { get; set; }
 
         /// <summary>
-        /// <para>Whether the weight applies to all checked baggage</para>
+        /// <para>Whether it is total checked baggage weight</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryOnAmount { get; set; }
 
         /// <summary>
-        /// <para>Weight of carry-on baggage</para>
+        /// <para>Carry-on baggage weight</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryOnWeight { get; set; }
 
         /// <summary>
-        /// <para>Carry-on luggage weight unit KG</para>
+        /// <para>Carry-on baggage weight unit KG</para>
         /// 
         /// <b>Example:</b>
         /// <para>KG</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CarryOnWeightUnit { get; set; }
 
         /// <summary>
-        /// <para>Whether it is the total carry-on luggage weight</para>
+        /// <para>Whether it is total carry-on baggage weight</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,8 +90,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public bool? IsAllCarryOnWeight { get; set; }
 
         /// <summary>
-        /// <para>Carry-on luggage length (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>55</para>
         /// </summary>
@@ -100,8 +98,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryLength { get; set; }
 
         /// <summary>
-        /// <para>Carry-on luggage width (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>40</para>
         /// </summary>
@@ -110,8 +106,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryWidth { get; set; }
 
         /// <summary>
-        /// <para>Carry-on luggage height (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -120,8 +114,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarryHeight { get; set; }
 
         /// <summary>
-        /// <para>Sum of three sides of the Carry-on luggage (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>115</para>
         /// </summary>
@@ -130,8 +122,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? CarrySumOfLengthWidthHeight { get; set; }
 
         /// <summary>
-        /// <para>Check-in luggage length (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -140,8 +130,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// <para>Check-in luggage width (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>40</para>
         /// </summary>
@@ -150,8 +138,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Width { get; set; }
 
         /// <summary>
-        /// <para>Check-in luggage height (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -160,8 +146,6 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Height { get; set; }
 
         /// <summary>
-        /// <para>Sum of three sides of the Check-in luggage (unit: centimeters)</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>

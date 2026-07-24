@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class TransitVisaShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of flight segments that constitute an itinerary. Maximum size: 2.</para>
+        /// </summary>
         [NameInMap("flight_segment_param_list")]
         [Validation(Required=false)]
         public string FlightSegmentParamListShrink { get; set; }

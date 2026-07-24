@@ -17,15 +17,23 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The data returned for a successful request.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<FlightChangeOfOrderResponseBodyData> Data { get; set; }
         public class FlightChangeOfOrderResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The flight change information.</para>
+            /// </summary>
             [NameInMap("flight_change_detail")]
             [Validation(Required=false)]
             public FlightChangeOfOrderResponseBodyDataFlightChangeDetail FlightChangeDetail { get; set; }
             public class FlightChangeOfOrderResponseBodyDataFlightChangeDetail : TeaModel {
                 /// <summary>
+                /// <para>The reason for the flight change.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>天气</para>
                 /// </summary>
@@ -34,6 +42,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string ChangeReason { get; set; }
 
                 /// <summary>
+                /// <para>The time of the flight change in string format (yyyy-MM-dd HH:mm:ss).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-01 10:01:00</para>
                 /// </summary>
@@ -42,6 +52,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string ChangeTime { get; set; }
 
                 /// <summary>
+                /// <para>The type of the flight change. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>1: cancellation</description></item>
+                /// <item><description>2: schedule change.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? ChangeType { get; set; }
 
                 /// <summary>
+                /// <para>The three-letter IATA code of the new arrival airport (uppercase).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MFM</para>
                 /// </summary>
@@ -58,6 +76,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string NewArrivalAirport { get; set; }
 
                 /// <summary>
+                /// <para>The arrival date and time of the new flight in string format (yyyy-MM-dd HH:mm:ss).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-01 15:01:00</para>
                 /// </summary>
@@ -66,6 +86,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string NewArrivalTime { get; set; }
 
                 /// <summary>
+                /// <para>The three-letter IATA code of the new departure airport (uppercase).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PVG</para>
                 /// </summary>
@@ -74,6 +96,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string NewDepartureAirport { get; set; }
 
                 /// <summary>
+                /// <para>The departure date and time of the new flight in string format (yyyy-MM-dd HH:mm:ss).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-01 13:01:00</para>
                 /// </summary>
@@ -82,6 +106,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string NewDepartureTime { get; set; }
 
                 /// <summary>
+                /// <para>The new flight number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HO1295</para>
                 /// </summary>
@@ -90,6 +116,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string NewFlightNo { get; set; }
 
                 /// <summary>
+                /// <para>The three-letter IATA code of the original arrival airport (uppercase).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MFM</para>
                 /// </summary>
@@ -98,6 +126,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string OldArrivalAirport { get; set; }
 
                 /// <summary>
+                /// <para>The arrival date and time of the original flight in string format (yyyy-MM-dd HH:mm:ss).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>023-02-01 14:01:00</para>
                 /// </summary>
@@ -106,6 +136,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string OldArrivalTime { get; set; }
 
                 /// <summary>
+                /// <para>The three-letter IATA code of the original departure airport (uppercase).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PVG</para>
                 /// </summary>
@@ -114,6 +146,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string OldDepartureAirport { get; set; }
 
                 /// <summary>
+                /// <para>The departure date and time of the original flight in string format (yyyy-MM-dd HH:mm:ss).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2023-02-01 12:01:00</para>
                 /// </summary>
@@ -122,6 +156,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string OldDepartureTime { get; set; }
 
                 /// <summary>
+                /// <para>The original flight number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HO1295</para>
                 /// </summary>
@@ -132,6 +168,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
+            /// <para>The order number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4966***617111</para>
             /// </summary>
@@ -142,6 +180,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
+        /// <para>The business error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -150,6 +190,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The data returned with the error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -158,6 +200,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -166,6 +210,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -174,6 +220,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

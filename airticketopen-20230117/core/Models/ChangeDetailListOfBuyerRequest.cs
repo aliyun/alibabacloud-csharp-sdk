@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class ChangeDetailListOfBuyerRequest : TeaModel {
         /// <summary>
+        /// <para>The page index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time for change order creation. The value is a 13-digit UTC timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1677415276000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? UtcCreateBegin { get; set; }
 
         /// <summary>
+        /// <para>The end time for change order creation. The value is a 13-digit UTC timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1677415279000</para>
         /// </summary>

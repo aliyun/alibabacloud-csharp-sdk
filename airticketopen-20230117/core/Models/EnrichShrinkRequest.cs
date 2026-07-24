@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class EnrichShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Number of adult passengers (1-9)</para>
+        /// <para>Number of adult passengers 1-9</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Adults { get; set; }
 
         /// <summary>
-        /// <para>Cabin class: ALL_CABIN: All cabin classes; Y: Economy; FC: First Class and Business Class; S: Premium Economy; YS: Economy and Premium Economy; YSC: Economy, Premium Economy, and Business Class;</para>
+        /// <para>Cabin class ALL_CABIN: all cabin classes; Y: economy; FC: first class and business class; S: premium economy; YS: economy and premium economy; YSC: economy, premium economy, and business class;</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL_CABIN</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CabinClass { get; set; }
 
         /// <summary>
-        /// <para>Number of child passengers (0-9)</para>
+        /// <para>Number of child passengers 0-9</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Children { get; set; }
 
         /// <summary>
-        /// <para>Number of infant passengers (0-9)</para>
+        /// <para>Number of infant passengers 0-9</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Infants { get; set; }
 
         /// <summary>
-        /// <para>Trip information</para>
+        /// <para>Journey information</para>
         /// </summary>
         [NameInMap("journey_param_list")]
         [Validation(Required=false)]
         public string JourneyParamListShrink { get; set; }
 
         /// <summary>
-        /// <para>The <c>solution_id</c> returned by the Search interface</para>
+        /// <para>solution_id returned by Search</para>
         /// 
         /// <b>Example:</b>
         /// <para>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</para>

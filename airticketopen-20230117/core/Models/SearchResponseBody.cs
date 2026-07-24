@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class SearchResponseBody : TeaModel {
         /// <summary>
-        /// <para>request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2236993B-7BE7-5F92-B179-21FF08570165</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>data</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SearchResponseBodyData Data { get; set; }
         public class SearchResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>solution list</para>
+            /// <para>The search quote results.</para>
             /// </summary>
             [NameInMap("solution_list")]
             [Validation(Required=false)]
             public List<SearchResponseBodyDataSolutionList> SolutionList { get; set; }
             public class SearchResponseBodyDataSolutionList : TeaModel {
                 /// <summary>
-                /// <para>adult fare</para>
+                /// <para>The unit price for an adult.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? AdultPrice { get; set; }
 
                 /// <summary>
-                /// <para>adult tax</para>
+                /// <para>The tax for an adult.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? AdultTax { get; set; }
 
                 /// <summary>
-                /// <para>child fare</para>
+                /// <para>The unit price for a child.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? ChildPrice { get; set; }
 
                 /// <summary>
-                /// <para>child tax</para>
+                /// <para>The tax for a child.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? ChildTax { get; set; }
 
                 /// <summary>
-                /// <para>infant fare</para>
+                /// <para>The unit price for an infant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>400</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? InfantPrice { get; set; }
 
                 /// <summary>
-                /// <para>infant tax</para>
+                /// <para>The tax for an infant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
@@ -94,21 +94,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public double? InfantTax { get; set; }
 
                 /// <summary>
-                /// <para>segment list</para>
+                /// <para>The journey.</para>
                 /// </summary>
                 [NameInMap("journey_list")]
                 [Validation(Required=false)]
                 public List<SearchResponseBodyDataSolutionListJourneyList> JourneyList { get; set; }
                 public class SearchResponseBodyDataSolutionListJourneyList : TeaModel {
                     /// <summary>
-                    /// <para>segment Info</para>
+                    /// <para>The segment information.</para>
                     /// </summary>
                     [NameInMap("segment_list")]
                     [Validation(Required=false)]
                     public List<SearchResponseBodyDataSolutionListJourneyListSegmentList> SegmentList { get; set; }
                     public class SearchResponseBodyDataSolutionListJourneyListSegmentList : TeaModel {
                         /// <summary>
-                        /// <para>arrival airport code (capitalized)</para>
+                        /// <para>The three-letter code of the arrival airport (uppercase).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MFM</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string ArrivalAirport { get; set; }
 
                         /// <summary>
-                        /// <para>arrival city code (capitalized)</para>
+                        /// <para>The three-letter code of the arrival city (uppercase).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MFM</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string ArrivalCity { get; set; }
 
                         /// <summary>
-                        /// <para>arrival terminal</para>
+                        /// <para>The arrival terminal.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>T1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string ArrivalTerminal { get; set; }
 
                         /// <summary>
-                        /// <para>arrival time in string format (yyyy-MM-dd HH:mm:ss)</para>
+                        /// <para>The arrival date and time in string format (yyyy-MM-dd HH:mm:ss).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-03-10 10:40:00</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string ArrivalTime { get; set; }
 
                         /// <summary>
-                        /// <para>available seats (for reference only)</para>
+                        /// <para>The number of remaining seats. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and A. A indicates that more than 9 seats are available.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>7</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string Availability { get; set; }
 
                         /// <summary>
-                        /// <para>RBD</para>
+                        /// <para>The booking class.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>V</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string Cabin { get; set; }
 
                         /// <summary>
-                        /// <para>cabin class</para>
+                        /// <para>The cabin class.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Y</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string CabinClass { get; set; }
 
                         /// <summary>
-                        /// <para>code share or not</para>
+                        /// <para>Indicates whether the flight is a codeshare flight.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public bool? CodeShare { get; set; }
 
                         /// <summary>
-                        /// <para>departure airport code (capitalized)</para>
+                        /// <para>The three-letter code of the departure airport (uppercase).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PVG</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string DepartureAirport { get; set; }
 
                         /// <summary>
-                        /// <para>departure city code (capitalized)</para>
+                        /// <para>The three-letter code of the departure city (uppercase).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>SHA</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string DepartureCity { get; set; }
 
                         /// <summary>
-                        /// <para>departure terminal</para>
+                        /// <para>The departure terminal.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>T2</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string DepartureTerminal { get; set; }
 
                         /// <summary>
-                        /// <para>departure time in string format (yyyy-MM-dd HH:mm:ss)</para>
+                        /// <para>The departure date and time in string format (yyyy-MM-dd HH:mm:ss).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-03-10 07:55:00</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string DepartureTime { get; set; }
 
                         /// <summary>
-                        /// <para>equipment type</para>
+                        /// <para>The aircraft type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>32Q</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string EquipType { get; set; }
 
                         /// <summary>
-                        /// <para>flight time, unit: minute</para>
+                        /// <para>The flight duration. Unit: minutes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>165</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public int? FlightDuration { get; set; }
 
                         /// <summary>
-                        /// <para>marketing airline code (ex.: KA)</para>
+                        /// <para>The marketing airline (such as KA).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HO</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string MarketingAirline { get; set; }
 
                         /// <summary>
-                        /// <para>marketing airline flight no. (ex.: KA5809)</para>
+                        /// <para>The marketing flight number (such as KA5809).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HO1295</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string MarketingFlightNo { get; set; }
 
                         /// <summary>
-                        /// <para>marketing airline integer flight no. (ex.: 5809)</para>
+                        /// <para>The numeric marketing flight number (such as 5809).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1259</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public int? MarketingFlightNoInt { get; set; }
 
                         /// <summary>
-                        /// <para>operating airline code (ex.: CX)</para>
+                        /// <para>The operating airline (such as CX).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HO</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string OperatingAirline { get; set; }
 
                         /// <summary>
-                        /// <para>operating airline flight no. (ex.: CX601)</para>
+                        /// <para>The operating flight number (such as CX601).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HO1295</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string OperatingFlightNo { get; set; }
 
                         /// <summary>
-                        /// <para>segment ID format: flight no.+departure airport[IATA airport code]+arrival airport[IATA airport code]+departure time(MMdd)</para>
+                        /// <para>The segment ID. Format: flight number + departure airport + arrival airport + departure date (MMdd).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>HO1295-PVG-MFM-20230310</para>
@@ -308,8 +308,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string SegmentId { get; set; }
 
                         /// <summary>
-                        /// <para>stop city list
-                        /// when stop_quantity &gt; 1, use “,” for seperation</para>
+                        /// <para>The list of stopover cities. This parameter has a value when stopQuantity is greater than 0. Multiple values are separated by commas.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MFM,PVG</para>
@@ -319,7 +318,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string StopCityList { get; set; }
 
                         /// <summary>
-                        /// <para>number of stops</para>
+                        /// <para>The number of stopover cities.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -331,7 +330,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     }
 
                     /// <summary>
-                    /// <para>number of transfers</para>
+                    /// <para>The number of transfers.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -343,20 +342,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>through check-in baggage policy</para>
+                /// <para>The baggage through-check rules.</para>
                 /// </summary>
                 [NameInMap("segment_baggage_check_in_info_list")]
                 [Validation(Required=false)]
                 public List<SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList> SegmentBaggageCheckInInfoList { get; set; }
                 public class SearchResponseBodyDataSolutionListSegmentBaggageCheckInInfoList : TeaModel {
                     /// <summary>
-                    /// <para>through check-in baggage policy type</para>
-                    /// <ol>
-                    /// <item><description>baggage through check-in between segments</description></item>
-                    /// <item><description>baggage re-check-in needed between segments</description></item>
-                    /// <item><description>baggage through check-in at stop city ( applies for stop flight )</description></item>
-                    /// <item><description>baggage re-checkin needed at stop city ( applies for stop flight )</description></item>
-                    /// </ol>
+                    /// <para>The baggage through-check rule type. Valid values: 1: baggage is checked through between segments. 2: baggage must be rechecked between segments. 3: baggage is checked through at stopover cities. 4: baggage must be rechecked at stopover cities.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -366,8 +359,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public int? LuggageDirectInfoType { get; set; }
 
                     /// <summary>
-                    /// <para>segment id list. 
-                    /// all the listed segment ids share the same baggage through check-in  policy</para>
+                    /// <para>The list of segment IDs. These segments share the same baggage through-check rule.</para>
                     /// </summary>
                     [NameInMap("segment_id_list")]
                     [Validation(Required=false)]
@@ -376,22 +368,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>baggage rule</para>
+                /// <para>The free baggage rules.</para>
                 /// </summary>
                 [NameInMap("segment_baggage_mapping_list")]
                 [Validation(Required=false)]
                 public List<SearchResponseBodyDataSolutionListSegmentBaggageMappingList> SegmentBaggageMappingList { get; set; }
                 public class SearchResponseBodyDataSolutionListSegmentBaggageMappingList : TeaModel {
                     /// <summary>
-                    /// <para>baggage rule mapping, key is passenger type, value is baggage allowance details</para>
+                    /// <para>The mapping between passenger types and free baggage allowances.</para>
                     /// </summary>
                     [NameInMap("passenger_baggage_allowance_mapping")]
                     [Validation(Required=false)]
                     public Dictionary<string, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> PassengerBaggageAllowanceMapping { get; set; }
 
                     /// <summary>
-                    /// <para>segment id list. 
-                    /// all the listed segment id share the same baggage rule</para>
+                    /// <para>The list of segment IDs. These segments share the same free baggage rule.</para>
                     /// </summary>
                     [NameInMap("segment_id_list")]
                     [Validation(Required=false)]
@@ -400,22 +391,21 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>change and refund policy</para>
+                /// <para>The refund and change rules.</para>
                 /// </summary>
                 [NameInMap("segment_refund_change_rule_mapping_list")]
                 [Validation(Required=false)]
                 public List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> SegmentRefundChangeRuleMappingList { get; set; }
                 public class SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList : TeaModel {
                     /// <summary>
-                    /// <para>change and refund policy mapping, key is passenger type, value is change and refund policy details</para>
+                    /// <para>The mapping between passenger types and refund and change rules.</para>
                     /// </summary>
                     [NameInMap("refund_change_rule_map")]
                     [Validation(Required=false)]
                     public Dictionary<string, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> RefundChangeRuleMap { get; set; }
 
                     /// <summary>
-                    /// <para>segment id list. 
-                    /// all the listed segment ids share the same change and refund policy</para>
+                    /// <para>The list of segment IDs. These segments share the same refund and change rule.</para>
                     /// </summary>
                     [NameInMap("segment_id_list")]
                     [Validation(Required=false)]
@@ -424,29 +414,20 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>Quotation attributes</para>
+                /// <para>The quote attributes.</para>
                 /// </summary>
                 [NameInMap("solution_attribute")]
                 [Validation(Required=false)]
                 public SearchResponseBodyDataSolutionListSolutionAttribute SolutionAttribute { get; set; }
                 public class SearchResponseBodyDataSolutionListSolutionAttribute : TeaModel {
-                    /// <summary>
-                    /// <para>Issue ticket time related</para>
-                    /// </summary>
                     [NameInMap("issue_time_info")]
                     [Validation(Required=false)]
                     public SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo IssueTimeInfo { get; set; }
                     public class SearchResponseBodyDataSolutionListSolutionAttributeIssueTimeInfo : TeaModel {
-                        /// <summary>
-                        /// <para>Issue ticket type: 1: after payment; 2: before departure; -1: unknown</para>
-                        /// </summary>
                         [NameInMap("issue_ticket_type")]
                         [Validation(Required=false)]
                         public int? IssueTicketType { get; set; }
 
-                        /// <summary>
-                        /// <para>Estimated issue ticket time, unit: minutes</para>
-                        /// </summary>
                         [NameInMap("issue_time_limit")]
                         [Validation(Required=false)]
                         public int? IssueTimeLimit { get; set; }
@@ -454,7 +435,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     }
 
                     /// <summary>
-                    /// <para>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</para>
+                    /// <para>The supply source type. Valid values: 1: self-operated. 2: agent. 3: flagship store.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -466,7 +447,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>solution ID</para>
+                /// <para>solution_id</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eJwz8DeySEo0NjQ01TU3TU7TNTFINNO1SE5O0jVKM0hKNjEwTElLNYwz0A32cNT1dfPVNTIwMjYwNjRQ8/A3NLI01Q0Ic0cRBwBVFxJJ</para>
@@ -480,37 +461,37 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The business error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("error_code")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>error data</para>
+        /// <para>The data returned with the error.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("error_data")]
         [Validation(Required=false)]
         public object ErrorData { get; set; }
 
         /// <summary>
-        /// <para>error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;&quot;</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("error_msg")]
         [Validation(Required=false)]
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>http request has been processed successfully，status code is 200</para>
+        /// <para>The HTTP status code. The value is always 200 for successful HTTP requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -520,7 +501,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>true represents success, false represents failure</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

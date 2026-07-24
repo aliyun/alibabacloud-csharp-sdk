@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string XAcsAirticketAccessToken { get; set; }
 
         /// <summary>
+        /// <para>Language. Uses the buyer account configuration by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>en_US</para>
         /// </summary>

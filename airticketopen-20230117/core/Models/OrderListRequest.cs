@@ -10,39 +10,39 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class OrderListRequest : TeaModel {
         /// <summary>
-        /// <para>latest booking time (timestamp)</para>
+        /// <para>The query end time. The value is a 13-digit UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1677229005000</para>
+        /// <para>1677229006000</para>
         /// </summary>
         [NameInMap("book_time_end")]
         [Validation(Required=false)]
         public long? BookTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>earliest book time(timestamp)</para>
+        /// <para>The query start time. The value is a 13-digit UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1677227005000</para>
+        /// <para>1677229005000</para>
         /// </summary>
         [NameInMap("book_time_start")]
         [Validation(Required=false)]
         public long? BookTimeStart { get; set; }
 
         /// <summary>
-        /// <para>pagination query parameters, from which page to start querying,querying starts with 0</para>
+        /// <para>The page index. The value starts from 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page_index")]
         [Validation(Required=false)]
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>pagination query parameters, how many orders to return</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,12 +52,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>which order status will be query</para>
-        /// <para>1: order reservation in process</para>
-        /// <para>2: order reservation successful</para>
-        /// <para>3: order paid</para>
-        /// <para>4: order successful</para>
-        /// <para>5: order closed</para>
+        /// <para>The order status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>2: order creation succeeded.</description></item>
+        /// <item><description>3: order paid.</description></item>
+        /// <item><description>4: order succeeded.</description></item>
+        /// <item><description>5: order closed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

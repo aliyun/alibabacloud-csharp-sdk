@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class RefundApplyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request RequestId</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Correctly processed return data</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public RefundApplyResponseBodyData Data { get; set; }
         public class RefundApplyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Order number</para>
+            /// <para>The order number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4966***617111</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public long? OrderNum { get; set; }
 
             /// <summary>
-            /// <para>List of refund application results</para>
+            /// <para>The list of refund application results.</para>
             /// </summary>
             [NameInMap("refund_results")]
             [Validation(Required=false)]
             public List<RefundApplyResponseBodyDataRefundResults> RefundResults { get; set; }
             public class RefundApplyResponseBodyDataRefundResults : TeaModel {
                 /// <summary>
-                /// <para>Reason for refund application failure</para>
+                /// <para>The reason for the refund application failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>desc reason</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string FailReason { get; set; }
 
                 /// <summary>
-                /// <para>Refund order number</para>
+                /// <para>The refund order number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4966***617202</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public long? RefundOrderNum { get; set; }
 
                 /// <summary>
-                /// <para>List of passengers for the refund order</para>
+                /// <para>The list of passengers included in the refund order.</para>
                 /// </summary>
                 [NameInMap("refund_passengers")]
                 [Validation(Required=false)]
                 public List<RefundApplyResponseBodyDataRefundResultsRefundPassengers> RefundPassengers { get; set; }
                 public class RefundApplyResponseBodyDataRefundResultsRefundPassengers : TeaModel {
                     /// <summary>
-                    /// <para>Document number</para>
+                    /// <para>The document number of the passenger.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>411***********4411</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Document { get; set; }
 
                     /// <summary>
-                    /// <para>Passenger first name</para>
+                    /// <para>The first name of the passenger.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SAN</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string FirstName { get; set; }
 
                     /// <summary>
-                    /// <para>Passenger last name</para>
+                    /// <para>The last name of the passenger.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ZHANG</para>
@@ -103,7 +103,11 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 }
 
                 /// <summary>
-                /// <para>Refund order status 0: Refund order created successfully; 1: Refund order creation failed</para>
+                /// <para>The refund order status. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>0: The refund order is created.</description></item>
+                /// <item><description>1: The refund order failed to be created.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The business error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Data carried in error handling</para>
+        /// <para>The data returned with the error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -137,7 +141,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public object ErrorData { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -147,7 +151,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>HTTP request successful, status value is always 200</para>
+        /// <para>The HTTP status code. The value is always 200 for successful requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("airticketopen", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号资金流水</para>
+        /// <para>Queries the account fund flow list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号资金流水</para>
+        /// <para>Queries the account fund flow list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号资金流水</para>
+        /// <para>Queries the account fund flow list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号资金流水</para>
+        /// <para>Queries the account fund flow list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -219,13 +219,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ancillary - Suggestion</para>
+        /// <para>Recommends ancillary products.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AncillarySuggestRequest
@@ -283,13 +278,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ancillary - Suggestion</para>
+        /// <para>Recommends ancillary products.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AncillarySuggestRequest
@@ -347,13 +337,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ancillary - Suggestion</para>
+        /// <para>Recommends ancillary products.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AncillarySuggestRequest
@@ -371,13 +356,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ancillary - Suggestion</para>
+        /// <para>Recommends ancillary products.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>search ancillary for selected solution, you should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// AncillarySuggestRequest
@@ -395,18 +375,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction-Reservation</para>
+        /// <para>Creates a booking order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-        /// There are two issues should be noticed:</para>
-        /// <ol>
-        /// <item><description>the solution_id must be processed by pricing.</description></item>
-        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BookRequest
@@ -494,18 +464,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction-Reservation</para>
+        /// <para>Creates a booking order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-        /// There are two issues should be noticed:</para>
-        /// <ol>
-        /// <item><description>the solution_id must be processed by pricing.</description></item>
-        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// BookRequest
@@ -593,18 +553,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction-Reservation</para>
+        /// <para>Creates a booking order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-        /// There are two issues should be noticed:</para>
-        /// <ol>
-        /// <item><description>the solution_id must be processed by pricing.</description></item>
-        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="request">
         /// BookRequest
@@ -622,18 +572,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction-Reservation</para>
+        /// <para>Creates a booking order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-        /// There are two issues should be noticed:</para>
-        /// <ol>
-        /// <item><description>the solution_id must be processed by pricing.</description></item>
-        /// <item><description>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</description></item>
-        /// </ol>
-        /// </description>
         /// 
         /// <param name="request">
         /// BookRequest
@@ -651,13 +591,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Unpaid Cancellation</para>
+        /// <para>Cancels an unpaid order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>close an unpaid order</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CancelRequest
@@ -715,13 +650,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Unpaid Cancellation</para>
+        /// <para>Cancels an unpaid order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>close an unpaid order</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CancelRequest
@@ -779,13 +709,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Unpaid Cancellation</para>
+        /// <para>Cancels an unpaid order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>close an unpaid order</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CancelRequest
@@ -803,13 +728,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Unpaid Cancellation</para>
+        /// <para>Cancels an unpaid order.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>close an unpaid order</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CancelRequest
@@ -827,7 +747,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Apply</para>
+        /// <para>Submits a change application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -920,7 +840,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Apply</para>
+        /// <para>Submits a change application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1013,7 +933,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Apply</para>
+        /// <para>Submits a change application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1032,7 +952,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-Apply</para>
+        /// <para>Submits a change application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1051,7 +971,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-取消</para>
+        /// <para>Cancel the change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1110,7 +1030,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-取消</para>
+        /// <para>Cancel the change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1169,7 +1089,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-取消</para>
+        /// <para>Cancel the change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1188,7 +1108,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-取消</para>
+        /// <para>Cancel the change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1207,7 +1127,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-确认</para>
+        /// <para>Confirms a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1266,7 +1186,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-确认</para>
+        /// <para>Confirms a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1245,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-确认</para>
+        /// <para>Confirms a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1344,7 +1264,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签-确认</para>
+        /// <para>Confirms a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1363,7 +1283,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change-Detail</para>
+        /// <para>Retrieves the details of a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1422,7 +1342,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change-Detail</para>
+        /// <para>Retrieves the details of a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1481,7 +1401,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change-Detail</para>
+        /// <para>Retrieves the details of a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1500,7 +1420,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change-Detail</para>
+        /// <para>Retrieves the details of a flight change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1519,7 +1439,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于买家账号</para>
+        /// <para>Queries a paging list of change order summaries by buyer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1590,7 +1510,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于买家账号</para>
+        /// <para>Queries a paging list of change order summaries by buyer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1661,7 +1581,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于买家账号</para>
+        /// <para>Queries a paging list of change order summaries by buyer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1680,7 +1600,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于买家账号</para>
+        /// <para>Queries a paging list of change order summaries by buyer account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1699,7 +1619,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于正向订单</para>
+        /// <para>Queries the list of change orders by the original order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1766,7 +1686,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于正向订单</para>
+        /// <para>Queries the list of change orders by the original order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1833,7 +1753,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于正向订单</para>
+        /// <para>Queries the list of change orders by the original order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1852,7 +1772,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>改签单列表-关于正向订单</para>
+        /// <para>Queries the list of change orders by the original order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1871,8 +1791,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据收集-低价航班信息</para>
+        /// <para>Collects lowest-price flight information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Collects lowest-price flight information.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CollectFlightLowestPriceRequest
@@ -1936,8 +1861,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据收集-低价航班信息</para>
+        /// <para>Collects lowest-price flight information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Collects lowest-price flight information.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CollectFlightLowestPriceRequest
@@ -2001,8 +1931,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据收集-低价航班信息</para>
+        /// <para>Collects lowest-price flight information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Collects lowest-price flight information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CollectFlightLowestPriceRequest
@@ -2020,8 +1955,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据收集-低价航班信息</para>
+        /// <para>Collects lowest-price flight information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Collects lowest-price flight information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CollectFlightLowestPriceRequest
@@ -2039,12 +1979,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search-Enrich</para>
+        /// <para>Find richer quote information for the itinerary, including free baggage allowance, refund and change rules, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
+        /// <para>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2129,12 +2069,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search-Enrich</para>
+        /// <para>Find richer quote information for the itinerary, including free baggage allowance, refund and change rules, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
+        /// <para>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2219,12 +2159,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search-Enrich</para>
+        /// <para>Find richer quote information for the itinerary, including free baggage allowance, refund and change rules, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
+        /// <para>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2243,12 +2183,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search-Enrich</para>
+        /// <para>Find richer quote information for the itinerary, including free baggage allowance, refund and change rules, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Choose either <c>solution_id</c> or <c>journey_param_list</c> in the parameters, and <c>solution_id</c> needs to be obtained from the Search interface.</para>
+        /// <para>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2267,7 +2207,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件上传</para>
+        /// <para>Uploads a file as an attachment image. The file size is limited to 300 KB or less.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2330,7 +2270,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件上传</para>
+        /// <para>Uploads a file as an attachment image. The file size is limited to 300 KB or less.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2393,7 +2333,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件上传</para>
+        /// <para>Uploads a file as an attachment image. The file size is limited to 300 KB or less.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2412,7 +2352,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件上传</para>
+        /// <para>Uploads a file as an attachment image. The file size is limited to 300 KB or less.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2431,7 +2371,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航变信息-关于订单</para>
+        /// <para>Queries flight change information by order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2490,7 +2430,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航变信息-关于订单</para>
+        /// <para>Queries flight change information by order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2549,7 +2489,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航变信息-关于订单</para>
+        /// <para>Queries flight change information by order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2568,7 +2508,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航变信息-关于订单</para>
+        /// <para>Queries flight change information by order number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2587,7 +2527,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Token</para>
+        /// <para>Obtains a token for API calls. The token is valid for 2 hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2637,7 +2577,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Token</para>
+        /// <para>Obtains a token for API calls. The token is valid for 2 hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2687,7 +2627,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Token</para>
+        /// <para>Obtains a token for API calls. The token is valid for 2 hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2706,7 +2646,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Token</para>
+        /// <para>Obtains a token for API calls. The token is valid for 2 hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2725,8 +2665,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程行李直挂</para>
+        /// <para>Queries luggage through-check information for an itinerary.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// LuggageDirectRequest
@@ -2790,8 +2735,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程行李直挂</para>
+        /// <para>Queries luggage through-check information for an itinerary.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// LuggageDirectRequest
@@ -2855,8 +2805,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程行李直挂</para>
+        /// <para>Queries luggage through-check information for an itinerary.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// LuggageDirectRequest
@@ -2874,8 +2829,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程行李直挂</para>
+        /// <para>Queries luggage through-check information for an itinerary.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// LuggageDirectRequest
@@ -2893,13 +2853,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade-Order Details</para>
+        /// <para>Queries order details.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order detail</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderDetailRequest
@@ -2961,13 +2916,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade-Order Details</para>
+        /// <para>Queries order details.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order detail</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderDetailRequest
@@ -3029,13 +2979,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade-Order Details</para>
+        /// <para>Queries order details.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order detail</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderDetailRequest
@@ -3053,13 +2998,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade-Order Details</para>
+        /// <para>Queries order details.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order detail</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderDetailRequest
@@ -3077,13 +3017,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Order List</para>
+        /// <para>Queries the order list.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order list</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderListRequest
@@ -3157,13 +3092,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Order List</para>
+        /// <para>Queries the order list.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order list</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderListRequest
@@ -3237,13 +3167,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Order List</para>
+        /// <para>Queries the order list.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order list</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderListRequest
@@ -3261,13 +3186,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trade - Order List</para>
+        /// <para>Queries the order list.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>query order list</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// OrderListRequest
@@ -3285,13 +3205,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Seat and Price Verification</para>
+        /// <para>Verifies seat availability and pricing. If the price has changed, the developer can proceed with Book at the updated price. If the price has not changed, the order is placed at the original price.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// PricingRequest
@@ -3349,13 +3264,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Seat and Price Verification</para>
+        /// <para>Verifies seat availability and pricing. If the price has changed, the developer can proceed with Book at the updated price. If the price has not changed, the order is placed at the original price.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// PricingRequest
@@ -3413,13 +3323,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Seat and Price Verification</para>
+        /// <para>Verifies seat availability and pricing. If the price has changed, the developer can proceed with Book at the updated price. If the price has not changed, the order is placed at the original price.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// PricingRequest
@@ -3437,13 +3342,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Seat and Price Verification</para>
+        /// <para>Verifies seat availability and pricing. If the price has changed, the developer can proceed with Book at the updated price. If the price has not changed, the order is placed at the original price.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// PricingRequest
@@ -3461,7 +3361,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ticket Refund - Application</para>
+        /// <para>Submits a refund application for an air ticket.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3546,7 +3446,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ticket Refund - Application</para>
+        /// <para>Submits a refund application for an air ticket.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3631,7 +3531,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ticket Refund - Application</para>
+        /// <para>Submits a refund application for an air ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3650,7 +3550,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ticket Refund - Application</para>
+        /// <para>Submits a refund application for an air ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3669,7 +3569,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail</para>
+        /// <para>Retrieves the details of a refund order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3728,7 +3628,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail</para>
+        /// <para>Retrieves the details of a refund order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3787,7 +3687,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail</para>
+        /// <para>Retrieves the details of a refund order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3806,7 +3706,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail</para>
+        /// <para>Retrieves the details of a refund order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3825,7 +3725,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail List</para>
+        /// <para>Queries the details of refund orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3900,7 +3800,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail List</para>
+        /// <para>Queries the details of refund orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3975,7 +3875,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail List</para>
+        /// <para>Queries the details of refund orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3994,7 +3894,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund - Detail List</para>
+        /// <para>Queries the details of refund orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4013,13 +3913,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search</para>
+        /// <para>Searches for flight quotes and returns the lowest price across multiple flights. Note that the response of this operation does not include refund and change rules, free baggage allowance, or baggage through-check rules.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SearchRequest
@@ -4107,13 +4002,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search</para>
+        /// <para>Searches for flight quotes and returns the lowest price across multiple flights. Note that the response of this operation does not include refund and change rules, free baggage allowance, or baggage through-check rules.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SearchRequest
@@ -4201,13 +4091,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search</para>
+        /// <para>Searches for flight quotes and returns the lowest price across multiple flights. Note that the response of this operation does not include refund and change rules, free baggage allowance, or baggage through-check rules.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SearchRequest
@@ -4225,13 +4110,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search</para>
+        /// <para>Searches for flight quotes and returns the lowest price across multiple flights. Note that the response of this operation does not include refund and change rules, free baggage allowance, or baggage through-check rules.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SearchRequest
@@ -4249,7 +4129,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标准搜索</para>
+        /// <para>Search and quote prices, currently providing the lowest price across multiple flights. Note that this API response includes refund/change rules, free baggage allowance, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4338,7 +4218,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标准搜索</para>
+        /// <para>Search and quote prices, currently providing the lowest price across multiple flights. Note that this API response includes refund/change rules, free baggage allowance, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4427,7 +4307,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标准搜索</para>
+        /// <para>Search and quote prices, currently providing the lowest price across multiple flights. Note that this API response includes refund/change rules, free baggage allowance, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4446,7 +4326,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标准搜索</para>
+        /// <para>Search and quote prices, currently providing the lowest price across multiple flights. Note that this API response includes refund/change rules, free baggage allowance, and baggage through-check rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4465,7 +4345,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// <para>Pays for and issues a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4524,7 +4404,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// <para>Pays for and issues a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4583,7 +4463,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// <para>Pays for and issues a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4602,7 +4482,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Payment and Ticket Issuance</para>
+        /// <para>Pays for and issues a ticket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4621,12 +4501,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Pre-payment verification</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4685,12 +4565,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Pre-payment verification</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4749,12 +4629,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Pre-payment verification</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4773,12 +4653,12 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Transaction - Pre-payment verification</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pre-check for Ticketing, this interface is optional to use.</para>
+        /// <para>Performs a pre-ticketing check. This operation is optional.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4797,8 +4677,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程过境签</para>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TransitVisaRequest
@@ -4862,8 +4747,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程过境签</para>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// TransitVisaRequest
@@ -4927,8 +4817,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程过境签</para>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TransitVisaRequest
@@ -4946,8 +4841,13 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>航程过境签</para>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TransitVisaRequest

@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class TransitVisaRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of flight segments that constitute an itinerary. Maximum size: 2.</para>
+        /// </summary>
         [NameInMap("flight_segment_param_list")]
         [Validation(Required=false)]
         public List<TransitVisaRequestFlightSegmentParamList> FlightSegmentParamList { get; set; }
         public class TransitVisaRequestFlightSegmentParamList : TeaModel {
             /// <summary>
+            /// <para>The three-letter IATA code of the arrival airport.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ArrivalAirport { get; set; }
 
             /// <summary>
+            /// <para>The arrival terminal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>T1</para>
             /// </summary>
@@ -32,6 +38,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ArrivalTerminal { get; set; }
 
             /// <summary>
+            /// <para>The arrival time. A 13-digit UNIX timestamp.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -42,6 +49,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public long? ArrivalTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the flight is a codeshare flight.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -52,6 +60,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public bool? CodeShare { get; set; }
 
             /// <summary>
+            /// <para>The three-letter IATA code of the departure airport.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,6 +71,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string DepartureAirport { get; set; }
 
             /// <summary>
+            /// <para>The departure terminal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>T1</para>
             /// </summary>
@@ -70,6 +81,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string DepartureTerminal { get; set; }
 
             /// <summary>
+            /// <para>The departure time. A 13-digit UNIX timestamp.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -80,6 +92,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public long? DepartureTime { get; set; }
 
             /// <summary>
+            /// <para>The marketing airline.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -90,6 +103,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string MarketingAirline { get; set; }
 
             /// <summary>
+            /// <para>The flight number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -100,6 +114,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string MarketingFlightNo { get; set; }
 
             /// <summary>
+            /// <para>The operating airline.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CZ</para>
             /// </summary>
@@ -108,6 +124,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string OperatingAirline { get; set; }
 
             /// <summary>
+            /// <para>The three-letter IATA codes of stopover cities.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SEL,HKG</para>
             /// </summary>
@@ -116,6 +134,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string StopCityList { get; set; }
 
             /// <summary>
+            /// <para>The ticketing airline.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CZ</para>
             /// </summary>

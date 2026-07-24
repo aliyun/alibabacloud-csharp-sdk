@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class CollectFlightLowestPriceRequest : TeaModel {
         /// <summary>
+        /// <para>The lowest-price flight information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("lowest_price_flight_info_list")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<CollectFlightLowestPriceRequestLowestPriceFlightInfoList> LowestPriceFlightInfoList { get; set; }
         public class CollectFlightLowestPriceRequestLowestPriceFlightInfoList : TeaModel {
             /// <summary>
+            /// <para>The arrival city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ArrivalCity { get; set; }
 
             /// <summary>
+            /// <para>The departure city.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string DepartureCity { get; set; }
 
             /// <summary>
+            /// <para>The departure date. Format: yyyy-MM-dd.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string DepartureDate { get; set; }
 
             /// <summary>
+            /// <para>The list of outbound flight numbers. Multiple segments are split by commas (,).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,6 +62,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string DepartureFlightNumber { get; set; }
 
             /// <summary>
+            /// <para>The lowest competitor price in the market, including fare and taxes. The currency is USD.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -67,6 +73,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public double? MarketTotalPrice { get; set; }
 
             /// <summary>
+            /// <para>The request ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456789dacd</para>
             /// </summary>
@@ -75,6 +83,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string RequestId { get; set; }
 
             /// <summary>
+            /// <para>The return date for round-trip scenarios. Format: yyyy-MM-dd.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-11-11</para>
             /// </summary>
@@ -83,6 +93,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ReturnDate { get; set; }
 
             /// <summary>
+            /// <para>The list of return flight numbers. Multiple segments are split by commas (,).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CA123,CA456</para>
             /// </summary>
@@ -91,6 +103,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ReturnFlightNumber { get; set; }
 
             /// <summary>
+            /// <para>The solution_id returned by Search/Enrich.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -101,6 +114,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string SolutionId { get; set; }
 
             /// <summary>
+            /// <para>The Suez quoted price, including fare and taxes. The currency is USD.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -111,6 +125,11 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public double? SuezTotalPrice { get; set; }
 
             /// <summary>
+            /// <para>The trip type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: one-way</description></item>
+            /// <item><description>2: round-trip.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

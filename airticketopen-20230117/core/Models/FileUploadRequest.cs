@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class FileUploadRequest : TeaModel {
         /// <summary>
+        /// <para>The Base64-encoded string of the attachment image file. Supported image types: .jpg, .png, and .jpeg.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,6 +23,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string FileContent { get; set; }
 
         /// <summary>
+        /// <para>The forward order number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

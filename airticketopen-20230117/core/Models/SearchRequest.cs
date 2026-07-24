@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class SearchRequest : TeaModel {
         /// <summary>
-        /// <para>adult passenger amount 1-9</para>
+        /// <para>The number of adult passengers. Valid values: 1 to 9.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Adults { get; set; }
 
         /// <summary>
-        /// <para>itinerary list</para>
+        /// <para>The journey array.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("air_legs")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<SearchRequestAirLegs> AirLegs { get; set; }
         public class SearchRequestAirLegs : TeaModel {
             /// <summary>
-            /// <para>arrival airport [IATA airport code] list</para>
+            /// <para>The list of three-letter codes of arrival airports.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MFM</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<string> ArrivalAirportList { get; set; }
 
             /// <summary>
-            /// <para>arrival city code</para>
+            /// <para>The three-letter code of the arrival city.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MFM</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string ArrivalCity { get; set; }
 
             /// <summary>
-            /// <para>departure airport [IATA airport code] list</para>
+            /// <para>The list of three-letter codes of departure airports.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PVG</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<string> DepartureAirportList { get; set; }
 
             /// <summary>
-            /// <para>departure city code</para>
+            /// <para>The three-letter code of the departure city.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string DepartureCity { get; set; }
 
             /// <summary>
-            /// <para>departure date (eg: yyyyMMdd)</para>
+            /// <para>The departure date (for example, yyyyMMdd).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -81,15 +81,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         }
 
         /// <summary>
-        /// <para>cabin class</para>
-        /// <ol>
-        /// <item><description><b>ALL_CABIN</b> : all cabin class</description></item>
-        /// <item><description><b>Y</b> : economy class</description></item>
-        /// <item><description><b>FC</b> : first class and business class</description></item>
-        /// <item><description><b>S</b> : premium economy class</description></item>
-        /// <item><description><b>YS</b> : economy class and premium economy class</description></item>
-        /// <item><description><b>YSC</b> : economy class, premium economy class and business class</description></item>
-        /// </ol>
+        /// <para>The cabin class. Valid values: ALL_CABIN: all cabin classes. Y: economy class. FC: first class and business class. S: premium economy class. YS: economy class and premium economy class. YSC: economy class, premium economy class, and business class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL_CABIN</para>
@@ -99,7 +91,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CabinClass { get; set; }
 
         /// <summary>
-        /// <para>child passenger amount 0-9</para>
+        /// <para>The number of child passengers. Valid values: 0 to 9.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +101,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Children { get; set; }
 
         /// <summary>
-        /// <para>infant passenger amount 0-9</para>
+        /// <para>The number of infant passengers. Valid values: 0 to 9.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,14 +111,14 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? Infants { get; set; }
 
         /// <summary>
-        /// <para>search controls</para>
+        /// <para>The search control options. This parameter is optional.</para>
         /// </summary>
         [NameInMap("search_control_options")]
         [Validation(Required=false)]
         public SearchRequestSearchControlOptions SearchControlOptions { get; set; }
         public class SearchRequestSearchControlOptions : TeaModel {
             /// <summary>
-            /// <para>excluded airlines list</para>
+            /// <para>The list of excluded airlines.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7C</para>
@@ -136,7 +128,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<string> AirlineExcludedList { get; set; }
 
             /// <summary>
-            /// <para>preferred airlines list</para>
+            /// <para>The list of preferred airlines.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FD</para>
@@ -146,7 +138,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<string> AirlinePreferList { get; set; }
 
             /// <summary>
-            /// <para>service quality</para>
+            /// <para>The service quality identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A1</para>

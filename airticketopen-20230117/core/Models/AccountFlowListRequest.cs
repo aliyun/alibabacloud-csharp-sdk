@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class AccountFlowListRequest : TeaModel {
         /// <summary>
+        /// <para>The number of days to search. Maximum value: 30. Valid values: 0 to 30.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? DayNum { get; set; }
 
         /// <summary>
+        /// <para>The page index.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start search timestamp, effective to the day. Specify a 13-digit UTC timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
