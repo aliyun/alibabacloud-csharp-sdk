@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceLivenessV2AdvanceRequest : TeaModel {
+        [NameInMap("FaceAttributeCheck")]
+        [Validation(Required=false)]
+        public string FaceAttributeCheck { get; set; }
+
         /// <summary>
         /// <para>The Base64-encoded face image.</para>
         /// <remarks>

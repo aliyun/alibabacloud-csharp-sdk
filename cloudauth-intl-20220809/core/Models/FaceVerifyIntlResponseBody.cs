@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceVerifyIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// <para>The predicted reference age of the face. Prediction may fail and the value may not be returned.</para>
+            /// <para>The estimated age of the face. This value may not be returned if the prediction fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -158,8 +158,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>Indicates whether the captured face involves a liveness attack. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: attack detected.</description></item>
-            /// <item><description>N: no attack detected.</description></item>
+            /// <item><description>Y: Attack detected.</description></item>
+            /// <item><description>N: No attack detected.</description></item>
             /// </list>
             /// <para>This field is returned only when passive liveness detection is enabled.</para>
             /// 
@@ -191,10 +191,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>The predicted gender of the face image. Prediction may fail and the value may not be returned. Valid values:</para>
+            /// <para>The predicted gender of the face image. This value may not be returned if the prediction fails. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>M: male.</description></item>
-            /// <item><description>F: female.</description></item>
+            /// <item><description>M: Male.</description></item>
+            /// <item><description>F: Female.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,8 +207,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The final verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: passed.</description></item>
-            /// <item><description>N: not passed.</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FacePassed { get; set; }
 
             /// <summary>
-            /// <para>The corresponding face ID returned only when the customer has enabled automatic registration and the face is registered successfully.</para>
+            /// <para>The face ID returned only when the customer has enabled automatic registration and the face is registered successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9e792ec84c8f0ca592a</para>
@@ -231,8 +231,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The face registration result. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>0: failed. </description></item>
-            /// <item><description>1: succeeded.</description></item>
+            /// <item><description>0: Failed. </description></item>
+            /// <item><description>1: Succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

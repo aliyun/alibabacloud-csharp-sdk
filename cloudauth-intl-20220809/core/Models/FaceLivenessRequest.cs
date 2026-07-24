@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to allow cropping. Default value: F. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Allow cropping.</description></item>
-        /// <item><description>F: Do not allow cropping.</description></item>
+        /// <item><description>T: enabled.</description></item>
+        /// <item><description>F: disabled. (Default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("Crop")]
         [Validation(Required=false)]
         public string Crop { get; set; }
+
+        [NameInMap("FaceAttributeCheck")]
+        [Validation(Required=false)]
+        public string FaceAttributeCheck { get; set; }
 
         /// <summary>
         /// <para>The Base64-encoded face photo.</para>
@@ -50,8 +54,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to output the face quality score. Default value: F. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Output the face quality score.</description></item>
-        /// <item><description>F: Do not output the face quality score.</description></item>
+        /// <item><description>T: enabled.</description></item>
+        /// <item><description>F: disabled. (Default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQuality { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a face quality check.</para>
+        /// <para>The face quality check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The merchant-defined unique business ID for subsequent troubleshooting. The value supports a combination of letters and numbers with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>The merchant-defined unique business ID used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The merchant user ID or other identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you pre-desensitize the value of the userId field, such as by hashing the value.</para>
+        /// <para>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of the userId field before passing it in, for example, by hashing the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -94,8 +98,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to perform occlusion detection. Default value: F. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Perform occlusion detection.</description></item>
-        /// <item><description>F: Do not perform occlusion detection.</description></item>
+        /// <item><description>T: enabled.</description></item>
+        /// <item><description>F: disabled. (Default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

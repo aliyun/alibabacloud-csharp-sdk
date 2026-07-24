@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The authentication standard encryption protocol.</para>
             /// <remarks>
-            /// <para>This field is required when you use iframe embedding for H5 web page integration.</para>
+            /// <para>This field is required when integrating H5 web pages using iframe embedding.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceLivenessV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? FaceQualityScore { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm score for illumination as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</para>
+                /// <para>The algorithm score for illumination, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>97.43</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? IlluminationScore { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm score for key area occlusion as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</para>
+                /// <para>The algorithm score for key area occlusion, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public string OcclusionResult { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm score for occlusion as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</para>
+                /// <para>The algorithm score for occlusion, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50.26</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? OcclusionScore { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm score for image sharpness as a quality sub-dimension. Valid values: 0 to 100. A higher value indicates better quality.</para>
+                /// <para>The image sharpness score, which is a sub-dimension of quality assessment. Valid values: 0 to 100. A higher value indicates better quality.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60.78</para>
@@ -156,8 +156,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: passed.</description></item>
-            /// <item><description>N: not passed.</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
