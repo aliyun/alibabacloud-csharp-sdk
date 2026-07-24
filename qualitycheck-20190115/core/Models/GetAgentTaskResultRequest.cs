@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class GetAgentTaskResultRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the business space.</para>
+        /// <para>The ID of the business workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
