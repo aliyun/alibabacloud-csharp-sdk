@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextTranslateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business scenario identifier. Optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or invalid, the general translation strategy is used by default.</para>
+        /// <para>The business scenario identifier. This parameter is optional. Valid values: e-commerce-title, e-commerce-description, e-commerce-chat, e-commerce-cpv, novel, game. If not specified or invalid, the general translation strategy is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCompany-Chat</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string BizName { get; set; }
 
         /// <summary>
-        /// <para>The format type of the source text. Optional. Supports text (plain text format) and html (web page format, preserving HTML tags).</para>
+        /// <para>The format type of the source text. This parameter is optional. Valid values: text (plain text format) and html (web page format that preserves HTML tags).</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string FormatType { get; set; }
 
         /// <summary>
-        /// <para>The intervention glossary ID. Optional. The glossary must be created separately in the console and its ID provided. If the glossary ID is empty, the translation result is not modified.</para>
+        /// <para>The intervention glossary ID. This parameter is optional. The glossary must be created separately in the console, and its ID must be provided. If the glossary ID is empty, the translation result is not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The source language code. Optional. If not specified, the language is automatically detected. You can pass auto for language detection.</para>
+        /// <para>The source language code. This parameter is optional. If not specified, the language is automatically detected. You can pass auto for language detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The list of texts to translate. Required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</para>
+        /// <para>The list of texts to translate. This parameter is required. The total character length cannot exceed 50,000, and the list length cannot exceed 50.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceTextListShrink { get; set; }
 
         /// <summary>
-        /// <para>The target language code. Required. Supports more than 100 language directions. For details, refer to the supported language directions list.</para>
+        /// <para>The target language code. This parameter is required. More than 100 language directions are supported. For details, refer to the supported language directions list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>The format of the translation text. <b>html</b> (web page format. This setting processes both the source text and translated text in HTML format). <b>text</b> (text format. This setting processes both the source text and translated result as plain text without format processing).</para>
+        /// <para>The format of the translation text. <b>html</b> (web page format. This setting processes both the source text and translated text in HTML format) or <b>text</b> (text format. This setting processes both the source text and translated result as plain text without format processing).</para>
         /// 
         /// <b>Example:</b>
         /// <para>e-commerce-title</para>

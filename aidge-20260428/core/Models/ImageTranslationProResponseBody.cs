@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationProResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. 200 indicates a successful call. For other response codes, see the error code information.</para>
+        /// <para>The response code. 200 indicates a successful call. For other response codes, refer to the error code information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The translation result data. ResultList contains the URL of the translation result. GenFiles contains EditInfo with the recognized text information.</para>
+        /// <para>The translation result data. ResultList contains the URLs of translation results, and GenFiles contains EditInfo with the recognized text information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageTranslationProResponseBodyData Data { get; set; }
         public class ImageTranslationProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The editor protocol, including translation result files and editing information.</para>
+            /// <para>The editor protocol, which contains translation result files and editing information.</para>
             /// </summary>
             [NameInMap("GenFiles")]
             [Validation(Required=false)]
             public List<ImageTranslationProResponseBodyDataGenFiles> GenFiles { get; set; }
             public class ImageTranslationProResponseBodyDataGenFiles : TeaModel {
                 /// <summary>
-                /// <para>The editor information, including recognized text areas, product areas, fonts, and other information.</para>
+                /// <para>The editor information, which contains recognition information such as text areas, product areas, and fonts.</para>
                 /// </summary>
                 [NameInMap("EditInfo")]
                 [Validation(Required=false)]
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     }
 
                     /// <summary>
-                    /// <para>The list of translation target languages.</para>
+                    /// <para>The list of target languages for translation.</para>
                     /// </summary>
                     [NameInMap("Languages")]
                     [Validation(Required=false)]
                     public List<string> Languages { get; set; }
 
                     /// <summary>
-                    /// <para>The URL of the image with all text removed.</para>
+                    /// <para>The URL of the image after all text has been erased.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/repaired.png</a></para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public List<string> ResultImageIds { get; set; }
 
                     /// <summary>
-                    /// <para>The list of text boxes, including all recognized text area information.</para>
+                    /// <para>The list of text boxes, which contains information about all recognized text areas.</para>
                     /// </summary>
                     [NameInMap("TextAreas")]
                     [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The original text before translation.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>萌趣造型·清脆响铃</para>
+                        /// <para>Cute Shape · Crisp Bell.</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         public int? LineCount { get; set; }
 
                         /// <summary>
-                        /// <para>The list of translated texts. Each element corresponds to the translation result for one target language.</para>
+                        /// <para>The list of translated texts. Each element corresponds to the translation result for a target language.</para>
                         /// </summary>
                         [NameInMap("Texts")]
                         [Validation(Required=false)]
                         public List<ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts> Texts { get; set; }
                         public class ImageTranslationProResponseBodyDataGenFilesEditInfoTextAreasTexts : TeaModel {
                             /// <summary>
-                            /// <para>The color of the translated text.</para>
+                            /// <para>The text color after translation.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>#515151</para>
@@ -302,16 +302,6 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             [NameInMap("LineCount")]
                             [Validation(Required=false)]
                             public int? LineCount { get; set; }
-
-                            /// <summary>
-                            /// <para>The Ovis model error message and execution time.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>| ovis time: 0.748</para>
-                            /// </summary>
-                            [NameInMap("OvisErrMsg")]
-                            [Validation(Required=false)]
-                            public string OvisErrMsg { get; set; }
 
                             /// <summary>
                             /// <para>The coordinates of the text box area.</para>
@@ -436,7 +426,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     public string FileUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The translation target language.</para>
+                    /// <para>The target language for translation.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>en</para>
@@ -477,7 +467,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string FileUrl { get; set; }
 
                 /// <summary>
-                /// <para>The target language of the image translation.</para>
+                /// <para>The target language for image translation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>en</para>
@@ -489,7 +479,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The asynchronous task ID. Not returned for synchronous calls.</para>
+            /// <para>The asynchronous task ID. This parameter is not returned for synchronous calls.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc123-task-id</para>
@@ -499,7 +489,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The usage information, including the number of processed images.</para>
+            /// <para>The usage information, which contains the number of processed images.</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -508,7 +498,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. Returns &quot;Success&quot; for successful calls. Returns specific error information for exceptions, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
+        /// <para>The error message. &quot;Success&quot; is returned for successful calls. Specific error information is returned for failed calls, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -528,7 +518,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. true indicates success. false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. true indicates success, and false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -4543,22 +4543,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <para>Translates text in e-commerce images using the Pro edition, which integrates multimodal foundation model technology for more accurate image understanding and significantly improved translation quality.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
-        /// <h2>Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
-        /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
-        /// </list>
+        /// <h2>Product Introduction.</h2>
+        /// <h2>Scenarios.</h2>
+        /// <h2>Features.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -4628,22 +4620,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <para>Translates text in e-commerce images using the Pro edition, which integrates multimodal foundation model technology for more accurate image understanding and significantly improved translation quality.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
-        /// <h2>Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
-        /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
-        /// </list>
+        /// <h2>Product Introduction.</h2>
+        /// <h2>Scenarios.</h2>
+        /// <h2>Features.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -4713,22 +4697,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <para>Translates text in e-commerce images using the Pro edition, which integrates multimodal foundation model technology for more accurate image understanding and significantly improved translation quality.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
-        /// <h2>Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
-        /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
-        /// </list>
+        /// <h2>Product Introduction.</h2>
+        /// <h2>Scenarios.</h2>
+        /// <h2>Features.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -4746,22 +4722,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Translates images using the Pro edition, which is designed specifically for e-commerce images. This product integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
+        /// <para>Translates text in e-commerce images using the Pro edition, which integrates multimodal foundation model technology for more accurate image understanding and significantly improved translation quality.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Product Introduction</h2>
-        /// <para>The Image Translation Pro edition is designed specifically for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. Supports more than 100 language directions (including bridged translations).</para>
-        /// <h2>Scenarios</h2>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h2>Features</h2>
-        /// <list type="bullet">
-        /// <item><description><b>Product subject protection</b>: Supports custom selection of whether to translate text on the product subject, helping you protect subject information from being translated, such as embedded information like product names.</description></item>
-        /// <item><description><b>Post-translation editing</b>: Supports custom selection of whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</description></item>
-        /// <item><description><b>Brand name protection</b>: Supports custom selection of whether to translate brand names on images, helping you protect brand name information from being translated.</description></item>
-        /// <item><description><b>Translation intervention</b>: Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. Contact the platform if you need more.</description></item>
-        /// </list>
+        /// <h2>Product Introduction.</h2>
+        /// <h2>Scenarios.</h2>
+        /// <h2>Features.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -4779,26 +4747,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 100 language pairs (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating integration with image editors for secondary editing of translation results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>1. Product Introduction</h1>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
-        /// <h1>2. Applicable scenarios</h1>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h1>3. Features</h1>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject. This helps protect subject information from being translated, avoiding translation of embedded information such as product names.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color. This can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand word protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
+        /// <h1>1. Product Introduction.</h1>
+        /// <h1>2. Common scenarios.</h1>
+        /// <h1>3. Features.</h1>
         /// </description>
         /// 
         /// <param name="request">
@@ -4864,26 +4820,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 100 language pairs (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating integration with image editors for secondary editing of translation results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>1. Product Introduction</h1>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
-        /// <h1>2. Applicable scenarios</h1>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h1>3. Features</h1>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject. This helps protect subject information from being translated, avoiding translation of embedded information such as product names.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color. This can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand word protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
+        /// <h1>1. Product Introduction.</h1>
+        /// <h1>2. Common scenarios.</h1>
+        /// <h1>3. Features.</h1>
         /// </description>
         /// 
         /// <param name="request">
@@ -4949,26 +4893,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 100 language pairs (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating integration with image editors for secondary editing of translation results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>1. Product Introduction</h1>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
-        /// <h1>2. Applicable scenarios</h1>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h1>3. Features</h1>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject. This helps protect subject information from being translated, avoiding translation of embedded information such as product names.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color. This can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand word protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
+        /// <h1>1. Product Introduction.</h1>
+        /// <h1>2. Common scenarios.</h1>
+        /// <h1>3. Features.</h1>
         /// </description>
         /// 
         /// <param name="request">
@@ -4986,26 +4918,14 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
+        /// <para>Translates text in images with support for over 100 language pairs (including bridging). This product is designed specifically for e-commerce images, accurately handling complex text layouts within images and ensuring that translated content matches the image context. It helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating integration with image editors for secondary editing of translation results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h1>1. Product Introduction</h1>
-        /// <para>The image translation product is designed for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and presentation of image content. The product also returns layer information such as text position, font, and color within images, facilitating secondary editing of translation results through an image editor.</para>
-        /// <h1>2. Applicable scenarios</h1>
-        /// <para>E-commerce product images, marketing images, and images for various other scenarios.</para>
-        /// <h1>3. Features</h1>
-        /// <list type="bullet">
-        /// <item><description><para><b>Product subject information protection</b>: Allows you to choose whether to translate text on the product subject. This helps protect subject information from being translated, avoiding translation of embedded information such as product names.</para>
-        /// </description></item>
-        /// <item><description><para><b>Brand name protection</b>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</para>
-        /// </description></item>
-        /// <item><description><para><b>Secondary editing after translation (layer information)</b>: Allows you to choose whether to return layer information such as text position, font, and color. This can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</para>
-        /// </description></item>
-        /// <item><description><para><b>Translation intervention support</b>: Allows you to customize translation results, including no translation (ABC-ABC), specified translation (ABC-DEF), and skip translation (ABC-empty value). This is commonly used for brand word protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</para>
-        /// </description></item>
-        /// </list>
+        /// <h1>1. Product Introduction.</h1>
+        /// <h1>2. Common scenarios.</h1>
+        /// <h1>3. Features.</h1>
         /// </description>
         /// 
         /// <param name="request">
@@ -5451,6 +5371,254 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Detects and identifies products displayed on store shelves or floor stacks by combining a multimodal large language model (MLLM) with visual vector recall, targeting shelf and floor-stack inspection scenarios in offline retail and channel stores. The service first uses an MLLM to detect bounding boxes and preliminary names for each product in a store photo, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Product Introduction</b></h2>
+        /// <para>Display detection is an intelligent store product display recognition capability built on a multimodal large language model (MLLM) combined with visual vector recall. It targets shelf and floor-stack display inspection scenarios in offline retail and channel stores. For store photos of shelves or floor stacks, the service first uses an MLLM to detect the bounding box and preliminary name for each product, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// <h2><b>Scenarios</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Shelf/floor-stack display recognition and inventory</b>: Identifies each product in a shelf or floor-stack image, matches it to the customer\&quot;s SKU library, and outputs a per-product list (product name + position + similarity score), replacing manual counting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Distribution verification/SKU compliance</b>: Verifies whether stores display specified SKUs as required by headquarters and whether out-of-stock or misplaced items exist, supporting batch automated verification during promotions or new product launches.</para>
+        /// </description></item>
+        /// <item><description><para><b>Customer-specific SKU library</b>: Customers upload their own standard SKU images to build a dedicated vector library (isolated by <c>RagId</c>). During recognition, retrieval is performed only within that customer\&quot;s library, ensuring name accuracy and data isolation between customers.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2><b>Features</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Two-stage detection + retrieval collaboration</b>: The MLLM detects each product\&quot;s bounding box and preliminary name across the entire image (semantic-level understanding, adapted for dense displays and partial occlusion). Then visual embedding vectors perform similarity retrieval within the customer\&quot;s SKU library, overriding the preliminary name with the top-1 precise SKU name to balance recall rate and name accuracy.</para>
+        /// </description></item>
+        /// <item><description><para><b>Isolated retrieval with dedicated vector libraries</b>: A dedicated SKU vector library is maintained for each customer by <c>RagId</c>. Recognition retrieves only within the corresponding library, ensuring strict isolation between customers. Newly added or updated SKUs take effect in real time.</para>
+        /// </description></item>
+        /// <item><description><para><b>Per-product structured output</b>: Output is unified as <c>Result.Items[]</c>, with each product independently providing a bounding box, recalled SKU name, SKU code, and similarity score. This facilitates direct integration with downstream inventory/verification systems and supports case-level manual review and traceability.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports image URLs accessible via the public network or OSS. A single shelf or floor-stack image is sufficient for recognition, and the output structure is consistent.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionResponse
+        /// </returns>
+        public MerchandisePlacementDetectionResponse MerchandisePlacementDetectionWithOptions(MerchandisePlacementDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandisePlacementDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandisePlacementDetectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects and identifies products displayed on store shelves or floor stacks by combining a multimodal large language model (MLLM) with visual vector recall, targeting shelf and floor-stack inspection scenarios in offline retail and channel stores. The service first uses an MLLM to detect bounding boxes and preliminary names for each product in a store photo, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Product Introduction</b></h2>
+        /// <para>Display detection is an intelligent store product display recognition capability built on a multimodal large language model (MLLM) combined with visual vector recall. It targets shelf and floor-stack display inspection scenarios in offline retail and channel stores. For store photos of shelves or floor stacks, the service first uses an MLLM to detect the bounding box and preliminary name for each product, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// <h2><b>Scenarios</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Shelf/floor-stack display recognition and inventory</b>: Identifies each product in a shelf or floor-stack image, matches it to the customer\&quot;s SKU library, and outputs a per-product list (product name + position + similarity score), replacing manual counting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Distribution verification/SKU compliance</b>: Verifies whether stores display specified SKUs as required by headquarters and whether out-of-stock or misplaced items exist, supporting batch automated verification during promotions or new product launches.</para>
+        /// </description></item>
+        /// <item><description><para><b>Customer-specific SKU library</b>: Customers upload their own standard SKU images to build a dedicated vector library (isolated by <c>RagId</c>). During recognition, retrieval is performed only within that customer\&quot;s library, ensuring name accuracy and data isolation between customers.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2><b>Features</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Two-stage detection + retrieval collaboration</b>: The MLLM detects each product\&quot;s bounding box and preliminary name across the entire image (semantic-level understanding, adapted for dense displays and partial occlusion). Then visual embedding vectors perform similarity retrieval within the customer\&quot;s SKU library, overriding the preliminary name with the top-1 precise SKU name to balance recall rate and name accuracy.</para>
+        /// </description></item>
+        /// <item><description><para><b>Isolated retrieval with dedicated vector libraries</b>: A dedicated SKU vector library is maintained for each customer by <c>RagId</c>. Recognition retrieves only within the corresponding library, ensuring strict isolation between customers. Newly added or updated SKUs take effect in real time.</para>
+        /// </description></item>
+        /// <item><description><para><b>Per-product structured output</b>: Output is unified as <c>Result.Items[]</c>, with each product independently providing a bounding box, recalled SKU name, SKU code, and similarity score. This facilitates direct integration with downstream inventory/verification systems and supports case-level manual review and traceability.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports image URLs accessible via the public network or OSS. A single shelf or floor-stack image is sufficient for recognition, and the output structure is consistent.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionResponse
+        /// </returns>
+        public async Task<MerchandisePlacementDetectionResponse> MerchandisePlacementDetectionWithOptionsAsync(MerchandisePlacementDetectionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiId))
+            {
+                query["ApiId"] = request.ApiId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RagId))
+            {
+                query["RagId"] = request.RagId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MerchandisePlacementDetection",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MerchandisePlacementDetectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects and identifies products displayed on store shelves or floor stacks by combining a multimodal large language model (MLLM) with visual vector recall, targeting shelf and floor-stack inspection scenarios in offline retail and channel stores. The service first uses an MLLM to detect bounding boxes and preliminary names for each product in a store photo, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Product Introduction</b></h2>
+        /// <para>Display detection is an intelligent store product display recognition capability built on a multimodal large language model (MLLM) combined with visual vector recall. It targets shelf and floor-stack display inspection scenarios in offline retail and channel stores. For store photos of shelves or floor stacks, the service first uses an MLLM to detect the bounding box and preliminary name for each product, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// <h2><b>Scenarios</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Shelf/floor-stack display recognition and inventory</b>: Identifies each product in a shelf or floor-stack image, matches it to the customer\&quot;s SKU library, and outputs a per-product list (product name + position + similarity score), replacing manual counting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Distribution verification/SKU compliance</b>: Verifies whether stores display specified SKUs as required by headquarters and whether out-of-stock or misplaced items exist, supporting batch automated verification during promotions or new product launches.</para>
+        /// </description></item>
+        /// <item><description><para><b>Customer-specific SKU library</b>: Customers upload their own standard SKU images to build a dedicated vector library (isolated by <c>RagId</c>). During recognition, retrieval is performed only within that customer\&quot;s library, ensuring name accuracy and data isolation between customers.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2><b>Features</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Two-stage detection + retrieval collaboration</b>: The MLLM detects each product\&quot;s bounding box and preliminary name across the entire image (semantic-level understanding, adapted for dense displays and partial occlusion). Then visual embedding vectors perform similarity retrieval within the customer\&quot;s SKU library, overriding the preliminary name with the top-1 precise SKU name to balance recall rate and name accuracy.</para>
+        /// </description></item>
+        /// <item><description><para><b>Isolated retrieval with dedicated vector libraries</b>: A dedicated SKU vector library is maintained for each customer by <c>RagId</c>. Recognition retrieves only within the corresponding library, ensuring strict isolation between customers. Newly added or updated SKUs take effect in real time.</para>
+        /// </description></item>
+        /// <item><description><para><b>Per-product structured output</b>: Output is unified as <c>Result.Items[]</c>, with each product independently providing a bounding box, recalled SKU name, SKU code, and similarity score. This facilitates direct integration with downstream inventory/verification systems and supports case-level manual review and traceability.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports image URLs accessible via the public network or OSS. A single shelf or floor-stack image is sufficient for recognition, and the output structure is consistent.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionResponse
+        /// </returns>
+        public MerchandisePlacementDetectionResponse MerchandisePlacementDetection(MerchandisePlacementDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MerchandisePlacementDetectionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Detects and identifies products displayed on store shelves or floor stacks by combining a multimodal large language model (MLLM) with visual vector recall, targeting shelf and floor-stack inspection scenarios in offline retail and channel stores. The service first uses an MLLM to detect bounding boxes and preliminary names for each product in a store photo, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><b>Product Introduction</b></h2>
+        /// <para>Display detection is an intelligent store product display recognition capability built on a multimodal large language model (MLLM) combined with visual vector recall. It targets shelf and floor-stack display inspection scenarios in offline retail and channel stores. For store photos of shelves or floor stacks, the service first uses an MLLM to detect the bounding box and preliminary name for each product, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is suitable for large-scale, high-concurrency visual recognition pipelines such as remote auditing of in-store displays by headquarters, SKU distribution verification, and display compliance inspection.</para>
+        /// <h2><b>Scenarios</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Shelf/floor-stack display recognition and inventory</b>: Identifies each product in a shelf or floor-stack image, matches it to the customer\&quot;s SKU library, and outputs a per-product list (product name + position + similarity score), replacing manual counting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Distribution verification/SKU compliance</b>: Verifies whether stores display specified SKUs as required by headquarters and whether out-of-stock or misplaced items exist, supporting batch automated verification during promotions or new product launches.</para>
+        /// </description></item>
+        /// <item><description><para><b>Customer-specific SKU library</b>: Customers upload their own standard SKU images to build a dedicated vector library (isolated by <c>RagId</c>). During recognition, retrieval is performed only within that customer\&quot;s library, ensuring name accuracy and data isolation between customers.</para>
+        /// </description></item>
+        /// </list>
+        /// <h2><b>Features</b></h2>
+        /// <list type="bullet">
+        /// <item><description><para><b>Two-stage detection + retrieval collaboration</b>: The MLLM detects each product\&quot;s bounding box and preliminary name across the entire image (semantic-level understanding, adapted for dense displays and partial occlusion). Then visual embedding vectors perform similarity retrieval within the customer\&quot;s SKU library, overriding the preliminary name with the top-1 precise SKU name to balance recall rate and name accuracy.</para>
+        /// </description></item>
+        /// <item><description><para><b>Isolated retrieval with dedicated vector libraries</b>: A dedicated SKU vector library is maintained for each customer by <c>RagId</c>. Recognition retrieves only within the corresponding library, ensuring strict isolation between customers. Newly added or updated SKUs take effect in real time.</para>
+        /// </description></item>
+        /// <item><description><para><b>Per-product structured output</b>: Output is unified as <c>Result.Items[]</c>, with each product independently providing a bounding box, recalled SKU name, SKU code, and similarity score. This facilitates direct integration with downstream inventory/verification systems and supports case-level manual review and traceability.</para>
+        /// </description></item>
+        /// <item><description><para><b>Supported input formats</b>: Currently supports image URLs accessible via the public network or OSS. A single shelf or floor-stack image is sufficient for recognition, and the output structure is consistent.</para>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MerchandisePlacementDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MerchandisePlacementDetectionResponse
+        /// </returns>
+        public async Task<MerchandisePlacementDetectionResponse> MerchandisePlacementDetectionAsync(MerchandisePlacementDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MerchandisePlacementDetectionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>An intelligent logistics parcel auditing product built on the synergy of Multimodal Large Language Models (MLLM) and specialized vision algorithms, designed for automated compliance review in the &quot;piece-weight-dimension&quot; stage of e-commerce logistics. The product performs structured auditing across multiple dimensions including bounding box validity, bounding box fit accuracy, and foreign object interference on parcels placed on scanning platforms. It supports different hardware acquisition scenarios such as white background boards and green background boards, and outputs Boolean audit conclusions with Chinese reason descriptions that can be directly integrated into business systems. It is suitable for large-scale, high-concurrency inbound quality inspection pipelines.</para>
         /// </summary>
         /// 
@@ -5663,12 +5831,12 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>Queries the result of an asynchronous task. The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5710,12 +5878,12 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>Queries the result of an asynchronous task. The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5757,12 +5925,12 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>Queries the result of an asynchronous task. The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5780,12 +5948,12 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>Queries the result of an asynchronous task. The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>API name on the POP gateway: QueryAsyncTaskResult.</para>
+        /// <para>The API name on the POP gateway is QueryAsyncTaskResult.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7271,27 +7439,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
         /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
         /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, it optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
-        /// <h2>Functions and features</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
         /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. For additional capacity, contact the platform.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7323,7 +7491,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more precise product subject expression. The product is a &quot;key bag&quot; rather than a &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more precise product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -7397,27 +7565,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
         /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
         /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, it optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
-        /// <h2>Functions and features</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
         /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. For additional capacity, contact the platform.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7449,7 +7617,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more precise product subject expression. The product is a &quot;key bag&quot; rather than a &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more precise product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -7523,27 +7691,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
         /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
         /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, it optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
-        /// <h2>Functions and features</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
         /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. For additional capacity, contact the platform.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7575,7 +7743,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more precise product subject expression. The product is a &quot;key bag&quot; rather than a &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more precise product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
         /// </tr>
         /// </tbody></table>
         /// </description>
@@ -7595,27 +7763,27 @@ namespace AlibabaCloud.SDK.Aidge20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Product Introduction</h2>
-        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-multilingual, and English-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
+        /// <para>Marco MT is an e-commerce translation model trained on over 1 billion\+ high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports translation between more than 100 language pairs (including bridged translations), especially Chinese-English, Chinese-to-multilingual, and English-to-multilingual translations. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</para>
         /// <h2>Common scenarios</h2>
         /// <list type="bullet">
-        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
+        /// <item><description>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending words in product titles into the target language, improving product visibility on e-commerce platforms.</description></item>
         /// <item><description>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco large model translation supports long text translation and HTML format, delivering excellent translation quality and format preservation.</description></item>
         /// <item><description>Product attributes: Product attribute terms are short and may contain e-commerce-specific terms such as model numbers and parameters.</description></item>
-        /// <item><description>Customer service conversations: In customer service scenarios, it optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
-        /// Marco MT large model translation can also be used for general-purpose translation scenarios, such as office work, meetings, and daily conversations.</description></item>
+        /// <item><description>Customer service conversations: In customer service scenarios, the model optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+        /// Marco MT large model translation can also be used for general translation scenarios such as office work, meetings, and daily conversations.</description></item>
         /// </list>
-        /// <h2>Functions and features</h2>
+        /// <h2>Features</h2>
         /// <list type="bullet">
-        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in Section 5.6.</description></item>
+        /// <item><description><b>Supported language directions</b> Marco MT large model translation supports translation between more than 100 languages and language detection for 23 languages. For specific language directions, refer to the language mapping table in section 5.6.</description></item>
         /// <item><description><b>Ultra-low hallucination rate and high-speed inference</b> Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it offers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</description></item>
         /// <item><description><b>Supported text format types</b> Currently supports text and html text types.</description></item>
-        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. For additional capacity, contact the platform.</description></item>
+        /// <item><description><b>Translation intervention support</b> Supports custom translation results, including do-not-translate (ABC-ABC), specified translation (ABC-DEF), and no translation (ABC-empty value). This is commonly used for brand name protection scenarios. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</description></item>
         /// </list>
         /// <h2>Translation quality comparison</h2>
         /// <table>
@@ -7647,7 +7815,7 @@ namespace AlibabaCloud.SDK.Aidge20260428
         /// <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
         /// <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
         /// <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-        /// <td>Clearer and more precise product subject expression. The product is a &quot;key bag&quot; rather than a &quot;keychain&quot;. Other translations may cause ambiguity about the product subject</td>
+        /// <td>Clearer and more precise product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product type</td>
         /// </tr>
         /// </tbody></table>
         /// </description>

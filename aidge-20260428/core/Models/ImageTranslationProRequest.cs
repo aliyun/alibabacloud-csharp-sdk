@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationProRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to call the operation asynchronously.</para>
+        /// <para>Specifies whether to use asynchronous mode. Default value: false (synchronous mode). When set to true, the operation immediately returns a TaskId, and you must call the query translation result operation to obtain the final result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Async")]
         [Validation(Required=false)]
         public bool? Async { get; set; }
 
         /// <summary>
-        /// <para>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
+        /// <para>The glossary ID. Optional. Create a glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Glossary { get; set; }
 
         /// <summary>
-        /// <para>The URL of the original image. Required. Image requirements: width and height must not exceed 4000 × 4000. Size must not exceed 10 MB. Supported formats: png, jpeg, jpg, bmp, and webp.</para>
+        /// <para>The URL of the original image. Required. Image requirements: width and height cannot exceed 4000 × 4000 pixels, size cannot exceed 10 MB, and supported formats include png, jpeg, jpg, bmp, and webp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</para>
+        /// <para>Specifies whether to translate text on the image subject body. Optional. Default value: false. This helps you protect information and avoid translating embedded information such as product names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? IncludingProductArea { get; set; }
 
         /// <summary>
-        /// <para>The source language code. Required. For supported language directions, see the supported language direction list.</para>
+        /// <para>The source language code. Required. For supported language pairs, see the supported language pair list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourceLanguage { get; set; }
 
         /// <summary>
-        /// <para>The target language code. Required. For supported language directions, see the supported language direction list.</para>
+        /// <para>The target language code. Required. For supported language pairs, see the supported language pair list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string TargetLanguage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information from being translated.</para>
+        /// <para>Specifies whether to translate brand names on the image. Optional. Default value: false. This helps you protect brand name information and avoid unintended translation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? TranslatingBrandInTheProduct { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return layout information such as text position, font, and color. Optional. Default value: false. This can be used for secondary editing when integrated with an image editor.</para>
+        /// <para>Specifies whether to return layout information such as text position, font, and color. When set to true, layer information is returned, which can be used with an image editor for secondary editing. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
