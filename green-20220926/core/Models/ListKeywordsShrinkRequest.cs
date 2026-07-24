@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListKeywordsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Library ID.</para>
+        /// <para>The keyword library ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,18 +50,30 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Sort field.</para>
+        /// <para>The sort field.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;GmtCreate\&quot;:\&quot;desc\&quot;}</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
+        /// <summary>
+        /// <para>The keyword library code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>desensitize: desensitization keyword library.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>desensitize</para>
+        /// </summary>
         [NameInMap("TenantCode")]
         [Validation(Required=false)]
         public string TenantCode { get; set; }
 
         /// <summary>
-        /// <para>Keyword.</para>
+        /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试词</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateScanResultFeedbackRequest : TeaModel {
         /// <summary>
-        /// <para>Feedback</para>
+        /// <para>The feedback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>missOut</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Feedback { get; set; }
 
         /// <summary>
-        /// <para>Labels.</para>
+        /// <para>The labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abuse</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46232656-984E-****-A648-B1D0667B6C3E</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string QueryRequestId { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource Type</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Risk Level</para>
+        /// <para>The risk level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>high</para>

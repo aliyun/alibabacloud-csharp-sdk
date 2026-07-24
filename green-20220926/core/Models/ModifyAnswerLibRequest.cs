@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyAnswerLibRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the proxy response library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string LibId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the library.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试库</para>
+        /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
         public string LibName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

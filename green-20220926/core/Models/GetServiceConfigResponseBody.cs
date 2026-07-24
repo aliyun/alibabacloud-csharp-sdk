@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetServiceConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,49 +20,49 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetServiceConfigResponseBodyData Data { get; set; }
         public class GetServiceConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Custom service details</para>
+            /// <para>The custom service details.</para>
             /// </summary>
             [NameInMap("CustomServiceConf")]
             [Validation(Required=false)]
             public GetServiceConfigResponseBodyDataCustomServiceConf CustomServiceConf { get; set; }
             public class GetServiceConfigResponseBodyDataCustomServiceConf : TeaModel {
                 /// <summary>
-                /// <para>Ignore word libraries.</para>
+                /// <para>The ignored keyword libraries.</para>
                 /// </summary>
                 [NameInMap("KeywordFilterLibs")]
                 [Validation(Required=false)]
                 public List<string> KeywordFilterLibs { get; set; }
 
                 /// <summary>
-                /// <para>Hit word libraries.</para>
+                /// <para>The hit keyword libraries.</para>
                 /// </summary>
                 [NameInMap("KeywordHitLibs")]
                 [Validation(Required=false)]
                 public List<string> KeywordHitLibs { get; set; }
 
                 /// <summary>
-                /// <para>Human-machine review configuration.</para>
+                /// <para>The machine-assisted moderation configuration.</para>
                 /// </summary>
                 [NameInMap("ManualMachineConfig")]
                 [Validation(Required=false)]
                 public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig ManualMachineConfig { get; set; }
                 public class GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig : TeaModel {
                     /// <summary>
-                    /// <para>Risk levels.</para>
+                    /// <para>The risk levels.</para>
                     /// </summary>
                     [NameInMap("AuditRiskLevels")]
                     [Validation(Required=false)]
                     public List<string> AuditRiskLevels { get; set; }
 
                     /// <summary>
-                    /// <para>Callback notification ID</para>
+                    /// <para>The callback notification ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public long? CallbackId { get; set; }
 
                     /// <summary>
-                    /// <para>Whether to enable. Values:</para>
+                    /// <para>Specifies whether to enable the feature. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b>: Enabled</description></item>
-                    /// <item><description><b>false</b>: Disabled</description></item>
+                    /// <item><description><b>true</b>: Enabled.</description></item>
+                    /// <item><description><b>false</b>: Disabled.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>Manual review service</para>
+                    /// <para>The manual review service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>imageManualCheck</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>Hit similar text libraries.</para>
+                /// <para>The hit similar text libraries.</para>
                 /// </summary>
                 [NameInMap("SimilarTextHitLibs")]
                 [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-06 03:07:44</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Resource type.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>Service code.</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nickname_detection</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>UID.</para>
+            /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>165379****31937</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The further description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

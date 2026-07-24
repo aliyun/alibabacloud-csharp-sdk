@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsUnfreezeRequest : TeaModel {
         /// <summary>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-10-21 16:08:38</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The frozen items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string FreezeItems { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>P_B6YRVD</para>
         /// </summary>

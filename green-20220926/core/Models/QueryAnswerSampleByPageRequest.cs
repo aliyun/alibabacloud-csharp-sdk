@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class QueryAnswerSampleByPageRequest : TeaModel {
+        /// <summary>
+        /// <para>The answer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>答案</para>
+        /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
         public string Answer { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the proxy answer library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -45,6 +59,9 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The sort field.</para>
+        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }

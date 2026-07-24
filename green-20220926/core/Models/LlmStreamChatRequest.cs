@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class LlmStreamChatRequest : TeaModel {
         /// <summary>
+        /// <para>channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>guardCustomTest</para>
         /// </summary>

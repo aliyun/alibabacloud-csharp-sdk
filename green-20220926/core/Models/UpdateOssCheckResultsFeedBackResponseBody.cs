@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsFeedBackResponseBody : TeaModel {
         /// <summary>
+        /// <para>Return Result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>

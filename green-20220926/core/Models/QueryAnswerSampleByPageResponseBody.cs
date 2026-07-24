@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class QueryAnswerSampleByPageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The data on the current page.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<QueryAnswerSampleByPageResponseBodyItems> Items { get; set; }
         public class QueryAnswerSampleByPageResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <para>The answer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>答案</para>
+            /// </summary>
             [NameInMap("Answer")]
             [Validation(Required=false)]
             public string Answer { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-07-31 06:16:06</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The primary key ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1666</para>
             /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The ID of the proxy answer library.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>custom_xxxx</para>
             /// </summary>
@@ -62,6 +79,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -78,6 +99,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>58</para>
         /// </summary>

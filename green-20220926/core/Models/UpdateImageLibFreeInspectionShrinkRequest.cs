@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateImageLibFreeInspectionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration.</para>
+        /// <para>The configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;2833014490001\&quot;:0}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string ConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -26,6 +29,12 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The selected service identifier.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>response_security_check</para>
+        /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }

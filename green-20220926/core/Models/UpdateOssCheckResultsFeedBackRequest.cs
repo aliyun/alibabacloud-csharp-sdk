@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsFeedBackRequest : TeaModel {
         /// <summary>
+        /// <para>Feedback.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>misreport</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Feedback { get; set; }
 
         /// <summary>
+        /// <para>The request ID to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string QueryRequestId { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Service code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// <para>Job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>P_7SCUK8</para>
         /// </summary>

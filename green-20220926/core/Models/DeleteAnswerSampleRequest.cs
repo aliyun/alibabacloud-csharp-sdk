@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteAnswerSampleRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the proxy answers to delete.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[15463605]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>The ID of the proxy answer library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

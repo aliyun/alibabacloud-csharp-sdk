@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ExportScanResultShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>End time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11 10:00:00</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Query content.</para>
+        /// <para>The query content.</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string QueryShrink { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Sort fields.</para>
+        /// <para>The sort field.</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
         /// <summary>
-        /// <para>Start time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-10 10:00:00</para>

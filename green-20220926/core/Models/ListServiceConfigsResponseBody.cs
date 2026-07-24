@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListServiceConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListServiceConfigsResponseBodyData> Data { get; set; }
         public class ListServiceConfigsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Category.</para>
+            /// <para>The classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>guard-scene</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Classify { get; set; }
 
             /// <summary>
-            /// <para>Main service.</para>
+            /// <para>The primary service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nickname_detection</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string CopyFrom { get; set; }
 
             /// <summary>
-            /// <para>Service configuration.</para>
+            /// <para>The service configuration.</para>
             /// </summary>
             [NameInMap("CustomServiceConf")]
             [Validation(Required=false)]
             public ListServiceConfigsResponseBodyDataCustomServiceConf CustomServiceConf { get; set; }
             public class ListServiceConfigsResponseBodyDataCustomServiceConf : TeaModel {
                 /// <summary>
-                /// <para>Audio service.</para>
+                /// <para>The audio service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>audio_media_detection</para>
@@ -64,42 +64,42 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string AudioService { get; set; }
 
                 /// <summary>
-                /// <para>Image services.</para>
+                /// <para>The image service.</para>
                 /// </summary>
                 [NameInMap("ImageService")]
                 [Validation(Required=false)]
                 public List<string> ImageService { get; set; }
 
                 /// <summary>
-                /// <para>Ignored word libraries.</para>
+                /// <para>The ignored keyword library.</para>
                 /// </summary>
                 [NameInMap("KeywordFilterLibs")]
                 [Validation(Required=false)]
                 public List<string> KeywordFilterLibs { get; set; }
 
                 /// <summary>
-                /// <para>Hit word libraries.</para>
+                /// <para>The hit keyword library.</para>
                 /// </summary>
                 [NameInMap("KeywordHitLibs")]
                 [Validation(Required=false)]
                 public List<string> KeywordHitLibs { get; set; }
 
                 /// <summary>
-                /// <para>Service rules</para>
+                /// <para>The service rules.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<ListServiceConfigsResponseBodyDataCustomServiceConfRules> Rules { get; set; }
                 public class ListServiceConfigsResponseBodyDataCustomServiceConfRules : TeaModel {
                     /// <summary>
-                    /// <para>Image review rule.</para>
+                    /// <para>The image moderation rule.</para>
                     /// </summary>
                     [NameInMap("ImageScanRule")]
                     [Validation(Required=false)]
                     public ListServiceConfigsResponseBodyDataCustomServiceConfRulesImageScanRule ImageScanRule { get; set; }
                     public class ListServiceConfigsResponseBodyDataCustomServiceConfRulesImageScanRule : TeaModel {
                         /// <summary>
-                        /// <para>Image services.</para>
+                        /// <para>The image service.</para>
                         /// </summary>
                         [NameInMap("Services")]
                         [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     }
 
                     /// <summary>
-                    /// <para>Index.</para>
+                    /// <para>The ordinal number.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -118,14 +118,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public int? Index { get; set; }
 
                     /// <summary>
-                    /// <para>Text review rule.</para>
+                    /// <para>The text moderation rule.</para>
                     /// </summary>
                     [NameInMap("TextScanRule")]
                     [Validation(Required=false)]
                     public ListServiceConfigsResponseBodyDataCustomServiceConfRulesTextScanRule TextScanRule { get; set; }
                     public class ListServiceConfigsResponseBodyDataCustomServiceConfRulesTextScanRule : TeaModel {
                         /// <summary>
-                        /// <para>Text services.</para>
+                        /// <para>The text services.</para>
                         /// </summary>
                         [NameInMap("Services")]
                         [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>Hit similar text libraries.</para>
+                /// <para>The hit similar text library.</para>
                 /// </summary>
                 [NameInMap("SimilarTextHitLibs")]
                 [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-11 15:40:04</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Options.</para>
+            /// <para>The options.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public Dictionary<string, object> Option { get; set; }
 
             /// <summary>
-            /// <para>Resource type.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -174,12 +174,24 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// <para>The scene type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>recommended_scene: recommended scenario.</para>
+            /// </description></item>
+            /// <item><description><para>all_scene: all scenarios.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>all_scene</para>
+            /// </summary>
             [NameInMap("SceneType")]
             [Validation(Required=false)]
             public string SceneType { get; set; }
 
             /// <summary>
-            /// <para>Service code.</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nickname_detection</para>
@@ -189,7 +201,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>Service description.</para>
+            /// <para>The service description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>服务描述</para>
@@ -199,7 +211,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceDesc { get; set; }
 
             /// <summary>
-            /// <para>Service name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>服务名称</para>
@@ -209,7 +221,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>Service type.</para>
+            /// <para>The service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>plus</para>
@@ -219,7 +231,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>UID.</para>
+            /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1674*****0071291</para>
@@ -229,7 +241,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>Usage status</para>
+            /// <para>The usage status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>in</para>
@@ -241,7 +253,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -251,7 +263,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The request ID assigned by the backend, which uniquely identifies the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -261,7 +273,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

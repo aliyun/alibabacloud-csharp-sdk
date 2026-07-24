@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckFreezeResultRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>End time.</para>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-19 10:05:11</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Number of completed tasks.</para>
+        /// <para>The number of completed tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? FinishNum { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Query condition.</para>
+        /// <para>The query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Sort field.</para>
+        /// <para>The sort field.</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public Dictionary<string, string> Sort { get; set; }
 
         /// <summary>
-        /// <para>Start time.</para>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-09 10:28:54</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>Task status.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

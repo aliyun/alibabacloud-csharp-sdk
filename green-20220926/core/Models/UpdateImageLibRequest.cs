@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateImageLibRequest : TeaModel {
         /// <summary>
-        /// <para>Comment information for the library.</para>
+        /// <para>The remarks of the image library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>备注</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>Exemption from review configuration.</para>
+        /// <para>The review-free configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? FreeInspection { get; set; }
 
         /// <summary>
-        /// <para>Library ID.</para>
+        /// <para>The ID of the image library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
-        /// <para>Library name.</para>
+        /// <para>The name of the image library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试图库</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibName { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

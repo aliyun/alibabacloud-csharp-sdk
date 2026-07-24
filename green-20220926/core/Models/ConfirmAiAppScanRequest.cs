@@ -8,29 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class CreateImageLibRequest : TeaModel {
+    public class ConfirmAiAppScanRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The commodity code.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Politically sensitive.</para>
+        /// <para>xxx</para>
         /// </summary>
-        [NameInMap("Comment")]
+        [NameInMap("CommodityCode")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the image library.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Malicious ads.</para>
-        /// </summary>
-        [NameInMap("LibName")]
-        [Validation(Required=false)]
-        public string LibName { get; set; }
-
-        /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region where the application resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

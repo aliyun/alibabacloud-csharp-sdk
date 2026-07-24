@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class OssCheckResultListShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Start date.</para>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-21 16:08:38</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The number of completed items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>55</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? FinishNum { get; set; }
 
         /// <summary>
-        /// <para>Query condition.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>End date.</para>
+        /// <para>The query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Sort field.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The sort field.</para>
         /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
         /// <summary>
-        /// <para>System-defined parameter. Value: <b>OssCheckResultList</b>.</para>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>Number of completed items.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
-    public class CreateCallbackResponseBody : TeaModel {
+    public class ConfirmAiAppScanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public long? Data { get; set; }
+        public bool? Data { get; set; }
 
         /// <summary>
         /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>

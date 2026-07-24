@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckResultDetailRequest : TeaModel {
         /// <summary>
-        /// <para>Bucket name.</para>
+        /// <para>The storage bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss-tmp</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// <para>Media type.</para>
+        /// <para>The media asset type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MediaType { get; set; }
 
         /// <summary>
-        /// <para>Object name.</para>
+        /// <para>The object name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1748396909030.jpg</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Object { get; set; }
 
         /// <summary>
-        /// <para>Parent task ID.</para>
+        /// <para>The parent task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P_RZQ66T</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ParentTaskId { get; set; }
 
         /// <summary>
-        /// <para>Query request ID.</para>
+        /// <para>The request ID of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>62E97001-1255-50A9-8E1E-4FD05473D952</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string QueryRequestId { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Service code.</para>
+        /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audio_media_detection_01</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetBackupBucketsListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetBackupBucketsListResponseBodyData> Data { get; set; }
         public class GetBackupBucketsListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>OSS file storage bucket name.</para>
+            /// <para>The name of the OSS bucket where files are stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gj-bucket1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>Region.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

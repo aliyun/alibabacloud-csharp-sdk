@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsBatchFeedbackResponseBody : TeaModel {
         /// <summary>
+        /// <para>Quantity of invalid items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? InvalidCount { get; set; }
 
         /// <summary>
+        /// <para>Quantity of duplicates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? RepeatCount { get; set; }
 
         /// <summary>
+        /// <para>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Number of succeeded items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
+        /// <para>Tips message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Tips { get; set; }
 
         /// <summary>
+        /// <para>Total quantity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

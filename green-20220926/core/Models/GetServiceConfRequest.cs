@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetServiceConfRequest : TeaModel {
         /// <summary>
-        /// <para>Query default configuration</para>
+        /// <para>Queries the default configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Audit scenario.</para>
+        /// <para>Moderation scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pornographic</para>

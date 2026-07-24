@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetUserBuyStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Commodity code.</para>
+        /// <para>The commodity code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lvwang_public_cn</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetOssCheckFreezeResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Data of the current page.</para>
+        /// <para>The data on the current page.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<GetOssCheckFreezeResultResponseBodyItems> Items { get; set; }
         public class GetOssCheckFreezeResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Storage space.</para>
+            /// <para>The OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmp</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>Error code, consistent with HTTP status.</para>
+            /// <para>The error code, which is consistent with the HTTP status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Audio and video detection type.</para>
+            /// <para>The audio or video scan type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>Primary service.</para>
+            /// <para>The primary service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio_media_detection</para>
@@ -67,7 +67,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string CopyFrom { get; set; }
 
             /// <summary>
-            /// <para>Feedback.</para>
+            /// <para>The feedback. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>misreport: False positive (not a violation).</description></item>
+            /// <item><description>missOut: Missed violation.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>misreport</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Feedback { get; set; }
 
             /// <summary>
-            /// <para>Whether frozen.</para>
+            /// <para>Indicates whether the object is frozen.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? Freeze { get; set; }
 
             /// <summary>
-            /// <para>Freeze status.</para>
+            /// <para>The freeze status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZED</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string FreezeStatus { get; set; }
 
             /// <summary>
-            /// <para>Freeze type.</para>
+            /// <para>The freeze type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACL</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string FreezeType { get; set; }
 
             /// <summary>
-            /// <para>Image URL address.</para>
+            /// <para>The URL of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Whether to copy.</para>
+            /// <para>Indicates whether the task is copied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? IsCopy { get; set; }
 
             /// <summary>
-            /// <para>Job name.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dhT20X2310</para>
@@ -137,14 +141,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>Labels.</para>
+            /// <para>The label details.</para>
             /// </summary>
             [NameInMap("LabelDetails")]
             [Validation(Required=false)]
             public List<GetOssCheckFreezeResultResponseBodyItemsLabelDetails> LabelDetails { get; set; }
             public class GetOssCheckFreezeResultResponseBodyItemsLabelDetails : TeaModel {
                 /// <summary>
-                /// <para>Confidence.</para>
+                /// <para>The confidence level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public float? Confidence { get; set; }
 
                 /// <summary>
-                /// <para>Label description.</para>
+                /// <para>The label description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>涉政</para>
@@ -164,7 +168,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Label.</para>
+                /// <para>The label details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>politics</para>
@@ -176,21 +180,25 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>Image labels.</para>
+            /// <para>The image labels.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// <para>Text labels.</para>
+            /// <para>The text labels.</para>
             /// </summary>
             [NameInMap("Labels2")]
             [Validation(Required=false)]
             public List<string> Labels2 { get; set; }
 
             /// <summary>
-            /// <para>Manual disposal status.</para>
+            /// <para>The manual action status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FREEZE: Frozen.</description></item>
+            /// <item><description>UNFREEZE: Unfrozen.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZE</para>
@@ -200,7 +208,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualFreezeAction { get; set; }
 
             /// <summary>
-            /// <para>Disposal time.</para>
+            /// <para>The action time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-09 12:00:00</para>
@@ -210,7 +218,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualOperateTime { get; set; }
 
             /// <summary>
-            /// <para>Operator.</para>
+            /// <para>The operator who performed the action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -220,7 +228,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ManualOperator { get; set; }
 
             /// <summary>
-            /// <para>File\&quot;s MD5.</para>
+            /// <para>The MD5 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54416c9b159df4a60ae03c04ccb94cb5</para>
@@ -230,7 +238,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>Further description of the error code.</para>
+            /// <para>The detailed description of the error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -240,7 +248,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Object name.</para>
+            /// <para>The object name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1713014531569_958.png.jpeg</para>
@@ -250,7 +258,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Object { get; set; }
 
             /// <summary>
-            /// <para>Request ID.</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>F0A594BB-FA7A-580F-AE9E-A4188E092823</para>
@@ -260,7 +268,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>Image risk level.</para>
+            /// <para>The image risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -270,7 +278,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Overall risk level.</para>
+            /// <para>The overall risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>low</para>
@@ -280,7 +288,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel0 { get; set; }
 
             /// <summary>
-            /// <para>Text risk level.</para>
+            /// <para>The text risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -290,7 +298,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel2 { get; set; }
 
             /// <summary>
-            /// <para>Details of the result.</para>
+            /// <para>The scan result details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -300,7 +308,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ScanResult { get; set; }
 
             /// <summary>
-            /// <para>Service code.</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio_media_detection_01</para>
@@ -310,7 +318,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>Service name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>服务名称</para>
@@ -320,7 +328,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>System disposal status.</para>
+            /// <para>The system action status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FREEZING: Freezing in progress.</description></item>
+            /// <item><description>FREEZED: Frozen.</description></item>
+            /// <item><description>UNFREEZED: Unfrozen.</description></item>
+            /// <item><description>NONE: No action taken.</description></item>
+            /// <item><description>UNFREEZING: Unfreezing in progress.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZED</para>
@@ -330,7 +345,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string SysDisposalStatus { get; set; }
 
             /// <summary>
-            /// <para>Task ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>P_BT3FHS</para>
@@ -340,7 +355,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task URL.</para>
+            /// <para>The task URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></para>
@@ -352,7 +367,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -362,7 +377,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0A594BB-FA7A-580F-AE9E-A4188E092823</para>
@@ -372,7 +387,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29</para>

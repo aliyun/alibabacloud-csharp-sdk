@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ExportCipStatsRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to support monthly indexing. Values: -<b>true</b>: Supported. -<b>false</b>: Not supported.</para>
+        /// <para>Specifies whether monthly indexing is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ByMonth { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The end time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-16 09:00:00</para>
@@ -30,7 +34,11 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Export type. Values: -<b>level</b>: Export by risk level. -<b>label</b>: Export by label.</para>
+        /// <para>The export type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>level</b>: export by risk level.</description></item>
+        /// <item><description><b>label</b>: export by label.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>label</para>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ExportType { get; set; }
 
         /// <summary>
-        /// <para>The label of the task to be exported.</para>
+        /// <para>The task label to export.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xx</para>
@@ -50,7 +58,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -70,7 +78,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Service code.</para>
+        /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
@@ -80,7 +88,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query, in the format yyyy-MM-dd HH:mm:ss.</para>
+        /// <para>The start time of the query. Format: yyyy-MM-dd HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-04-15 09:00:00</para>
@@ -90,7 +98,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
-        /// <para>Sub-account UID.</para>
+        /// <para>The UID of the RAM user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>268220485413130979</para>
@@ -100,7 +108,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string SubUid { get; set; }
 
         /// <summary>
-        /// <para>Type, values: -<b>cip</b>: Content Security Invocation Count Statistics. -<b>risk_level</b>: Content Security Risk Level Statistics. -<b>content_moderation</b>: AI Safety Guardrail Content Compliance Risk Level and Label Statistics. -<b>sensitive_data</b>: AI Safety Guardrail Sensitive Data Risk Level and Label Statistics. -<b>prompt_attack</b>: AI Safety Guardrail Prompt Word Risk Level and Label Statistics.</para>
+        /// <para>The type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cip</b>: Content Moderation invocation volume statistics.</description></item>
+        /// <item><description><b>risk_level</b>: Content Moderation risk level statistics.</description></item>
+        /// <item><description><b>content_moderation</b>: AI safety guardrail content compliance risk level and tag statistics.</description></item>
+        /// <item><description><b>sensitive_data</b>: AI safety guardrail sensitive data risk level and tag statistics.</description></item>
+        /// <item><description><b>prompt_attack</b>: AI safety guardrail prompt risk level and tag statistics.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>risk_level</para>

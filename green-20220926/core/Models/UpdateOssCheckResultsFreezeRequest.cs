@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsFreezeRequest : TeaModel {
         /// <summary>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-10-21 16:08:38</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>The items to freeze.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string FreezeItems { get; set; }
 
+        /// <summary>
+        /// <para>The directory to which the frozen files are moved.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>uploadTest/</para>
+        /// </summary>
         [NameInMap("FreezeRestorePath")]
         [Validation(Required=false)]
         public string FreezeRestorePath { get; set; }
 
         /// <summary>
+        /// <para>The freeze type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACL</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string FreezeType { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-08-21 16:08:38</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartDate { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>P_15BU42</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class StopOnlineTestRequest : TeaModel {
         /// <summary>
+        /// <para>Resource type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -18,14 +20,18 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>Service encoding</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>VideoModeration</para>
+        /// <para>baselineCheck</para>
         /// </summary>
         [NameInMap("ServiceCode")]
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
         /// <summary>
+        /// <para>Detection TaskId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx-xxxxx</para>
         /// </summary>

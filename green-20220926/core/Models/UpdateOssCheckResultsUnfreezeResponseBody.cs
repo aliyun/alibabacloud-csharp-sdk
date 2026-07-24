@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsUnfreezeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateOssCheckResultsUnfreezeResponseBodyData Data { get; set; }
         public class UpdateOssCheckResultsUnfreezeResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of invalid records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? InvalidCount { get; set; }
 
             /// <summary>
+            /// <para>The number of duplicate records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? RepeatCount { get; set; }
 
             /// <summary>
+            /// <para>The number of successful records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddAnswerSampleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the proxy answer library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public AddAnswerSampleResponseBodyResult Result { get; set; }
         public class AddAnswerSampleResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The internationalization key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public string I18nKey { get; set; }
 
+            /// <summary>
+            /// <para>The collection of samples whose length is too long or too short.</para>
+            /// </summary>
             [NameInMap("IllegalLengthSamples")]
             [Validation(Required=false)]
             public List<string> IllegalLengthSamples { get; set; }
 
             /// <summary>
+            /// <para>The number of invalid records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>118</para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? InvalidCount { get; set; }
 
             /// <summary>
+            /// <para>The ID of the proxy answer library.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alxxxx</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string LibId { get; set; }
 
             /// <summary>
+            /// <para>The progress. For example, 90 indicates 90%.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? Progress { get; set; }
 
             /// <summary>
+            /// <para>The number of duplicate records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>98</para>
             /// </summary>
@@ -73,11 +93,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             [Validation(Required=false)]
             public int? RepeatCount { get; set; }
 
+            /// <summary>
+            /// <para>The collection of duplicate samples.</para>
+            /// </summary>
             [NameInMap("RepeatSamples")]
             [Validation(Required=false)]
             public List<string> RepeatSamples { get; set; }
 
             /// <summary>
+            /// <para>The number of successful records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>318</para>
             /// </summary>
@@ -86,6 +111,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alAxbbxxxx-xxx</para>
             /// </summary>
@@ -94,6 +121,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>534</para>
             /// </summary>
@@ -104,6 +133,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alAxbbxxxx-xxx</para>
         /// </summary>

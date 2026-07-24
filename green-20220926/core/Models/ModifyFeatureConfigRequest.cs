@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ModifyFeatureConfigRequest : TeaModel {
         /// <summary>
-        /// <para>query</para>
+        /// <para>The configuration in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>query</para>
+        /// <para>The description of the label.</para>
         /// 
         /// <b>Example:</b>
         /// <para>标签2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>query</para>
+        /// <para>The label value. This value is user-defined.</para>
         /// 
         /// <b>Example:</b>
         /// <para><b>config</b></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>query</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>query</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>System-defined parameter. Value: <b>ModifyFeatureConfig</b>.</para>
+        /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_query_moderation</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>query</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>

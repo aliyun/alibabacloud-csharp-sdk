@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListImageLibResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code, consistent with HTTP status.</para>
+        /// <para>The error code, which is consistent with the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>List of image library information.</para>
+        /// <para>The list of image library information.</para>
         /// </summary>
         [NameInMap("LibList")]
         [Validation(Required=false)]
         public List<ListImageLibResponseBodyLibList> LibList { get; set; }
         public class ListImageLibResponseBodyLibList : TeaModel {
             /// <summary>
-            /// <para>Comment.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>备注</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Exempt from inspection configuration.</para>
+            /// <para>The review-free configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? FreeInspection { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 15:20:14</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 15:20:14</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Number of images in the library.</para>
+            /// <para>The number of images in the library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? ImageNum { get; set; }
 
             /// <summary>
-            /// <para>Library ID.</para>
+            /// <para>The image library ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom_xxxx</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string LibId { get; set; }
 
             /// <summary>
-            /// <para>Library name.</para>
+            /// <para>The image library name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试</para>
@@ -108,12 +108,18 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         }
 
+        /// <summary>
+        /// <para>The maximum number of libraries supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
         [NameInMap("MaxLibCount")]
         [Validation(Required=false)]
         public int? MaxLibCount { get; set; }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The further description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

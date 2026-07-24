@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListServiceConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>Category.</para>
+        /// <para>The classification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>guard-scene</para>
@@ -19,12 +19,26 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string Classify { get; set; }
 
+        /// <summary>
+        /// <para>The protection type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>modelProtection: model protection.</para>
+        /// </description></item>
+        /// <item><description><para>agentRealtimeProtection: agent real-time protection.</para>
+        /// </description></item>
+        /// <item><description><para>agentBehaviorAudit: agent behavior audit.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>modelProtection</para>
+        /// </summary>
         [NameInMap("ProtectionType")]
         [Validation(Required=false)]
         public string ProtectionType { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -34,7 +48,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -44,7 +58,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Usage status.</para>
+        /// <para>The usage status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>in</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateOssCheckResultsBatchFeedbackRequest : TeaModel {
         /// <summary>
+        /// <para>Feedback.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>misreport</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Feedback { get; set; }
 
         /// <summary>
+        /// <para>Result items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Items { get; set; }
 
         /// <summary>
+        /// <para>Parent job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>P_XHDUS</para>
         /// </summary>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? BackupMode { get; set; }
 
         /// <summary>
-        /// <para>File server OSS Bucket.</para>
+        /// <para>File server OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>buckect_test</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Bucket { get; set; }
 
         /// <summary>
-        /// <para>Whether it is enabled. Values:</para>
+        /// <para>Indicates whether the feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled</description></item>
-        /// <item><description><b>false</b>: Disabled</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable backup.</para>
+        /// <para>Indicates whether backup is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? EnableBackup { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable audio backup.</para>
+        /// <para>Indicates whether audio backup is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? EnableBackupVoice { get; set; }
 
         /// <summary>
-        /// <para>Expiration time in seconds.</para>
+        /// <para>Expiration time, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

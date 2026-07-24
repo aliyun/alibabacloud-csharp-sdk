@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddKeywordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code. A return of 200 represents success.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddKeywordsResponseBodyData Data { get; set; }
         public class AddKeywordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Result.</para>
+            /// <para>The result.</para>
             /// </summary>
             [NameInMap("KeywordsResult")]
             [Validation(Required=false)]
             public AddKeywordsResponseBodyDataKeywordsResult KeywordsResult { get; set; }
             public class AddKeywordsResponseBodyDataKeywordsResult : TeaModel {
                 /// <summary>
-                /// <para>Internationalization key.</para>
+                /// <para>The internationalization key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string I18nKey { get; set; }
 
                 /// <summary>
-                /// <para>List of keywords that are too long or too short.</para>
+                /// <para>The list of keywords with excessive or insufficient length.</para>
                 /// </summary>
                 [NameInMap("IllegalLengthKeywords")]
                 [Validation(Required=false)]
                 public List<string> IllegalLengthKeywords { get; set; }
 
                 /// <summary>
-                /// <para>Invalid keyword count</para>
+                /// <para>The number of invalid keywords.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? InvalidCount { get; set; }
 
                 /// <summary>
-                /// <para>List of invalid keywords</para>
+                /// <para>The list of invalid keywords.</para>
                 /// </summary>
                 [NameInMap("InvalidKeywords")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string LibId { get; set; }
 
                 /// <summary>
-                /// <para>The progress percentage of the task.</para>
+                /// <para>The task progress percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? Progress { get; set; }
 
                 /// <summary>
-                /// <para>Duplicate keyword count</para>
+                /// <para>The number of duplicate keywords.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? RepeatCount { get; set; }
 
                 /// <summary>
-                /// <para>List of duplicate keywords</para>
+                /// <para>The list of duplicate keywords.</para>
                 /// </summary>
                 [NameInMap("RepeatKeywords")]
                 [Validation(Required=false)]
                 public List<string> RepeatKeywords { get; set; }
 
                 /// <summary>
-                /// <para>The success count of the keywords.</para>
+                /// <para>The number of successful additions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? SuccessCount { get; set; }
 
                 /// <summary>
-                /// <para>The tips.</para>
+                /// <para>The prompt information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxxx</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string Tips { get; set; }
 
                 /// <summary>
-                /// <para>The total count of the keywords.</para>
+                /// <para>The total count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The ID of the keyword library.</para>
+            /// <para>The keyword library ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customxx_xxxx</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned in response to the request.</para>
+        /// <para>The description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

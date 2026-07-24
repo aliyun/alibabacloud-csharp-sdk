@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetFeatureConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Query conditions.</para>
+        /// <para>The query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;Lang\&quot;:\&quot;zh\&quot;,\&quot;CategoryType\&quot;:1,\&quot;Default\&quot;:false,\&quot;ParentCategoryId\&quot;:1720}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>Service code.</para>
+        /// <para>The service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm_query_moderation</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceCode { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>

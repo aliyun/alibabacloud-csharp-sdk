@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddKeywordsToLibResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddKeywordsToLibResponseBodyData Data { get; set; }
         public class AddKeywordsToLibResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Result.</para>
+            /// <para>The result.</para>
             /// </summary>
             [NameInMap("KeywordsResult")]
             [Validation(Required=false)]
             public AddKeywordsToLibResponseBodyDataKeywordsResult KeywordsResult { get; set; }
             public class AddKeywordsToLibResponseBodyDataKeywordsResult : TeaModel {
                 /// <summary>
-                /// <para>Internationalization key.</para>
+                /// <para>The internationalization key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string I18nKey { get; set; }
 
                 /// <summary>
-                /// <para>List of keywords that are too long or too short.</para>
+                /// <para>The list of keywords with illegal length (too long or too short).</para>
                 /// </summary>
                 [NameInMap("IllegalLengthKeywords")]
                 [Validation(Required=false)]
                 public List<string> IllegalLengthKeywords { get; set; }
 
                 /// <summary>
-                /// <para>Invalid keyword count.</para>
+                /// <para>The number of invalid keywords.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? InvalidCount { get; set; }
 
                 /// <summary>
-                /// <para>List of invalid keywords</para>
+                /// <para>The list of invalid keywords.</para>
                 /// </summary>
                 [NameInMap("InvalidKeywords")]
                 [Validation(Required=false)]
                 public List<string> InvalidKeywords { get; set; }
 
                 /// <summary>
-                /// <para>The id of the keyword library.</para>
+                /// <para>The keyword library ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>customxx_xxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string LibId { get; set; }
 
                 /// <summary>
-                /// <para>The progress percentage of the task.</para>
+                /// <para>The task progress percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? Progress { get; set; }
 
                 /// <summary>
-                /// <para>Duplicate keyword count</para>
+                /// <para>The number of duplicate keywords.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? RepeatCount { get; set; }
 
                 /// <summary>
-                /// <para>List of duplicate keywords</para>
+                /// <para>The list of duplicate keywords.</para>
                 /// </summary>
                 [NameInMap("RepeatKeywords")]
                 [Validation(Required=false)]
                 public List<string> RepeatKeywords { get; set; }
 
                 /// <summary>
-                /// <para>The success count of keywords.</para>
+                /// <para>The number of successful keywords.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public int? SuccessCount { get; set; }
 
                 /// <summary>
-                /// <para>The total count of keywords.</para>
+                /// <para>The total count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>The id of the keyword library.</para>
+            /// <para>The keyword library ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customxx_xxxx</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

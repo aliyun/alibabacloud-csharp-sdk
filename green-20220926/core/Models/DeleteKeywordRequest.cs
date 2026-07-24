@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class DeleteKeywordRequest : TeaModel {
         /// <summary>
-        /// <para>The ids\&quot; list of keywords.</para>
+        /// <para>The IDs of the keywords to delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[6715465]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordIdList { get; set; }
 
         /// <summary>
-        /// <para>The ids of keywords.</para>
+        /// <para>The IDs of the keywords to delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[16754493]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordIds { get; set; }
 
         /// <summary>
-        /// <para>Library id</para>
+        /// <para>The ID of the keyword library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customxx_xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -49,6 +49,15 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The code of the keyword library.</para>
+        /// <list type="bullet">
+        /// <item><description>desensitize: masking keyword library.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>desensitize</para>
+        /// </summary>
         [NameInMap("TenantCode")]
         [Validation(Required=false)]
         public string TenantCode { get; set; }

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListCallbackResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCallbackResponseBodyData> Data { get; set; }
         public class ListCallbackResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Encryption algorithm.</para>
+            /// <para>The encryption algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHA256</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string CryptType { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 15:20:14</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-06-03 15:20:14</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Primary key ID.</para>
+            /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11234</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Name.</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>回调通知</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Result scope.</para>
+            /// <para>The result scope.</para>
             /// 
             /// <b>Example:</b>
             /// <para>all</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>Seed.</para>
+            /// <para>Seed。</para>
             /// 
             /// <b>Example:</b>
             /// <para>cbupVnpBjkgjFxfINMHKkrHS-1zZPUm</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Seed { get; set; }
 
             /// <summary>
-            /// <para>UID.</para>
+            /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>16537*****831937</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Uid { get; set; }
 
             /// <summary>
-            /// <para>Callback URL.</para>
+            /// <para>The callback URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://console.aliyun.com/">https://console.aliyun.com/</a></para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Backend-assigned ID, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

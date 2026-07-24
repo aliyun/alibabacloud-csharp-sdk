@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetFeatureConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFeatureConfigResponseBodyData Data { get; set; }
         public class GetFeatureConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of feature configurations</para>
+            /// <para>The list of feature configurations.</para>
             /// </summary>
             [NameInMap("FeatureConf")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> FeatureConf { get; set; }
 
             /// <summary>
-            /// <para>Resource type.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>Service code.</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>llm_query_moderation</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>Type</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom_llm_template</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>UID.</para>
+            /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>1643953****74290</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Response message for this request.</para>
+        /// <para>The response message for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

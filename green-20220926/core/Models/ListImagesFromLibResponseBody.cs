@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListImagesFromLibResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code, consistent with HTTP status.</para>
+        /// <para>The error code, which is consistent with the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Current page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Data of the current page.</para>
+        /// <para>The data on the current page.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListImagesFromLibResponseBodyItems> Items { get; set; }
         public class ListImagesFromLibResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-30 16:30:29</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Image ID.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>112</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>Image URL.</para>
+            /// <para>The URL of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Thumbnail URL.</para>
+            /// <para>The URL of the thumbnail.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com/image/upload/IMG_2123.jpg</a></para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The further description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of images.</para>
+        /// <para>The total number of images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

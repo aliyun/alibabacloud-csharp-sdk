@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateKeywordLibRequest : TeaModel {
         /// <summary>
-        /// <para>Library ID.</para>
+        /// <para>The ID of the keyword library.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom_xxxx</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string LibId { get; set; }
 
         /// <summary>
-        /// <para>Keyword library name.</para>
+        /// <para>The name of the keyword library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试库</para>
+        /// <para>TestLibrary.</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
         public string LibName { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -39,6 +39,15 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The keyword library code.</para>
+        /// <list type="bullet">
+        /// <item><description>desensitize: desensitization keyword library</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>desensitize</para>
+        /// </summary>
         [NameInMap("TenantCode")]
         [Validation(Required=false)]
         public string TenantCode { get; set; }

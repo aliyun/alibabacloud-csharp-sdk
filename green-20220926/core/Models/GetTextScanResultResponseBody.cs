@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetTextScanResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetTextScanResultResponseBodyData Data { get; set; }
         public class GetTextScanResultResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,18 +37,24 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>Data for the current page.</para>
+            /// <para>The data on the current page.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<GetTextScanResultResponseBodyDataItems> Items { get; set; }
             public class GetTextScanResultResponseBodyDataItems : TeaModel {
+                /// <summary>
+                /// <para>The AccountId passed in by the customer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>accountIdtest123</para>
+                /// </summary>
                 [NameInMap("AccountId")]
                 [Validation(Required=false)]
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// <para>Bailian Request ID</para>
+                /// <para>The Bailian request ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -58,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string BailianRequestId { get; set; }
 
                 /// <summary>
-                /// <para>Content.</para>
+                /// <para>The content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>测试内容</para>
@@ -67,12 +73,18 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
+                /// <summary>
+                /// <para>The DataId passed in by the customer.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxxx</para>
+                /// </summary>
                 [NameInMap("DataId")]
                 [Validation(Required=false)]
                 public string DataId { get; set; }
 
                 /// <summary>
-                /// <para>Feedback information.</para>
+                /// <para>The feedback information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>miss</para>
@@ -82,7 +94,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string ExtFeedback { get; set; }
 
                 /// <summary>
-                /// <para>Spare parameters.</para>
+                /// <para>The reserved parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -92,7 +104,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public Dictionary<string, object> Extra { get; set; }
 
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-07-11 14:21:36</para>
@@ -102,7 +114,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Labels.</para>
+                /// <para>The labels.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nonLabel</para>
@@ -112,7 +124,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// <para>Request ID.</para>
+                /// <para>The request ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -122,7 +134,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string RequestId { get; set; }
 
                 /// <summary>
-                /// <para>Request time.</para>
+                /// <para>The request time. Format: YYYY-MM-DD HH:mm:ss.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-07-11 14:21:36</para>
@@ -132,14 +144,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string RequestTime { get; set; }
 
                 /// <summary>
-                /// <para>Detection results.</para>
+                /// <para>The detection results.</para>
                 /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public List<GetTextScanResultResponseBodyDataItemsResult> Result { get; set; }
                 public class GetTextScanResultResponseBodyDataItemsResult : TeaModel {
                     /// <summary>
-                    /// <para>Confidence score, ranging from 0 to 100, with two decimal places retained.</para>
+                    /// <para>The confidence score, ranging from 0 to 100 and rounded to two decimal places.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>25.0</para>
@@ -149,7 +161,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public float? Confidence { get; set; }
 
                     /// <summary>
-                    /// <para>Description.</para>
+                    /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>疑似色情内容</para>
@@ -159,7 +171,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Label.</para>
+                    /// <para>The labels.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>political_n</para>
@@ -171,15 +183,15 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>Risk level, returned based on the set high and low risk scores. The return values include:</para>
+                /// <para>The risk level, which is returned based on the configured high and low risk score thresholds. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>high: High risk</para>
+                /// <item><description><para>high: high risk.</para>
                 /// </description></item>
-                /// <item><description><para>medium: Medium risk</para>
+                /// <item><description><para>medium: medium risk.</para>
                 /// </description></item>
-                /// <item><description><para>low: Low risk</para>
+                /// <item><description><para>low: low risk.</para>
                 /// </description></item>
-                /// <item><description><para>none: No risk detected</para>
+                /// <item><description><para>none: no risk detected.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -191,7 +203,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>Details of the result.</para>
+                /// <para>The result details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -201,7 +213,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string ScanResult { get; set; }
 
                 /// <summary>
-                /// <para>Score.</para>
+                /// <para>The score.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -211,7 +223,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public float? Score { get; set; }
 
                 /// <summary>
-                /// <para>Service code.</para>
+                /// <para>The service code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nickname_detection</para>
@@ -221,7 +233,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string ServiceCode { get; set; }
 
                 /// <summary>
-                /// <para>Suggestion for handling.</para>
+                /// <para>The suggested action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>review</para>
@@ -231,7 +243,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string Suggestion { get; set; }
 
                 /// <summary>
-                /// <para>Task ID.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>txtwkgb******AsYNXoJswy-1Aa1Qk</para>
@@ -243,7 +255,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -253,7 +265,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -265,7 +277,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -275,7 +287,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -285,7 +297,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

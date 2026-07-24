@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListOssCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Data of the current page.</para>
+        /// <para>The data on the current page.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListOssCheckResultResponseBodyItems> Items { get; set; }
         public class ListOssCheckResultResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Storage space.</para>
+            /// <para>The OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tmp</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>Error code, consistent with HTTP status.</para>
+            /// <para>The error code, which is consistent with the HTTP status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Audio and video detection type.</para>
+            /// <para>The audio and video detection type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>Primary service.</para>
+            /// <para>The primary service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio_media_detection</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string CopyFrom { get; set; }
 
             /// <summary>
-            /// <para>Freeze status.</para>
+            /// <para>The freeze status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FREEZED</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string FreezeStatus { get; set; }
 
             /// <summary>
-            /// <para>Freeze type.</para>
+            /// <para>The freeze type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACL</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string FreezeType { get; set; }
 
             /// <summary>
-            /// <para>Image URL address.</para>
+            /// <para>The URL of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyuncs.com/test.jpg">http://www.aliyuncs.com/test.jpg</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Whether to copy.</para>
+            /// <para>Indicates whether the task is copied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public bool? IsCopy { get; set; }
 
             /// <summary>
-            /// <para>Job name.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dhT20X2310</para>
@@ -117,21 +117,79 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string JobName { get; set; }
 
             /// <summary>
-            /// <para>Image labels.</para>
+            /// <para>The list of labels hit by video frames.</para>
+            /// </summary>
+            [NameInMap("LabelDetails")]
+            [Validation(Required=false)]
+            public List<ListOssCheckResultResponseBodyItemsLabelDetails> LabelDetails { get; set; }
+            public class ListOssCheckResultResponseBodyItemsLabelDetails : TeaModel {
+                /// <summary>
+                /// <para>The description of the label.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>影音娱乐类</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <para>The label hit by the video frame.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>logo_streaming</para>
+                /// </summary>
+                [NameInMap("Label")]
+                [Validation(Required=false)]
+                public string Label { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The list of labels hit by video audio.</para>
+            /// </summary>
+            [NameInMap("LabelDetails2")]
+            [Validation(Required=false)]
+            public List<ListOssCheckResultResponseBodyItemsLabelDetails2> LabelDetails2 { get; set; }
+            public class ListOssCheckResultResponseBodyItemsLabelDetails2 : TeaModel {
+                /// <summary>
+                /// <para>The description of the label.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>辱骂内容</para>
+                /// </summary>
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
+
+                /// <summary>
+                /// <para>The label hit by the audio.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>abuse</para>
+                /// </summary>
+                [NameInMap("Label")]
+                [Validation(Required=false)]
+                public string Label { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The image labels.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<string> Labels { get; set; }
 
             /// <summary>
-            /// <para>Text labels.</para>
+            /// <para>The text labels.</para>
             /// </summary>
             [NameInMap("Labels2")]
             [Validation(Required=false)]
             public List<string> Labels2 { get; set; }
 
             /// <summary>
-            /// <para>File MD5.</para>
+            /// <para>The MD5 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54416c9b159df4a60ae03c04ccb94cb5</para>
@@ -141,7 +199,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>Further description of the error code.</para>
+            /// <para>The description of the error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -151,7 +209,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Object name.</para>
+            /// <para>The object name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1713014531569_958.png.jpeg</para>
@@ -161,7 +219,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Object { get; set; }
 
             /// <summary>
-            /// <para>Image risk level</para>
+            /// <para>The image risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>high</para>
@@ -171,7 +229,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Overall risk level</para>
+            /// <para>The overall risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>low</para>
@@ -181,7 +239,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel0 { get; set; }
 
             /// <summary>
-            /// <para>Text risk level</para>
+            /// <para>The text risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -191,7 +249,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel2 { get; set; }
 
             /// <summary>
-            /// <para>Details of the result.</para>
+            /// <para>The scan result details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -201,7 +259,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ScanResult { get; set; }
 
             /// <summary>
-            /// <para>Service code.</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audio_media_detection_01</para>
@@ -211,7 +269,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>Service name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>服务名称</para>
@@ -221,7 +279,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>Task ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EP6TI7_au_Zo25ITvCbkocNuF801QOQX</para>
@@ -231,7 +289,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task URL.</para>
+            /// <para>The task URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyuncs.com/test.mp3">http://www.aliyuncs.com/test.mp3</a></para>
@@ -243,7 +301,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -253,7 +311,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -263,7 +321,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13</para>

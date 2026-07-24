@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The remarks of the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Explicit_Content_Blacklist_Image_lib</para>
+        /// <para>色情内容黑名单图库</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The name of image library</para>
+        /// <para>The name of the image library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_image_lib</para>
+        /// <para>测试图库</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]

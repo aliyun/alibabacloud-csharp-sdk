@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetUploadInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Upload authorization ID.</para>
+        /// <para>The upload authorization ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LTAI5t9HM*****EXQmw3DVH</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string AccessId { get; set; }
 
         /// <summary>
-        /// <para>Error code, consistent with HTTP status.</para>
+        /// <para>The error code, consistent with the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>In seconds.</para>
+        /// <para>Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? Expire { get; set; }
 
         /// <summary>
-        /// <para>Folder name.</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image/upload/xxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Folder { get; set; }
 
         /// <summary>
-        /// <para>Upload host.</para>
+        /// <para>The upload host.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com">https://oss-cip-shanghai.oss-cn-shanghai.aliyuncs.com</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Key used for uploading files.</para>
+        /// <para>The key used for file upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image/upload/xxx</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The further description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Used for front-end image upload.</para>
+        /// <para>Used for frontend image upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>OSS upload file Policy.</para>
+        /// <para>The OSS file upload policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The backend-assigned ID that uniquely identifies a request. This ID can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -119,8 +119,12 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SecurityToken")]
+        [Validation(Required=false)]
+        public string SecurityToken { get; set; }
+
         /// <summary>
-        /// <para>Upload signature information.</para>
+        /// <para>The upload signature information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iyu7VHblYj+mEF9p46cdGOlNPAw=</para>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Signature { get; set; }
 
         /// <summary>
-        /// <para>Success indicator.</para>
+        /// <para>The success flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

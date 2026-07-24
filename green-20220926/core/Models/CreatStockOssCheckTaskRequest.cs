@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class CreatStockOssCheckTaskRequest : TeaModel {
+        /// <summary>
+        /// <para>The filter configuration for each bucket. The value can be parsed as a JSON map. The key is the bucket name, and the value is the filter configuration, which includes prefix/suffix filters and a list of filter strings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;{\&quot;test-bucket1\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;include\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test1\&quot;]},\&quot;test-bucket2\&quot;:{\&quot;prefixFilterType\&quot;:\&quot;exclude\&quot;,\&quot;prefixFilters\&quot;:[\&quot;test2\&quot;]}}&quot;</para>
+        /// </summary>
         [NameInMap("BucketPrefixFilterConfig")]
         [Validation(Required=false)]
         public string BucketPrefixFilterConfig { get; set; }
 
         /// <summary>
-        /// <para>OSS buckets</para>
+        /// <para>The storage buckets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;Bucket\&quot;:\&quot;bucket01-test\&quot;,\&quot;Region\&quot;:\&quot;cn-beijing\&quot;}]</para>
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Buckets { get; set; }
 
         /// <summary>
-        /// <para>Callback ID</para>
+        /// <para>The notification callback ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1751</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string CallbackId { get; set; }
 
         /// <summary>
-        /// <para>Flag for deduplicating against previously detected tasks.</para>
+        /// <para>Specifies whether to deduplicate against historically scanned tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? DistinctHistoryTasks { get; set; }
 
         /// <summary>
-        /// <para>The end time of the task.</para>
+        /// <para>The task end time. Format: <c>YYYY-MM-DD HH:mm:ss</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-18 10:08:00</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Execute date of scheduled task.</para>
+        /// <para>The execution date of the scheduled task. The value is in integer format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? ExecuteDate { get; set; }
 
         /// <summary>
-        /// <para>Execute time of scheduled task.</para>
+        /// <para>The expected execution time of the scheduled task. Format: <c>HH:mm:ss-HH:mm:ss</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01:09:30-01:19:30</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ExecuteTime { get; set; }
 
         /// <summary>
-        /// <para>Freeze indicator</para>
+        /// <para>Specifies whether to freeze files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? Freeze { get; set; }
 
         /// <summary>
-        /// <para>Freeze High-Risk Images</para>
+        /// <para>Specifies whether to freeze high-risk images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? FreezeHighRisk1 { get; set; }
 
         /// <summary>
-        /// <para>Freeze High-Risk Audio and Text</para>
+        /// <para>Specifies whether to freeze high-risk audio and text.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? FreezeHighRisk2 { get; set; }
 
         /// <summary>
-        /// <para>Freeze Medium-Risk Images</para>
+        /// <para>Specifies whether to freeze medium-risk images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -114,7 +120,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? FreezeMediumRisk1 { get; set; }
 
         /// <summary>
-        /// <para>Freeze Medium-Risk Audio and Text</para>
+        /// <para>Specifies whether to freeze medium-risk audio and text.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? FreezeMediumRisk2 { get; set; }
 
         /// <summary>
-        /// <para>Freeze Restore Path</para>
+        /// <para>The path to which frozen files are transferred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -134,7 +140,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string FreezeRestorePath { get; set; }
 
         /// <summary>
-        /// <para>Freeze type</para>
+        /// <para>The freeze type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACL</para>
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string FreezeType { get; set; }
 
         /// <summary>
-        /// <para>Indicator for scheduled task.</para>
+        /// <para>Specifies whether the task is a scheduled scan task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -154,7 +160,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? IsInc { get; set; }
 
         /// <summary>
-        /// <para>Media type.</para>
+        /// <para>The media asset type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -164,7 +170,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MediaType { get; set; }
 
         /// <summary>
-        /// <para>Prefix filter type.</para>
+        /// <para>The prefix filter type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>all</para>
@@ -174,7 +180,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string PrefixFilterType { get; set; }
 
         /// <summary>
-        /// <para>Prefix filters</para>
+        /// <para>The prefixes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dir1,dir2</para>
@@ -184,7 +190,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string PrefixFilters { get; set; }
 
         /// <summary>
-        /// <para>The priority of the task.</para>
+        /// <para>The priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -194,7 +200,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>Referer.</para>
+        /// <para>Referer。</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
@@ -204,7 +210,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Referer { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -214,7 +220,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scan limit of the task.</para>
+        /// <para>The maximum number of files to scan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -224,7 +230,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? ScanLimit { get; set; }
 
         /// <summary>
-        /// <para>Indicator for scanning files without file type.</para>
+        /// <para>Specifies whether to scan images without file extensions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -234,7 +240,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ScanNoFileType { get; set; }
 
         /// <summary>
-        /// <para>Scan resource type.</para>
+        /// <para>The type of files to scan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -244,7 +250,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ScanResourceType { get; set; }
 
         /// <summary>
-        /// <para>The code of scan service.</para>
+        /// <para>The scan service code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
@@ -254,7 +260,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ScanService { get; set; }
 
         /// <summary>
-        /// <para>The start time of the task.</para>
+        /// <para>The task start time. Format: <c>YYYY-MM-DD HH:mm:ss</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-17 10:08:00</para>
@@ -264,7 +270,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>Task Cycle</para>
+        /// <para>The scheduling cycle.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -274,17 +280,17 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? TaskCycle { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>image task 20240709101602004</para>
+        /// <para>图片任务 20240709101602004</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>Task type.</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>batch</para>

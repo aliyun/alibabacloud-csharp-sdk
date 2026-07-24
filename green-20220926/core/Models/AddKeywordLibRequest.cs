@@ -10,17 +10,18 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class AddKeywordLibRequest : TeaModel {
         /// <summary>
-        /// <para>Keywords, with multiple keywords separated by \n.</para>
+        /// <para>The keywords. Separate multiple keywords with 
+        /// .</para>
         /// 
         /// <b>Example:</b>
-        /// <para>keywords1\nkeywords2</para>
+        /// <para>keyword1\nkeyword2</para>
         /// </summary>
         [NameInMap("Keywords")]
         [Validation(Required=false)]
         public string Keywords { get; set; }
 
         /// <summary>
-        /// <para>The name of the keywords file.</para>
+        /// <para>The name of the keyword file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>upload/1e5353c0-0d91-40ba-9d41-ae7abd3fe561.txt</para>
@@ -33,18 +34,24 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The name of the keyword library.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test_keyword_lib</para>
+        /// <para>TestLibrary.</para>
         /// </summary>
         [NameInMap("LibName")]
         [Validation(Required=false)]
         public string LibName { get; set; }
 
+        /// <summary>
+        /// <para>The properties.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;attribute&quot;:&quot;xx&quot;}</para>
+        /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public string Properties { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -53,6 +60,15 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The library code.</para>
+        /// <list type="bullet">
+        /// <item><description>desensitize: desensitization library</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>desensitize</para>
+        /// </summary>
         [NameInMap("TenantCode")]
         [Validation(Required=false)]
         public string TenantCode { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetTuneProposalByIdRequest : TeaModel {
         /// <summary>
+        /// <para>The primary key ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prop-xxxxxxxx</para>
         /// </summary>

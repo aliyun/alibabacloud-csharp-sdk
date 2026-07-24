@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Classify { get; set; }
 
         /// <summary>
-        /// <para>Error code, consistent with HTTP status.</para>
+        /// <para>Error code, consistent with the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Service details</para>
+        /// <para>Service details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public Dictionary<string, object> Option { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. It can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6CF2815C-<b><b>-</b></b>-B52E-FF6E2****492</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>Success indicator</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

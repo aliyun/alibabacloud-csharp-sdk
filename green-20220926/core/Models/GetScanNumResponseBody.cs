@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetScanNumResponseBody : TeaModel {
         /// <summary>
-        /// <para>Upper limit of the quantity.</para>
+        /// <para>The upper limit on the number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? LimitNumber { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend, used to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of files pending inspection.</para>
+        /// <para>The total number of files pending detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? ScanNumber { get; set; }
 
         /// <summary>
-        /// <para>Total number of files.</para>
+        /// <para>The total number of files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public long? SumNumber { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a whitelist user.</para>
+        /// <para>Indicates whether the user is a whitelisted user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

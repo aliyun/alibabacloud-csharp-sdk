@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateServiceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The document configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string FileConfig { get; set; }
 
         /// <summary>
+        /// <para>The keyword filter libraries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string KeywordFilterLibs { get; set; }
 
         /// <summary>
+        /// <para>The keyword hit libraries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -33,11 +39,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string KeywordHitLibs { get; set; }
 
+        /// <summary>
+        /// <para>The machine-assisted moderation configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("ManualMachineConfig")]
         [Validation(Required=false)]
         public string ManualMachineConfig { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The moderation scenario.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pornographic</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Scene { get; set; }
 
         /// <summary>
+        /// <para>The scenario configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string SceneConfig { get; set; }
 
         /// <summary>
+        /// <para>The service code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
         /// </summary>
@@ -77,11 +99,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
+        /// <summary>
+        /// <para>The service configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("ServiceConfig")]
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
 
         /// <summary>
+        /// <para>The video configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

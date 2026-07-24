@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetPromptTestResultRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration item.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;enable\&quot;:false}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The service code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>baselineCheck</para>
         /// </summary>
@@ -33,11 +39,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string ServiceCode { get; set; }
 
+        /// <summary>
+        /// <para>The text content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试文本</para>
+        /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
+        /// <para>The business type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom_llm_template</para>
         /// </summary>

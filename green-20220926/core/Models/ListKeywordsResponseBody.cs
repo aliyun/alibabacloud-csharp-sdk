@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class ListKeywordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListKeywordsResponseBodyData Data { get; set; }
         public class ListKeywordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>Data of the current page.</para>
+            /// <para>The data on the current page.</para>
             /// </summary>
             [NameInMap("Items")]
             [Validation(Required=false)]
             public List<ListKeywordsResponseBodyDataItems> Items { get; set; }
             public class ListKeywordsResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-06-03 14:43:03</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Modification time.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-06-03 14:43:03</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>112</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Keyword library ID.</para>
+                /// <para>The keyword library ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>custom_xxxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public string KeywordLibId { get; set; }
 
                 /// <summary>
-                /// <para>Keyword data ID.</para>
+                /// <para>The keyword data ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4205334</para>
@@ -93,10 +93,19 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public long? KeywordMd5Id { get; set; }
 
+                /// <summary>
+                /// <para>The properties.</para>
+                /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
                 public ListKeywordsResponseBodyDataItemsProperties Properties { get; set; }
                 public class ListKeywordsResponseBodyDataItemsProperties : TeaModel {
+                    /// <summary>
+                    /// <para>The properties.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>xxx</para>
+                    /// </summary>
                     [NameInMap("Attribute")]
                     [Validation(Required=false)]
                     public string Attribute { get; set; }
@@ -104,7 +113,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>Keyword.</para>
+                /// <para>The keyword.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>测试词</para>
@@ -116,7 +125,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -126,7 +135,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -138,7 +147,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>Further description of the error code.</para>
+        /// <para>The description of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -148,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>ID assigned by the backend to uniquely identify a request. Can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -158,7 +167,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success flag.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
