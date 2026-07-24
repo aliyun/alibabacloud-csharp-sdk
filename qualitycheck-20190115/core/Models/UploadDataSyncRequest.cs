@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public long? BaseMeAgentId { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that contains the custom parameters for the operation. See the <b>jsonStr attributes</b> section for details.</para>
+        /// <para>A JSON string that contains all custom parameters for this operation. For more information, see the <b>jsonStr property description</b> below.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

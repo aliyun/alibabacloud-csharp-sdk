@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadDataSyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result <c>code</c>. A value of <b>200</b> indicates that the request was successful. Other values indicate failure. Use this field to identify the cause of the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -157,6 +157,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public string LlmResponse { get; set; }
 
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
                         [NameInMap("Rid")]
                         [Validation(Required=false)]
                         public string Rid { get; set; }
@@ -186,7 +190,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The response message. If the request succeeds, the value is <b>successful</b>. Otherwise, this parameter provides error details.</para>
+        /// <para>The error details when an error occurs. The value is <b>successful</b> when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -196,7 +200,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The <c>request ID</c>.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4987D326-83D9-4A42-B9A5-0B27F9B***</para>
@@ -206,7 +210,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the request succeeded. <c>true</c> indicates success; <c>false</c> or <c>null</c> indicates failure.</para>
+        /// <para>Indicates whether the request was successful. Valid values: true and false/null.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

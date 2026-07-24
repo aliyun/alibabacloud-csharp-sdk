@@ -26,6 +26,44 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public GetAgentTaskResultResponseBodyData Data { get; set; }
         public class GetAgentTaskResultResponseBodyData : TeaModel {
+            [NameInMap("Dialogues")]
+            [Validation(Required=false)]
+            public List<GetAgentTaskResultResponseBodyDataDialogues> Dialogues { get; set; }
+            public class GetAgentTaskResultResponseBodyDataDialogues : TeaModel {
+                [NameInMap("Begin")]
+                [Validation(Required=false)]
+                public long? Begin { get; set; }
+
+                [NameInMap("EmotionValue")]
+                [Validation(Required=false)]
+                public int? EmotionValue { get; set; }
+
+                [NameInMap("End")]
+                [Validation(Required=false)]
+                public long? End { get; set; }
+
+                [NameInMap("HourMinSec")]
+                [Validation(Required=false)]
+                public string HourMinSec { get; set; }
+
+                [NameInMap("Role")]
+                [Validation(Required=false)]
+                public string Role { get; set; }
+
+                [NameInMap("SpeechRate")]
+                [Validation(Required=false)]
+                public int? SpeechRate { get; set; }
+
+                [NameInMap("Words")]
+                [Validation(Required=false)]
+                public string Words { get; set; }
+
+            }
+
+            [NameInMap("ErrorMessage")]
+            [Validation(Required=false)]
+            public string ErrorMessage { get; set; }
+
             /// <summary>
             /// <para>The number of input tokens.</para>
             /// 
@@ -57,7 +95,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             public string OutputTokens { get; set; }
 
             /// <summary>
-            /// <para>The result of the computing task.</para>
+            /// <para>The result of the computation task.</para>
             /// </summary>
             [NameInMap("Response")]
             [Validation(Required=false)]
@@ -74,7 +112,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     /// <para>The result returned by the large language model.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>175/xl面料摸着很舒服,穿起来看着也挺修身的挺好的好衣服超好看,质量手感没得说一级棒,很满意的一次购物。</para>
+                    /// <para>175/xl the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
@@ -83,21 +121,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
                 /// <summary>
-                /// <para>The property extraction result.</para>
+                /// <para>The field extraction result.</para>
                 /// </summary>
                 [NameInMap("FieldResponse")]
                 [Validation(Required=false)]
                 public GetAgentTaskResultResponseBodyDataResponseFieldResponse FieldResponse { get; set; }
                 public class GetAgentTaskResultResponseBodyDataResponseFieldResponse : TeaModel {
                     /// <summary>
-                    /// <para>The list of properties.</para>
+                    /// <para>The list of fields.</para>
                     /// </summary>
                     [NameInMap("FieldVoList")]
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList> FieldVoList { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList : TeaModel {
                         /// <summary>
-                        /// <para>The property name.</para>
+                        /// <para>The field name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>phone</para>
@@ -117,14 +155,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The reasoning for the judgment.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>通过客服第一句话判断</para>
+                        /// <para>Determined by the first sentence of the agent.</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
                         public string Remarks { get; set; }
 
                         /// <summary>
-                        /// <para>The property value.</para>
+                        /// <para>The field value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1234561</para>
@@ -155,14 +193,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The inspection dimension.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>服务态度</para>
+                        /// <para>Service attitude.</para>
                         /// </summary>
                         [NameInMap("Dimension")]
                         [Validation(Required=false)]
                         public string Dimension { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether a match is found.</para>
+                        /// <para>Indicates whether the tag is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -182,7 +220,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The reasoning for the judgment.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>通过客服第一句话判断</para>
+                        /// <para>Determined by the first sentence of the agent.</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
@@ -200,24 +238,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse TagCategoryResponse { get; set; }
                 public class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse : TeaModel {
                     /// <summary>
-                    /// <para>The list of labels.</para>
+                    /// <para>The list of tags.</para>
                     /// </summary>
                     [NameInMap("TagCategoryVoList")]
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList> TagCategoryVoList { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList : TeaModel {
                         /// <summary>
-                        /// <para>The label dimension.</para>
+                        /// <para>The tag dimension.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>客户意图</para>
+                        /// <para>Customer intent.</para>
                         /// </summary>
                         [NameInMap("Dimension")]
                         [Validation(Required=false)]
                         public string Dimension { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether a match is found.</para>
+                        /// <para>Indicates whether the tag is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -237,7 +275,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The reasoning for the judgment.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>通过客服第一句话判断</para>
+                        /// <para>Determined by the first sentence of the agent.</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
@@ -345,7 +383,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. You can use this field to determine whether the request was successful:</para>
+        /// <para>Indicates whether the request was successful. You can use this field to determine whether the request succeeded:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The request was successful.</description></item>
         /// <item><description><b>false/null</b>: The request failed.</description></item>

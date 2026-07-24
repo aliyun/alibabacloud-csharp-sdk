@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadAudioDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of a failure.</para>
+        /// <para>The response code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The task ID. Use this ID to get the task result.</para>
+        /// <para>The task ID, which is used when retrieving task results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76DB5D8C-5BD9-42A7-B527-5AF3A5***</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error details if the request fails. If the request is successful, the value is \<c>successful\\</c>.</para>
+        /// <para>The error message when the request fails. The value is &quot;successful&quot; when the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. This is the unique identifier of the request.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76DB5D8C-5BD9-42A7-B527-5AF3A5F8***</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. You can use this field to determine if the request succeeded. A value of \<c>true\\</c> indicates success. A value of \<c>false\\</c> or \<c>null\\</c> indicates failure.</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false/null: The request failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
