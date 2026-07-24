@@ -9723,6 +9723,142 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an ER build task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineBuildRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineBuildResponse
+        /// </returns>
+        public CreateRoutineBuildResponse CreateRoutineBuildWithOptions(CreateRoutineBuildRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactUrl))
+            {
+                query["ArtifactUrl"] = request.ArtifactUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Branch))
+            {
+                query["Branch"] = request.Branch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutineName))
+            {
+                query["RoutineName"] = request.RoutineName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoutineBuild",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRoutineBuildResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ER build task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineBuildRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineBuildResponse
+        /// </returns>
+        public async Task<CreateRoutineBuildResponse> CreateRoutineBuildWithOptionsAsync(CreateRoutineBuildRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArtifactUrl))
+            {
+                query["ArtifactUrl"] = request.ArtifactUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Branch))
+            {
+                query["Branch"] = request.Branch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutineName))
+            {
+                query["RoutineName"] = request.RoutineName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRoutineBuild",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRoutineBuildResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ER build task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineBuildRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineBuildResponse
+        /// </returns>
+        public CreateRoutineBuildResponse CreateRoutineBuild(CreateRoutineBuildRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateRoutineBuildWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an ER build task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRoutineBuildRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRoutineBuildResponse
+        /// </returns>
+        public async Task<CreateRoutineBuildResponse> CreateRoutineBuildAsync(CreateRoutineBuildRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateRoutineBuildWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an Edge Routine (ER) build configuration.</para>
         /// </summary>
         /// 
@@ -22691,6 +22827,142 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDDoSOverseasAttackCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSPriceResponse
+        /// </returns>
+        public DescribeDDoSPriceResponse DescribeDDoSPriceWithOptions(DescribeDDoSPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBillingMode))
+            {
+                query["DDoSBillingMode"] = request.DDoSBillingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableDomesticProtection))
+            {
+                query["DDoSBurstableDomesticProtection"] = request.DDoSBurstableDomesticProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableOverseasProtection))
+            {
+                query["DDoSBurstableOverseasProtection"] = request.DDoSBurstableOverseasProtection;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSPrice",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSPriceResponse
+        /// </returns>
+        public async Task<DescribeDDoSPriceResponse> DescribeDDoSPriceWithOptionsAsync(DescribeDDoSPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBillingMode))
+            {
+                query["DDoSBillingMode"] = request.DDoSBillingMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableDomesticProtection))
+            {
+                query["DDoSBurstableDomesticProtection"] = request.DDoSBurstableDomesticProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DDoSBurstableOverseasProtection))
+            {
+                query["DDoSBurstableOverseasProtection"] = request.DDoSBurstableOverseasProtection;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSPrice",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSPriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSPriceResponse
+        /// </returns>
+        public DescribeDDoSPriceResponse DescribeDDoSPrice(DescribeDDoSPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDDoSPriceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the price of an Anti-DDoS Pro or Anti-DDoS Premium instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSPriceResponse
+        /// </returns>
+        public async Task<DescribeDDoSPriceResponse> DescribeDDoSPriceAsync(DescribeDDoSPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDDoSPriceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -52667,7 +52939,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a task replication.</para>
+        /// <para>Retries a routine replication task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52709,7 +52981,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a task replication.</para>
+        /// <para>Retries a routine replication task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52751,7 +53023,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a task replication.</para>
+        /// <para>Retries a routine replication task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52769,7 +53041,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retries a task replication.</para>
+        /// <para>Retries a routine replication task.</para>
         /// </summary>
         /// 
         /// <param name="request">

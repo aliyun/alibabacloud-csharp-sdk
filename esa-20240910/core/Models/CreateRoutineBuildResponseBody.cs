@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
-    public class ReDoRoutineBuildResponseBody : TeaModel {
+    public class CreateRoutineBuildResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the build task in Yunxiao.</para>
+        /// <para>The build ID in Apsara Devops.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>70</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PipeLineRunId")]
         [Validation(Required=false)]
@@ -23,17 +23,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</para>
+        /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ER build task.</para>
+        /// <para>The ER build task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>156773519472872</para>
+        /// <para>159782040838348</para>
         /// </summary>
         [NameInMap("RoutineBuildId")]
         [Validation(Required=false)]

@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommitMessage { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The creation time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-26T02:19:34Z</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? IsPrivate { get; set; }
 
             /// <summary>
-            /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, and <c>12.x</c>.</para>
+            /// <para>The Node.js version. Valid values: <c>22.x</c>, <c>20.x</c>, <c>18.x</c>, <c>16.x</c>, <c>14.x</c>, <c>12.x</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22.x</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NodeVersion { get; set; }
 
             /// <summary>
-            /// <para>The pipeline ID.</para>
+            /// <para>The Yunxiao pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3850166</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The pipeline execution ID.</para>
+            /// <para>The Yunxiao build task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The modification time, in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The modification time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-20T00:44:23Z</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number, same as the PageIndex request parameter.</para>
+        /// <para>The page number, which is the same as the PageIndex request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

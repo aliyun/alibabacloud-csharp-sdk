@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AssetsDirectory { get; set; }
 
         /// <summary>
-        /// <para>The build branch.</para>
+        /// <para>The branch used for the build.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NodeVersion { get; set; }
 
         /// <summary>
-        /// <para>The pipeline ID.</para>
+        /// <para>The pipeline ID in Yunxiao.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4371588</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PipelineId { get; set; }
 
         /// <summary>
-        /// <para>The pipeline run ID.</para>
+        /// <para>The build task ID in Yunxiao.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
