@@ -1,0 +1,28 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Ververica20220718.Models
+{
+    public class CreateSqlFileHeaders : TeaModel {
+        [NameInMap("commonHeaders")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> CommonHeaders { get; set; }
+
+        /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a14bda1c4a****</para>
+        /// </summary>
+        [NameInMap("workspace")]
+        [Validation(Required=false)]
+        public string Workspace { get; set; }
+
+    }
+
+}

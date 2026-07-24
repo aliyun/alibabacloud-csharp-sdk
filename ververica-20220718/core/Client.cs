@@ -1656,6 +1656,164 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a SQL query script job file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The original interface for creating deployment targets only supports creating deployment targets with fixed resources or elastic resources. The new interface supports creating deployment targets with fixed resources, elastic resources, or mixed pattern.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlFileResponse
+        /// </returns>
+        public CreateSqlFileResponse CreateSqlFileWithOptions(string namespace_, CreateSqlFileRequest request, CreateSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL query script job file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The original interface for creating deployment targets only supports creating deployment targets with fixed resources or elastic resources. The new interface supports creating deployment targets with fixed resources, elastic resources, or mixed pattern.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlFileResponse
+        /// </returns>
+        public async Task<CreateSqlFileResponse> CreateSqlFileWithOptionsAsync(string namespace_, CreateSqlFileRequest request, CreateSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSqlFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL query script job file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The original interface for creating deployment targets only supports creating deployment targets with fixed resources or elastic resources. The new interface supports creating deployment targets with fixed resources, elastic resources, or mixed pattern.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlFileResponse
+        /// </returns>
+        public CreateSqlFileResponse CreateSqlFile(string namespace_, CreateSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateSqlFileHeaders headers = new CreateSqlFileHeaders();
+            return CreateSqlFileWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SQL query script job file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The original interface for creating deployment targets only supports creating deployment targets with fixed resources or elastic resources. The new interface supports creating deployment targets with fixed resources, elastic resources, or mixed pattern.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSqlFileResponse
+        /// </returns>
+        public async Task<CreateSqlFileResponse> CreateSqlFileAsync(string namespace_, CreateSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateSqlFileHeaders headers = new CreateSqlFileHeaders();
+            return await CreateSqlFileWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Parses all user-defined function (UDF) methods in your JAR or Python file and creates an artifact configuration for a UDF.</para>
         /// </summary>
         /// 
@@ -2168,6 +2326,174 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteDeploymentHeaders headers = new DeleteDeploymentHeaders();
             return await DeleteDeploymentWithOptionsAsync(namespace_, deploymentId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name. This operation is applicable to scenarios where you want to quickly locate job details by deployment identifier.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDeploymentByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// DeleteDeploymentByNameHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentByNameResponse
+        /// </returns>
+        public DeleteDeploymentByNameResponse DeleteDeploymentByNameWithOptions(string namespace_, DeleteDeploymentByNameRequest request, DeleteDeploymentByNameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentName))
+            {
+                query["deploymentName"] = request.DeploymentName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeploymentByName",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/deleteDeployment/byName",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeploymentByNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name. This operation is applicable to scenarios where you want to quickly locate job details by deployment identifier.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDeploymentByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// DeleteDeploymentByNameHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentByNameResponse
+        /// </returns>
+        public async Task<DeleteDeploymentByNameResponse> DeleteDeploymentByNameWithOptionsAsync(string namespace_, DeleteDeploymentByNameRequest request, DeleteDeploymentByNameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentName))
+            {
+                query["deploymentName"] = request.DeploymentName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDeploymentByName",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/deleteDeployment/byName",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDeploymentByNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name. This operation is applicable to scenarios where you want to quickly locate job details by deployment identifier.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDeploymentByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentByNameResponse
+        /// </returns>
+        public DeleteDeploymentByNameResponse DeleteDeploymentByName(string namespace_, DeleteDeploymentByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteDeploymentByNameHeaders headers = new DeleteDeploymentByNameHeaders();
+            return DeleteDeploymentByNameWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the deployment instance information of a job in a specified workspace and namespace based on the deployed job name. This operation is applicable to scenarios where you want to quickly locate job details by deployment identifier.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteDeploymentByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDeploymentByNameResponse
+        /// </returns>
+        public async Task<DeleteDeploymentByNameResponse> DeleteDeploymentByNameAsync(string namespace_, DeleteDeploymentByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteDeploymentByNameHeaders headers = new DeleteDeploymentByNameHeaders();
+            return await DeleteDeploymentByNameWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3132,6 +3458,162 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a created SQL query script file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of deployed jobs that are associated with a specified job label and their details. Exact matching by labelKey and labelValue is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// DeleteSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSqlFileResponse
+        /// </returns>
+        public DeleteSqlFileResponse DeleteSqlFileWithOptions(string namespace_, string sqlFileId, DeleteSqlFileRequest request, DeleteSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlFileId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSqlFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created SQL query script file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of deployed jobs that are associated with a specified job label and their details. Exact matching by labelKey and labelValue is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// DeleteSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSqlFileResponse
+        /// </returns>
+        public async Task<DeleteSqlFileResponse> DeleteSqlFileWithOptionsAsync(string namespace_, string sqlFileId, DeleteSqlFileRequest request, DeleteSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlFileId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSqlFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created SQL query script file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of deployed jobs that are associated with a specified job label and their details. Exact matching by labelKey and labelValue is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSqlFileResponse
+        /// </returns>
+        public DeleteSqlFileResponse DeleteSqlFile(string namespace_, string sqlFileId, DeleteSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteSqlFileHeaders headers = new DeleteSqlFileHeaders();
+            return DeleteSqlFileWithOptions(namespace_, sqlFileId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created SQL query script file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of deployed jobs that are associated with a specified job label and their details. Exact matching by labelKey and labelValue is supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSqlFileResponse
+        /// </returns>
+        public async Task<DeleteSqlFileResponse> DeleteSqlFileAsync(string namespace_, string sqlFileId, DeleteSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            DeleteSqlFileHeaders headers = new DeleteSqlFileHeaders();
+            return await DeleteSqlFileWithOptionsAsync(namespace_, sqlFileId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a user-defined function (UDF) resource. You must delete all UDFs registered with the resource before you can delete the resource.</para>
         /// </summary>
         /// 
@@ -3800,6 +4282,142 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ExecuteSqlStatementHeaders headers = new ExecuteSqlStatementHeaders();
             return await ExecuteSqlStatementWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution result of an SQL data query submitted through the platform.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchSqlExecutionResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// FetchSqlExecutionResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchSqlExecutionResultResponse
+        /// </returns>
+        public FetchSqlExecutionResultResponse FetchSqlExecutionResultWithOptions(string namespace_, string sqlExecutionId, FetchSqlExecutionResultRequest request, FetchSqlExecutionResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FetchSqlExecutionResult",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-execution/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlExecutionId) + "%3AfetchSqlExecutionResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FetchSqlExecutionResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution result of an SQL data query submitted through the platform.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchSqlExecutionResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// FetchSqlExecutionResultHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchSqlExecutionResultResponse
+        /// </returns>
+        public async Task<FetchSqlExecutionResultResponse> FetchSqlExecutionResultWithOptionsAsync(string namespace_, string sqlExecutionId, FetchSqlExecutionResultRequest request, FetchSqlExecutionResultHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FetchSqlExecutionResult",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-execution/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlExecutionId) + "%3AfetchSqlExecutionResult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FetchSqlExecutionResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution result of an SQL data query submitted through the platform.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchSqlExecutionResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchSqlExecutionResultResponse
+        /// </returns>
+        public FetchSqlExecutionResultResponse FetchSqlExecutionResult(string namespace_, string sqlExecutionId, FetchSqlExecutionResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FetchSqlExecutionResultHeaders headers = new FetchSqlExecutionResultHeaders();
+            return FetchSqlExecutionResultWithOptions(namespace_, sqlExecutionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the execution result of an SQL data query submitted through the platform.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchSqlExecutionResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchSqlExecutionResultResponse
+        /// </returns>
+        public async Task<FetchSqlExecutionResultResponse> FetchSqlExecutionResultAsync(string namespace_, string sqlExecutionId, FetchSqlExecutionResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            FetchSqlExecutionResultHeaders headers = new FetchSqlExecutionResultHeaders();
+            return await FetchSqlExecutionResultWithOptionsAsync(namespace_, sqlExecutionId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7356,6 +7974,142 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetSessionClusterHeaders headers = new GetSessionClusterHeaders();
             return await GetSessionClusterWithOptionsAsync(namespace_, sessionClusterName, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlFileResponse
+        /// </returns>
+        public GetSqlFileResponse GetSqlFileWithOptions(string namespace_, string sqlFileId, GetSqlFileRequest request, GetSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlFileId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlFileResponse
+        /// </returns>
+        public async Task<GetSqlFileResponse> GetSqlFileWithOptionsAsync(string namespace_, string sqlFileId, GetSqlFileRequest request, GetSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlFileId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlFileResponse
+        /// </returns>
+        public GetSqlFileResponse GetSqlFile(string namespace_, string sqlFileId, GetSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetSqlFileHeaders headers = new GetSqlFileHeaders();
+            return GetSqlFileWithOptions(namespace_, sqlFileId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlFileResponse
+        /// </returns>
+        public async Task<GetSqlFileResponse> GetSqlFileAsync(string namespace_, string sqlFileId, GetSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetSqlFileHeaders headers = new GetSqlFileHeaders();
+            return await GetSqlFileWithOptionsAsync(namespace_, sqlFileId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11182,6 +11936,142 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSqlExecutionRequest
+        /// </param>
+        /// <param name="headers">
+        /// StopSqlExecutionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSqlExecutionResponse
+        /// </returns>
+        public StopSqlExecutionResponse StopSqlExecutionWithOptions(string namespace_, string sqlExecutionId, StopSqlExecutionRequest request, StopSqlExecutionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSqlExecution",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-execution/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlExecutionId) + "%3Astop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSqlExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSqlExecutionRequest
+        /// </param>
+        /// <param name="headers">
+        /// StopSqlExecutionHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSqlExecutionResponse
+        /// </returns>
+        public async Task<StopSqlExecutionResponse> StopSqlExecutionWithOptionsAsync(string namespace_, string sqlExecutionId, StopSqlExecutionRequest request, StopSqlExecutionHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopSqlExecution",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-execution/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlExecutionId) + "%3Astop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopSqlExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSqlExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSqlExecutionResponse
+        /// </returns>
+        public StopSqlExecutionResponse StopSqlExecution(string namespace_, string sqlExecutionId, StopSqlExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StopSqlExecutionHeaders headers = new StopSqlExecutionHeaders();
+            return StopSqlExecutionWithOptions(namespace_, sqlExecutionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes an SQL query script task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopSqlExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopSqlExecutionResponse
+        /// </returns>
+        public async Task<StopSqlExecutionResponse> StopSqlExecutionAsync(string namespace_, string sqlExecutionId, StopSqlExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            StopSqlExecutionHeaders headers = new StopSqlExecutionHeaders();
+            return await StopSqlExecutionWithOptionsAsync(namespace_, sqlExecutionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>提交sql调试</para>
         /// </summary>
         /// 
@@ -11466,6 +12356,156 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateDeploymentHeaders headers = new UpdateDeploymentHeaders();
             return await UpdateDeploymentWithOptionsAsync(namespace_, deploymentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the details and configuration parameters of a deployment job by its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateDeploymentByNameHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentByNameResponse
+        /// </returns>
+        public UpdateDeploymentByNameResponse UpdateDeploymentByNameWithOptions(string namespace_, UpdateDeploymentByNameRequest request, UpdateDeploymentByNameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentName))
+            {
+                query["deploymentName"] = request.DeploymentName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDeploymentByName",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/updateDeployment/byName",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDeploymentByNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the details and configuration parameters of a deployment job by its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateDeploymentByNameHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentByNameResponse
+        /// </returns>
+        public async Task<UpdateDeploymentByNameResponse> UpdateDeploymentByNameWithOptionsAsync(string namespace_, UpdateDeploymentByNameRequest request, UpdateDeploymentByNameHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentName))
+            {
+                query["deploymentName"] = request.DeploymentName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDeploymentByName",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/deployments/updateDeployment/byName",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDeploymentByNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the details and configuration parameters of a deployment job by its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentByNameResponse
+        /// </returns>
+        public UpdateDeploymentByNameResponse UpdateDeploymentByName(string namespace_, UpdateDeploymentByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateDeploymentByNameHeaders headers = new UpdateDeploymentByNameHeaders();
+            return UpdateDeploymentByNameWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the details and configuration parameters of a deployment job by its name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDeploymentByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDeploymentByNameResponse
+        /// </returns>
+        public async Task<UpdateDeploymentByNameResponse> UpdateDeploymentByNameAsync(string namespace_, UpdateDeploymentByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateDeploymentByNameHeaders headers = new UpdateDeploymentByNameHeaders();
+            return await UpdateDeploymentByNameWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12452,6 +13492,144 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateSessionClusterHeaders headers = new UpdateSessionClusterHeaders();
             return await UpdateSessionClusterWithOptionsAsync(namespace_, sessionClusterName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlFileResponse
+        /// </returns>
+        public UpdateSqlFileResponse UpdateSqlFileWithOptions(string namespace_, string sqlFileId, UpdateSqlFileRequest request, UpdateSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlFileId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSqlFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdateSqlFileHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlFileResponse
+        /// </returns>
+        public async Task<UpdateSqlFileResponse> UpdateSqlFileWithOptionsAsync(string namespace_, string sqlFileId, UpdateSqlFileRequest request, UpdateSqlFileHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSqlFile",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/sql-file/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sqlFileId),
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSqlFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlFileResponse
+        /// </returns>
+        public UpdateSqlFileResponse UpdateSqlFile(string namespace_, string sqlFileId, UpdateSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateSqlFileHeaders headers = new UpdateSqlFileHeaders();
+            return UpdateSqlFileWithOptions(namespace_, sqlFileId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a created SQL query script.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSqlFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSqlFileResponse
+        /// </returns>
+        public async Task<UpdateSqlFileResponse> UpdateSqlFileAsync(string namespace_, string sqlFileId, UpdateSqlFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdateSqlFileHeaders headers = new UpdateSqlFileHeaders();
+            return await UpdateSqlFileWithOptionsAsync(namespace_, sqlFileId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
