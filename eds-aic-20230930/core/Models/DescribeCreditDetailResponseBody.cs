@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public List<DescribeCreditDetailResponseBodyDataDetails> Details { get; set; }
             public class DescribeCreditDetailResponseBodyDataDetails : TeaModel {
+                [NameInMap("ApiKeyName")]
+                [Validation(Required=false)]
+                public string ApiKeyName { get; set; }
+
+                [NameInMap("CachedTokens")]
+                [Validation(Required=false)]
+                public long? CachedTokens { get; set; }
+
                 /// <summary>
                 /// <para>The time when the change occurred.</para>
                 /// 
@@ -47,11 +55,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 /// <para>The task description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>打开小红书</para>
+                /// <para>Open Xiaohongshu.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("InputTokens")]
+                [Validation(Required=false)]
+                public long? InputTokens { get; set; }
 
                 /// <summary>
                 /// <para>The instance ID.</para>
@@ -63,8 +75,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("InstanceName")]
+                [Validation(Required=false)]
+                public string InstanceName { get; set; }
+
+                [NameInMap("ModelId")]
+                [Validation(Required=false)]
+                public string ModelId { get; set; }
+
+                [NameInMap("OutputTokens")]
+                [Validation(Required=false)]
+                public long? OutputTokens { get; set; }
+
                 /// <summary>
-                /// <para>The credit or resource plan ID.</para>
+                /// <para>The ID of the credit or plan package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cmag-0c1g77wjljl9h****</para>
@@ -72,6 +96,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [NameInMap("PackageId")]
                 [Validation(Required=false)]
                 public string PackageId { get; set; }
+
+                [NameInMap("RequestId")]
+                [Validation(Required=false)]
+                public string RequestId { get; set; }
 
                 /// <summary>
                 /// <para>The task ID, which is globally unique.</para>
@@ -83,7 +111,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
 
+                [NameInMap("TotalTokens")]
+                [Validation(Required=false)]
+                public long? TotalTokens { get; set; }
+
             }
+
+            [NameInMap("NextToken")]
+            [Validation(Required=false)]
+            public string NextToken { get; set; }
 
             /// <summary>
             /// <para>The page number. Default value: 1.</para>

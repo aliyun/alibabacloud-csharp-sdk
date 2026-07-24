@@ -26,8 +26,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        [NameInMap("MaxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
-        /// <para>The list of resource plan or credit booster pack IDs.</para>
+        /// <para>The list of plan packages or credit top-up packages.</para>
         /// </summary>
         [NameInMap("PackageIds")]
         [Validation(Required=false)]

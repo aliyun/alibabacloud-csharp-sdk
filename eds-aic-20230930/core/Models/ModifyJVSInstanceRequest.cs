@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? ApplyToAll { get; set; }
 
         /// <summary>
-        /// <para>The credit limit configuration. New configurations overwrite existing ones.</para>
+        /// <para>The credit limit configuration. Subsequent configurations overwrite previous ones.</para>
         /// </summary>
         [NameInMap("CreditConfig")]
         [Validation(Required=false)]
@@ -37,7 +37,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public long? CreditLimit { get; set; }
 
             /// <summary>
-            /// <para>The credit limit period.</para>
+            /// <para>The dimension of the current credit. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>total: total usage limit.</description></item>
+            /// <item><description>month: monthly. The limit resets based on the resource activation time cycle.</description></item>
+            /// <item><description>day: daily. The limit resets at 00:00.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>day</para>
@@ -48,15 +53,19 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         }
 
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
         /// <summary>
-        /// <para>A list of instance IDs.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The new instance name.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>defaultInstanceName</para>

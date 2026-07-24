@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMobileAgentPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A list of packages.</para>
+        /// <para>The list of package information.</para>
         /// </summary>
         [NameInMap("PackageList")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The total package credit.</para>
+            /// <para>The credit quota of the package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8000</para>
@@ -97,8 +97,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PackageStatus { get; set; }
 
+            [NameInMap("PeriodEndTime")]
+            [Validation(Required=false)]
+            public string PeriodEndTime { get; set; }
+
+            [NameInMap("PeriodStartTime")]
+            [Validation(Required=false)]
+            public string PeriodStartTime { get; set; }
+
             /// <summary>
-            /// <para>The amount of credit used.</para>
+            /// <para>The number of credits that have been used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
