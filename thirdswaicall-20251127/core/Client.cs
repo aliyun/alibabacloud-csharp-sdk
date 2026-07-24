@@ -39,6 +39,158 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>发起实时外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCallOutboundInstantRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCallOutboundInstantResponse
+        /// </returns>
+        public CreateCallOutboundInstantResponse CreateCallOutboundInstantWithOptions(CreateCallOutboundInstantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
+            {
+                body["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
+            {
+                body["CustomerName"] = request.CustomerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptCall))
+            {
+                body["EncryptCall"] = request.EncryptCall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptVariables))
+            {
+                body["PromptVariables"] = request.PromptVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCallOutboundInstant",
+                Version = "2025-11-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCallOutboundInstantResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起实时外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCallOutboundInstantRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCallOutboundInstantResponse
+        /// </returns>
+        public async Task<CreateCallOutboundInstantResponse> CreateCallOutboundInstantWithOptionsAsync(CreateCallOutboundInstantRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
+            {
+                body["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerName))
+            {
+                body["CustomerName"] = request.CustomerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptCall))
+            {
+                body["EncryptCall"] = request.EncryptCall;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromptVariables))
+            {
+                body["PromptVariables"] = request.PromptVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateCallOutboundInstant",
+                Version = "2025-11-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateCallOutboundInstantResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起实时外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCallOutboundInstantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCallOutboundInstantResponse
+        /// </returns>
+        public CreateCallOutboundInstantResponse CreateCallOutboundInstant(CreateCallOutboundInstantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateCallOutboundInstantWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起实时外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateCallOutboundInstantRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateCallOutboundInstantResponse
+        /// </returns>
+        public async Task<CreateCallOutboundInstantResponse> CreateCallOutboundInstantAsync(CreateCallOutboundInstantRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateCallOutboundInstantWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询当前任务的并发数</para>
         /// </summary>
         /// 
