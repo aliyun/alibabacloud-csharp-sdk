@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConsumerName { get; set; }
 
         /// <summary>
-        /// <para>The cursor-based pagination token. This parameter takes priority over Page. Leave this parameter empty for the first call. For subsequent calls, use the NextCursor value returned in the previous response.</para>
+        /// <para>The cursor-based pagination token. This parameter takes priority over Page. Leave this parameter empty for the first request. For subsequent requests, use the NextCursor value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</para>

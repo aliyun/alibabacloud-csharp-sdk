@@ -9,27 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceAuthConfigRequest : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The list of authentication configurations.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<ModifyInstanceAuthConfigRequestConfigList> ConfigList { get; set; }
         public class ModifyInstanceAuthConfigRequestConfigList : TeaModel {
             /// <summary>
-            /// <para>The name of the configuration item. Valid values:</para>
+            /// <para>The configuration item name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>GOTRUE_EXTERNAL_EMAIL_ENABLED</b>: Enables external email addresses.</description></item>
-            /// <item><description><b>GOTRUE_SITE_URL</b>: The website URL displayed in emails sent by the AI application.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_PORT</b>: The port of the SMTP service provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_SENDER_NAME</b>: The name of the email sender.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_USER</b>: The username of the SMTP service provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_PASS</b>: The key of the SMTP service provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_ADMIN_EMAIL</b>: The email address of the SMTP service provider.</description></item>
-            /// <item><description><b>GOTRUE_SMTP_HOST</b>: The host address of the SMTP service provider.</description></item>
-            /// <item><description><b>GOTRUE_MAILER_AUTOCONFIRM</b>: Specifies whether automatic confirmation is enabled.</description></item>
-            /// <item><description><b>GOTRUE_MAILER_OTP_EXP</b>: The validity period of the one-time password (OTP), in seconds.</description></item>
-            /// <item><description><b>GOTRUE_MAILER_OTP_LENGTH</b>: The length of the verification code for the one-time password (OTP). The value must be an integer greater than or equal to 6.</description></item>
+            /// <item><description><b>GOTRUE_EXTERNAL_EMAIL_ENABLED</b>: specifies whether to allow external email addresses.</description></item>
+            /// <item><description><b>GOTRUE_SITE_URL</b>: the website URL displayed when the AI application sends emails.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_PORT</b>: the port of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_SENDER_NAME</b>: the name of the email sender.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_USER</b>: the username of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_PASS</b>: the secret key of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_ADMIN_EMAIL</b>: the email address of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_SMTP_HOST</b>: the host address of the SMTP provider.</description></item>
+            /// <item><description><b>GOTRUE_MAILER_AUTOCONFIRM</b>: specifies whether to enable automatic confirmation.</description></item>
+            /// <item><description><b>GOTRUE_MAILER_OTP_EXP</b>: the validity period of the one-time password (OTP). Unit: seconds.</description></item>
+            /// <item><description><b>GOTRUE_MAILER_OTP_LENGTH</b>: the length of the one-time password (OTP) verification code. The value must be an integer greater than or equal to 6.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>ModifyInstanceAuthConfig</b>.</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

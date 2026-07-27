@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeMOTokenUsageDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cursor for the next page. An empty value indicates the last page.</para>
+        /// <para>The cursor for the next page. An empty value indicates that the current page is the last page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</para>
@@ -40,12 +40,22 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of records returned.</para>
+        /// <para>The list of records in the response.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeMOTokenUsageDetailResponseBodyRecords> Records { get; set; }
         public class DescribeMOTokenUsageDetailResponseBodyRecords : TeaModel {
+            /// <summary>
+            /// <para>The number of input tokens that hit the cache.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8000</para>
+            /// </summary>
+            [NameInMap("CacheTokens")]
+            [Validation(Required=false)]
+            public double? CacheTokens { get; set; }
+
             /// <summary>
             /// <para>The consumer associated with the API key.</para>
             /// 
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query conditions.</para>
+        /// <para>The total number of records that match the query conditions. This parameter is optional and may not be returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

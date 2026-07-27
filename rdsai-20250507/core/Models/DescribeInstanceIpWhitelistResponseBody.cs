@@ -9,8 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceIpWhitelistResponseBody : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
+        [NameInMap("DbIpWhiteListGroups")]
+        [Validation(Required=false)]
+        public List<DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups> DbIpWhiteListGroups { get; set; }
+        public class DescribeInstanceIpWhitelistResponseBodyDbIpWhiteListGroups : TeaModel {
+            [NameInMap("GroupName")]
+            [Validation(Required=false)]
+            public string GroupName { get; set; }
+
+            [NameInMap("IpWhitelist")]
+            [Validation(Required=false)]
+            public string IpWhitelist { get; set; }
+
+        }
+
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
@@ -20,14 +38,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelists.</para>
+        /// <para>The IP whitelist groups.</para>
         /// </summary>
         [NameInMap("IpWhiteListGroups")]
         [Validation(Required=false)]
         public List<DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups> IpWhiteListGroups { get; set; }
         public class DescribeInstanceIpWhitelistResponseBodyIpWhiteListGroups : TeaModel {
             /// <summary>
-            /// <para>The IP address whitelist name.</para>
+            /// <para>The group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -37,7 +55,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses or CIDR blocks in the whitelist.</para>
+            /// <para>The list of IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XXX.XXX/24,10.0.XXX.XXX/24</para>

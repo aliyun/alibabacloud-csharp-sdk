@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends chat messages.</para>
+        /// <para>Sends a conversation message.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends chat messages.</para>
+        /// <para>Sends a conversation message.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends chat messages.</para>
+        /// <para>Sends a conversation message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends chat messages.</para>
+        /// <para>Sends a conversation message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -340,13 +340,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom API key.</para>
+        /// <para>Creates a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -412,13 +412,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom API key.</para>
+        /// <para>Creates a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -484,13 +484,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom API key.</para>
+        /// <para>Creates a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -508,13 +508,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom API key.</para>
+        /// <para>Creates a custom API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1184,6 +1184,190 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateInspectionTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMOUsageDetailExportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMOUsageDetailExportResponse
+        /// </returns>
+        public CreateMOUsageDetailExportResponse CreateMOUsageDetailExportWithOptions(CreateMOUsageDetailExportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
+            {
+                query["UsageType"] = request.UsageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMOUsageDetailExport",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMOUsageDetailExportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMOUsageDetailExportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMOUsageDetailExportResponse
+        /// </returns>
+        public async Task<CreateMOUsageDetailExportResponse> CreateMOUsageDetailExportWithOptionsAsync(CreateMOUsageDetailExportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                query["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
+            {
+                query["UsageType"] = request.UsageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMOUsageDetailExport",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMOUsageDetailExportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMOUsageDetailExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMOUsageDetailExportResponse
+        /// </returns>
+        public CreateMOUsageDetailExportResponse CreateMOUsageDetailExport(CreateMOUsageDetailExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMOUsageDetailExportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发 MO 用量明细 CSV 异步导出任务</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMOUsageDetailExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMOUsageDetailExportResponse
+        /// </returns>
+        public async Task<CreateMOUsageDetailExportResponse> CreateMOUsageDetailExportAsync(CreateMOUsageDetailExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMOUsageDetailExportWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1948,18 +2132,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an RDS Supabase instance.</para>
+        /// <para>Deletes an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable DPI engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: 该API操作涉及费用，请仔细阅读相关功能文档后再进行操作。
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: 删除RDS Supabase项目并不会自动删除在创建该项目时所生成的RDS PostgreSQL实例及开通的NAT网关，您需要<a href="https://help.aliyun.com/document_detail/96749.html">手动释放该实例</a>，并删除<a href="https://help.aliyun.com/document_detail/121139.html">公网NAT网关</a>和<a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>。</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -1980,6 +2164,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteDBInstance))
+            {
+                query["DeleteDBInstance"] = request.DeleteDBInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -2010,18 +2198,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an RDS Supabase instance.</para>
+        /// <para>Deletes an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable DPI engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: 该API操作涉及费用，请仔细阅读相关功能文档后再进行操作。
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: 删除RDS Supabase项目并不会自动删除在创建该项目时所生成的RDS PostgreSQL实例及开通的NAT网关，您需要<a href="https://help.aliyun.com/document_detail/96749.html">手动释放该实例</a>，并删除<a href="https://help.aliyun.com/document_detail/121139.html">公网NAT网关</a>和<a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>。</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2042,6 +2230,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteDBInstance))
+            {
+                query["DeleteDBInstance"] = request.DeleteDBInstance;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -2072,18 +2264,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an RDS Supabase instance.</para>
+        /// <para>Deletes an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable DPI engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: 该API操作涉及费用，请仔细阅读相关功能文档后再进行操作。
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: 删除RDS Supabase项目并不会自动删除在创建该项目时所生成的RDS PostgreSQL实例及开通的NAT网关，您需要<a href="https://help.aliyun.com/document_detail/96749.html">手动释放该实例</a>，并删除<a href="https://help.aliyun.com/document_detail/121139.html">公网NAT网关</a>和<a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>。</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2102,18 +2294,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an RDS Supabase instance.</para>
+        /// <para>Deletes an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable DPI engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <remarks>
-        /// <para>Warning: 该API操作涉及费用，请仔细阅读相关功能文档后再进行操作。
+        /// <para>Warning: This API operation incurs fees. Read the related feature documentation carefully before you perform this operation.
         /// <a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a>
-        /// Notice: 删除RDS Supabase项目并不会自动删除在创建该项目时所生成的RDS PostgreSQL实例及开通的NAT网关，您需要<a href="https://help.aliyun.com/document_detail/96749.html">手动释放该实例</a>，并删除<a href="https://help.aliyun.com/document_detail/121139.html">公网NAT网关</a>和<a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>。</para>
+        /// Notice: Deleting an RDS Supabase project does not automatically delete the ApsaraDB RDS for PostgreSQL instance or the Internet NAT gateway that were created with the project. You must <a href="https://help.aliyun.com/document_detail/96749.html">manual release the instance</a> and delete the <a href="https://help.aliyun.com/document_detail/121139.html">Internet NAT gateway</a> and <a href="https://help.aliyun.com/document_detail/121527.html">EIP</a>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2685,6 +2877,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -2739,6 +2935,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3357,6 +3557,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3411,6 +3615,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3492,14 +3700,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
+        /// <para>Queries the endpoint information of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3517,6 +3725,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3546,14 +3758,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
+        /// <para>Queries the endpoint information of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3571,6 +3783,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3600,14 +3816,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
+        /// <para>Queries the endpoint information of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3626,14 +3842,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an RDS Supabase instance.</para>
+        /// <para>Queries the endpoint information of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3652,14 +3868,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
+        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3677,6 +3893,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
@@ -3710,14 +3930,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
+        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3735,6 +3955,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
             {
                 query["GroupName"] = request.GroupName;
@@ -3768,14 +3992,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
+        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3794,14 +4018,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address whitelists of an RDS Supabase instance.</para>
+        /// <para>Queries the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3820,7 +4044,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3837,6 +4061,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3866,7 +4094,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3883,6 +4111,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -3912,7 +4144,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3930,7 +4162,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3948,14 +4180,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Queries the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -3973,6 +4205,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -4002,14 +4238,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Queries the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -4027,6 +4263,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -4056,14 +4296,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Queries the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -4082,14 +4322,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Queries the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -4108,17 +4348,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持对象存储OSS。</para>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4136,6 +4376,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -4165,17 +4409,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持对象存储OSS。</para>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4193,6 +4437,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -4222,17 +4470,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持对象存储OSS。</para>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4251,17 +4499,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Queries the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持对象存储OSS。</para>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -4286,7 +4534,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a>.</para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4374,7 +4622,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a>.</para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4462,7 +4710,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a>.</para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4486,7 +4734,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
-        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a>.</para>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4500,6 +4748,150 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMOTokenUsageDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOUsageDetailExportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOUsageDetailExportResponse
+        /// </returns>
+        public DescribeMOUsageDetailExportResponse DescribeMOUsageDetailExportWithOptions(DescribeMOUsageDetailExportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMOUsageDetailExport",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMOUsageDetailExportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOUsageDetailExportRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOUsageDetailExportResponse
+        /// </returns>
+        public async Task<DescribeMOUsageDetailExportResponse> DescribeMOUsageDetailExportWithOptionsAsync(DescribeMOUsageDetailExportRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMOUsageDetailExport",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMOUsageDetailExportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOUsageDetailExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOUsageDetailExportResponse
+        /// </returns>
+        public DescribeMOUsageDetailExportResponse DescribeMOUsageDetailExport(DescribeMOUsageDetailExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMOUsageDetailExportWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MO 用量明细 CSV 异步导出任务的状态/下载链接</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI 助手旗舰版</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMOUsageDetailExportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMOUsageDetailExportResponse
+        /// </returns>
+        public async Task<DescribeMOUsageDetailExportResponse> DescribeMOUsageDetailExportAsync(DescribeMOUsageDetailExportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMOUsageDetailExportWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4648,13 +5040,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves monitoring data for an RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4722,13 +5114,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves monitoring data for an RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4796,13 +5188,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves monitoring data for an RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4820,13 +5212,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves monitoring data for an RDS AI Assistant Ultimate Edition instance.</para>
+        /// <para>Queries instance monitoring data of an ApsaraDB RDS AI Assistant Ultimate Edition instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4844,14 +5236,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the sandbox templates you can use to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documents</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -4869,6 +5261,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -4918,14 +5314,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the sandbox templates you can use to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documents</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -4943,6 +5339,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -4992,14 +5392,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the sandbox templates you can use to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documents</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -5018,14 +5418,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the sandbox templates you can use to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Applicable engine</h3>
         /// <para>RDS Supabase</para>
-        /// <h3>Related documents</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -5188,14 +5588,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5213,6 +5613,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5246,14 +5650,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5271,6 +5675,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5304,14 +5712,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5330,14 +5738,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance. Note: This operation deletes all sandboxes and edge functions of the instance. Fully assess business risks before performing this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Disables the sandbox and edge function capabilities for a Supabase instance.</para>
+        /// <para>Disables the sandbox feature and Edge Routine capabilities for a Supabase instance.</para>
         /// <remarks>
-        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess the business risks before you proceed.</para>
+        /// <para>Notice: This operation deletes all sandboxes and edge functions of the Supabase instance. Fully assess business risks before performing this operation.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -5380,6 +5788,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5445,6 +5857,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -5696,7 +6112,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the history conversations of a user.</para>
+        /// <para>Queries the historical conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5750,7 +6166,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the history conversations of a user.</para>
+        /// <para>Queries the historical conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5804,7 +6220,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the history conversations of a user.</para>
+        /// <para>Queries the historical conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5822,7 +6238,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the history conversations of a user.</para>
+        /// <para>Queries the historical conversations of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6932,13 +7348,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Custom API Key</para>
+        /// <para>Queries custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">DAS Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6988,13 +7404,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Custom API Key</para>
+        /// <para>Queries custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">DAS Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7044,13 +7460,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Custom API Key</para>
+        /// <para>Queries custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">DAS Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7068,13 +7484,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Custom API Key</para>
+        /// <para>Queries custom API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported engines</h3>
-        /// <para><a href="https://help.aliyun.com/zh/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">DAS Enterprise Edition</a></para>
+        /// <h3>Applicable engine</h3>
+        /// <para><a href="https://www.alibabacloud.com/help/en/rds/apsaradb-rds-for-mysql/rds-copilot-ultra">RDS AI Assistant Ultimate Edition</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7787,6 +8203,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -7794,6 +8214,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
                 query["Components"] = request.ComponentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                query["InstanceClass"] = request.InstanceClass;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -7855,6 +8283,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -7862,6 +8294,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComponentsShrink))
             {
                 query["Components"] = request.ComponentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClass))
+            {
+                query["InstanceClass"] = request.InstanceClass;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -7944,14 +8384,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the authentication configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -7974,6 +8415,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigList, "ConfigList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigListShrink))
             {
                 query["ConfigList"] = request.ConfigListShrink;
@@ -8007,14 +8452,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the authentication configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8037,6 +8483,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigList, "ConfigList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigListShrink))
             {
                 query["ConfigList"] = request.ConfigListShrink;
@@ -8070,14 +8520,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the authentication configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8095,14 +8546,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the authentication configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the authentication configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Applicable Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8120,7 +8572,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
+        /// <para>Modifies the general configurations of an instance, such as network EIP and NAT configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8137,6 +8589,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8178,7 +8634,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
+        /// <para>Modifies the general configurations of an instance, such as network EIP and NAT configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8195,6 +8651,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8236,7 +8696,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
+        /// <para>Modifies the general configurations of an instance, such as network EIP and NAT configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8254,7 +8714,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the general configurations of an instance, such as the EIP and NAT settings.</para>
+        /// <para>Modifies the general configurations of an instance, such as network EIP and NAT configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8272,14 +8732,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
+        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8297,6 +8757,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8342,14 +8806,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
+        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8367,6 +8831,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8412,14 +8880,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
+        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8438,14 +8906,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the IP address whitelist of an RDS Supabase instance.</para>
+        /// <para>Modifies the IP whitelist of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8464,7 +8932,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8487,6 +8955,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigList, "ConfigList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8528,7 +9000,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8551,6 +9023,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigList, "ConfigList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8592,7 +9068,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8610,7 +9086,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the RAG agent configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the RAG Agent configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8628,14 +9104,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Modifies the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8653,6 +9129,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CAType))
             {
                 query["CAType"] = request.CAType;
@@ -8698,14 +9178,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Modifies the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8723,6 +9203,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CAType))
             {
                 query["CAType"] = request.CAType;
@@ -8768,14 +9252,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Modifies the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8794,14 +9278,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the SSL settings of an RDS Supabase instance.</para>
+        /// <para>Modifies the SSL configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -8820,14 +9304,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8850,6 +9338,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigList, "ConfigList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8887,14 +9379,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8917,6 +9413,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
                 request.ConfigListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ConfigList, "ConfigList", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -8954,14 +9454,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -8979,14 +9483,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the storage configurations of an RDS Supabase instance.</para>
+        /// <para>Modifies the storage configuration of an RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Supported Engine</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>Related Function Documentation</h3>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// <remarks>
+        /// <para>Currently, only Object Storage Service (OSS) is supported.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -10184,7 +10692,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
+        /// <para>重置RDS AI实例的Keys</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10193,8 +10701,168 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para>RDS PostgreSQL</para>
         /// <h3>相关功能文档</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetInstanceKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetInstanceKeysResponse
+        /// </returns>
+        public ResetInstanceKeysResponse ResetInstanceKeysWithOptions(ResetInstanceKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetInstanceKeys",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetInstanceKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置RDS AI实例的Keys</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>相关功能文档</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetInstanceKeysRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetInstanceKeysResponse
+        /// </returns>
+        public async Task<ResetInstanceKeysResponse> ResetInstanceKeysWithOptionsAsync(ResetInstanceKeysRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetInstanceKeys",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetInstanceKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置RDS AI实例的Keys</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>相关功能文档</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetInstanceKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetInstanceKeysResponse
+        /// </returns>
+        public ResetInstanceKeysResponse ResetInstanceKeys(ResetInstanceKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetInstanceKeysWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置RDS AI实例的Keys</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>适用引擎</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>相关功能文档</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetInstanceKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetInstanceKeysResponse
+        /// </returns>
+        public async Task<ResetInstanceKeysResponse> ResetInstanceKeysAsync(ResetInstanceKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetInstanceKeysWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Applicable engine</h3>
+        /// <para>RDS PostgreSQL</para>
+        /// <h3>Related documentation</h3>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持修改RDS Supabase Dashboard用户的密码。</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10212,6 +10880,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardPassword))
             {
                 query["DashboardPassword"] = request.DashboardPassword;
@@ -10249,17 +10921,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
+        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持修改RDS Supabase Dashboard用户的密码。</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10277,6 +10949,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DashboardPassword))
             {
                 query["DashboardPassword"] = request.DashboardPassword;
@@ -10314,17 +10990,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
+        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持修改RDS Supabase Dashboard用户的密码。</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10343,17 +11019,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the logon password of the RDS Supabase instance and the access password of the database.</para>
+        /// <para>Resets the logon password and database access password of an ApsaraDB RDS AI application instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// <remarks>
-        /// <para>当前仅支持修改RDS Supabase Dashboard用户的密码。</para>
+        /// <para>Currently, only the password of the RDS Supabase Dashboard user can be reset.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10372,14 +11048,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
+        /// <para>Restarts an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10397,6 +11073,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -10426,14 +11106,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
+        /// <para>Restarts an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10451,6 +11131,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -10480,14 +11164,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
+        /// <para>Restarts an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10506,14 +11190,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts an RDS Supabase instance that is in the Running state.</para>
+        /// <para>Restarts an ApsaraDB RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10532,14 +11216,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a stopped RDS Supabase instance.</para>
+        /// <para>Starts an RDS AI application instance that is in the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10557,6 +11241,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -10586,14 +11274,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a stopped RDS Supabase instance.</para>
+        /// <para>Starts an RDS AI application instance that is in the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10611,6 +11299,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -10640,14 +11332,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a stopped RDS Supabase instance.</para>
+        /// <para>Starts an RDS AI application instance that is in the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10666,14 +11358,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a stopped RDS Supabase instance.</para>
+        /// <para>Starts an RDS AI application instance that is in the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related feature documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10692,14 +11384,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running RDS Supabase instance.</para>
+        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10717,6 +11409,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
@@ -10750,14 +11446,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running RDS Supabase instance.</para>
+        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10775,6 +11471,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchName))
+            {
+                query["BranchName"] = request.BranchName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
             {
                 query["Force"] = request.Force;
@@ -10808,14 +11508,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running RDS Supabase instance.</para>
+        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
@@ -10834,14 +11534,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a running RDS Supabase instance.</para>
+        /// <para>Pauses an RDS AI application instance that is in the Running state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>适用引擎</h3>
+        /// <h3>Applicable engine</h3>
         /// <para>RDS PostgreSQL</para>
-        /// <h3>相关功能文档</h3>
+        /// <h3>Related documentation</h3>
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 

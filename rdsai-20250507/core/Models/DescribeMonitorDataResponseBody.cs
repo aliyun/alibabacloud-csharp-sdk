@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeMonitorDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>An array of data points for the metric.</para>
+            /// <para>The metric details.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<DescribeMonitorDataResponseBodyDataValue> Value { get; set; }
             public class DescribeMonitorDataResponseBodyDataValue : TeaModel {
                 /// <summary>
-                /// <para>The timestamp of the data point.</para>
+                /// <para>The point in time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1774972800</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// <para>The value of the metric at the specified timestamp.</para>
+                /// <para>The returned value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeSandboxTemplatesRequest : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved.</para>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token used to retrieve the next page of results. You do not need to specify this parameter for the first request.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gAAAAABo-D-ze1Zog63nWMa8eDDMkqUoBB5-FDsHDUMiNIDSDZeP9g0LwJEozulOPG_LbsGwLRgmDFvTHZeSU90YsukT0pHtnA==</para>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the sandbox template.</para>
+        /// <para>The sandbox template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-interpreter</para>

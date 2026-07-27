@@ -8,15 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
-    public class DescribeInstanceSSLRequest : TeaModel {
-        [NameInMap("BranchName")]
-        [Validation(Required=false)]
-        public string BranchName { get; set; }
-
+    public class ResetInstanceKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the AI application.</para>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
@@ -25,14 +18,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>cn-beijing</para>
+        /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

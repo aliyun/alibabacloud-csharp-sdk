@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListApiKeysResponseBodyData Data { get; set; }
         public class ListApiKeysResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The base URL for model calls.</para>
+            /// <para>The URL for model invocation.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string BaseUrl { get; set; }
 
             /// <summary>
-            /// <para>The custom API key list.</para>
+            /// <para>The list of custom API keys.</para>
             /// </summary>
             [NameInMap("CustomKeyList")]
             [Validation(Required=false)]
             public List<ListApiKeysResponseBodyDataCustomKeyList> CustomKeyList { get; set; }
             public class ListApiKeysResponseBodyDataCustomKeyList : TeaModel {
                 /// <summary>
-                /// <para>The API key.</para>
+                /// <para>API Key</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sk-rds-*****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? DailyTokenQuota { get; set; }
 
                 /// <summary>
-                /// <para>Specifies if the API key is rate-limited.</para>
+                /// <para>Indicates whether the key is throttled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public bool? IsRateLimited { get; set; }
 
                 /// <summary>
-                /// <para>The key name.</para>
+                /// <para>The name of the API key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>The limit, specified as a ratio in decimal format. This parameter is used when LimitType is ratio.</para>
+                /// <para>The quota ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.2</para>
@@ -82,14 +82,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The limit type. Valid values:</para>
+                /// <para>The quota type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>fixed</b>: A fixed value.</para>
-                /// </description></item>
-                /// <item><description><para><b>ratio</b>: A percentage of the total quota.</para>
-                /// </description></item>
-                /// <item><description><para><b>auto</b>: The quota is allocated automatically.</para>
-                /// </description></item>
+                /// <item><description><b>fixed</b>: fixed value.</description></item>
+                /// <item><description><b>ratio</b>: percentage.</description></item>
+                /// <item><description><b>auto</b>: automatic allocation.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +97,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string LimitType { get; set; }
 
                 /// <summary>
-                /// <para>The alarm threshold percentage. For example, a value of 80 indicates that an alarm is triggered when usage reaches 80% of the quota. The alarm clears when usage falls below this threshold.</para>
+                /// <para>The alert threshold percentage. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -110,7 +107,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public int? ThresholdPercent { get; set; }
 
                 /// <summary>
-                /// <para>The token quota.</para>
+                /// <para>The quota of the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -130,7 +127,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? DailyTokenQuota { get; set; }
 
             /// <summary>
-            /// <para>Specifies if the system-generated key is rate-limited.</para>
+            /// <para>Indicates whether the key is throttled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -150,7 +147,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -170,7 +167,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string SystemApiKey { get; set; }
 
             /// <summary>
-            /// <para>The alarm threshold percentage for the SystemApiKey. For example, a value of 80 indicates that an alarm is triggered when usage reaches 80% of the quota. The alarm clears when usage falls below this threshold.</para>
+            /// <para>The alert threshold percentage for SystemApiKey. For example, 80 indicates that an alert is triggered when the usage reaches 80%. The alert is reset when the usage drops below this percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -180,7 +177,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public int? ThresholdPercent { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>138</para>
@@ -202,7 +199,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
@@ -212,7 +209,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the request succeeded.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

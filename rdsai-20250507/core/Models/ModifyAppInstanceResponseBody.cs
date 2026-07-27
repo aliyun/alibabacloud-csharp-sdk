@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyAppInstanceResponseBody : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<ModifyAppInstanceResponseBodyComponents> Components { get; set; }

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceConfigResponseBody : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         /// <summary>
         /// <para>Id of the request</para>
         /// 

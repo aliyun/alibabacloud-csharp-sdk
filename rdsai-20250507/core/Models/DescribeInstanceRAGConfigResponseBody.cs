@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceRAGConfigResponseBody : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The RAG agent configurations.</para>
+        /// <para>The list of RAG Agent configurations.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
@@ -59,10 +63,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the RAG agent.</para>
+        /// <para>The RAG Agent status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: RAG agent is enabled.</description></item>
-        /// <item><description><b>false</b>: RAG agent is disabled.</description></item>
+        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><b>false</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

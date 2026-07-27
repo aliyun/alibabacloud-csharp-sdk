@@ -9,8 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ResetInstancePasswordRequest : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The Supabase Dashboard password.</para>
+        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_Password</para>
@@ -20,8 +25,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard password.</para>
-        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following types: uppercase letters, lowercase letters, digits, and underscores (_).</para>
+        /// <para>The RDS database access password.</para>
+        /// <para>The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and underscores (_).</para>
+        /// <remarks>
+        /// <para>Notice: This password change also updates the access passwords of the following accounts on the associated PostgreSQL instance. These accounts are required by Supabase: postgres, supabase_admin, supabase_auth_admin, supabase_functions_admin, supabase_storage_admin, authenticator, pgbouncer.
+        /// </notice></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>test_Password</para>
@@ -31,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string DatabasePassword { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>ResetInstancePassword</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

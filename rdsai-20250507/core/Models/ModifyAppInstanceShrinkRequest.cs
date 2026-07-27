@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyAppInstanceShrinkRequest : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,6 +24,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("Components")]
         [Validation(Required=false)]
         public string ComponentsShrink { get; set; }
+
+        [NameInMap("DBInstanceName")]
+        [Validation(Required=false)]
+        public string DBInstanceName { get; set; }
+
+        [NameInMap("InstanceClass")]
+        [Validation(Required=false)]
+        public string InstanceClass { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

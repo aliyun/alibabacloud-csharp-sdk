@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ChatMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content of the generated answer.</para>
+        /// <para>The answer content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>您询问的实例rm-bp14as9914vd3**** 磁盘使用率为23%，暂时不需要进行扩容。如果您需要进一步查看某个实例的详细配置、性能监控或进行其他操作，请告诉我你的具体需求！</para>
+        /// <para>The disk usage of instance rm-bp14as9914vd3**** is 23%, and capacity expansion is not required at this time. If you need to view the detailed configuration or performance monitoring of an instance, or perform other operations, let me know your specific requirements!</para>
         /// </summary>
         [NameInMap("Answer")]
         [Validation(Required=false)]
         public string Answer { get; set; }
 
         /// <summary>
-        /// <para>The ID of the conversation.</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9cbbe885-b240-4803-9d15-6781a3fd****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>The time when the message was created. This value is a UNIX timestamp.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1763986004</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The event associated with the message.</para>
+        /// <para>The event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MysqlIOException</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message, which is distinct from <c>MessageId</c>.</para>
+        /// <para>The message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60b335ca-124d-4ee1-864b-de554987****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the message.</para>
+        /// <para>The message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oas8pwy2-slxw-sf98-bx83-cb2hkktl****</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>The query mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>以后会下线，不用关注。</para>
+        /// <para>This field will be deprecated. Ignore it.</para>
         /// </summary>
         [NameInMap("Mode")]
         [Validation(Required=false)]
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task.</para>
+        /// <para>The asynchronous task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01c3d43d-9466-4bd5-8196-4cbbce08****</para>

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceStorageConfigRequest : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The value of the configuration item.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which ensures that the request is not repeated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The list of storage configurations.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
@@ -29,13 +33,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <summary>
             /// <para>The name of the configuration item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AWS_SESSION_TOKEN</b> (optional): The temporary session token for OSS. If this parameter is not provided, validation is performed using the AccessKey ID and AccessKey secret.</description></item>
-            /// <item><description><b>AWS_ACCESS_KEY_ID</b>: The AccessKey ID for OSS.</description></item>
-            /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: The AccessKey secret for OSS.</description></item>
-            /// <item><description><b>GLOBAL_S3_BUCKET</b>: The bucket name in OSS.</description></item>
-            /// <item><description><b>TENANT_ID</b>: The folder name in OSS. No manual creation is required.</description></item>
-            /// <item><description><b>GLOBAL_S3_ENDPOINT</b>: The endpoint (access domain name) for OSS.</description></item>
-            /// <item><description><b>REGION</b>: The region of OSS.</description></item>
+            /// <item><description><b>AWS_SESSION_TOKEN</b> (optional): the temporary access token (Session Token) for OSS. If this parameter is not specified, AccessKey ID and AccessKey Secret are used for authentication.</description></item>
+            /// <item><description><b>AWS_ACCESS_KEY_ID</b>: the AccessKey ID for OSS.</description></item>
+            /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: the AccessKey Secret for OSS.</description></item>
+            /// <item><description><b>GLOBAL_S3_BUCKET</b>: the bucket name of OSS.</description></item>
+            /// <item><description><b>TENANT_ID</b>: the OSS directory name. You do not need to create it in advance.</description></item>
+            /// <item><description><b>GLOBAL_S3_ENDPOINT</b>: the endpoint of OSS.</description></item>
+            /// <item><description><b>REGION</b>: the region of OSS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>ModifyInstanceStorageConfig</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

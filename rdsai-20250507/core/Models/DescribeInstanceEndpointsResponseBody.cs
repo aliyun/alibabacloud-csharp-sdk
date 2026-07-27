@@ -9,15 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceEndpointsResponseBody : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The information about the endpoints of the RDS instance.</para>
+        /// <para>The endpoints of the database instance.</para>
         /// </summary>
         [NameInMap("DBInstanceEndpoints")]
         [Validation(Required=false)]
         public List<DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints> DBInstanceEndpoints { get; set; }
         public class DescribeInstanceEndpointsResponseBodyDBInstanceEndpoints : TeaModel {
             /// <summary>
-            /// <para>The endpoint of the RDS instance.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pgm-xxxx.rds.aliyuncs.com</para>
@@ -27,10 +31,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The network type of the RDS instance. Valid values:</para>
+            /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>public</b>: Internet</description></item>
-            /// <item><description><b>vpc</b>: VPC</description></item>
+            /// <item><description><b>public</b>: Internet.</description></item>
+            /// <item><description><b>vpc</b>: private network.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string IpType { get; set; }
 
             /// <summary>
-            /// <para>The port used to access the RDS instance.</para>
+            /// <para>The connection port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5432</para>
@@ -53,14 +57,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The information about the endpoints of the RDS Supabase instance.</para>
+        /// <para>The endpoints of the AI application instance.</para>
         /// </summary>
         [NameInMap("InstanceEndpoints")]
         [Validation(Required=false)]
         public List<DescribeInstanceEndpointsResponseBodyInstanceEndpoints> InstanceEndpoints { get; set; }
         public class DescribeInstanceEndpointsResponseBodyInstanceEndpoints : TeaModel {
             /// <summary>
-            /// <para>The endpoint of the RDS Supabase instance.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.152.XXX.XXX:8000</para>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The IP address used to access the RDS Supabase instance.</para>
+            /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.152.XXX.XXX</para>
@@ -80,10 +84,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The network type of the RDS Supabase instance. Valid values:</para>
+            /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>public</b>: Internet</description></item>
-            /// <item><description><b>vpc</b>: VPC</description></item>
+            /// <item><description><b>public</b>: Internet.</description></item>
+            /// <item><description><b>vpc</b>: private network.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +98,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string IpType { get; set; }
 
             /// <summary>
-            /// <para>The port used to access the RDS Supabase instance.</para>
+            /// <para>The connection port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8000</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>

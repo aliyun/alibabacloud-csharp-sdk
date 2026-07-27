@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string AppType { get; set; }
 
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
+        [NameInMap("BranchingEnabled")]
+        [Validation(Required=false)]
+        public string BranchingEnabled { get; set; }
+
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<DescribeAppInstanceAttributeResponseBodyComponents> Components { get; set; }
@@ -44,7 +52,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The instance ID of the ApsaraDB RDS for PostgreSQL database to which the AI application is connected.</para>
+        /// <para>The instance ID of the RDS PostgreSQL database to which the AI application is connected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pgm-2ze49qv594vi****</para>

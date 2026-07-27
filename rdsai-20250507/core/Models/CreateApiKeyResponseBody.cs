@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateApiKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateApiKeyResponseBodyData Data { get; set; }
         public class CreateApiKeyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint for model invocation.</para>
+            /// <para>The URL for model invocation.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public List<CreateApiKeyResponseBodyDataCustomKeyList> CustomKeyList { get; set; }
             public class CreateApiKeyResponseBodyDataCustomKeyList : TeaModel {
                 /// <summary>
-                /// <para>The API key.</para>
+                /// <para>Api Key</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sk-rds-*****</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? DailyTokenQuota { get; set; }
 
                 /// <summary>
-                /// <para>The API key name.</para>
+                /// <para>The name of the API key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>The quota ratio. This parameter takes effect only when <b>LimitType</b> is set to <b>ratio</b>.</para>
+                /// <para>The quota percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.2</para>
@@ -68,13 +68,13 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public float? LimitRate { get; set; }
 
                 /// <summary>
-                /// <para>The quota allocation method. Valid values:</para>
+                /// <para>The quota type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>fixed</b>: The quota is a fixed value.</para>
+                /// <item><description><para><b>fixed</b>: by fixed value.</para>
                 /// </description></item>
-                /// <item><description><para><b>ratio</b>: The quota is specified as a ratio of the total available resources.</para>
+                /// <item><description><para><b>ratio</b>: by percentage.</para>
                 /// </description></item>
-                /// <item><description><para><b>auto</b>: The quota is automatically allocated.</para>
+                /// <item><description><para><b>auto</b>: automatic allocation.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string LimitType { get; set; }
 
                 /// <summary>
-                /// <para>The token quota for the API key.</para>
+                /// <para>The quota for the current key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The system-generated API key.</para>
+            /// <para>The system-generated key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-rds-xxx</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetConversationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned results.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetConversationsResponseBodyData> Data { get; set; }
         public class GetConversationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The creation time of the conversation.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1764055092</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The ID of the history conversation.</para>
+            /// <para>The ID of the historical conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60b335ca-124d-4ee1-864b-de554987****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The introduction to the conversation.</para>
+            /// <para>The conversation introduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试搜索RDS资源</para>
@@ -46,8 +46,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Introduction { get; set; }
 
+            [NameInMap("IsRunning")]
+            [Validation(Required=false)]
+            public bool? IsRunning { get; set; }
+
             /// <summary>
-            /// <para>The name of the history conversation.</para>
+            /// <para>The name of the historical conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>搜索RDS资源。</para>
@@ -56,10 +60,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("UpdatedAt")]
+            [Validation(Required=false)]
+            public string UpdatedAt { get; set; }
+
         }
 
         /// <summary>
-        /// <para>Indicates whether the current page is followed by a page.</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -69,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string HasMore { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

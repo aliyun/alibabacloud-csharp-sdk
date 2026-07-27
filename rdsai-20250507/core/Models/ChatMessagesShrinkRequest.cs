@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ChatMessagesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the conversation.</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fea7bdca-e848-44dd-b1ae-852472b8****</para>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string EventMode { get; set; }
 
         /// <summary>
-        /// <para>The inputs for the task.</para>
+        /// <para>The task inputs.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
         public string InputsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent message.</para>
+        /// <para>The parent message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>84dc9f9b-424a-404d-9c36-35e9d000****</para>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ParentMessageId { get; set; }
 
         /// <summary>
-        /// <para>The content of the query.</para>
+        /// <para>The query content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>实例rm-bp14as9914vd3**** 磁盘使用率，是否需要进行扩容</para>
+        /// <para>The disk usage of instance rm-bp14as9914vd3****. Is capacity expansion required?</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]

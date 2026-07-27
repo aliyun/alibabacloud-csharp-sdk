@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ModifyInstanceConfigRequest : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The idempotency parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The name of the configuration item to modify. This parameter is used together with ConfigValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip、nat</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConfigName { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration item that you want to modify. Configure this parameter together with the ConfigValue parameter.</para>
+        /// <para>The value of the configuration item to modify. This parameter is used together with ConfigName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on、off</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>ModifyInstanceConfig</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

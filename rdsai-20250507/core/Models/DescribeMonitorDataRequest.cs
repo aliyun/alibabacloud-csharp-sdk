@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The names of the API keys to use for filtering the data. If this parameter is not specified, data from all keys is returned.</para>
+        /// <para>The API key name.</para>
         /// </summary>
         [NameInMap("ApiKeyName")]
         [Validation(Required=false)]
         public List<string> ApiKeyName { get; set; }
 
         /// <summary>
-        /// <para>The end of the query time range, specified as a Unix timestamp in seconds.</para>
+        /// <para>The end time. Format: Timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The aggregation interval for monitoring data, in seconds. Default: 15.</para>
+        /// <para>The statistical period. Default value: 15s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -48,19 +48,23 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The metric to query. Valid values:</para>
+        /// <para>The metric to query.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>pv</c></para>
+        /// <item><description><para>pv</para>
         /// </description></item>
-        /// <item><description><para><c>uv</c></para>
+        /// <item><description><para>uv</para>
         /// </description></item>
-        /// <item><description><para><c>qps</c></para>
+        /// <item><description><para>qps</para>
         /// </description></item>
-        /// <item><description><para><c>success_rate</c></para>
+        /// <item><description><para>success_rate</para>
         /// </description></item>
-        /// <item><description><para><c>rt</c></para>
+        /// <item><description><para>rt</para>
         /// </description></item>
-        /// <item><description><para><c>rate_limited_count</c></para>
+        /// <item><description><para>rate_limited_count</para>
+        /// </description></item>
+        /// <item><description><para>tpm</para>
+        /// </description></item>
+        /// <item><description><para>cache</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The start of the query time range, specified as a Unix timestamp in seconds.</para>
+        /// <para>The start time. Format: Timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteAppInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. The client generates the value of this parameter to prevent duplicate requests from being submitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ETnLKlblzczshOTUbOCz****</para>
@@ -20,7 +20,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Specifies whether to delete the corresponding database instance.</para>
+        /// </summary>
+        [NameInMap("DeleteDBInstance")]
+        [Validation(Required=false)]
+        public bool? DeleteDBInstance { get; set; }
+
+        /// <summary>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to <b>DeleteAppInstance</b>.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? DailyTokenQuota { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The API key name.</para>
+        /// <para>The name of the API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>api-*****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string KeyName { get; set; }
 
         /// <summary>
-        /// <para>The proportion of the total quota to allocate. This parameter applies only when <c>LimitType</c> is set to <c>ratio</c>.</para>
+        /// <para>The quota percentage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.2</para>
@@ -48,14 +48,11 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public double? LimitRate { get; set; }
 
         /// <summary>
-        /// <para>The limit type. Valid values:</para>
+        /// <para>The quota type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ratio</c>: Sets the limit as a ratio of the total available quota.</para>
-        /// </description></item>
-        /// <item><description><para><c>fixed</c>: Sets the limit to a fixed number of tokens.</para>
-        /// </description></item>
-        /// <item><description><para><c>auto</c>: Automatically allocates the quota.</para>
-        /// </description></item>
+        /// <item><description>ratio: by percentage.</description></item>
+        /// <item><description>fixed: by fixed value.</description></item>
+        /// <item><description>auto: automatic allocation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +73,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>The fixed token quota for the API key. This parameter applies only when <c>LimitType</c> is set to <c>fixed</c>.</para>
+        /// <para>The quota for the current key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>

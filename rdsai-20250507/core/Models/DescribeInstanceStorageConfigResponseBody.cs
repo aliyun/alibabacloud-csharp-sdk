@@ -9,21 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeInstanceStorageConfigResponseBody : TeaModel {
+        [NameInMap("BranchName")]
+        [Validation(Required=false)]
+        public string BranchName { get; set; }
+
         /// <summary>
-        /// <para>The storage configurations.</para>
+        /// <para>The list of storage configurations.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<DescribeInstanceStorageConfigResponseBodyConfigList> ConfigList { get; set; }
         public class DescribeInstanceStorageConfigResponseBodyConfigList : TeaModel {
             /// <summary>
-            /// <para>The configuration item name. Valid values:</para>
+            /// <para>The name of the configuration item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AWS_SESSION_TOKEN</b>: temporary OSS access token (session token).</description></item>
+            /// <item><description><b>AWS_SESSION_TOKEN</b>: the temporary access token (Session Token) of OSS.</description></item>
             /// <item><description><b>AWS_ACCESS_KEY_ID</b>: the AccessKey ID of OSS.</description></item>
-            /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: the AccessKey secret of OSS.</description></item>
-            /// <item><description><b>GLOBAL_S3_BUCKET</b>: the name of the OSS bucket.</description></item>
-            /// <item><description><b>TENANT_ID</b>: the tenant ID of the OSS Prefix (prefix or directory).</description></item>
+            /// <item><description><b>AWS_SECRET_ACCESS_KEY</b>: the AccessKey Secret of OSS.</description></item>
+            /// <item><description><b>GLOBAL_S3_BUCKET</b>: the bucket name of OSS.</description></item>
+            /// <item><description><b>TENANT_ID</b>: the tenant ID of the OSS prefix (prefix or directory).</description></item>
             /// <item><description><b>GLOBAL_S3_ENDPOINT</b>: the endpoint of OSS.</description></item>
             /// <item><description><b>REGION</b>: the region of OSS.</description></item>
             /// </list>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
+        /// <para>The instance ID of the AI application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ra-supabase-8moov5lxba****</para>
