@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>
+        /// <para>8abcb91f-d266-4073-b907-2ed67****1</para>
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]

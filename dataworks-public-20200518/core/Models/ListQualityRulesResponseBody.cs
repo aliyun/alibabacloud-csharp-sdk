@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of retrieved rules.</para>
+        /// <para>The paginated list of quality rules.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// <para>The number of entries per page. A valid value is 1 to 100. Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The details of the validation rule.</para>
+            /// <para>The details of the quality rule.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -46,8 +46,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: The monitoring rule is a strong rule.</description></item>
-                /// <item><description>0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</description></item>
+                /// <item><description><para><c>1</c>: The monitoring rule is a strong rule.</para>
+                /// </description></item>
+                /// <item><description><para><c>0</c>: The monitoring rule is a weak rule.
+                /// You can specify a monitoring rule as a strong rule based on your business requirements. If a strong rule is triggered, a critical alert is reported and the scheduling of the task is blocked.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</para>
+                /// <para>The threshold for a critical alert. The threshold specifies the deviation of a monitoring result from the expected value. You can customize the threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, the scheduling of the task is blocked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>40</para>
@@ -108,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ExpectValue { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the monitoring is performed based on a fixed value.</para>
+                /// <para>Indicates whether a fixed value is used for the check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -138,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string HistoryWarningThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The monitoring rule ID.</para>
+                /// <para>The ID of the monitoring rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1234</para>
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string MatchExpression { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the task that is associated with the partition filter expression.</para>
+                /// <para>The ID of the method used to collect sample data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21</para>
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? MethodId { get; set; }
 
                 /// <summary>
-                /// <para>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</para>
+                /// <para>The name of the method used to collect sample data, such as <c>avg</c>, <c>count</c>, <c>sum</c>, <c>min</c>, <c>max</c>, <c>count_distinct</c>, <c>user_defined</c>, <c>table_count</c>, <c>table_size</c>, <c>table_dt_load_count</c>, <c>table_dt_refuseload_count</c>, <c>null_value</c>, <c>null_value/table_count</c>, <c>(table_count-count_distinct)/table_count</c>, or <c>table_count-count_distinct</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>count/table_count</para>
@@ -178,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string MethodName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Alibaba Cloud account that is used to configure the monitoring rule.</para>
+                /// <para>The ID of the Alibaba Cloud account that is used to configure the monitoring rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1912****</para>
@@ -218,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Property { get; set; }
 
                 /// <summary>
-                /// <para>The field that is used to associate with monitoring rules at the frontend. This parameter can be ignored.</para>
+                /// <para>This parameter is not used. You can ignore this parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table_count</para>
@@ -228,7 +231,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the task that is associated with the partition filter expression.</para>
+                /// <para>The internal association ID for the rule details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>132323</para>
@@ -248,11 +251,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>Rule type:</para>
+                /// <para>The type of the monitoring rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: System template rule</description></item>
-                /// <item><description>1: Custom SQL rule</description></item>
-                /// <item><description>1: Custom template rule</description></item>
+                /// <item><description><para><c>0</c>: The monitoring rule is created by the system.</para>
+                /// </description></item>
+                /// <item><description><para><c>1</c>: The monitoring rule is created by a user.</para>
+                /// </description></item>
+                /// <item><description><para><c>2</c>: The monitoring rule is a workspace-level rule.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -303,7 +309,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Trend { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</para>
+                /// <para>The threshold for a warning alert. The threshold specifies the deviation of a monitoring result from the expected value. You can customize the threshold based on your business requirements.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -357,7 +363,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can troubleshoot errors based on the ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38cbdef0-f6cf-49****</para>
@@ -369,8 +375,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

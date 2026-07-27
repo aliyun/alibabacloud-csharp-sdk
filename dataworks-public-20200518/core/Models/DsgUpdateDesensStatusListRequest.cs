@@ -10,6 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUpdateDesensStatusListRequest : TeaModel {
         /// <summary>
+        /// <para>The switch status. Valid values:
+        /// 1: enabled
+        /// 0: disabled</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? DesensStatus { get; set; }
 
         /// <summary>
+        /// <para>The list of switch IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]

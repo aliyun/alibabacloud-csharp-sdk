@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The metric type in the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Heartbeat</description></item>
-        /// <item><description>FailoverCount</description></item>
-        /// <item><description>Delay</description></item>
+        /// <item><description><para>Heartbeat</para>
+        /// </description></item>
+        /// <item><description><para>FailoverCount</para>
+        /// </description></item>
+        /// <item><description><para>Delay</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,8 +95,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The severity level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Warning</description></item>
-                /// <item><description>Critical</description></item>
+                /// <item><description><para>Warning</para>
+                /// </description></item>
+                /// <item><description><para>Critical</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -116,8 +121,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The recipient type. Valid values: AliyunUid and DingToken.</para>
                 /// <list type="bullet">
-                /// <item><description>If the alert notification method is Mail, Phone, or Sms, set this parameter to <b>AliyunUid</b>, which specifies the Alibaba Cloud account ID.</description></item>
-                /// <item><description>If the alert notification method is Ding, set this parameter to <b>DingToken</b>, which indicates the DingTalk chatbot token.</description></item>
+                /// <item><description><para>If the alert notification method is Mail, Phone, or Sms, set this parameter to <b>AliyunUid</b>, which specifies the Alibaba Cloud account ID.</para>
+                /// </description></item>
+                /// <item><description><para>If the alert notification method is Ding, set this parameter to <b>DingToken</b>, which indicates the DingTalk chatbot token.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -159,8 +166,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The severity level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Warning</description></item>
-            /// <item><description>Critical</description></item>
+            /// <item><description><para>Warning</para>
+            /// </description></item>
+            /// <item><description><para>Critical</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,9 +182,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The alert threshold.</para>
             /// <list type="bullet">
-            /// <item><description>If the alert rule is for task status, you do not need to specify a threshold.</description></item>
-            /// <item><description>If the alert rule is for failovers, specify the number of failovers.</description></item>
-            /// <item><description>If the alert rule is for latency, the threshold is the latency duration, in seconds.</description></item>
+            /// <item><description><para>If the alert rule is for task status, you do not need to specify a threshold.</para>
+            /// </description></item>
+            /// <item><description><para>If the alert rule is for failovers, specify the number of failovers.</para>
+            /// </description></item>
+            /// <item><description><para>If the alert rule is for latency, the threshold is the latency duration, in seconds.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The description of the synchronization task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Synchronize mysql to hologres</para>
+        /// <para>Synchronize MySQL to Hologres</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

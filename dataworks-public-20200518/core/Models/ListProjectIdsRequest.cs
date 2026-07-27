@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>171111</para>
+        /// <para>139699392458****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

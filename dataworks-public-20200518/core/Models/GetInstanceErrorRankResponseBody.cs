@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceErrorRankResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ranking data of nodes on which errors occurred.</para>
+        /// <para>The error ranking data of nodes.</para>
         /// </summary>
         [NameInMap("InstanceErrorRank")]
         [Validation(Required=false)]
         public GetInstanceErrorRankResponseBodyInstanceErrorRank InstanceErrorRank { get; set; }
         public class GetInstanceErrorRankResponseBodyInstanceErrorRank : TeaModel {
             /// <summary>
-            /// <para>The ranking data of nodes on which errors occurred within the last month.</para>
+            /// <para>The error ranking data of nodes in the last month.</para>
             /// </summary>
             [NameInMap("ErrorRank")]
             [Validation(Required=false)]
             public List<GetInstanceErrorRankResponseBodyInstanceErrorRankErrorRank> ErrorRank { get; set; }
             public class GetInstanceErrorRankResponseBodyInstanceErrorRankErrorRank : TeaModel {
                 /// <summary>
-                /// <para>The number of errors that occurred on the node.</para>
+                /// <para>The number of errors of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The ID of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527</para>
@@ -45,13 +45,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>952795279527</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node.</para>
+                /// <para>The type of the node task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? PrgType { get; set; }
 
                 /// <summary>
-                /// <para>The DataWorks workspace ID.</para>
+                /// <para>The ID of the DataWorks workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The timestamp at which the rankings were updated.</para>
+            /// <para>The timestamp when the error ranking was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600963200000</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID generated for each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>952795279527****</para>

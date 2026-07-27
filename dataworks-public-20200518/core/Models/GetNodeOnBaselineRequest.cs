@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetNodeOnBaselineRequest : TeaModel {
         /// <summary>
-        /// <para>The baseline ID.</para>
+        /// <para>The ID of the baseline.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

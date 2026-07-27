@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>reserved</para>
+        /// <para>Reserved field</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>columnName in chinese</para>
+            /// <para>中文名</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The comment of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>comment</para>
+            /// <para>备注</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>comment</para>
+        /// <para>Remarks</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -144,8 +144,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The environment type of the DataWorks workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: development environment</description></item>
-        /// <item><description>1: production environment</description></item>
+        /// <item><description><para>0: development environment</para>
+        /// </description></item>
+        /// <item><description><para>1: production environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,10 +160,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The storage type of the external table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Object Storage Service (OSS)</description></item>
-        /// <item><description>1: Tablestore</description></item>
-        /// <item><description>2: Volume</description></item>
-        /// <item><description>3: MySQL</description></item>
+        /// <item><description><para>0: Object Storage Service (OSS)</para>
+        /// </description></item>
+        /// <item><description><para>1: Tablestore</para>
+        /// </description></item>
+        /// <item><description><para>2: Volume</para>
+        /// </description></item>
+        /// <item><description><para>3: MySQL</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -184,8 +190,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether to create a view or table. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Create a table.</description></item>
-        /// <item><description>1: Create a view.</description></item>
+        /// <item><description><para>0: Create a table.</para>
+        /// </description></item>
+        /// <item><description><para>1: Create a view.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -305,9 +313,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether the table or workspace is visible. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Both the table and workspace are invisible.</description></item>
-        /// <item><description>1: Both the table and workspace are visible.</description></item>
-        /// <item><description>2: Only the workspace is visible.</description></item>
+        /// <item><description><para>0: Both the table and workspace are invisible.</para>
+        /// </description></item>
+        /// <item><description><para>1: Both the table and workspace are visible.</para>
+        /// </description></item>
+        /// <item><description><para>2: Only the workspace is visible.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

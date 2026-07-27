@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SubmitFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The deployment package ID. The ID is used as the value of a specific request parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment operation.</para>
+        /// <para>The deployment ID. Call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation with this ID to query the deployment details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000001</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

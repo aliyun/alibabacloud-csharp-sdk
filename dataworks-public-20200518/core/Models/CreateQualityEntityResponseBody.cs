@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The partition filter expression ID.</para>
+        /// <para>The ID of the created partition expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

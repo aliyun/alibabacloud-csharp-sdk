@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>13552</para>
+            /// <para>1355211</para>
             /// </summary>
             [NameInMap("ProjectTesting")]
             [Validation(Required=false)]

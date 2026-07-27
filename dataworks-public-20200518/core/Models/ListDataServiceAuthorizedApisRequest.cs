@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My API Name</para>
+        /// <para>My API name</para>
         /// </summary>
         [NameInMap("ApiNameKeyword")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The page number. Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>PageNumber</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]

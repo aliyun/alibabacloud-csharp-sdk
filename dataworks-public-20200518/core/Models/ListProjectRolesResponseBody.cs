@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The name of the role in the DataWorks workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>visitor</para>
+            /// <para>Visitor</para>
             /// </summary>
             [NameInMap("ProjectRoleName")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityFollowerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the subscription relationship.</para>
+        /// <para>The subscription ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

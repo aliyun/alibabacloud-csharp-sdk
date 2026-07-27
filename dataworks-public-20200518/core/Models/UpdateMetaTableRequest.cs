@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The display name of the table.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>中文名</para>
         /// </summary>
         [NameInMap("Caption")]
         [Validation(Required=false)]

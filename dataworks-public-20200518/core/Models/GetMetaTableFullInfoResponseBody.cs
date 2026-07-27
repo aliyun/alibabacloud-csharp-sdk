@@ -86,8 +86,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>Indicates whether the field is a foreign key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,8 +102,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>Indicates whether the field is a partition field. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,8 +118,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>Indicates whether the field is a primary key. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -180,8 +186,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The type of the environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: indicates that the table resides in the development environment.</description></item>
-            /// <item><description>1: indicates that the table resides in the production environment.</description></item>
+            /// <item><description><para>0: indicates that the table resides in the development environment.</para>
+            /// </description></item>
+            /// <item><description><para>1: indicates that the table resides in the production environment.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,10 +202,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The scope in which the table is visible. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: indicates that the table is visible to workspace members.</description></item>
-            /// <item><description>1: indicates that the table is visible to users within a tenant.</description></item>
-            /// <item><description>2: indicates that the table is visible to all tenants.</description></item>
-            /// <item><description>3: indicates that the table is visible only to the table owner.</description></item>
+            /// <item><description><para>0: indicates that the table is visible to workspace members.</para>
+            /// </description></item>
+            /// <item><description><para>1: indicates that the table is visible to users within a tenant.</para>
+            /// </description></item>
+            /// <item><description><para>2: indicates that the table is visible to all tenants.</para>
+            /// </description></item>
+            /// <item><description><para>3: indicates that the table is visible only to the table owner.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

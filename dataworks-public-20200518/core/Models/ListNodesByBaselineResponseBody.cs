@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para>12345</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The ID of the workspace to which the node belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para>12345</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]

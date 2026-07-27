@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1212</para>
+                /// <para>466230</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>test_project</para>
                 /// </summary>
                 [NameInMap("ProjectIdentifier")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The ID of the user used by the workspace owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>122222</para>
+                /// <para>13969939245****</para>
                 /// </summary>
                 [NameInMap("ProjectOwnerBaseId")]
                 [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>rg-acfmzbn7pti3zfa</para>
+                /// <para>rg-acfmzbn7****</para>
                 /// </summary>
                 [NameInMap("ResourceManagerResourceGroupId")]
                 [Validation(Required=false)]
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <para>The key of tag N added to the workspace.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Env</para>
+                    /// <para>key</para>
                     /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <para>The value of tag N added to the workspace.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Test</para>
+                    /// <para>value</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>123</para>
+            /// <para>68</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20658801***</para>
+        /// <para>20658801****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

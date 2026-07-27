@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;accessId&quot;:&quot;xssssss&quot;,&quot;accessKey&quot;:&quot;xsaxsaxsa&quot;,&quot;authType&quot;:2,&quot;endpoint&quot;:&quot;<a href="http://service.odps.aliyun.com/api%22,%22project%22:%22xsaxsax%22,%22tag%22:%22public%22%7D">http://service.odps.aliyun.com/api&quot;,&quot;project&quot;:&quot;xsaxsax&quot;,&quot;tag&quot;:&quot;public&quot;}</a></para>
+        /// <para>{&quot;accessId&quot;:&quot;<em><b><b>&quot;,&quot;accessKey&quot;:&quot;</b></b></em>&quot;,&quot;authType&quot;:2,&quot;endpoint&quot;:&quot;<a href="http://service.odps.aliyun.com/api%22,%22project%22:%22xsaxsax%22,%22tag%22:%22public%22%7D">http://service.odps.aliyun.com/api&quot;,&quot;project&quot;:&quot;xsaxsax&quot;,&quot;tag&quot;:&quot;public&quot;}</a></para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

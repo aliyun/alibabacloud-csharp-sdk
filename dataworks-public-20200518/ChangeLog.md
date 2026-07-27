@@ -1,3 +1,11 @@
+2026-07-27 Version: 8.1.0
+- Support API DsgGetVisitDetail.
+- Support API DsgGetVisitStat.
+- Support API DsgQueryDetails.
+- Support API DsgQueryRowDetail.
+- Update API CreateFile: add request parameters OutputList.
+
+
 2026-04-07 Version: 9.0.0
 - Support API DsgQueryDesensStatusList.
 - Support API DsgUpdateDesensStatusList.

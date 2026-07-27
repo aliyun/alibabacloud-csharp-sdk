@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateQualityRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The strength type of the monitoring rule. Valid values:</para>
+        /// <para>The strength of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The monitoring rule is a weak rule.</description></item>
-        /// <item><description>1: The monitoring rule is a strong rule.</description></item>
+        /// <item><description><para>0: weak rule</para>
+        /// </description></item>
+        /// <item><description><para>1: strong rule</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? BlockType { get; set; }
 
         /// <summary>
-        /// <para>The checker ID.</para>
+        /// <para>The ID of the checker. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>2: 7-day average fluctuation</para>
+        /// </description></item>
+        /// <item><description><para>3: 30-day average fluctuation</para>
+        /// </description></item>
+        /// <item><description><para>4: day-over-day comparison</para>
+        /// </description></item>
+        /// <item><description><para>5: week-over-week comparison</para>
+        /// </description></item>
+        /// <item><description><para>6: month-over-month comparison</para>
+        /// </description></item>
+        /// <item><description><para>7: 7-day variance fluctuation</para>
+        /// </description></item>
+        /// <item><description><para>8: 30-day variance fluctuation</para>
+        /// </description></item>
+        /// <item><description><para>9: comparison with a fixed value</para>
+        /// </description></item>
+        /// <item><description><para>10: fluctuation detection over 1, 7, and 30 days</para>
+        /// </description></item>
+        /// <item><description><para>11: comparison with the previous cycle</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>
@@ -35,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Checker { get; set; }
 
         /// <summary>
-        /// <para>The description of the rule.</para>
+        /// <para>The comments of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Verification</para>
@@ -45,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.</para>
+        /// <para>The critical threshold. It indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, the scheduling task is blocked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -76,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExpectValue { get; set; }
 
         /// <summary>
-        /// <para>The method used to collect sample data. If you want to use a custom SQL statement as a sampling method, set this parameter to user_defined.</para>
+        /// <para>The check method. If you use a custom SQL statement, set this parameter to <c>user_defined</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>count/table_count</para>
@@ -86,9 +110,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MethodName { get; set; }
 
         /// <summary>
-        /// <para>The comparison operator, such as &gt;, &gt;=, =, ≠, &lt;, or &lt;=.</para>
+        /// <para>The comparison operator. Examples: <c>&gt;</c>, <c>&gt;=</c>, <c>=</c>, <c>&lt;&gt;</c>, <c>&lt;</c>, and <c>&lt;=</c>.</para>
         /// <remarks>
-        /// <para>If you set the Checker parameter to 9, you must configure the Operator parameter.</para>
+        /// <para>If you set the Checker parameter to 9, you must specify the Operator parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. The value 0 indicates that the monitoring rule is not a dynamic threshold rule. The value 2 indicates that the monitoring rule is a dynamic threshold rule.</para>
+        /// <para>Specifies whether to use a dynamic threshold. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +135,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PredictType { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -132,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The fields that you want to monitor. If you want to monitor all fields in a table and check the table rows, set this parameter to table_count. If you want to monitor all fields in a table and check the table size, set this parameter to table_size.</para>
+        /// <para>The field that is monitored by the rule. To perform a table-level check, set this parameter to <c>table_count</c> for the number of rows or <c>table_size</c> for the table size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>table_id</para>
@@ -142,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Property { get; set; }
 
         /// <summary>
-        /// <para>The data type of the fields that you want to monitor. If you want to monitor all fields in a table, set this parameter to table. If you want to monitor only a specific field, set this parameter to bigint.</para>
+        /// <para>The data type of the field. For a table-level check, set this parameter to <c>table</c>. For a field-level check, set this parameter to a specific data type, such as <c>bigint</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bigint</para>
@@ -152,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string PropertyType { get; set; }
 
         /// <summary>
-        /// <para>The name of the monitoring rule.</para>
+        /// <para>The name of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,11 +187,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Rule type:</para>
+        /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: System template rule</description></item>
-        /// <item><description>1: Custom SQL rule</description></item>
-        /// <item><description>4: Custom template rule</description></item>
+        /// <item><description><para>0: system template</para>
+        /// </description></item>
+        /// <item><description><para>1: custom SQL</para>
+        /// </description></item>
+        /// <item><description><para>2: custom template</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -179,7 +206,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// <para>The variable settings inserted before the custom rule. Format: x=a,y=b.</para>
+        /// <para>The variable settings that are inserted before the custom rule. Format: x=a,y=b.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x=a,y=b</para>
@@ -189,7 +216,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TaskSetting { get; set; }
 
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>The ID of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -199,11 +226,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The trend of the monitoring result. Valid values:</para>
+        /// <para>The trend of the check result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>up: increasing</description></item>
-        /// <item><description>down: decreasing</description></item>
-        /// <item><description>abs: absolute value</description></item>
+        /// <item><description><para><c>up</c>: upward trend</para>
+        /// </description></item>
+        /// <item><description><para><c>down</c>: downward trend</para>
+        /// </description></item>
+        /// <item><description><para><c>abs</c>: absolute value</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Trend { get; set; }
 
         /// <summary>
-        /// <para>The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.</para>
+        /// <para>The warning threshold. It indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

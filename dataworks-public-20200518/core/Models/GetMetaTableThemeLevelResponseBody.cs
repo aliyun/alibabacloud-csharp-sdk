@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The description of the level.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>Description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: indicates the logical level.</description></item>
-                /// <item><description>2: indicates the physical level.</description></item>
+                /// <item><description><para>1: indicates the logical level.</para>
+                /// </description></item>
+                /// <item><description><para>2: indicates the physical level.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -79,8 +81,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The level of the theme. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1</description></item>
-                /// <item><description>2</description></item>
+                /// <item><description><para>1</para>
+                /// </description></item>
+                /// <item><description><para>2</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

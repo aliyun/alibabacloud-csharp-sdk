@@ -49,6 +49,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The display name of the field.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>中文</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The comment of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>comment</para>
+            /// <para>备注</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The comment.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>comment</para>
+        /// <para>Remarks</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -120,8 +123,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Specifies whether the table exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The table exists.</description></item>
-        /// <item><description>false: The table does not exist.</description></item>
+        /// <item><description><para>true: The table exists.</para>
+        /// </description></item>
+        /// <item><description><para>false: The table does not exist.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is deprecated. Do not use this parameter.</para>
         /// 

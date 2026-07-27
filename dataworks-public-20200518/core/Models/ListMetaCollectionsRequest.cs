@@ -21,8 +21,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>ALBUM: data album </description></item>
-        /// <item><description>ALBUM_CATEGORY: category in a data album</description></item>
+        /// <item><description><para>ALBUM: data album</para>
+        /// </description></item>
+        /// <item><description><para>ALBUM_CATEGORY: category in a data album</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Keyword</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The name of the sorting field.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Sort field</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]

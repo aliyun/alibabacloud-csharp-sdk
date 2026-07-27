@@ -40,24 +40,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paginated data.</para>
         /// </summary>
         [NameInMap("PageData")]
         [Validation(Required=false)]
         public DsgDesensPlanQueryListResponseBodyPageData PageData { get; set; }
         public class DsgDesensPlanQueryListResponseBodyPageData : TeaModel {
             /// <summary>
-            /// <para>The information about the data masking rule.</para>
+            /// <para>The details of the desensitization rules.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<DsgDesensPlanQueryListResponseBodyPageDataData> Data { get; set; }
             public class DsgDesensPlanQueryListResponseBodyPageDataData : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether a watermark is added. Valid values:</para>
+                /// <para>Indicates whether to add a watermark. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: A watermark is added.</para>
+                /// </description></item>
+                /// <item><description><para>false: No watermark is added.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? CheckWatermark { get; set; }
 
                 /// <summary>
-                /// <para>The sensitive field type.</para>
+                /// <para>The sensitive data type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>phone</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data masking method.</para>
+                /// <para>The desensitization method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HASH</para>
@@ -88,14 +90,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DesenMode { get; set; }
 
                 /// <summary>
-                /// <para>The details of the data masking rule.</para>
+                /// <para>The details of the desensitization plan.</para>
                 /// </summary>
                 [NameInMap("DesensPlan")]
                 [Validation(Required=false)]
                 public DsgDesensPlanQueryListResponseBodyPageDataDataDesensPlan DesensPlan { get; set; }
                 public class DsgDesensPlanQueryListResponseBodyPageDataDataDesensPlan : TeaModel {
                     /// <summary>
-                    /// <para>The type of the data masking rule.</para>
+                    /// <para>The type of the desensitization plan.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hash</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string DesensPlanType { get; set; }
 
                     /// <summary>
-                    /// <para>The parameters for the data masking rule. For more information about the parameters, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> API reference.</para>
+                    /// <para>The parameters for the desensitization rule. For details, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> operation.</para>
                     /// </summary>
                     [NameInMap("ExtParam")]
                     [Validation(Required=false)]
@@ -114,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The data masking rule.</para>
+                /// <para>The desensitization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HASH</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DesensRule { get; set; }
 
                 /// <summary>
-                /// <para>The data masking method.</para>
+                /// <para>The desensitization method.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HASH</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DesensWay { get; set; }
 
                 /// <summary>
-                /// <para>The time when the data masking rule was created.</para>
+                /// <para>The time when the rule was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-09 15:46:20</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the data masking rule was modified.</para>
+                /// <para>The time when the rule was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-09 15:46:20</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data masking rule.</para>
+                /// <para>The ID of the desensitization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -164,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The owner of the data masking rule.</para>
+                /// <para>The owner of the desensitization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user1</para>
@@ -174,7 +176,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data masking rule.</para>
+                /// <para>The name of the desensitization rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>phone_hash</para>
@@ -184,14 +186,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The code of the level-1 data masking scenario to which the rule belongs. Valid values:</para>
+                /// <para>The level-1 desensitization scene code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</description></item>
-                /// <item><description>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</description></item>
-                /// <item><description>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</description></item>
-                /// <item><description>hologres_display_desense_code: data masking at the Hologres compute engine layer</description></item>
-                /// <item><description>dataworks_data_integration_desense_code: static data masking in Data Integration</description></item>
-                /// <item><description>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</description></item>
+                /// <item><description><para>Desensitization for display in Data Development and Data Map: dataworks_display_desense_code</para>
+                /// </description></item>
+                /// <item><description><para>Desensitization at the MaxCompute engine layer: maxcompute_desense_code</para>
+                /// </description></item>
+                /// <item><description><para>Desensitization at the MaxCompute engine layer (New): maxcompute_new_desense_code</para>
+                /// </description></item>
+                /// <item><description><para>Desensitization at the Hologres engine layer: hologres_display_desense_code</para>
+                /// </description></item>
+                /// <item><description><para>Static desensitization in Data Integration: dataworks_data_integration_desense_code</para>
+                /// </description></item>
+                /// <item><description><para>Desensitization for display in Data Analysis: dataworks_analysis_desense_code</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -202,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SceneCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the level-2 data masking scenario to which the data masking rule belongs.</para>
+                /// <para>The name of the level-2 desensitization scene.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_scene</para>
@@ -212,10 +220,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string SceneName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the data masking rule. Valid values:</para>
+                /// <para>The status of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: expired</description></item>
-                /// <item><description>1: effective</description></item>
+                /// <item><description><para>0: Inactive.</para>
+                /// </description></item>
+                /// <item><description><para>1: Active.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -274,7 +284,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The number of data masking rules.</para>
+            /// <para>The total number of matching desensitization rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -286,7 +296,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102400001</para>
@@ -298,8 +308,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

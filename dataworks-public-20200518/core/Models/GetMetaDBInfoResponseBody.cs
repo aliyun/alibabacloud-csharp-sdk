@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The comment.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The ID of the compute engine instance. The ID is in the Engine type.Engine name format.</para>
+            /// <para>Remarks</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The ID of the Alibaba Cloud account used by the workspace owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>23</para>
+            /// <para>userId</para>
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The name of the workspace owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>323</para>
+            /// <para>my_name</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The storage path of the metadatabase of the EMR cluster.</para>
+            /// <para>测试项目</para>
             /// </summary>
             [NameInMap("ProjectNameCn")]
             [Validation(Required=false)]

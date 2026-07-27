@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the partition filter expression.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The level of the partition filter expression. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The partition filter expression is at the SQL level. This indicates that the system checks data quality after each SQL statement is executed.</description></item>
-            /// <item><description>1: The partition filter expression is at the node level. This indicates that the system checks data quality after all the SQL statements for a node are executed.</description></item>
+            /// <item><description><para>0 (SQL-level): A data quality check is triggered after each SQL statement is run.</para>
+            /// </description></item>
+            /// <item><description><para>1 (Task-level): A data quality check is triggered after all SQL statements are run.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? EntityLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of the compute engine instance or data source.</para>
+            /// <para>The type of the engine or data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>odps</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to receive alert notifications.</para>
+            /// <para>The subscribers who receive alert notifications. The value is the ID of an Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1822931****</para>
@@ -61,10 +63,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Followers { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the partition filter expression is associated with a node. Valid values:</para>
+            /// <para>Indicates whether the partition filter expression is associated with a scheduling node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The partition filter expression is associated with a node.</description></item>
-            /// <item><description>false: The partition filter expression is not associated with a node.</description></item>
+            /// <item><description><para>true: The partition filter expression is associated with a scheduling node.</para>
+            /// </description></item>
+            /// <item><description><para>false: The partition filter expression is not associated with a scheduling node.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string MatchExpression { get; set; }
 
             /// <summary>
-            /// <para>The time when the partition filter expression was modified.</para>
+            /// <para>The time when the partition filter expression was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1593964800000</para>
@@ -105,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to modify the partition filter expression.</para>
+            /// <para>The user who updates the partition filter expression. The value is the ID of an Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1822931****</para>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to configure the partition filter expression.</para>
+            /// <para>The owner who configures the partition filter expression. The value is the ID of an Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1822931****</para>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string OnDuty { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account that is used to configure the partition filter expression.</para>
+            /// <para>The name of the Alibaba Cloud account of the owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string OnDutyAccountName { get; set; }
 
             /// <summary>
-            /// <para>The name of the compute engine instance or data source.</para>
+            /// <para>The name of the engine or data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autotest</para>
@@ -145,10 +149,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The information about the node with which the partition filter expression is associated. The information includes the following items:</para>
+            /// <para>The scheduling node that is associated with the partition filter expression. This parameter includes the following sub-parameters:</para>
             /// <list type="bullet">
-            /// <item><description>ProjectName: the name of the workspace to which the node belongs.</description></item>
-            /// <item><description>NodeID: the ID of the node.</description></item>
+            /// <item><description><para>ProjectName: The name of the workspace to which the scheduling node belongs.</para>
+            /// </description></item>
+            /// <item><description><para>NodeID: The ID of the scheduling node.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RelativeNode { get; set; }
 
             /// <summary>
-            /// <para>Indicates that the partition filter expression is at the SQL level.</para>
+            /// <para>The SQL-level partition filter expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>The node.</para>
+            /// <para>The task node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -191,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>401</para>
@@ -201,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You have no permission.</para>
@@ -211,7 +217,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -221,7 +227,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6d739ef6-098a-47****</para>
@@ -231,7 +237,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request succeeded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

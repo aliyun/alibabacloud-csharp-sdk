@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// <list type="bullet">
-        /// <item><description>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</description></item>
-        /// <item><description>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</description></item>
+        /// <item><description><para>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</para>
+        /// </description></item>
+        /// <item><description><para>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,8 +68,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
         /// <list type="bullet">
-        /// <item><description>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</description></item>
-        /// <item><description>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</description></item>
+        /// <item><description><para>By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.</para>
+        /// </description></item>
+        /// <item><description><para>If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

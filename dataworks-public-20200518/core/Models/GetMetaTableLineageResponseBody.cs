@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>odps | retail_e_commerce_2 | retail_e_commerce_2 | dws_ec_trd__cate_commodity_gmv_kpy_fy</para>
+            /// <para>odps.tt.2</para>
             /// </summary>
             [NameInMap("NextPrimaryKey")]
             [Validation(Required=false)]

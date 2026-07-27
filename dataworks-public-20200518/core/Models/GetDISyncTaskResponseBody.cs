@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The calculation method of a metric. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>avg</description></item>
-                    /// <item><description>max</description></item>
+                    /// <item><description><para>avg</para>
+                    /// </description></item>
+                    /// <item><description><para>max</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -47,9 +49,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The comparison operator, which indicates the method used to compare a metric with the alert rule.</para>
                     /// <list type="bullet">
-                    /// <item><description>\&quot;=\&quot;</description></item>
-                    /// <item><description>\&quot;&lt;\&quot;</description></item>
-                    /// <item><description>\&quot;&gt;\&quot;</description></item>
+                    /// <item><description><para>\&quot;=\&quot;</para>
+                    /// </description></item>
+                    /// <item><description><para>\&quot;&lt;\&quot;</para>
+                    /// </description></item>
+                    /// <item><description><para>\&quot;&gt;\&quot;</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -71,8 +76,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                     /// <summary>
                     /// <list type="bullet">
-                    /// <item><description>WARNING</description></item>
-                    /// <item><description>CRITICAL</description></item>
+                    /// <item><description><para>WARNING</para>
+                    /// </description></item>
+                    /// <item><description><para>CRITICAL</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -127,12 +134,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The alert type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>taskStatus</description></item>
-                /// <item><description>bizDelay</description></item>
-                /// <item><description>taskFailoverCount</description></item>
-                /// <item><description>ddlUnsupport</description></item>
-                /// <item><description>ddlReport</description></item>
-                /// <item><description>totalDirtyRecordWriteInLines</description></item>
+                /// <item><description><para>taskStatus</para>
+                /// </description></item>
+                /// <item><description><para>bizDelay</para>
+                /// </description></item>
+                /// <item><description><para>taskFailoverCount</para>
+                /// </description></item>
+                /// <item><description><para>ddlUnsupport</para>
+                /// </description></item>
+                /// <item><description><para>ddlReport</para>
+                /// </description></item>
+                /// <item><description><para>totalDirtyRecordWriteInLines</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -189,8 +202,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</description></item>
-            /// <item><description>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</description></item>
+            /// <item><description><para>If the TaskType parameter is set to DI_REALTIME, the details of the real-time synchronization task are returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the TaskType parameter is set to DI_SOLUTION, the value null is returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,8 +228,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</description></item>
-            /// <item><description>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</description></item>
+            /// <item><description><para>If the TaskType parameter is set to DI_REALTIME, the value null is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the TaskType parameter is set to DI_SOLUTION, the details of the data synchronization solution are returned.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("SolutionDetail")]
@@ -304,16 +321,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the data synchronization solution. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: successful</description></item>
-                /// <item><description>1: not running</description></item>
-                /// <item><description>2: running</description></item>
-                /// <item><description>3: failed</description></item>
-                /// <item><description>4: committed</description></item>
-                /// <item><description>5: pending manual confirmation</description></item>
-                /// <item><description>6: manually confirmed</description></item>
-                /// <item><description>7: others</description></item>
-                /// <item><description>8: waiting</description></item>
-                /// <item><description>9: deleted</description></item>
+                /// <item><description><para>0: successful</para>
+                /// </description></item>
+                /// <item><description><para>1: not running</para>
+                /// </description></item>
+                /// <item><description><para>2: running</para>
+                /// </description></item>
+                /// <item><description><para>3: failed</para>
+                /// </description></item>
+                /// <item><description><para>4: committed</para>
+                /// </description></item>
+                /// <item><description><para>5: pending manual confirmation</para>
+                /// </description></item>
+                /// <item><description><para>6: manually confirmed</para>
+                /// </description></item>
+                /// <item><description><para>7: others</para>
+                /// </description></item>
+                /// <item><description><para>8: waiting</para>
+                /// </description></item>
+                /// <item><description><para>9: deleted</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -371,8 +398,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description><para>True</para>
+        /// </description></item>
+        /// <item><description><para>False</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

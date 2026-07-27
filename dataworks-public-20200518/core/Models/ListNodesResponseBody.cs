@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The file ID. You can call the ListFiles operation to query the ID.</para>
-                /// <para>**</para>
+                /// <para>\<em>\</em></para>
                 /// <para><b>Warning</b> This field is deprecated.</para>
                 /// 
                 /// <b>Example:</b>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The ID of the workflow.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The ID of the request. You can use the ID to query logs and troubleshoot issues.</para>
+                /// <para>Default resource group</para>
                 /// </summary>
                 [NameInMap("ResGroupName")]
                 [Validation(Required=false)]

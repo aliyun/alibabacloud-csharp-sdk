@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0000-ABCD-EFGH-IJKLMNOPQ</para>
+        /// <para>0000-ABCD-EFGH-IJK****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

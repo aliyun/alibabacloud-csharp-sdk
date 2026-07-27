@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The description of the business process.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test</para>
+                /// <para>Workflow description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the business process.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test</para>
+                /// <para>Workflow name</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]

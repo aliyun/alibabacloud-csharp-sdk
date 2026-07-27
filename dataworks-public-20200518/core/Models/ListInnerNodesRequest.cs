@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234</para>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("OuterNodeId")]
         [Validation(Required=false)]

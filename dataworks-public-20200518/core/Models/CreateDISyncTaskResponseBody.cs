@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the &quot;Invalid path: Workflow/xxxx/Data Integration&quot; format is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Invalid path: Business Flow/xxxx/Data Integration</para>
+            /// <para>Invalid directory path: workflow/xxxx/data integration.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The creation status of the data synchronization task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success</description></item>
-            /// <item><description>fail</description></item>
+            /// <item><description><para>success</para>
+            /// </description></item>
+            /// <item><description><para>fail</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

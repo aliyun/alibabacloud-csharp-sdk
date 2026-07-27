@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityFollowerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the partition filter expression.</para>
+        /// <para>The ID of the partition expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234</para>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]

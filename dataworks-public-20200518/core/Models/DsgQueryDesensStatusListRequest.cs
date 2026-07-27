@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgQueryDesensStatusListRequest : TeaModel {
         /// <summary>
+        /// <para>Query keyword</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Primary scene code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string SceneCode { get; set; }
 
         /// <summary>
+        /// <para>Scene ID. Only required when querying project workspace switch data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>124</para>
         /// </summary>

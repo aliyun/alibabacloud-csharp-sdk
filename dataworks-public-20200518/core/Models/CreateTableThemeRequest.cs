@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Topic name</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

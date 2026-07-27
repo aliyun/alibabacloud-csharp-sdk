@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The partition filter expression.</para>
+        /// <para>The partition expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MatchExpression { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</para>
+        /// <para>The ID of the scheduling node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> API to obtain the node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source.</para>
+        /// <para>The name of the compute engine instance or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the node belongs.</para>
+        /// <para>The ID of the project to which the node belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? TargetNodeProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace to which the node to be associated with the partition filter expression belongs.</para>
+        /// <para>The name of the project to which the scheduling node belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

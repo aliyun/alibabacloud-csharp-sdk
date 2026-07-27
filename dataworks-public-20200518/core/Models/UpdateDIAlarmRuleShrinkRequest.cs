@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The metric type in the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Heartbeat</description></item>
-        /// <item><description>FailoverCount</description></item>
-        /// <item><description>Delay</description></item>
+        /// <item><description><para>Heartbeat</para>
+        /// </description></item>
+        /// <item><description><para>FailoverCount</para>
+        /// </description></item>
+        /// <item><description><para>Delay</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

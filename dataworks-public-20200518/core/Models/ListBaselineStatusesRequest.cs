@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The keyword of the baseline name used to search for the baseline.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Keyword of the baseline name</para>
+        /// <para>Keyword</para>
         /// </summary>
         [NameInMap("SearchText")]
         [Validation(Required=false)]

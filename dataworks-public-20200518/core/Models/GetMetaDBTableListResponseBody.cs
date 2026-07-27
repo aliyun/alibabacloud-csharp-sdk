@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaDBTableListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The metatable information in a compute engine instance.</para>
+        /// <para>Information about the tables in the engine instance.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of metatables in the compute engine instance.</para>
+            /// <para>A list of table details.</para>
             /// </summary>
             [NameInMap("TableEntityList")]
             [Validation(Required=false)]
             public List<GetMetaDBTableListResponseBodyDataTableEntityList> TableEntityList { get; set; }
             public class GetMetaDBTableListResponseBodyDataTableEntityList : TeaModel {
                 /// <summary>
-                /// <para>The name of the metadatabase.</para>
+                /// <para>The name of the database.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DatabaseName { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the metatable.</para>
+                /// <para>The unique identifier of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.tname</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TableGuid { get; set; }
 
                 /// <summary>
-                /// <para>The name of the metatable.</para>
+                /// <para>The name of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tname</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of compute engine instances returned.</para>
+            /// <para>The total number of tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc1ec92159376</para>

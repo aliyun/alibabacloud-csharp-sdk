@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class GetDISyncTaskRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.</description></item>
-        /// <item><description>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.</description></item>
+        /// <item><description><para>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.</para>
+        /// </description></item>
+        /// <item><description><para>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.</para>
+        /// </description></item>
         /// </list>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of the real-time synchronization task or data synchronization solution.</para>
         /// <para>This parameter is required.</para>
@@ -39,8 +41,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The type of the object that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DI_REALTIME: real-time synchronization task</description></item>
-        /// <item><description>DI_SOLUTION: data synchronization solution</description></item>
+        /// <item><description><para>DI_REALTIME: real-time synchronization task</para>
+        /// </description></item>
+        /// <item><description><para>DI_SOLUTION: data synchronization solution</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

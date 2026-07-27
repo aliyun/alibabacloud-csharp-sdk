@@ -33,9 +33,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The check status of the file that you want to deploy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OK: The file passes the check.</description></item>
-        /// <item><description>WARN: The file passes the check, but an alert is reported.</description></item>
-        /// <item><description>FAIL: The file fails the check.</description></item>
+        /// <item><description><para>OK: The file passes the check.</para>
+        /// </description></item>
+        /// <item><description><para>WARN: The file passes the check, but an alert is reported.</para>
+        /// </description></item>
+        /// <item><description><para>FAIL: The file fails the check.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

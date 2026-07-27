@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmzbn7pti3zfa</para>
+        /// <para>rg-acfmzbn7pt****</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupAddOrUpdateRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the user group.</para>
+        /// <para>The user groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserGroups")]
@@ -18,10 +18,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public List<DsgUserGroupAddOrUpdateRequestUserGroups> UserGroups { get; set; }
         public class DsgUserGroupAddOrUpdateRequestUserGroups : TeaModel {
             /// <summary>
-            /// <para>The users in the group.</para>
+            /// <para>The users in the user group.</para>
             /// <list type="bullet">
-            /// <item><description>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</description></item>
-            /// <item><description>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</description></item>
+            /// <item><description><para>For user groups created based on Alibaba Cloud accounts and Resource Access Management (RAM) roles, call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> API to query the user list.</para>
+            /// </description></item>
+            /// <item><description><para>For user groups created based on MaxCompute roles, call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupGetOdpsRoleGroups</a> API to query the user list.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Accounts")]
@@ -29,10 +31,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<string> Accounts { get; set; }
 
             /// <summary>
-            /// <para>The user group ID.</para>
+            /// <para>The ID of the user group.</para>
             /// <list type="bullet">
-            /// <item><description>If you do not configure this parameter, the current operation is to add a user group.</description></item>
-            /// <item><description>If you configure this parameter, the current operation is to modify a user group. You can call the <a href="https://help.aliyun.com/document_detail/2786441.html">DsgUserGroupQueryList</a> operation to query the user group ID.</description></item>
+            /// <item><description><para>If you do not specify this parameter, a new user group is created.</para>
+            /// </description></item>
+            /// <item><description><para>If you specify this parameter, the specified user group is modified. You can call the <a href="https://help.aliyun.com/document_detail/2786441.html">DsgUserGroupQueryList</a> operation to query the ID of the user group.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The name of the MaxCompute project. You must configure this parameter when you create a MaxCompute user group.</para>
+            /// <para>The name of the MaxCompute project. Set this parameter when you create a MaxCompute user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_project</para>
@@ -75,11 +79,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The type of the user group. Valid values:</para>
+            /// <para>The type of the user group. The following values are valid:</para>
             /// <list type="bullet">
-            /// <item><description>1: Alibaba Cloud account</description></item>
-            /// <item><description>2: RAM role</description></item>
-            /// <item><description>3: MaxCompute role</description></item>
+            /// <item><description><para>1: Alibaba Cloud user</para>
+            /// </description></item>
+            /// <item><description><para>2: RAM Role</para>
+            /// </description></item>
+            /// <item><description><para>3: MaxCompute Role</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

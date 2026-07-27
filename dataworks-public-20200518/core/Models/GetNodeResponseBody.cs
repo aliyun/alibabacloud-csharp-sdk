@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>odps_first_dev</para>
+            /// <para>odps_source_dev</para>
             /// </summary>
             [NameInMap("Connection")]
             [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The file ID.</para>
-            /// <para>**</para>
+            /// <para>\<em>\</em></para>
             /// <para><b>Warning</b> The field is deprecated.</para>
             /// 
             /// <b>Example:</b>
@@ -161,14 +161,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The scheduling type of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL: The node is an auto triggered node.</description></item>
-            /// <item><description>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</description></item>
-            /// <item><description>PAUSE: The node is a paused node.</description></item>
-            /// <item><description>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</description></item>
+            /// <item><description><para>NORMAL: The node is an auto triggered node.</para>
+            /// </description></item>
+            /// <item><description><para>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.</para>
+            /// </description></item>
+            /// <item><description><para>PAUSE: The node is a paused node.</para>
+            /// </description></item>
+            /// <item><description><para>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>The ID of the baseline.</para>
+            /// <para>Sql node</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -278,7 +282,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The ID of the request. You can use the ID to locate logs and troubleshoot issues.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The table and partition filter expression in Data Quality that are associated with the node.</para>
+            /// <para>Default resource group</para>
             /// </summary>
             [NameInMap("ResGroupName")]
             [Validation(Required=false)]

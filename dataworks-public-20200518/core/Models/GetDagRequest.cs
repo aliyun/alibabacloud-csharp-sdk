@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The ID of the DAG. You can use one of the following method to obtain the ID:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/2780209.html">RunCycleDagNodes</a> operation and obtain the value of the <b>Data</b> response parameter.</description></item>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/2780210.html">RunSmokeTest</a> operation and obtain the value of the <b>Data</b> response parameter.</description></item>
-        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/2780218.html">RunManualDagNodes</a> operation and obtain the value of the <b>DagId</b> response parameter.</description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/2780209.html">RunCycleDagNodes</a> operation and obtain the value of the <b>Data</b> response parameter.</para>
+        /// </description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/2780210.html">RunSmokeTest</a> operation and obtain the value of the <b>Data</b> response parameter.</para>
+        /// </description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/2780218.html">RunManualDagNodes</a> operation and obtain the value of the <b>DagId</b> response parameter.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

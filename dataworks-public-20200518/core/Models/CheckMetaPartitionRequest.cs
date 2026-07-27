@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The type of the data source. Set the value to odps.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>emr</para>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]

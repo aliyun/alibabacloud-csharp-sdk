@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>Boolean</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

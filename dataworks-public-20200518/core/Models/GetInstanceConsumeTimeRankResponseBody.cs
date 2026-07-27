@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceConsumeTimeRankResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ranking record of the running durations of instances.</para>
+        /// <para>The ranking records of instance running durations.</para>
         /// </summary>
         [NameInMap("InstanceConsumeTimeRank")]
         [Validation(Required=false)]
         public GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRank InstanceConsumeTimeRank { get; set; }
         public class GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRank : TeaModel {
             /// <summary>
-            /// <para>The ranking data of the running durations of instances.</para>
+            /// <para>The ranking data of instance running durations.</para>
             /// </summary>
             [NameInMap("ConsumeTimeRank")]
             [Validation(Required=false)]
             public List<GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRankConsumeTimeRank> ConsumeTimeRank { get; set; }
             public class GetInstanceConsumeTimeRankResponseBodyInstanceConsumeTimeRankConsumeTimeRank : TeaModel {
                 /// <summary>
-                /// <para>The data timestamp of the instance.</para>
+                /// <para>The data timestamp on which the instance was run.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600963200000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Consumed { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID.</para>
+                /// <para>The ID of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>95279527</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The ID of the task node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9527</para>
@@ -65,13 +65,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The name of the node.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account used by the node owner.</para>
+                /// <para>The Alibaba Cloud UID of the node owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>952795279527</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node.</para>
+                /// <para>The type of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID generated for each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6347364dadsfadf****</para>

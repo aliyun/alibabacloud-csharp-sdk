@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the table level.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>Level name</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

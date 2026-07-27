@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ApprovePermissionApplyOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the permission request order is processed.</para>
+        /// <para>Indicates whether the approval is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

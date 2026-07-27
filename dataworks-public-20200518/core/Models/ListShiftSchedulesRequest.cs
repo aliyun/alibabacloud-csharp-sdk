@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The Alibaba Cloud account ID. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1933790683****</para>
+        /// <para>1933790683*****</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]

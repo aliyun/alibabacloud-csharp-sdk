@@ -66,9 +66,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The metric type in the alert rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Heartbeat</description></item>
-                /// <item><description>FailoverCount</description></item>
-                /// <item><description>Delay</description></item>
+                /// <item><description><para>Heartbeat</para>
+                /// </description></item>
+                /// <item><description><para>FailoverCount</para>
+                /// </description></item>
+                /// <item><description><para>Delay</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -112,8 +115,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         /// <summary>
                         /// <para>The severity level. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Warning</description></item>
-                        /// <item><description>Critical</description></item>
+                        /// <item><description><para>Warning</para>
+                        /// </description></item>
+                        /// <item><description><para>Critical</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -135,8 +140,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         /// <summary>
                         /// <para>The recipient type. Valid values: AliyunUid and DingToken.</para>
                         /// <list type="bullet">
-                        /// <item><description>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <b>AliyunUid</b>, which indicates the Alibaba Cloud account ID.</description></item>
-                        /// <item><description>If the alert notification method is Ding, the value of this parameter is <b>DingToken</b>, which indicates the DingTalk chatbot token.</description></item>
+                        /// <item><description><para>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <b>AliyunUid</b>, which indicates the Alibaba Cloud account ID.</para>
+                        /// </description></item>
+                        /// <item><description><para>If the alert notification method is Ding, the value of this parameter is <b>DingToken</b>, which indicates the DingTalk chatbot token.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -177,8 +184,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The severity level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Warning</description></item>
-                    /// <item><description>Critical</description></item>
+                    /// <item><description><para>Warning</para>
+                    /// </description></item>
+                    /// <item><description><para>Critical</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -191,9 +200,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The alert threshold.</para>
                     /// <list type="bullet">
-                    /// <item><description>If the alert rule is for task status, no threshold is used.</description></item>
-                    /// <item><description>If the alert rule is for failovers, the threshold is the number of failovers.</description></item>
-                    /// <item><description>If the alert rule is for latency, the threshold is the latency duration, in seconds.</description></item>
+                    /// <item><description><para>If the alert rule is for task status, no threshold is used.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the alert rule is for failovers, the threshold is the number of failovers.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the alert rule is for latency, the threshold is the latency duration, in seconds.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -243,7 +255,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>74C2FECD-5B3A-554A-BCF5-351A36DE9815</para>
+        /// <para>74C2FECD-5B3A-554A-BCF5-35****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

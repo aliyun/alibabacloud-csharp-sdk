@@ -11,11 +11,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class CreateQualityEntityRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is deprecated.</para>
-        /// <para>The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.</para>
-        /// <list type="bullet">
-        /// <item><description>0</description></item>
-        /// <item><description>1</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -25,17 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? EntityLevel { get; set; }
 
         /// <summary>
-        /// <para>The type of the compute engine or data source.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>odps</description></item>
-        /// <item><description>emr</description></item>
-        /// <item><description>hadoop</description></item>
-        /// <item><description>cdh</description></item>
-        /// <item><description>analyticdb_for_mysql</description></item>
-        /// <item><description>hybriddb_for_postgresql</description></item>
-        /// <item><description>holodb</description></item>
-        /// </list>
+        /// <para>The type of the engine or data source. Valid values: ODPS, EMR, CDH, and HOLO.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The partition filter expression.</para>
+        /// <para>The partition expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MatchExpression { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can go to the DataWorks console to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -67,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source.</para>
+        /// <para>The name of the engine or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

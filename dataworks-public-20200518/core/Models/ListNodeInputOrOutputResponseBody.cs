@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234667</para>
+            /// <para>12314567</para>
             /// </summary>
             [NameInMap("NodeId")]
             [Validation(Required=false)]

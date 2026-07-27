@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10001</para>
+        /// <para>10002</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The tenant ID. This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10002</para>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]

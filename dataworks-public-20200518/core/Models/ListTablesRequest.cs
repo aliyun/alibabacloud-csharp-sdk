@@ -14,10 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>odps
-        /// emr
-        /// mysql
-        /// holo</para>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("DataSourceType")]
         [Validation(Required=false)]

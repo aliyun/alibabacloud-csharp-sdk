@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The connection string.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("Connection")]
                 [Validation(Required=false)]
@@ -196,10 +196,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The scheduling type of the inner node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The inner node is an auto triggered node.</description></item>
-                /// <item><description>MANUAL: The inner node is a manually triggered node. The scheduling system does not run the node on a regular basis.</description></item>
-                /// <item><description>PAUSE: The inner node is a paused node.</description></item>
-                /// <item><description>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled, but the scheduling system sets the status of the nodes to successful when it starts to run them.</description></item>
+                /// <item><description><para>NORMAL: The inner node is an auto triggered node.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL: The inner node is a manually triggered node. The scheduling system does not run the node on a regular basis.</para>
+                /// </description></item>
+                /// <item><description><para>PAUSE: The inner node is a paused node.</para>
+                /// </description></item>
+                /// <item><description><para>SKIP: The inner node is a dry-run node. Dry-run nodes are started as scheduled, but the scheduling system sets the status of the nodes to successful when it starts to run them.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

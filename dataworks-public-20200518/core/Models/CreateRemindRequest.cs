@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;hour&quot;:23,&quot;minu&quot;:59}</para>
+        /// <para>{&quot;hour&quot;:&quot;23&quot;,&quot;minu&quot;:&quot;59&quot;}</para>
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]

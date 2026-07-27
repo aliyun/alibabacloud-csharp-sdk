@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the member.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhangsan</para>
+                /// <para>John Doe</para>
                 /// </summary>
                 [NameInMap("ProjectMemberName")]
                 [Validation(Required=false)]
@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</description></item>
-                /// <item><description>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</description></item>
-                /// <item><description>6: USER_STS_ROLE, which indicates that the member is a RAM role.</description></item>
+                /// <item><description><para>1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.</para>
+                /// </description></item>
+                /// <item><description><para>5: USER_UBACCOUNT, which indicates that the member is a RAM user.</para>
+                /// </description></item>
+                /// <item><description><para>6: USER_STS_ROLE, which indicates that the member is a RAM role.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <para>The name of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see <a href="https://help.aliyun.com/document_detail/295463.html">Overview of users, roles, and permissions</a>.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>Visitor</para>
                     /// </summary>
                     [NameInMap("ProjectRoleName")]
                     [Validation(Required=false)]
@@ -128,8 +131,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The type of the role. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: SYSTEM, which indicates that the role is a built-in role.</description></item>
-                    /// <item><description>2: USER_CUSTOM, which indicates that the role is a custom role.</description></item>
+                    /// <item><description><para>0: SYSTEM, which indicates that the role is a built-in role.</para>
+                    /// </description></item>
+                    /// <item><description><para>2: USER_CUSTOM, which indicates that the role is a custom role.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -144,9 +149,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: NORMAL, which indicates that the member is in a normal state.</description></item>
-                /// <item><description>1: FORBIDDEN, which indicates that the member is disabled.</description></item>
-                /// <item><description>2: DELETED, which indicates that the member is deleted.</description></item>
+                /// <item><description><para>0: NORMAL, which indicates that the member is in a normal state.</para>
+                /// </description></item>
+                /// <item><description><para>1: FORBIDDEN, which indicates that the member is disabled.</para>
+                /// </description></item>
+                /// <item><description><para>2: DELETED, which indicates that the member is deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the metatable.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>中文名</para>
             /// </summary>
             [NameInMap("Caption")]
             [Validation(Required=false)]
@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The type of the environment. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: development environment</description></item>
-            /// <item><description>1: production environment</description></item>
+            /// <item><description><para>0: development environment</para>
+            /// </description></item>
+            /// <item><description><para>1: production environment</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,8 +115,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>Indicates whether the metatable is a partitioned table. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,8 +131,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>Indicates whether the metatable is a view. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,10 +147,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The scope in which the metatable is visible. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The metatable is visible to workspace members.</description></item>
-            /// <item><description>1: The metatable is visible to users within the tenant.</description></item>
-            /// <item><description>2: The metatable is visible to all tenants.</description></item>
-            /// <item><description>3: The metatable is visible only to the metatable owner.</description></item>
+            /// <item><description><para>0: The metatable is visible to workspace members.</para>
+            /// </description></item>
+            /// <item><description><para>1: The metatable is visible to users within the tenant.</para>
+            /// </description></item>
+            /// <item><description><para>2: The metatable is visible to all tenants.</para>
+            /// </description></item>
+            /// <item><description><para>3: The metatable is visible only to the metatable owner.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The lifecycle of the table. Unit: day.</para>
             /// <remarks>
-            /// <para> If the lifecycle is not set for a MaxCompute table, the return value is 0, indicating that the table is permanently valid.</para>
+            /// <para>If the lifecycle is not set for a MaxCompute table, the return value is 0, indicating that the table is permanently valid.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

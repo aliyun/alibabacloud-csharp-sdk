@@ -26,6 +26,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <item><description>sensType: the type of the sensitive data.</description></item>
         /// <item><description>sensLevel: the sensitivity level of the sensitive data</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{      &quot;sensDatas&quot;: [       {         &quot;sensLevel&quot;: &quot;L1&quot;,         &quot;guid&quot;: &quot;dsg_demo.animal.dog&quot;,         &quot;sensType&quot;: &quot; Name&quot;       }      ],     &quot;totalCount&quot;: 2171 }</para>
         /// </summary>
         [NameInMap("SensitiveData")]
         [Validation(Required=false)]

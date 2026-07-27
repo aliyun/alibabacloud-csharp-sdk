@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteFolderRequest : TeaModel {
         /// <summary>
-        /// <para>DeleteFolder</para>
+        /// <para>The ID of the folder. For more information about how to obtain the folder ID, see <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FolderId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the DataWorks console and go to the Workspace Management page. You must set this parameter or ProjectIdentifier to specify the DataWorks workspace for the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para><a href="http://100.67.165.184/business/api/folders/delete">http://100.67.165.184/business/api/folders/delete</a></para>
+        /// <para>The name of the DataWorks workspace. To obtain the workspace name, log on to the DataWorks console and go to the Workspace Management page. You must set this parameter or ProjectId to specify the DataWorks workspace for the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>

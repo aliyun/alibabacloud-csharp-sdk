@@ -56,12 +56,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The task status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Finished</description></item>
-                /// <item><description>Initialized</description></item>
-                /// <item><description>Stopped</description></item>
-                /// <item><description>Failed</description></item>
-                /// <item><description>Running</description></item>
-                /// <item><description>Stopping</description></item>
+                /// <item><description><para>Finished</para>
+                /// </description></item>
+                /// <item><description><para>Initialized</para>
+                /// </description></item>
+                /// <item><description><para>Stopped</para>
+                /// </description></item>
+                /// <item><description><para>Failed</para>
+                /// </description></item>
+                /// <item><description><para>Running</para>
+                /// </description></item>
+                /// <item><description><para>Stopping</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -74,9 +80,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The synchronization type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</description></item>
-                /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
-                /// <item><description>Full: one-time full synchronization</description></item>
+                /// <item><description><para>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</para>
+                /// </description></item>
+                /// <item><description><para>RealtimeIncremental: real-time incremental synchronization</para>
+                /// </description></item>
+                /// <item><description><para>Full: one-time full synchronization</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

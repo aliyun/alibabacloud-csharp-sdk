@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityResultsByEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data structure of the check results.</para>
+        /// <para>The data object that contains the quality check results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The returned check results.</para>
+            /// <para>The monitoring rule check results.</para>
             /// </summary>
             [NameInMap("RuleChecks")]
             [Validation(Required=false)]
             public List<ListQualityResultsByEntityResponseBodyDataRuleChecks> RuleChecks { get; set; }
             public class ListQualityResultsByEntityResponseBodyDataRuleChecks : TeaModel {
                 /// <summary>
-                /// <para>The monitored partition in the data source table.</para>
+                /// <para>The expression that specifies the data partition that was checked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ds=20200912</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ActualExpression { get; set; }
 
                 /// <summary>
-                /// <para>The time when the monitoring started.</para>
+                /// <para>The start time of the check. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600704000000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BeginTime { get; set; }
 
                 /// <summary>
-                /// <para>The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.</para>
+                /// <para>The business date. If the monitored data is offline, the business date is typically the day before the check is performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600704000000</para>
@@ -74,10 +74,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? BizDate { get; set; }
 
                 /// <summary>
-                /// <para>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</para>
+                /// <para>The strength of the monitoring rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: the monitoring rule is a strong rule.</description></item>
-                /// <item><description>0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</description></item>
+                /// <item><description><para>1: Strong Rule. If a Strong Rule check generates a critical alert, the associated Scheduling Task is blocked.</para>
+                /// </description></item>
+                /// <item><description><para>0: Weak Rule.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,11 +90,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? BlockType { get; set; }
 
                 /// <summary>
-                /// <para>The check result. The value of this parameter is the same as the value of the CheckResultStatus parameter. Valid values:</para>
+                /// <para>The check result. This parameter usually has the same value as <c>CheckResultStatus</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: indicates that the data source table is normal.</description></item>
-                /// <item><description>1: indicates that a warning alert is reported.</description></item>
-                /// <item><description>2: indicates that a critical alert is reported.</description></item>
+                /// <item><description><para>0: Normal</para>
+                /// </description></item>
+                /// <item><description><para>1: Warning</para>
+                /// </description></item>
+                /// <item><description><para>2: Critical</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -103,11 +108,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? CheckResult { get; set; }
 
                 /// <summary>
-                /// <para>The check result of the monitoring rule. Valid values:</para>
+                /// <para>The status of the check result. This parameter corresponds to the status displayed in the UI. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: indicates that the data source table is normal.</description></item>
-                /// <item><description>1: indicates that a warning alert is reported.</description></item>
-                /// <item><description>2: indicates that a critical alert is reported.</description></item>
+                /// <item><description><para>0: Normal</para>
+                /// </description></item>
+                /// <item><description><para>1: Warning</para>
+                /// </description></item>
+                /// <item><description><para>2: Critical</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? CheckResultStatus { get; set; }
 
                 /// <summary>
-                /// <para>The checker ID.</para>
+                /// <para>The ID of the checker.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -138,11 +146,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string CheckerName { get; set; }
 
                 /// <summary>
-                /// <para>The check type. Valid values:</para>
+                /// <para>The type of the checker. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: indicates that the monitoring is performed based on a fixed value.</description></item>
-                /// <item><description>1: indicates that the monitoring is performed based on a non-fixed value.</description></item>
-                /// <item><description>2: indicates that the monitoring is performed based on a dynamic threshold.</description></item>
+                /// <item><description><para>0: Fixed Value</para>
+                /// </description></item>
+                /// <item><description><para>1: Fluctuation</para>
+                /// </description></item>
+                /// <item><description><para>2: Dynamic Threshold</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -163,7 +174,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</para>
+                /// <para>The acceptable deviation from the expected value that triggers a critical alert. This threshold is customizable. If a critical alert is triggered for a Strong Rule, the associated Scheduling Task is blocked.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
@@ -173,7 +184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public float? CriticalThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling frequency. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.</para>
+                /// <para>The scheduling cycle. A common value is YMD, which represents year, month, and day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>YMD</para>
@@ -183,10 +194,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DateType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the monitoring is discrete monitoring. Valid values:</para>
+                /// <para>Specifies whether the check is a discrete check. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: The check is a discrete check.</para>
+                /// </description></item>
+                /// <item><description><para>false: The check is not a discrete check.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -197,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? DiscreteCheck { get; set; }
 
                 /// <summary>
-                /// <para>The deadline for querying the check result.</para>
+                /// <para>The end time of the check. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1600704000000</para>
@@ -227,7 +240,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public float? ExpectValue { get; set; }
 
                 /// <summary>
-                /// <para>The node ID.</para>
+                /// <para>The Node ID of the Scheduling Task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1112323123</para>
@@ -237,7 +250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ExternalId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the scheduling system. Only CWF scheduling systems are supported.</para>
+                /// <para>The type of the scheduling system. Currently, only CWF is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CWF2</para>
@@ -247,10 +260,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ExternalType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the monitoring is performed based on a fixed value. Valid values:</para>
+                /// <para>Specifies whether the check is based on a fixed value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: The check is based on a fixed value.</para>
+                /// </description></item>
+                /// <item><description><para>false: The check is not based on a fixed value.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -261,7 +276,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? FixedCheck { get; set; }
 
                 /// <summary>
-                /// <para>The primary key ID.</para>
+                /// <para>The unique ID of the check result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>121212121</para>
@@ -271,10 +286,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the check result is the same as the predicted result. Valid values:</para>
+                /// <para>Specifies whether the result is a predicted value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: The result is a predicted value.</para>
+                /// </description></item>
+                /// <item><description><para>false: The result is not a predicted value.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -285,7 +302,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public bool? IsPrediction { get; set; }
 
                 /// <summary>
-                /// <para>The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.</para>
+                /// <para>The predicted lower limit. This value is automatically generated after you set a threshold.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2344</para>
@@ -305,7 +322,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string MatchExpression { get; set; }
 
                 /// <summary>
-                /// <para>The method used to collect sample data, such as such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</para>
+                /// <para>The method for collecting sample data. Valid values include <c>avg</c>, <c>count</c>, <c>sum</c>, <c>min</c>, <c>max</c>, <c>count_distinct</c>, <c>user_defined</c>, <c>table_count</c>, <c>table_size</c>, <c>table_dt_load_count</c>, <c>table_dt_refuseload_count</c>, <c>null_value</c>, <c>null_value/table_count</c>, <c>(table_count-count_distinct)/table_count</c>, and <c>table_count-count_distinct</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>count_distinct</para>
@@ -326,7 +343,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Op { get; set; }
 
                 /// <summary>
-                /// <para>The name of the compute engine or data source for which data quality is monitored.</para>
+                /// <para>The name of the monitored compute engine or Data Source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>autotest</para>
@@ -336,7 +353,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.</para>
+                /// <para>The name of the monitored column in the Data Source table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>type</para>
@@ -353,7 +370,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public List<ListQualityResultsByEntityResponseBodyDataRuleChecksReferenceValue> ReferenceValue { get; set; }
                 public class ListQualityResultsByEntityResponseBodyDataRuleChecksReferenceValue : TeaModel {
                     /// <summary>
-                    /// <para>The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.</para>
+                    /// <para>The business date. If the monitored data is offline, the business date is typically the day before the check is performed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-12-03</para>
@@ -363,7 +380,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string BizDate { get; set; }
 
                     /// <summary>
-                    /// <para>The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of the DiscreteProperty parameter are Male, Female, and null.</para>
+                    /// <para>The value of the sample field when a <c>group by</c> clause is used. For example, if you group by the gender field, the values for <c>DiscreteProperty</c> can be male, female, or null.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -373,7 +390,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string DiscreteProperty { get; set; }
 
                     /// <summary>
-                    /// <para>The check result.</para>
+                    /// <para>The result of a single check.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -383,7 +400,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public int? SingleCheckResult { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold.</para>
+                    /// <para>The threshold that was applied to this historical data point.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.5</para>
@@ -393,7 +410,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public float? Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The check value.</para>
+                    /// <para>The historical check value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>19</para>
@@ -405,7 +422,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
-                /// <para>The string of the check result.</para>
+                /// <para>The check result, returned as a string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -415,7 +432,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ResultString { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the monitoring rule.</para>
+                /// <para>The monitoring rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123232</para>
@@ -435,14 +452,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The current sample value.</para>
+                /// <para>The current sample values.</para>
                 /// </summary>
                 [NameInMap("SampleValue")]
                 [Validation(Required=false)]
                 public List<ListQualityResultsByEntityResponseBodyDataRuleChecksSampleValue> SampleValue { get; set; }
                 public class ListQualityResultsByEntityResponseBodyDataRuleChecksSampleValue : TeaModel {
                     /// <summary>
-                    /// <para>The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.</para>
+                    /// <para>The business date. If the monitored data is offline, the business date is typically the day before the check is performed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2020-12-03</para>
@@ -452,7 +469,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string BizDate { get; set; }
 
                     /// <summary>
-                    /// <para>The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of the DiscreteProperty parameter are Male, Female, and null.</para>
+                    /// <para>The value of the sample field when a <c>group by</c> clause is used. For example, if you group by the gender field, the values for <c>DiscreteProperty</c> can be male, female, or null.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -484,7 +501,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TableName { get; set; }
 
                 /// <summary>
-                /// <para>The monitoring task ID.</para>
+                /// <para>The ID of the check task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16008552981681a0d6****</para>
@@ -494,7 +511,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TaskId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the monitoring template.</para>
+                /// <para>The ID of the rule template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -504,7 +521,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public int? TemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the monitoring template.</para>
+                /// <para>The name of the rule template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Expected value verification</para>
@@ -514,7 +531,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string TemplateName { get; set; }
 
                 /// <summary>
-                /// <para>The time that was taken to run the monitoring task. Unit: seconds.</para>
+                /// <para>The time taken to run the check, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>202</para>
@@ -534,7 +551,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string Trend { get; set; }
 
                 /// <summary>
-                /// <para>The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.</para>
+                /// <para>The predicted upper limit. This value is automatically generated after you set a threshold.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>25555</para>
@@ -544,7 +561,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public float? UpperValue { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.</para>
+                /// <para>The warning threshold. This value indicates the acceptable deviation from the expected value. You can customize this threshold based on your business requirements.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.1</para>
@@ -566,7 +583,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -608,7 +625,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBA58543-00D4-41****</para>

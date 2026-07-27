@@ -136,10 +136,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The status of the DAG. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATED</description></item>
-                /// <item><description>RUNNING</description></item>
-                /// <item><description>FAILURE</description></item>
-                /// <item><description>SUCCESS</description></item>
+                /// <item><description><para>CREATED</para>
+                /// </description></item>
+                /// <item><description><para>RUNNING</para>
+                /// </description></item>
+                /// <item><description><para>FAILURE</para>
+                /// </description></item>
+                /// <item><description><para>SUCCESS</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -152,10 +156,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the DAG. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MANUAL: DAG for a manually triggered workflow</description></item>
-                /// <item><description>SMOKE_TEST: DAG for a smoke testing workflow</description></item>
-                /// <item><description>SUPPLY_DATA: DAG for a data backfill instance</description></item>
-                /// <item><description>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</description></item>
+                /// <item><description><para>MANUAL: DAG for a manually triggered workflow</para>
+                /// </description></item>
+                /// <item><description><para>SMOKE_TEST: DAG for a smoke testing workflow</para>
+                /// </description></item>
+                /// <item><description><para>SUPPLY_DATA: DAG for a data backfill instance</para>
+                /// </description></item>
+                /// <item><description><para>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

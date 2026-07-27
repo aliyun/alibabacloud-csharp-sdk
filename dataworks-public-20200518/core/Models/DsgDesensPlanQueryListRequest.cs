@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgDesensPlanQueryListRequest : TeaModel {
         /// <summary>
-        /// <para>The owner of the data masking rule.</para>
+        /// <para>The owner of the desensitization rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitive field.</para>
+        /// <para>The name of the desensitization rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>phone</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the level-2 data masking scenario. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to query the list of IDs.</para>
+        /// <para>The ID of the Level-2 data desensitization scene. You can call the <a href="https://help.aliyun.com/document_detail/2786322.html">DsgSceneQuerySceneListByName</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,10 +63,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>The status of the data masking rule. Valid values:</para>
+        /// <para>The status of the desensitization rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: expired</description></item>
-        /// <item><description>1: effective</description></item>
+        /// <item><description><para>0: Inactive</para>
+        /// </description></item>
+        /// <item><description><para>1: Active</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

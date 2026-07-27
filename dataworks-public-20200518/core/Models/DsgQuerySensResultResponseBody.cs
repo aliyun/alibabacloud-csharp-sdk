@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgQuerySensResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>The error code. The value is the same as that of ErrorCode.</para>
+        /// <para>The error code. The value is the same as ErrorCode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DynamicErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. The value is the same as that of ErrorMessage.</para>
+        /// <para>The error message. The value is the same as ErrorMessage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Missing parameter</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. It is a unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>900000001</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: successful.</description></item>
+        /// <item><description>false: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

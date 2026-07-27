@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgDesensPlanAddOrUpdateRequest : TeaModel {
         /// <summary>
-        /// <para>A collection of data masking rules that you want to add or modify.</para>
+        /// <para>The collection of data masking rules to add or update.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesensRules")]
@@ -20,8 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>Specifies whether to add a watermark. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Adds a watermark.</para>
+            /// </description></item>
+            /// <item><description><para>false: Does not add a watermark.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public bool? CheckWatermark { get; set; }
 
             /// <summary>
-            /// <para>The sensitive field type.</para>
+            /// <para>The sensitive data type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>phone</para>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>The data masking rule.</para>
+            /// <para>The configuration of the data masking method.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DesensPlan")]
@@ -50,15 +52,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public DsgDesensPlanAddOrUpdateRequestDesensRulesDesensPlan DesensPlan { get; set; }
             public class DsgDesensPlanAddOrUpdateRequestDesensRulesDesensPlan : TeaModel {
                 /// <summary>
-                /// <para>The masking method configured in the data masking rule. Valid values:</para>
+                /// <para>The data masking method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>hash</description></item>
-                /// <item><description>mapping</description></item>
-                /// <item><description>mask</description></item>
-                /// <item><description>charreplacement</description></item>
-                /// <item><description>intervalselect</description></item>
-                /// <item><description>decimalpoint</description></item>
-                /// <item><description>emptydesens</description></item>
+                /// <item><description><para>hash: hashing</para>
+                /// </description></item>
+                /// <item><description><para>mapping: pseudonymization</para>
+                /// </description></item>
+                /// <item><description><para>mask: masking</para>
+                /// </description></item>
+                /// <item><description><para>charreplacement: character replacement</para>
+                /// </description></item>
+                /// <item><description><para>intervalselect: interval transformation</para>
+                /// </description></item>
+                /// <item><description><para>decimalpoint: rounding</para>
+                /// </description></item>
+                /// <item><description><para>emptydesens: nullification</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -70,7 +79,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string DesensPlanType { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for the data masking rule.</para>
+                /// <para>The parameters for the data masking method.</para>
                 /// </summary>
                 [NameInMap("ExtParam")]
                 [Validation(Required=false)]
@@ -79,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The ID of the data masking rule. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to query the ID of the data masking rule.</para>
+            /// <para>The data masking rule ID. You can call the <a href="https://help.aliyun.com/document_detail/2786578.html">DsgDesensPlanQueryList</a> operation to obtain it.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -111,7 +120,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The level-2 data masking scenario.</para>
+            /// <para>The secondary data masking scenes.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("SceneIds")]
@@ -121,8 +130,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The status of the data masking rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: expired</description></item>
-            /// <item><description>1: effective</description></item>
+            /// <item><description><para>0: Disabled</para>
+            /// </description></item>
+            /// <item><description><para>1: Enabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,33 +143,52 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// <para>The associated columns for masking.</para>
+            /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
             public List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> Columns { get; set; }
             public class DsgDesensPlanAddOrUpdateRequestDesensRulesColumns : TeaModel {
                 /// <summary>
+                /// <para>The column name.</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_col_dev</para>
                 /// </summary>
                 [NameInMap("column")]
                 [Validation(Required=false)]
                 public string Column { get; set; }
 
                 /// <summary>
+                /// <para>The data source type.</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ODPS.ODPS</para>
                 /// </summary>
                 [NameInMap("dbType")]
                 [Validation(Required=false)]
                 public string DbType { get; set; }
 
                 /// <summary>
+                /// <para>The name of the DataWorks workspace.</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_dev</para>
                 /// </summary>
                 [NameInMap("project")]
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
                 /// <summary>
+                /// <para>The table name.</para>
                 /// <para>This parameter is required.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test_table_dev</para>
                 /// </summary>
                 [NameInMap("table")]
                 [Validation(Required=false)]
@@ -166,9 +196,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
-            [NameInMap("emptyNotDesesn")]
+            [NameInMap("emptyNotDesens")]
             [Validation(Required=false)]
-            public bool? EmptyNotDesesn { get; set; }
+            public bool? EmptyNotDesens { get; set; }
 
         }
 

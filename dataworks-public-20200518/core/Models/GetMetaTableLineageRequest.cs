@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>odps.engine_name.table_name1</para>
+        /// <para>next_primary_key</para>
         /// </summary>
         [NameInMap("NextPrimaryKey")]
         [Validation(Required=false)]

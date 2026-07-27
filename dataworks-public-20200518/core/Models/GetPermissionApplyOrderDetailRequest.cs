@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>48f36729-05f9-4a40-9286-933fd940f30a</para>
+        /// <para>48f36729-05f9-4a40-9286-933fd940****</para>
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]

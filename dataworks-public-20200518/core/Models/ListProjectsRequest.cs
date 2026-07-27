@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmzbn7pti3zfa</para>
+        /// <para>rg-acfmzbn7pt****</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The key of tag N to add to the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Env</para>
+            /// <para>key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The value of tag N to add to the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

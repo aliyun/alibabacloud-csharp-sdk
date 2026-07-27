@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetMetaTablePartitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public List<GetMetaTablePartitionResponseBodyDataDataEntityList> DataEntityList { get; set; }
             public class GetMetaTablePartitionResponseBodyDataDataEntityList : TeaModel {
                 /// <summary>
-                /// <para>The comment.</para>
+                /// <para>The remarks.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>Remarks</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
                 public string Comment { get; set; }
 
                 /// <summary>
-                /// <para>The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The creation time. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590032868000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The size of the partition. Unit: bytes.</para>
+                /// <para>The partition size. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>19</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? DataSize { get; set; }
 
                 /// <summary>
-                /// <para>The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The modification time. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1590032868000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ModifiedTime { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the partition.</para>
+                /// <para>The unique identifier of the partition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.table_name.pt=20170614</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string PartitionName { get; set; }
 
                 /// <summary>
-                /// <para>The path of the partition.</para>
+                /// <para>The directory of the partition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string PartitionType { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries in the partition.</para>
+                /// <para>The record count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>233</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? RecordCount { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the metatable.</para>
+                /// <para>The unique identifier of the table.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.engine_name.table_name</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

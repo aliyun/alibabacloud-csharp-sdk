@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityResultsByEntityRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>The end of the business date range. The value must be in the <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to query the ID.</para>
+        /// <para>The ID of the partition expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>152322134</para>
+        /// <para>15232</para>
         /// </summary>
         [NameInMap("EntityId")]
         [Validation(Required=false)]
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 20.</para>
+        /// <para>The number of entries to return per page. The default is 10, and the maximum is 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source. You can obtain the name from data source configurations.</para>
+        /// <para>The name of the engine or data source. You can find this name on the Data Source Configuration page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
+        /// <para>The start of the business date range. The value must be in the <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

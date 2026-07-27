@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the custom alert rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Alert Rule</para>
+                /// <para>Rule name</para>
                 /// </summary>
                 [NameInMap("RemindName")]
                 [Validation(Required=false)]

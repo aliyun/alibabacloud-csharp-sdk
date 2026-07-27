@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The end time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2022-02-12 0:32:12</para>
+                /// <para>2020-01-01 00:01:00</para>
                 /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>128</para>
+                /// <para>333</para>
                 /// </summary>
                 [NameInMap("ProjectId")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The start time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2022-02-12 0:34:13</para>
+                /// <para>2020-01-01 00:00:00</para>
                 /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The GUID of the MaxCompute table.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps.sample_project.sample_table</para>
+                /// <para>odps.engine_name.table_name</para>
                 /// </summary>
                 [NameInMap("TableGuid")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>987654321</para>
+                /// <para>3521</para>
                 /// </summary>
                 [NameInMap("TaskInstanceId")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The waiting time.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>3</para>
+                /// <para>323</para>
                 /// </summary>
                 [NameInMap("WaitTime")]
                 [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>128</para>
+            /// <para>100</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>1031203110005</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SUCCESS</para>
+        /// <para>The specified parameters are invalid.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0000-0000-0000-000</para>
+        /// <para>0bc1ec92159376****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

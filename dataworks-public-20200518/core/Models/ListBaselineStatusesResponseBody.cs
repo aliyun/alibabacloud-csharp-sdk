@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The type of the baseline, including DAILY and HOURLY. Separate multiple types with commas (,).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DAILY,HOURLY</para>
+                /// <para>Baseline type</para>
                 /// </summary>
                 [NameInMap("BaselineType")]
                 [Validation(Required=false)]

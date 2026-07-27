@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DataDesensPlanTemplateValue : TeaModel {
         /// <summary>
-        /// <para>The name of the data masking method.</para>
+        /// <para>The name of the Desensitization Method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hash</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a watermark is added. Valid values:</para>
+        /// <para>Indicates whether watermarking is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: allow</description></item>
-        /// <item><description>false: disallow</description></item>
+        /// <item><description><para>true: Watermarking is supported.</para>
+        /// </description></item>
+        /// <item><description><para>false: Watermarking is not supported.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? SupportWaterMark { get; set; }
 
         /// <summary>
-        /// <para>The data masking parameters and their descriptions.</para>
+        /// <para>A list of Desensitization Parameters and their descriptions.</para>
         /// </summary>
         [NameInMap("ExtParamTemplate")]
         [Validation(Required=false)]

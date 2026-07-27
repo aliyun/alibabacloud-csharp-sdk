@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization task.</description></item>
-        /// <item><description>If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.</description></item>
+        /// <item><description><para>If you set the TaskType parameter to DI_REALTIME, set the TaskId parameter to the value of the FileId parameter for the real-time synchronization task.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the TaskType parameter to DI_SOLUTION, set the TaskId parameter to the value of the FileId parameter for the synchronization solution.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,19 +51,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The script for updating the real-time synchronization task in Data Integration. DataWorks allows you to add or remove tables for a real-time synchronization task in Data Integration only in asynchronous mode. The following types of real-time synchronization tasks are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Synchronization task that is used to synchronize data from MySQL to MaxCompute</description></item>
-        /// <item><description>Synchronization task that is used to synchronize data from MySQL data to Kafka</description></item>
-        /// <item><description>Synchronization task that is used to synchronize data from MySQL to Hologres</description></item>
+        /// <item><description><para>Synchronization task that is used to synchronize data from MySQL to MaxCompute</para>
+        /// </description></item>
+        /// <item><description><para>Synchronization task that is used to synchronize data from MySQL data to Kafka</para>
+        /// </description></item>
+        /// <item><description><para>Synchronization task that is used to synchronize data from MySQL to Hologres</para>
+        /// </description></item>
         /// </list>
         /// <para>The SelectedTables parameter is used to specify tables that you want to synchronize from multiple databases. The Tables parameter is used to specify tables that you want to synchronize from a single database.</para>
         /// <list type="bullet">
-        /// <item><description>If the script contains the SelectedTables parameter, the system synchronizes data from the tables that you specify in the SelectedTables parameter.</description></item>
-        /// <item><description>If the script contains the Tables parameter, the system synchronizes data from the tables that you specify in the Tables parameter.</description></item>
+        /// <item><description><para>If the script contains the SelectedTables parameter, the system synchronizes data from the tables that you specify in the SelectedTables parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If the script contains the Tables parameter, the system synchronizes data from the tables that you specify in the Tables parameter.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{      &quot;steps&quot;: [         {             &quot;parameter&quot;: {                 &quot;connection&quot;: [                     {                         &quot;table&quot;: [                             &quot;xyx&quot;                         ]                     }                 ]             },             &quot;name&quot;: &quot;Reader&quot;,             &quot;category&quot;: &quot;reader&quot;         }     ] }</para>
+        /// <para>{&quot;steps&quot;:[{&quot;parameter&quot;:{&quot;connection&quot;:[{&quot;table&quot;:[&quot;xyx&quot;]}]},&quot;name&quot;:&quot;Reader&quot;,&quot;category&quot;:&quot;reader&quot;}]}</para>
         /// </summary>
         [NameInMap("TaskParam")]
         [Validation(Required=false)]
@@ -70,14 +77,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The type of the object that you want to update in Data Integration in asynchronous mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DI_REALTIME: real-time synchronization task</description></item>
-        /// <item><description>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.</description></item>
+        /// <item><description><para>DI_REALTIME: real-time synchronization task</para>
+        /// </description></item>
+        /// <item><description><para>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DI_OFFLINE</description></item>
-        /// <item><description>DI_REALTIME</description></item>
-        /// <item><description>DI_SOLUTION</description></item>
+        /// <item><description><para>DI_OFFLINE</para>
+        /// </description></item>
+        /// <item><description><para>DI_REALTIME</para>
+        /// </description></item>
+        /// <item><description><para>DI_SOLUTION</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

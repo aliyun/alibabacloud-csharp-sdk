@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityEntityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the partition filter expression.</para>
+        /// <para>The ID of the partition expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,27 +21,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The type of the compute engine or data source. The following types are supported: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>odps</description></item>
-        /// <item><description>emr</description></item>
-        /// <item><description>hadoop</description></item>
-        /// <item><description>cdh</description></item>
-        /// <item><description>hybriddb_for_postgresql</description></item>
-        /// <item><description>holodb</description></item>
-        /// </list>
+        /// <para>The type of the engine or data source. Valid values: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ODPS</para>
+        /// <para>odps</para>
         /// </summary>
         [NameInMap("EnvType")]
         [Validation(Required=false)]
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -51,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source.</para>
+        /// <para>The name of the engine or data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

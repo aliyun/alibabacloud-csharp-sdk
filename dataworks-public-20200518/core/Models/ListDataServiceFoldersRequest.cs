@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The keyword in folder names. The keyword is used to search for folders whose names contain this keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Keyword in folder names</para>
+        /// <para>Folder name keyword</para>
         /// </summary>
         [NameInMap("FolderNameKeyword")]
         [Validation(Required=false)]

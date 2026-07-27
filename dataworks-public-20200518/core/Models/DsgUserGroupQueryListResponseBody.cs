@@ -40,21 +40,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paginated query results.</para>
         /// </summary>
         [NameInMap("PageData")]
         [Validation(Required=false)]
         public DsgUserGroupQueryListResponseBodyPageData PageData { get; set; }
         public class DsgUserGroupQueryListResponseBodyPageData : TeaModel {
             /// <summary>
-            /// <para>The user groups.</para>
+            /// <para>A list of user groups.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{     &quot;accounts&quot;: [         &quot;role_project_scheduler&quot;     ],     &quot;gmtCreate&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;gmtModified&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;id&quot;: 1955,     &quot;name&quot;: &quot;dsg_fin_test-copy&quot;,     &quot;owner&quot;: &quot;UAT&quot; }</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<DsgUserGroupQueryListResponseBodyPageDataData> Data { get; set; }
             public class DsgUserGroupQueryListResponseBodyPageDataData : TeaModel {
                 /// <summary>
-                /// <para>The usernames in the user group.</para>
+                /// <para>A list of usernames in the user group.</para>
                 /// </summary>
                 [NameInMap("Accounts")]
                 [Validation(Required=false)]
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the user group was modified.</para>
+                /// <para>The time when the user group was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-10 17:14:44</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The user group ID.</para>
+                /// <para>The ID of the user group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of user groups returned.</para>
+            /// <para>The total number of user groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -161,8 +164,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateQualityFollowerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the update is successful.</para>
+        /// <para>Indicates whether the update was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

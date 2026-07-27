@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The error message returned.</para>
+        /// <para>Request ID</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

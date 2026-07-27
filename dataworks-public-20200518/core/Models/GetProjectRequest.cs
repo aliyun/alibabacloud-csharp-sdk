@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/2780068.html">ListProjects</a> operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>27</para>
+        /// <para>466230</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]

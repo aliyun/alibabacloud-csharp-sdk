@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The asynchronous thread ID. You can call the <a href="https://help.aliyun.com/document_detail/383463.html">GenerateDISyncTaskConfigForCreating</a> or <a href="https://help.aliyun.com/document_detail/383464.html">GenerateDISyncTaskConfigForUpdating</a> operation to obtain the ID.</para>
         /// <list type="bullet">
-        /// <item><description>The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization task in Data Integration.</description></item>
-        /// <item><description>The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization task in Data Integration.</description></item>
+        /// <item><description><para>The GenerateDISyncTaskConfigForCreating operation is used to generate the ID of the asynchronous thread that is used to create a real-time synchronization task in Data Integration.</para>
+        /// </description></item>
+        /// <item><description><para>The GenerateDISyncTaskConfigForUpdating operation is used to generate the ID of the asynchronous thread that is used to update a real-time synchronization task in Data Integration.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,14 +41,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The type of the object that you want to create or update in Data Integration in asynchronous mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DI_REALTIME: real-time synchronization task</description></item>
-        /// <item><description>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks and synchronization solutions in Data Integration only in asynchronous mode.</description></item>
+        /// <item><description><para>DI_REALTIME: real-time synchronization task</para>
+        /// </description></item>
+        /// <item><description><para>DI_SOLUTION: synchronization solution DataWorks allows you to create or update real-time synchronization tasks and synchronization solutions in Data Integration only in asynchronous mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DI_OFFLINE</description></item>
-        /// <item><description>DI_REALTIME</description></item>
-        /// <item><description>DI_SOLUTION</description></item>
+        /// <item><description><para>DI_OFFLINE</para>
+        /// </description></item>
+        /// <item><description><para>DI_REALTIME</para>
+        /// </description></item>
+        /// <item><description><para>DI_SOLUTION</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

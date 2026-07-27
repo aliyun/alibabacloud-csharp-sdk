@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListFoldersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The path of the folder.</para>
+        /// <para>A list of folders that meet the specified criteria.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListFoldersResponseBodyData Data { get; set; }
         public class ListFoldersResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>A list of folders.</para>
+            /// </summary>
             [NameInMap("Folders")]
             [Validation(Required=false)]
             public List<ListFoldersResponseBodyDataFolders> Folders { get; set; }
             public class ListFoldersResponseBodyDataFolders : TeaModel {
                 /// <summary>
+                /// <para>The ID of the folder.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2735c2****</para>
                 /// </summary>
@@ -29,6 +34,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FolderId { get; set; }
 
                 /// <summary>
+                /// <para>The path of the folder.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
                 /// </summary>
@@ -39,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             }
 
             /// <summary>
-            /// <para>The folder ID.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para><a href="http://100.67.165.184/business/api/folders/list">http://100.67.165.184/business/api/folders/list</a></para>
+            /// <para>The number of entries on the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -59,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>ListFolders</para>
+            /// <para>The total number of entries that meet the filter criteria.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -71,7 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -81,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -91,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The information about the folders.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -101,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The ID of the request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-****</para>
@@ -111,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of folders.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

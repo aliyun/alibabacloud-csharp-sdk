@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateDagTestRequest : TeaModel {
         /// <summary>
+        /// <para>The business date.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Bizdate { get; set; }
 
         /// <summary>
+        /// <para>The name of the workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
+        /// <para>The parameters of the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bizdate=$bizdate tbods=$tbods</para>
         /// </summary>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParams { get; set; }
 
         /// <summary>
+        /// <para>The environment of the workspace. Valid values: PROD and DEV.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

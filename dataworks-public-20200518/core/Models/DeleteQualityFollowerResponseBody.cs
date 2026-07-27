@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DeleteQualityFollowerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the subscriber was successfully deleted. Valid values:</para>
+        /// <para>Indicates whether the follower of the partition filter expression was deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The subscriber was successfully deleted.</description></item>
-        /// <item><description>false: The subscriber failed to be deleted. You can troubleshoot errors based on the error message returned.</description></item>
+        /// <item><description><para><c>true</c>: The follower was deleted.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The follower failed to be deleted. You can troubleshoot the issue based on the error message.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the subscriber failed to be deleted.</para>
+        /// <para>The error message returned if the follower of the partition filter expression fails to be deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>You have no permission.</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can troubleshoot errors based on the ID.</para>
+        /// <para>The request ID. This parameter is used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6d739ef6-098a-47****</para>
@@ -66,8 +68,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

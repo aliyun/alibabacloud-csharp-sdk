@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>Indicates whether the synchronization task is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>success: The synchronization task is deleted.</description></item>
-            /// <item><description>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</description></item>
+            /// <item><description><para>success: The synchronization task is deleted.</para>
+            /// </description></item>
+            /// <item><description><para>fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,8 +57,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

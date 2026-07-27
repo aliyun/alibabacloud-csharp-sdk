@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-02-15</para>
+        /// <para>2020-05-27</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-02-02</para>
+        /// <para>2020-06-27</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>odps.sample_project.sample_table</para>
+        /// <para>odps.engine_name.table_name</para>
         /// </summary>
         [NameInMap("TableGuid")]
         [Validation(Required=false)]

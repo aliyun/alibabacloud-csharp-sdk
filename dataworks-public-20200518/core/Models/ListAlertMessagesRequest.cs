@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The ID of the Alibaba Cloud account used by the alert recipient.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>12345</para>
         /// </summary>
         [NameInMap("AlertUser")]
         [Validation(Required=false)]

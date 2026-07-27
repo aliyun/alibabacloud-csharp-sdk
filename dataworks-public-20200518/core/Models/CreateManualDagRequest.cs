@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class CreateManualDagRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format.</para>
+        /// <para>The value of the business date must be less than or equal to the current date minus one day. For example, if today is November 11, 2020, the business date must be 2020-11-10 00:00:00 or an earlier date. The hour, minute, and second fields of the business date must all be set to 00.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string BizDate { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.</para>
+        /// <para>The workflow parameters. These parameters are synchronized to all instances of the current DAG. If the scheduling parameters of an internal node reference the workflow parameters in DagParameters, the corresponding parameter values of the node are replaced with the workflow parameters in DagParameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;kaaaa&quot;: &quot;vaaaaa&quot;, &quot;kbbbb&quot;: &quot;vbbbbb&quot;}</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DagParameters { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the nodes that do not need to be run.</para>
+        /// <para>The list of IDs of the nodes that do not need to be run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123,456</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExcludeNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the manually triggered workflow.</para>
+        /// <para>The name of the manual workflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string FlowName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the nodes that you want to run.</para>
+        /// <para>The list of IDs of the nodes to be run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74324,74325</para>
@@ -62,7 +62,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string IncludeNodeIds { get; set; }
 
         /// <summary>
-        /// <para>The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: <c>{ &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot;, &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot; }</c></para>
+        /// <para>The node parameter information passed when the manual workflow is executed, in JSON format:
+        /// <c>{      &quot;&lt;A node ID inside the manual workflow&gt;&quot;: &quot;The scheduling parameter information of the node, consistent with the parameter format in the data development scheduling configuration&quot;,       &quot;&lt;A node ID inside the manual workflow&gt;&quot;: &quot;The scheduling parameter information of the node, consistent with the parameter format in the data development scheduling configuration&quot; }</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;20000123121&quot;: &quot;key1=val2 key2=val2&quot;, &quot;20000123124&quot;: &quot;kkkk=vvvvv aaaa=bbbb&quot;}</para>
@@ -72,15 +73,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string NodeParameters { get; set; }
 
         /// <summary>
-        /// <para>The environment type of Operation Center. Valid values: PROD and DEV.</para>
+        /// <para>The environment identifier of the Scheduling Operation Center. PROD indicates the production environment, and DEV indicates the development environment.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PROD or DEV</para>
         /// </summary>
         [NameInMap("ProjectEnv")]
         [Validation(Required=false)]
         public string ProjectEnv { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace to which the manually triggered workflow belongs.</para>
+        /// <para>The English name of the workspace to which the manual workflow belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

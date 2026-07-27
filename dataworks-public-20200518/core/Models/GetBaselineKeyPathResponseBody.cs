@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12345</para>
+            /// <para>123456</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]

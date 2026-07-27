@@ -10,19 +10,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityFollowerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the subscription relationship.</para>
+        /// <para>An array of follower objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetQualityFollowerResponseBodyData> Data { get; set; }
         public class GetQualityFollowerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The alert mode. The value is as follows:</para>
+            /// <para>The alarm notification method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1 (Mail)</description></item>
-            /// <item><description>2 (email and SMS)</description></item>
-            /// <item><description>4 (DingTalk groups of robots or hook)</description></item>
-            /// <item><description>5 (DingTalk groups of robots @ ALL)</description></item>
+            /// <item><description><para>1: by email</para>
+            /// </description></item>
+            /// <item><description><para>2: by email and SMS</para>
+            /// </description></item>
+            /// <item><description><para>4: by DingTalk chatbot or webhook</para>
+            /// </description></item>
+            /// <item><description><para>5: by DingTalk chatbot with the @all keyword</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? AlarmMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the data quality rule subscription configuration was created.</para>
+            /// <para>The time when the subscription was created. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1541576644000</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string EntityId { get; set; }
 
             /// <summary>
-            /// <para>The subscriber to receive alert information.</para>
+            /// <para>The follower who receives alarm notifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string Follower { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account name of the subscriber.</para>
+            /// <para>The Alibaba Cloud account name of the follower.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string FollowerAccountName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the subscription relationship.</para>
+            /// <para>The subscription ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The update time of the data quality rule subscription configuration.</para>
+            /// <para>The time when the subscription was last updated. This value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1541576644000</para>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP return code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -145,7 +149,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>38cbdef0-f6cf-49</para>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

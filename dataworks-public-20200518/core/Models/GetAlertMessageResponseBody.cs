@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>12312312</para>
+                /// <para>12312****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]

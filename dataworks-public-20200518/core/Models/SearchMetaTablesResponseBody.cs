@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the metatable. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: table</description></item>
-                /// <item><description>1: view</description></item>
+                /// <item><description><para>0: table</para>
+                /// </description></item>
+                /// <item><description><para>1: view</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <summary>
                 /// <para>The type of the environment. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: production environment</description></item>
-                /// <item><description>0: development environment</description></item>
+                /// <item><description><para>1: production environment</para>
+                /// </description></item>
+                /// <item><description><para>0: development environment</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

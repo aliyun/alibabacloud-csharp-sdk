@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Node Name</para>
+                /// <para>Node name</para>
                 /// </summary>
                 [NameInMap("NodeName")]
                 [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the event.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1234 Error</para>
+                /// <para>Error 1234</para>
                 /// </summary>
                 [NameInMap("TopicName")]
                 [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class SubmitFileRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the commit operation.</para>
+        /// <para>The comment for the submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Submit a task for the first time</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the file ID.</para>
+        /// <para>The ID of the file. Obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks Console and go to the Workspace Configurations page to obtain the workspace ID. Specify either this parameter or <c>ProjectIdentifier</c> to identify the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>100001</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The name of the DataWorks workspace. You can log on to the DataWorks Console and go to the Workspace Configurations page to obtain the workspace name. Specify either this parameter or <c>ProjectId</c> to identify the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -51,10 +51,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to skip the pre-publish check after the file is committed. Valid values:</para>
+        /// <para>Specifies whether to skip the pre-deployment check after the file is submitted.</para>
         /// <list type="bullet">
-        /// <item><description>false: indicates that the pre-publish check is not skipped. After the file is committed, the pre-publish check is automatically triggered. The file can be deployed only after the file passes the check.</description></item>
-        /// <item><description>true: indicates that the pre-publish check is skipped. After the file is submitted, the pre-publish check process is not triggered. You can directly deploy the file.</description></item>
+        /// <item><description><para>false: Do not skip. After the file is submitted, the pre-deployment check process is automatically triggered. The file becomes deployable only after it passes the check.</para>
+        /// </description></item>
+        /// <item><description><para>true: Skip. The pre-deployment check process is not triggered after the file is submitted. You can proceed directly with the deployment process.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

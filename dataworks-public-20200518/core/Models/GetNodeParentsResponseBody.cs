@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>asfasdfs-adfasdf-asfas-dfasdf-asdf</para>
+        /// <para>asfsdfas-adfasdf-asfas-dfasdf-asdf</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

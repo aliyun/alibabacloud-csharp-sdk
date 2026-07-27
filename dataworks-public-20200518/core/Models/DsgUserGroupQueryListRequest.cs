@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgUserGroupQueryListRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the user group name. A fuzzy match is performed based on the keyword to search for the user group.</para>
+        /// <para>A keyword for the user group name. The service performs a fuzzy search to find matching user groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yun_group</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of the page to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine. If you want to query the information about a MaxCompute user group, you need to configure this parameter.</para>
+        /// <para>The name of the MaxCompute project to query for user groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_project</para>

@@ -94,9 +94,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>The scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: Nodes are scheduled as expected.</description></item>
-        /// <item><description>PAUSE: Nodes are paused.</description></item>
-        /// <item><description>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</description></item>
+        /// <item><description><para>NORMAL: Nodes are scheduled as expected.</para>
+        /// </description></item>
+        /// <item><description><para>PAUSE: Nodes are paused.</para>
+        /// </description></item>
+        /// <item><description><para>SKIP: Nodes are dry-run. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

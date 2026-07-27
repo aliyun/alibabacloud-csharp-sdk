@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345</para>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("CreatorId")]
         [Validation(Required=false)]

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The name of the API.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Name of the test API</para>
+            /// <para>Test API name</para>
             /// </summary>
             [NameInMap("ApiName")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Description of the test API</para>
+            /// <para>Test API description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -229,18 +229,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The data type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: String</description></item>
-                    /// <item><description>1: Int</description></item>
-                    /// <item><description>2: Long</description></item>
-                    /// <item><description>3: Float</description></item>
-                    /// <item><description>4: Double</description></item>
-                    /// <item><description>5: Boolean</description></item>
-                    /// <item><description>6: StringList</description></item>
-                    /// <item><description>7: IntList</description></item>
-                    /// <item><description>8: LongList</description></item>
-                    /// <item><description>9: FloatList</description></item>
-                    /// <item><description>10: DoubleList</description></item>
-                    /// <item><description>11: BooleanList</description></item>
+                    /// <item><description><para>0: String</para>
+                    /// </description></item>
+                    /// <item><description><para>1: Int</para>
+                    /// </description></item>
+                    /// <item><description><para>2: Long</para>
+                    /// </description></item>
+                    /// <item><description><para>3: Float</para>
+                    /// </description></item>
+                    /// <item><description><para>4: Double</para>
+                    /// </description></item>
+                    /// <item><description><para>5: Boolean</para>
+                    /// </description></item>
+                    /// <item><description><para>6: StringList</para>
+                    /// </description></item>
+                    /// <item><description><para>7: IntList</para>
+                    /// </description></item>
+                    /// <item><description><para>8: LongList</para>
+                    /// </description></item>
+                    /// <item><description><para>9: FloatList</para>
+                    /// </description></item>
+                    /// <item><description><para>10: DoubleList</para>
+                    /// </description></item>
+                    /// <item><description><para>11: BooleanList</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -306,7 +318,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The URL of the backend service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><a href="http://example.aliyundoc.com">http://example.aliyundoc.com</a></para>
+                /// <para><a href="http://www.abc.com">http://www.abc.com</a></para>
                 /// </summary>
                 [NameInMap("ServiceHost")]
                 [Validation(Required=false)]
@@ -509,18 +521,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The data type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: String</description></item>
-                    /// <item><description>1: Int</description></item>
-                    /// <item><description>2: Long</description></item>
-                    /// <item><description>3: Float</description></item>
-                    /// <item><description>4: Double</description></item>
-                    /// <item><description>5: Boolean</description></item>
-                    /// <item><description>6: StringList</description></item>
-                    /// <item><description>7: IntList</description></item>
-                    /// <item><description>8: LongList</description></item>
-                    /// <item><description>9: FloatList</description></item>
-                    /// <item><description>10: DoubleList</description></item>
-                    /// <item><description>11: BooleanList</description></item>
+                    /// <item><description><para>0: String</para>
+                    /// </description></item>
+                    /// <item><description><para>1: Int</para>
+                    /// </description></item>
+                    /// <item><description><para>2: Long</para>
+                    /// </description></item>
+                    /// <item><description><para>3: Float</para>
+                    /// </description></item>
+                    /// <item><description><para>4: Double</para>
+                    /// </description></item>
+                    /// <item><description><para>5: Boolean</para>
+                    /// </description></item>
+                    /// <item><description><para>6: StringList</para>
+                    /// </description></item>
+                    /// <item><description><para>7: IntList</para>
+                    /// </description></item>
+                    /// <item><description><para>8: LongList</para>
+                    /// </description></item>
+                    /// <item><description><para>9: FloatList</para>
+                    /// </description></item>
+                    /// <item><description><para>10: DoubleList</para>
+                    /// </description></item>
+                    /// <item><description><para>11: BooleanList</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -553,10 +577,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The operator used for the value of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: Equal</description></item>
-                    /// <item><description>1: Like</description></item>
-                    /// <item><description>2: Const</description></item>
-                    /// <item><description>3: In</description></item>
+                    /// <item><description><para>0: Equal</para>
+                    /// </description></item>
+                    /// <item><description><para>1: Like</para>
+                    /// </description></item>
+                    /// <item><description><para>2: Const</para>
+                    /// </description></item>
+                    /// <item><description><para>3: In</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>APIs generated in wizard mode support the Equal, Like, and In operators. APIs generated in script mode support the Equal operator. APIs generated by registration support the Equal and Const operators.</para>
                     /// 
@@ -570,10 +598,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The position of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: indicates that the parameter is in the URL path of the request.</description></item>
-                    /// <item><description>1: indicates that the parameter is in the Query parameter of the request URL.</description></item>
-                    /// <item><description>2: indicates that the parameter is in the request header.</description></item>
-                    /// <item><description>3: indicates that the parameter is in the request body.</description></item>
+                    /// <item><description><para>0: indicates that the parameter is in the URL path of the request.</para>
+                    /// </description></item>
+                    /// <item><description><para>1: indicates that the parameter is in the Query parameter of the request URL.</para>
+                    /// </description></item>
+                    /// <item><description><para>2: indicates that the parameter is in the request header.</para>
+                    /// </description></item>
+                    /// <item><description><para>3: indicates that the parameter is in the request body.</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>APIs generated in wizard or script mode support only the Query position. APIs generated by registration whose request method is GET or DELETE support the Query and Head positions. APIs generated by registration whose request method is PUT or POST support the Query, Head, and Body positions.</para>
                     /// 
@@ -606,18 +638,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The data type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: String</description></item>
-                    /// <item><description>1: Int</description></item>
-                    /// <item><description>2: Long</description></item>
-                    /// <item><description>3: Float</description></item>
-                    /// <item><description>4: Double</description></item>
-                    /// <item><description>5: Boolean</description></item>
-                    /// <item><description>6: StringList</description></item>
-                    /// <item><description>7: IntList</description></item>
-                    /// <item><description>8: LongList</description></item>
-                    /// <item><description>9: FloatList</description></item>
-                    /// <item><description>10: DoubleList</description></item>
-                    /// <item><description>11: BooleanList</description></item>
+                    /// <item><description><para>0: String</para>
+                    /// </description></item>
+                    /// <item><description><para>1: Int</para>
+                    /// </description></item>
+                    /// <item><description><para>2: Long</para>
+                    /// </description></item>
+                    /// <item><description><para>3: Float</para>
+                    /// </description></item>
+                    /// <item><description><para>4: Double</para>
+                    /// </description></item>
+                    /// <item><description><para>5: Boolean</para>
+                    /// </description></item>
+                    /// <item><description><para>6: StringList</para>
+                    /// </description></item>
+                    /// <item><description><para>7: IntList</para>
+                    /// </description></item>
+                    /// <item><description><para>8: LongList</para>
+                    /// </description></item>
+                    /// <item><description><para>9: FloatList</para>
+                    /// </description></item>
+                    /// <item><description><para>10: DoubleList</para>
+                    /// </description></item>
+                    /// <item><description><para>11: BooleanList</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -856,18 +900,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The data type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: String</description></item>
-                    /// <item><description>1: Int</description></item>
-                    /// <item><description>2: Long</description></item>
-                    /// <item><description>3: Float</description></item>
-                    /// <item><description>4: Double</description></item>
-                    /// <item><description>5: Boolean</description></item>
-                    /// <item><description>6: StringList</description></item>
-                    /// <item><description>7: IntList</description></item>
-                    /// <item><description>8: LongList</description></item>
-                    /// <item><description>9: FloatList</description></item>
-                    /// <item><description>10: DoubleList</description></item>
-                    /// <item><description>11: BooleanList</description></item>
+                    /// <item><description><para>0: String</para>
+                    /// </description></item>
+                    /// <item><description><para>1: Int</para>
+                    /// </description></item>
+                    /// <item><description><para>2: Long</para>
+                    /// </description></item>
+                    /// <item><description><para>3: Float</para>
+                    /// </description></item>
+                    /// <item><description><para>4: Double</para>
+                    /// </description></item>
+                    /// <item><description><para>5: Boolean</para>
+                    /// </description></item>
+                    /// <item><description><para>6: StringList</para>
+                    /// </description></item>
+                    /// <item><description><para>7: IntList</para>
+                    /// </description></item>
+                    /// <item><description><para>8: LongList</para>
+                    /// </description></item>
+                    /// <item><description><para>9: FloatList</para>
+                    /// </description></item>
+                    /// <item><description><para>10: DoubleList</para>
+                    /// </description></item>
+                    /// <item><description><para>11: BooleanList</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -939,18 +995,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>The data type of the parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>0: String</description></item>
-                    /// <item><description>1: Int</description></item>
-                    /// <item><description>2: Long</description></item>
-                    /// <item><description>3: Float</description></item>
-                    /// <item><description>4: Double</description></item>
-                    /// <item><description>5: Boolean</description></item>
-                    /// <item><description>6: StringList</description></item>
-                    /// <item><description>7: IntList</description></item>
-                    /// <item><description>8: LongList</description></item>
-                    /// <item><description>9: FloatList</description></item>
-                    /// <item><description>10: DoubleList</description></item>
-                    /// <item><description>11: BooleanList</description></item>
+                    /// <item><description><para>0: String</para>
+                    /// </description></item>
+                    /// <item><description><para>1: Int</para>
+                    /// </description></item>
+                    /// <item><description><para>2: Long</para>
+                    /// </description></item>
+                    /// <item><description><para>3: Float</para>
+                    /// </description></item>
+                    /// <item><description><para>4: Double</para>
+                    /// </description></item>
+                    /// <item><description><para>5: Boolean</para>
+                    /// </description></item>
+                    /// <item><description><para>6: StringList</para>
+                    /// </description></item>
+                    /// <item><description><para>7: IntList</para>
+                    /// </description></item>
+                    /// <item><description><para>8: LongList</para>
+                    /// </description></item>
+                    /// <item><description><para>9: FloatList</para>
+                    /// </description></item>
+                    /// <item><description><para>10: DoubleList</para>
+                    /// </description></item>
+                    /// <item><description><para>11: BooleanList</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

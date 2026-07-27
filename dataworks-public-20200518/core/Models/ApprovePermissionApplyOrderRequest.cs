@@ -10,20 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ApprovePermissionApplyOrderRequest : TeaModel {
         /// <summary>
-        /// <para>The action for the permission request order. Valid values:</para>
+        /// <para>The approval action to perform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: approve</description></item>
-        /// <item><description>2: reject</description></item>
-        /// </list>
-        /// <!---->
-        /// 
-        /// <list type="bullet">
-        /// <item><description>0</description></item>
-        /// <item><description>1</description></item>
-        /// <item><description>2\.</description></item>
-        /// <item><description>3\.</description></item>
-        /// <item><description>4</description></item>
-        /// <item><description>5</description></item>
+        /// <item><description>1: Approve.</description></item>
+        /// <item><description>2: Reject.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? ApproveAction { get; set; }
 
         /// <summary>
-        /// <para>The comment on the order.</para>
+        /// <para>The remarks for the approval.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ApproveComment { get; set; }
 
         /// <summary>
-        /// <para>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</para>
+        /// <para>The ID of the permission request order to approve. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The description of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para>test_describe</para>
             /// </summary>
             [NameInMap("ProjectDescription")]
             [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The ID of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>27</para>
+            /// <para>466230</para>
             /// </summary>
             [NameInMap("ProjectId")]
             [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The name of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para>test_project</para>
             /// </summary>
             [NameInMap("ProjectIdentifier")]
             [Validation(Required=false)]
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the workspace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para>test_project</para>
             /// </summary>
             [NameInMap("ProjectName")]
             [Validation(Required=false)]
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-acfmzbn7pti3zfa</para>
+            /// <para>rg-acfmzbn7****</para>
             /// </summary>
             [NameInMap("ResourceManagerResourceGroupId")]
             [Validation(Required=false)]
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Env</para>
+                /// <para>key</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test</para>
+                /// <para>value</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -388,7 +388,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0bc1411515937635973****</para>
+        /// <para>1AFAE64E-D1BE-432B-A9****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

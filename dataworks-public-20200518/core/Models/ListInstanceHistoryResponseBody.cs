@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>Indicates whether the instance is associated with a monitoring rule in Data Quality. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The instance is associated with a monitoring rule in Data Quality.</description></item>
-            /// <item><description>1: The instance is not associated with a monitoring rule in Data Quality.</description></item>
+            /// <item><description><para>0: The instance is associated with a monitoring rule in Data Quality.</para>
+            /// </description></item>
+            /// <item><description><para>1: The instance is not associated with a monitoring rule in Data Quality.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,14 +175,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The status of the node that generates the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NOT_RUN: The node is not run.</description></item>
-            /// <item><description>WAIT_TIME: The node is waiting for the scheduling time to arrive.</description></item>
-            /// <item><description>WAIT_RESOURCE: The node is waiting for resources.</description></item>
-            /// <item><description>RUNNING: The node is running.</description></item>
-            /// <item><description>CHECKING: Data quality is being checked for the node.</description></item>
-            /// <item><description>CHECKING_CONDITION: Branch conditions are being checked for the node.</description></item>
-            /// <item><description>FAILURE: The node fails to be run.</description></item>
-            /// <item><description>SUCCESS: The node is successfully run.</description></item>
+            /// <item><description><para>NOT_RUN: The node is not run.</para>
+            /// </description></item>
+            /// <item><description><para>WAIT_TIME: The node is waiting for the scheduling time to arrive.</para>
+            /// </description></item>
+            /// <item><description><para>WAIT_RESOURCE: The node is waiting for resources.</para>
+            /// </description></item>
+            /// <item><description><para>RUNNING: The node is running.</para>
+            /// </description></item>
+            /// <item><description><para>CHECKING: Data quality is being checked for the node.</para>
+            /// </description></item>
+            /// <item><description><para>CHECKING_CONDITION: Branch conditions are being checked for the node.</para>
+            /// </description></item>
+            /// <item><description><para>FAILURE: The node fails to be run.</para>
+            /// </description></item>
+            /// <item><description><para>SUCCESS: The node is successfully run.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,14 +203,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <summary>
             /// <para>The scheduling type of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</description></item>
-            /// <item><description>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</description></item>
-            /// <item><description>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</description></item>
-            /// <item><description>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</description></item>
-            /// <item><description>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</description></item>
-            /// <item><description>SKIP_CYCLE(5): The node is a node that is scheduled by the week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</description></item>
-            /// <item><description>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</description></item>
-            /// <item><description>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</description></item>
+            /// <item><description><para>NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.</para>
+            /// </description></item>
+            /// <item><description><para>MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.</para>
+            /// </description></item>
+            /// <item><description><para>PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.</para>
+            /// </description></item>
+            /// <item><description><para>SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</para>
+            /// </description></item>
+            /// <item><description><para>SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.</para>
+            /// </description></item>
+            /// <item><description><para>SKIP_CYCLE(5): The node is a node that is scheduled by the week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.</para>
+            /// </description></item>
+            /// <item><description><para>CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.</para>
+            /// </description></item>
+            /// <item><description><para>REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,8 +243,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

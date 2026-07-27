@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// <para>The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test business process</para>
+        /// <para>Test workflow</para>
         /// </summary>
         [NameInMap("GroupNameKeyword")]
         [Validation(Required=false)]

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
     public class ListQualityResultsByRuleRequest : TeaModel {
         /// <summary>
         /// <para>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
-        /// <para>This parameter is used together with the StartDate parameter. The interval between the time specified by this parameter and the time specified by the StartDate parameter cannot exceed 7 days.</para>
+        /// <para>You must configure this parameter together with the StartDate parameter. The time range to query cannot exceed 7 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345</para>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source for which data quality is monitored.</para>
+        /// <para>The name of the compute engine or data source for which you want to perform data quality monitoring.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The monitoring rule ID. You can use the ID and information such as a partition filter expression to perform a joint query.</para>
+        /// <para>The ID of the monitoring rule. You can use the rule ID and a partition filter to query the monitoring results of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</para>
-        /// <para>This parameter is used together with the EndDate parameter. The interval between the time specified by this parameter and the time specified by the EndDate parameter cannot exceed 7 days.</para>
+        /// <para>You must configure this parameter together with the EndDate parameter. The time range to query cannot exceed 7 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

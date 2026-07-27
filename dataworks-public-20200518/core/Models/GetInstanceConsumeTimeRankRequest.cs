@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetInstanceConsumeTimeRankRequest : TeaModel {
         /// <summary>
-        /// <para>The data timestamp, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The data timestamp, accurate to the day. The value must be in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Bizdate { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <para>The name of the data source with which the file is associated.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>odps_first</para>
+                    /// <para>odps_source</para>
                     /// </summary>
                     [NameInMap("DataSourceName")]
                     [Validation(Required=false)]
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the data source with which the file is associated.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("DataSourceName")]
                 [Validation(Required=false)]
@@ -548,7 +548,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the data source with which the file is associated.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("DataSourceName")]
                 [Validation(Required=false)]
@@ -650,7 +650,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// <para>The name of the data source to which the table belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>odps_source</para>
                 /// </summary>
                 [NameInMap("DataSourceName")]
                 [Validation(Required=false)]

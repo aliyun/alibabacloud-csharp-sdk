@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <para>The display name of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Chinese</para>
+            /// <para>中文</para>
             /// </summary>
             [NameInMap("ColumnNameCn")]
             [Validation(Required=false)]

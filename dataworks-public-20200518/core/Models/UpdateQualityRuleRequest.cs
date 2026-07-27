@@ -10,10 +10,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UpdateQualityRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</para>
+        /// <para>The strength of the quality rule. You can specify a rule as a strong or weak rule based on the importance of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: indicates that the monitoring rule is a strong rule.</description></item>
-        /// <item><description>0: indicates that the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and nodes that are associated with the rule are blocked from running.</description></item>
+        /// <item><description><para>1: strong rule</para>
+        /// </description></item>
+        /// <item><description><para>0: weak rule
+        /// If you specify a rule as a strong rule and a critical alert is triggered for the rule, the scheduling of the associated task is blocked.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? BlockType { get; set; }
 
         /// <summary>
-        /// <para>The checker ID. Valid values: 2: indicates that the current value is compared with the average value of the previous 7 days. 3: indicates that the current value is compared with the average value of the previous 30 days. 4: indicates that the current value is compared with the value 1 day earlier. 5: indicates that the current value is compared with the value 7 days earlier. 6: indicates that the current value is compared with the value 30 days earlier. 7: indicates the variance between the current value and the value 7 days earlier. 8: indicates the variance between the current value and the value 30 days earlier. 9: indicates that the current value is compared with a fixed value. 10: indicates that the current value is compared with the value 1, 7, or 30 days earlier. 11: indicates that the current value is compared with the value of the previous cycle. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID.</para>
+        /// <para>The checker ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the checker ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? Checker { get; set; }
 
         /// <summary>
-        /// <para>The description of the monitoring rule.</para>
+        /// <para>The description of the quality rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Verify the number of table rows</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</para>
+        /// <para>The threshold for a critical alert. The threshold specifies the deviation of a check result from the expected value. You can customize the threshold based on your business requirements. If you use a strong rule and a critical alert is triggered, the scheduling of the associated task is blocked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string CriticalThreshold { get; set; }
 
         /// <summary>
-        /// <para>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the partition filter expression.</para>
+        /// <para>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID of the partition filter expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EntityId { get; set; }
 
         /// <summary>
-        /// <para>The expected value of the monitoring rule.</para>
+        /// <para>The expected value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ExpectValue { get; set; }
 
         /// <summary>
-        /// <para>The monitoring rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID of the monitoring rule.</para>
+        /// <para>The rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</para>
+        /// <para>The name of the method used to collect sample data. Valid values: avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, and table_count-count_distinct.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,10 +99,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string MethodName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the monitoring rule in the production environment. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the quality rule. This parameter specifies whether to run the quality rule in the production environment.</para>
         /// <list type="bullet">
-        /// <item><description>true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.</description></item>
-        /// <item><description>false: The monitoring rule is not triggered when the associated auto triggered node that generates the output data starts to run.</description></item>
+        /// <item><description><para>true: The quality rule is triggered when the scheduling task that is associated with the output table of the rule runs.</para>
+        /// </description></item>
+        /// <item><description><para>false: The quality rule is not triggered when the scheduling task that is associated with the output table of the rule runs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,9 +118,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? OpenSwitch { get; set; }
 
         /// <summary>
-        /// <para>The comparison operator, such as &gt;, &gt;=, =, ≠, &lt;, or &lt;=.</para>
+        /// <para>The comparison operator. Valid values: &gt;, &gt;=, =, !=, &lt;, and &lt;=.</para>
         /// <remarks>
-        /// <para> If you set the Checker parameter to 9, you must configure the Operator parameter.</para>
+        /// <para>This parameter is required if you set the Checker parameter to 9.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,10 +132,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the threshold is a dynamic threshold. Valid values:</para>
+        /// <para>Specifies whether to use a dynamic threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The threshold is not a dynamic threshold.</description></item>
-        /// <item><description>2: The threshold is a dynamic threshold.</description></item>
+        /// <item><description><para>0: no</para>
+        /// </description></item>
+        /// <item><description><para>2: yes</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compute engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the name of the compute engine or data source.</para>
+        /// <para>The name of the engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -183,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string PropertyType { get; set; }
 
         /// <summary>
-        /// <para>The name of the monitoring rule.</para>
+        /// <para>The name of the quality rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -193,11 +200,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Rule type:</para>
+        /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: System template rule</description></item>
-        /// <item><description>1: Custom SQL rule</description></item>
-        /// <item><description>4: Custom template rule</description></item>
+        /// <item><description><para>0: system template</para>
+        /// </description></item>
+        /// <item><description><para>1: custom SQL</para>
+        /// </description></item>
+        /// <item><description><para>2: custom template</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// <para>The variable settings inserted before the custom rule. Format: x=a,y=b.</para>
+        /// <para>The variable settings that are inserted before a custom rule. The settings are in the format of x=a,y=b.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x=a,y=b</para>
@@ -218,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TaskSetting { get; set; }
 
         /// <summary>
-        /// <para>The ID of the monitoring template. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the monitoring template.</para>
+        /// <para>The ID of the template that is used for the check. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -228,11 +238,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The trend of the monitoring result. Valid values:</para>
+        /// <para>The trend of the check result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>up: increasing</description></item>
-        /// <item><description>down: decreasing</description></item>
-        /// <item><description>abs: absolute value</description></item>
+        /// <item><description><para>up: upward trend</para>
+        /// </description></item>
+        /// <item><description><para>down: downward trend</para>
+        /// </description></item>
+        /// <item><description><para>abs: absolute value</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -243,7 +256,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Trend { get; set; }
 
         /// <summary>
-        /// <para>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</para>
+        /// <para>The threshold for a warning alert. The threshold specifies the deviation of a check result from the expected value. You can customize the threshold based on your business requirements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -253,7 +266,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string WarningThreshold { get; set; }
 
         /// <summary>
-        /// <para>The filter condition or custom SQL statement that is used for monitoring.</para>
+        /// <para>The filter condition or custom SQL statement that is used for the check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt=$[yyyymmdd]</para>

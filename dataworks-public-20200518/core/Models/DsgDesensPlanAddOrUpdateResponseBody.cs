@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class DsgDesensPlanAddOrUpdateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result of adding or modifying a data masking rule.</para>
+        /// <para>Indicates whether the add or update operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. You can use the ID to trace logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102400001</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true false</para>
+        /// <para>Indicates whether the request was successful. A value of <c>true</c> indicates that the request was successful. A value of <c>false</c> indicates that the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
