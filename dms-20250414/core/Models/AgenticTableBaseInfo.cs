@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string CatalogType { get; set; }
 
+        [NameInMap("DatabaseQualifiedName")]
+        [Validation(Required=false)]
+        public string DatabaseQualifiedName { get; set; }
+
         [NameInMap("DatabaseUuid")]
         [Validation(Required=false)]
         public string DatabaseUuid { get; set; }

@@ -1322,7 +1322,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom agent in your personal space or a workspace.</para>
+        /// <para>Creates a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1409,6 +1409,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["WebReportConfig"] = request.WebReportConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportTheme))
+            {
+                query["WebReportTheme"] = request.WebReportTheme;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -1434,7 +1438,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom agent in your personal space or a workspace.</para>
+        /// <para>Creates a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1521,6 +1525,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["WebReportConfig"] = request.WebReportConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportTheme))
+            {
+                query["WebReportTheme"] = request.WebReportTheme;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -1546,7 +1554,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom agent in your personal space or a workspace.</para>
+        /// <para>Creates a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1564,7 +1572,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom agent in your personal space or a workspace.</para>
+        /// <para>Creates a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4990,7 +4998,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5036,7 +5044,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5082,7 +5090,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5100,7 +5108,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
+        /// <para>Retrieves the details of a custom agent by custom agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12894,7 +12902,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a custom agent in a personal space or workspace</para>
+        /// <para>Modifies a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12985,6 +12993,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["WebReportConfig"] = request.WebReportConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportTheme))
+            {
+                query["WebReportTheme"] = request.WebReportTheme;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -13010,7 +13022,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a custom agent in a personal space or workspace</para>
+        /// <para>Modifies a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13101,6 +13113,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["WebReportConfig"] = request.WebReportConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportTheme))
+            {
+                query["WebReportTheme"] = request.WebReportTheme;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
@@ -13126,7 +13142,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a custom agent in a personal space or workspace</para>
+        /// <para>Modifies a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13144,7 +13160,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a custom agent in a personal space or workspace</para>
+        /// <para>Modifies a custom agent in a personal space or workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13995,15 +14011,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14124,15 +14132,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14253,15 +14253,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -14284,15 +14276,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description</h2>
-        /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which agent message this message is responding to. The default value is <c>0</c>.</description></item>
-        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
-        /// </list>
+        /// <h2>Request description.</h2>
         /// </description>
         /// 
         /// <param name="request">

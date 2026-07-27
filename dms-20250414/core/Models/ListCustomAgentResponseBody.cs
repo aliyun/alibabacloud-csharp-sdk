@@ -411,6 +411,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string WebReportConfig { get; set; }
 
+                [NameInMap("WebReportTheme")]
+                [Validation(Required=false)]
+                public string WebReportTheme { get; set; }
+
                 /// <summary>
                 /// <para>The workspace ID.</para>
                 /// 

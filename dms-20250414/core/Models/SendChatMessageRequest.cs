@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SendChatMessageRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID. This parameter is required. You can obtain the current agent ID from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the agent ID that you specify in each request may change.</para>
+        /// <para>The agent ID. This parameter is required. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent_***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Data Management unit you are currently in. If you choose to analyze a database, this information is used to correctly connect to your Data Management instance. You can go to the Data Management console to view your current Data Management unit. If you are a user of the Alibaba Cloud China Website, set this parameter to ap-southeast-1.</para>
+        /// <para>The Data Management unit you are currently in. If you select an analytics database, this information is used to correctly connect to your Data Management instance through Data Management. You can go to the DAS console to view your current Data Management unit. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to cn-hangzhou.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The data source information. This parameter is optional. You can pass only one data source in this parameter. Use the DataSources parameter instead.</para>
+        /// <para>The data source information. This parameter can be left empty. Only one data source can be specified for this parameter. Use the DataSources parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -130,6 +130,51 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Location { get; set; }
 
             /// <summary>
+            /// <para>The permission constraints for querying the current data source. The permission constraint feature is available through a canary release. This parameter does not take effect for users who are not included in the canary release.</para>
+            /// </summary>
+            [NameInMap("Permission")]
+            [Validation(Required=false)]
+            public SendChatMessageRequestDataSourcePermission Permission { get; set; }
+            public class SendChatMessageRequestDataSourcePermission : TeaModel {
+                /// <summary>
+                /// <para>The table-level permission constraints for querying the current data source. Each item in the list represents the permission constraints for a table.</para>
+                /// </summary>
+                [NameInMap("Tables")]
+                [Validation(Required=false)]
+                public List<SendChatMessageRequestDataSourcePermissionTables> Tables { get; set; }
+                public class SendChatMessageRequestDataSourcePermissionTables : TeaModel {
+                    /// <summary>
+                    /// <para>The list of columns that are allowed to be queried in the current table. If this parameter is not specified, all columns can be queried. If this parameter is specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis effectiveness of DataAgent, avoid specifying columns that exceed the allowed scope in the prompts, knowledge, or instructions modules of DataAgent. Otherwise, SQL statements without the required permissions are generated and blocked, which reduces the analysis speed and effectiveness of DataAgent.</para>
+                    /// </summary>
+                    [NameInMap("AllowedColumns")]
+                    [Validation(Required=false)]
+                    public List<string> AllowedColumns { get; set; }
+
+                    /// <summary>
+                    /// <para>The required row filter condition for the current table. If this parameter is not specified, it is ignored. If this parameter is specified, the query condition is appended to all SQL statements that involve this table. Verify the validity of the condition before specifying it.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>region = \&quot;east\&quot;</para>
+                    /// </summary>
+                    [NameInMap("RequiredRowFilter")]
+                    [Validation(Required=false)]
+                    public string RequiredRowFilter { get; set; }
+
+                    /// <summary>
+                    /// <para>The name of the table to which the permission constraint rule applies.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sample_table</para>
+                    /// </summary>
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
             /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
@@ -149,7 +194,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The detailed data source information. This parameter is optional.</para>
+        /// <para>The detailed data source information. This parameter can be left empty.</para>
         /// </summary>
         [NameInMap("DataSources")]
         [Validation(Required=false)]
@@ -246,6 +291,51 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Location { get; set; }
 
             /// <summary>
+            /// <para>The permission constraints for querying the current data source. The permission constraint feature is available through a canary release. This parameter does not take effect for users who are not included in the canary release.</para>
+            /// </summary>
+            [NameInMap("Permission")]
+            [Validation(Required=false)]
+            public SendChatMessageRequestDataSourcesPermission Permission { get; set; }
+            public class SendChatMessageRequestDataSourcesPermission : TeaModel {
+                /// <summary>
+                /// <para>The table-level permission constraints for querying the current data source. Each item in the list represents the permission constraints for a table.</para>
+                /// </summary>
+                [NameInMap("Tables")]
+                [Validation(Required=false)]
+                public List<SendChatMessageRequestDataSourcesPermissionTables> Tables { get; set; }
+                public class SendChatMessageRequestDataSourcesPermissionTables : TeaModel {
+                    /// <summary>
+                    /// <para>The list of columns that are allowed to be queried in the current table. If this parameter is not specified, all columns can be queried. If this parameter is specified, SQL statements that exceed the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis effectiveness of DataAgent, avoid specifying columns that exceed the allowed scope in the prompts, knowledge, or instructions modules of DataAgent. Otherwise, SQL statements without the required permissions are generated and blocked, which reduces the analysis speed and effectiveness of DataAgent.</para>
+                    /// </summary>
+                    [NameInMap("AllowedColumns")]
+                    [Validation(Required=false)]
+                    public List<string> AllowedColumns { get; set; }
+
+                    /// <summary>
+                    /// <para>The required row filter condition for the current table. If this parameter is not specified, it is ignored. If this parameter is specified, the query condition is appended to all SQL statements that involve this table. Verify the validity of the condition before specifying it.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>region = \&quot;east\&quot;</para>
+                    /// </summary>
+                    [NameInMap("RequiredRowFilter")]
+                    [Validation(Required=false)]
+                    public string RequiredRowFilter { get; set; }
+
+                    /// <summary>
+                    /// <para>The name of the table to which the permission constraint rule applies.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>sample_table</para>
+                    /// </summary>
+                    [NameInMap("TableName")]
+                    [Validation(Required=false)]
+                    public string TableName { get; set; }
+
+                }
+
+            }
+
+            /// <summary>
             /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
@@ -276,17 +366,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The message type. Default value: <c>[primary]</c>.  </para>
-        /// <list type="bullet">
-        /// <item><description><para>In normal cases, set the message type to <c>[primary]</c> when interacting with the agent.</para>
-        /// </description></item>
-        /// <item><description><para>When the message is a response to a human-in-the-loop question from the agent, set the type to <c>[additional]</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When the message is intended to trigger report generation, set the type to <c>[report]</c>.</para>
-        /// </description></item>
-        /// <item><description><para>When the message is intended to cancel the current session, set the type to <c>[cancel]</c>.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The message type. Default value: <c>[primary]</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>primary</para>
@@ -306,10 +386,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ParentSessionId { get; set; }
 
         /// <summary>
-        /// <para>The specific question that the agent asks the user through human-in-the-loop. This parameter is required when the message type is <c>additional</c>.</para>
+        /// <para>The specific question that the agent asks the user through Human-in-Loop. This parameter is required when the message type is <c>additional</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>请提供计算GMV的口径。</para>
+        /// <para>Please provide the criteria for calculating GMV.</para>
         /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]
@@ -327,8 +407,6 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para><b>Important</b></para>
-        /// <para>When this message is a reply to an agent message (for example, the agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried in that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after analysis is complete, you can leave reply_to empty or set it to &quot;0&quot;.  </para>
-        /// <para>This field affects how the agent decides to process the message. Passing an incorrect value may cause the analysis results to be less effective than expected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -338,7 +416,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ReplyTo { get; set; }
 
         /// <summary>
-        /// <para>The special configuration for this session. Only the configuration passed in the first SendMessage call within the same session takes effect.</para>
+        /// <para>The special configuration for the current session. For the same session, only the configuration specified in the first SendMessage call takes effect.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -348,7 +426,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public SendChatMessageRequestSessionConfig SessionConfig { get; set; }
         public class SendChatMessageRequestSessionConfig : TeaModel {
             /// <summary>
-            /// <para>Deprecated. Use the input parameters of CreateAgentSession instead.</para>
+            /// <para>Deprecated. Use the input parameter of CreateAgentSession instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -358,7 +436,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
-            /// <para>Deprecated. Use the input parameters of CreateAgentSession instead.</para>
+            /// <para>Deprecated. Use the input parameter of CreateAgentSession instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -388,7 +466,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string KbUuidList { get; set; }
 
             /// <summary>
-            /// <para>Only Chinese and English are supported. The default value is Chinese. Only uppercase values are supported.</para>
+            /// <para>Only Chinese and English are supported. Default value: Chinese. Only uppercase values are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENGLISH</para>
@@ -408,12 +486,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string McpServerIds { get; set; }
 
             /// <summary>
-            /// <para>The mode. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>ASK_DATA</b>: data query mode.</description></item>
-            /// <item><description><b>ANALYSIS</b>: analysis mode.</description></item>
-            /// <item><description><b>INSIGHT</b>: insight mode.</description></item>
-            /// </list>
+            /// <para>The mode:</para>
             /// 
             /// <b>Example:</b>
             /// <para>ANALYSIS</para>
@@ -436,7 +509,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text of up to 64 characters that is used as a watermark in the generated PDF report.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例水印</para>
+            /// <para>SampleWatermark.</para>
             /// </summary>
             [NameInMap("ReportWaterMark")]
             [Validation(Required=false)]
@@ -473,7 +546,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public bool? SkipSqlConfirm { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to skip the web report generation confirmation.</para>
+            /// <para>Specifies whether to skip the web report rendering confirmation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -485,7 +558,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The session ID. This parameter is required. You can call the CreateAgentSession operation to obtain the session ID.</para>
+        /// <para>The session ID. This parameter is required. You can obtain the SessionId by calling the CreateAgentSession operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sess_***</para>
@@ -529,7 +602,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportTheme { get; set; }
 
                 /// <summary>
-                /// <para>The service type. Valid values: TextReport and WebReport, indicating that the task generates a text report or a web report. Only WebReport is supported.</para>
+                /// <para>The service type. Valid values: TextReport and WebReport, indicating that the task generates a text report or a web report. Only WebReport is currently supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WebReport</para>
@@ -543,7 +616,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The OSS bucket of the user. If this parameter is not specified, the analysis process is securely stored in built-in storage.</para>
+        /// <para>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in the built-in storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-bucket</para>
