@@ -244,11 +244,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
+        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Related operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
         /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ChunkList permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</description></item>
         /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
         /// <item><description>This operation has idempotence.
-        /// <b>Related operations:</b>
         /// <b>Throttling:</b>
         /// This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</description></item>
         /// </list>
@@ -317,11 +316,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
+        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Related operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
         /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ChunkList permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</description></item>
         /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
         /// <item><description>This operation has idempotence.
-        /// <b>Related operations:</b>
         /// <b>Throttling:</b>
         /// This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</description></item>
         /// </list>
@@ -390,11 +388,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
+        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Related operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
         /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ChunkList permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</description></item>
         /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
         /// <item><description>This operation has idempotence.
-        /// <b>Related operations:</b>
         /// <b>Throttling:</b>
         /// This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</description></item>
         /// </list>
@@ -422,11 +419,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
+        /// <item><description>This operation adds chunk content to a specified knowledge base of the document search (document), data query (table), or image Q&amp;A (image) type. Related operations on multimedia search (multimedia) knowledge bases are not supported. For data query and image Q&amp;A knowledge bases, this operation takes effect only when the data source is a spreadsheet connector (excel).</description></item>
         /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Model Studio (requiring <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ChunkList permission) and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest <a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a><a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Model Studio SDK</a> to invoke this operation.</description></item>
         /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
         /// <item><description>This operation has idempotence.
-        /// <b>Related operations:</b>
         /// <b>Throttling:</b>
         /// This operation is throttled if called too frequently. Do not exceed 10 calls per second. If throttled, retry later.</description></item>
         /// </list>
@@ -2266,22 +2262,22 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to create two types of knowledge bases: unstructured knowledge bases for documents, audio, or video, and structured knowledge bases for data queries or image Q&amp;A.</para>
+        /// <para>Creates a knowledge base, either an unstructured knowledge base based on documents or audio/video, or a structured knowledge base for data queries or image-based Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Permissions</b>:<list type="bullet">
-        /// <item><description><b>RAM user</b>: A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. You can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the \<c>sfm:CreateIndex\\</c> permission required for this operation.</description></item>
-        /// <item><description><b>Alibaba Cloud account</b>: By default, Alibaba Cloud accounts have the required permissions and can call this operation directly.</description></item>
+        /// <item><description><b>Permission requirements</b>:<list type="bullet">
+        /// <item><description><b>Resource Access Management (RAM) user</b>: Obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio first (you can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the sfm:CreateIndex permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation.</description></item>
+        /// <item><description><b>Alibaba Cloud account</b>: Has permissions by default and can invoke this operation directly.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>How to call</b>: Use the latest version of the &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation. The SDK handles the complex signature calculation logic to simplify the process.</description></item>
-        /// <item><description><b>What to do next</b>: This operation only initializes a knowledge base creation job. After calling this operation, you must call the <b>SubmitIndexJob</b> operation to complete the creation. Otherwise, an empty knowledge base is created. For related code examples, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</description></item>
-        /// <item><description><b>Idempotence</b>: This operation is not idempotent. Repeated calls may create multiple knowledge bases with the same name. To ensure idempotence, query for the knowledge base before you create it.
-        /// <b>Rate limiting:</b>
-        /// Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 10 calls per second. If you encounter rate limiting, retry the call later.</description></item>
+        /// <item><description><b>Calling method</b>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>. The SDK has encapsulated the complex signature calculation logic and simplifies the invocation procedure.</description></item>
+        /// <item><description><b>What to do next</b>: This operation only performs initialization of the knowledge base creation job. After invoking this operation, you must invoke the <b>SubmitIndexJob</b> operation to complete the creation (otherwise, you will get an empty knowledge base). For code examples, refer to <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge Base API Guide</a>.</description></item>
+        /// <item><description><b>Idempotence</b>: This operation does not have idempotence. Repeated invocations may create multiple knowledge bases with the same name. Implement idempotent invocations by querying first and then creating.
+        /// <b>Rate limit:</b>
+        /// This operation is subject to rate limiting. Do not exceed 10 calls per second. If you are throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2482,22 +2478,22 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to create two types of knowledge bases: unstructured knowledge bases for documents, audio, or video, and structured knowledge bases for data queries or image Q&amp;A.</para>
+        /// <para>Creates a knowledge base, either an unstructured knowledge base based on documents or audio/video, or a structured knowledge base for data queries or image-based Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Permissions</b>:<list type="bullet">
-        /// <item><description><b>RAM user</b>: A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. You can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the \<c>sfm:CreateIndex\\</c> permission required for this operation.</description></item>
-        /// <item><description><b>Alibaba Cloud account</b>: By default, Alibaba Cloud accounts have the required permissions and can call this operation directly.</description></item>
+        /// <item><description><b>Permission requirements</b>:<list type="bullet">
+        /// <item><description><b>Resource Access Management (RAM) user</b>: Obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio first (you can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the sfm:CreateIndex permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation.</description></item>
+        /// <item><description><b>Alibaba Cloud account</b>: Has permissions by default and can invoke this operation directly.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>How to call</b>: Use the latest version of the &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation. The SDK handles the complex signature calculation logic to simplify the process.</description></item>
-        /// <item><description><b>What to do next</b>: This operation only initializes a knowledge base creation job. After calling this operation, you must call the <b>SubmitIndexJob</b> operation to complete the creation. Otherwise, an empty knowledge base is created. For related code examples, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</description></item>
-        /// <item><description><b>Idempotence</b>: This operation is not idempotent. Repeated calls may create multiple knowledge bases with the same name. To ensure idempotence, query for the knowledge base before you create it.
-        /// <b>Rate limiting:</b>
-        /// Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 10 calls per second. If you encounter rate limiting, retry the call later.</description></item>
+        /// <item><description><b>Calling method</b>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>. The SDK has encapsulated the complex signature calculation logic and simplifies the invocation procedure.</description></item>
+        /// <item><description><b>What to do next</b>: This operation only performs initialization of the knowledge base creation job. After invoking this operation, you must invoke the <b>SubmitIndexJob</b> operation to complete the creation (otherwise, you will get an empty knowledge base). For code examples, refer to <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge Base API Guide</a>.</description></item>
+        /// <item><description><b>Idempotence</b>: This operation does not have idempotence. Repeated invocations may create multiple knowledge bases with the same name. Implement idempotent invocations by querying first and then creating.
+        /// <b>Rate limit:</b>
+        /// This operation is subject to rate limiting. Do not exceed 10 calls per second. If you are throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2698,22 +2694,22 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to create two types of knowledge bases: unstructured knowledge bases for documents, audio, or video, and structured knowledge bases for data queries or image Q&amp;A.</para>
+        /// <para>Creates a knowledge base, either an unstructured knowledge base based on documents or audio/video, or a structured knowledge base for data queries or image-based Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Permissions</b>:<list type="bullet">
-        /// <item><description><b>RAM user</b>: A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. You can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the \<c>sfm:CreateIndex\\</c> permission required for this operation.</description></item>
-        /// <item><description><b>Alibaba Cloud account</b>: By default, Alibaba Cloud accounts have the required permissions and can call this operation directly.</description></item>
+        /// <item><description><b>Permission requirements</b>:<list type="bullet">
+        /// <item><description><b>Resource Access Management (RAM) user</b>: Obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio first (you can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the sfm:CreateIndex permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation.</description></item>
+        /// <item><description><b>Alibaba Cloud account</b>: Has permissions by default and can invoke this operation directly.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>How to call</b>: Use the latest version of the &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation. The SDK handles the complex signature calculation logic to simplify the process.</description></item>
-        /// <item><description><b>What to do next</b>: This operation only initializes a knowledge base creation job. After calling this operation, you must call the <b>SubmitIndexJob</b> operation to complete the creation. Otherwise, an empty knowledge base is created. For related code examples, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</description></item>
-        /// <item><description><b>Idempotence</b>: This operation is not idempotent. Repeated calls may create multiple knowledge bases with the same name. To ensure idempotence, query for the knowledge base before you create it.
-        /// <b>Rate limiting:</b>
-        /// Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 10 calls per second. If you encounter rate limiting, retry the call later.</description></item>
+        /// <item><description><b>Calling method</b>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>. The SDK has encapsulated the complex signature calculation logic and simplifies the invocation procedure.</description></item>
+        /// <item><description><b>What to do next</b>: This operation only performs initialization of the knowledge base creation job. After invoking this operation, you must invoke the <b>SubmitIndexJob</b> operation to complete the creation (otherwise, you will get an empty knowledge base). For code examples, refer to <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge Base API Guide</a>.</description></item>
+        /// <item><description><b>Idempotence</b>: This operation does not have idempotence. Repeated invocations may create multiple knowledge bases with the same name. Implement idempotent invocations by querying first and then creating.
+        /// <b>Rate limit:</b>
+        /// This operation is subject to rate limiting. Do not exceed 10 calls per second. If you are throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2733,22 +2729,22 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use this API to create two types of knowledge bases: unstructured knowledge bases for documents, audio, or video, and structured knowledge bases for data queries or image Q&amp;A.</para>
+        /// <para>Creates a knowledge base, either an unstructured knowledge base based on documents or audio/video, or a structured knowledge base for data queries or image-based Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Permissions</b>:<list type="bullet">
-        /// <item><description><b>RAM user</b>: A RAM user must obtain the required <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before calling this operation. You can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the \<c>sfm:CreateIndex\\</c> permission required for this operation.</description></item>
-        /// <item><description><b>Alibaba Cloud account</b>: By default, Alibaba Cloud accounts have the required permissions and can call this operation directly.</description></item>
+        /// <item><description><b>Permission requirements</b>:<list type="bullet">
+        /// <item><description><b>Resource Access Management (RAM) user</b>: Obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio first (you can use the <c>AliyunBailianDataFullAccess</c> policy, which includes the sfm:CreateIndex permission required by this operation), and <a href="https://help.aliyun.com/document_detail/2851098.html">join a workspace</a> before invoking this operation.</description></item>
+        /// <item><description><b>Alibaba Cloud account</b>: Has permissions by default and can invoke this operation directly.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>How to call</b>: Use the latest version of the &lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation. The SDK handles the complex signature calculation logic to simplify the process.</description></item>
-        /// <item><description><b>What to do next</b>: This operation only initializes a knowledge base creation job. After calling this operation, you must call the <b>SubmitIndexJob</b> operation to complete the creation. Otherwise, an empty knowledge base is created. For related code examples, see <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge base API guide</a>.</description></item>
-        /// <item><description><b>Idempotence</b>: This operation is not idempotent. Repeated calls may create multiple knowledge bases with the same name. To ensure idempotence, query for the knowledge base before you create it.
-        /// <b>Rate limiting:</b>
-        /// Frequent calls to this operation are subject to rate limiting. Do not exceed a frequency of 10 calls per second. If you encounter rate limiting, retry the call later.</description></item>
+        /// <item><description><b>Calling method</b>: Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>. The SDK has encapsulated the complex signature calculation logic and simplifies the invocation procedure.</description></item>
+        /// <item><description><b>What to do next</b>: This operation only performs initialization of the knowledge base creation job. After invoking this operation, you must invoke the <b>SubmitIndexJob</b> operation to complete the creation (otherwise, you will get an empty knowledge base). For code examples, refer to <a href="https://help.aliyun.com/document_detail/2852772.html">Knowledge Base API Guide</a>.</description></item>
+        /// <item><description><b>Idempotence</b>: This operation does not have idempotence. Repeated invocations may create multiple knowledge bases with the same name. Implement idempotent invocations by querying first and then creating.
+        /// <b>Rate limit:</b>
+        /// This operation is subject to rate limiting. Do not exceed 10 calls per second. If you are throttled, retry later.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7920,9 +7916,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (<c>AliyunBailianDataFullAccess</c> is required, which includes the sfm:ListIndexFiles permission), before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</description></item>
-        /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
-        /// <item><description>This operation has idempotence.</description></item>
+        /// <item><description>RAM users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ListIndexFiles permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
+        /// <item><description>This operation is idempotent.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7995,9 +7991,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (<c>AliyunBailianDataFullAccess</c> is required, which includes the sfm:ListIndexFiles permission), before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</description></item>
-        /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
-        /// <item><description>This operation has idempotence.</description></item>
+        /// <item><description>RAM users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ListIndexFiles permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
+        /// <item><description>This operation is idempotent.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8070,9 +8066,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (<c>AliyunBailianDataFullAccess</c> is required, which includes the sfm:ListIndexFiles permission), before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</description></item>
-        /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
-        /// <item><description>This operation has idempotence.</description></item>
+        /// <item><description>RAM users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ListIndexFiles permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
+        /// <item><description>This operation is idempotent.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8098,9 +8094,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Resource Access Management (RAM) users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (<c>AliyunBailianDataFullAccess</c> is required, which includes the sfm:ListIndexFiles permission), before invoking this operation. Alibaba Cloud accounts can invoke this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to invoke this operation.</description></item>
-        /// <item><description>Before invoking this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
-        /// <item><description>This operation has idempotence.</description></item>
+        /// <item><description>RAM users must first obtain <a href="https://help.aliyun.com/document_detail/2848578.html">API permissions</a> for Alibaba Cloud Model Studio (requires <c>AliyunBailianDataFullAccess</c>, which includes the sfm:ListIndexFiles permission), before calling this operation. Alibaba Cloud accounts can call this operation directly without authorization. Use the latest &lt;props=&quot;china&quot;&gt;<a href="https://api.aliyun.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a>&lt;props=&quot;intl&quot;&gt;<a href="https://api.alibabacloud.com/api-tools/sdk/bailian?version=2023-12-29">Alibaba Cloud Model Studio SDK</a> to call this operation.</description></item>
+        /// <item><description>Before calling this operation, make sure that your knowledge base has been created and has not been deleted (that is, the knowledge base ID <c>IndexId</c> is valid).</description></item>
+        /// <item><description>This operation is idempotent.</description></item>
         /// </list>
         /// </description>
         /// 

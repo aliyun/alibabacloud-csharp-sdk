@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data field returned by the operation.</para>
+        /// <para>The business data field of the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string ChunkMode { get; set; }
 
                 /// <summary>
-                /// <para>The segment length, which is the number of characters in each text chunk.</para>
+                /// <para>The chunk length, which is the number of characters in a text chunk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>600</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string ChunkSize { get; set; }
 
                 /// <summary>
-                /// <para>The error status code for file import.</para>
+                /// <para>The file import error status code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110002</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, and EXCEL.</para>
+                /// <para>The file format type. Valid values: pdf, docx, doc, txt, md, pptx, ppt, png, jpg, jpeg, bmp, gif, EXCEL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pdf</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string EnableHeaders { get; set; }
 
                 /// <summary>
-                /// <para>The time when the file was imported to the knowledge base, in UNIX timestamp format.</para>
+                /// <para>The time when the file was imported to the knowledge base, in Unix timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1744856423000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The error message for file import.</para>
+                /// <para>The file import error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>check fileUrlKey[file_path] / fileNameKey[null] / fileExtensionKey[file_extension] is invalid</para>
@@ -113,18 +113,22 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public string Message { get; set; }
 
+                [NameInMap("MetaExtractInfo")]
+                [Validation(Required=false)]
+                public string MetaExtractInfo { get; set; }
+
                 /// <summary>
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>翻译平台运维文档</para>
+                /// <para>TranslationPlatformO&amp;MDocument.</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The overlap length between segments.</para>
+                /// <para>The chunk overlap length.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -192,7 +196,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string IndexId { get; set; }
 
             /// <summary>
-            /// <para>The returned page number.</para>
+            /// <para>The specified page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -202,7 +206,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The returned number of entries per page.</para>
+            /// <para>The specified number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class CreateIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error status code</para>
+        /// <para>The error status code.</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned when the request is successful.</para>
+        /// <para>The business data returned when the request succeeds.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateIndexResponseBodyData Data { get; set; }
         public class CreateIndexResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the knowledge base, also known as \<c>IndexId\\</c>. This is the unique identifier of the created knowledge base.</para>
+            /// <para>The knowledge base ID, also known as <c>IndexId</c>. This is the unique identifier of the created knowledge base.</para>
             /// <remarks>
-            /// <para>Keep this value safe. It will be used for all subsequent API operations related to this knowledge base.</para>
+            /// <para>Store this value properly. It is required for all subsequent API operations related to this knowledge base.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17204B98-xxxx-4F9A--2446A84821CA</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code returned by the interface.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;200&quot;</para>
@@ -66,12 +66,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Successful</para>
-        /// </description></item>
-        /// <item><description><para>false: Failed</para>
-        /// </description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

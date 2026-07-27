@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndexFileDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>Filters the returned file details list by file name. Default value: empty, which means no filtering by file name.</para>
+        /// <para>Filters the returned file details list by file name. Default value: empty, which means the results are not filtered by file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>翻译平台运维文档</para>
+        /// <para>TranslationPlatformO&amp;MDocument.</para>
         /// </summary>
         [NameInMap("DocumentName")]
         [Validation(Required=false)]
@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <summary>
         /// <para>Filters the returned file list by file import status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INSERT_ERROR: Failed to import to the index.</description></item>
+        /// <item><description>INSERT_ERROR: Import to index failed.</description></item>
         /// <item><description>RUNNING: Index building in progress.</description></item>
         /// <item><description>DELETED: Deleted.</description></item>
         /// <item><description>FINISH: Index building succeeded.</description></item>
         /// <item><description>PARSE_FAILED: Parsing failed.</description></item>
         /// <item><description>DOC_PARSING: Parsing in progress.</description></item>
         /// </list>
-        /// <para>Default value: empty, which means no filtering by file import status.</para>
+        /// <para>Default value: empty, which means the results are not filtered by file import status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISH</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of files to display per page for paging. Maximum value: 10.</para>
+        /// <para>The number of files to display per page in a paginated query. Maximum value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

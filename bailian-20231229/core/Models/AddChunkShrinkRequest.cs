@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <list type="bullet">
         /// <item><description>content (<b>String</b>): <b>Required</b>. The body content of the chunk.</description></item>
         /// <item><description>title (<b>String</b>): <b>Optional</b>. The title of the chunk.</description></item>
-        /// <item><description>image_urls (<b>Array</b>): <b>Optional</b>. Image URLs contained in the chunk. A maximum of 10 images are supported.</description></item>
+        /// <item><description>image_urls (<b>Array</b>): <b>Optional</b>. Image URLs included in the chunk. A maximum of 10 images are supported.</description></item>
         /// </list>
         /// <para>For data query and image Q&amp;A knowledge bases, the keys are not fixed and are determined by the data source spreadsheet of the knowledge base. The key is the Excel column header, and the value is the corresponding column value.</para>
         /// 
